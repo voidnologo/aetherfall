@@ -11,12 +11,17 @@
 - Magic system is substantially complete (first pass). Compendium needs playtesting tuning.
 - No firearms, leveling, factions, or zone mechanics yet.
 
-## Next Up
-Firearms & steampunk equipment tables, then leveling mechanics, factions, magic/tech zone rules.
+## Immediate Next Task
+Build a reusable magic casting simulation framework in `simulations/`. The simulation should:
+1. Generate realistic characters at various power levels (low/mid/high/master, scholarly and wild)
+2. Simulate many rounds of spell casting using the rules in MAGIC_SYSTEM.md and SPELL_COMPENDIUM.md
+3. Track and report: misfire rates, tier distributions, backlash frequency, wild effect escalation, exhaustion/HP consequences, tier suppression usage for wild casters, how often casters hit exhaustion overflow
+4. Be designed so spell costs/parameters can be tweaked and simulations re-run to compare
+5. Save scripts and analysis output to `simulations/` for repeatability
 
 ## Key References
-- `docs/requirements/PROJECT_SPEC.md` — Master spec with all decisions and open questions
-- `docs/requirements/MAGIC_SYSTEM.md` — Full magic system design doc
-- `docs/requirements/SPELL_COMPENDIUM.md` — All 37 spells with tier tables
+- `docs/requirements/MAGIC_SYSTEM.md` — Full casting rules, tier system, backlash, wild effects, exhaustion overflow
+- `docs/requirements/SPELL_COMPENDIUM.md` — All 37 spells with tier tables (exhaust costs, casting times)
+- `docs/requirements/PROJECT_SPEC.md` — Core mechanics, stats, design pillars
 - `docs/pending-tasks.md` — Prioritized task list
-- `rules/FunzieRulez.pdf` — Original prototype rules (4 pages)
+- `rules/FunzieRulez.pdf` — Original prototype rules
