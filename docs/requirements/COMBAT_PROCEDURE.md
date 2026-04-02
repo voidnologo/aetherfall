@@ -101,7 +101,7 @@ If a malfunction check is required, roll d100 **alongside your attack roll** (or
 4. **Scholarly casters** feel the surge and choose: accept the tier rolled, or **restrict down** to any lower tier. Want to save exhaustion? Take Weak even though you rolled Strong.
 5. **Wild casters** ride the wave — they get what they get. The magic gives and you take it. No choice, no restriction.
 6. Apply the spell's effect at the final tier.
-7. Pay exhaustion cost for the tier used (deduct from MP).
+7. Pay exhaustion cost for the tier used (deduct from EP).
 8. Roll backlash check — percentage chance based on tier (Weak 5%, Standard 10%, Strong 15%, Spectacular 25%). On failure: 1d4 physical damage + 25% chance of Wild Effect.
 9. Apply Magic Accumulation to the area (Weak +1, Standard +2, Strong +3, Spectacular +4).
 
@@ -393,7 +393,7 @@ No grid, no measurements. Distances are described in **narrative range bands:**
 
 **Full rest (hours):**
 - **Physical damage:** Recover 1d4 HP per hour of full rest.
-- **Magical exhaustion:** Recover 1d8 MP per hour of full rest.
+- **Exhaustion:** Recover 1d8 EP per hour of full rest.
 - **Medical treatment bonus:** A character receiving care from someone with Medicine skill recovers an additional 1d4 HP per hour.
 
 ### 9.3 Armor Repair
@@ -415,7 +415,7 @@ Degraded armor can be repaired with a **Metalworking check** (or Repair for mode
 **Count 2 — Kael's draw resolves.** Sword is ready. He declares a melee attack on Thug A (Medium speed 5, token at 7). He needs to close from Near — the final step is part of his attack (he's Near, closing to Close is free).
 
 **Count 3 — Three tokens resolve.** All three started at count 0, so they resolve simultaneously.
-- **Sera's Force spell:** Rolls d100 against casting target 55. Rolls 38 — success, margin 17 → Standard tier. She's a wild caster — she rides the surge, no choice. Targets Thug B. Deals 2d6 = 8 damage. Sera pays 4 exhaustion from MP. Backlash check: 10% chance, rolls 67 — no backlash. Magic Accumulation in the area: +2.
+- **Sera's Force spell:** Rolls d100 against casting target 55. Rolls 38 — success, margin 17 → Standard tier. She's a wild caster — she rides the surge, no choice. Targets Thug B. Deals 2d6 = 8 damage. Sera pays 4 exhaustion from her EP track. Backlash check: 10% chance, rolls 67 — no backlash. Magic Accumulation in the area: +2.
 - **Thug A fires at Kael:** Rolls 44 against skill 50. Hit. Damage: 2d6 = 9. Kael is wearing leather (Soak 2). 9 − 2 = 7 damage. Armor degradation check: 9 exceeds Soak 2, so roll — 63, no degradation. Kael has 9 HP per tier (PP +2). He takes 7 into his OK tier, leaving 2 HP before Harmed. Close call.
 - **Thug B fires at Sera:** Rolls 71 against skill 50. Miss. No malfunction check needed — there was 0 accumulation when the shot was declared (accumulation from Sera's spell and the shot resolve simultaneously on this count).
 

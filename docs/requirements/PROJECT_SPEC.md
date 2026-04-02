@@ -115,7 +115,7 @@ Six stats, rated from **-3 to +3**:
 | IN | Intellect | Knowledge, intelligence, quick-thinking, academics |
 | SP | Social Prowess | Etiquette, refinement, social standing, poise, likability |
 | AW | Awareness | Perception, alertness, eye-for-detail |
-| PW | Power | Magical ability, strength, attunement |
+| PW | Power | Mental fortitude, resilience against stress/exhaustion, magical attunement |
 
 **Character creation:** GM sets a challenge level. Default is a net bonus of **+1** across all stats. Players describe roleplay reasons for each stat value.
 
@@ -128,7 +128,7 @@ Six stats, rated from **-3 to +3**:
 
 **Unskilled attempt formula:**
 ```
-(5 + associated stat) × 10
+(5 + associated stat) × 5
 ```
 
 **Skill cap:** Up to 15 skills per character.
@@ -310,7 +310,7 @@ When a character is reduced past Incapacitated: **death saves** (mechanics TBD).
 
 ### 5.3 Recovery
 
-- **Magical exhaustion:** Recover 1d8 per hour of full rest.
+- **Exhaustion:** Recover 1d8 EP per hour of full rest.
 - **Physical damage:** Recover 1d4 per hour of full rest.
 
 > **NOTE:** Recovery rates may need balancing. Consider: medical treatment bonuses, magical healing, long-term injury rules.
@@ -383,12 +383,12 @@ Inspirations:
 
 1. **Set stats:** Distribute points across 6 stats (-3 to +3), net bonus set by GM (default +1). Write a description justifying each value.
 2. **Choose skills:** Up to 15 skills. Skill points per group = 10 + stat group net modifiers.
-3. **Choose spells (if magical):** Base spells = 7 + PW. Can buy more at 3 skill points each. Choose from schools equal to PW modifier (min 1).
+3. **Choose spells (if caster):** Magic is a skill choice — invest in Scholarly or Wild casting. Base spells = 7 + PW (min 1). Can buy more at 3 skill points each. Schools = PW modifier (min 1).
 4. **Label your archetype:** Write a class name that describes your concept. This is flavor, not restriction.
 5. **Select race:** (TBD)
 6. **Calculate derived values:**
    - HP per level: 7 + PP
-   - MP per level: 7 + PW
+   - EP per tier: 7 + PW
    - Skill target numbers: ((10 + stat mod) × skill level) + 30
 7. **Equip:** Select weapons, armor, and gear.
 

@@ -235,11 +235,11 @@ Cancelling a spell mid-cast:
 - Costs exhaustion equal to **half** the normal cost for the tier you were attempting
 - Additionally: **10% chance of backlash**, dealing 1d4 physical damage per 2 tiers of the spell AND causing full casting exhaustion
 
-### 3.6 Magic Points & Exhaustion Track
+### 3.6 Exhaustion Track
 
-**Magic Points per level:** 7 + PW
+**Exhaustion Points per tier:** 7 + PW
 
-Four exhaustion tiers with escalating penalties (mirrors the HP death spiral):
+The exhaustion track covers all non-physical strain: magical drain, stress, fatigue, disorientation, sleep deprivation, stun effects. Anything that hurts without leaving a physical wound fills this track. It mirrors the HP death spiral with four tiers and escalating penalties:
 
 | Level | Status | Penalty |
 |-------|--------|---------|
@@ -248,17 +248,17 @@ Four exhaustion tiers with escalating penalties (mirrors the HP death spiral):
 | 3 | Severely Weak | -25% to all rolls |
 | 4 | Incapacitated | -50% to all rolls |
 
-**Recovery:** 1d8 magic points per hour of full rest.
+**Recovery:** 1d8 EP per hour of full rest (mental strain recovers faster than flesh).
 
-Note: Exhaustion penalties stack with wound penalties. A Harmed (-10%) and Weakened (-10%) caster is at -20% to all rolls. The death spiral applies to both tracks simultaneously.
+Note: Exhaustion penalties stack with wound penalties. A Harmed (-10%) and Weakened (-10%) character is at -20% to all rolls. The death spiral applies to both tracks simultaneously.
 
 #### 3.6.1 Exhaustion Overflow
 
-When a spell's exhaustion cost exceeds your remaining MP, the spell still fires. You spend all remaining MP (dropping to zero, Incapacitated on the exhaustion track). The overflow — the exhaustion you couldn't pay — converts to physical HP damage at a rate of **half the overflow, rounded down**.
+When a spell's exhaustion cost exceeds your remaining EP, the spell still fires. You spend all remaining EP (dropping to zero, Incapacitated on the exhaustion track). The overflow — the exhaustion you couldn't pay — converts to physical HP damage at a rate of **half the overflow, rounded down**.
 
-**Example:** You have 7 MP remaining. You cast (or are forced to cast, as a wild caster) a Spectacular Mend costing 18 exhaustion. You spend all 7 MP → Incapacitated on the exhaustion track. The remaining 11 overflows → you take 5 physical HP damage (11 ÷ 2 = 5.5, rounded down). The spell works. You're on the floor.
+**Example:** You have 7 EP remaining. You cast (or are forced to cast, as a wild caster) a Spectacular Mend costing 18 exhaustion. You spend all 7 EP → Incapacitated on the exhaustion track. The remaining 11 overflows → you take 5 physical HP damage (11 ÷ 2 = 5.5, rounded down). The spell works. You're on the floor.
 
-This creates genuine heroic sacrifice moments — a caster *can* push past their limits to save a friend, but the magic burns their body to do it. It also serves as a natural consequence for wild casters who can't fully suppress a high-tier result and don't have enough MP to cover it.
+This creates genuine heroic sacrifice moments — a caster *can* push past their limits to save a friend, but the magic burns their body to do it. It also serves as a natural consequence for wild casters who can't fully suppress a high-tier result and don't have enough EP to cover it.
 
 ### 3.7 Casting Interruption
 
@@ -463,7 +463,7 @@ Each spell needs a unique misfire description that:
 7. **Spell interaction with magic/tech zones** — How do zone levels modify casting? Penalty to target number? Forced tier reduction? Automatic backlash increase?
 8. **Individual spell tier tables** — The 37 spells each need full tier descriptions, costs, casting times, and misfire effects. This is the single largest remaining design task. Force and Mend drafted as templates (see §9).
 9. ~~**Wild caster tier suppression**~~ **RESOLVED** — Can step down tiers based on 25% skill brackets (0/1/2/3 tiers at 1-25/26-50/51-75/76+). Mirrors crit range mechanic.
-10. ~~**Exhaustion overflow**~~ **RESOLVED** — Spell fires, remaining MP spent to zero, overflow converts to physical HP damage at half rate (rounded down).
+10. ~~**Exhaustion overflow**~~ **RESOLVED** — Spell fires, remaining EP spent to zero, overflow converts to physical HP damage at half rate (rounded down).
 11. **Casting interruption** — Concentration check when damaged mid-cast. Mechanics TBD (what to roll, does damage affect difficulty, misfire vs fizzle on failure).
 
 ---
@@ -506,7 +506,7 @@ Heal wounds, knit bone, cure disease, purge poison. The most valued spell in the
 **Design notes:**
 - Mend costs roughly 2× Force at every tier — Complexity 3 vs Complexity 1. This makes healing precious and limited; a dedicated healer can't just spam it.
 - Casting times are significantly longer than Force. Healing takes time; you're knitting biological systems back together.
-- A caster with 28 MP can cast Mend at Standard (8 exhaustion) 3 times before hitting Weakened. Healing is a limited resource — use it wisely.
+- A caster with 28 EP can cast Mend at Standard (8 exhaustion) 3 times before hitting Weakened. Healing is a limited resource — use it wisely.
 - Spectacular Mend at 18 exhaustion is deliberately punishing. Miraculous healing should cost you almost everything. This is the kind of cast where exhaustion overflow (§3.6.1) is a real possibility.
 - The misfire is intentionally horrifying — inverting a healing spell into a drain creates high drama and reinforces that magic is dangerous.
 

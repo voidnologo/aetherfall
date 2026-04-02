@@ -273,7 +273,7 @@ Create a bounded area with specific magical properties — protection, containme
 | Tier | Exhaust | Effect |
 |------|---------|--------|
 | **Weak** | 4 | A small circle (arm's reach radius) with a single property: alarm (alerts caster when crossed), sanctuary (mild calming effect inside), or containment (weak barrier against entry/exit). Lasts 1 hour. Must be physically drawn or traced. |
-| **Standard** | 8 | A room-sized circle with up to two properties. Can serve as a reliable ward against magical creatures (they cannot cross without opposed check). Sleeping inside provides bonus to magical recovery (+1d4 MP). Lasts up to a day. Glows faintly along its border. |
+| **Standard** | 8 | A room-sized circle with up to two properties. Can serve as a reliable ward against magical creatures (they cannot cross without opposed check). Sleeping inside provides bonus to exhaustion recovery (+1d4 EP). Lasts up to a day. Glows faintly along its border. |
 | **Strong** | 12 | A large circle (enclose a camp, a floor of a building) with up to three properties. Strong containment — can hold a captured magical entity. Strong protection — all inside gain +10% to resist magical effects. Lasts up to a week. Hums with palpable energy. |
 | **Spectacular** | 18 | A permanent circle with full properties — containment, protection, alarm, sanctuary all active. Can ward an entire building. Magical entities cannot approach, dark magic cannot penetrate, those inside recover faster and feel safe. Requires rare materials to inscribe. The circle becomes a landmark — other casters can sense it from a distance. |
 | *Misfire* | 4 | The circle forms but with inverted properties — a "protection" circle makes those inside more vulnerable to magic (+10% to incoming magical effects). An "alarm" circle deafens the caster to magical warnings. The inversion isn't immediately obvious. |
@@ -492,11 +492,11 @@ Redirect mana flows, create temporary conduits, draw power from ley lines or mag
 
 | Tier | Exhaust | Effect |
 |------|---------|--------|
-| **Weak** | 4 | Tap into ambient magic to recover 1d4 MP. Only works in areas with noticeable magical presence (not in Industrial Dead Zones). The caster must remain still and concentrate. Feels like drinking cold water on a hot day. |
-| **Standard** | 8 | Create a conduit between two nearby magical sources, or draw significant power from a ley line — recover 2d6 MP. Can redirect a mana flow away from a sensitive area or toward a specific target. Takes several minutes of sustained focus. |
-| **Strong** | 12 | Major channeling — draw 3d8 MP from a ley line or wild zone, create a sustained conduit that allies can tap into (each ally recovers 1d4 MP). Can redirect mana flows to stabilize or destabilize a zone. The channeled energy is visible — streams of light flow toward the caster. |
-| **Spectacular** | 18 | Reshape the magical landscape — redirect a ley line (temporarily), create a node of magical power where none existed, draw 4d10 MP from a major magical source. Can feed power to an entire group (each ally recovers 2d6 MP). The caster becomes a visible beacon of magical energy. Risks drawing attention from magical entities. |
-| *Misfire* | 4 | The channel reverses — the caster's own MP is drained by 1d6 and dispersed into the environment. The area around them becomes slightly more magical for 1d4 hours. If near a ley line, the caster may be briefly pulled toward it physically (1d4 damage from stumbling/falling). |
+| **Weak** | 4 | Tap into ambient magic to recover 1d4 EP. Only works in areas with noticeable magical presence (not in Industrial Dead Zones). The caster must remain still and concentrate. Feels like drinking cold water on a hot day. |
+| **Standard** | 8 | Create a conduit between two nearby magical sources, or draw significant power from a ley line — recover 2d6 EP. Can redirect a mana flow away from a sensitive area or toward a specific target. Takes several minutes of sustained focus. |
+| **Strong** | 12 | Major channeling — draw 3d8 EP from a ley line or wild zone, create a sustained conduit that allies can tap into (each ally recovers 1d4 EP). Can redirect mana flows to stabilize or destabilize a zone. The channeled energy is visible — streams of light flow toward the caster. |
+| **Spectacular** | 18 | Reshape the magical landscape — redirect a ley line (temporarily), create a node of magical power where none existed, draw 4d10 EP from a major magical source. Can feed power to an entire group (each ally recovers 2d6 EP). The caster becomes a visible beacon of magical energy. Risks drawing attention from magical entities. |
+| *Misfire* | 4 | The channel reverses — the caster's own EP is drained by 1d6 and dispersed into the environment. The area around them becomes slightly more magical for 1d4 hours. If near a ley line, the caster may be briefly pulled toward it physically (1d4 damage from stumbling/falling). |
 
 ### 6.3 Attune
 *Complexity: 2 — Casting Time: 5ct*
@@ -522,7 +522,7 @@ Flood an area with raw mana. Amplifies all magic in the area — friend and foe 
 | **Standard** | 8 | Significant surge — a building-floor-sized area floods with mana. All casting gains +15% to targets. Technology becomes unreliable (-15% to tech checks, firearms gain misfire chance). Lasts up to 10 minutes. The air shimmers. Small objects levitate. |
 | **Strong** | 12 | Major surge — a building-sized area becomes a temporary wild zone. All casting gains +25% to targets. Technology fails outright (firearms don't fire, engines stall, electrical systems short out). Lasts up to 1 hour. Reality warps slightly — sounds echo strangely, shadows move wrong, colors shift. |
 | **Spectacular** | 18 | Catastrophic surge — a city-block-sized area becomes a full wild zone. All casting gains +50% to targets. All technology ceases to function. The environment mutates — walls sprout organic growths, the ground shifts, the air tastes like copper. Lasts several hours. May attract magical creatures and entities. May become semi-permanent if near a ley line. This is how urban bleed zones start. |
-| *Misfire* | 4 | The surge pulses outward then collapses inward, centered on the caster. All of the caster's magical equipment overloads — enchanted items flare and temporarily burn out. The caster takes 1d6 damage from the whiplash and loses 1d6 additional MP. Nearby technology, ironically, is unaffected. |
+| *Misfire* | 4 | The surge pulses outward then collapses inward, centered on the caster. All of the caster's magical equipment overloads — enchanted items flare and temporarily burn out. The caster takes 1d6 damage from the whiplash and loses 1d6 additional EP. Nearby technology, ironically, is unaffected. |
 
 ### 6.5 Sever
 *Complexity: 4 — Casting Time: 8ct*

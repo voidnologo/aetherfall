@@ -205,9 +205,12 @@
   }
   .sheet-row:last-child { border-bottom: none; }
   .sheet-stat-name { color: var(--parchment); font-weight: 600; min-width: 180px; }
-  .sheet-stat-pips { font-family: 'Fira Code', monospace; font-size: 0.82rem; color: var(--parchment-dim); letter-spacing: 0.15em; }
-  .sheet-stat-pips .filled { color: var(--brass-bright); }
-  .sheet-stat-desc { color: var(--parchment-dim); font-style: italic; font-size: 0.82rem; }
+  .sheet-table { width: 100%; border-collapse: collapse; }
+  .sheet-table td, .sheet-table th { padding: 0.3rem 0; border: none; }
+  .sheet-table .stat-name { color: var(--parchment); font-weight: 600; white-space: nowrap; text-align: left; }
+  .sheet-table .pip { font-family: 'Fira Code', monospace; font-size: 0.82rem; color: var(--parchment-dim); text-align: center; width: 2.5em; white-space: nowrap; }
+  .sheet-table .pip.filled { color: var(--brass-bright); }
+  .sheet-table .stat-desc { color: var(--parchment-dim); font-style: italic; font-size: 0.82rem; text-align: right; padding-left: 0.5em; }
 
   .sheet-skill-row {
     display: grid; grid-template-columns: 1fr 40px 40px 50px;
@@ -420,7 +423,7 @@
       <tr><td>Intellect</td><td>IN</td><td>Education, reasoning, technical knowledge &mdash; medicine, engineering, science</td></tr>
       <tr><td>Social Prowess</td><td>SP</td><td>Charm, presence, social instinct &mdash; talking your way in (or out) of trouble</td></tr>
       <tr><td>Awareness</td><td>AW</td><td>Perception, alertness, instinct &mdash; noticing the hidden, reading a room</td></tr>
-      <tr><td>Power</td><td>PW</td><td>Magical attunement &mdash; how strongly the aether flows through you</td></tr>
+      <tr><td>Power</td><td>PW</td><td>Mental fortitude &mdash; resilience against stress, exhaustion, and the forces of magic</td></tr>
     </table>
 
     <p>
@@ -456,7 +459,7 @@
 
     <ul>
       <li><strong>PP</strong> sets your <strong>Hit Points per wound tier</strong> (7 + PP). A tough character (PP +2) has 9 HP per tier. A frail one (PP -1) has only 6. That difference is life and death.</li>
-      <li><strong>PW</strong> sets your <strong>Magic Points per exhaustion tier</strong> (7 + PW) and how many spells and schools you can access. PW +0? You can dabble. PW +3? You're a force of nature &mdash; with 10 MP per tier and access to three schools of magic.</li>
+      <li><strong>PW</strong> sets your <strong>Exhaustion Points per tier</strong> (7 + PW) &mdash; your mental and spiritual fortitude against stress, fatigue, disorientation, and magical drain. Everyone has this track, caster or not. For those who <em>do</em> pursue magic, PW also determines how many spells and schools you can access &mdash; a high-PW caster commands vast power, while a low-PW caster burns out fast with a thin selection.</li>
       <li><strong>PC</strong> determines who <strong>declares last in combat</strong>. The character with the highest PC sees what everyone else commits to before choosing their own action. In a firefight, that's enormous.</li>
       <li>Every attribute feeds into your <strong>skill target numbers</strong>, making the difference between "decent chance" and "nearly certain."</li>
     </ul>
@@ -472,36 +475,38 @@
 
     <div class="sheet-mock">
       <h4>Kael Ashford &mdash; "Gutter Knight"</h4>
-      <div class="sheet-row">
-        <span class="sheet-stat-name">Physical Prowess (PP)</span>
-        <span class="sheet-stat-pips">&minus;3 &minus;2 &minus;1 &nbsp;0 &nbsp;1 <span class="filled">&bull;2</span> &nbsp;3</span>
-        <span class="sheet-stat-desc">Former soldier, strong and fit</span>
-      </div>
-      <div class="sheet-row">
-        <span class="sheet-stat-name">Phys. Coordination (PC)</span>
-        <span class="sheet-stat-pips">&minus;3 &minus;2 &minus;1 &nbsp;0 &nbsp;1 <span class="filled">&bull;2</span> &nbsp;3</span>
-        <span class="sheet-stat-desc">Trained fencer, quick hands</span>
-      </div>
-      <div class="sheet-row">
-        <span class="sheet-stat-name">Intellect (IN)</span>
-        <span class="sheet-stat-pips">&minus;3 &minus;2 &minus;1 <span class="filled">&bull;0</span> &nbsp;1 &nbsp;2 &nbsp;3</span>
-        <span class="sheet-stat-desc">Practical, not academic</span>
-      </div>
-      <div class="sheet-row">
-        <span class="sheet-stat-name">Social Prowess (SP)</span>
-        <span class="sheet-stat-pips">&minus;3 &minus;2 <span class="filled">&bull;&minus;1</span> &nbsp;0 &nbsp;1 &nbsp;2 &nbsp;3</span>
-        <span class="sheet-stat-desc">Gruff, impatient with pleasantries</span>
-      </div>
-      <div class="sheet-row">
-        <span class="sheet-stat-name">Awareness (AW)</span>
-        <span class="sheet-stat-pips">&minus;3 &minus;2 &minus;1 &nbsp;0 <span class="filled">&bull;1</span> &nbsp;2 &nbsp;3</span>
-        <span class="sheet-stat-desc">Good instincts, trained to watch</span>
-      </div>
-      <div class="sheet-row">
-        <span class="sheet-stat-name">Power (PW)</span>
-        <span class="sheet-stat-pips">&minus;3 <span class="filled">&bull;&minus;2</span> &minus;1 &nbsp;0 &nbsp;1 &nbsp;2 &nbsp;3</span>
-        <span class="sheet-stat-desc">Near-dead to magic &mdash; and prefers it that way</span>
-      </div>
+      <table class="sheet-table">
+        <tr>
+          <td class="stat-name">Physical Prowess (PP)</td>
+          <td class="pip">&minus;3</td><td class="pip">&minus;2</td><td class="pip">&minus;1</td><td class="pip">0</td><td class="pip">1</td><td class="pip filled">&bull;2</td><td class="pip">3</td>
+          <td class="stat-desc">Former soldier, strong and fit</td>
+        </tr>
+        <tr>
+          <td class="stat-name">Phys. Coordination (PC)</td>
+          <td class="pip">&minus;3</td><td class="pip">&minus;2</td><td class="pip">&minus;1</td><td class="pip">0</td><td class="pip">1</td><td class="pip filled">&bull;2</td><td class="pip">3</td>
+          <td class="stat-desc">Trained fencer, quick hands</td>
+        </tr>
+        <tr>
+          <td class="stat-name">Intellect (IN)</td>
+          <td class="pip">&minus;3</td><td class="pip">&minus;2</td><td class="pip">&minus;1</td><td class="pip filled">&bull;0</td><td class="pip">1</td><td class="pip">2</td><td class="pip">3</td>
+          <td class="stat-desc">Practical, not academic</td>
+        </tr>
+        <tr>
+          <td class="stat-name">Social Prowess (SP)</td>
+          <td class="pip">&minus;3</td><td class="pip">&minus;2</td><td class="pip filled">&bull;&minus;1</td><td class="pip">0</td><td class="pip">1</td><td class="pip">2</td><td class="pip">3</td>
+          <td class="stat-desc">Gruff, impatient with pleasantries</td>
+        </tr>
+        <tr>
+          <td class="stat-name">Awareness (AW)</td>
+          <td class="pip">&minus;3</td><td class="pip">&minus;2</td><td class="pip">&minus;1</td><td class="pip">0</td><td class="pip filled">&bull;1</td><td class="pip">2</td><td class="pip">3</td>
+          <td class="stat-desc">Good instincts, trained to watch</td>
+        </tr>
+        <tr>
+          <td class="stat-name">Power (PW)</td>
+          <td class="pip">&minus;3</td><td class="pip filled">&bull;&minus;2</td><td class="pip">&minus;1</td><td class="pip">0</td><td class="pip">1</td><td class="pip">2</td><td class="pip">3</td>
+          <td class="stat-desc">Near-dead to magic &mdash; and prefers it that way</td>
+        </tr>
+      </table>
       <p style="margin-top: 0.8rem; font-size: 0.82rem; color: var(--parchment-dim);">
         Net total: 2 + 2 + 0 + (-1) + 1 + (-2) = <strong>+2</strong>
         <em>(GM set this campaign at net +2 for slightly heroic characters)</em>
@@ -512,9 +517,11 @@
       Notice how Kael's numbers tell a story before we've touched a single skill. He's
       physically exceptional (PP and PC both +2), has solid instincts (AW +1), doesn't
       care much for social niceties (SP -1), and is about as far from magical as a person
-      can be without being completely inert (PW -2). If Kael ever tried to cast a spell,
-      he'd have 5 Magic Points per tier and access to... nothing. He doesn't want to.
-      He trusts his sword.
+      can be without being completely inert (PW -2). His low PW means only 5 Exhaustion
+      Points per tier &mdash; he can push through stress and fatigue, but he'll hit his
+      limits faster than someone with deeper reserves. Could he learn magic? Technically,
+      yes &mdash; anyone can. But with a pool that shallow and only a handful of spells
+      to choose from, it would be a bad investment. Kael knows this. He trusts his sword.
     </p>
 
     <h3>Step 3: Your Skills</h3>
@@ -576,12 +583,13 @@
       your odds aren't great:
     </p>
 
-    <code class="formula">Unskilled attempt = (5 + attribute) &times; 10</code>
+    <code class="formula">Unskilled attempt = (5 + attribute) &times; 5</code>
 
     <div class="callout callout-example">
       <span class="callout-label">Example</span>
-      <p>Kael needs to do field medicine (IN +0, no Medicine skill): (5 + 0) &times; 10 = <strong>50%</strong>. A coin flip.</p>
-      <p>If his companion Sera tried the same (IN +2): (5 + 2) &times; 10 = <strong>70%</strong>. Her smarts carry her even without training.</p>
+      <p>Kael needs to do field medicine (IN +0, no Medicine skill): (5 + 0) &times; 5 = <strong>25%</strong>. A long shot &mdash; he's guessing.</p>
+      <p>If his companion Sera tried the same (IN +2): (5 + 2) &times; 5 = <strong>35%</strong>. Her smarts help, but she still doesn't really know what she's doing.</p>
+      <p>If Sera had Medicine at level 1? That's ((10 + 2) &times; 1) + 30 = <strong>42%</strong>. Even basic training makes a real difference, and every level after that pulls further ahead.</p>
     </div>
 
     <h4>What Your Character Sheet Looks Like</h4>
@@ -616,7 +624,7 @@
       he's better at demanding answers than asking nicely).
     </p>
 
-    <h3>Step 4: Hit Points &amp; Magic Points</h3>
+    <h3>Step 4: Hit Points &amp; Exhaustion Points</h3>
 
     <p>
       Your character can take punishment across <strong>four wound tiers</strong>, each with
@@ -668,9 +676,11 @@
     </p>
 
     <p>
-      Magic Points work the same way (7 + PW per tier), but Kael has PW -2, giving him
-      5 per tier. Not that it matters &mdash; he can't cast spells. We'll meet a caster
-      soon.
+      Exhaustion Points work the same way (7 + PW per tier), but track mental and
+      spiritual strain &mdash; stress, fatigue, disorientation, magical drain. Kael has
+      PW -2, giving him only 5 EP per tier. A stun grenade, a sleepless forced march,
+      or sheer psychological pressure all tick this track. It recovers faster than
+      physical wounds, but the penalties stack with them.
     </p>
 
     <h3>Step 5: Equipment</h3>
@@ -693,13 +703,16 @@
     <h3>Step 6: Magic (If That's Your Path)</h3>
 
     <p>
-      If your character has any connection to magic at all (PW of -1 or higher), they <em>could</em>
-      learn to cast. Whether they choose to is another matter. Magic is covered fully in
+      Anyone <em>can</em> learn magic &mdash; it's a skill choice, not a birthright. If you
+      invest skill points in casting (either Scholarly or Wild), you're a caster. PW doesn't
+      gate access; it determines how deep your reserves run and how much you can learn.
+      A PW -2 character who takes casting skills will burn out fast and know almost nothing.
+      A PW +3 caster is a force of nature. Magic is covered fully in
       <a href="#magic">its own section</a>, but here's what you need for character creation:
     </p>
 
     <ul>
-      <li>You know <strong>7 + PW</strong> base spells.</li>
+      <li>You know <strong>7 + PW</strong> base spells (minimum 1).</li>
       <li>You can draw from a number of <strong>schools of magic</strong> equal to your PW modifier (minimum 1).</li>
       <li>Want more spells? Each additional spell costs <strong>3 skill points</strong>. Magic is expensive.</li>
       <li>Choose your path: <strong>Scholarly</strong> (controlled, requires a spellbook) or <strong>Wild</strong> (instinctive, unpredictable, no book needed).</li>
@@ -732,7 +745,7 @@
       <span class="callout-label">At the Table</span>
       <p><em>"There's a padlock on the warehouse door. Kael, what do you do?"</em></p>
       <p>"I don't have Security. Can I try anyway?"</p>
-      <p><em>"Sure &mdash; unskilled attempt. Your AW is +1, so that's (5 + 1) &times; 10 = 60. Roll under 60."</em></p>
+      <p><em>"Sure &mdash; unskilled attempt. Your AW is +1, so that's (5 + 1) &times; 5 = 30. Roll under 30."</em></p>
       <p>"I got a 73."</p>
       <p><em>"The pick snaps. You hear footsteps inside."</em></p>
     </div>
@@ -835,19 +848,21 @@
       first round of a battle matters more than any other.</p>
     </div>
 
-    <h3>Exhaustion (Magic Points)</h3>
+    <h3>Exhaustion</h3>
 
     <p>
-      Casters have a parallel track for magical exhaustion. It works identically &mdash;
-      four tiers, same penalties &mdash; but it fills when you cast spells instead of
-      when you take hits. And here's the cruel part: <strong>wound and exhaustion penalties
-      stack.</strong>
+      Everyone has an exhaustion track &mdash; it's not just for casters. It works
+      identically to wounds: four tiers, same escalating penalties. But instead of
+      physical injury, it tracks everything that wears down your mind and spirit:
+      magical drain, sleep deprivation, stun grenades, psychological stress, overexertion.
+      Anything that hurts without leaving a wound lands here.
     </p>
 
     <p>
-      A caster who's Harmed (-10%) <em>and</em> Weakened (-10%) is rolling at -20% to
-      everything. The death spiral doesn't just punish you for one kind of damage &mdash;
-      it punishes you for existing in a dangerous world.
+      And here's the cruel part: <strong>wound and exhaustion penalties stack.</strong>
+      A fighter who's Harmed (-10%) <em>and</em> Weakened from a flashbang (-10%) is
+      rolling at -20% to everything. The death spiral doesn't just punish you for one
+      kind of damage &mdash; it punishes you for existing in a dangerous world.
     </p>
 
     <h3>Going Down</h3>
@@ -875,7 +890,7 @@
     <table>
       <tr><th>Type</th><th>Rate</th><th>Notes</th></tr>
       <tr><td>Physical damage</td><td>1d4 HP per hour of full rest</td><td>+1d4 with medical care</td></tr>
-      <tr><td>Magical exhaustion</td><td>1d8 MP per hour of full rest</td><td>Magic recovers faster than flesh</td></tr>
+      <tr><td>Exhaustion</td><td>1d8 EP per hour of full rest</td><td>Mental strain recovers faster than flesh</td></tr>
       <tr><td>Armor repair</td><td>Metalworking or Repair check</td><td>Needs downtime and tools</td></tr>
     </table>
 
@@ -920,7 +935,7 @@
 
     <p>
       After the spell fires, three things happen: you pay <strong>exhaustion</strong> (which
-      fills your Magic Points track), you check for <strong>backlash</strong> (the magic
+      fills your exhaustion track), you check for <strong>backlash</strong> (the magic
       fighting back), and the area gains <strong>Magic Accumulation</strong> (which starts
       degrading nearby technology).
     </p>
@@ -952,7 +967,7 @@
       <span class="callout-label">At the Table</span>
       <p>Sera is a wild caster. She casts Force at a thug &mdash; rolls 38 against her target of 55.
       That's a margin of 17, which means Standard tier. She doesn't get to choose; the magic
-      decided. Standard Force deals 2d6 damage. She pays 4 exhaustion from her MP track.</p>
+      decided. Standard Force deals 2d6 damage. She pays 4 exhaustion from her EP track.</p>
       <p>Then comes the backlash check: Standard has a 10% chance. She rolls 67 &mdash; safe. But
       the area now has +2 Magic Accumulation. The thugs' revolvers just got a little less
       reliable.</p>
@@ -985,8 +1000,8 @@
 
     <p>
       Here's where it gets dark. When a spell's exhaustion cost exceeds your remaining
-      Magic Points, the spell <strong>still fires</strong>. Your MP drops to zero &mdash;
-      you're magically Incapacitated &mdash; and the overflow converts to <strong>physical
+      Exhaustion Points, the spell <strong>still fires</strong>. Your EP drops to zero &mdash;
+      you're mentally Incapacitated &mdash; and the overflow converts to <strong>physical
       HP damage at half rate</strong>. The magic is tearing your body apart to fuel itself.
     </p>
 
@@ -1257,7 +1272,7 @@
       <li>
         <strong>Sera's Force spell:</strong> Rolls 38 against target 55. Success &mdash;
         margin 17, that's Standard tier. She's Wild, so she takes what she gets. Targets
-        Thug B. Damage: 2d6 = 8. Sera pays 4 exhaustion from her MP. Backlash check: 10%
+        Thug B. Damage: 2d6 = 8. Sera pays 4 exhaustion from her EP. Backlash check: 10%
         chance, rolls 67 &mdash; safe. But the area now has <strong>+2 Magic Accumulation</strong>.
       </li>
       <li>
@@ -1361,9 +1376,9 @@ OPPOSED: both roll, larger margin wins | one success beats one fail
 STATS: PP PC IN SP AW PW | range -3 to +3
 
 SKILL TARGET: ((10 + stat) &times; level) + 30
-UNSKILLED:    (5 + stat) &times; 10
+UNSKILLED:    (5 + stat) &times; 5
 
-WOUNDS (HP per tier = 7+PP)     EXHAUSTION (MP per tier = 7+PW)
+WOUNDS (HP per tier = 7+PP)     EXHAUSTION (EP per tier = 7+PW)
   OK         &mdash;                    OK          &mdash;
   Harmed    -10%                  Weakened   -10%
   Maimed    -25%                  Sev. Weak  -25%
@@ -1385,7 +1400,7 @@ COMBAT: timing track &mdash; declare, place token, resolve on count
   Armor: Soak absorbs damage, 25% degrade if exceeded
   Death saves: every 3 counts, 50/50, 3 failures = dead
 
-RECOVERY: HP 1d4/hour | MP 1d8/hour | +1d4 HP with medical care</pre>
+RECOVERY: HP 1d4/hour | EP 1d8/hour | +1d4 HP with medical care</pre>
     </div>
   </section>
 

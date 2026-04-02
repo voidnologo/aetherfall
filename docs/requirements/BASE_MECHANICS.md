@@ -49,7 +49,7 @@ Six stats, rated **-3 to +3.**
 | IN | Intellect | Knowledge, quick-thinking, academics |
 | SP | Social Prowess | Etiquette, poise, likability |
 | AW | Awareness | Perception, alertness, eye for detail |
-| PW | Power | Magical ability, attunement |
+| PW | Power | Mental fortitude, resilience, magical attunement |
 
 **Character creation:** Distribute stats with a net bonus set by GM (default **+1**). Player describes a roleplay justification for each value.
 
@@ -68,10 +68,10 @@ Six stats, rated **-3 to +3.**
 ### 4.2 Unskilled Attempt
 
 ```
-(5 + associated stat) × 10
+(5 + associated stat) × 5
 ```
 
-*Example: Unskilled Athletics, PC +1 → (5 + 1) × 10 = 60. Unskilled Medicine, IN -1 → (5 + -1) × 10 = 40.*
+*Example: Unskilled Athletics, PC +1 → (5 + 1) × 5 = 30. Unskilled Medicine, IN -1 → (5 + -1) × 5 = 20.*
 
 ### 4.3 Skill Points
 
@@ -100,9 +100,9 @@ Skill points are allocated per stat group:
 | Value | Formula |
 |-------|---------|
 | HP per wound tier | 7 + PP |
-| MP per exhaustion tier | 7 + PW |
+| EP per exhaustion tier | 7 + PW |
 | Skill target number | ((10 + stat) × skill level) + 30 |
-| Unskilled attempt | (5 + stat) × 10 |
+| Unskilled attempt | (5 + stat) × 5 |
 | Concentration check | (PW + 4) × 10 |
 | Cancellation cost | Half the Weak tier exhaustion (per spell) |
 
@@ -115,7 +115,7 @@ Skill points are allocated per stat group:
 | 3 | Maimed | -25% to all rolls |
 | 4 | Incapacitated | -50% to all rolls |
 
-**Exhaustion tiers (MP):**
+**Exhaustion tiers (EP) — covers all non-physical strain: stress, fatigue, stun, magical drain:**
 
 | Tier | Status | Penalty |
 |------|--------|---------|
@@ -155,7 +155,7 @@ Full rules in MAGIC_SYSTEM.md. Spell details in SPELL_COMPENDIUM.md.
 
 ### 6.3 Exhaustion Overflow
 
-When a spell's exhaustion exceeds remaining MP, the spell still fires. Remaining MP drops to zero (Incapacitated). Overflow converts to **physical HP damage at half rate** (rounded down).
+When a spell's exhaustion exceeds remaining EP, the spell still fires. Remaining EP drops to zero (Incapacitated). Overflow converts to **physical HP damage at half rate** (rounded down).
 
 ### 6.4 Ritual Spells
 
@@ -211,7 +211,7 @@ Ritual spells still require the casting roll, pay exhaustion, and risk backlash 
 | Type | Rate | Bonus |
 |------|------|-------|
 | Physical damage | 1d4 HP per hour of full rest | +1d4 with medical care |
-| Magical exhaustion | 1d8 MP per hour of full rest | — |
+| Exhaustion (mental) | 1d8 EP per hour of full rest | — |
 | Armor repair | Metalworking/Repair check | Downtime, tools required |
 
 ---
@@ -220,9 +220,9 @@ Ritual spells still require the casting roll, pay exhaustion, and risk backlash 
 
 1. **Stats:** Distribute across 6 stats (-3 to +3). Net bonus set by GM (default +1). Justify each value.
 2. **Skills:** Up to 15. Points per group = 10 + stat group net.
-3. **Spells (if caster):** 7 + PW base spells. Schools = PW modifier (min 1). Scholarly casters need a spellbook. Extra spells cost 3 skill points each.
+3. **Spells (if caster):** Magic is a skill choice (Scholarly or Wild). 7 + PW base spells (min 1). Schools = PW modifier (min 1). Scholarly casters need a spellbook. Extra spells cost 3 skill points each.
 4. **Archetype label:** Name your character concept. Flavor, not restriction.
-5. **Derived values:** HP per tier (7+PP), MP per tier (7+PW), skill targets, concentration check target.
+5. **Derived values:** HP per tier (7+PP), EP per tier (7+PW), skill targets, concentration check target.
 6. **Equip:** Weapons (category + 1-2 tags), armor, gear.
 
 ---
@@ -239,9 +239,9 @@ OPPOSED: both roll, larger margin wins │ one success beats one fail
 STATS: PP PC IN SP AW PW │ range -3 to +3
 
 SKILL TARGET: ((10 + stat) × level) + 30
-UNSKILLED:    (5 + stat) × 10
+UNSKILLED:    (5 + stat) × 5
 
-WOUNDS (HP per tier = 7+PP)     EXHAUSTION (MP per tier = 7+PW)
+WOUNDS (HP per tier = 7+PP)     EXHAUSTION (EP per tier = 7+PW)
   OK         —                    OK          —
   Harmed    -10%                  Weakened   -10%
   Maimed    -25%                  Sev. Weak  -25%
@@ -259,5 +259,5 @@ ACCUMULATION: each spell adds tier value to area
 CONCENTRATION: (PW + 4) × 10
   PW-3=10% │ PW+0=40% │ PW+3=70%
 
-RECOVERY: HP 1d4/hour │ MP 1d8/hour │ +1d4 HP with medical care
+RECOVERY: HP 1d4/hour │ EP 1d8/hour │ +1d4 HP with medical care
 ```

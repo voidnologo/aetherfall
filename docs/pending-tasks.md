@@ -1,8 +1,6 @@
 # Pending Tasks
 
 ## Next Up
-- [ ] Create website — landing page + rules reference (model after card-game/web)
-- [ ] Establish art style guide and AI generation pipeline (FLUX/SDXL, prompt templates, settings)
 - [ ] Define major factions and their Adventuring Societies
 - [ ] Design leveling/progression mechanics (Mouse Guard / Symbaroum inspired)
 - [ ] Design magic/tech interference zone mechanics (framework in FIREARMS_EQUIPMENT.md §5, full rules needed)

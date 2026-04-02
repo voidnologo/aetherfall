@@ -1,25 +1,22 @@
 # Continuation Prompt
 
-## Last Session (5) — Combat System & Base Mechanics Codification
-- Created COMBAT_PROCEDURE.md: full timing track workflow, attacks, active defense, damage/soak, death saves, declaration order, range bands, malfunction integration, spell interruption, cheat sheet
-- Rebalanced armor degradation (flat 25% chance, lose 1 soak) — validated by simulation
-- Assigned fixed casting times to all 37 spells; 4 ritual spells (Shape Flesh, Transmute, Circle, Scry)
-- Created BASE_MECHANICS.md: stats, skills, resolution, magic summary, one-page rules summary
-- New mechanics: concentration check (PW+4)×10, declaration order (lowest PC first), cancellation = half Weak tier
+## Last Session (7) — Exhaustion Track & Unskilled Formula Rebalance
+- Renamed "Magic Points" / "MP" to "Exhaustion Points" / "EP" — exhaustion track covers all non-physical strain (stress, fatigue, stun, magical drain), not just magic
+- PW reframed as mental fortitude first, magical attunement second; magic access is a skill choice, not PW-gated
+- Unskilled formula changed from ×10 to ×5 — old formula let untrained beat trained skills
+- Fixed character sheet table alignment on rules website (switched to HTML table)
 
 ## Current State
 - Project is in **design exploration phase** — collaborative interview-driven design
+- **Website live:** Landing page + rules reference at `web/` (static HTML)
 - **Playtest-ready documents:** COMBAT_PROCEDURE.md, BASE_MECHANICS.md (with cheat sheets)
-- **Complete (first pass):** Magic system, spell compendium (37 spells with fixed casting times), weapons (melee + firearms + exotics), armor/soak, malfunction/accumulation, design philosophy
+- **Complete (first pass):** Magic system, spell compendium (37 spells), weapons (melee + firearms + exotics), armor/soak, malfunction/accumulation, design philosophy, art style guide
 - **Not yet designed:** Leveling, factions, zone mechanics, death saves (provisional), races, archetype names, skill list revision, currency
 
 ## Immediate Next Task
-**Priority: Create a website — landing page and rules reference.**
-- Model after `~/projects/card-game/web` (static HTML, GitHub Pages deploy structure)
-- That repo has a comprehensive art pipeline: `docs/art/style-guide.md`, `docs/art/prompt-engineering/` (FLUX/SDXL templates, LoRA configs, generation settings), `docs/art/color-palettes.md`, consistency rules
-- Establish equivalent art style guide for this project's 1920s steampunk pen-and-ink aesthetic (existing art in `art/` is B&W pen & ink)
-- Create generation scripts and prompt templates for producing consistent artwork
-- Build landing page (setting intro, tone, key features) and rules section (pull from BASE_MECHANICS.md and COMBAT_PROCEDURE.md)
+**Priority: Define major factions and their Adventuring Societies.**
+- This is world-building that feeds into leveling/progression design
+- Adventuring Societies are the organizational structure for PCs
 
 ## Key References
 - `docs/requirements/COMBAT_PROCEDURE.md` — Full combat rules with cheat sheet
@@ -29,6 +26,5 @@
 - `docs/requirements/SPELL_COMPENDIUM.md` — All 37 spells with fixed casting times
 - `docs/requirements/FIREARMS_EQUIPMENT.md` — Firearms, malfunction, accumulation
 - `docs/requirements/DESIGN_PHILOSOPHY.md` — Cosmology, literary influences
-- `art/` — Existing B&W pen & ink art (cat, dragon, fantasy figure)
-- `~/projects/card-game/web/` — Reference site structure (landing + rules + app)
-- `~/projects/card-game/docs/art/` — Reference art pipeline (style guide, prompt templates, generation settings, LoRAs)
+- `web/rules/index.html` — Rules website
+- `docs/sessions/session-7-notes.md` — Unskilled formula comparison charts

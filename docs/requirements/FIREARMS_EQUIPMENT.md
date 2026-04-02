@@ -153,7 +153,7 @@ After any malfunction, roll d10 to determine if something worse happens:
 
 ### 4.4 Design Parallel
 
-This system deliberately mirrors **spell backlash**: a base cost (lost action / MP cost) plus a severity table for worse outcomes. Same mechanical shape, different fiction — reinforcing the magic/tech parallel at the system level.
+This system deliberately mirrors **spell backlash**: a base cost (lost action / EP cost) plus a severity table for worse outcomes. Same mechanical shape, different fiction — reinforcing the magic/tech parallel at the system level.
 
 ---
 
