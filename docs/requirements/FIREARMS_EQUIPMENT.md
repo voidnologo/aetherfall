@@ -26,7 +26,7 @@ Every firearm has five stats (exotic weapons add a sixth — **Aetheric**):
 | **Capacity** | Shots before reload is required |
 | **Reload** | Timing track counts to fully reload |
 | **Reliability** | Resistance to malfunction. Malfunction chance = 100 − Reliability, checked BEFORE the Ranged roll. Higher = more resistant. Reduced by 2 per net Aetheric point. No check needed for conventional firearms in clean environments. See §4. |
-| **Aetheric** | *(Exotic weapons only)* How much Galvanic accumulation the weapon generates per shot. Pushes the Aetheric balance toward tech. See §5. |
+| **Galvanic** | *(Exotic weapons only)* How much the weapon shifts the Aetheric balance toward tech per shot. See §5. |
 
 **Skill:** Firearms use the **Ranged** combat skill (same as bows/crossbows). The weapon's accuracy is baked into the damage code and speed — a tommy gun's terrible accuracy is reflected in its lower per-round damage relative to its fire rate, not a separate accuracy modifier.
 
@@ -96,7 +96,7 @@ Tags work the same as melee weapon tags — they differentiate weapons within a 
 | Tag | Effect | Typical Weapons |
 |-----|--------|-----------------|
 | Shocking | Ignores 2 points of metal armor soak (arcs through it) | Arc gun, shock gauntlet, voltaic blade |
-| Suppressing | +1 to weapon's Aetheric rating per shot | Aether lance, beam projector |
+| Suppressing | +1 to weapon's Galvanic rating per shot | Aether lance, beam projector |
 | Silent | No audible report whatsoever | Pneumatic flechette, needle gun |
 | Unstable | On malfunction severity roll, +2 instead of exotic's normal +1 | Aether lance, experimental prototypes |
 
@@ -210,13 +210,13 @@ Conventional firearms and martial weapons don't move the needle in either direct
 
 **Toward tech (negative):**
 
-Each exotic item has an **Aetheric rating** — how much it shifts the balance per use.
+Each exotic item has an **Galvanic rating** — how much it shifts the balance per use.
 
 | Source | Accumulation |
 |--------|-------------|
-| Exotic weapon shot | −(weapon's Aetheric rating) per shot |
-| Suppressing tag | Adds +1 to weapon's Aetheric rating |
-| Non-weapon exotic device | −(device's Aetheric rating) per activation or per minute sustained |
+| Exotic weapon shot | −(weapon's Galvanic rating) per shot |
+| Suppressing tag | Adds +1 to weapon's Galvanic rating |
+| Non-weapon exotic device | −(device's Galvanic rating) per activation or per minute sustained |
 
 | Exotic Category | Aetheric Rating |
 |-----------------|----------------|
@@ -225,7 +225,7 @@ Each exotic item has an **Aetheric rating** — how much it shifts the balance p
 | Exotic Heavy | 3 |
 | Exotic Melee | 1 per charge used |
 
-Non-weapon exotics (aetheric generators, plasma shields, resonance engines) are assigned Aetheric ratings by the GM based on their scale and power. A portable aetheric lamp might be 1; a factory-scale resonance engine might be 10+.
+Non-weapon exotics (aetheric generators, plasma shields, resonance engines) are assigned Galvanic ratings by the GM based on their scale and power. A portable aetheric lamp might be 1; a factory-scale resonance engine might be 10+.
 
 Accumulation is **localized** — it affects the immediate area (a room, a street corner, a clearing). GM adjudicates boundaries.
 
@@ -298,49 +298,201 @@ Spellcasting and exotic tech use **shifts the balance from the baseline**. A par
 
 ---
 
-## 6. Steampunk Equipment (Non-Weapons)
+## 6. Galvanic Oddities (Non-Weapon Devices)
 
-> **NOTE:** Prices and a full equipment list are deferred to the currency/economy design session. Below are categories and notable items that have mechanical implications.
+### 6.1 Design Philosophy
 
-### 6.1 Equipment Categories
+Not every piece of Galvanic technology is a weapon. The Engine powers devices that investigate, protect, communicate, and manipulate the environment. These are prototype-level technology — rare, expensive, and temperamental — acquired through faction connections, black markets, research labs, or salvage.
+
+**Categories over exhaustive lists.** The devices below are representative examples — templates that show GMs how to stat similar items. The goal is to establish patterns (Galvanic ratings, reliability ranges, typical effects) so that GMs can create new devices that feel consistent with the world. If a player wants a Galvanic device not on this list, the GM has the framework to build one.
+
+**Core principle:** Every Galvanic device interacts with the Aetheric balance. Some push it actively (Galvanic rating per use), some sustain a passive field (Galvanic rating while active), and some are passive readers that don't shift the balance at all. This is the key question when designing a new device: does it radiate Engine force, or just listen?
+
+### 6.2 How to Stat a Galvanic Device
+
+When creating a new Galvanic device, assign these properties:
+
+| Property | Description | Guidance |
+|----------|-------------|----------|
+| **Function** | What it does — one clear purpose | Keep it focused. A device does one thing well. |
+| **Aetheric Rating** | How much it shifts the balance per use or while sustained | 0 = passive reader. 1 = minor. 2 = significant. 3 = major. |
+| **Reliability** | d100 roll-under to function, same as firearms | 50-60 = fragile prototype. 65-75 = field-ready. 80+ = robust. |
+| **Power** | Charges, fuel, or sustained | Most devices: 10 charges or sustained while active. |
+| **Rarity** | How hard to acquire | Common (shops), Uncommon (specialist), Rare (faction/black market), Unique (one-of-a-kind) |
+
+**Balance guideline for Galvanic ratings:** A device that replicates a spell effect should have an Galvanic rating roughly equal to the spell tier it mimics (Weak = 1, Standard = 2). A device that provides a persistent environmental effect should have a lower per-tick rating but sustained over time — the force generator in the combat example pushes -2 every 3 counts, equivalent to a steady drip rather than a burst.
+
+### 6.3 Example Devices
+
+These are templates. The specific names and flavors are examples — GMs should reskin freely.
+
+**Aetheric Compass** — *Investigation*
+- Measures local Aetheric balance. The needle swings toward disturbances — stronger magic pulls harder. Investigators use these to trace magical activity to its source, mapping gradients to find the fire from the smoke.
+- Aetheric Rating: 0 (passive reader — no balance shift)
+- Reliability: 80
+- Power: No charges — always on
+- Rarity: Uncommon
+- *Design note:* This is the non-magical equivalent of Detect. It reads the field but can't identify schools or specific spells — it just says "magic is stronger that way." Pairs well with Occult Lore to interpret what the compass is pointing at.
+
+**Force Generator** — *Environmental Control*
+- A brass cylinder packed with resonance coils. When activated, it pulses Galvanic force at regular intervals, pushing the Aetheric balance toward tech. The one from the worked combat example.
+- Aetheric Rating: -2 per pulse (every 3 counts in combat, every minute out of combat)
+- Reliability: 65
+- Power: Sustained — runs until deactivated or destroyed
+- Rarity: Rare
+- *Design note:* This is the tech side's answer to a caster flooding an area with Aetheric accumulation. It doesn't deal damage or target anyone — it changes the rules of the environment. Destroying it is a valid tactical objective. HP: 8 (small, sturdy brass casing). Weighs about 5 lbs.
+
+**Resonance Damper** — *Personal Protection*
+- A harness worn under clothing that generates a tight Galvanic field around the wearer. Reduces incoming magical effects by a flat -15% to their effectiveness (damage, duration, or check modifiers — GM adjudicates). Cult hunters swear by these.
+- Aetheric Rating: 1 (sustained while active)
+- Reliability: 60
+- Power: 10 charges (each charge lasts ~10 minutes)
+- Rarity: Rare
+- *Design note:* This is magical armor — but tech-based. The -15% is a rough guideline, not a precise mechanic. A Weak Force that would deal 1d4 might deal 1d4-1 instead. A Standard Wither's -10% penalty might be reduced to -8%. The GM interprets. It doesn't block magic entirely — it dampens it, like wearing earplugs in a thunderstorm.
+
+**Voltaic Lantern** — *Investigation*
+- Projects a beam of tuned Galvanic light that causes magical residue to fluoresce. Hidden wards glow blue. Enchanted objects shimmer. Magical traps become visible as faint outlines. The tech equivalent of Reveal, but slower and more limited.
+- Aetheric Rating: 1 per use (each sweep of a room counts as one use)
+- Reliability: 70
+- Power: 10 charges
+- Rarity: Uncommon
+- *Design note:* Unlike the spell Reveal, this only shows magical residue — not hidden mundane objects, secret doors, or disguised people. It's a forensics tool, not a perception enhancer. An investigator with both this AND the Reveal spell covers different ground with each.
+
+**Galvanic Brace** — *Physical Augmentation*
+- An exoskeletal frame of brass rods and voltaic muscle-wire worn over one arm or across the back. While active, provides the equivalent of +1 PP for lifting, carrying, and feats of brute strength (not combat damage). Hums loudly — no stealth while wearing one.
+- Aetheric Rating: 1 (sustained while active)
+- Reliability: 65
+- Power: Sustained — runs until deactivated. Overheats after ~1 hour of continuous use (needs 30 minutes to cool).
+- Rarity: Uncommon
+- *Design note:* This doesn't increase PP for skill calculations — it's a narrative tool. You can carry the wounded soldier, force the jammed door, lift the collapsed beam. The +1 PP is a guideline for the GM, not a character sheet modification. The loud humming is a deliberate drawback — Stealth is effectively impossible.
+
+**Signal Caster** — *Communication*
+- Sends encoded pulses through Galvanic frequencies. Two paired devices can transmit short messages (a sentence or two) at ranges up to a few city blocks. Works in Wild Zones where conventional radios fail — the Engine signal punches through Aetheric interference.
+- Aetheric Rating: 1 per transmission
+- Reliability: 70
+- Power: 10 transmissions before recharge
+- Rarity: Uncommon
+- *Design note:* This is the tech answer to Commune — but much more limited. Short messages, paired devices only, line-of-sight-ish range. The advantage is that it works where magic is being suppressed. A mixed party might use Commune in Aetheric zones and Signal Casters in Galvanic ones.
+
+### 6.4 Creating Your Own
+
+The examples above establish patterns. When a player or GM wants a new device:
+
+1. **Start with the function.** What does it do? One clear purpose.
+2. **Find the magical equivalent.** If a spell does something similar, that grounds the device's power level and Galvanic rating.
+3. **Assign Reliability.** Prototypes are 50-60. Field equipment is 65-75. Military-grade is 80+.
+4. **Choose a drawback.** Every device should have at least one: loud, heavy, fragile, limited charges, requires both hands, attracts attention, short range, etc. Galvanic tech is powerful but imperfect.
+5. **Set rarity.** How hard is this to get? This controls availability — a Rare device is a plot point to acquire, not a shop purchase.
+
+---
+
+## 7. Vehicles & Conveyance
+
+### 7.1 Design Philosophy
+
+Vehicles are narrative tools, not stat blocks. This is theater-of-the-mind — there are no movement speeds in feet-per-round or fuel consumption tables. A vehicle is fast or slow, reliable or temperamental, big or small. The GM describes what it can do, and the Piloting skill handles the rest.
+
+**The Aetheric question is the interesting part.** Horses don't care about magic zones. Cars do. Airships really do — a stalled engine at altitude is a death sentence. This creates the same tension as the firearms system: mechanical conveyance is faster and more powerful, but magic can shut it down. Smart adventurers think about how they're getting home before they enter a Wild Zone.
+
+### 7.2 Vehicle Categories
+
+Vehicles don't have individual stat lines. They have categories that describe what the GM and players need to know: how fast, how many people, how vulnerable to magic, and what happens when things go wrong.
+
+| Category | Examples | Relative Speed | Capacity | Aetheric Vulnerability | Notes |
+|----------|---------|---------------|----------|----------------------|-------|
+| **Beast** | Riding horse, draft horse, pack mule, war dog | Moderate | 1-2 riders + cargo | None | Animals are immune to zone interference. Always work. Eat oats. |
+| **Bicycle/Cart** | Bicycle, horse-drawn cart, wagon, rickshaw | Slow-Moderate | 1-6 | None | No engine, no problem. Limited by roads and terrain. |
+| **Automobile** | Touring car, truck, taxi, armored car | Fast | 2-6 | Moderate (Rel 75) | Engines stall in Aetheric zones. The default adventurer transport in cities. |
+| **Motorcycle** | Standard bike, sidecar rig | Very Fast | 1-2 | Moderate (Rel 75) | Faster than cars, less protection. Excellent for chases. |
+| **Motorboat** | Launch, speedboat, patrol craft | Fast (on water) | 2-8 | Moderate (Rel 75) | Same engine problems as cars. Stalling on open water is dangerous. |
+| **Sailing Vessel** | Sailboat, yacht, fishing boat | Slow-Moderate (on water) | 2-12 | None | Wind-powered. Immune to zones. Slow but reliable. |
+| **Airship — Personal** | One-person dirigible, gyrocopter | Moderate (flight) | 1-2 | High (Rel 60) | Experimental. Fragile engines. A malfunction means a crash. |
+| **Airship — Transport** | Passenger dirigible, cargo hauler | Slow (flight) | 10-50 | High (Rel 65) | Large, stable, but very vulnerable at altitude. Major investment. |
+| **Airship — Military** | Gunship, armored cruiser | Moderate (flight) | 20-100 | High (Rel 70) | Better engines, still vulnerable. Galvanic shielding helps but doesn't eliminate risk. |
+| **Train** | Passenger, freight, armored | Fast (on rails) | Dozens-hundreds | Moderate (Rel 80) | Robust engines, but locked to rails. Can't deviate. Reliable but predictable. |
+
+### 7.3 Aetheric Vulnerability
+
+Vehicles with engines interact with the Aetheric balance the same way firearms do:
+
+```
+Effective Vehicle Reliability = Base Reliability − (net Aetheric balance × 2)
+```
+
+When a vehicle enters an Aetheric zone or magic is cast nearby, the GM checks Reliability on a d100 roll-under:
+- **Success:** The vehicle runs fine — for now. Check again when conditions change.
+- **Failure:** The engine sputters, stalls, or malfunctions. Severity depends on context.
+
+**How often to check:** Not every count — vehicles aren't firing shots. Check when:
+- The vehicle enters a new zone or the balance shifts significantly (±5 or more)
+- The vehicle is under stress (chase, evasive maneuvers, damage)
+- A spell fires nearby that shifts the balance
+- The GM feels dramatic tension warrants it
+
+**Vehicle malfunction severity** (d6, not d10 — vehicles are simpler than firearms):
+
+| d6 | Result | Effect |
+|----|--------|--------|
+| 1-3 | **Sputter** | Engine coughs. -1 speed category until conditions improve. |
+| 4-5 | **Stall** | Engine dies. Piloting check to restart (takes a full round / ~10 counts). |
+| 6 | **Breakdown** | Something broke. Vehicle needs repair before it runs again. On an airship, this is an emergency. |
+
+### 7.4 Handling Chases and Travel
+
+> **NOTE:** The rules below describe how chases and travel work mechanically. In the web rulebook, this content belongs in a GM-facing "Running the Game" or "Actions & Situations" chapter — not in the equipment catalog. The equipment chapter lists what vehicles *are*; the procedures chapter explains how to *use* them dramatically.
+
+**Chases:** Opposed Piloting checks. The GM sets the scene (city streets, mountain passes, open sky), describes obstacles, and calls for rolls. Each failed check means the pursuer gains ground (or the quarry loses it). Terrain, weather, and vehicle category matter narratively — a motorcycle outmaneuvers a truck in narrow alleys, but the truck can smash through a roadblock.
+
+**Overland travel:** Narrative pacing. "You drive for three hours and reach the edge of the Wild Zone." No hex maps, no movement rates. The interesting question is always: what's the Aetheric situation where you're going, and will your vehicle work when you get there?
+
+**Airship travel:** The most dramatic. Altitude means a stall isn't just inconvenient — it's potentially fatal. Smart airship crews carry emergency supplies, backup sail rigs, and a prayer. Flying through or over a Wild Zone is a calculated risk that experienced pilots plan around, not through.
+
+### 7.5 Beasts and Magic
+
+Animals are completely immune to Aetheric zone interference. They don't have engines to stall or mechanisms to jam. A horse works in a Deep Wild Zone the same as it does on a city street.
+
+However, animals are *affected* by magical zones psychologically. Horses balk at entering Wild Zones — they can sense the wrongness. Dogs whine and cower. Birds avoid the airspace. Getting a horse to enter a moderate Aetheric zone requires an Animal Handling check (use Survival). Deep Wild Zones? Most animals flatly refuse. War horses and trained mounts have better odds, but even they have limits.
+
+This is why beast-mounted expeditions into Wild Zones are rare and legendary. The animals that will go are special — bred for it, trained for years, and worth a fortune.
+
+---
+
+## 8. General Equipment Categories
+
+> **NOTE:** Prices and a full equipment list are deferred to the currency/economy design session. Below are categories of common adventuring equipment for reference.
 
 **Field Gear:**
 - Aether lanterns (magical light sources, no fuel needed, useless in Dead Zones)
 - Compressed air grapples
-- Portable generators (for powering gadgets in the field)
+- Rope, climbing pitons, camping supplies
+- Portable generators (for powering Galvanic devices in the field)
 - Communication devices (short-range radio, unreliable near magic)
 
 **Investigation Tools:**
-- Magical residue detectors (measures local Accumulation — the magical forensics toolkit)
+- Aetheric Compass (see §6.3)
+- Voltaic Lantern (see §6.3)
 - Photographic equipment (1920s cameras, flash powder)
 - Lock-picking kits (mechanical and aetheric variants)
 - Alchemical field kits
+- Forensic evidence collection supplies
 
 **Protective Gear:**
 - Gas masks
 - Insulated gloves (for handling magical artifacts or live aether conduits)
 - Reinforced goggles (protect against arc flash, magical flares)
+- Resonance Damper (see §6.3)
 
-**Transport:**
-- Automobiles (unreliable in magic zones)
-- Motorcycles (faster, lighter, same zone problems)
-- Airships (major zone vulnerability — a stalled engine at altitude is catastrophic)
-- Horses (always work, eat oats, don't care about magic)
+**Medical:**
+- Field surgery kit (+1d4 HP bonus when treating wounds with Medicine skill)
+- Antitoxin compounds
+- Bandages and splints
+- Aetheric salves (minor magical healing aids — uncommon, expensive)
 
-> **Vehicle rules** are deferred to a separate session. Key principle: vehicles suffer from Aetheric accumulation the same way firearms do, using a vehicle-level Reliability score.
+### 8.1 Modern Armor Supplement
 
-### 6.2 Modern Armor Supplement
+The existing armor table covers medieval-style armor. Modern additions are documented in the armor tables (see web rulebook, Arms & Equipment chapter). Key design note:
 
-The existing armor table covers medieval-style armor. Modern additions:
-
-| Armor Type | Soak | Hinder | Reliability | Notes |
-|------------|------|--------|-------------|-------|
-| Leather Jacket | 1 | — | — | Not really armor. Looks good |
-| Trench Coat (lined) | 2 | — | — | Reinforced leather and wool. No tech to fail |
-| Ballistic Vest | 5 | — | 80 | Experimental. Can degrade in magic zones |
-| Steel Breastplate | 6 | 1 | — | Old-fashioned but magic-proof |
-
-> **Ballistic Vest Note:** This is bleeding-edge technology in the setting. Reliability applies the same way as firearms — in high-accumulation areas, the experimental materials may lose structural integrity. Traditional metal and leather armor never has this problem.
+> **Ballistic Vest Note:** Ballistic protection is bleeding-edge technology in the setting. Traditional metal and leather armor is immune to Aetheric zone interference — it's just shaped material. Experimental ballistic materials (ceramic plates, woven composites) could theoretically be affected by extreme Aetheric zones, but this is a GM judgment call for dramatic situations, not a standard rule.
 
 ---
 
