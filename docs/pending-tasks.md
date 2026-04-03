@@ -12,7 +12,6 @@
 - [ ] Design zone formation/shift mechanics — how zones form, change, and interact over time
 - [ ] Brainstorm setting-flavored archetype (class) names
 - [ ] Design currency system and equipment prices
-- [ ] Decide on races (include non-humans or not)
 - [ ] Design bestiary (monsters, cultists, corrupted beings)
 - [ ] Create simplified NPC stat block format
 - [ ] Design corruption/madness mechanics for dark magic exposure

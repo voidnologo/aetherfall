@@ -200,7 +200,7 @@ The "class" field on the character sheet is a **label for how you envision playi
 
 ### 3.5 Races
 
-**Deferred.** To be discussed in a future session. May include non-human options, magical mutations, or may remain human-only. TBD.
+**Human only.** Players and society are human. Non-human creatures, magical beasts, and supernatural entities exist in the world but are not playable races. This is a deliberate setting choice — the world is defined by humanity grappling with forces beyond their understanding, not by a fantasy species catalog.
 
 ---
 
@@ -480,7 +480,7 @@ The following topics need further discussion and design work:
 3. **Magic/Tech Interference Mechanics** — How zones work mechanically (framework established in FIREARMS_EQUIPMENT.md §5, full zone rules TBD)
 4. ~~**Leveling System** — Detailed progression mechanics~~ **DONE** (Session 10 — see SKILLS_PROGRESSION.md)
 5. ~~**Death Saves**~~ **DONE** (Session 5 — see COMBAT_PROCEDURE.md §5.3)
-6. **Races** — Whether to include, and if so, what options
+6. ~~**Races** — Whether to include, and if so, what options~~ **DECIDED** (Session 10 — humans only, no playable non-human races)
 7. **Archetype Names** — Setting-flavored class labels
 8. **Factions** — Define the major power groups
 9. ~~**Individual Spell Tier Tables**~~ **DONE** (Session 2 — see SPELL_COMPENDIUM.md)
