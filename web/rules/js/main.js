@@ -65,7 +65,7 @@
     const headings = document.querySelectorAll('.page-content h2[id], .page-content h3[id]');
     return Array.from(headings).map(h => ({
       id: h.id,
-      text: h.textContent.trim(),
+      text: h.dataset.toc || h.textContent.trim(),
     }));
   }
 

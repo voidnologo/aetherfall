@@ -514,6 +514,23 @@ body::before {
   margin: 1.8rem 0 0.6rem;
 }
 
+.page-content h4.spell-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  color: var(--theme-accent);
+  border-left: 3px solid var(--theme-accent);
+  padding-left: 0.75rem;
+  margin: 2.5rem 0 0.4rem;
+}
+
+.page-content .spell-meta {
+  margin: 0 0 0.4rem;
+  font-size: 0.9rem;
+  color: var(--text-dim);
+}
+
 .page-content h5 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 0.78rem;
