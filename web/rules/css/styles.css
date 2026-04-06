@@ -697,6 +697,18 @@ tr:hover td {
 .callout-scene { border-color: rgba(138, 126, 200, 0.15); }
 .callout-scene::before { background: #8a7ec8; }
 
+.callout-handler { border-color: rgba(160, 160, 160, 0.15); }
+.callout-handler::before { background: #a0a0a0; }
+
+.callout-scholar { border-color: rgba(61, 200, 224, 0.15); }
+.callout-scholar::before { background: var(--aether); }
+
+.callout-street { border-color: rgba(232, 168, 37, 0.15); }
+.callout-street::before { background: var(--galvanic); }
+
+.callout-believer { border-color: rgba(138, 200, 126, 0.15); }
+.callout-believer::before { background: #7ec87e; }
+
 .callout p { margin-bottom: 0.5rem; }
 .callout p:last-child { margin-bottom: 0; }
 
@@ -714,6 +726,10 @@ tr:hover td {
 .callout-note .callout-label { color: var(--aether); }
 .callout-warning .callout-label { color: var(--warning); }
 .callout-scene .callout-label { color: #8a7ec8; }
+.callout-handler .callout-label { color: #a0a0a0; }
+.callout-scholar .callout-label { color: var(--aether); }
+.callout-street .callout-label { color: var(--galvanic); }
+.callout-believer .callout-label { color: #7ec87e; }
 
 /* ── Code / Formula Blocks ────────────────────────────────── */
 code.formula {

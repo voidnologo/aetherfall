@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="split">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The State of the World — Adventure RPG</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="atmosphere"><canvas id="particle-canvas"></canvas><div class="mist mist-1"></div><div class="mist mist-2"></div><div class="mist mist-3"></div></div>
+<div id="page-transition" class="page-transition"></div>
+<div class="sidebar-overlay"></div>
+<aside class="sidebar">
+  <div class="sidebar-brand"><div class="sidebar-title">Adventure</div><div class="sidebar-subtitle">Rules Reference</div></div>
+  <nav class="sidebar-nav"></nav>
+  <div class="sidebar-footer"><a href="../">← Back to Adventure</a></div>
+</aside>
+<header class="site-header">
+  <button class="header-toggle" aria-label="Toggle navigation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+  <span class="header-logo">Adventure <span>RPG</span></span>
+  <span class="header-separator"></span>
+  <span class="header-chapter">Chapter 2 &mdash; The State of the World</span>
+</header>
+<main class="main-content">
+  <div class="page-content">
+
+    <nav class="page-nav-compact">
+      <a href="index.html">&larr; Welcome to the Age of Wonder</a>
+      <a href="societies.html">Adventuring Societies &rarr;</a>
+    </nav>
+
+    <div class="page-hero">
+      <span class="page-number">Chapter 2</span>
+      <h1 class="page-title">The State of the World</h1>
+      <p class="page-subtitle">What happened, what&rsquo;s left, and why it matters to you</p>
+    </div>
+
+    <p class="flavor">
+      The Veil thinned within living memory. The Aether poured through.
+      The Engine woke in response. Now the world is caught between two forces
+      that nobody fully understands, and the old certainties are gone.
+      Welcome to the mess. Here&rsquo;s what you need to know.
+    </p>
+
+    <!-- ── Before the Eruption ──────────────────────────── -->
+
+    <h2 id="before">Before the Eruption</h2>
+
+    <p>
+      Your grandparents remember a different world. Industrial. Confident.
+      Steam and steel, telegraph wires and rail lines, factories and foundries.
+      Governments held territory. Armies held borders. The rules of power were
+      understood, if not always fair.
+    </p>
+
+    <p>
+      Occult societies existed &mdash; parlor spiritualists, hedge scholars poring
+      over old texts, secret clubs performing rituals by candlelight &mdash; but they
+      were curiosities. Entertainment for the bored rich, or obsessions of the
+      unwell. Magic was not real.
+    </p>
+
+    <p>
+      The world was not a paradise. Labor was exploited. Those with power extracted
+      wealth from those without. Organized crime followed money wherever it pooled.
+      But it was <em>ordered</em>. People understood the shape of things. Technology
+      was advancing. The trajectory was clear.
+    </p>
+
+    <p>Then the Veil thinned, and the trajectory shattered.</p>
+
+    <div class="callout callout-handler">
+      <span class="callout-label">The Handler</span>
+      <p>
+        You want the short version? The Veil ripped open before your parents
+        were born. Magic poured in. Half the world went sideways. Then the Engine
+        woke up &mdash; or somebody built it, depending on who you believe &mdash;
+        and now we&rsquo;ve got two forces tearing at each other and everyone else
+        caught between. You carry a blade because it always works. You carry a gun
+        because it usually works. And you carry your wits because nothing else is
+        reliable.
+      </p>
+    </div>
+
+    <!-- ── The Eruption ─────────────────────────────────── -->
+
+    <h2 id="eruption">The Eruption</h2>
+
+    <p>
+      It was not gradual. Within a span of months &mdash; accounts vary, records
+      are incomplete, and much of the infrastructure for record-keeping was
+      destroyed in the event itself &mdash; the Veil thinned across the world.
+      The Aether poured through. The effects were catastrophic and uneven.
+    </p>
+
+    <h3>The Land Changed</h3>
+
+    <p>
+      Entire regions transformed. Settled heartlands erupted into vast mystical
+      forests and wild plains. The ground itself changed &mdash; flora that had
+      never existed before grew overnight. Creatures that belonged in legend
+      appeared in the underbrush. Communities in these areas weren&rsquo;t destroyed
+      so much as <em>displaced in kind</em> &mdash; cut off from the industrial
+      world, thrown backward in technology but thrust forward into magical wonder.
+    </p>
+
+    <h3>The Cities Fractured</h3>
+
+    <p>
+      Urban districts experienced sudden, violent Aetheric saturation. Neighborhoods
+      where the Veil thinned most saw machines fail, infrastructure collapse, and
+      reality grow soft. These zones didn&rsquo;t stabilize &mdash; they
+      <em>settled</em>, becoming permanent Aetheric enclaves within cities.
+      The people living in and around them were cast back into low-technology
+      societies, but with access to magic their grandparents would have called
+      impossible.
+    </p>
+
+    <h3>People Changed</h3>
+
+    <p>
+      Some individuals discovered they could feel the Aether &mdash; could shape it,
+      channel it, bend it toward intention. The first wild casters emerged, untrained
+      and dangerous, performing feats of wonder and destruction in equal measure.
+      Governments, churches, and institutions had no framework for this. Fear and
+      awe competed in the streets.
+    </p>
+
+    <div class="callout callout-believer">
+      <span class="callout-label">The Believer</span>
+      <p>
+        They call it an eruption. As if it were a disaster. As if the ground
+        opening up and showing you what was always underneath is something to
+        be <em>fixed</em>. I was twelve when the Veil thinned. I remember the
+        morning &mdash; the sky changed color. Not dramatically. Just&hellip;
+        more. As if someone had cleaned a window I didn&rsquo;t know was dirty.
+        And then the feeling. Like being noticed. Like something vast had turned
+        its attention to a place it had forgotten, and found us here.
+      </p>
+    </div>
+
+    <h3>The Old Order Buckled</h3>
+
+    <p>
+      Trade routes crossed zones that were no longer navigable by machine.
+      Military supply lines collapsed where Aetheric saturation killed engines.
+      Communication networks &mdash; telegraph, early radio &mdash; became
+      unreliable in affected areas. The governments that had held territory
+      through infrastructure suddenly found that infrastructure was the very
+      thing failing them.
+    </p>
+
+    <!-- ── The Counter-Response ──────────────────────────── -->
+
+    <h2 id="engine">The Engine Awakes</h2>
+
+    <p>
+      Within a decade &mdash; possibly less, possibly more, nobody kept clean
+      records during the chaos &mdash; the Engine emerged.
+    </p>
+
+    <p>
+      Whether the Engine awoke on its own, was always there and simply became
+      perceptible once it had something to push against, or was manufactured by
+      someone who figured out how to weaponize the world&rsquo;s counter-resonance
+      &mdash; this is debated. Violently. There are three competing theories,
+      and none of them have been proven.
+    </p>
+
+    <p>
+      What is not debated: Galvanic technology appeared. Devices that channeled
+      a force opposed to the Aether. Exotic prototypes that could push back the
+      magic, stabilize zones, and restore machinery to function. These devices
+      were crude, expensive, dangerous, and immediately the most valuable things
+      in the world.
+    </p>
+
+    <p>
+      The people and institutions with access to Galvanic technology gained
+      enormous leverage &mdash; practically overnight. Industrial conglomerates
+      that had been losing ground to the Aether suddenly had tools to reclaim it.
+      Governments that had been retreating from Wild Zones could now, slowly,
+      push back. And opportunists of every stripe realized that controlling the
+      production of Galvanic devices meant controlling the balance of power itself.
+    </p>
+
+    <div class="callout callout-scholar">
+      <span class="callout-label">The Scholar</span>
+      <p>
+        The popular narrative &mdash; &ldquo;magic arrived and broke everything&rdquo;
+        &mdash; is reductive to the point of uselessness. What occurred was a
+        fundamental restructuring of the relationship between human consciousness,
+        material reality, and a force we have barely begun to characterize.
+        The Veil&rsquo;s thinning was not an invasion. It was a
+        <em>reintroduction</em>. Whether the Engine represents a natural
+        counter-response or a manufactured one is the defining question of our
+        age, and I assure you, shouting about it in a broadsheet editorial
+        will not bring us closer to an answer.
+      </p>
+    </div>
+
+    <!-- ── The World Now ────────────────────────────────── -->
+
+    <h2 id="now">The World Now</h2>
+
+    <p>
+      The eruption was within living memory. The counter-response is even more
+      recent. The world has not recovered &mdash; it has <em>reorganized</em>,
+      messily, incompletely, and without consensus.
+    </p>
+
+    <h3 id="fragmented">Fragmented, Not at War</h3>
+
+    <p>
+      The nations that existed before the eruption still claim their old borders,
+      but claiming and controlling are different things. Entire regions are Wild Zones
+      that no conventional military can hold. Supply lines are fragile. Tax collection
+      requires roads, and roads require zone stability.
+    </p>
+
+    <p>
+      The world is balkanized. Not at war &mdash; fragmented. Small groups with
+      enough magic, enough Galvanic backing, or enough sheer will have carved out
+      sovereign territories. A factory district fortified by Galvanic dead zones.
+      A neighborhood reborn as an Aetheric commune. A prophet&rsquo;s growing
+      settlement in the unclaimed wild. A criminal syndicate that runs the border
+      zones because nobody else will. These enclaves exist alongside &mdash; and
+      inside &mdash; the remnants of the old governments, competing for resources,
+      influence, and the loyalty of the people living in between.
+    </p>
+
+    <h3 id="prophets">Prophets in the Land</h3>
+
+    <p>
+      The eruption shattered the old certainties. In the vacuum, charismatic
+      figures are building movements. Some preach the Aether as salvation &mdash;
+      a return to something real and primal. Others preach the Engine as
+      humanity&rsquo;s righteous defense. Still others preach that both forces
+      are punishment for sins, or tests from gods, or tools to be mastered.
+    </p>
+
+    <p>
+      These movements range from genuine spiritual awakenings to cynical power
+      grabs, and telling the difference is not always easy. The most successful
+      prophets have figured out that ideology alone doesn&rsquo;t hold territory
+      &mdash; you need zone control. An Aetheric prophet who can maintain a Wild
+      Zone around their settlement has a natural fortress. A Galvanic preacher
+      who keeps the Engine humming has technology that makes their people&rsquo;s
+      lives materially better than the chaos outside.
+    </p>
+
+    <div class="callout callout-street">
+      <span class="callout-label">The Street</span>
+      <p>
+        Listen. The suits in the factory district, they&rsquo;ll tell you the
+        Engine is progress. The weirdos in the Veil quarter, they&rsquo;ll
+        tell you the Aether is truth. Me? I move product across the gradient
+        and I don&rsquo;t care whose god is bigger. You want Galvanic capacitors
+        in a Wild Zone? I can do that. You want spell components past the factory
+        checkpoints? I can do that too. The only ideology that matters is the one
+        where I get paid and nobody gets killed. Usually in that order.
+      </p>
+    </div>
+
+    <h3 id="local">Stories Start Local</h3>
+
+    <p>
+      Communication exists &mdash; telegraph and radio work in neutral and
+      Galvanic zones. Newspapers print. Couriers ride. Information moves &mdash;
+      but so do rumors, propaganda, and deliberate misinformation. The further
+      from your own territory a report originates, the less you can verify it.
+    </p>
+
+    <p>
+      Most people&rsquo;s experience of the world is their own city, their own
+      district, their own stretch of road. The grand machinations of the powerful
+      and the strange wonders at the edges of the map are things people
+      <em>hear about</em> &mdash; from travelers, from broadsheets, from drunks
+      in taverns.
+    </p>
+
+    <p>
+      Adventure is not far away. A Wild Zone encroaching on a factory district.
+      A smuggler moving Galvanic parts through an Aetheric neighborhood.
+      A prophet whose commune is growing suspiciously fast. A dead zone that
+      appeared overnight where there shouldn&rsquo;t be one. A letter from a
+      relative in a region that went dark three months ago. The world does not
+      require epic quests to generate adventure &mdash; the instability is
+      <em>everywhere</em>, and the people who deal with it are Adventuring Societies.
+    </p>
+
+    <!-- ── Rumors & Wonders ──────────────────────────────── -->
+
+    <h2 id="rumors">Rumors &amp; Wonders</h2>
+
+    <p>
+      Nobody has a complete map of the world anymore. It changed too fast, too
+      unevenly, and the people with resources to map it are too busy fighting
+      over what&rsquo;s left. What follows is what people <em>talk about</em>
+      &mdash; in taverns, in broadsheets, in the briefing rooms of Adventuring
+      Societies. Some of it is true. Some of it is exaggerated. Some of it is
+      completely wrong.
+    </p>
+
+    <h3 id="reclaimed-wild">The Reclaimed Wild</h3>
+
+    <p>
+      Vast stretches of what was once settled land have been swallowed by the
+      Aether. Where there were farms, there are now forests that shouldn&rsquo;t
+      exist: trees that grow too fast, undergrowth that shifts when you&rsquo;re
+      not looking, clearings where the air hums with power. The wildlife is
+      wrong &mdash; too large, too clever, too still.
+    </p>
+
+    <p>
+      The people who lived in these regions didn&rsquo;t all leave. Communities
+      that stayed have adapted &mdash; or been adapted. They live in the Wild
+      now, and many have no interest in being &ldquo;rescued&rdquo; by the
+      governments that abandoned them. Travelers who cross the Reclaimed Wild
+      report that the deeper you go, the less the old rules apply. Compasses
+      spin. Clocks run wrong. Distances don&rsquo;t add up. And every so often,
+      someone comes back with stories of structures in the deep forest &mdash;
+      not ruins, but buildings that were never built by human hands.
+    </p>
+
+    <h3 id="fractured-cities">The Fractured Cities</h3>
+
+    <p>
+      Most major cities survived the eruption &mdash; but not intact. A typical
+      city now is a patchwork: districts that are functionally neutral, districts
+      that have tipped Aetheric, districts fortified into Galvanic enclaves,
+      and the messy gradient borders between them.
+    </p>
+
+    <p>
+      An Aetheric district might look like a neighborhood from two centuries ago
+      &mdash; gas lamps, cobblestone, market stalls &mdash; because modern
+      infrastructure fails there. But the healer on the corner can mend a broken
+      bone with a touch, and the locksmith&rsquo;s wards are literally
+      impenetrable. The people here aren&rsquo;t backward &mdash; they&rsquo;re
+      <em>differently advanced</em>.
+    </p>
+
+    <p>
+      A Galvanic district hums. The lights are brighter, the machines run
+      cleaner, the air tastes faintly of ozone. Factories produce devices that
+      would have been science fiction a generation ago. The cost is that nothing
+      magical works within the zone. Security is tight. The corporations that
+      run these districts don&rsquo;t appreciate uninvited visitors.
+    </p>
+
+    <div class="callout callout-street">
+      <span class="callout-label">The Street</span>
+      <p>
+        You want to know what the gradient&rsquo;s like? Come stand on Harrier
+        Street at sundown. West side, the factories are cycling up for night
+        shift &mdash; you can feel it in your teeth, that low hum, and your
+        compass needle locks south like it&rsquo;s nailed there. East side,
+        the Quarter&rsquo;s evening rituals are starting &mdash; the air gets
+        thick, smells like rain and copper, and if you&rsquo;re carrying a
+        sidearm you&rsquo;d better check the Reliability because it just
+        dropped ten points. Right in the middle, there&rsquo;s me.
+      </p>
+    </div>
+
+    <h3 id="archipelago">The Archipelago of Wonders</h3>
+
+    <p>
+      Sailors and coastal traders talk about an island chain &mdash; somewhere
+      offshore, distance and direction vary with the telling &mdash; where
+      technology has reached heights the mainland can only dream of. Towers of
+      steel and glass. Ships that move without sails or engines. Lights that
+      never dim.
+    </p>
+
+    <p>
+      Some call it a new Atlantis. Others call it a military installation.
+      A few say it&rsquo;s not Galvanic at all &mdash; that the islands
+      <em>float</em>, and the force holding them up isn&rsquo;t the Engine
+      but something older.
+    </p>
+
+    <p>
+      What is not in dispute: <em>something</em> is out there. Ships that
+      venture too far offshore encounter zones of extreme saturation &mdash;
+      Galvanic or Aetheric or both, in patterns that shouldn&rsquo;t be
+      possible. Compasses behave strangely. Radio signals bounce off enormous
+      metallic structures. And occasionally, wreckage washes ashore &mdash;
+      components made of alloys that no mainland forge has produced.
+    </p>
+
+    <h3 id="deep-zones">The Deep Zones</h3>
+
+    <p>
+      At the extremes of the spectrum &mdash; places where accumulation has been
+      building for decades with nothing to push back &mdash; the world stops
+      resembling anything familiar.
+    </p>
+
+    <p>
+      Deep Wild Zones are places where the Veil is barely there. Reality is
+      negotiable. Geography shifts. Time moves strangely. Expeditions return
+      with artifacts of extraordinary power, knowledge that reshapes entire
+      fields of study, and psychological scars that don&rsquo;t always heal.
+      Some expeditions don&rsquo;t return at all.
+    </p>
+
+    <p>
+      Deep Galvanic Zones are places where the Engine roars so loudly that the
+      Aether can&rsquo;t be heard at all. Massive foundries, research complexes,
+      and military installations operate at the bleeding edge of what Galvanic
+      technology can achieve. Casters who enter report a sensation like going
+      deaf, or like a limb going numb.
+    </p>
+
+    <div class="callout callout-scholar">
+      <span class="callout-label">The Scholar</span>
+      <p>
+        The border regions between Deep Zones and the wider world are where
+        the most dramatic shifts occur. A morning fog carrying Aetheric residue
+        can shut down a factory. A Galvanic generator cycling up can snuff out
+        a ward that has been holding for years. If you wish to understand the
+        forces at work in this world, study the borders &mdash; not the
+        extremes. The extremes are settled questions. The borders are where
+        the argument is still happening.
+      </p>
+    </div>
+
+    <!-- ── The Currents ──────────────────────────────────── -->
+
+    <h2 id="currents">The Currents</h2>
+
+    <p>
+      People disagree about what the Aether and the Engine <em>mean</em>. These
+      disagreements shape politics, faction allegiances, and the missions your
+      Society will be asked to carry out. There are three broad currents of
+      thought. Nobody carries a membership card. These are directions people
+      lean &mdash; philosophical tendencies that shape how individuals and
+      communities respond to the world&rsquo;s central tension.
+    </p>
+
+    <h3 id="restoration">The Restoration</h3>
+
+    <p>
+      The Aether is a catastrophe. The Engine is the response. The world was
+      better before, and it can be better again &mdash; if we push back the
+      magic and restore the order that was lost. This view is popular among
+      industrialists, military hardliners, old-guard officials, and anyone
+      whose wealth or identity was built on the pre-eruption order.
+    </p>
+
+    <p>
+      In practice, Restorationist factions fund Galvanic research, clear Wild
+      Zones for redevelopment, and treat magic users with suspicion. Their
+      prophets preach the Engine as humanity&rsquo;s righteous answer to an
+      alien intrusion. The most extreme believe the Aether must be destroyed
+      entirely, not just pushed back.
+    </p>
+
+    <h3 id="awakening">The Awakening</h3>
+
+    <p>
+      The Aether is not a catastrophe &mdash; it is a revelation. The Veil
+      thinned because it was <em>meant</em> to. The world before the eruption
+      was diminished, cut off from something vast and ancient. Magic is a return
+      to wholeness. The Engine is the aberration.
+    </p>
+
+    <p>
+      This view is popular among casters, communities in the Reclaimed Wild,
+      occult scholars, and romantic revolutionaries who see magic as liberation
+      from industrial exploitation. Their prophets are the most visually
+      dramatic &mdash; some have genuine magical ability, which gives their
+      preaching a persuasive edge. They perform wonders. They heal. They call
+      down light. The question is whether their message is genuine spiritual
+      leadership or the oldest con in history: miracles as marketing.
+    </p>
+
+    <div class="callout callout-believer">
+      <span class="callout-label">The Believer</span>
+      <p>
+        I know what the Handler will say. I know what the Scholar will say.
+        They&rsquo;ll say I&rsquo;m romanticizing a catastrophe. People died.
+        Communities were destroyed. I know. I was there. But I was also there
+        when the first healers discovered they could mend a broken bone by
+        touching it. When the first wards went up and a neighborhood that had
+        been terrorized by a beast slept safe for the first time in months.
+        The Aether is not safe. I have never said it was safe. I have said it
+        is <em>real</em>, and it is <em>ours</em>, and turning our backs on it
+        because it frightens us is the most dangerous thing we could do.
+      </p>
+    </div>
+
+    <h3 id="arrangement">The Arrangement</h3>
+
+    <p>
+      Both forces are here to stay. The Aether isn&rsquo;t going away. The
+      Engine isn&rsquo;t going away. Arguing about which one is right is a
+      waste of time and resources. The question that matters is: <em>who
+      controls the balance, and who profits from it?</em>
+    </p>
+
+    <p>
+      This is the view of pragmatist governments trying to hold fractured cities
+      together, corporations that sell to both sides, organized crime, smugglers,
+      and most Adventuring Societies &mdash; whose members carry swords, guns,
+      <em>and</em> spells because ideology doesn&rsquo;t stop a monster.
+    </p>
+
+    <div class="callout callout-handler">
+      <span class="callout-label">The Handler</span>
+      <p>
+        Most of you will lean Arrangement whether you admit it or not. You
+        carry everything. You work for whoever&rsquo;s paying. You deal with
+        problems as they come. That&rsquo;s fine. That&rsquo;s the job. It
+        gets interesting when the patron who&rsquo;s paying leans Restoration
+        or Awakening, and their agenda doesn&rsquo;t line up with what you
+        find on the ground. &ldquo;Clear that Wild Zone&rdquo; means something
+        different coming from a factory owner than from a relief agency. You&rsquo;ll
+        figure that out soon enough.
+      </p>
+    </div>
+
+    <!-- ── Sample Factions ───────────────────────────────── -->
+
+    <h2 id="factions">Factions You Might Encounter</h2>
+
+    <p>
+      The world is full of organizations carving out territory and pursuing
+      agendas. What follows are examples &mdash; the kinds of groups that exist
+      in most cities, the tensions they embody, and the secrets they keep.
+      Your GM&rsquo;s world will have its own versions. The names and details
+      will change. The structures and tensions won&rsquo;t.
+    </p>
+
+    <!-- Detailed factions (3-4) -->
+
+    <h3 id="ashworth">The Ashworth Foundry Collective</h3>
+
+    <p>
+      <strong>Restoration, strong.</strong> An industrial conglomerate that
+      consolidated three factory districts after the eruption. They produce
+      Galvanic components &mdash; the capacitors, resonance coils, and
+      stabilizers that other manufacturers need &mdash; and have leveraged
+      this into enormous economic power.
+    </p>
+
+    <p>
+      They want to expand their Galvanic dead zone to encompass the entire
+      industrial quarter, pushing out Aetheric influence and the communities
+      that depend on it. They fund zone containment research and hire
+      Adventuring Societies to clear Aetheric incursions near their facilities.
+    </p>
+
+    <p>
+      What they don&rsquo;t advertise: their expansion isn&rsquo;t just
+      commercial. They&rsquo;ve been deliberately intensifying the Galvanic
+      field beyond what production requires, pushing the dead zone outward
+      into adjacent neighborhoods. Residents in the border areas report
+      headaches, insomnia, a persistent hum in the bones. The Collective
+      calls it &ldquo;adjustment symptoms.&rdquo; The residents call it
+      poisoning.
+    </p>
+
+    <div class="callout callout-scene">
+      <span class="callout-label">Adventure Hooks</span>
+      <p>A border neighborhood hires a Society to investigate the health complaints &mdash;
+      but the Collective has hired a different Society to discredit the investigation.
+      A shipment of rare stabilizer components is hijacked en route to the Foundry.
+      An engineer inside the Collective wants to defect &mdash; she&rsquo;s seen the
+      zone intensification plans.</p>
+    </div>
+
+    <h3 id="veilwright">The Veilwright Quarter</h3>
+
+    <p>
+      <strong>Awakening, moderate.</strong> A city district that tipped Aetheric
+      during the eruption and never came back. The residents rebuilt around
+      magic &mdash; healing, warding, divination, enchantment. The Quarter is
+      self-governing by necessity; the city government can&rsquo;t project
+      authority into a zone where their equipment fails.
+    </p>
+
+    <p>
+      They want to be left alone. Failing that, to be recognized as a legitimate
+      district &mdash; not treated as a containment problem or a slum to be
+      cleared. Their economy runs on magical services: sell healing and warding
+      to the wider city, barter and service exchange internally. They maintain
+      their own militia of trained casters who patrol the zone border.
+    </p>
+
+    <p>
+      What the outside doesn&rsquo;t know: the Aetheric saturation isn&rsquo;t
+      entirely natural anymore. A small circle of senior casters performs
+      sustained rituals to <em>maintain</em> the zone&rsquo;s strength &mdash;
+      preventing the gradual decay that would bring it back toward neutral.
+      They believe a strong zone is the only thing protecting the Quarter
+      from being bulldozed. They&rsquo;re probably right. But the rituals are
+      pulling the zone deeper than it&rsquo;s ever been.
+    </p>
+
+    <div class="callout callout-scene">
+      <span class="callout-label">Adventure Hooks</span>
+      <p>A child manifests wild casting ability of unprecedented strength &mdash;
+      multiple factions want to recruit her. The sustained rituals have attracted
+      something from beyond the Veil. A politician is pushing to have the
+      Quarter classified as a hazardous zone, justifying forced evacuation.</p>
+    </div>
+
+    <h3 id="lamplighter">The Lamplighter Syndicate</h3>
+
+    <p>
+      <strong>Arrangement, pure.</strong> An organized crime network that
+      controls smuggling across zone borders. They move Galvanic components
+      into Aetheric zones and magical goods into Galvanic zones. They also
+      run protection, gambling, and information brokerage &mdash; but the
+      smuggling is the backbone.
+    </p>
+
+    <p>
+      They want the status quo. A fragmented, balkanized world with porous
+      zone borders is the perfect operating environment. Any faction that
+      threatens to stabilize things threatens the Syndicate&rsquo;s business
+      model. Their great skill is operating below the detection threshold
+      &mdash; keeping their zone impact small enough to avoid forensic
+      attention.
+    </p>
+
+    <p>
+      What nobody knows: the boss &mdash; known only as &ldquo;the
+      Lamplighter&rdquo; &mdash; has been quietly acquiring Aetheric artifacts
+      of significant power. Whether this is a hedge, an insurance policy, or
+      preparation for something bigger, even the Syndicate&rsquo;s lieutenants
+      don&rsquo;t know.
+    </p>
+
+    <div class="callout callout-scene">
+      <span class="callout-label">Adventure Hooks</span>
+      <p>The Syndicate hires your Society for a delivery across a zone border.
+      The cargo is sealed and radiates Aetheric resonance far stronger than any
+      spell component should. A lieutenant has been murdered using magical
+      forensics. Your patron wants you to investigate the Syndicate &mdash;
+      and the Syndicate has just offered you a very lucrative job.</p>
+    </div>
+
+    <h3 id="ironveil">The Ironveil Circle</h3>
+
+    <p>
+      <strong>Cross-pressured &mdash; Restoration and Awakening simultaneously.</strong>
+      A religious institution that predates the eruption. The church was a pillar
+      of the old order: hospitals, schools, orphanages, spiritual authority.
+      When the eruption hit, the institution fractured along a theological fault
+      line nobody saw coming.
+    </p>
+
+    <p>
+      They run the hospitals, the orphanages, the soup kitchens &mdash; the
+      infrastructure of mercy that every faction depends on and none want to
+      fund. They maintain sanctuaries kept deliberately neutral through a
+      combination of Galvanic dampeners and Aetheric warding &mdash; proving,
+      in practice, that the two forces <em>can</em> coexist.
+    </p>
+
+    <p>
+      What tears at them: one faction within the church believes the Aether is
+      demonic and wants to align with the Restoration. Another believes the
+      eruption was divine revelation and wants to embrace the Aether. Both fund
+      their own Adventuring Societies with contradictory mandates. The leadership
+      knows and cannot stop it.
+    </p>
+
+    <div class="callout callout-scene">
+      <span class="callout-label">Adventure Hooks</span>
+      <p>Your Society discovers that its mission &mdash; investigating a suspected
+      cult &mdash; is actually a proxy move by one church faction to discredit
+      the other. A neutral sanctuary has lost its balance for reasons nobody
+      can explain. A priest has been found dead in a border zone, and both
+      internal factions blame the other.</p>
+    </div>
+
+    <!-- Summary factions -->
+
+    <h3 id="more-factions">And Others&hellip;</h3>
+
+    <p>
+      The world is full of groups like these. Here are a few more you might
+      encounter &mdash; or use as inspiration for your own.
+    </p>
+
+    <table>
+      <tr>
+        <th>Faction</th>
+        <th>Current</th>
+        <th>What They Are</th>
+        <th>The Tension</th>
+      </tr>
+      <tr>
+        <td><strong>Thornfield Communion</strong></td>
+        <td>Awakening</td>
+        <td>A prophet-led settlement in the Reclaimed Wild, built around communion with the Veil. Self-sufficient, growing, and increasingly selective about who they let in.</td>
+        <td>Mother Thorn&rsquo;s connection to the Aether is real &mdash; but it may not be what she says it is. The warded perimeter isn&rsquo;t just keeping threats out.</td>
+      </tr>
+      <tr>
+        <td><strong>Greycoat Authority</strong></td>
+        <td>Arrangement</td>
+        <td>The remnant of a city&rsquo;s civil service and constabulary. They control the neutral zone and claim jurisdiction over everything else &mdash; with diminishing credibility.</td>
+        <td>They&rsquo;re broke. Funding comes from increasingly questionable deals with factions they&rsquo;re supposed to be regulating.</td>
+      </tr>
+      <tr>
+        <td><strong>Gradient Scholars</strong></td>
+        <td>Awakening (academic)</td>
+        <td>An independent research institute on a zone border, studying both forces. They train casters and engineers and fund Societies for artifact recovery and zone cartography.</td>
+        <td>A research team sent into the Deep Wild went silent after reporting structures that appeared to be <em>communicating</em>. The leadership has classified the report.</td>
+      </tr>
+      <tr>
+        <td><strong>The Sootborn</strong></td>
+        <td>None</td>
+        <td>Communities living in the gradient &mdash; the border zones where both forces bleed together. The world&rsquo;s best zone navigators. Fiercely independent.</td>
+        <td>Some Sootborn have developed an unusual sensitivity to the balance &mdash; something that doesn&rsquo;t fit either paradigm. They don&rsquo;t talk about it with outsiders.</td>
+      </tr>
+    </table>
+
+    <div class="callout callout-note">
+      <span class="callout-label">For the GM</span>
+      <p>
+        These factions are designed to interlock. The Collective&rsquo;s expansion
+        threatens the Quarter and displaces the Sootborn. The Syndicate connects
+        them all. The Greycoats mediate. The Scholars study the effects. The
+        Communion offers an alternative. The Circle tends to the casualties.
+        Use all of them for a functioning city. Use three for a solid starting
+        scenario. Use the <em>structures</em> but change every name for a world
+        that&rsquo;s entirely yours.
+      </p>
+    </div>
+
+    <!-- ── Zone Politics ─────────────────────────────────── -->
+
+    <h2 id="zones">Reading the Zones</h2>
+
+    <p>
+      The zone system isn&rsquo;t just a combat modifier. It is the political
+      geography of the setting. Zones are territory. Zones are power. Zones are
+      the physical evidence of who controls what and how hard they&rsquo;re
+      pushing.
+    </p>
+
+    <h3 id="zone-territory">Territory You Can See</h3>
+
+    <p>
+      Every faction that operates at scale leaves a zone signature. A Galvanic
+      weapons factory pushes its surroundings into a dead zone. A casters&rsquo;
+      commune radiates Aetheric saturation. A smuggling operation keeps its
+      footprint deliberately small to stay below the detection threshold.
+      The zone map of a city is, in effect, a political map &mdash; you can
+      read the power structure by walking the gradients.
+    </p>
+
+    <p>
+      This means expansion is detectable. When a factory intensifies its
+      Galvanic field, the neighboring districts feel it before any announcement
+      is made. The balance shifts. Radios get clearer. Compasses steady.
+      Casters notice their spells weakening. Zone expansion is an act of
+      aggression that the environment itself announces.
+    </p>
+
+    <h3 id="zone-forensics">The Environment Is a Witness</h3>
+
+    <p>
+      Aetheric and Galvanic residue decay slowly, leaving traces that trained
+      investigators can read. A crime scene isn&rsquo;t just blood and
+      footprints &mdash; it&rsquo;s a residue map. An investigator with Detect
+      can reconstruct the magical activity in a room, estimate when it happened,
+      and follow the gradient to its source. This is noir detective work with
+      an Aetheric twist.
+    </p>
+
+    <p>
+      Factions that want to avoid detection have options &mdash; all imperfect.
+      Cast in existing Wild Zones to bury your residue in the background noise.
+      Use lower-tier spells to minimize the trace. Operate in short bursts and
+      disperse. But sustained, large-scale activity cannot be hidden. The zone
+      gradient system is a world where <em>the environment is a witness that
+      cannot be bribed</em>.
+    </p>
+
+    <div class="callout callout-scholar">
+      <span class="callout-label">The Scholar</span>
+      <p>
+        The popular understanding of zones is, charitably, a simplification.
+        They are not rooms with walls. They are gradients &mdash; continuous
+        fields of varying intensity with no defined edge. The boundary between
+        a Galvanic zone and neutral ground is not a line. It is a slope. Walk
+        it and you will feel your equipment&rsquo;s behavior change incrementally.
+        This matters because the gradient <em>is</em> the information. Stop
+        asking questions and start walking. Your instruments will tell you
+        more than any informant.
+      </p>
+    </div>
+
+    <h3 id="front-lines">The Front Lines</h3>
+
+    <p>
+      Where a strong Galvanic zone and a strong Aetheric zone meet, the
+      gradient is steep and the environment is unstable. These are the front
+      lines &mdash; not of a war with armies, but of the quiet, constant
+      pressure between paradigms.
+    </p>
+
+    <p>
+      A breeze carrying Aetheric particulate can temporarily suppress Galvanic
+      equipment. A factory cycling up can snuff out a ward that&rsquo;s been
+      holding for months. Lights cast shadows in the wrong direction. Sounds
+      arrive before their source. Machines run on their own, performing
+      functions they weren&rsquo;t designed for.
+    </p>
+
+    <p>
+      A character standing on a front line can literally feel the two forces
+      pushing against each other. Their gun works intermittently. Their ward
+      flickers. Their blade, as always, works fine. This is the messy middle
+      &mdash; the border zone where both systems are present, neither is
+      reliable, and the work is at its most interesting.
+    </p>
+
+    <div class="callout callout-handler">
+      <span class="callout-label">The Handler</span>
+      <p>
+        Your Society exists because the world needs people who can walk into
+        the mess and come out the other side with answers. Or at least with
+        everyone still breathing. That&rsquo;s the pitch. That&rsquo;s the
+        job. The next chapter will tell you how it&rsquo;s organized.
+        Don&rsquo;t die on your first assignment.
+      </p>
+    </div>
+
+    <nav class="page-nav">
+      <a href="index.html" class="page-nav-link">
+        <span class="page-nav-direction">&larr; Previous</span>
+        <span class="page-nav-title">Welcome to the Age of Wonder</span>
+      </a>
+      <a href="societies.html" class="page-nav-link">
+        <span class="page-nav-direction">Next &rarr;</span>
+        <span class="page-nav-title">Adventuring Societies</span>
+      </a>
+    </nav>
+  </div>
+  <footer class="site-footer"><p>Adventure RPG &mdash; Playtest Draft</p></footer>
+</main>
+<script src="js/main.js"></script>
+</body>
+</html>
