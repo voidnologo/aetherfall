@@ -439,3 +439,94 @@ Each faction is sketched at local/regional scale: a district, a territory, a com
 **Sample NPC:** **Prelate Ansel Rourke** — Head of the local diocese. Seventies, silver-haired, patient to the point of infuriating. Has spent the last two decades holding the Ironveil Circle together through compromise, delay, and carefully calculated ambiguity. He is exhausted, and he knows the split is coming. He just wants it to not happen on his watch.
 
 > **Design Note:** These eight factions are designed to interlock. The Ashworth Collective's expansion threatens the Veilwright Quarter and displaces the Sootborn. The Lamplighter Syndicate moves goods between all of them. The Greycoat Authority tries to mediate. The Gradient Scholars study the effects. The Thornfield Communion offers an alternative. The Ironveil Circle tends to the casualties. A GM who uses all eight has a functioning city with built-in conflicts. A GM who uses three has a solid starting scenario. A GM who uses the *structures* but changes every name and detail has exactly what this section was designed to give them.
+
+---
+
+## 6. Adventuring Societies
+
+An Adventuring Society is the organizational unit of play. It is what the player characters belong to. It is how they get missions, gear, contacts, and a paycheck. It is also how they get entangled in faction politics, moral compromises, and the kind of trouble that makes for good stories.
+
+### 6.1 What a Society Is
+
+A Society is a small, professional outfit — typically 4 to 12 active members — chartered and funded by a patron faction to handle problems that the faction can't or won't handle with its own people. Societies are not freelancers or mercenaries (though some behave that way). They are *institutional* — they have a charter, a handler, a budget, access to faction resources, and obligations that come with all of it.
+
+**What a Society provides to its members:**
+- **Funding.** Salary, mission bonuses, and expense accounts. Not lavish — enough to live on, with incentives for dangerous or high-priority work.
+- **Gear.** Access to faction-supplied equipment, including items that aren't available on the open market. A Restoration-backed Society might receive prototype Galvanic weapons. An Awakening-backed Society might receive enchanted wards or pre-charged spell foci. The gear tells a story about the patron's philosophy (see §6.4).
+- **Contacts.** The patron faction's network — informants, specialists, safe houses, allied organizations. A Greycoat-funded Society can call on police resources. A Syndicate-funded Society can call on underworld connections.
+- **Training.** Access to faction specialists for skill development. A Scholar-funded Society might train with researchers. A military-funded Society trains with combat instructors.
+- **Mission briefs.** The Society doesn't have to find its own work. The patron provides assignments — ranging from routine (zone survey, escort job, delivery) to extraordinary (Deep Wild expedition, faction crisis response, cult infiltration).
+- **Legitimacy.** In a balkanized world where authority is contested, a chartered Society has *standing*. Not legal authority — standing. People know who you work for. Doors open (or close) accordingly.
+
+**What a Society owes its patron:**
+- **Mission completion.** The patron assigns work. The Society does it. Failure is tolerated — sometimes. Repeated failure is not.
+- **Reporting.** The patron expects information. What did you see? Who did you encounter? What's the zone status? The intelligence a Society gathers is often more valuable to the patron than the mission objective itself.
+- **Discretion.** The patron's interests are not always public knowledge. A Society that talks too freely about its assignments may find its charter revoked — or worse.
+- **Loyalty — up to a point.** The patron expects the Society to prioritize its interests. But Societies are not puppets. A Society that blindly follows every order is a tool. A Society that pushes back on bad orders is a partner. The best patrons understand this. The worst ones don't.
+
+### 6.2 The Patron Relationship
+
+This is where the tension lives. The patron-Society relationship is the primary engine of campaign drama.
+
+**The ideal:** The patron and the Society share goals. The patron provides resources and direction. The Society provides capability and results. Everyone benefits. This works cleanly when the missions are straightforward — clear a monster den, escort a caravan, survey a zone shift.
+
+**The friction:** The patron has an agenda. Every faction does (see §4 and §5). When the patron's agenda aligns with the Society's morals, the work is clean. When it doesn't, the Society has to make a choice:
+
+- **Follow orders.** Complete the mission as briefed. Maintain the patron relationship. Live with the consequences — and whatever the patron asked you to do, or not do, or not see.
+- **Push back.** Refuse the mission, modify the objective, or report truthfully even when the patron doesn't want to hear it. This strains the relationship. Patrons don't like being told no. But patrons who lose their best Society over a bad order learn to ask differently next time.
+- **Go rogue.** Complete the mission in a way the patron didn't authorize — or actively sabotage it. This is the nuclear option. A Society that goes rogue may save lives, expose corruption, or prevent a catastrophe. It will also burn the patron relationship, and in a world where Societies depend on faction backing for gear, contacts, and legitimacy, that is not a small thing.
+
+> **GM Note:** The patron relationship is designed to produce *exactly this tension*. The GM plays the patron (through a handler NPC) and uses mission briefs to put the Society in situations where the "right thing to do" and the "patron's objective" diverge. This doesn't need to happen every session — but when it does, it should force real conversation at the table. The best campaign moments come from the question: "What do we owe the people who pay us, and what do we owe ourselves?"
+
+**Changing patrons.** Societies can change patrons — but it's not casual. A Society that leaves one faction for another brings institutional knowledge, contacts, and potentially classified information with it. The old patron may view this as betrayal. The new patron may view the Society as a flight risk. The transition period is dangerous and dramatically rich.
+
+### 6.3 Society Archetypes
+
+Societies take different forms depending on their patron and their mission profile. These archetypes are not rigid categories — most Societies blend elements of several. They're a starting point for GMs building a Society, and a vocabulary for players describing what their outfit does.
+
+| Archetype | Typical Patron | Core Mission Profile | The Tension |
+|-----------|---------------|---------------------|-------------|
+| **Cult Hunters** | Religious institutions (e.g., Ironveil Circle) | Investigate and dismantle dark magic cults, rogue casters, and entities from beyond the Veil | Your patron's definition of "cult" may not match yours. Is a prayer circle a cult? Is a wild caster a threat? |
+| **Zone Surveyors** | Government remnants (e.g., Greycoat Authority), academic institutions (e.g., Gradient Scholars) | Map zone boundaries, track gradient shifts, assess zone stability for public safety or research | The data you collect will be used by your patron — for public safety, or for strategic advantage? You may not get to choose. |
+| **Asset Recovery** | Industrial factions (e.g., Ashworth Collective), criminal networks (e.g., Lamplighter Syndicate) | Retrieve artifacts, prototypes, stolen goods, or people from contested or hostile territory | The "asset" may not want to be recovered. The territory may belong to someone with a legitimate claim. Your patron's ownership may be disputed. |
+| **Monster Teams** | Government agencies, community defense groups, anyone with a creature problem | Eradicate dangerous creatures — Aetheric beasts, corrupted wildlife, things from beyond the Veil | Not everything that looks like a monster is one. Not every creature is a threat. And your patron may want it dead for reasons that have nothing to do with public safety. |
+| **Expedition Crews** | Academic institutions, wealthy patrons, governments planning expansion | Venture into the Reclaimed Wild, Deep Zones, or uncharted territory for exploration, research, or first contact | You are entering someone else's home. The communities you "discover" may not welcome being discovered. What you bring back may change the balance of power in ways you didn't intend. |
+| **Border Runners** | Criminal networks, pragmatist factions, communities in contested zones | Move goods, people, or information across zone borders — legally or otherwise | You're keeping communities supplied. You're also keeping black markets stocked. The line between humanitarian aid and smuggling depends on who drew the border. |
+| **Fixers** | Any patron with problems that don't fit a clean category | Negotiation, investigation, mediation, and the occasional application of violence when diplomacy fails | You solve problems. But every solution creates a new situation, and the patron may not have told you the whole story. |
+
+> **Design Note:** The "Tension" column is the most important part of this table. Every archetype has a built-in source of dramatic friction that the GM can activate at any time. A Monster Team that never questions a kill order is missing the point. A Cult Hunter that never wrestles with who deserves the label is playing a different game. The archetypes are designed to produce moral complexity, not just mission types.
+
+### 6.4 Faction-Specific Gear
+
+The equipment a Society carries tells a story about its patron. This is not just flavor — it has mechanical and narrative implications.
+
+**Restoration-backed Societies** receive the best Galvanic technology their patron can supply. Prototype arc weapons. Stabilized resonance coils. Zone-dampening field equipment. The gear is cutting-edge, impressive, and reflects the patron's philosophy: the Engine is the answer. The catch: Galvanic gear shifts the balance (see [DESIGN_PHILOSOPHY.md §1.2](DESIGN_PHILOSOPHY.md)). A Society loaded with Galvanic equipment cannot operate subtly in Aetheric territory — their gear announces their presence through the zone gradient.
+
+**Awakening-backed Societies** receive enchanted equipment and magical support. Warded blades. Pre-charged spell foci. Amulets of protection. Healing draughts from Aetheric-enhanced herbalism. The gear is often handmade, idiosyncratic, and reflects the patron's philosophy: the Aether is a gift to be used wisely. The catch: magical gear radiates Aetheric residue. A Society carrying enchanted equipment is visible to anyone with a Detect spell or an aetheric measurement device — which includes most law enforcement in Galvanic zones.
+
+**Arrangement-backed Societies** receive a pragmatic mix — whatever works. Conventional firearms for reliability. A martial weapon for every member. Maybe one or two Galvanic pieces for emergencies. Maybe a ward or a healing charm acquired through channels that aren't worth asking about. The gear is mismatched and utilitarian, reflecting the patron's philosophy: ideology doesn't stop a monster. The catch: a mixed loadout means the Society is never optimized for any single environment. They're versatile but never dominant.
+
+**Faction-built devices as quest rewards.** When a Society recovers a significant artifact or earns a major favor, the patron may provide a unique device — something built to the faction's specifications, reflecting their values and capabilities. An Ashworth Collective capacitor rifle that runs cleaner than any production model. A Veilwright Quarter ward-blade that hums when it enters an Aetheric zone. A Gradient Scholars' measurement device that maps zone boundaries in real time. These items are among the best gear in the game, and every one of them tells the player something about the faction that built it. (Cross-reference: [FIREARMS_EQUIPMENT.md §4.3](FIREARMS_EQUIPMENT.md) for the arms economy and Galvanic device ratings.)
+
+### 6.5 Inter-Society Dynamics
+
+A city with multiple factions has multiple Societies. They coexist — sometimes cooperatively, sometimes not.
+
+**Cooperation.** When a threat is too large for one Society — a major Aetheric incursion, a rampaging creature, a crisis that affects everyone — Societies from rival factions may be forced to work together. This is tense, productive, and one of the best sources of cross-faction roleplay. The Cult Hunters and the Monster Team may disagree on everything except that the thing in the basement needs to die *right now*.
+
+**Competition.** Societies compete for contracts, reputation, and access. Two Societies assigned the same objective by rival patrons creates a race — or a confrontation. A Society that consistently outperforms its rivals earns prestige, better assignments, and the attention (wanted or not) of other factions.
+
+**Espionage.** Patrons sometimes task their Societies with gathering intelligence on rival Societies. Who are they working for? What missions have they been assigned? What did they find? This is the quiet underside of the Society ecosystem — everyone watches everyone, and the smart Societies know they're being watched.
+
+**Poaching.** A talented Society member who catches the eye of a rival faction may receive an offer — better pay, better gear, a patron whose ideology aligns more closely with their own. Poaching creates personal drama, faction friction, and the question every Society member eventually faces: how much of my loyalty is to my team, and how much is to the organization that signs the checks?
+
+### 6.6 Building a Society (For Players and GMs)
+
+A Society needs four things to exist:
+
+1. **A patron.** Who funds you? What do they want? What do they believe about the Aether and the Engine? (Use §4 and §5 to select or create a patron faction.)
+2. **A charter.** What is the Society authorized to do? Cult hunting? Zone survey? General troubleshooting? The charter defines the Society's official scope — and the interesting missions are always the ones that fall outside it.
+3. **A handler.** The patron's representative — the NPC who delivers mission briefs, provides resources, and acts as the Society's point of contact with the faction. The handler is the patron made personal. A good handler is an ally. A bad handler is an obstacle. Most are somewhere in between.
+4. **A reason to exist.** Why was this Society formed? What problem prompted the patron to charter it? The answer to this question is the seed of the campaign. "The Greycoats formed this Society because the border zone between the Ashworth Collective and the Veilwright Quarter is becoming ungovernable" is a campaign premise. "The Gradient Scholars formed this Society because the last one they sent into the Deep Wild didn't come back" is a different campaign premise. Both start with the same four members sitting around a table.
+
+> **GM Note:** Session Zero should include building the Society together. The patron choice shapes the campaign's politics. The charter shapes its scope. The handler becomes a recurring NPC. And the Society's origin story gives every member a shared history before play begins. This is more valuable than individual backstories — it answers the question "why are we together?" before anyone asks it.
