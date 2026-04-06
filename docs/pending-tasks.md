@@ -1,7 +1,6 @@
 # Pending Tasks
 
 ## Next Up
-- [ ] Sprinkle voice callouts, "For the GM" sidebars, and "At the Table" examples through chapters 4-13 where they bring the book alive or clarify points
 - [ ] Build game/GM tools and downloadable character sheet
 - [ ] Visual polish and iteration on web rulebook based on feedback
 
