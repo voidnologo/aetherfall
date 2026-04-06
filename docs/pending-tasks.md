@@ -1,10 +1,12 @@
 # Pending Tasks
 
 ## Next Up
-- [ ] Build game/GM tools and downloadable character sheet
+- [ ] Downloadable character sheet (PDF or fillable)
 - [ ] Visual polish and iteration on web rulebook based on feedback
 
 ## Backlog
+- [ ] Multiplayer sync for GM tools (WebRTC peer-to-peer?) — stretch goal
+- [ ] Additional GM tools: NPC generator, mission brief generator, Society generator
 - [ ] Design "Push Timing" mechanic — rush any timed action by 1-5 counts with escalating failure consequences
 - [ ] Design zone formation/shift mechanics — how zones form, change, and interact over time
 - [ ] Brainstorm setting-flavored archetype (class) names
