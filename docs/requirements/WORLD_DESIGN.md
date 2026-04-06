@@ -275,3 +275,167 @@ These are not organizations. Nobody carries a membership card. Nobody attends me
 **The prophets:** Arrangement-aligned prophets are the rarest and the most dangerous. They don't preach for a side — they preach *themselves* as the balance point. The leader who claims they alone can navigate between the forces, who positions themselves as indispensable, who builds a personal cult around being the only one who understands how it all fits together. These figures tend to end up running enclaves, and the line between "visionary leader" and "petty tyrant" is measured in months.
 
 > **GM Note:** Most player characters and their Societies will lean Arrangement by default — they carry everything, they work for whoever's paying, and they deal with problems as they come. This is fine. The meta-factions become interesting when the patron who's paying leans Restoration or Awakening, and the Society's pragmatism collides with their patron's ideology. "We hired you to clear a Wild Zone" means something different coming from a factory owner than from a government relief agency.
+
+---
+
+## 5. Sample Factions (Local & Regional)
+
+These are examples — concrete enough to drop into a game tonight, loose enough to rename, relocate, and recombine. Every faction below is a *template*. The names are evocative but not canonical. The details are suggestions. The structures and tensions are the point.
+
+Each faction is sketched at local/regional scale: a district, a territory, a community. These are the groups that players actually encounter, work for, compete with, or fight against. They are not world powers — they are *neighbors*.
+
+> **Design Note:** Every faction has a meta-faction lean, but none are pure ideologues. Real organizations have internal contradictions, pragmatic compromises, and members who don't fully agree with the leadership. The "What They're Hiding" entry is a suggestion — the GM decides which secrets are real and which are smoke.
+
+### 5.1 The Ashworth Foundry Collective
+
+**Meta-faction lean:** Restoration (strong)
+
+**What they are:** An industrial conglomerate that consolidated three factory districts after the eruption. They produce Galvanic components — not full weapons, but the capacitors, resonance coils, and stabilizers that other manufacturers need. They've leveraged this into enormous economic power within the city.
+
+**What they want:** Expand their Galvanic dead zone to encompass the entire industrial quarter, driving out Aetheric influence and the "undesirables" who depend on it. Long-term, they want to be the sole supplier of Galvanic components in the region.
+
+**What they do:** Run the factories. Fund zone containment research. Hire Adventuring Societies to clear Aetheric incursions near their facilities and secure raw materials from contested territory. Lobby whatever remains of the city government for favorable regulation.
+
+**What they're hiding:** Their expansion isn't just commercial — they've been deliberately intensifying the Galvanic field beyond what production requires, pushing the dead zone outward into adjacent neighborhoods. Residents in the border areas are getting sick — headaches, insomnia, a persistent hum in the bones. The Collective calls it "adjustment symptoms." The residents call it poisoning.
+
+**GM hooks:**
+- A border neighborhood is organizing against the Collective's expansion. They've hired a Society to investigate the health complaints — but the Collective has hired a different Society to discredit the investigation.
+- A shipment of rare stabilizer components has been hijacked en route to the Foundry. The Collective suspects an Awakening cell. The truth is more complicated.
+- An engineer inside the Collective wants to defect — she's seen the zone intensification plans and knows the health effects are deliberate. She needs extraction.
+
+**Sample NPC:** **Aldric Voss** — Chief operations director. Former military logistics officer. Believes genuinely in the Restoration cause but is beginning to suspect the board is more interested in monopoly than ideology. Drinks too much. Asks too many questions at meetings.
+
+### 5.2 The Veilwright Quarter
+
+**Meta-faction lean:** Awakening (moderate)
+
+**What they are:** A city district that tipped Aetheric during the eruption and never came back. The residents — those who stayed — rebuilt around magic. The Quarter is self-governing by necessity; the city government can't project authority into a zone where their equipment fails. What emerged is part commune, part guild network, part something that doesn't have a name yet.
+
+**What they want:** To be left alone. Failing that, to be recognized as a legitimate district with the same rights as any other — not treated as a containment problem or a slum to be cleared.
+
+**What they do:** Provide magical services to the wider city: healing, warding, divination, enchantment. The Quarter's economy runs on barter and service exchange internally, and on selling magical labor externally. They maintain their own militia — trained casters who patrol the zone border and deal with the creatures that occasionally wander in from deeper Aetheric areas.
+
+**What they're hiding:** The Aetheric saturation in the Quarter isn't entirely natural anymore. A small circle of senior casters has been performing sustained rituals to *maintain* the zone's strength — preventing the gradual decay that would normally bring it back toward neutral. They believe a strong Aetheric zone is the only thing protecting the Quarter from being bulldozed by Restorationist interests. They're probably right. But the rituals are pulling the zone deeper than it's ever been, and some of the effects are getting harder to control.
+
+**GM hooks:**
+- A child in the Quarter has manifested wild casting ability of unprecedented strength. Multiple factions want to "recruit" her. The Quarter wants to protect her. The child wants to be left alone.
+- The sustained rituals have attracted something from beyond the Veil — not hostile, exactly, but *present* in a way that's making even the senior casters nervous. Someone needs to figure out what it is before it becomes a crisis.
+- A Restorationist politician is pushing to have the Quarter classified as a hazardous zone, which would justify forced evacuation. The Quarter needs allies — and evidence that their zone is stable and safe.
+
+**Sample NPC:** **Maren Elia** — Unofficial leader, healer, mediator. Came to the Quarter as a refugee after the eruption and discovered she could cast. Built the clinic that became the community's anchor. She's tired, stubborn, and sick of explaining to outsiders that her home is not a disaster area. She is not part of the ritual circle but suspects it exists.
+
+### 5.3 The Lamplighter Syndicate
+
+**Meta-faction lean:** Arrangement (pure)
+
+**What they are:** An organized crime network that controls smuggling across zone borders. They move Galvanic components into Aetheric zones (where they're forbidden or unavailable) and magical goods into Galvanic zones (where they're contraband). They also run protection, gambling, and information brokerage — but the smuggling is the backbone.
+
+**What they want:** The status quo. A fragmented, balkanized world with porous zone borders is the perfect operating environment. Any faction that threatens to stabilize things — whether by expanding Galvanic dead zones or establishing Aetheric sovereignty — threatens the Syndicate's business model.
+
+**What they do:** Move product. Bribe border guards. Maintain a network of safe houses, couriers, and fixers across multiple zones. Hire Adventuring Societies as deniable assets for jobs that are too dangerous or too visible for their own people. The Syndicate's great skill is operating *below the detection threshold* — keeping their zone impact small enough to avoid forensic attention (see [DESIGN_PHILOSOPHY.md §4.2](DESIGN_PHILOSOPHY.md) on magical forensics).
+
+**What they're hiding:** The boss — known only as "the Lamplighter" — has a personal agenda that contradicts the Syndicate's official pragmatism. They've been quietly acquiring Aetheric artifacts of significant power and stockpiling them. Whether this is a hedge, an insurance policy, or preparation for something bigger, even the Syndicate's lieutenants don't know.
+
+**GM hooks:**
+- The Syndicate hires a Society for a "simple" delivery across a zone border. The cargo is sealed. The Syndicate insists it not be opened. It radiates Aetheric resonance that's stronger than any spell component should produce.
+- A Syndicate lieutenant has been murdered — in a way that suggests magical forensics were used to track them. Someone is hunting the Syndicate's leadership, and the survivors are looking for protection and answers.
+- The Society's patron has asked them to investigate the Lamplighter Syndicate. The Syndicate, meanwhile, has offered the Society a very lucrative job. These two assignments are about to collide.
+
+**Sample NPC:** **Corrigan Fels** — Senior fixer. Former Adventuring Society member who "retired" into the Syndicate after their Society's patron betrayed them. Charming, competent, and completely amoral about moving product. Has a code about violence — prefers bribery, blackmail, or misdirection. Will kill if cornered, but considers it a professional failure.
+
+### 5.4 The Thornfield Communion
+
+**Meta-faction lean:** Awakening (strong, bordering on extreme)
+
+**What they are:** A prophet-led settlement in the Reclaimed Wild. Founded by a charismatic figure called Mother Thorn — a wild caster who claims the Aether speaks to her directly. The Communion began as a refugee camp for people displaced by the eruption and has grown into a genuine community of several hundred, with farms (Aetheric-enhanced), defenses (warded perimeter), and a shared spiritual practice centered on communion with the Veil.
+
+**What they want:** To build a society aligned with the Aether — proof that humanity can live *with* magic, not just *despite* it. Mother Thorn preaches that the eruption was a gift, and the Engine is humanity's fearful refusal to accept it.
+
+**What they do:** Farm, build, worship, and defend their territory. The Communion is largely self-sufficient — their Aetheric-enhanced agriculture produces more than they need, and they trade the surplus with nearby communities. They accept refugees but are increasingly selective about who they let in. They do not hire Adventuring Societies — they train their own.
+
+**What they're hiding:** Mother Thorn's connection to the Aether is real — but it's not what she says it is. She doesn't hear the Aether's voice. She hears *something through the Veil*, and she's not entirely sure what it is. She believes it's benevolent. She may be right. The community's prosperity might be evidence of that. But the warded perimeter isn't just keeping threats out — it's keeping something *in*, and Mother Thorn is the only one who knows.
+
+**GM hooks:**
+- A relative of one of the PCs has joined the Communion and stopped writing. The family wants them checked on. Getting in requires an invitation.
+- The Communion's enhanced crops are appearing in markets far from Thornfield — someone is trading with them at scale, and the Communion says they don't know who. The supply chain leads somewhere unexpected.
+- A government remnant has classified the Communion as a hostile enclave and is assembling resources to dismantle it. The Communion is preparing to defend. A Society caught between them has to decide whose side they're on — or find a third option.
+
+**Sample NPC:** **Mother Thorn (Essara Dain)** — Founder and spiritual leader. Mid-fifties, was a schoolteacher before the eruption. Discovered she could cast when the Wild rolled over her town. Walked into the Reclaimed Wild and didn't come back for a year. When she did, she had followers. She is sincere, warm, terrifying when angry, and genuinely uncertain about the voice she hears — but she will never admit that uncertainty to anyone.
+
+### 5.5 The Greycoat Authority
+
+**Meta-faction lean:** Arrangement (with Restoration sympathies)
+
+**What they are:** The remnant of a city's pre-eruption government — specifically, its civil service and constabulary. When the elected officials fled, retired, or became irrelevant, the career bureaucrats and police kept the lights on. The Greycoats (named for their old civil service uniforms) are what's left of municipal authority in a fractured city. They control the neutral zone at the city's center and claim jurisdiction over everything else, though their actual reach is limited.
+
+**What they want:** Order. Not the old order specifically — most Greycoats are pragmatic enough to know that's gone — but *an* order. Functioning courts. Collected taxes. Maintained roads. Safe streets. They want to hold the city together long enough for something better to emerge.
+
+**What they do:** Police the neutral zone. Mediate disputes between district factions. Maintain the infrastructure that everyone depends on — water, roads, what's left of the telegraph network. Fund the largest number of Adventuring Societies in the city, because they can't afford a proper military and Societies are cheaper and more versatile.
+
+**What they're hiding:** The Greycoat Authority is broke. Their tax base has collapsed — the Galvanic districts pay their own security, the Aetheric districts don't recognize the Authority's jurisdiction, and the border zones are too chaotic to collect from. They're funding operations through increasingly questionable deals — taking money from the Ashworth Collective in exchange for favorable zoning decisions, looking the other way on Lamplighter Syndicate operations in exchange for a cut, and quietly accepting "donations" from anyone who'll pay. The Authority is becoming what it claims to oppose: another faction playing the balance for survival.
+
+**GM hooks:**
+- A Greycoat inspector has uncovered evidence that the Authority's deal with the Ashworth Collective includes classified zone expansion plans. She needs someone outside the Authority to get this information to the public — but the Collective has friends everywhere.
+- The Authority has commissioned a Society to establish a postal route through contested territory. Simple on paper. The route crosses three faction borders and a gradient zone. Nothing about it will be simple.
+- A Greycoat judge has been assassinated. Every faction in the city had motive. The Authority wants answers, and they want them before the fragile peace falls apart.
+
+**Sample NPC:** **Commissioner Hale Dupont** — Head of the Greycoat Authority. Sixty years old, exhausted, idealistic in a beaten-down way. Genuinely believes in civic duty. Is aware that the deals keeping the Authority afloat are corroding the institution from within, but sees no alternative. Will make the wrong deal to keep the peace, and lose sleep over it.
+
+### 5.6 The Gradient Scholars
+
+**Meta-faction lean:** Awakening (moderate, academic)
+
+**What they are:** An independent research institute that formed after the eruption — originally a collaboration between university researchers who lost their institutions and self-taught scholars who discovered they could cast. They study the Aether, the Engine, and the relationship between them. They're based in a campus that sits deliberately on a zone border, where they can study both forces in proximity.
+
+**What they want:** To understand. Not to exploit, not to suppress, not to worship — to *know*. They believe that the competing theories (Immune Response, Rival Gods, Exploitation) are all wrong, or all partially right, and that the truth is stranger than any of them. They want to find it.
+
+**What they do:** Research. Field expeditions into Wild Zones and Deep Galvanic Zones. Publication (they run a journal that circulates among anyone literate enough to read it). Training — they're one of the few institutions producing formally educated casters and Galvanic engineers. They fund Adventuring Societies for artifact recovery, zone cartography, and specimen collection.
+
+**What they're hiding:** A research team that entered a Deep Wild Zone six months ago sent back one final report before going silent. The report described structures in the deep forest that appeared to be *responding* to their presence — not aggressively, but *communicatively*. The institute's leadership has classified the report and is debating what to do. Some want to send a rescue expedition. Some want to send a larger research team. Some want to destroy the report and pretend it never happened.
+
+**GM hooks:**
+- The Scholars hire a Society to escort a research team into a zone border region. The researchers are brilliant, fragile, and have no idea how dangerous the border really is. The Society has to keep them alive while they poke at things that should not be poked.
+- A stolen artifact from the Scholars' collection has surfaced on the black market. It's not valuable for what it is — it's valuable for what it *does*, and what it does is destabilize zone boundaries. Multiple factions want it.
+- A young Scholar has published a paper claiming to have proven the Exploitation Theory — that someone *built* the Engine deliberately. The paper is causing a political firestorm, and the author has started receiving threats. Are they right?
+
+**Sample NPC:** **Dr. Isavel Crane** — Director of field research. Fifties, sharp, impatient with politics, fascinated by everything else. Lost her university in the eruption and rebuilt her career from scratch. She authorized the Deep Wild expedition and has been sleepless since the final report came in. She will do almost anything to get her people back — but "almost" is doing a lot of work in that sentence.
+
+### 5.7 The Sootborn
+
+**Meta-faction lean:** None (survival-first, with Arrangement tendencies)
+
+**What they are:** A loose network of communities living in the border zones — the gradient regions where Aetheric and Galvanic zones bleed into each other. These are the people who live where nobody else wants to: the unstable margins, the contested edges, the streets where your gun works on one side and your ward works on the other. They call themselves Sootborn because the gradient zones are often marked by a fine, dark particulate that settles on everything — residue from the collision of the two forces.
+
+**What they want:** To not be displaced. Every time a faction expands its zone — Galvanic or Aetheric — the border moves, and the Sootborn are pushed. They want stability, or failing that, enough warning to relocate before the gradient crushes them.
+
+**What they do:** Survive. Trade. Guide. The Sootborn are the world's best zone navigators — they read gradients the way sailors read weather. They hire out as guides, scouts, and consultants to anyone who needs to cross zone borders safely. Some run informal markets in the gradient itself, trading goods that only have value in the transition space. They are fiercely independent and deeply skeptical of anyone who claims to have their best interests at heart.
+
+**What they're hiding:** Some Sootborn have developed an unusual sensitivity — they can *feel* the balance shifting before instruments detect it. This isn't casting. It isn't Galvanic engineering. It's something else, something that doesn't fit either paradigm. The Sootborn don't talk about it with outsiders. They're not sure what it means, and they're certain that if the wrong people find out, they'll become test subjects instead of neighbors.
+
+**GM hooks:**
+- A Sootborn community is being squeezed between an expanding Galvanic dead zone and a strengthening Aetheric pocket. They have weeks before the border becomes unlivable. They need help — relocation, negotiation with the factions pushing the zones, or something more creative.
+- A Sootborn guide offers to lead a Society through a gradient shortcut that cuts days off their route. The shortcut is real, but the guide has an ulterior motive — there's something in the gradient they need the Society's help to deal with, and they didn't mention it up front.
+- The Gradient Scholars have heard rumors about the Sootborn's unusual sensitivity and want to study it. The Sootborn don't want to be studied. A Society contracted by the Scholars is about to discover that their "research subjects" are not cooperative.
+
+**Sample NPC:** **Rill** — No surname offered. Sootborn guide, early thirties, wiry, talks fast, never stands still. Can tell you the zone balance of any room they walk into within ten seconds. Charges fair rates and delivers on promises. Has the unusual sensitivity but will deny it flatly if asked. Trusts Societies more than factions, but not by much.
+
+### 5.8 The Ironveil Circle
+
+**Meta-faction lean:** Cross-pressured (Restoration and Awakening simultaneously)
+
+**What they are:** A religious institution — the local diocese of a faith that predates the eruption. The church was a pillar of the old order: hospitals, schools, orphanages, spiritual authority. When the eruption hit, the institution fractured along a theological fault line that nobody saw coming.
+
+**What they want:** Officially, unity and service. Practically, the two internal factions want incompatible things, and the institution's leadership is trying to hold them together through sheer institutional inertia.
+
+**What they do:** Run the hospitals, the orphanages, the soup kitchens — the infrastructure of mercy that every faction depends on and none want to fund. They maintain a network of sanctuaries kept deliberately neutral through a combination of Galvanic dampeners and Aetheric warding — proving, in practice, that the two forces *can* coexist, even if nobody wants to acknowledge it. They fund cult-hunting Adventuring Societies — the one thing both internal factions agree on.
+
+**What they're hiding:** The theological split is deeper than the public knows. One faction (the "Engine Orthodox") believes the Aether is a spiritual corruption — demonic, alien, fundamentally opposed to human flourishing. They want the church to align with the Restoration and actively suppress magic. The other faction (the "Veil Contemplatives") believes the eruption was a revelation — a thinning of the barrier between the mortal and the divine. They want the church to embrace the Aether as a path to spiritual truth. Both factions have members in positions of power. Both fund their own Adventuring Societies with contradictory mandates. The leadership knows this and has been unable to stop it.
+
+**GM hooks:**
+- A Society funded by the Ironveil Circle discovers that their mission — investigating a suspected cult — is actually a proxy move by the Engine Orthodox faction to discredit a Veil Contemplative community. The "cult" is a prayer group.
+- One of the Circle's neutral sanctuaries has lost its balance — tipping Aetheric for reasons nobody can explain. The dampeners are working. The wards are working. Something else is happening. The Circle needs it fixed before the Engine Orthodox faction uses it as evidence that magical influence is infiltrating the institution.
+- A priest has been found dead in a border zone. Both internal factions claim the other is responsible. The Circle needs an outside investigation — and every investigator they approach has ties to one faction or the other.
+
+**Sample NPC:** **Prelate Ansel Rourke** — Head of the local diocese. Seventies, silver-haired, patient to the point of infuriating. Has spent the last two decades holding the Ironveil Circle together through compromise, delay, and carefully calculated ambiguity. He is exhausted, and he knows the split is coming. He just wants it to not happen on his watch.
+
+> **Design Note:** These eight factions are designed to interlock. The Ashworth Collective's expansion threatens the Veilwright Quarter and displaces the Sootborn. The Lamplighter Syndicate moves goods between all of them. The Greycoat Authority tries to mediate. The Gradient Scholars study the effects. The Thornfield Communion offers an alternative. The Ironveil Circle tends to the casualties. A GM who uses all eight has a functioning city with built-in conflicts. A GM who uses three has a solid starting scenario. A GM who uses the *structures* but changes every name and detail has exactly what this section was designed to give them.
