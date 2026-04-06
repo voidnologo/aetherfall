@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="neutral">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Running the Game — Adventure RPG</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="atmosphere"><canvas id="particle-canvas"></canvas><div class="mist mist-1"></div><div class="mist mist-2"></div><div class="mist mist-3"></div></div>
+<div id="page-transition" class="page-transition"></div>
+<div class="sidebar-overlay"></div>
+<aside class="sidebar">
+  <div class="sidebar-brand"><div class="sidebar-title">Adventure</div><div class="sidebar-subtitle">Rules Reference</div></div>
+  <nav class="sidebar-nav"></nav>
+  <div class="sidebar-footer"><a href="../">← Back to Adventure</a></div>
+</aside>
+<header class="site-header">
+  <button class="header-toggle" aria-label="Toggle navigation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+  <span class="header-logo">Adventure <span>RPG</span></span>
+  <span class="header-separator"></span>
+  <span class="header-chapter">Chapter 11 &mdash; Running the Game</span>
+</header>
+<main class="main-content">
+  <div class="page-content">
+
+    <nav class="page-nav-compact">
+      <a href="equipment.html">&larr; Arms &amp; Equipment</a>
+      <a href="reference.html">Quick Reference &rarr;</a>
+    </nav>
+
+    <div class="page-hero">
+      <span class="page-number">Chapter 11</span>
+      <h1 class="page-title">Running the Game</h1>
+      <p class="page-subtitle">Adjudication, rulings, and the art of keeping the world honest</p>
+    </div>
+
+    <p class="flavor">
+      The rules give you a skeleton. You give it breath. Your job is not to enforce
+      the mechanics &mdash; it is to make the world feel real, let the players make
+      meaningful choices, and reach for the dice only when the outcome genuinely
+      matters.
+    </p>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!--  1. ADJUDICATION PHILOSOPHY                            -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+
+    <h3 id="when-to-roll">When to Roll</h3>
+
+    <p>
+      Roll dice when three conditions are all true:
+    </p>
+
+    <ol>
+      <li><strong>The outcome is uncertain.</strong> If a trained locksmith picks a simple
+        lock in quiet conditions, there is no uncertainty. Narrate the success.</li>
+      <li><strong>Failure has interesting consequences.</strong> If nothing changes on a
+        failure &mdash; if the character just tries again &mdash; the roll is pointless.
+        Only roll when failure moves the fiction forward.</li>
+      <li><strong>Success is not guaranteed by competence.</strong> A skilled swordsman
+        fighting an untrained peasant is not rolling to hit &mdash; he is deciding what
+        to do.</li>
+    </ol>
+
+    <p>
+      If any condition is missing, do not roll. Narrate the outcome that makes sense.
+      The dice are for moments of genuine tension.
+    </p>
+
+    <p>
+      The converse is equally important: if a player describes something clearly
+      impossible &mdash; lifting a building, talking a king into abdication &mdash;
+      do not roll for that either. Some things simply cannot be done.
+      &ldquo;I attempt it&rdquo; does not create a die roll when the fiction does
+      not support it.
+    </p>
+
+    <h3 id="difficulty">Setting Difficulty</h3>
+
+    <p>
+      The skill formula gives you the baseline. A character with Melee 3 and PC +2
+      has a 66% chance of hitting. That is the default &mdash; no modifiers, normal
+      conditions. When conditions deviate from normal, apply modifiers:
+    </p>
+
+    <table>
+      <tr><th>Circumstance</th><th>Modifier</th></tr>
+      <tr><td>Trivially easy for a trained character</td><td>Don&rsquo;t roll</td></tr>
+      <tr><td>Favorable conditions (good tools, plenty of time)</td><td>+10% to +20%</td></tr>
+      <tr><td>Normal conditions</td><td>+0%</td></tr>
+      <tr><td>Unfavorable conditions (bad tools, time pressure)</td><td>&minus;10% to &minus;20%</td></tr>
+      <tr><td>Severely unfavorable (darkness, injury, interference)</td><td>&minus;30% or worse</td></tr>
+    </table>
+
+    <p>
+      Modifiers stack. A locksmith picking a lock in darkness (&minus;20%) while
+      wounded (&minus;10%) and rushed (&minus;10%) is at &minus;40%. At that point,
+      even a skilled character is sweating.
+    </p>
+
+    <div class="callout callout-note">
+      <span class="callout-label">Don&rsquo;t Over-Modify</span>
+      <p>One or two modifiers is typical. If you find yourself stacking four penalties,
+      consider whether the task is simply impossible in these conditions, or whether a
+      single dramatic modifier (&minus;30%, the situation is terrible) serves better
+      than granular accounting.</p>
+    </div>
+
+    <h3 id="osr-loop">The OSR Loop</h3>
+
+    <p>
+      The game runs on a simple cycle:
+    </p>
+
+    <ol>
+      <li><strong>You describe the world honestly.</strong> What the characters see,
+        hear, smell, feel. Not what they conclude &mdash; what they perceive.</li>
+      <li><strong>Players declare what they do.</strong> Not &ldquo;I roll
+        Investigation&rdquo; &mdash; &ldquo;I search the desk drawers&rdquo; or
+        &ldquo;I watch the guard&rsquo;s patrol pattern.&rdquo; The fiction drives the
+        mechanics, not the other way around.</li>
+      <li><strong>You determine the outcome.</strong> If the outcome is obvious, narrate
+        it. If it is uncertain, call for the appropriate roll.</li>
+    </ol>
+
+    <div class="callout callout-example">
+      <span class="callout-label">Describe Situations, Not Solutions</span>
+      <p>&ldquo;The door is locked, and you can hear footsteps approaching from the
+      corridor&rdquo; &mdash; not &ldquo;You need to pick the lock.&rdquo; The locked
+      door and the footsteps are facts. What to do about them is the players&rsquo;
+      problem. Maybe they pick the lock. Maybe they hide. Maybe they kick the door
+      down. Maybe they ambush whoever is coming.</p>
+    </div>
+
+    <h3 id="ad-hoc-checks">Ad-Hoc Checks</h3>
+
+    <p>
+      Not every situation maps neatly to a skill. The game provides four types of
+      checks, each suited to a different question:
+    </p>
+
+    <table>
+      <tr><th>Check Type</th><th>Formula</th><th>Range</th><th>When to Use</th></tr>
+      <tr>
+        <td><strong>Skill check</strong></td>
+        <td>((10 + stat) &times; level) + 30</td>
+        <td>Varies</td>
+        <td>Character has the relevant skill</td>
+      </tr>
+      <tr>
+        <td><strong>Unskilled attempt</strong></td>
+        <td>(5 + stat) &times; 5</td>
+        <td>10&ndash;40</td>
+        <td>Attempting a skilled task without training</td>
+      </tr>
+      <tr>
+        <td><strong>Stat check</strong></td>
+        <td>(5 + stat) &times; 10</td>
+        <td>20&ndash;80</td>
+        <td>Raw capability &mdash; no skill applies</td>
+      </tr>
+      <tr>
+        <td><strong>Consequence check</strong></td>
+        <td>Flat % set by GM</td>
+        <td>Any</td>
+        <td>The world decides, not the character</td>
+      </tr>
+    </table>
+
+    <p>
+      <strong>Unskilled attempts</strong> are for &ldquo;I don&rsquo;t know how to do
+      this.&rdquo; The low ceiling (40% at stat +3) reflects being out of your depth.
+    </p>
+
+    <p>
+      <strong>Stat checks</strong> are for raw capability where training is irrelevant.
+      Can you hold your breath long enough? Resist the poison? Keep your grip as the
+      cart lurches? The wider range (20&ndash;80) reflects something fundamental about
+      the character, not a gap in their education.
+    </p>
+
+    <p>
+      <strong>Consequence checks</strong> are for when the character is not the variable.
+      &ldquo;There is a 30% chance the bridge holds.&rdquo; &ldquo;50/50 the guard
+      turns left.&rdquo; Roll d100 against the percentage. No skill, no stat &mdash;
+      just the situation.
+    </p>
+
+    <h3 id="failing-forward">Failing Forward</h3>
+
+    <p>
+      When a character fails a roll, do not default to &ldquo;nothing happens.&rdquo;
+      Failed rolls should change the situation:
+    </p>
+
+    <ul>
+      <li><strong>Failed lockpick:</strong> The pick snaps inside. You need tools to
+        extract it before trying again.</li>
+      <li><strong>Failed Persuasion:</strong> The merchant is not convinced, and now he
+        is suspicious. Your next social approach starts at Unfriendly.</li>
+      <li><strong>Failed Stealth:</strong> You are seen. Not &ldquo;you made a noise
+        and can try again&rdquo; &mdash; you are seen. Now what?</li>
+    </ul>
+
+    <p>
+      Every roll matters. Success moves toward the objective. Failure creates a new
+      problem that demands a response. The fiction never stalls.
+    </p>
+
+    <hr class="section-divider">
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!--  2. SOCIAL SITUATIONS                                  -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+
+    <h3 id="dispositions">NPC Dispositions</h3>
+
+    <p>
+      Every NPC has a disposition toward the party &mdash; a judgment call you make
+      based on context. The disposition modifies social skill checks:
+    </p>
+
+    <table>
+      <tr><th>Disposition</th><th>Modifier</th><th>Description</th></tr>
+      <tr><td><strong>Hostile</strong></td><td>&minus;30%</td><td>Actively opposed. Looking for reasons to refuse.</td></tr>
+      <tr><td><strong>Unfriendly</strong></td><td>&minus;15%</td><td>Suspicious. Resistant. Needs convincing just to listen.</td></tr>
+      <tr><td><strong>Neutral</strong></td><td>+0%</td><td>No strong feelings. Open to reasonable proposals.</td></tr>
+      <tr><td><strong>Friendly</strong></td><td>+15%</td><td>Well-disposed. Gives benefit of the doubt.</td></tr>
+      <tr><td><strong>Allied</strong></td><td>+30%</td><td>Actively on your side. Needs minimal convincing.</td></tr>
+    </table>
+
+    <p>
+      Dispositions shift during conversations. A successful Etiquette check might move
+      an Unfriendly NPC to Neutral. A terrible lie caught by Empathy might drop a
+      Friendly NPC to Unfriendly. Adjust based on what happens in the fiction.
+    </p>
+
+    <h3 id="social-skills">Roleplay &amp; Social Checks</h3>
+
+    <p>
+      Roleplay and mechanics work together. Neither replaces the other.
+    </p>
+
+    <p>
+      <strong>When to call for a roll:</strong> The outcome is uncertain, the stakes
+      matter, and the character is attempting something beyond casual conversation.
+    </p>
+
+    <p>
+      <strong>When to skip the roll:</strong> The request is reasonable and the NPC has
+      no reason to refuse. Or the roleplay is so compelling that the NPC would be
+      convinced regardless. Or the request is so absurd that no roll could make it work.
+    </p>
+
+    <p>
+      When a roll is called for, good roleplay adjusts the odds:
+    </p>
+
+    <table>
+      <tr><th>Roleplay Quality</th><th>Modifier</th></tr>
+      <tr><td>Compelling argument, addresses NPC&rsquo;s actual concerns</td><td>+10% to +20%</td></tr>
+      <tr><td>Adequate, nothing special</td><td>+0%</td></tr>
+      <tr><td>Tone-deaf, contradicts NPC&rsquo;s values</td><td>&minus;10% to &minus;20%</td></tr>
+    </table>
+
+    <h3 id="social-check-types">Social Skill Reference</h3>
+
+    <table>
+      <tr><th>Skill</th><th>Used For</th><th>Opposed By</th></tr>
+      <tr><td><strong>Persuasion</strong></td><td>Convincing someone of something true or reasonable</td><td>Resolve</td></tr>
+      <tr><td><strong>Deception</strong></td><td>Convincing someone of something false</td><td>Empathy</td></tr>
+      <tr><td><strong>Intimidation</strong></td><td>Compelling through threat of force or consequence</td><td>Resolve</td></tr>
+      <tr><td><strong>Etiquette</strong></td><td>Navigating social norms, first impressions, protocol</td><td>&mdash;</td></tr>
+      <tr><td><strong>Leadership</strong></td><td>Rallying, inspiring, coordinating groups</td><td>&mdash;</td></tr>
+      <tr><td><strong>Streetwise</strong></td><td>Navigating underworld culture, finding contacts</td><td>&mdash;</td></tr>
+    </table>
+
+    <p>
+      <strong>Opposed social checks</strong> use the standard rules: both sides roll,
+      the larger margin wins. One success beats one failure. Both fail means neither
+      side gains ground.
+    </p>
+
+    <h3 id="intimidation" data-toc="Intimidation (Flex-Stat)">Intimidation as Flex-Stat</h3>
+
+    <p>
+      Intimidation can be assigned to PP (physical menace) or SP (social pressure) at
+      character creation. The context matters:
+    </p>
+
+    <p>
+      <strong>PP Intimidation:</strong> Looming in doorways. Cracking knuckles. Picking
+      up the table one-handed. Works on people who can be physically threatened. Does
+      not work well on the physically fearless or in contexts where violence is off the
+      table.
+    </p>
+
+    <p>
+      <strong>SP Intimidation:</strong> Naming someone&rsquo;s secrets in public.
+      Mentioning their patron&rsquo;s displeasure. Works on people with something to
+      lose. Does not work on people with nothing to lose or outside social structures.
+    </p>
+
+    <p>
+      If the context does not match their stat &mdash; a PP Intimidator pressuring a
+      noble at a dinner party &mdash; apply &minus;10% to &minus;20%.
+    </p>
+
+    <h3 id="social-scope" data-toc="Social Limits">Social Skills Don&rsquo;t Mind-Control</h3>
+
+    <p>
+      A successful social check opens a door. It does not walk through it.
+    </p>
+
+    <ul>
+      <li><strong>Persuasion:</strong> The NPC is convinced <em>for now, within reason.</em>
+        They do not abandon their deepest loyalties or act against self-preservation.</li>
+      <li><strong>Deception:</strong> The NPC believes the lie <em>for now.</em> New evidence
+        or time to reflect can unravel it.</li>
+      <li><strong>Intimidation:</strong> The NPC is cowed <em>for now.</em> The moment the
+        fear is removed, they may act against you. Intimidation creates compliance, not
+        loyalty.</li>
+    </ul>
+
+    <div class="callout callout-example">
+      <span class="callout-label">The Margin Rule</span>
+      <p>The more extraordinary the request, the higher the margin required. Asking a
+      guard to look the other way for a minute? A basic success. Asking a guard to
+      abandon his post? Strong margin territory (31+). Asking a guard to betray his
+      employer? Spectacular (51+) <em>if it is possible at all</em> &mdash; and for
+      many NPCs, it simply is not.</p>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!--  3. CHASES                                             -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+
+    <h3 id="chases">Chases</h3>
+
+    <p>
+      The timing track is not just for combat. Any situation where timing, speed, and
+      sequential action matter can use the track &mdash; and chases are the natural fit.
+    </p>
+
+    <p>
+      Both the pursuer and the quarry act on the same timing track. The pursuer wants
+      to close to Close range. The quarry wants to open distance beyond Distant. If
+      both sides Sprint at the same speed, the gap never changes &mdash; so chases
+      are decided by obstacles, complications, and the choices each side makes.
+    </p>
+
+    <h3 id="foot-chases">Foot Chases</h3>
+
+    <table>
+      <tr><th>Action</th><th>Speed</th><th>Effect</th></tr>
+      <tr><td><strong>Sprint</strong></td><td>3</td><td>Move one range band (closer or farther)</td></tr>
+      <tr><td><strong>Obstacle</strong></td><td>varies</td><td>Athletics check. Failure: +2 count penalty on next action</td></tr>
+      <tr><td><strong>Shortcut</strong></td><td>4</td><td>Investigation or Survival check. Success: two bands. Failure: zero.</td></tr>
+      <tr><td><strong>Combat action</strong></td><td>per weapon</td><td>Attack mid-chase (must be in range)</td></tr>
+      <tr><td><strong>Dirty trick</strong></td><td>2</td><td>Knock over a cart, slam a door. Target rolls Athletics or takes +2 penalty</td></tr>
+    </table>
+
+    <p>
+      Obstacles are your primary tool for making chases interesting. Without them,
+      both sides Sprint repeatedly and nothing happens. Every 3&ndash;5 counts,
+      introduce something.
+    </p>
+
+    <h3 id="chase-complications">Chase Complications</h3>
+
+    <p>When a chase needs texture, roll or pick:</p>
+
+    <table>
+      <tr><th>d6</th><th>Complication</th></tr>
+      <tr><td>1</td><td><strong>Obstacle</strong> &mdash; a wall, a cart, a fence. Athletics check; failure = +2 count penalty.</td></tr>
+      <tr><td>2</td><td><strong>Bystanders</strong> &mdash; a crowd, a work crew. Athletics check; failure = +3 penalty and someone gets hurt.</td></tr>
+      <tr><td>3</td><td><strong>Terrain change</strong> &mdash; stairs, rubble, water. Different skill check required.</td></tr>
+      <tr><td>4</td><td><strong>Zone boundary</strong> &mdash; Aetheric balance shifts. Firearms and devices recalculate Reliability.</td></tr>
+      <tr><td>5</td><td><strong>Dead end</strong> &mdash; Investigation check or lose a range band doubling back.</td></tr>
+      <tr><td>6</td><td><strong>Opportunity</strong> &mdash; a rope to swing on, a ledge to leap from. Creative action for a free range band.</td></tr>
+    </table>
+
+    <h3 id="vehicle-chases">Vehicle Chases</h3>
+
+    <p>
+      Same structure as foot chases, with modifications: vehicle speed replaces Sprint,
+      Piloting replaces Athletics, and Reliability matters when crossing Aetheric zone
+      boundaries.
+    </p>
+
+    <table>
+      <tr><th>Vehicle</th><th>Chase Speed</th><th>Notes</th></tr>
+      <tr><td>On foot</td><td>3 counts/band</td><td>The Sprint baseline</td></tr>
+      <tr><td>Horse / animal</td><td>4 counts/band</td><td>Immune to Aetheric interference</td></tr>
+      <tr><td>Automobile</td><td>2 counts/band</td><td>Reliability check in Aetheric zones</td></tr>
+      <tr><td>Motorcycle</td><td>2 counts/band</td><td>+10% Piloting for obstacles. Rider takes damage on crash.</td></tr>
+      <tr><td>Airship</td><td>3 counts/band</td><td>3D chase. Engine stalls at altitude are catastrophic.</td></tr>
+    </table>
+
+    <div class="callout callout-note">
+      <span class="callout-label">Ending a Chase</span>
+      <p>If a chase drags past 15&ndash;20 counts without resolution, force an ending.
+      Both sides make one final opposed Athletics (or Piloting) check. Highest margin
+      wins. Ties go to the quarry &mdash; chases favor the pursued.</p>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!--  4. ZONE MANAGEMENT                                    -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+
+    <h3 id="tracking">Tracking Accumulation</h3>
+
+    <p>
+      Keep it simple. A tally on scratch paper:
+    </p>
+
+    <p>
+      <code>Aetheric: |||| (4) &nbsp; Galvanic: || (2) &nbsp; Net: +2 Aetheric</code>
+    </p>
+
+    <p>
+      Each successful spell adds its tier value. Each exotic weapon shot or device
+      activation subtracts its Galvanic rating. Cross off marks as accumulation
+      decays (1 per minute).
+    </p>
+
+    <table>
+      <tr><th>Context</th><th>How to Track</th></tr>
+      <tr><td><strong>Combat</strong></td><td>Track every spell and every exotic weapon shot. The balance is a tactical resource.</td></tr>
+      <tr><td><strong>Exploration</strong></td><td>Note significant shifts. Between events, decay happens in the background.</td></tr>
+      <tr><td><strong>Pure roleplay</strong></td><td>Do not track unless magic or exotic tech is used.</td></tr>
+    </table>
+
+    <h3 id="zones-as-design" data-toc="Zones as Adventure Design">Environmental Zones as Adventure Design</h3>
+
+    <p>
+      Zones are adventure design tools. The Aetheric balance of a location tells the
+      players what works here, what does not, and what the place <em>is</em>.
+    </p>
+
+    <p>
+      A factory pumping Galvanic energy into the air (baseline &minus;10) tells the
+      players: your caster is weakened here, firearms are reliable, someone is running
+      heavy machinery. A haunted forest with +8 Aetheric tells them: bring swords,
+      your guns will jam, the caster thrives but the forest is watching.
+    </p>
+
+    <div class="callout callout-example">
+      <span class="callout-label">The Zone IS the Challenge</span>
+      <p>A dungeon with a vertical gradient &mdash; neutral on the surface, increasingly
+      Aetheric as you descend &mdash; forces the party to choose: bring guns for the
+      upper floors and switch to swords below? Leave the caster topside as a rearguard?
+      The zone makes tactical decisions richer without adding new mechanics. It is the
+      same Reliability and Casting math the players already know, applied spatially.</p>
+    </div>
+
+    <h3 id="dynamic-zones">Dynamic Zones</h3>
+
+    <p>
+      <strong>Spell flooding:</strong> A caster throwing Standard spells generates +2
+      accumulation per cast. Three spells pushes +6 &mdash; enough to make firearms
+      noticeably unreliable (&minus;12 Reliability).
+    </p>
+
+    <p>
+      <strong>Tech pushing back:</strong> A force generator pulsing &minus;2 per minute
+      shifts the balance toward Galvanic. Five minutes of operation moves the needle
+      by &minus;10.
+    </p>
+
+    <p>
+      <strong>Decay as timer:</strong> Accumulation decays at 1 per minute. A +6 spike
+      from combat fades in six minutes. Rest to reset the zone, or press on while the
+      balance favors you. This creates pacing tension without any new mechanics.
+    </p>
+
+    <p>
+      Baselines do not change in-session. Only sustained, intensive activity over weeks
+      or months shifts a location&rsquo;s permanent baseline.
+    </p>
+
+    <h3 id="baselines">Location Baselines</h3>
+
+    <table>
+      <tr><th>Location</th><th>Baseline</th><th>Why</th></tr>
+      <tr><td>Open countryside</td><td>0</td><td>No sustained activity</td></tr>
+      <tr><td>City street</td><td>0 to &minus;2</td><td>Faint industrial hum</td></tr>
+      <tr><td>Factory floor</td><td>&minus;5 to &minus;12</td><td>Active machinery</td></tr>
+      <tr><td>Power plant / foundry</td><td>&minus;15 to &minus;25</td><td>Heavy Engine concentration</td></tr>
+      <tr><td>University / library</td><td>0 to +2</td><td>Faint scholarly traces</td></tr>
+      <tr><td>Old cathedral / temple</td><td>+3 to +5</td><td>Centuries of ritual</td></tr>
+      <tr><td>Haunted manor</td><td>+5 to +8</td><td>Aetheric residue from trauma</td></tr>
+      <tr><td>Cemetery / barrow</td><td>+3 to +8</td><td>Proximity to the Veil</td></tr>
+      <tr><td>Wild Zone edge</td><td>+8 to +12</td><td>Technology falters</td></tr>
+      <tr><td>Wild Zone heart</td><td>+15 to +25+</td><td>Swords and sorcery only</td></tr>
+      <tr><td>Galvanic lab</td><td>&minus;3 to &minus;8</td><td>Prototype testing</td></tr>
+      <tr><td>Abandoned factory</td><td>&minus;2 to &minus;5</td><td>Residual resonance, fading</td></tr>
+    </table>
+
+    <h3 id="zone-tactics" data-toc="Zones as Tactical Terrain">Zone Boundaries as Tactical Terrain</h3>
+
+    <p>
+      Treat zone boundaries like walls, cover, and chokepoints &mdash; tactical
+      features that change how encounters play out.
+    </p>
+
+    <div class="callout callout-scene">
+      <span class="callout-label">Encounter Design</span>
+      <p>A fight in a warehouse. The main floor is Neutral (0). The back room houses a
+      humming Galvanic generator (&minus;8). The old stone cellar has Aetheric traces
+      (+5). Three zones in one building. The caster wants to fight from the cellar.
+      The enemy gunners want the back room. The main floor is contested ground where
+      everything kind-of works but nobody has an edge. The fight becomes a territorial
+      struggle over which zone to control.</p>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!--  5. NARRATING SPELL EFFECTS                            -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+
+    <h3 id="spell-narration" data-toc="Narrating Spells">Narrating Spell Effects</h3>
+
+    <p>
+      Spells describe broad concepts, not narrow effects. Force does not say
+      &ldquo;deals 2d6 in a 15-foot cone&rdquo; &mdash; it says &ldquo;project raw
+      magical force as a push, strike, or crush.&rdquo; The tier table gives the
+      mechanical numbers. The fiction is yours to shape.
+    </p>
+
+    <h3 id="tier-scale" data-toc="Tier Descriptions">Scaling Descriptions by Tier</h3>
+
+    <table>
+      <tr><th>Tier</th><th>Scale</th><th>Sensory</th><th>Aftermath</th></tr>
+      <tr><td><strong>Weak</strong></td><td>Personal, one target</td><td>A flicker, a whisper, a faint shimmer</td><td>A chill in the air</td></tr>
+      <tr><td><strong>Standard</strong></td><td>Room-scale</td><td>A flash, a crack, unmistakable</td><td>Scorch marks, frost, displaced objects</td></tr>
+      <tr><td><strong>Strong</strong></td><td>Area-scale, changes the scene</td><td>A roar, a wave of force</td><td>Structural damage, altered terrain</td></tr>
+      <tr><td><strong>Spectacular</strong></td><td>Building-scale, awe-inspiring</td><td>Everyone stops. The air changes.</td><td>Craters, fused stone, warped metal</td></tr>
+    </table>
+
+    <h3 id="creative-spells" data-toc="Creative Spell Use">Creative Spell Use</h3>
+
+    <p>
+      When a player proposes a use that is not in the tier table, ask three questions:
+    </p>
+
+    <ol>
+      <li><strong>Does the spell&rsquo;s concept cover this?</strong> Force moves things.
+        It does not create fire, read minds, or heal wounds.</li>
+      <li><strong>What tier would this effect require?</strong> Shoving a door open?
+        Weak. Collapsing a tunnel? Strong or Spectacular.</li>
+      <li><strong>Is the proposed effect within the scope of that tier?</strong> Compare
+        to what the tier already does. If it is dramatically more powerful, it does not
+        fit.</li>
+    </ol>
+
+    <p>
+      If all three pass, the effect works as proposed. If the concept fits but the tier
+      is wrong, offer a reduced version: &ldquo;Force cannot collapse the tunnel at
+      Standard, but you could crack a support beam.&rdquo;
+    </p>
+
+    <div class="callout callout-warning">
+      <span class="callout-label">Scope Limits</span>
+      <p>If a proposed use would make another spell obsolete, it is too broad. If Force
+      can do what Kinesis does, why does Kinesis exist? Spell boundaries are load-bearing
+      walls &mdash; removing one brings down the house.</p>
+    </div>
+
+    <h3 id="backlash">Backlash as Narrative</h3>
+
+    <p>
+      Backlash is not just &ldquo;take 1d4 damage.&rdquo; It is the Aether biting back.
+      Describe it in terms of the spell that caused it:
+    </p>
+
+    <table>
+      <tr><th>Spell Concept</th><th>Backlash Looks Like</th></tr>
+      <tr><td>Force</td><td>Concussive rebound. The caster staggers as if punched.</td></tr>
+      <tr><td>Elemental Manipulation</td><td>The element turns on the caster. A fire spell scorches their hands.</td></tr>
+      <tr><td>Barrier</td><td>The barrier snaps back like a rubber band.</td></tr>
+      <tr><td>Mend</td><td>The healing goes wrong. A bone sets crooked. A wound seals over infection.</td></tr>
+      <tr><td>Wither</td><td>The entropy reflects inward. A fingernail blackens. Hair grays at the temple.</td></tr>
+      <tr><td>Detect / Reveal</td><td>Sensory overload. Every magical trace floods their perception.</td></tr>
+      <tr><td>Commune</td><td>The other side notices you. Something whispers back.</td></tr>
+      <tr><td>Sever</td><td>The severing cuts both ways. Something inside disconnects momentarily.</td></tr>
+    </table>
+
+    <p>
+      The 25% wild effect chance after backlash is a storytelling gift. A Wild Effect
+      from Force might shatter every window in the room. A Wild Effect from Commune
+      might briefly open a two-way connection. These moments make sessions memorable.
+    </p>
+
+    <hr class="section-divider">
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!--  6. CREATING DEVICES ON THE FLY                        -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+
+    <h3 id="device-creation" data-toc="Creating Devices">Creating Devices on the Fly</h3>
+
+    <p>
+      When a player asks &ldquo;Is there a device that could do X?&rdquo; or you need
+      a piece of exotic tech for an NPC or location, use the quick creation method:
+    </p>
+
+    <ol>
+      <li><strong>What does it do?</strong> One clear function. Devices do one thing.</li>
+      <li><strong>What spell does it most closely mimic?</strong> A ward detector mimics
+        Detect. A force generator mimics Barrier. Find the analog.</li>
+      <li><strong>Set the Galvanic rating.</strong> Weak analog = 1, Standard = 2,
+        Strong = 3. Passive readers = 0.</li>
+      <li><strong>Assign Reliability.</strong> 50&ndash;60: fragile prototype.
+        65&ndash;75: field-ready. 80+: robust.</li>
+      <li><strong>Add a drawback.</strong> It is loud, slow, fragile, fuel-hungry, or
+        alerts things you would rather not alert. Every device has one.</li>
+    </ol>
+
+    <h3 id="device-balance" data-toc="Device Balance">The Balance Test</h3>
+
+    <p>Before handing a device to the players, ask three questions:</p>
+
+    <ul>
+      <li><strong>Does it replace a character ability?</strong> Devices should complement
+        abilities, not make them obsolete.</li>
+      <li><strong>Does it have a meaningful cost?</strong> Galvanic rating shifts the
+        balance. Reliability means it might fail. Charges mean it runs out.</li>
+      <li><strong>Does it solve the problem too cleanly?</strong> The best devices create
+        new problems while solving old ones.</li>
+    </ul>
+
+    <h3 id="device-rarity" data-toc="Device Rarity">Devices as Rewards</h3>
+
+    <table>
+      <tr><th>Rarity</th><th>Availability</th></tr>
+      <tr><td>Common</td><td>Specialist shops in major cities</td></tr>
+      <tr><td>Uncommon</td><td>Faction quartermasters, specific contacts</td></tr>
+      <tr><td>Rare</td><td>Black market, faction armories, expedition salvage</td></tr>
+      <tr><td>Unique</td><td>One-of-a-kind. Built for a specific purpose. Quest reward.</td></tr>
+    </table>
+
+    <p>
+      Faction-specific devices are among the best quest rewards in the game. A device
+      built by a specific faction &mdash; with their design philosophy, their
+      limitations, their aesthetic &mdash; tells the players something about that
+      faction every time they use it.
+    </p>
+
+    <hr class="section-divider">
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!--  7. WORKED EXAMPLES                                    -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+
+    <h3 id="example-social" data-toc="Example: Social">The Dockmaster&rsquo;s Favor</h3>
+
+    <div class="callout callout-scene">
+      <span class="callout-label">Setup</span>
+      <p>The party needs passage on a cargo ship leaving tonight. The dockmaster,
+      Greaves, controls berth assignments. He has heard rumors about the party causing
+      trouble (Unfriendly, &minus;15%). Characters: Sera (SP +2, Persuasion 3,
+      Etiquette 2, Deception 3) and Kael (PP +2, Intimidation 2 under PP).</p>
+    </div>
+
+    <p>
+      <strong>Step 1 &mdash; Read the room.</strong> Sera&rsquo;s player asks about
+      Greaves&rsquo; mood. The GM describes: he looks up from his manifests and his
+      expression goes flat. No roll needed &mdash; the GM is describing the world
+      honestly.
+    </p>
+
+    <p>
+      <strong>Step 2 &mdash; Etiquette to soften the ground.</strong> Sera compliments
+      his operation, uses his title, stays formal. Etiquette target: ((10 + 2) &times;
+      2) + 30 = 54. Rolls 41 &mdash; success, margin 13. Greaves softens. Disposition
+      shifts from Unfriendly (&minus;15%) to Neutral (+0%).
+    </p>
+
+    <p>
+      <strong>Step 3 &mdash; Persuasion.</strong> Sera mentions their patron, Lord
+      Ashton, and implies future favors. Good argument: +10% roleplay modifier.
+      Persuasion target: 66 + 10 = 76. Rolls 52 &mdash; success, margin 24. Greaves
+      pulls out a manifest. &ldquo;Two berths. Cargo hold, not cabins.&rdquo;
+    </p>
+
+    <p>
+      <strong>Step 4 &mdash; Deception at the gangplank.</strong> A dock inspector asks
+      about a sealed crate. Sera claims it is survey equipment. Deception 66 vs.
+      inspector&rsquo;s Empathy 40. Sera rolls 38 (success, margin 28). Inspector
+      rolls 52 (fail). One success beats one failure &mdash; the lie holds completely.
+    </p>
+
+    <div class="callout callout-note">
+      <span class="callout-label">What If Kael Had Intimidated Instead?</span>
+      <p>Kael&rsquo;s PP Intimidation target is 54. He could loom and growl. Even if he
+      wins the opposed check against Greaves&rsquo; Resolve, Intimidation creates
+      compliance, not goodwill. Greaves would give them the berths &mdash; then report
+      them to the harbor watch.</p>
+    </div>
+
+    <h3 id="example-chase" data-toc="Example: Chase">Through the Market District</h3>
+
+    <div class="callout callout-scene">
+      <span class="callout-label">Setup</span>
+      <p>Finch grabs a stolen document and bolts. Kael (PC +2, Athletics 3) gives chase
+      through a crowded market toward the old quarter (Light Aetheric, +3 baseline).
+      Finch starts at Near range.</p>
+    </div>
+
+    <p>
+      <strong>Count 0:</strong> Both Sprint (speed 3, tokens at 3).
+    </p>
+
+    <p>
+      <strong>Count 3:</strong> Both resolve simultaneously. Range unchanged &mdash;
+      both moved the same distance. <strong>Complication:</strong> a fruit cart blocks
+      the alley.
+    </p>
+
+    <p>
+      Kael&rsquo;s Athletics target: 66. Rolls 28. Success &mdash; clears the cart
+      smoothly. Finch&rsquo;s Athletics target: 50. Rolls 63. Failure &mdash; clips
+      the corner, +2 count penalty.
+    </p>
+
+    <p>
+      <strong>Count 3 declarations:</strong> Kael Sprints (speed 3, token at 6). Finch
+      Sprints (speed 3 + 2 penalty = 5, token at 8). Kael is gaining.
+    </p>
+
+    <p>
+      <strong>Count 6:</strong> Kael resolves, moves to Close. Finch has not resolved
+      yet. Kael declares a tackle (Brawl, speed 3, token at 9).
+    </p>
+
+    <p>
+      <strong>Count 8:</strong> Finch resolves, moves from Close back to Near. Kael&rsquo;s
+      tackle at count 9 needs Close range &mdash; Finch is now one band too far. Tackle
+      misses.
+    </p>
+
+    <p>
+      <strong>Count 11:</strong> Finch reaches Far range in the old quarter. Zone shifts
+      to +3 Aetheric &mdash; any firearm drawn now loses 6 Reliability.
+    </p>
+
+    <p>
+      <strong>Resolution (approaching 12 counts):</strong> Final opposed Athletics.
+      Kael: 66, rolls 44 (margin 22). Finch: 50, rolls 61 (fail). Kael dives, catches
+      Finch&rsquo;s coat. Chase over &mdash; Close-range confrontation in a +3 Aetheric
+      zone.
+    </p>
+
+    <h3 id="example-exploration" data-toc="Example: Exploration">The Holloway House</h3>
+
+    <div class="callout callout-scene">
+      <span class="callout-label">Setup</span>
+      <p>The party investigates a haunted manor. Baseline: +5 Aetheric (main floors),
+      +8 (cellar), +2 (garden). Party: Sera (casting target 55), Kael (revolver Rel 95),
+      Marsh (semi-auto Rel 85, Aetheric Compass).</p>
+    </div>
+
+    <p>
+      <strong>The garden (+2 baseline).</strong> Marsh activates the Compass (Galvanic
+      Rating 0 &mdash; passive reader, no shift). Kael&rsquo;s revolver: 95 &minus; 4
+      = 91. Malfunction chance 9%. Barely noticeable.
+    </p>
+
+    <p>
+      <strong>Main floor (+5 baseline).</strong> Kael&rsquo;s revolver: 95 &minus; 10
+      = 85. Malfunction 15%. Marsh&rsquo;s semi-auto: 85 &minus; 10 = 75. Malfunction
+      25%. Marsh holsters the pistol and draws a knife. Sera&rsquo;s casting target:
+      55 + 10 = 65. The Aether is feeding her.
+    </p>
+
+    <p>
+      <strong>Sera casts Detect</strong> to search for magical traps. Rolls 42 against
+      target 65 &mdash; success, margin 23. Standard tier. She senses three sources:
+      two faint wards on the windows, one stronger pulse beneath the floor. Accumulation:
+      +2. Net balance now +7. Kael&rsquo;s revolver drops to effective 81. It decays
+      back to baseline in two minutes.
+    </p>
+
+    <p>
+      <strong>The cellar (+8 baseline).</strong> Kael&rsquo;s revolver: 95 &minus; 16
+      = 79. Malfunction 21%. Marsh&rsquo;s semi-auto: 85 &minus; 16 = 69. Malfunction
+      31%. Sera&rsquo;s casting target: 55 + 16 = 71. She is formidable down here.
+    </p>
+
+    <p>
+      They find a ward circle on the cellar floor, still active, pulsing Aetheric
+      energy. Something is contained inside it. Opening the circle is a choice &mdash;
+      the thing inside might be dangerous, and releasing it in a +8 zone means any
+      magical entity will be empowered.
+    </p>
+
+    <div class="callout callout-note">
+      <span class="callout-label">The Zone Does the Work</span>
+      <p>The players know the math. They know their guns are unreliable down here. They
+      know the caster is strong. They know whatever is in the circle will be stronger
+      too. The zone baseline created a tactical dilemma without the GM lifting a
+      finger.</p>
+    </div>
+
+    <h3 id="example-device" data-toc="Example: Device">The Resonance Cage</h3>
+
+    <div class="callout callout-scene">
+      <span class="callout-label">Setup</span>
+      <p>The party needs to capture a magical creature &mdash; an Aetheric predator that
+      manifests from the Veil, feeds on residue, and vanishes when threatened. Physical
+      weapons pass through it. Magic can hurt it but also feeds it. A player asks:
+      &ldquo;Could we build some kind of Galvanic trap?&rdquo;</p>
+    </div>
+
+    <p>
+      <strong>The GM uses the quick creation method:</strong>
+    </p>
+
+    <ol>
+      <li><strong>Function:</strong> Localized Galvanic containment field.</li>
+      <li><strong>Spell analog:</strong> Circle &mdash; creates a bounded zone.
+        Standard tier for basic containment.</li>
+      <li><strong>Galvanic rating:</strong> 2 (Standard analog). Generates &minus;2
+        per minute while active.</li>
+      <li><strong>Reliability:</strong> 55. A prototype built from salvaged parts.</li>
+      <li><strong>Drawbacks:</strong> 10 minutes to set up. One-shot power source
+        (~30 minutes). Loud Galvanic pulse on activation. The field affects everyone
+        inside &mdash; casting at &minus;4 to target numbers.</li>
+    </ol>
+
+    <p>
+      Sera lures the creature with a Weak spell. When it enters the cage radius, the
+      engineer activates it. Reliability check: d100 against 55, rolls 33 &mdash; it
+      fires. The creature recoils from the Galvanic field but can batter it with its
+      own Aetheric energy. The party has 10&ndash;15 minutes before the cage fails.
+    </p>
+
+    <p>
+      The device does one thing (containment). It has meaningful costs (setup time,
+      one-shot, affects allies). It creates new problems (transport, time limit,
+      alerting other threats). It is rooted in established mechanics.
+    </p>
+
+    <hr class="section-divider">
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!--  8. QUICK REFERENCE                                    -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+
+    <h3 id="gm-toolkit" data-toc="GM Toolkit">The GM&rsquo;s Toolkit</h3>
+
+    <table>
+      <tr><th>Situation</th><th>Tool</th><th>Reference</th></tr>
+      <tr><td>Should I call for a roll?</td><td>Three conditions test</td><td>Uncertain + consequences + not trivial</td></tr>
+      <tr><td>How hard is this check?</td><td>Modifier table</td><td>+20% favorable to &minus;30% severe</td></tr>
+      <tr><td>Raw capability, no skill?</td><td>Stat check</td><td>(5 + stat) &times; 10</td></tr>
+      <tr><td>Environmental chance?</td><td>Consequence check</td><td>Flat %, roll d100</td></tr>
+      <tr><td>NPC social encounter?</td><td>Disposition + social skill</td><td>&minus;30% hostile to +30% allied</td></tr>
+      <tr><td>Chase on foot?</td><td>Timing track + Sprint</td><td>Speed 3 per range band</td></tr>
+      <tr><td>Vehicle chase?</td><td>Timing track + vehicle speed</td><td>Speed varies by vehicle</td></tr>
+      <tr><td>Track accumulation?</td><td>Tally marks</td><td>+tier for spells, &minus;rating for devices</td></tr>
+      <tr><td>Zone baseline?</td><td>Location table</td><td>0 neutral to &plusmn;25 extreme</td></tr>
+      <tr><td>Creative spell use?</td><td>Three questions test</td><td>Concept + tier + scope</td></tr>
+      <tr><td>Need a device?</td><td>Quick creation method</td><td>Function &rarr; analog &rarr; rating &rarr; drawback</td></tr>
+    </table>
+
+    <nav class="page-nav">
+      <a href="equipment.html" class="page-nav-link">
+        <span class="page-nav-direction">&larr; Previous</span>
+        <span class="page-nav-title">Arms &amp; Equipment</span>
+      </a>
+      <a href="reference.html" class="page-nav-link page-nav-link--next">
+        <span class="page-nav-direction">Next &rarr;</span>
+        <span class="page-nav-title">Quick Reference</span>
+      </a>
+    </nav>
+  </div>
+  <footer class="site-footer"><p>Adventure RPG &mdash; Playtest Draft</p></footer>
+</main>
+<script src="js/main.js"></script>
+</body>
+</html>
