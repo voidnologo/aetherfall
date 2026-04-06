@@ -23,6 +23,7 @@
     { id: 'running',       file: 'running-the-game.html',   title: 'Running the Game',             num: '13', theme: 'neutral' },
     { id: 'reference',     file: 'reference.html',          title: 'Quick Reference',              num: '14', theme: 'neutral' },
     { id: 'tables',        file: 'tables.html',             title: 'Table Index',                  num: '15', theme: 'neutral' },
+    { id: 'gm-tools',     file: 'gm-tools.html',           title: 'GM Tools',                     num: '16', theme: 'neutral' },
   ];
 
   // ── Detect Current Page ────────────────────────────────────
