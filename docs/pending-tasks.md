@@ -1,7 +1,6 @@
 # Pending Tasks
 
 ## Next Up
-- [ ] Build GM chapter web page (web/rules/running-the-game.html) from GM_CHAPTER.md design doc — chapter 11, neutral theme, renumber Reference→12 and Tables→13, update PAGES array and navigation links
 - [ ] Define major factions and their Adventuring Societies
 - [ ] Visual polish and iteration on web rulebook based on feedback
 
