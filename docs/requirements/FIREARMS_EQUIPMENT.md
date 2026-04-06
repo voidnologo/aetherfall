@@ -17,7 +17,7 @@ This creates the game's central tactical tension: martial weapons always work, f
 
 ## 2. Firearm Stats
 
-Every firearm has five stats (exotic weapons add a sixth — **Aetheric**):
+Every firearm has five stats (exotic weapons add a sixth — **Galvanic**):
 
 | Stat | Description |
 |------|-------------|
@@ -56,7 +56,7 @@ Firearms follow the same **category + tag** system as melee weapons (see PROJECT
 
 Exotic weapons are **rare, emerging technology** — expensive, unreliable, and viewed with suspicion. They represent the bleeding edge of Galvanic engineering — technology that channels forces from the Engine. Not magical, but leveraging principles that push back against the Aether. Each exotic weapon fired also generates **Galvanic accumulation** (see §5.5).
 
-| Category | Speed | Damage | Capacity | Reload | Reliability | Aetheric | Examples |
+| Category | Speed | Damage | Capacity | Reload | Reliability | Galvanic | Examples |
 |----------|-------|--------|----------|--------|-------------|----------|----------|
 | Exotic Pistol | 3 | 1d10 | 12 | 2 | 70 | 1 | Pneumatic flechette, needle gun, compressed air pistol |
 | Exotic Sidearm | 4 | 2d8 | 6 | 3 | 65 | 2 | Arc gun, voltaic pistol, spark thrower |
@@ -218,7 +218,7 @@ Each exotic item has an **Galvanic rating** — how much it shifts the balance p
 | Suppressing tag | Adds +1 to weapon's Galvanic rating |
 | Non-weapon exotic device | −(device's Galvanic rating) per activation or per minute sustained |
 
-| Exotic Category | Aetheric Rating |
+| Exotic Category | Galvanic Rating |
 |-----------------|----------------|
 | Exotic Pistol | 1 |
 | Exotic Sidearm | 2 |
@@ -315,12 +315,12 @@ When creating a new Galvanic device, assign these properties:
 | Property | Description | Guidance |
 |----------|-------------|----------|
 | **Function** | What it does — one clear purpose | Keep it focused. A device does one thing well. |
-| **Aetheric Rating** | How much it shifts the balance per use or while sustained | 0 = passive reader. 1 = minor. 2 = significant. 3 = major. |
+| **Galvanic Rating** | How much it shifts the balance per use or while sustained | 0 = passive reader. 1 = minor. 2 = significant. 3 = major. |
 | **Reliability** | d100 roll-under to function, same as firearms | 50-60 = fragile prototype. 65-75 = field-ready. 80+ = robust. |
 | **Power** | Charges, fuel, or sustained | Most devices: 10 charges or sustained while active. |
 | **Rarity** | How hard to acquire | Common (shops), Uncommon (specialist), Rare (faction/black market), Unique (one-of-a-kind) |
 
-**Balance guideline for Galvanic ratings:** A device that replicates a spell effect should have an Galvanic rating roughly equal to the spell tier it mimics (Weak = 1, Standard = 2). A device that provides a persistent environmental effect should have a lower per-tick rating but sustained over time — the force generator in the combat example pushes -2 every 3 counts, equivalent to a steady drip rather than a burst.
+**Balance guideline for Galvanic ratings:** A device that replicates a spell effect should have a Galvanic rating roughly equal to the spell tier it mimics (Weak = 1, Standard = 2). A device that provides a persistent environmental effect should have a lower per-tick rating but sustained over time — the force generator in the combat example pushes -2 every 3 counts, equivalent to a steady drip rather than a burst.
 
 ### 6.3 Example Devices
 
@@ -328,7 +328,7 @@ These are templates. The specific names and flavors are examples — GMs should 
 
 **Aetheric Compass** — *Investigation*
 - Measures local Aetheric balance. The needle swings toward disturbances — stronger magic pulls harder. Investigators use these to trace magical activity to its source, mapping gradients to find the fire from the smoke.
-- Aetheric Rating: 0 (passive reader — no balance shift)
+- Galvanic Rating: 0 (passive reader — no balance shift)
 - Reliability: 80
 - Power: No charges — always on
 - Rarity: Uncommon
@@ -336,7 +336,7 @@ These are templates. The specific names and flavors are examples — GMs should 
 
 **Force Generator** — *Environmental Control*
 - A brass cylinder packed with resonance coils. When activated, it pulses Galvanic force at regular intervals, pushing the Aetheric balance toward tech. The one from the worked combat example.
-- Aetheric Rating: -2 per pulse (every 3 counts in combat, every minute out of combat)
+- Galvanic Rating: -2 per pulse (every 3 counts in combat, every minute out of combat)
 - Reliability: 65
 - Power: Sustained — runs until deactivated or destroyed
 - Rarity: Rare
@@ -344,7 +344,7 @@ These are templates. The specific names and flavors are examples — GMs should 
 
 **Resonance Damper** — *Personal Protection*
 - A harness worn under clothing that generates a tight Galvanic field around the wearer. Reduces incoming magical effects by a flat -15% to their effectiveness (damage, duration, or check modifiers — GM adjudicates). Cult hunters swear by these.
-- Aetheric Rating: 1 (sustained while active)
+- Galvanic Rating: 1 (sustained while active)
 - Reliability: 60
 - Power: 10 charges (each charge lasts ~10 minutes)
 - Rarity: Rare
@@ -352,7 +352,7 @@ These are templates. The specific names and flavors are examples — GMs should 
 
 **Voltaic Lantern** — *Investigation*
 - Projects a beam of tuned Galvanic light that causes magical residue to fluoresce. Hidden wards glow blue. Enchanted objects shimmer. Magical traps become visible as faint outlines. The tech equivalent of Reveal, but slower and more limited.
-- Aetheric Rating: 1 per use (each sweep of a room counts as one use)
+- Galvanic Rating: 1 per use (each sweep of a room counts as one use)
 - Reliability: 70
 - Power: 10 charges
 - Rarity: Uncommon
@@ -360,7 +360,7 @@ These are templates. The specific names and flavors are examples — GMs should 
 
 **Galvanic Brace** — *Physical Augmentation*
 - An exoskeletal frame of brass rods and voltaic muscle-wire worn over one arm or across the back. While active, provides the equivalent of +1 PP for lifting, carrying, and feats of brute strength (not combat damage). Hums loudly — no stealth while wearing one.
-- Aetheric Rating: 1 (sustained while active)
+- Galvanic Rating: 1 (sustained while active)
 - Reliability: 65
 - Power: Sustained — runs until deactivated. Overheats after ~1 hour of continuous use (needs 30 minutes to cool).
 - Rarity: Uncommon
@@ -368,7 +368,7 @@ These are templates. The specific names and flavors are examples — GMs should 
 
 **Signal Caster** — *Communication*
 - Sends encoded pulses through Galvanic frequencies. Two paired devices can transmit short messages (a sentence or two) at ranges up to a few city blocks. Works in Wild Zones where conventional radios fail — the Engine signal punches through Aetheric interference.
-- Aetheric Rating: 1 per transmission
+- Galvanic Rating: 1 per transmission
 - Reliability: 70
 - Power: 10 transmissions before recharge
 - Rarity: Uncommon

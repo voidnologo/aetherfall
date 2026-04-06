@@ -155,7 +155,7 @@ The game's two opposing forces have specific terminology. Use the right term for
 | **Aetheric accumulation** | When the balance is tipped toward magic. "The area has +6 Aetheric accumulation." |
 | **Galvanic accumulation** | When the balance is tipped toward tech. "The area has −4 Galvanic accumulation." |
 | **The balance** / **Aetheric balance** | When discussing the sliding scale as a concept. "The balance is at net +3 Aetheric." |
-| **Aetheric rating** | The per-device number on Galvanic weapons that determines how much they shift the balance per use. "This arc gun has an Aetheric rating of 2." |
+| **Galvanic rating** | The per-device number on Galvanic weapons/devices that determines how much they shift the balance per use. "This arc gun has a Galvanic rating of 2." |
 
 ### Balance in Examples
 

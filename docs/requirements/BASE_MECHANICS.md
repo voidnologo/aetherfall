@@ -204,8 +204,8 @@ Net Aetheric hurts firearms AND helps magic. Net Galvanic hurts magic AND helps 
 | Source | Shift |
 |--------|-------|
 | Spell (by tier) | +1/+2/+3/+4 Aetheric |
-| Galvanic weapon (by Aetheric rating) | −1/−2/−3 Galvanic (Pistol 1, Sidearm 2, Heavy 3) |
-| Suppressing tag | +1 to weapon's Aetheric rating |
+| Galvanic weapon (by Galvanic rating) | −1/−2/−3 Galvanic (Pistol 1, Sidearm 2, Heavy 3) |
+| Suppressing tag | +1 to weapon's Galvanic rating |
 
 **Decay:** 1 point per minute toward zone baseline (normal areas = 0).
 
@@ -213,7 +213,7 @@ Net Aetheric hurts firearms AND helps magic. Net Galvanic hurts magic AND helps 
 
 **Aetheric example:** Sera casts two Standard spells (+2 each = +4 Aetheric). Net balance: +4. Firearms lose 8 Reliability — a revolver (95) is at effective 87 (13% malfunction). Sera's casting target gains +8 — her base 55 is now 63. The Aether is feeding her magic while making the guns twitchy.
 
-**Galvanic example:** A factory enforcer fires an arc gun (Aetheric 2) three times (−2 each = −6 Galvanic). Net: −6. Casting targets drop by 12 — a caster with base 55 is at 43, barely managing Standard. Firearms gain +12 Reliability — the enforcer's semi-auto (85 + 12 = 97) has only a 3% malfunction chance. The Engine empowers its own.
+**Galvanic example:** A factory enforcer fires an arc gun (Galvanic 2) three times (−2 each = −6 Galvanic). Net: −6. Casting targets drop by 12 — a caster with base 55 is at 43, barely managing Standard. Firearms gain +12 Reliability — the enforcer's semi-auto (85 + 12 = 97) has only a 3% malfunction chance. The Engine empowers its own.
 
 **Both sides in combat:** Sera casts Standard Force (+2 Aetheric). The enforcer fires his arc gun twice (−4 Galvanic). Net: −2 Galvanic. Sera's target drops by 4 (55 → 51). The enforcer's revolver gains +4 Reliability (95 → 99, 1% malfunction). Sera needs to cast more to tip the balance back, but every spell at a reduced target is more likely to misfire.
 
