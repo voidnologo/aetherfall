@@ -1,8 +1,7 @@
 # Pending Tasks
 
 ## Next Up
-- [ ] Resolve WORLD_DESIGN.md §9 open questions (Society chapter placement, prophet mechanics, Sootborn sensitivity, magitech hybrids, naming conventions, etc.)
-- [ ] Update PROJECT_SPEC.md §2.5 and §2.6 with cross-references to WORLD_DESIGN.md
+- [ ] Sprinkle voice callouts, "For the GM" sidebars, and "At the Table" examples through chapters 4-13 where they bring the book alive or clarify points
 - [ ] Build game/GM tools and downloadable character sheet
 - [ ] Visual polish and iteration on web rulebook based on feedback
 
