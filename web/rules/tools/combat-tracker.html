@@ -370,7 +370,7 @@
 (function() {
   'use strict';
 
-  const TRACK_LENGTH = 30;
+  const WINDOW_SIZE = 30;
   const TOKEN_COLORS_PC = ['#3dc8e0', '#5fa8d6', '#7ec87e', '#b89adb', '#84d4c4'];
   const TOKEN_COLORS_NPC = ['#c45c3e', '#d68a5b', '#c4783e', '#b05e5e', '#d4724a'];
 
@@ -379,6 +379,15 @@
   let nextId = 1;
   let addType = 'pc';
   let draggedId = null;
+
+  function trackEnd() {
+    // Show at least WINDOW_SIZE counts ahead, or further if tokens are placed beyond
+    let maxToken = currentCount;
+    combatants.forEach(c => {
+      if (c.count !== null && c.count > maxToken) maxToken = c.count;
+    });
+    return Math.max(currentCount + WINDOW_SIZE, maxToken + 10);
+  }
 
   function getInitials(name) {
     const parts = name.trim().split(/\s+/);
@@ -394,7 +403,8 @@
   function buildTimeline() {
     const tl = document.getElementById('timeline');
     tl.innerHTML = '';
-    for (let i = 0; i <= TRACK_LENGTH; i++) {
+    const end = trackEnd();
+    for (let i = 0; i <= end; i++) {
       const tick = document.createElement('div');
       tick.className = 'tick' + (i === currentCount ? ' current' : '') + (i < currentCount ? ' past' : '');
       tick.innerHTML = `
@@ -416,9 +426,13 @@
     // Place tokens on timeline
     combatants.forEach(c => {
       const tokenEl = createTokenEl(c);
-      if (c.count !== null && c.count >= 0 && c.count <= TRACK_LENGTH) {
+      if (c.count !== null && c.count >= 0) {
         const slot = document.querySelector(`.tick-slots[data-count="${c.count}"]`);
-        if (slot) slot.appendChild(tokenEl);
+        if (slot) {
+          slot.appendChild(tokenEl);
+        } else {
+          document.getElementById('unplaced-area').appendChild(tokenEl);
+        }
       } else {
         document.getElementById('unplaced-area').appendChild(tokenEl);
       }
@@ -522,7 +536,6 @@
   };
 
   window.advanceOne = function() {
-    if (currentCount >= TRACK_LENGTH) return;
     currentCount++;
     document.getElementById('current-count').textContent = currentCount;
     buildTimeline();
@@ -530,13 +543,13 @@
   };
 
   window.advanceToNext = function() {
-    let nextCount = TRACK_LENGTH + 1;
+    let nextCount = Infinity;
     combatants.forEach(c => {
       if (c.count !== null && c.count > currentCount && c.count < nextCount) {
         nextCount = c.count;
       }
     });
-    if (nextCount <= TRACK_LENGTH) {
+    if (nextCount < Infinity) {
       currentCount = nextCount;
       document.getElementById('current-count').textContent = currentCount;
       buildTimeline();
