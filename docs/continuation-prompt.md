@@ -1,35 +1,36 @@
 # Continuation Prompt
 
-## Last Session (10) — Skills, Progression & Rulebook Restructure
-- Designed complete 27-skill list categorized by all 6 attributes (PW joined Mental group), with Intimidation as flex-stat (PP or SP)
-- Built progression system: 1 XP/session + table vote bonus, skill cost = level N costs N XP, attributes 10 XP/point. No XP for combat.
-- Restructured rulebook from 8 to 12 chapters: new Skills, Grimoire (full 37-spell tier tables), Arms & Equipment (weapons + Galvanic oddities + vehicles), Table Index
-- Renamed "Aetheric rating" to "Galvanic rating" for Engine-powered devices (propagation to remaining pages still needed)
-- Established workflow: design docs first (with rationale), rules second (polished presentation)
+## Last Session (11) — Galvanic Rating Propagation & GM Chapter Design
+- Completed "Aetheric rating" → "Galvanic rating" rename across all remaining pages and design docs (6 files)
+- Designed full GM chapter as docs/requirements/GM_CHAPTER.md (650+ lines)
+- New mechanics introduced: stat-based quick checks `(5+stat)×10`, NPC dispositions (−30% to +30%), chase structure on timing track, location baseline table (12 entries)
+- Four worked examples with full math: social encounter, foot chase, zone exploration, improvised device
 
 ## Current State
-- **Website live:** 12-chapter rulebook with new design system
+- **Website live:** 12-chapter rulebook with design system
 - **CRITICAL RULE:** Rulebook content must NEVER be changed without explicit user approval. Layout/design only.
 - **CRITICAL WORKFLOW:** Always persist design decisions in docs/requirements/ BEFORE writing rulebook content.
-- **Complete (first pass):** Core mechanics, skills (27), progression/XP, magic system, spell compendium (37 spells with full tiers), weapons (melee + firearms + Galvanic), armor/soak (Ballistic/Martial), Galvanic oddities (6 template devices), vehicles (10 categories), malfunction/accumulation, design philosophy, art style guide, writing style guide
-- **Terminology note:** "Galvanic rating" is the correct term for Engine-powered device ratings. Still says "Aetheric rating" in some pages — needs propagation.
-- **Not yet designed:** GM chapter ("Running the Game"), factions, zone formation mechanics, Push Timing mechanic, races, archetype names, currency, bestiary, corruption/madness
+- **Complete (first pass):** Core mechanics, skills (27), progression/XP, magic system, spell compendium (37 spells), weapons, armor/soak, Galvanic oddities, vehicles, GM chapter design doc
+- **Terminology:** "Galvanic rating" is correct for device ratings. "Aetheric" describes magic-side concepts (accumulation, zones, balance). Propagation complete.
+- **Not yet designed:** Factions/Societies, zone formation mechanics, Push Timing, archetypes, currency, bestiary, NPC stat blocks, corruption/madness
 
 ## Immediate Next Task
-**Design GM chapter** — adjudication philosophy, social situations, chases, zone tracking, narrating spell effects, creating devices on the fly. Heavy examples that actually follow the rules. Then **define major factions and Adventuring Societies.**
+**Build the GM chapter web page** — translate GM_CHAPTER.md into web/rules/running-the-game.html. This requires:
+1. Create running-the-game.html (chapter 11, `data-theme="neutral"`)
+2. Update web/rules/js/main.js PAGES array — insert `{ id: 'running', file: 'running-the-game.html', title: 'Running the Game', num: '11', theme: 'neutral' }`, renumber reference→12, tables→13
+3. Update web/rules/equipment.html — next link → running-the-game.html
+4. Update web/rules/reference.html — chapter 11→12, prev link → running-the-game.html
+5. Update web/rules/tables.html — chapter 12→13
+6. Follow HTML template pattern from equipment.html (most recent chapter added)
+
+Then **define major factions and Adventuring Societies.**
 
 ## Key References
-- `web/rules/` — 12-page rules site (index, creating, rolling, getting-hurt, skills, magic, grimoire, world-between, combat, equipment, reference, tables)
-- `web/rules/css/styles.css` — Design system
-- `web/rules/js/main.js` — Navigation, particles, scroll spy, page registry
-- `web/index.html` — Landing page
-- `docs/requirements/SKILLS_PROGRESSION.md` — Full skill list and progression rules
-- `docs/requirements/COMBAT_PROCEDURE.md` — Full combat rules with cheat sheet
-- `docs/requirements/BASE_MECHANICS.md` — Core mechanics with cheat sheet
-- `docs/requirements/PROJECT_SPEC.md` — Setting, stats, weapons, armor, zone descriptions
-- `docs/requirements/MAGIC_SYSTEM.md` — Full casting rules, Push It, school access, tie rule
-- `docs/requirements/SPELL_COMPENDIUM.md` — All 37 spells with full tier tables
-- `docs/requirements/FIREARMS_EQUIPMENT.md` — Firearms, Galvanic weapons/oddities, vehicles, accumulation, malfunction
-- `docs/requirements/DESIGN_PHILOSOPHY.md` — Cosmology (Veil/Engine), literary influences, terminology table
-- `docs/requirements/WRITING_STYLE.md` — Player-facing vs internal style, dice roll conventions, terminology guide
-- `docs/sessions/session-10-notes.md` — Full record of all decisions and changes
+- `docs/requirements/GM_CHAPTER.md` — Full GM chapter design doc (source for web page)
+- `web/rules/` — 12-page rules site
+- `web/rules/equipment.html` — Template for new pages (most recently added chapter)
+- `web/rules/css/styles.css` — Design system (callout-example, callout-note, callout-warning, callout-scene, flavor, section-divider)
+- `web/rules/js/main.js` — Navigation, particles, scroll spy, PAGES array
+- `docs/requirements/COMBAT_PROCEDURE.md` — Combat worked example for consistency
+- `docs/requirements/WRITING_STYLE.md` — Player-facing writing style guide
+- `docs/sessions/session-11-notes.md` — Full record of session 11 decisions

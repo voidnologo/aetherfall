@@ -1,10 +1,8 @@
 # Pending Tasks
 
 ## Next Up
-- [ ] Design GM chapter ("Running the Game") — adjudication philosophy, social situations, chases, zone management, narrating spell effects, creating devices on the fly, heavy examples that follow the rules
+- [ ] Build GM chapter web page (web/rules/running-the-game.html) from GM_CHAPTER.md design doc — chapter 11, neutral theme, renumber Reference→12 and Tables→13, update PAGES array and navigation links
 - [ ] Define major factions and their Adventuring Societies
-- [ ] Propagate Galvanic rating terminology across remaining rulebook pages and design docs
-- [ ] Verify all rulebook pages match approved text exactly (magic, world-between, combat most critical)
 - [ ] Visual polish and iteration on web rulebook based on feedback
 
 ## Backlog
