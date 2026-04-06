@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zone Tracker — Adventure RPG</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Serif+4:wght@400;600;700&family=JetBrains+Mono:wght@400;700&family=Cormorant+Garamond:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0e1117;
+    --bg-raised: #161b22;
+    --bg-surface: #1c2129;
+    --text: #d4dae3;
+    --text-dim: #8a92a4;
+    --text-bright: #eef0f5;
+    --aether: #3dc8e0;
+    --aether-dim: rgba(61, 200, 224, 0.15);
+    --galvanic: #e8a825;
+    --galvanic-dim: rgba(232, 168, 37, 0.15);
+    --neutral: #8a92a4;
+    --warning: #c45c3e;
+    --glass: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.06);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Source Serif 4', serif;
+    min-height: 100vh;
+    padding: 2rem;
+  }
+
+  .tool-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .tool-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-bright);
+    margin-bottom: 0.3rem;
+  }
+
+  .tool-header p {
+    color: var(--text-dim);
+    font-size: 0.95rem;
+  }
+
+  .tool-header a {
+    color: var(--text-dim);
+    text-decoration: none;
+    font-size: 0.85rem;
+  }
+
+  .tool-header a:hover { color: var(--text-bright); }
+
+  .tracker {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  /* ── Baseline Controls ─────────────────────────── */
+
+  .baseline-section {
+    background: var(--bg-raised);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .baseline-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 1rem;
+  }
+
+  .baseline-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .baseline-row label {
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    min-width: 120px;
+  }
+
+  .number-control {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .number-control button {
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--glass-border);
+    border-radius: 4px;
+    background: var(--bg-surface);
+    color: var(--text);
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .number-control button:hover { background: var(--glass-border); }
+
+  .number-control .value {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.2rem;
+    font-weight: 700;
+    min-width: 48px;
+    text-align: center;
+  }
+
+  /* ── Zone Display ──────────────────────────────── */
+
+  .zone-display {
+    background: var(--bg-raised);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .zone-balance {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+  }
+
+  .zone-label {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .zone-desc {
+    color: var(--text-dim);
+    font-size: 0.9rem;
+  }
+
+  /* ── Spectrum Bar ──────────────────────────────── */
+
+  .spectrum-bar {
+    position: relative;
+    height: 40px;
+    border-radius: 6px;
+    margin: 1.5rem 0 0.5rem;
+    overflow: hidden;
+    background: linear-gradient(to right,
+      #1a0f05 0%,
+      #3d2008 10%,
+      var(--galvanic) 25%,
+      #555 45%,
+      #555 55%,
+      var(--aether) 75%,
+      #082a30 90%,
+      #041519 100%
+    );
+    border: 1px solid var(--glass-border);
+  }
+
+  .spectrum-marker {
+    position: absolute;
+    top: -2px;
+    width: 4px;
+    height: 44px;
+    background: var(--text-bright);
+    border-radius: 2px;
+    transition: left 0.3s ease;
+    box-shadow: 0 0 8px rgba(255,255,255,0.5);
+  }
+
+  .spectrum-labels {
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-dim);
+    font-size: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  /* ── Accumulation Controls ─────────────────────── */
+
+  .accum-section {
+    background: var(--bg-raised);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .accum-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 1rem;
+  }
+
+  .accum-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .accum-group h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .accum-group.aether h3 { color: var(--aether); }
+  .accum-group.galvanic h3 { color: var(--galvanic); }
+
+  .accum-btn {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 0.4rem;
+    border: 1px solid var(--glass-border);
+    border-radius: 4px;
+    background: var(--bg-surface);
+    color: var(--text);
+    font-family: 'Source Serif 4', serif;
+    font-size: 0.85rem;
+    cursor: pointer;
+    text-align: left;
+  }
+
+  .accum-btn:hover { background: var(--glass-border); }
+  .accum-btn .shift { float: right; font-family: 'JetBrains Mono', monospace; font-weight: 700; }
+  .aether .accum-btn .shift { color: var(--aether); }
+  .galvanic .accum-btn .shift { color: var(--galvanic); }
+
+  .decay-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--glass-border);
+  }
+
+  .decay-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--glass-border);
+    border-radius: 4px;
+    background: var(--bg-surface);
+    color: var(--text);
+    font-family: 'Source Serif 4', serif;
+    font-size: 0.85rem;
+    cursor: pointer;
+  }
+
+  .decay-btn:hover { background: var(--glass-border); }
+
+  .reset-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(196, 92, 62, 0.3);
+    border-radius: 4px;
+    background: rgba(196, 92, 62, 0.1);
+    color: var(--warning);
+    font-family: 'Source Serif 4', serif;
+    font-size: 0.85rem;
+    cursor: pointer;
+  }
+
+  .reset-btn:hover { background: rgba(196, 92, 62, 0.2); }
+
+  /* ── Effects Panel ─────────────────────────────── */
+
+  .effects-section {
+    background: var(--bg-raised);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .effects-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 1rem;
+  }
+
+  .effects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .effect-card {
+    padding: 1rem;
+    border: 1px solid var(--glass-border);
+    border-radius: 6px;
+    background: var(--glass);
+  }
+
+  .effect-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 0.5rem;
+  }
+
+  .effect-value {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+
+  .effect-value.penalty { color: var(--warning); }
+  .effect-value.bonus { color: #7ec87e; }
+  .effect-value.neutral { color: var(--text-dim); }
+
+  .effect-detail {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    margin-top: 0.3rem;
+  }
+
+  /* ── Log ────────────────────────────────────────── */
+
+  .log-section {
+    background: var(--bg-raised);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    padding: 1.5rem;
+  }
+
+  .log-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 0.75rem;
+  }
+
+  .log-entries {
+    max-height: 200px;
+    overflow-y: auto;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--text-dim);
+    line-height: 1.6;
+  }
+
+  .log-entries::-webkit-scrollbar { width: 4px; }
+  .log-entries::-webkit-scrollbar-track { background: transparent; }
+  .log-entries::-webkit-scrollbar-thumb { background: var(--bg-surface); border-radius: 2px; }
+
+  .log-entry.aether { color: var(--aether); }
+  .log-entry.galvanic { color: var(--galvanic); }
+  .log-entry.decay { color: var(--text-dim); font-style: italic; }
+
+  .clear-log {
+    margin-top: 0.5rem;
+    padding: 0.3rem 0.6rem;
+    border: 1px solid var(--glass-border);
+    border-radius: 3px;
+    background: transparent;
+    color: var(--text-dim);
+    font-size: 0.75rem;
+    cursor: pointer;
+  }
+
+  .clear-log:hover { background: var(--glass-border); }
+
+  @media (max-width: 600px) {
+    .accum-grid, .effects-grid { grid-template-columns: 1fr; }
+    .baseline-row { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<div class="tool-header">
+  <a href="../reference.html">&larr; Back to Quick Reference</a>
+  <h1>Zone Tracker</h1>
+  <p>Track Aetheric &amp; Galvanic accumulation and see live effects on Reliability and Casting</p>
+</div>
+
+<div class="tracker">
+
+  <!-- Baseline -->
+  <div class="baseline-section">
+    <h2>Environment Baseline</h2>
+    <div class="baseline-row">
+      <label>Area baseline:</label>
+      <div class="number-control">
+        <button onclick="adjustBaseline(-5)">−5</button>
+        <button onclick="adjustBaseline(-1)">−1</button>
+        <span class="value" id="baseline-value">0</span>
+        <button onclick="adjustBaseline(1)">+1</button>
+        <button onclick="adjustBaseline(5)">+5</button>
+      </div>
+      <span id="baseline-label" style="color: var(--neutral); font-size: 0.85rem;">Normal</span>
+    </div>
+  </div>
+
+  <!-- Zone Display -->
+  <div class="zone-display">
+    <div class="zone-balance" id="zone-balance">0</div>
+    <div class="zone-label" id="zone-label">Normal</div>
+    <div class="zone-desc" id="zone-desc">Both forces function. Neither dominates.</div>
+    <div class="spectrum-bar">
+      <div class="spectrum-marker" id="spectrum-marker"></div>
+    </div>
+    <div class="spectrum-labels">
+      <span>Deep Galvanic</span>
+      <span>Normal</span>
+      <span>Deep Wild</span>
+    </div>
+  </div>
+
+  <!-- Accumulation Controls -->
+  <div class="accum-section">
+    <h2>Shift the Balance</h2>
+    <div class="accum-grid">
+      <div class="accum-group aether">
+        <h3>Aetheric (Spellcasting)</h3>
+        <button class="accum-btn" onclick="shift(1, 'Weak spell cast')">Weak spell <span class="shift">+1</span></button>
+        <button class="accum-btn" onclick="shift(2, 'Standard spell cast')">Standard spell <span class="shift">+2</span></button>
+        <button class="accum-btn" onclick="shift(3, 'Strong spell cast')">Strong spell <span class="shift">+3</span></button>
+        <button class="accum-btn" onclick="shift(4, 'Spectacular spell cast')">Spectacular spell <span class="shift">+4</span></button>
+      </div>
+      <div class="accum-group galvanic">
+        <h3>Galvanic (Exotic Weapons)</h3>
+        <button class="accum-btn" onclick="shift(-1, 'Rating 1 weapon fired')">Rating 1 (Flechette, Force Blade) <span class="shift">&minus;1</span></button>
+        <button class="accum-btn" onclick="shift(-2, 'Rating 2 weapon fired')">Rating 2 (Arc Gun, Spark Thrower) <span class="shift">&minus;2</span></button>
+        <button class="accum-btn" onclick="shift(-3, 'Rating 3 weapon fired')">Rating 3 (Galvanic Lance) <span class="shift">&minus;3</span></button>
+        <button class="accum-btn" onclick="shift(-1, 'Suppressing keyword (+1)')">Suppressing bonus <span class="shift">&minus;1</span></button>
+      </div>
+    </div>
+    <div class="decay-row">
+      <button class="decay-btn" onclick="decay(1)">Decay 1 min (−1)</button>
+      <button class="decay-btn" onclick="decay(5)">Decay 5 min (−5)</button>
+      <button class="decay-btn" onclick="decay(10)">Decay 10 min (−10)</button>
+      <button class="reset-btn" onclick="resetAccum()">Reset to Baseline</button>
+    </div>
+  </div>
+
+  <!-- Effects -->
+  <div class="effects-section">
+    <h2>Current Effects</h2>
+    <div class="effects-grid">
+      <div class="effect-card">
+        <h3>Firearm Reliability</h3>
+        <div class="effect-value" id="reliability-mod">No modifier</div>
+        <div class="effect-detail" id="reliability-detail">Firearms operate normally</div>
+      </div>
+      <div class="effect-card">
+        <h3>Casting Target</h3>
+        <div class="effect-value" id="casting-mod">No modifier</div>
+        <div class="effect-detail" id="casting-detail">Casting operates normally</div>
+      </div>
+      <div class="effect-card">
+        <h3>Example: Revolver (Rel 95)</h3>
+        <div class="effect-value" id="revolver-eff">95</div>
+        <div class="effect-detail" id="revolver-detail">Effective Reliability</div>
+      </div>
+      <div class="effect-card">
+        <h3>Example: Caster (Target 55)</h3>
+        <div class="effect-value" id="caster-eff">55</div>
+        <div class="effect-detail" id="caster-detail">Effective Casting Target</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Log -->
+  <div class="log-section">
+    <h2>Activity Log</h2>
+    <div class="log-entries" id="log-entries"></div>
+    <button class="clear-log" onclick="clearLog()">Clear Log</button>
+  </div>
+
+</div>
+
+<script>
+(function() {
+  'use strict';
+
+  let baseline = 0;
+  let accumulation = 0;
+
+  const ZONES = [
+    { min: 25,  label: 'Deep Wild Zone',        color: 'var(--aether)',   desc: 'The Veil is barely there. Technology non-functional. Swords and sorcery only.' },
+    { min: 15,  label: 'Wild Zone',             color: 'var(--aether)',   desc: 'Most firearms non-functional. Strange creatures. Reality gets soft.' },
+    { min: 8,   label: 'Moderate Aetheric Zone', color: 'var(--aether)',   desc: 'Only reliable firearms work. Machines need constant maintenance.' },
+    { min: 3,   label: 'Light Aetheric Zone',    color: 'var(--aether)',   desc: 'Firearms slightly less reliable. Sensitive equipment twitchy.' },
+    { min: -2,  label: 'Normal',                color: 'var(--neutral)',  desc: 'Both forces function. Neither dominates.' },
+    { min: -5,  label: 'Light Galvanic Zone',    color: 'var(--galvanic)', desc: 'Casting noticeably harder. Tech runs clean.' },
+    { min: -12, label: 'Moderate Galvanic Zone',  color: 'var(--galvanic)', desc: 'Only powerful casters can push through.' },
+    { min: -20, label: 'Galvanic Zone',          color: 'var(--galvanic)', desc: 'Most spells fail outright. Galvanic tech thrives.' },
+    { min: -Infinity, label: 'Deep Galvanic Zone', color: 'var(--galvanic)', desc: 'Magic non-functional. The Engine roars.' },
+  ];
+
+  function getZone(net) {
+    for (const z of ZONES) {
+      if (net >= z.min) return z;
+    }
+    return ZONES[ZONES.length - 1];
+  }
+
+  function net() { return baseline + accumulation; }
+
+  function update() {
+    const n = net();
+    const zone = getZone(n);
+
+    // Balance display
+    const balEl = document.getElementById('zone-balance');
+    balEl.textContent = (n >= 0 ? '+' : '') + n;
+    balEl.style.color = zone.color;
+
+    document.getElementById('zone-label').textContent = zone.label;
+    document.getElementById('zone-label').style.color = zone.color;
+    document.getElementById('zone-desc').textContent = zone.desc;
+
+    // Baseline label
+    const bZone = getZone(baseline);
+    const bLabel = document.getElementById('baseline-label');
+    bLabel.textContent = bZone.label + ' (base)';
+    bLabel.style.color = bZone.color;
+    document.getElementById('baseline-value').textContent = (baseline >= 0 ? '+' : '') + baseline;
+
+    // Spectrum marker (map -30..+30 to 0%..100%)
+    const pct = Math.max(0, Math.min(100, ((n + 30) / 60) * 100));
+    document.getElementById('spectrum-marker').style.left = pct + '%';
+
+    // Effects: 2 points per net balance point
+    const reliabilityMod = -(n * 2);  // positive net = penalty to firearms
+    const castingMod = n * 2;         // positive net = bonus to casting
+
+    const relEl = document.getElementById('reliability-mod');
+    const castEl = document.getElementById('casting-mod');
+
+    if (reliabilityMod > 0) {
+      relEl.textContent = '+' + reliabilityMod + '%';
+      relEl.className = 'effect-value bonus';
+      document.getElementById('reliability-detail').textContent = 'Firearms more reliable (Galvanic zone)';
+    } else if (reliabilityMod < 0) {
+      relEl.textContent = reliabilityMod + '%';
+      relEl.className = 'effect-value penalty';
+      document.getElementById('reliability-detail').textContent = 'Firearms less reliable (Aetheric zone)';
+    } else {
+      relEl.textContent = 'No modifier';
+      relEl.className = 'effect-value neutral';
+      document.getElementById('reliability-detail').textContent = 'Firearms operate normally';
+    }
+
+    if (castingMod > 0) {
+      castEl.textContent = '+' + castingMod + '%';
+      castEl.className = 'effect-value bonus';
+      document.getElementById('casting-detail').textContent = 'Casting easier (Aetheric zone)';
+    } else if (castingMod < 0) {
+      castEl.textContent = castingMod + '%';
+      castEl.className = 'effect-value penalty';
+      document.getElementById('casting-detail').textContent = 'Casting harder (Galvanic zone)';
+    } else {
+      castEl.textContent = 'No modifier';
+      castEl.className = 'effect-value neutral';
+      document.getElementById('casting-detail').textContent = 'Casting operates normally';
+    }
+
+    // Example weapons
+    const revEff = Math.max(0, 95 + reliabilityMod);
+    const revEl = document.getElementById('revolver-eff');
+    revEl.textContent = revEff;
+    revEl.className = 'effect-value' + (reliabilityMod < 0 ? ' penalty' : reliabilityMod > 0 ? ' bonus' : ' neutral');
+    document.getElementById('revolver-detail').textContent = '95 base ' + (reliabilityMod !== 0 ? (reliabilityMod > 0 ? '+' : '') + reliabilityMod : '± 0');
+
+    const castEff = Math.max(0, 55 + castingMod);
+    const castEffEl = document.getElementById('caster-eff');
+    castEffEl.textContent = castEff;
+    castEffEl.className = 'effect-value' + (castingMod > 0 ? ' bonus' : castingMod < 0 ? ' penalty' : ' neutral');
+    document.getElementById('caster-detail').textContent = '55 base ' + (castingMod !== 0 ? (castingMod > 0 ? '+' : '') + castingMod : '± 0');
+  }
+
+  function addLog(msg, type) {
+    const el = document.getElementById('log-entries');
+    const entry = document.createElement('div');
+    entry.className = 'log-entry ' + (type || '');
+    const prefix = type === 'aether' ? '▲' : type === 'galvanic' ? '▼' : '○';
+    entry.textContent = prefix + ' ' + msg + '  [net: ' + ((net() >= 0 ? '+' : '') + net()) + ']';
+    el.prepend(entry);
+  }
+
+  // Public API
+  window.adjustBaseline = function(delta) {
+    baseline += delta;
+    baseline = Math.max(-30, Math.min(30, baseline));
+    addLog('Baseline set to ' + ((baseline >= 0 ? '+' : '') + baseline), baseline > 0 ? 'aether' : baseline < 0 ? 'galvanic' : '');
+    update();
+  };
+
+  window.shift = function(delta, label) {
+    accumulation += delta;
+    const type = delta > 0 ? 'aether' : 'galvanic';
+    addLog(label + ' (' + (delta > 0 ? '+' : '') + delta + ')', type);
+    update();
+  };
+
+  window.decay = function(minutes) {
+    if (accumulation === 0) return;
+    const before = accumulation;
+    if (accumulation > 0) {
+      accumulation = Math.max(0, accumulation - minutes);
+    } else {
+      accumulation = Math.min(0, accumulation + minutes);
+    }
+    const delta = accumulation - before;
+    addLog(minutes + ' min decay (' + (delta > 0 ? '+' : '') + delta + ')', 'decay');
+    update();
+  };
+
+  window.resetAccum = function() {
+    accumulation = 0;
+    addLog('Accumulation reset to baseline', 'decay');
+    update();
+  };
+
+  window.clearLog = function() {
+    document.getElementById('log-entries').innerHTML = '';
+  };
+
+  // Init
+  update();
+})();
+</script>
+</body>
+</html>

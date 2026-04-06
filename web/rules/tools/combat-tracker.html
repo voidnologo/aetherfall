@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Combat Tracker — Adventure RPG</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Serif+4:wght@400;600;700&family=JetBrains+Mono:wght@400;700&family=Cormorant+Garamond:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0e1117;
+    --bg-raised: #161b22;
+    --bg-surface: #1c2129;
+    --text: #d4dae3;
+    --text-dim: #8a92a4;
+    --text-bright: #eef0f5;
+    --aether: #3dc8e0;
+    --galvanic: #e8a825;
+    --warning: #c45c3e;
+    --glass: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.06);
+    --current-count: rgba(232, 168, 37, 0.2);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Source Serif 4', serif;
+    min-height: 100vh;
+    padding: 1.5rem;
+    user-select: none;
+  }
+
+  .tool-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .tool-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-bright);
+    margin-bottom: 0.3rem;
+  }
+
+  .tool-header p { color: var(--text-dim); font-size: 0.95rem; }
+  .tool-header a { color: var(--text-dim); text-decoration: none; font-size: 0.85rem; }
+  .tool-header a:hover { color: var(--text-bright); }
+
+  /* ── Controls Bar ──────────────────────────────── */
+
+  .controls {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .ctrl-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--glass-border);
+    border-radius: 4px;
+    background: var(--bg-raised);
+    color: var(--text);
+    font-family: 'Source Serif 4', serif;
+    font-size: 0.85rem;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  .ctrl-btn:hover { background: var(--glass-border); }
+  .ctrl-btn.primary { border-color: var(--galvanic); color: var(--galvanic); }
+  .ctrl-btn.primary:hover { background: rgba(232, 168, 37, 0.1); }
+  .ctrl-btn.danger { border-color: var(--warning); color: var(--warning); }
+  .ctrl-btn.danger:hover { background: rgba(196, 92, 62, 0.1); }
+
+  .current-count-display {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--galvanic);
+    margin-left: auto;
+  }
+
+  /* ── Roster ────────────────────────────────────── */
+
+  .roster-section {
+    background: var(--bg-raised);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .roster-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 0.75rem;
+  }
+
+  .roster-list {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.75rem;
+  }
+
+  .roster-token {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    border: 1px solid var(--glass-border);
+    background: var(--bg-surface);
+  }
+
+  .roster-token .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .roster-token .remove-token {
+    cursor: pointer;
+    color: var(--text-dim);
+    margin-left: 0.3rem;
+    font-size: 0.7rem;
+  }
+
+  .roster-token .remove-token:hover { color: var(--warning); }
+
+  .add-form {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .add-form input {
+    padding: 0.4rem 0.6rem;
+    border: 1px solid var(--glass-border);
+    border-radius: 4px;
+    background: var(--bg-surface);
+    color: var(--text);
+    font-family: 'Source Serif 4', serif;
+    font-size: 0.85rem;
+    width: 140px;
+  }
+
+  .add-form input::placeholder { color: var(--text-dim); }
+
+  .add-form select {
+    padding: 0.4rem 0.6rem;
+    border: 1px solid var(--glass-border);
+    border-radius: 4px;
+    background: var(--bg-surface);
+    color: var(--text);
+    font-family: 'Source Serif 4', serif;
+    font-size: 0.85rem;
+  }
+
+  .type-toggle {
+    display: flex;
+    gap: 0;
+  }
+
+  .type-toggle button {
+    padding: 0.4rem 0.7rem;
+    border: 1px solid var(--glass-border);
+    background: var(--bg-surface);
+    color: var(--text-dim);
+    font-size: 0.8rem;
+    cursor: pointer;
+  }
+
+  .type-toggle button:first-child { border-radius: 4px 0 0 4px; }
+  .type-toggle button:last-child { border-radius: 0 4px 4px 0; }
+  .type-toggle button.active { background: var(--glass-border); color: var(--text-bright); }
+
+  /* ── Timeline ──────────────────────────────────── */
+
+  .timeline-wrapper {
+    overflow-x: auto;
+    padding-bottom: 1rem;
+  }
+
+  .timeline-wrapper::-webkit-scrollbar { height: 6px; }
+  .timeline-wrapper::-webkit-scrollbar-track { background: var(--bg); }
+  .timeline-wrapper::-webkit-scrollbar-thumb { background: var(--bg-surface); border-radius: 3px; }
+
+  .timeline {
+    display: flex;
+    gap: 0;
+    min-width: max-content;
+  }
+
+  .tick {
+    width: 64px;
+    min-width: 64px;
+    border-right: 1px solid var(--glass-border);
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  .tick-number {
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    padding: 0.4rem 0;
+    border-bottom: 1px solid var(--glass-border);
+    background: var(--bg-raised);
+  }
+
+  .tick.current .tick-number {
+    background: var(--current-count);
+    color: var(--galvanic);
+    font-weight: 700;
+  }
+
+  .tick.past .tick-number {
+    background: var(--bg);
+    color: rgba(138, 146, 164, 0.4);
+  }
+
+  .tick-slots {
+    min-height: 120px;
+    padding: 4px 2px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    background: var(--bg);
+  }
+
+  .tick.current .tick-slots {
+    background: rgba(232, 168, 37, 0.03);
+  }
+
+  .tick.past .tick-slots {
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .tick-slots.drag-over {
+    background: rgba(61, 200, 224, 0.08);
+    outline: 1px dashed var(--aether);
+    outline-offset: -2px;
+  }
+
+  /* ── Tokens ────────────────────────────────────── */
+
+  .token {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    padding: 3px 5px;
+    border-radius: 3px;
+    font-size: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    cursor: grab;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .token:active { cursor: grabbing; }
+
+  .token.dragging {
+    opacity: 0.4;
+  }
+
+  .token .token-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .token .token-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .token.pc { border-color: rgba(61, 200, 224, 0.3); background: rgba(61, 200, 224, 0.08); }
+  .token.npc { border-color: rgba(196, 92, 62, 0.3); background: rgba(196, 92, 62, 0.08); }
+
+  /* ── Unplaced tokens ───────────────────────────── */
+
+  .unplaced-area {
+    margin-top: 0.75rem;
+    padding: 0.75rem 1rem;
+    background: var(--bg-raised);
+    border: 1px dashed var(--glass-border);
+    border-radius: 6px;
+    min-height: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    align-items: center;
+  }
+
+  .unplaced-area.drag-over {
+    background: rgba(138, 146, 164, 0.06);
+    border-color: var(--text-dim);
+  }
+
+  .unplaced-label {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    margin-right: 0.5rem;
+    font-style: italic;
+  }
+
+</style>
+</head>
+<body>
+
+<div class="tool-header">
+  <a href="../reference.html">&larr; Back to Quick Reference</a>
+  <h1>Combat Tracker</h1>
+  <p>Timing track with draggable tokens &mdash; no turns, just counts</p>
+</div>
+
+<!-- Controls -->
+<div class="controls">
+  <button class="ctrl-btn primary" onclick="advanceOne()" title="Move to the next count">Advance 1 Count</button>
+  <button class="ctrl-btn primary" onclick="advanceToNext()" title="Skip to the next count with a token">Next Action</button>
+  <button class="ctrl-btn" onclick="resetTrack()">New Round (Reset to 0)</button>
+  <button class="ctrl-btn danger" onclick="clearAll()">Clear All</button>
+  <span class="current-count-display">Count: <span id="current-count">0</span></span>
+</div>
+
+<!-- Roster -->
+<div class="roster-section">
+  <h2>Roster</h2>
+  <div class="roster-list" id="roster-list"></div>
+  <div class="add-form">
+    <input type="text" id="add-name" placeholder="Name" maxlength="20"
+      onkeydown="if(event.key==='Enter')addCombatant()">
+    <div class="type-toggle">
+      <button id="type-pc" class="active" onclick="setAddType('pc')">PC</button>
+      <button id="type-npc" onclick="setAddType('npc')">NPC</button>
+    </div>
+    <button class="ctrl-btn" onclick="addCombatant()">Add</button>
+  </div>
+</div>
+
+<!-- Timeline -->
+<div class="timeline-wrapper" id="timeline-wrapper">
+  <div class="timeline" id="timeline"></div>
+</div>
+
+<!-- Unplaced tokens -->
+<div class="unplaced-area" id="unplaced-area"
+  ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)" ondrop="handleDropUnplaced(event)">
+  <span class="unplaced-label">Unplaced tokens &mdash; drag to timeline</span>
+</div>
+
+<script>
+(function() {
+  'use strict';
+
+  const TRACK_LENGTH = 30;
+  const TOKEN_COLORS_PC = ['#3dc8e0', '#5fa8d6', '#7ec87e', '#b89adb', '#84d4c4'];
+  const TOKEN_COLORS_NPC = ['#c45c3e', '#d68a5b', '#c4783e', '#b05e5e', '#d4724a'];
+
+  let currentCount = 0;
+  let combatants = [];
+  let nextId = 1;
+  let addType = 'pc';
+  let draggedId = null;
+
+  function getInitials(name) {
+    const parts = name.trim().split(/\s+/);
+    if (parts.length === 1) return parts[0].substring(0, 2).toUpperCase();
+    return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+  }
+
+  function getColor(type, index) {
+    const colors = type === 'pc' ? TOKEN_COLORS_PC : TOKEN_COLORS_NPC;
+    return colors[index % colors.length];
+  }
+
+  function buildTimeline() {
+    const tl = document.getElementById('timeline');
+    tl.innerHTML = '';
+    for (let i = 0; i <= TRACK_LENGTH; i++) {
+      const tick = document.createElement('div');
+      tick.className = 'tick' + (i === currentCount ? ' current' : '') + (i < currentCount ? ' past' : '');
+      tick.innerHTML = `
+        <div class="tick-number">${i}</div>
+        <div class="tick-slots" data-count="${i}"
+          ondragover="handleDragOver(event)"
+          ondragleave="handleDragLeave(event)"
+          ondrop="handleDrop(event, ${i})"></div>
+      `;
+      tl.appendChild(tick);
+    }
+    renderTokens();
+  }
+
+  function renderTokens() {
+    // Clear all token elements from slots and unplaced
+    document.querySelectorAll('.token').forEach(el => el.remove());
+
+    // Place tokens on timeline
+    combatants.forEach(c => {
+      const tokenEl = createTokenEl(c);
+      if (c.count !== null && c.count >= 0 && c.count <= TRACK_LENGTH) {
+        const slot = document.querySelector(`.tick-slots[data-count="${c.count}"]`);
+        if (slot) slot.appendChild(tokenEl);
+      } else {
+        document.getElementById('unplaced-area').appendChild(tokenEl);
+      }
+    });
+  }
+
+  function createTokenEl(c) {
+    const el = document.createElement('div');
+    el.className = 'token ' + c.type;
+    el.draggable = true;
+    el.dataset.id = c.id;
+    el.innerHTML = `<span class="token-dot" style="background:${c.color}"></span><span class="token-name">${c.name}</span>`;
+    el.addEventListener('dragstart', (e) => {
+      draggedId = c.id;
+      el.classList.add('dragging');
+      e.dataTransfer.effectAllowed = 'move';
+      e.dataTransfer.setData('text/plain', c.id);
+    });
+    el.addEventListener('dragend', () => {
+      el.classList.remove('dragging');
+      draggedId = null;
+      document.querySelectorAll('.drag-over').forEach(el => el.classList.remove('drag-over'));
+    });
+    return el;
+  }
+
+  function renderRoster() {
+    const list = document.getElementById('roster-list');
+    list.innerHTML = '';
+    combatants.forEach(c => {
+      const el = document.createElement('div');
+      el.className = 'roster-token';
+      el.innerHTML = `<span class="dot" style="background:${c.color}"></span>${c.name} <span class="remove-token" onclick="removeCombatant(${c.id})">&times;</span>`;
+      list.appendChild(el);
+    });
+  }
+
+  // Public API
+  window.handleDragOver = function(e) {
+    e.preventDefault();
+    e.dataTransfer.dropEffect = 'move';
+    e.currentTarget.classList.add('drag-over');
+  };
+
+  window.handleDragLeave = function(e) {
+    e.currentTarget.classList.remove('drag-over');
+  };
+
+  window.handleDrop = function(e, count) {
+    e.preventDefault();
+    e.currentTarget.classList.remove('drag-over');
+    if (draggedId === null) return;
+    const c = combatants.find(x => x.id === draggedId);
+    if (c) {
+      c.count = count;
+      renderTokens();
+    }
+  };
+
+  window.handleDropUnplaced = function(e) {
+    e.preventDefault();
+    e.currentTarget.classList.remove('drag-over');
+    if (draggedId === null) return;
+    const c = combatants.find(x => x.id === draggedId);
+    if (c) {
+      c.count = null;
+      renderTokens();
+    }
+  };
+
+  window.setAddType = function(type) {
+    addType = type;
+    document.getElementById('type-pc').className = type === 'pc' ? 'active' : '';
+    document.getElementById('type-npc').className = type === 'npc' ? 'active' : '';
+  };
+
+  window.addCombatant = function() {
+    const input = document.getElementById('add-name');
+    const name = input.value.trim();
+    if (!name) return;
+
+    const typeCount = combatants.filter(c => c.type === addType).length;
+    combatants.push({
+      id: nextId++,
+      name: name,
+      type: addType,
+      color: getColor(addType, typeCount),
+      count: null
+    });
+
+    input.value = '';
+    input.focus();
+    renderRoster();
+    renderTokens();
+  };
+
+  window.removeCombatant = function(id) {
+    combatants = combatants.filter(c => c.id !== id);
+    renderRoster();
+    renderTokens();
+  };
+
+  window.advanceOne = function() {
+    if (currentCount >= TRACK_LENGTH) return;
+    currentCount++;
+    document.getElementById('current-count').textContent = currentCount;
+    buildTimeline();
+    scrollToCount(currentCount);
+  };
+
+  window.advanceToNext = function() {
+    let nextCount = TRACK_LENGTH + 1;
+    combatants.forEach(c => {
+      if (c.count !== null && c.count > currentCount && c.count < nextCount) {
+        nextCount = c.count;
+      }
+    });
+    if (nextCount <= TRACK_LENGTH) {
+      currentCount = nextCount;
+      document.getElementById('current-count').textContent = currentCount;
+      buildTimeline();
+      scrollToCount(currentCount);
+    }
+  };
+
+  window.resetTrack = function() {
+    currentCount = 0;
+    combatants.forEach(c => { c.count = null; });
+    document.getElementById('current-count').textContent = 0;
+    buildTimeline();
+  };
+
+  window.clearAll = function() {
+    currentCount = 0;
+    combatants = [];
+    nextId = 1;
+    document.getElementById('current-count').textContent = 0;
+    renderRoster();
+    buildTimeline();
+  };
+
+  function scrollToCount(count) {
+    const wrapper = document.getElementById('timeline-wrapper');
+    const tickWidth = 65; // 64px + 1px border
+    const targetScroll = Math.max(0, (count * tickWidth) - (wrapper.clientWidth / 3));
+    wrapper.scrollTo({ left: targetScroll, behavior: 'smooth' });
+  }
+
+  // Init
+  buildTimeline();
+})();
+</script>
+</body>
+</html>
