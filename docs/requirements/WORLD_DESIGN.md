@@ -510,11 +510,17 @@ The equipment a Society carries tells a story about its patron. This is not just
 
 ### 6.5 Inter-Society Dynamics
 
-A city with multiple factions has multiple Societies. They coexist — sometimes cooperatively, sometimes not.
+A city with multiple factions has multiple Societies — and a single faction may charter *several*. The Greycoat Authority might fund three or four Societies, each covering different streets or specializing in different problems. The Ashworth Collective might run one for zone expansion and another for asset security. A city of any size could have a dozen or more active Societies — nine Galvanic-backed, three Aetheric-backed, a handful of Arrangement pragmatists — all operating in the same territory, with overlapping jurisdictions and competing interests.
 
-**Cooperation.** When a threat is too large for one Society — a major Aetheric incursion, a rampaging creature, a crisis that affects everyone — Societies from rival factions may be forced to work together. This is tense, productive, and one of the best sources of cross-faction roleplay. The Cult Hunters and the Monster Team may disagree on everything except that the thing in the basement needs to die *right now*.
+This density is the point. It's what makes the Society ecosystem feel alive, and it's what gives *your* Society a reason to exist. You're not the only game in town. You're one outfit among many, and you earn your reputation by being better, faster, smarter, or more willing to take the jobs nobody else wants.
 
-**Competition.** Societies compete for contracts, reputation, and access. Two Societies assigned the same objective by rival patrons creates a race — or a confrontation. A Society that consistently outperforms its rivals earns prestige, better assignments, and the attention (wanted or not) of other factions.
+**Intra-faction rivalry.** Societies working for the same patron compete for the best assignments, the most resources, and the patron's favor. Which Society gets the high-profile contract? Which one gets sent on the grunt work? Rivalry between "sibling" Societies is personal and persistent — you share a patron, you share a handler network, and you're constantly being measured against each other.
+
+**Cross-faction competition.** Two Societies from rival factions hunting the same artifact — the one rumored to surface in the grove that only appears under the full moon behind the thousand-year-old cathedral. Three Societies from different patrons all converging on the same lead. Competition across faction lines is sharper and more dangerous than intra-faction rivalry, because the stakes include not just reputation but the balance of power between patrons.
+
+**Cooperation across lines.** When a threat is too large for one Society — a rogue automaton that's destroyed a weapons facility and is heading toward a residential district — rivals put differences aside. The mage Society and the factory-backed Society recognize they're competing, but the automaton doesn't care about their politics. These forced alliances are tense, productive, and one of the best sources of cross-faction roleplay. They're also where lasting relationships form — or where old grievances explode under pressure.
+
+> **GM Note:** The best campaign moments often come from the shift between competition and cooperation. Two Societies that have been racing each other for weeks suddenly have to work together against a common threat. The rivalry doesn't vanish — it becomes subtext. Who leads? Who trusts whom? What happens to the alliance after the threat is gone?
 
 **Espionage.** Patrons sometimes task their Societies with gathering intelligence on rival Societies. Who are they working for? What missions have they been assigned? What did they find? This is the quiet underside of the Society ecosystem — everyone watches everyone, and the smart Societies know they're being watched.
 
