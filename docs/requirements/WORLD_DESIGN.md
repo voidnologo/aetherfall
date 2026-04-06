@@ -536,3 +536,166 @@ A Society needs four things to exist:
 4. **A reason to exist.** Why was this Society formed? What problem prompted the patron to charter it? The answer to this question is the seed of the campaign. "The Greycoats formed this Society because the border zone between the Ashworth Collective and the Veilwright Quarter is becoming ungovernable" is a campaign premise. "The Gradient Scholars formed this Society because the last one they sent into the Deep Wild didn't come back" is a different campaign premise. Both start with the same four members sitting around a table.
 
 > **GM Note:** Session Zero should include building the Society together. The patron choice shapes the campaign's politics. The charter shapes its scope. The handler becomes a recurring NPC. And the Society's origin story gives every member a shared history before play begins. This is more valuable than individual backstories — it answers the question "why are we together?" before anyone asks it.
+
+---
+
+## 7. Zone Politics
+
+The zone system (see [PROJECT_SPEC.md §2.3](PROJECT_SPEC.md) for mechanical definitions) is not just a combat modifier. It is the political geography of the setting. Zones are territory. Zones are power. Zones are the physical evidence of who controls what and how hard they're pushing.
+
+### 7.1 Zones as Territorial Claims
+
+Every faction that operates at scale leaves a zone signature. A Galvanic weapons factory pushes its surroundings into a dead zone. A casters' commune radiates Aetheric saturation. A smuggling operation keeps its footprint deliberately small to stay below the detection threshold. The zone map of a city is, in effect, a political map — you can read the power structure by walking the gradients.
+
+This has consequences:
+
+- **Territory is visible.** You cannot claim a district without affecting its zone balance. A Restorationist faction that moves in with Galvanic equipment will push the zone negative. An Awakening community that practices sustained casting will push the zone positive. Neutral observers — the Greycoats, the Gradient Scholars, anyone with an aetheric measurement device — can see the shift and trace it to the source.
+- **Expansion is detectable.** When the Ashworth Collective intensifies its Galvanic field to push the dead zone outward (see §5.1), the neighboring districts feel it before anyone makes an announcement. The balance shifts. Radios get clearer. Compasses steady. Casters notice their spells weakening. Zone expansion is an act of aggression that the environment itself announces.
+- **Concealment is expensive.** Operating below the detection threshold requires discipline. The Lamplighter Syndicate (§5.3) survives by keeping its zone impact small — small transactions, brief castings, dispersed operations. Factions that want to hide large-scale activity must either operate in existing zones (where their signature is lost in the background noise) or invest heavily in zone masking — which is itself detectable if anyone thinks to look.
+
+### 7.2 The Politics of Zone Management
+
+In a fractured city, zone control is the most contested political issue — even when people don't name it as such.
+
+**Neutral zones are commercial territory.** Markets, trade districts, and shared infrastructure exist in neutral zones because that's where both Galvanic and Aetheric goods function. Maintaining neutrality is a political act — it requires preventing any faction from tipping the balance. The Greycoat Authority (§5.5) spends most of its diminishing resources on exactly this. A neutral zone that tips one way or the other doesn't just change the environment — it changes who can do business there.
+
+**Galvanic zones are industrial territory.** Factories, foundries, and Galvanic research labs cluster in negative zones because their equipment runs cleaner where the Engine is loud. But every Galvanic zone is also a zone where magic doesn't work — which means casters can't live there, Aetheric goods can't be sold there, and Awakening communities are physically excluded. Zone management is zoning law with metaphysical teeth.
+
+**Aetheric zones are cultural territory.** The Veilwright Quarter (§5.2) exists because the Aetheric saturation created a space where magical living is possible. Defending that zone isn't just defending a neighborhood — it's defending an entire way of life. If the zone weakens or is pushed back, the community's economy, security, and identity go with it.
+
+**Border zones are contested territory.** The gradients between factions — where a Galvanic dead zone bleeds into an Aetheric pocket, where neutral ground shades toward one side — are where the action is. These borders shift with activity. A single large spell cast near a Galvanic border can temporarily push the gradient, disrupting equipment in the adjacent zone. A factory running overtime can squeeze an Aetheric pocket until the casters inside feel the pressure. Border skirmishes are often invisible to outsiders — no armies, no gunfire, just a gradual push of the balance until someone notices their wards are weaker or their radios are clearer.
+
+> **GM Note:** Zone politics can drive an entire campaign without a single combat encounter. A Society tasked with maintaining a neutral trade zone spends its time negotiating with factions that want to tip the balance, investigating unexplained zone shifts, and dealing with the social consequences when a district tips. "Someone is pushing our zone negative — find out who and make it stop" is a complete adventure premise.
+
+### 7.3 Zone Forensics
+
+The zone gradient system creates a built-in investigation mechanic. Aetheric and Galvanic residue decay slowly (see [DESIGN_PHILOSOPHY.md §4.2](DESIGN_PHILOSOPHY.md)), leaving traces that trained investigators can read.
+
+**What forensics can determine:**
+- **The type of activity.** Spellcasting leaves Aetheric residue. Galvanic devices leave Galvanic residue. The two are distinct and identifiable.
+- **The scale of activity.** A single spell leaves a faint trace. A sustained ritual leaves a deep one. A Galvanic factory running resonance engines leaves a gradient that extends for blocks. The intensity of the residue tells you how much activity occurred.
+- **The recency.** Residue decays at roughly 1 point per minute. Fresh residue is strong. Old residue is faint. An investigator who finds Aetheric residue at +15 knows something powerful happened here recently. Residue at +2 means it happened a while ago, or it was minor.
+- **The direction.** Gradients point toward their source. An investigator can follow a residue trail inward, like tracking smoke to a fire, to find where the activity was concentrated.
+
+**What forensics cannot determine:**
+- **The specific caster or device.** Residue is generic. You can tell that someone cast a Vivimancy spell, but not *who*. You can tell that a Galvanic weapon was fired, but not which one. Identifying specific sources requires other investigative methods.
+- **The intent.** A healing spell and a combat spell leave different school signatures, but the residue doesn't tell you *why* it was cast. Context and conventional detective work fill this gap.
+
+**Counter-forensics.** Factions that want to avoid detection have options — all imperfect. Casting in existing Wild Zones buries your residue in the background noise. Using lower-tier spells minimizes the trace. Operating in short bursts and dispersing prevents accumulation from building. But sustained, large-scale activity cannot be hidden this way. The zone gradient system is, ultimately, a world where *the environment is a witness*.
+
+> **GM Note:** Zone forensics gives investigation-focused Societies a unique toolkit. A crime scene isn't just blood and footprints — it's a residue map. An investigator with Detect can reconstruct the magical activity in a room, estimate when it happened, and follow the gradient to its source. This is noir detective work with an Aetheric twist, and it's one of the setting's most distinctive play experiences.
+
+### 7.4 The Front Lines
+
+Where a strong Galvanic zone and a strong Aetheric zone meet, the gradient is steep and the environment is unstable. These are the front lines — not of a war with armies, but of the quiet, constant pressure between paradigms.
+
+Front-line zones are characterized by:
+
+- **Rapid environmental shifts.** A breeze carrying Aetheric particulate can temporarily suppress Galvanic equipment. A factory cycling up can snuff out a ward that's been holding for months. The balance changes fast, and anyone operating here needs to be ready for their tools to fail without warning.
+- **Weird phenomena.** Where the two forces collide at high intensity, effects occur that don't fit either paradigm cleanly. Lights that cast shadows in the wrong direction. Sounds that arrive before their source. Machines that run on their own, performing functions they weren't designed for. These phenomena are poorly understood and rarely reproducible — the Gradient Scholars (§5.6) are desperate to study them, which is part of why they built their campus on a zone border.
+- **High-value adventure territory.** The front lines are where the most interesting things happen, where the most valuable salvage is found, and where the most dangerous work is done. Societies that specialize in border operations command premium rates — and earn them.
+
+The front lines are also where the setting's core tension is most visible. A character standing on a front line can literally feel the two forces pushing against each other. Their gun works intermittently. Their ward flickers. Their blade, as always, works fine. This is the messy middle from [DESIGN_PHILOSOPHY.md §2.1](DESIGN_PHILOSOPHY.md) (the Sabriel influence) — the border zone where both systems are present, neither is reliable, and the gameplay is richest.
+
+---
+
+## 8. Voice Guide (For the Web Chapter)
+
+This section defines the voice and framing for the player-facing web chapter that will be built from this design document. The design doc is technical (per [WRITING_STYLE.md](WRITING_STYLE.md)). The web chapter is literary, narrative, and immersive. This section bridges the two.
+
+### 8.1 The Shadowrun 3e Model
+
+Shadowrun 3rd Edition's introduction works because it is written *from inside the world*. The reader isn't consuming a sourcebook — they're reading a document that exists in-setting: a bulletin board system (BBS) post, annotated by multiple users with different handles, different perspectives, and different levels of knowledge. The narrator isn't omniscient. The commenters argue. Nobody agrees on everything. The reader feels like they've intercepted a conversation among insiders, and they're being invited — cautiously — to join.
+
+**What makes it work:**
+- **Multiple voices.** Not one narrator but several, each with personality, bias, and gaps in their knowledge.
+- **Disagreement as texture.** The voices contradict each other. One says the megacorps are the real enemy. Another says the megacorps keep the lights on. The reader gets to form their own opinion.
+- **Assumed competence.** The reader is addressed as a fellow inhabitant, not a tourist. Terminology is used without apology. "You know what a SIN is. You know why you don't have one." This makes the reader feel like an insider.
+- **Gaps are features.** The narrators don't know everything. They say "I've heard" and "word on the street is" and "nobody knows for sure." The world feels bigger than any one person can see.
+
+### 8.2 Our Framing
+
+The web chapter is framed as a **briefing packet** — the kind of document a new Adventuring Society member receives on their first day. It's been assembled by multiple contributors, each writing from their own perspective. It is not official. It is not comprehensive. It is *useful*, in the way that a veteran's advice is useful — biased, incomplete, and worth more than any textbook.
+
+**The contributors:**
+
+| Voice | Who They Are | What They Sound Like | Their Bias |
+|-------|-------------|---------------------|-----------|
+| **The Handler** | A veteran Society handler who's been running teams for fifteen years. Runs the briefing. | Terse, practical, dark humor. Short sentences. Direct address. "You'll learn" and "trust me" and "don't." | Arrangement pragmatist. Cares about keeping people alive, not ideology. Distrusts every faction equally, including the one that pays them. |
+| **The Scholar** | A Gradient Scholars researcher who contributed the "how things work" sections. | Precise, slightly irritated by oversimplification, occasionally digresses into theory. Corrects the other contributors. | Awakening-leaning academic. Believes understanding is more important than action. Thinks everyone else is making decisions with incomplete information (and is right). |
+| **The Street** | A Sootborn border-runner who contributed the "what it's really like" sections. | Fast, colloquial, concrete. Talks in specifics — streets, prices, names. Cuts through the other voices' abstractions. | No meta-faction lean. Ideology is a luxury for people who don't live on the gradient. Survival-first, with a sharp eye for who's getting screwed. |
+| **The Believer** | A Thornfield Communion member who was asked to contribute "the other perspective." | Warm, earnest, occasionally unsettling. Speaks from genuine conviction. Uses metaphors the other voices find uncomfortable. | Awakening, strong. Sees the Aether as a gift. Not naive — knows the world is dangerous — but believes the danger is worth what the Aether offers. |
+
+> **Design Note:** The voices are not balanced or equal. The Handler has the most text — they're running the briefing. The Scholar interjects to correct or expand. The Street cuts in with reality checks. The Believer offers a perspective the others don't share. The interplay between them *is* the voice of the chapter. A reader who finishes should feel like they've met four people, not read one document.
+
+### 8.3 Voice Characteristics
+
+These apply to all four voices, modulated by personality:
+
+- **Present tense where possible.** "The factory district runs Galvanic" not "is characterized by Galvanic influence." The world is happening *now*.
+- **Direct address.** "You" and "your Society" and "your first job." The reader is a participant.
+- **Setting terminology without explanation.** Aetheric, Galvanic, the Veil, the Engine — used as naturally as "north" or "downtown." The reader is assumed to know (and if they don't, the context teaches).
+- **Opinionated.** Every voice has opinions. The Handler thinks prophets are dangerous. The Scholar thinks the Handler is reckless. The Street thinks they're both missing the point. Opinions make voices feel human.
+- **Gaps and hedges.** "I've heard." "Word is." "Nobody knows for sure." "There's a story, but I don't buy it." The narrators are not omniscient. They are people reporting what they know, and they know their knowledge has limits.
+- **Occasional disagreement.** One voice says something. Another voice pushes back — in a sidebar, a footnote, or an interjection. This is how the chapter teaches the reader that the world is contested, not settled.
+
+### 8.4 Extended Voice Specimens
+
+These are drafts — not final web chapter text, but demonstrations of the target voice at paragraph length. Each covers a different topic.
+
+**The Handler — on the eruption:**
+
+> Forty years ago, give or take, the world broke. Your grandparents remember it — ask them sometime, if they'll talk about it. The Veil thinned and the Aether came through like a dam bursting. Whole regions went Wild overnight. Cities split down the middle. People who'd never felt anything stranger than a cold draft suddenly found out they could set things on fire with their minds. The governments panicked. The armies panicked. The churches panicked. Everyone panicked.
+>
+> Then, a few years later, the Engine showed up — or woke up, or got built, depending on whose pamphlet you're reading — and things got complicated instead of just terrifying. Now we've got two forces pulling at each other and everyone caught between. That's where you come in. Your Society exists because the world needs people who can walk into the mess and come out the other side with answers. Or at least with everyone still breathing.
+
+**The Scholar — on zones:**
+
+> The popular understanding of zones is, charitably, a simplification. People talk about "Galvanic zones" and "Wild Zones" as if they are rooms with walls. They are not. They are gradients — continuous fields of varying intensity with no defined edge. The boundary between a Galvanic zone and a neutral zone is not a line. It is a slope. Walk it and you will feel your equipment's behavior change incrementally — a firearm's Reliability improving by degrees, a ward growing fractionally weaker. The slope may be steep or gentle depending on the intensity of the source and the distance.
+>
+> This matters because the gradient *is* the information. If you want to know who is doing what in a neighborhood, stop asking questions and start walking. Your instruments — or, if you are sensitive, your own perceptions — will tell you more than any informant. The environment is a witness that cannot be bribed.
+
+**The Street — on border life:**
+
+> You want to know what the gradient's like? Come stand on Harrier Street at sundown. West side, the Ashworth factories are cycling up for night shift — you can feel it in your teeth, that low hum, and your compass needle locks south like it's nailed there. East side, the Quarter's evening rituals are starting — the air gets thick, smells like rain and copper, and if you're carrying a sidearm you'd better check the Reliability because it just dropped ten points.
+>
+> Right in the middle, there's me. My gear works or it doesn't. I read the gradient, I time my crossings, and I move what needs moving. The suits on the west side call me a criminal. The casters on the east side call me a profiteer. The people in the middle — the Sootborn, the shopkeepers, the families just trying to get through the week — they call me when they need something from the other side. That's the border. That's the job.
+
+**The Believer — on the Aether:**
+
+> They call it an eruption. As if it were a disaster. As if the ground opening up and showing you what was always underneath is something to be *fixed*. I was twelve when the Veil thinned. I remember the morning — the sky changed color. Not dramatically. Just... more. As if someone had cleaned a window I didn't know was dirty. And then the feeling. Like being noticed. Like something vast had turned its attention to a place it had forgotten, and found us here.
+>
+> I know what the Handler will say. I know what the Scholar will say. They'll say I'm romanticizing a catastrophe. People died. Communities were destroyed. I know. I was there. But I was also there when the first healers discovered they could mend a broken bone by touching it. When the first wards went up and a neighborhood that had been terrorized by a beast slept safe for the first time in months. The Aether is not safe. I have never said it was safe. I have said it is *real*, and it is *ours*, and turning our backs on it because it frightens us is the most dangerous thing we could do.
+
+### 8.5 What the Voice Is NOT
+
+- **Not encyclopedic.** The chapter does not attempt to cover everything. It covers what the contributors know and think is important. Gaps are intentional.
+- **Not neutral.** Every voice has a perspective. The chapter as a whole does not endorse any meta-faction. But it doesn't pretend to objectivity either — it is four people talking, and people have opinions.
+- **Not comprehensive.** The chapter does not describe every faction, every zone, every city. It describes the world as four people have experienced it. Other people's experience would produce a different document. This is a feature.
+- **Not omniscient.** The contributors are wrong about things. They have blind spots. The Handler underestimates the prophets. The Scholar overestimates the value of understanding. The Street dismisses ideology that actually matters. The Believer's faith may be misplaced. The reader who catches these flaws is engaging with the world at the right level.
+
+---
+
+## 9. Open Questions
+
+Questions accumulated during the design process. These should be resolved before the web chapter is written.
+
+1. **Society chapter placement.** Section 6 bridges world-setting and player-facing rules. The web chapter may need the Society content as its own chapter rather than folded into the world chapter — it's a different *kind* of content (decisions the table makes, not lore the table absorbs). Resolve during web chapter planning.
+
+2. **Faction count for the web chapter.** This design doc has eight sample factions. The web chapter may want fewer (to avoid overwhelming new readers) or may present them differently (e.g., three detailed examples plus a "build your own" framework). Decide during web conversion.
+
+3. **Prophet mechanics.** Prophets are a significant narrative element (§2.4, §3.4, §4.1-4.3). Do they need mechanical support — rules for followers, settlement growth, zone maintenance by sustained ritual? Or is this purely GM-adjudicated narrative? Consider during future design sessions.
+
+4. **Sootborn sensitivity.** The Sootborn's unusual zone sensitivity (§5.7) doesn't fit either the casting or Galvanic framework. Is this a third thing? A natural human response to living in the gradient? A plot hook that never needs mechanical resolution? Flag for future design discussion.
+
+5. **Magitech hybrids.** DESIGN_PHILOSOPHY.md §2.3 hints at "cannibalizing" one force using the other. Is hybrid technology possible in the setting? Is it inherently corrupting? Is it what the Archipelago has achieved? This is a major setting question that this doc deliberately does not answer. Resolve only if it becomes mechanically necessary.
+
+6. **The voice behind the Veil.** Mother Thorn (§5.4) hears something. The Deep Wild structures (§5.6) respond to human presence. Are these connected? Is there something conscious beyond the Veil? This is a DESIGN_PHILOSOPHY.md §1.4 (Invisible War) question — the answer should probably remain unknown, but the *consistency* of the hints should be designed. Coordinate with cosmology doc.
+
+7. **Zone mechanics for settlements.** The Thornfield Communion (§5.4) maintains its zone through sustained ritual. The Ashworth Collective (§5.1) intensifies its zone through industrial output. Should there be lightweight rules for how factions maintain and expand zones, or is this purely narrative? Consider if GM tools are built.
+
+8. **Multiple voices production.** The web chapter's four-voice format (§8.2) is rich but complex to produce. How will voice transitions be styled in HTML? Sidebars? Colored callouts? Inline annotations? Resolve during web design phase.
+
+9. **Naming conventions.** This doc uses evocative English names (Ashworth, Greycoat, Thornfield, Lamplighter). Are these the right register for the setting? Should faction names draw from different linguistic traditions to reflect a secondary world that isn't Anglophone? This is a WRITING_STYLE.md question. Resolve before web chapter.
+
+10. **How much history in the web chapter?** Section 2 provides a full Before/Eruption/Counter-Response/Now arc. The web chapter may want less history and more present-tense "here's what the world is like now." The contributors would naturally talk more about the present than the past. Decide during web conversion.
