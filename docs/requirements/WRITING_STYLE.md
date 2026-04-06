@@ -88,6 +88,41 @@ The common thread: **rules as storytelling**, not rules as specification.
 
 ---
 
+## Voice Callouts vs. GM Notes
+
+The web rulebook uses two distinct types of sidebar content. They serve different audiences, speak in different registers, and must never be confused.
+
+### Voice Callouts (Handler, Scholar, Street, Believer)
+
+Voice callouts are **people in the world talking to other people in the world.** They share personal experiences, warnings, opinions, and stories. They are in-character, first-person, and experiential. They never reference game mechanics, design philosophy, or the reader's role as a player or GM.
+
+**The test:** Could this sidebar be spoken aloud by a person sitting across from you in a tavern? If yes, it's a voice callout. If it reads like a game designer explaining a rule, it belongs in a GM note instead.
+
+**Good voice callout (The Street):**
+> I watched a man die on Fenwick Street because his automatic jammed twice in the same fight. The other guy had a revolver. Fired three times, hit twice, walked away. I sold my automatic the next morning.
+
+**Bad voice callout (rules commentary disguised as voice):**
+> A revolver at 95 Reliability is a tool you can trust. A tommy gun at 70 is a gamble every time you squeeze.
+
+The bad example cites game stats directly and reads as mechanical advice. The good example tells a story that teaches the same lesson through lived experience.
+
+**Voice personalities:**
+- **The Handler** — Shares mission stories, survival advice, what they've seen go wrong. "I tell every new recruit..." "Last job we ran..."
+- **The Scholar** — Shares fieldwork and research experiences. "In my years studying the gradient..." "I once observed a ward collapse near..." Personal and precise, not lecturing.
+- **The Street** — Street-level survival stories with concrete details. Names streets, describes close calls, talks in specifics.
+- **The Believer** — Personal spiritual experiences with the Aether. "I remember the first time I felt..." "When I lay hands on a wound..." Warm and earnest.
+
+### GM Notes ("For the GM")
+
+GM notes are **rules-facing advice for the person running the game.** They address the GM directly, offer adjudication guidance, session management tips, and design rationale. They can reference mechanics, player psychology, and the structure of play.
+
+**Good GM note:**
+> Death saves are the most dramatic rolls in the game. Slow them down. Describe the character's breathing. Let the table go quiet. A d100 roll that determines whether someone lives or dies deserves more than "roll it."
+
+Voice callouts and GM notes can appear near each other — a voice callout grounds a rule in the world, and a GM note explains how to run it. They complement each other but must stay in their lanes.
+
+---
+
 ## Dice Roll Conventions
 
 The game uses d100 for nearly everything, but there are **two distinct types of d100 roll** and they should be written differently.
