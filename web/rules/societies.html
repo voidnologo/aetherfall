@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="neutral">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adventuring Societies — Adventure RPG</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="atmosphere"><canvas id="particle-canvas"></canvas><div class="mist mist-1"></div><div class="mist mist-2"></div><div class="mist mist-3"></div></div>
+<div id="page-transition" class="page-transition"></div>
+<div class="sidebar-overlay"></div>
+<aside class="sidebar">
+  <div class="sidebar-brand"><div class="sidebar-title">Adventure</div><div class="sidebar-subtitle">Rules Reference</div></div>
+  <nav class="sidebar-nav"></nav>
+  <div class="sidebar-footer"><a href="../">← Back to Adventure</a></div>
+</aside>
+<header class="site-header">
+  <button class="header-toggle" aria-label="Toggle navigation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+  <span class="header-logo">Adventure <span>RPG</span></span>
+  <span class="header-separator"></span>
+  <span class="header-chapter">Chapter 3 &mdash; Adventuring Societies</span>
+</header>
+<main class="main-content">
+  <div class="page-content">
+
+    <nav class="page-nav-compact">
+      <a href="state-of-the-world.html">&larr; The State of the World</a>
+      <a href="creating.html">Creating Your Adventurer &rarr;</a>
+    </nav>
+
+    <div class="page-hero">
+      <span class="page-number">Chapter 3</span>
+      <h1 class="page-title">Adventuring Societies</h1>
+      <p class="page-subtitle">Your team, your patron, your place in the world</p>
+    </div>
+
+    <p class="flavor">
+      You know the world now &mdash; the eruption, the balance, the factions
+      pulling in every direction. The question is: where do you fit? The answer
+      is your Society. Before you build your character, you build this together.
+    </p>
+
+    <!-- ── What a Society Is ─────────────────────────────── -->
+
+    <h2 id="what-is-a-society">What Is an Adventuring Society?</h2>
+
+    <p>
+      A Society is a small, professional outfit &mdash; typically four to twelve
+      active members &mdash; chartered and funded by a patron faction to handle
+      problems that the faction can&rsquo;t or won&rsquo;t handle with its own
+      people. You are not freelancers. You are not mercenaries, though some
+      Societies behave that way. You are <em>institutional</em> &mdash; you have
+      a charter, a handler, a budget, access to faction resources, and obligations
+      that come with all of it.
+    </p>
+
+    <div class="callout callout-handler">
+      <span class="callout-label">The Handler</span>
+      <p>
+        Welcome to the Society. Don&rsquo;t die on your first job. Here&rsquo;s
+        how this works: we get paid by people with agendas. We do the work they
+        need done. Sometimes the work is clean. Sometimes it isn&rsquo;t. The
+        gear is good, the contacts are real, and the paychecks clear. What you
+        do with the moral complications is between you and whatever you pray to.
+      </p>
+    </div>
+
+    <h3 id="what-you-get">What Your Society Gives You</h3>
+
+    <p>
+      <strong>Funding.</strong> Salary, mission bonuses, and expense accounts.
+      Not lavish &mdash; enough to live on, with incentives for dangerous or
+      high-priority work.
+    </p>
+
+    <p>
+      <strong>Gear.</strong> Access to faction-supplied equipment, including items
+      that aren&rsquo;t available on the open market. The equipment your patron
+      provides tells a story about their philosophy &mdash; and it shapes how
+      you operate.
+    </p>
+
+    <p>
+      <strong>Contacts.</strong> The patron faction&rsquo;s network &mdash;
+      informants, specialists, safe houses, allied organizations. Who you can
+      call depends on who you work for.
+    </p>
+
+    <p>
+      <strong>Training.</strong> Access to faction specialists for skill
+      development. A scholar-funded Society trains with researchers. A
+      military-funded Society trains with combat instructors.
+    </p>
+
+    <p>
+      <strong>Mission briefs.</strong> You don&rsquo;t have to find your own
+      work. The patron provides assignments &mdash; ranging from routine to
+      extraordinary. Zone surveys. Escort jobs. Artifact recovery. Cult
+      infiltration. Deep Wild expeditions. The work is never boring.
+    </p>
+
+    <p>
+      <strong>Legitimacy.</strong> In a balkanized world where authority is
+      contested, a chartered Society has <em>standing</em>. Not legal authority
+      &mdash; standing. People know who you work for. Doors open or close
+      accordingly.
+    </p>
+
+    <h3 id="what-you-owe">What You Owe Your Patron</h3>
+
+    <p>
+      <strong>Mission completion.</strong> The patron assigns work. You do it.
+      Failure is tolerated &mdash; sometimes. Repeated failure is not.
+    </p>
+
+    <p>
+      <strong>Reporting.</strong> The patron expects information. What did you
+      see? Who did you encounter? What&rsquo;s the zone status? The intelligence
+      you gather is often more valuable to the patron than the mission objective
+      itself.
+    </p>
+
+    <p>
+      <strong>Discretion.</strong> The patron&rsquo;s interests are not always
+      public knowledge. A Society that talks too freely about its assignments
+      may find its charter revoked &mdash; or worse.
+    </p>
+
+    <p>
+      <strong>Loyalty &mdash; up to a point.</strong> The patron expects you to
+      prioritize their interests. But you are not puppets. A Society that blindly
+      follows every order is a tool. A Society that pushes back on bad orders is
+      a partner. The best patrons understand this. The worst ones don&rsquo;t.
+    </p>
+
+    <!-- ── The Patron Relationship ───────────────────────── -->
+
+    <h2 id="patron">The Patron Relationship</h2>
+
+    <p>
+      This is where the tension lives. The patron-Society relationship is the
+      engine of your campaign.
+    </p>
+
+    <p>
+      When the patron&rsquo;s agenda aligns with your morals, the work is clean.
+      Clear a monster den. Escort a caravan. Survey a zone shift. Everyone
+      benefits.
+    </p>
+
+    <p>
+      When it doesn&rsquo;t align, you have a choice:
+    </p>
+
+    <p>
+      <strong>Follow orders.</strong> Complete the mission as briefed. Maintain
+      the relationship. Live with the consequences &mdash; and whatever the
+      patron asked you to do, or not see.
+    </p>
+
+    <p>
+      <strong>Push back.</strong> Refuse the mission, modify the objective, or
+      report truthfully even when the patron doesn&rsquo;t want to hear it.
+      This strains the relationship. Patrons don&rsquo;t like being told no.
+      But patrons who lose their best Society over a bad order learn to ask
+      differently next time.
+    </p>
+
+    <p>
+      <strong>Go rogue.</strong> Complete the mission in a way the patron
+      didn&rsquo;t authorize &mdash; or actively sabotage it. This is the
+      nuclear option. You may save lives or expose corruption. You will also
+      burn the patron relationship, and in a world where Societies depend on
+      faction backing for gear, contacts, and legitimacy, that is not a small
+      thing.
+    </p>
+
+    <div class="callout callout-note">
+      <span class="callout-label">For the GM</span>
+      <p>
+        Use mission briefs to put the Society in situations where the right
+        thing to do and the patron&rsquo;s objective diverge. This doesn&rsquo;t
+        need to happen every session &mdash; but when it does, it should force
+        real conversation at the table. The best campaign moments come from the
+        question: <em>what do we owe the people who pay us, and what do we owe
+        ourselves?</em>
+      </p>
+    </div>
+
+    <p>
+      <strong>Changing patrons.</strong> Societies can switch factions &mdash;
+      but it&rsquo;s not casual. You bring institutional knowledge, contacts,
+      and potentially classified information with you. The old patron may view
+      this as betrayal. The new patron may view you as a flight risk. The
+      transition is dangerous, dramatic, and rich with story.
+    </p>
+
+    <!-- ── Society Archetypes ────────────────────────────── -->
+
+    <h2 id="archetypes">Society Archetypes</h2>
+
+    <p>
+      Societies take different forms depending on their patron and their mission
+      profile. Most blend elements of several archetypes. These are starting
+      points &mdash; a vocabulary for what your outfit does.
+    </p>
+
+    <table>
+      <tr>
+        <th>Archetype</th>
+        <th>Typical Patron</th>
+        <th>Core Missions</th>
+        <th>The Tension</th>
+      </tr>
+      <tr>
+        <td><strong>Cult Hunters</strong></td>
+        <td>Religious institutions</td>
+        <td>Investigate and dismantle dark magic cults, rogue casters, entities from beyond the Veil</td>
+        <td>Your patron&rsquo;s definition of &ldquo;cult&rdquo; may not match yours. Is a prayer circle a cult? Is a wild caster a threat?</td>
+      </tr>
+      <tr>
+        <td><strong>Zone Surveyors</strong></td>
+        <td>Government remnants, academic institutions</td>
+        <td>Map zone boundaries, track gradient shifts, assess stability</td>
+        <td>The data you collect will be used by your patron &mdash; for public safety, or strategic advantage? You may not get to choose.</td>
+      </tr>
+      <tr>
+        <td><strong>Asset Recovery</strong></td>
+        <td>Industrial factions, criminal networks</td>
+        <td>Retrieve artifacts, prototypes, stolen goods, or people from contested territory</td>
+        <td>The &ldquo;asset&rdquo; may not want to be recovered. The territory may belong to someone with a legitimate claim.</td>
+      </tr>
+      <tr>
+        <td><strong>Monster Teams</strong></td>
+        <td>Government agencies, community defense</td>
+        <td>Eradicate dangerous creatures &mdash; Aetheric beasts, corrupted wildlife, things from beyond the Veil</td>
+        <td>Not everything that looks like a monster is one. Your patron may want it dead for reasons beyond public safety.</td>
+      </tr>
+      <tr>
+        <td><strong>Expedition Crews</strong></td>
+        <td>Academic institutions, wealthy patrons</td>
+        <td>Venture into the Reclaimed Wild, Deep Zones, or uncharted territory</td>
+        <td>You are entering someone else&rsquo;s home. The communities you &ldquo;discover&rdquo; may not welcome being discovered.</td>
+      </tr>
+      <tr>
+        <td><strong>Border Runners</strong></td>
+        <td>Criminal networks, pragmatist factions</td>
+        <td>Move goods, people, or information across zone borders</td>
+        <td>You&rsquo;re keeping communities supplied. You&rsquo;re also keeping black markets stocked. The line depends on who drew the border.</td>
+      </tr>
+      <tr>
+        <td><strong>Fixers</strong></td>
+        <td>Any patron with messy problems</td>
+        <td>Negotiation, investigation, mediation, and the occasional application of violence</td>
+        <td>You solve problems. But every solution creates a new situation, and the patron may not have told you the whole story.</td>
+      </tr>
+    </table>
+
+    <div class="callout callout-handler">
+      <span class="callout-label">The Handler</span>
+      <p>
+        That &ldquo;Tension&rdquo; column? That&rsquo;s not decoration.
+        A Monster Team that never questions a kill order is missing the point.
+        A Cult Hunter that never wrestles with who deserves the label is playing
+        a different game. The archetype tells you what you do. The tension tells
+        you what makes it interesting.
+      </p>
+    </div>
+
+    <!-- ── Your Gear Tells a Story ───────────────────────── -->
+
+    <h2 id="gear">Your Gear Tells a Story</h2>
+
+    <p>
+      The equipment your patron provides reflects their philosophy &mdash; and
+      it shapes how you operate in the field.
+    </p>
+
+    <p>
+      <strong>Restoration-backed Societies</strong> receive the best Galvanic
+      technology their patron can supply. Prototype arc weapons. Stabilized
+      resonance coils. Zone-dampening field equipment. The gear is cutting-edge
+      and impressive. The catch: Galvanic gear shifts the balance. A Society
+      loaded with exotics cannot operate subtly in Aetheric territory &mdash;
+      your gear announces your presence through the zone gradient.
+    </p>
+
+    <p>
+      <strong>Awakening-backed Societies</strong> receive enchanted equipment
+      and magical support. Warded blades. Pre-charged spell foci. Amulets of
+      protection. The gear is often handmade and idiosyncratic. The catch:
+      magical gear radiates Aetheric residue. You&rsquo;re visible to anyone
+      with a Detect spell or an aetheric measurement device &mdash; which
+      includes most law enforcement in Galvanic zones.
+    </p>
+
+    <p>
+      <strong>Arrangement-backed Societies</strong> receive a pragmatic mix
+      &mdash; whatever works. Conventional firearms for reliability. A martial
+      weapon for every member. Maybe one or two Galvanic pieces for emergencies.
+      Maybe a ward acquired through channels that aren&rsquo;t worth asking
+      about. The catch: a mixed loadout means you&rsquo;re never optimized
+      for any single environment. Versatile but never dominant.
+    </p>
+
+    <div class="callout callout-street">
+      <span class="callout-label">The Street</span>
+      <p>
+        You can tell who a Society works for by what they carry. Galvanic
+        kit head to toe? Restoration money. Enchanted everything? Awakening.
+        Mismatched gear that looks like it was bought at three different
+        markets? Arrangement &mdash; or broke. Usually both. The smart ones
+        always have a blade. The blade doesn&rsquo;t care about your patron.
+      </p>
+    </div>
+
+    <!-- ── The Society Ecosystem ─────────────────────────── -->
+
+    <h2 id="ecosystem">The Society Ecosystem</h2>
+
+    <p>
+      You are not the only Society in town. A city of any size has a dozen
+      or more active Societies &mdash; some from the same patron, some from
+      rival factions. This density is the point. It&rsquo;s what makes the
+      ecosystem feel alive, and it&rsquo;s what gives <em>your</em> Society a
+      reason to exist.
+    </p>
+
+    <p>
+      <strong>Sibling rivals.</strong> Your patron may fund three or four
+      Societies. You compete for the best assignments, the most resources,
+      and the patron&rsquo;s favor. Which Society gets the high-profile
+      contract? Which one gets the grunt work? The rivalry is personal and
+      persistent.
+    </p>
+
+    <p>
+      <strong>Cross-faction competition.</strong> Two Societies from rival
+      factions hunting the same artifact. Three Societies from different patrons
+      converging on the same lead. Competition across faction lines is sharper
+      and more dangerous, because the stakes include the balance of power
+      between patrons.
+    </p>
+
+    <p>
+      <strong>Forced alliances.</strong> When a threat is too big for one
+      Society &mdash; a rogue automaton destroying its way toward a residential
+      district, an entity from beyond the Veil that doesn&rsquo;t care about
+      faction politics &mdash; rivals put differences aside. These forced
+      alliances are tense, productive, and where lasting relationships form.
+      Or where old grievances explode under pressure.
+    </p>
+
+    <p>
+      <strong>The watchers.</strong> Patrons sometimes task their Societies
+      with gathering intelligence on rival Societies. Everyone watches everyone.
+      The smart Societies know they&rsquo;re being watched.
+    </p>
+
+    <!-- ── Building Your Society ─────────────────────────── -->
+
+    <h2 id="building">Building Your Society</h2>
+
+    <p>
+      This is a Session Zero activity. Before anyone builds a character, the
+      table builds the Society together. The decisions you make here shape the
+      campaign &mdash; its politics, its scope, its recurring cast, and the
+      moral landscape you&rsquo;ll navigate.
+    </p>
+
+    <p>
+      Your Society needs four things:
+    </p>
+
+    <h3 id="choose-patron">1. A Patron</h3>
+
+    <p>
+      Who funds you? What do they want? What do they believe about the Aether
+      and the Engine? Use the factions from the previous chapter as a starting
+      point, or create your own. The patron choice is the single most important
+      decision for the campaign &mdash; it determines what kind of work you do,
+      what kind of gear you carry, and what kind of moral complications you face.
+    </p>
+
+    <h3 id="choose-charter">2. A Charter</h3>
+
+    <p>
+      What is the Society authorized to do? Cult hunting? Zone survey? General
+      troubleshooting? The charter defines your official scope &mdash; and the
+      interesting missions are always the ones that fall outside it.
+    </p>
+
+    <h3 id="choose-handler">3. A Handler</h3>
+
+    <p>
+      The patron&rsquo;s representative &mdash; the NPC who delivers mission
+      briefs, provides resources, and acts as your point of contact with the
+      faction. The handler is the patron made personal. A good handler is an
+      ally. A bad handler is an obstacle. Most are somewhere in between. Work
+      with your GM to sketch this person &mdash; they&rsquo;ll be a recurring
+      presence in your campaign.
+    </p>
+
+    <h3 id="choose-origin">4. A Reason to Exist</h3>
+
+    <p>
+      Why was this Society formed? What problem prompted the patron to charter
+      it? The answer is the seed of your campaign.
+    </p>
+
+    <p>
+      &ldquo;The Greycoats formed this Society because the border zone between
+      the factory district and the Aetheric quarter is becoming ungovernable&rdquo;
+      is a campaign premise. &ldquo;The Scholars formed this Society because the
+      last one they sent into the Deep Wild didn&rsquo;t come back&rdquo; is a
+      different campaign premise. Both start the same way: four people sitting
+      around a table, deciding what kind of trouble they&rsquo;re willing to
+      walk into.
+    </p>
+
+    <div class="callout callout-note">
+      <span class="callout-label">For the GM</span>
+      <p>
+        Building the Society together is more valuable than individual backstories.
+        It answers the question &ldquo;why are we together?&rdquo; before anyone
+        asks it. The patron gives you a faction to play. The charter gives you
+        scope. The handler gives you a recurring NPC. And the origin story gives
+        every member a shared history before play begins. Once the Society exists,
+        character creation becomes a question of <em>who am I within this
+        group?</em> &mdash; which is exactly the right question.
+      </p>
+    </div>
+
+    <div class="callout callout-handler">
+      <span class="callout-label">The Handler</span>
+      <p>
+        You&rsquo;ve got a patron. You&rsquo;ve got a charter. You know who
+        pays the bills and what they expect. Good. Now you need to figure out
+        who <em>you</em> are &mdash; what you bring to this outfit, what you&rsquo;re
+        good at, and what happens when you push your luck too far. That&rsquo;s
+        the next chapter. Go build your adventurer.
+      </p>
+    </div>
+
+    <nav class="page-nav">
+      <a href="state-of-the-world.html" class="page-nav-link">
+        <span class="page-nav-direction">&larr; Previous</span>
+        <span class="page-nav-title">The State of the World</span>
+      </a>
+      <a href="creating.html" class="page-nav-link">
+        <span class="page-nav-direction">Next &rarr;</span>
+        <span class="page-nav-title">Creating Your Adventurer</span>
+      </a>
+    </nav>
+  </div>
+  <footer class="site-footer"><p>Adventure RPG &mdash; Playtest Draft</p></footer>
+</main>
+<script src="js/main.js"></script>
+</body>
+</html>
