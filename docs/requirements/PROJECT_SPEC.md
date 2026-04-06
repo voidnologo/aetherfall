@@ -76,22 +76,25 @@ The world sits on a sliding scale between two forces. **The Aether** — raw mag
 
 ### 2.5 Adventuring Societies
 
-The primary organizational structure for player characters. Societies provide:
-- Resources and funding
-- Training and mentorship
-- Gear and equipment
-- Support personnel and contacts
-- Missions and purpose
+The primary organizational structure for player characters. A Society is a small professional outfit (4-12 members) chartered and funded by a patron faction. Societies provide funding, gear, contacts, training, mission briefs, and legitimacy. In return, they complete missions, report intelligence, and maintain discretion.
 
-Societies are drawn from various **factions** and serve different masters:
-- Cult hunters for religious organizations (e.g., Vatican-equivalent)
-- Monster eradication teams for government agencies
-- Artifact recovery expeditions for powerful corporations
-- And others (TBD — further faction design needed)
+The patron relationship is the primary engine of campaign drama — when the patron's agenda conflicts with the Society's morals, players choose to follow orders, push back, or go rogue.
 
-### 2.6 Factions (To Be Developed)
+Seven Society archetypes: Cult Hunters, Zone Surveyors, Asset Recovery, Monster Teams, Expedition Crews, Border Runners, and Fixers — each with built-in dramatic tension.
 
-A handful of distinct factions that drive the world's politics and conflicts. Each provides different types of Adventuring Societies with different missions, resources, and moral entanglements. Specific factions to be designed in a future session.
+Multiple Societies per faction is the norm. A city may have a dozen or more active Societies from various patrons, creating intra-faction rivalry alongside cross-faction competition.
+
+**Societies get their own web chapter** — separate from the world/lore chapter. Flow: world chapter → Societies chapter (Session Zero, patron selection, charter) → character creation chapter.
+
+See [WORLD_DESIGN.md §6](WORLD_DESIGN.md) for full design.
+
+### 2.6 Factions
+
+The world is balkanized — fragmented into local power centers, not organized into nation-states. Three meta-factions represent ideological currents (not organizations): **Restoration** (push back the Aether, restore the old order), **Awakening** (embrace the Aether as revelation), and **Arrangement** (both forces are here to stay, control the balance). Factions are purely narrative — no mechanical reputation system.
+
+Eight sample local/regional factions designed to interlock: Ashworth Foundry Collective, Veilwright Quarter, Lamplighter Syndicate, Thornfield Communion, Greycoat Authority, Gradient Scholars, Sootborn, and Ironveil Circle.
+
+See [WORLD_DESIGN.md §4-5](WORLD_DESIGN.md) for full design.
 
 ---
 

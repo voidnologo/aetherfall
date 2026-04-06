@@ -676,26 +676,36 @@ These are drafts — not final web chapter text, but demonstrations of the targe
 
 ---
 
-## 9. Open Questions
+## 9. Resolved Questions
 
-Questions accumulated during the design process. These should be resolved before the web chapter is written.
+Questions accumulated during the design process. All resolved in Session 14.
 
-1. **Society chapter placement.** Section 6 bridges world-setting and player-facing rules. The web chapter may need the Society content as its own chapter rather than folded into the world chapter — it's a different *kind* of content (decisions the table makes, not lore the table absorbs). Resolve during web chapter planning.
+1. **Society chapter placement.** ~~Resolve during web chapter planning.~~
+   **RESOLVED:** Societies get their own chapter, separate from the world/lore chapter. The flow is: world and lore chapter → "What is an Adventuring Society?" chapter (Session Zero group project, patron selection, charter) → character creation chapter (now that you know your Society, make your character). This is a structural decision for the web rulebook — Societies bridge setting and rules.
 
-2. **Faction count for the web chapter.** This design doc has eight sample factions. The web chapter may want fewer (to avoid overwhelming new readers) or may present them differently (e.g., three detailed examples plus a "build your own" framework). Decide during web conversion.
+2. **Faction count for the web chapter.** ~~Decide during web conversion.~~
+   **RESOLVED:** 3-4 factions in full detail, then the remaining factions as shorter summaries. Present it so the detailed ones don't seem more important — they're just showing the depth, and once the reader has the feel, the summaries are enough to build from. All eight should appear, not all at the same depth.
 
-3. **Prophet mechanics.** Prophets are a significant narrative element (§2.4, §3.4, §4.1-4.3). Do they need mechanical support — rules for followers, settlement growth, zone maintenance by sustained ritual? Or is this purely GM-adjudicated narrative? Consider during future design sessions.
+3. **Prophet mechanics.** ~~Consider during future design sessions.~~
+   **RESOLVED:** No mechanics. Prophets are narrative elements only. GMs can derive everything they need for running prophet-led communities from existing rules (zone mechanics, casting, NPC adjudication). No new subsystems.
 
-4. **Sootborn sensitivity.** The Sootborn's unusual zone sensitivity (§5.7) doesn't fit either the casting or Galvanic framework. Is this a third thing? A natural human response to living in the gradient? A plot hook that never needs mechanical resolution? Flag for future design discussion.
+4. **Sootborn sensitivity.** ~~Flag for future design discussion.~~
+   **RESOLVED:** Not a mechanical system. The Sootborn sensitivity is a narrative signal that the world contains more than fits in the rulebook — not everything that happens is player-playable. It's an invitation to GMs to add their own cool flavors and weirdness. No mechanics needed.
 
-5. **Magitech hybrids.** DESIGN_PHILOSOPHY.md §2.3 hints at "cannibalizing" one force using the other. Is hybrid technology possible in the setting? Is it inherently corrupting? Is it what the Archipelago has achieved? This is a major setting question that this doc deliberately does not answer. Resolve only if it becomes mechanically necessary.
+5. **Magitech hybrids.** ~~Resolve only if it becomes mechanically necessary.~~
+   **RESOLVED:** Hybrids are possible in the setting but are not player-accessible knowledge. Magitech is a corruption (or advancement) that can drive a campaign, but it exists at the level of rumors of rumors. Not mechanically defined in this book. Leaves room for future supplements or campaign-level discoveries.
 
-6. **The voice behind the Veil.** Mother Thorn (§5.4) hears something. The Deep Wild structures (§5.6) respond to human presence. Are these connected? Is there something conscious beyond the Veil? This is a DESIGN_PHILOSOPHY.md §1.4 (Invisible War) question — the answer should probably remain unknown, but the *consistency* of the hints should be designed. Coordinate with cosmology doc.
+6. **The voice behind the Veil.** ~~Coordinate with cosmology doc.~~
+   **RESOLVED:** Yes — there are forces and powers behind the Veil and the Engine. This opens the door for a future "behind the scenes" expansion (not covered in this book). The design intent is to leave room for: magical forces, ghosts in the machine, American Gods-style deities and powers. The hints in the current doc (Mother Thorn, Deep Wild structures) should be consistent but never confirmed. The Invisible War (DESIGN_PHILOSOPHY.md §1.4) remains designer-facing only.
 
-7. **Zone mechanics for settlements.** The Thornfield Communion (§5.4) maintains its zone through sustained ritual. The Ashworth Collective (§5.1) intensifies its zone through industrial output. Should there be lightweight rules for how factions maintain and expand zones, or is this purely narrative? Consider if GM tools are built.
+7. **Zone mechanics for settlements.** ~~Consider if GM tools are built.~~
+   **RESOLVED:** Purely narrative. Zone manipulation mechanics already exist at the individual level. GMs and tables can scale those up and develop their own implementations for settlement-level zone maintenance. The game's focus is on being adventurers in a Society, not building infrastructure simulations.
 
-8. **Multiple voices production.** The web chapter's four-voice format (§8.2) is rich but complex to produce. How will voice transitions be styled in HTML? Sidebars? Colored callouts? Inline annotations? Resolve during web design phase.
+8. **Multiple voices production.** ~~Resolve during web design phase.~~
+   **RESOLVED:** Sidebars and inline annotations. The four voices are flavor text, not main content. The main text should read similarly to the WORLD_DESIGN document — structured, with GM Notes sections — but more narrative and player-focused. The voices add sidebars that make the chapter feel interactive, personal, and like a window into how people in the world actually see the world.
 
-9. **Naming conventions.** This doc uses evocative English names (Ashworth, Greycoat, Thornfield, Lamplighter). Are these the right register for the setting? Should faction names draw from different linguistic traditions to reflect a secondary world that isn't Anglophone? This is a WRITING_STYLE.md question. Resolve before web chapter.
+9. **Naming conventions.** ~~Resolve before web chapter.~~
+   **RESOLVED:** The neo-Victorian, steampunk English names (Ashworth, Greycoat, Thornfield, Lamplighter) fit well and should be kept. Some "exotic" names drawn from other traditions (Orient, South America, etc.) are welcome for variety — the pre-eruption world was global in the 1920s. But the default register should feel North American / USA-adjacent, as that's where the current audience is based.
 
-10. **How much history in the web chapter?** Section 2 provides a full Before/Eruption/Counter-Response/Now arc. The web chapter may want less history and more present-tense "here's what the world is like now." The contributors would naturally talk more about the present than the past. Decide during web conversion.
+10. **How much history in the web chapter?** ~~Decide during web conversion.~~
+    **RESOLVED:** Some history is needed to ground the current world — it sets the tone and scope of technology, knowledge, and power dynamics. But the present is the primary focus. History explains *why* the current world works the way it does, not as deep lore for its own sake. Keep it proportional — enough to establish context, then move to the present.
