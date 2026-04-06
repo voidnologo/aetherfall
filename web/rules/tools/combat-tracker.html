@@ -191,26 +191,21 @@
   /* ── Timeline ──────────────────────────────────── */
 
   .timeline-wrapper {
-    overflow-x: auto;
     padding-bottom: 1rem;
   }
 
-  .timeline-wrapper::-webkit-scrollbar { height: 6px; }
-  .timeline-wrapper::-webkit-scrollbar-track { background: var(--bg); }
-  .timeline-wrapper::-webkit-scrollbar-thumb { background: var(--bg-surface); border-radius: 3px; }
-
   .timeline {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
     gap: 0;
-    min-width: max-content;
+    border-left: 1px solid var(--glass-border);
+    border-top: 1px solid var(--glass-border);
   }
 
   .tick {
-    width: 64px;
-    min-width: 64px;
     border-right: 1px solid var(--glass-border);
+    border-bottom: 1px solid var(--glass-border);
     position: relative;
-    flex-shrink: 0;
   }
 
   .tick-number {
@@ -218,7 +213,7 @@
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.75rem;
     color: var(--text-dim);
-    padding: 0.4rem 0;
+    padding: 0.3rem 0;
     border-bottom: 1px solid var(--glass-border);
     background: var(--bg-raised);
   }
@@ -235,8 +230,8 @@
   }
 
   .tick-slots {
-    min-height: 120px;
-    padding: 4px 2px;
+    min-height: 72px;
+    padding: 4px;
     display: flex;
     flex-direction: column;
     gap: 3px;
@@ -262,10 +257,10 @@
   .token {
     display: flex;
     align-items: center;
-    gap: 3px;
-    padding: 3px 5px;
+    gap: 4px;
+    padding: 4px 6px;
     border-radius: 3px;
-    font-size: 0.7rem;
+    font-size: 0.78rem;
     font-family: 'JetBrains Mono', monospace;
     cursor: grab;
     border: 1px solid transparent;
@@ -293,6 +288,13 @@
 
   .token.pc { border-color: rgba(61, 200, 224, 0.3); background: rgba(61, 200, 224, 0.08); }
   .token.npc { border-color: rgba(196, 92, 62, 0.3); background: rgba(196, 92, 62, 0.08); }
+
+  .token.footprint {
+    opacity: 0.35;
+    cursor: default;
+    border-style: dashed;
+    pointer-events: none;
+  }
 
   /* ── Unplaced tokens ───────────────────────────── */
 
@@ -376,18 +378,10 @@
 
   let currentCount = 0;
   let combatants = [];
+  let footprints = []; // { name, color, type, count }
   let nextId = 1;
   let addType = 'pc';
   let draggedId = null;
-
-  function trackEnd() {
-    // Show at least WINDOW_SIZE counts ahead, or further if tokens are placed beyond
-    let maxToken = currentCount;
-    combatants.forEach(c => {
-      if (c.count !== null && c.count > maxToken) maxToken = c.count;
-    });
-    return Math.max(currentCount + WINDOW_SIZE, maxToken + 10);
-  }
 
   function getInitials(name) {
     const parts = name.trim().split(/\s+/);
@@ -398,6 +392,14 @@
   function getColor(type, index) {
     const colors = type === 'pc' ? TOKEN_COLORS_PC : TOKEN_COLORS_NPC;
     return colors[index % colors.length];
+  }
+
+  function trackEnd() {
+    let maxToken = currentCount;
+    combatants.forEach(c => {
+      if (c.count !== null && c.count > maxToken) maxToken = c.count;
+    });
+    return Math.max(currentCount + WINDOW_SIZE, maxToken + 10);
   }
 
   function buildTimeline() {
@@ -417,13 +419,25 @@
       tl.appendChild(tick);
     }
     renderTokens();
+    scrollToCount(currentCount);
   }
 
   function renderTokens() {
     // Clear all token elements from slots and unplaced
     document.querySelectorAll('.token').forEach(el => el.remove());
 
-    // Place tokens on timeline
+    // Render footprints (dimmed, in past counts)
+    footprints.forEach(fp => {
+      const slot = document.querySelector(`.tick-slots[data-count="${fp.count}"]`);
+      if (slot) {
+        const el = document.createElement('div');
+        el.className = 'token ' + fp.type + ' footprint';
+        el.innerHTML = `<span class="token-dot" style="background:${fp.color}"></span><span class="token-name">${fp.name}</span>`;
+        slot.appendChild(el);
+      }
+    });
+
+    // Place live tokens on timeline or unplaced area
     combatants.forEach(c => {
       const tokenEl = createTokenEl(c);
       if (c.count !== null && c.count >= 0) {
@@ -487,6 +501,15 @@
     if (draggedId === null) return;
     const c = combatants.find(x => x.id === draggedId);
     if (c) {
+      // Leave a footprint if moving forward from a past or current count
+      if (c.count !== null && c.count <= currentCount && count > c.count) {
+        footprints.push({
+          name: c.name,
+          color: c.color,
+          type: c.type,
+          count: c.count
+        });
+      }
       c.count = count;
       renderTokens();
     }
@@ -539,7 +562,6 @@
     currentCount++;
     document.getElementById('current-count').textContent = currentCount;
     buildTimeline();
-    scrollToCount(currentCount);
   };
 
   window.advanceToNext = function() {
@@ -553,13 +575,13 @@
       currentCount = nextCount;
       document.getElementById('current-count').textContent = currentCount;
       buildTimeline();
-      scrollToCount(currentCount);
     }
   };
 
   window.resetTrack = function() {
     currentCount = 0;
     combatants.forEach(c => { c.count = null; });
+    footprints = [];
     document.getElementById('current-count').textContent = 0;
     buildTimeline();
   };
@@ -567,6 +589,7 @@
   window.clearAll = function() {
     currentCount = 0;
     combatants = [];
+    footprints = [];
     nextId = 1;
     document.getElementById('current-count').textContent = 0;
     renderRoster();
@@ -574,10 +597,10 @@
   };
 
   function scrollToCount(count) {
-    const wrapper = document.getElementById('timeline-wrapper');
-    const tickWidth = 65; // 64px + 1px border
-    const targetScroll = Math.max(0, (count * tickWidth) - (wrapper.clientWidth / 3));
-    wrapper.scrollTo({ left: targetScroll, behavior: 'smooth' });
+    const tick = document.querySelector(`.tick-slots[data-count="${count}"]`);
+    if (tick) {
+      tick.closest('.tick').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
   }
 
   // Init
