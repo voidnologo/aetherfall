@@ -1,10 +1,12 @@
 # Pending Tasks
 
 ## Next Up
-- [ ] Downloadable character sheet (PDF or fillable)
 - [ ] Visual polish and iteration on web rulebook based on feedback
+- [ ] Character sheet art / watermarks
+- [ ] Save/load character data in builder (localStorage)
 
 ## Backlog
+- [ ] Builder: validate creation-time skill cap (level 3 max at creation)
 - [ ] Multiplayer sync for GM tools (WebRTC peer-to-peer?) — stretch goal
 - [ ] Additional GM tools: NPC generator, mission brief generator, Society generator
 - [ ] Design "Push Timing" mechanic — rush any timed action by 1-5 counts with escalating failure consequences
