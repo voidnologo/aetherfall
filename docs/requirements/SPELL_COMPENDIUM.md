@@ -537,6 +537,39 @@ Cut a caster's connection to mana flows. Temporarily strip magical ability. Oppo
 | **Spectacular** | 24 | Complete severance — target cannot cast for 1d4 days. Mana connection utterly silenced. Magical items on target's person lose attunement for the same duration. Described as the worst experience of a caster's life. Other casters nearby feel the severance as a shockwave of absence. |
 | *Misfire* | 6 | Rebounds — caster severs their own connection. Cannot cast for 1d4 hours, all active effects collapse. 1d4 damage from psychic shock. |
 
+### 6.6 Enchant
+*Complexity: 4 — Casting Time: Ritual (2 hours minimum)*
+
+Bond Aether permanently into a prepared object, transforming it into a magical artifact. The caster must have access to the **source spell** for the desired enchantment — scholarly casters must know the specific spell, wild casters have access through their school. This means an enchanter needs at minimum two schools: Ley Weaving (for Enchant) and the school containing the source spell.
+
+**Requirements:** The object must be **handcrafted** — forged, carved, woven, or shaped by human hands. Manufactured objects (factory-produced, mass-stamped, mechanically assembled) cannot hold an enchantment; the Aether bonds with accumulated human craft and understanding, not industrial process. The caster must have Craft skill at level 2+ to prepare the vessel. One enchantment per object — the Aether can only bond once.
+
+**Process:** (1) Prepare the vessel (Craft check — failure wastes materials), (2) Cast Enchant (roll against casting target — tier determines enchantment power), (3) Backlash check (normal rules — on backlash, d100: 50 or under destroys the object).
+
+Scholarly casters may choose a lower tier than achieved. Wild casters get what they get.
+
+| Tier | Exhaust | Result | Magical Reliability | Ritual Time |
+|------|---------|--------|-------------------|-------------|
+| **Weak** | 6 | Mystical tag applied at Weak level. The enchantment is functional but modest — a faint magical signature, a subtle effect. The object hums faintly when held. Serviceable work from a competent enchanter. | 80 | 2 hours |
+| **Standard** | 10 | Mystical tag applied at Standard level. A proper enchantment — clearly magical, reliably powerful. The object glows faintly in dim light and feels warm to the touch. Respectable work that most casters would be proud of. | 85 | 4 hours |
+| **Strong** | 16 | Mystical tag applied at Strong level. An impressive enchantment — the object radiates magical presence. Other casters can feel it from across a room. A weapon that reacts to the wielder's intent. This is master-level work in a discipline barely a generation old. | 90 | 1 day |
+| **Spectacular** | 24 | Mystical tag applied at Spectacular level. A legendary enchantment — the object has its own presence, almost its own personality. It *wants* to be used. Other casters describe being near it as standing next to a bonfire. This is the best work anyone in the world can do right now, and the caster will be physically wrecked for days afterward. | 95 | 2–3 days |
+| *Misfire* | 6 | The Aether rejects the bond. The object is ruined — warped, cracked, or scorched beyond repair. The caster takes 1d6 damage from magical backlash as the unbound energy discharges through them. If re-enchanting an existing artifact, the previous enchantment is permanently destroyed. |  |  |
+
+**Available Mystical Tags by Source Spell:**
+
+| Mystical Tag | Source Spell | School |
+|---|---|---|
+| Thundering | Force or Kinesis | Aetheric Manipulation |
+| Elemental [type] | Elemental Manipulation | Aetheric Manipulation |
+| Keen | Alter Property | Transmutation |
+| Homing | Foresight | Divination |
+| Venomous | Wither | Vivimancy |
+| Shielding | Shield | Warding |
+| Silent | Dampen | Ley Weaving |
+
+See [MAGICAL_ARTIFACTS.md](MAGICAL_ARTIFACTS.md) §2.1 for full tag effect tables at each tier, Magical Reliability rules, disruption severity, attunement, and usage in play. GMs and players can propose additional tags based on other spell concepts.
+
 ---
 
 ## Appendix: Complexity & Casting Time Reference
@@ -580,3 +613,4 @@ Cut a caster's connection to mana flows. Temporarily strip magical ability. Oppo
 | Surge | Ley Weaving | 3 | 6ct | Flooding area with mana |
 | Attune | Ley Weaving | 2 | 5ct | Harmonizing — meditative |
 | Sever | Ley Weaving | 4 | 8ct | Cutting mana connection — major commitment |
+| Enchant | Ley Weaving | 4 | Ritual (2 hours+) | Bonding Aether into objects — not combat-castable |

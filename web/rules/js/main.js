@@ -21,10 +21,11 @@
     { id: 'world-between', file: 'world-between.html',      title: 'The World Between',            num: '10', theme: 'split' },
     { id: 'combat',        file: 'combat.html',             title: 'When Violence Finds You',      num: '11', theme: 'galvanic' },
     { id: 'equipment',     file: 'equipment.html',          title: 'Arms & Equipment',             num: '12', theme: 'galvanic' },
-    { id: 'running',       file: 'running-the-game.html',   title: 'Running the Game',             num: '13', theme: 'neutral' },
-    { id: 'reference',     file: 'reference.html',          title: 'Quick Reference',              num: '14', theme: 'neutral' },
-    { id: 'tables',        file: 'tables.html',             title: 'Table Index',                  num: '15', theme: 'neutral' },
-    { id: 'gm-tools',     file: 'gm-tools.html',           title: 'GM Tools',                     num: '16', theme: 'neutral' },
+    { id: 'artifacts',     file: 'artifacts.html',          title: 'Artifacts & Enchantments',     num: '13', theme: 'aether' },
+    { id: 'running',       file: 'running-the-game.html',   title: 'Running the Game',             num: '14', theme: 'neutral' },
+    { id: 'reference',     file: 'reference.html',          title: 'Quick Reference',              num: '15', theme: 'neutral' },
+    { id: 'tables',        file: 'tables.html',             title: 'Table Index',                  num: '16', theme: 'neutral' },
+    { id: 'gm-tools',     file: 'gm-tools.html',           title: 'GM Tools',                     num: '17', theme: 'neutral' },
   ];
 
   // ── Detect Current Page ────────────────────────────────────

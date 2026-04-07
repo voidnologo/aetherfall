@@ -35,7 +35,7 @@
     <div class="page-hero">
       <span class="page-number">Chapter 09</span>
       <h1 class="page-title">The Grimoire</h1>
-      <p class="page-subtitle">Thirty-seven spells across six schools &mdash; every tool a caster can wield</p>
+      <p class="page-subtitle">Thirty-eight spells across six schools &mdash; every tool a caster can wield</p>
     </div>
 
     <p class="flavor">
@@ -186,6 +186,7 @@
       <tr><td><a href="#attune">Attune</a></td><td>5ct</td><td>Harmonize with a magical source or artifact &mdash; understand its nature, tap its power</td></tr>
       <tr><td><a href="#surge">Surge</a></td><td>6ct</td><td>Flood an area with raw mana &mdash; amplifies all magic, friend and foe alike</td></tr>
       <tr><td><a href="#sever">Sever</a></td><td>8ct</td><td>Cut a caster&rsquo;s connection to mana flows &mdash; the most feared spell in the game</td></tr>
+      <tr><td><a href="#enchant">Enchant</a></td><td>Ritual (2h+)</td><td>Bond Aether permanently into an object &mdash; create a magical artifact</td></tr>
     </table>
 
     <h3 id="casting-time-reference" data-toc="Casting Times">Casting Time Reference</h3>
@@ -200,13 +201,14 @@
       <tr><td>Ritual (10 min)</td><td>Scry</td></tr>
       <tr><td>Ritual (30 min)</td><td>Shape Flesh, Circle</td></tr>
       <tr><td>Ritual (1 hour)</td><td>Transmute</td></tr>
+      <tr><td>Ritual (2 hours+)</td><td>Enchant</td></tr>
     </table>
 
     <hr class="section-divider">
 
     <h3 id="spell-reference" data-toc="Spell Reference">Spell Reference</h3>
 
-    <p>Full descriptions for all 37 spells, listed alphabetically. Each entry includes tier effects, exhaustion costs, and misfire consequences.</p>
+    <p>Full descriptions for all 38 spells, listed alphabetically. Each entry includes tier effects, exhaustion costs, and misfire consequences.</p>
 
     <h4 id="alter-property" class="spell-title">Alter Property <span class="spell-school">Transmutation</span></h4>
     <p class="spell-meta"><em>Casting Time: 5ct</em></p>
@@ -399,6 +401,20 @@
       <tr><td><strong>Spectacular</strong></td><td>18</td><td>Triple or quarter size &mdash; person becomes giant (15+ feet, +3 PP, -3 PC, can lift vehicles) or miniature (inches tall, +3 PC, -3 PP). Dramatic enough to reshape tactical situations entirely. Lasts several hours. Agonizing for living targets &mdash; risk of 1d4 physical damage from the stress of transformation.</td></tr>
       <tr><td><em>Misfire</em></td><td>4</td><td>Random body parts change size inconsistently &mdash; one arm swells, a leg shrinks, head enlarges. -10% to all physical rolls for 1d4 hours as the caster struggles with a body that doesn't fit together. Deeply uncomfortable and grotesque-looking.</td></tr>
     </table>
+
+    <h4 id="enchant" class="spell-title">Enchant <span class="spell-school">Ley Weaving</span></h4>
+    <p class="spell-meta"><em>Casting Time: Ritual (2 hours minimum)</em></p>
+    <p>Bond Aether permanently into a prepared object, transforming it into a magical artifact. Any handcrafted object can be enchanted &mdash; weapons, armor, tools, jewelry, locks, instruments. Manufactured objects (factory-produced, mass-stamped) cannot hold an enchantment; the Aether bonds with accumulated human craft, not industrial process. The caster must have access to the <strong>source spell</strong> for the desired enchantment (scholarly casters must know the specific spell; wild casters have access through their school). Requires Craft skill 2+. One enchantment per object.</p>
+    <p><strong>Process:</strong> (1) Prepare the vessel &mdash; Craft check, failure wastes materials. (2) Cast Enchant &mdash; tier determines the mystical tag&rsquo;s power level and Magical Reliability, locked permanently. (3) Backlash check &mdash; on backlash, d100: 50 or under destroys the object. Scholarly casters may choose a lower tier; wild casters get what they get.</p>
+    <table>
+      <tr><th>Tier</th><th>Exhaust</th><th>Effect</th></tr>
+      <tr><td><strong>Weak</strong></td><td>6</td><td>Mystical tag applied at Weak level. Magical Reliability 80. Ritual takes 2 hours. A functional but modest enchantment &mdash; faint magical signature, subtle effect. The object hums faintly when held. Serviceable work from a competent enchanter.</td></tr>
+      <tr><td><strong>Standard</strong></td><td>10</td><td>Mystical tag applied at Standard level. Magical Reliability 85. Ritual takes 4 hours. A proper enchantment &mdash; clearly magical, reliably powerful. The object glows faintly in dim light and feels warm to the touch.</td></tr>
+      <tr><td><strong>Strong</strong></td><td>16</td><td>Mystical tag applied at Strong level. Magical Reliability 90. Ritual takes 1 day. An impressive enchantment &mdash; the object radiates magical presence. Other casters can feel it from across a room. Master-level work in a discipline barely a generation old.</td></tr>
+      <tr><td><strong>Spectacular</strong></td><td>24</td><td>Mystical tag applied at Spectacular level. Magical Reliability 95. Ritual takes 2&ndash;3 days. A legendary enchantment &mdash; the object has its own presence, almost its own personality. It <em>wants</em> to be used. Other casters describe being near it as standing next to a bonfire. The caster will be physically wrecked for days.</td></tr>
+      <tr><td><em>Misfire</em></td><td>6</td><td>The Aether rejects the bond. The object is ruined &mdash; warped, cracked, or scorched beyond repair. Caster takes 1d6 damage. If re-enchanting an existing artifact, the previous enchantment is permanently destroyed.</td></tr>
+    </table>
+    <p><strong>Source spells for common mystical tags:</strong> Thundering (Force/Kinesis), Elemental (Elemental Manipulation), Keen (Alter Property), Homing (Foresight), Venomous (Wither), Shielding (Shield), Silent (Dampen). Any spell concept that can plausibly be bonded into an object is a candidate. See <a href="artifacts.html#mystical-tags">Artifacts &amp; Enchantments</a> for full tag effect tables and non-weapon artifact guidelines.</p>
 
     <h4 id="force" class="spell-title">Force <span class="spell-school">Aetheric Manipulation</span></h4>
     <p class="spell-meta"><em>Casting Time: 2ct</em></p>

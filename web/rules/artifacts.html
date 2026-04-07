@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="aether">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artifacts &amp; Enchantments — Aetherfall RPG</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="atmosphere"><canvas id="particle-canvas"></canvas><div class="mist mist-1"></div><div class="mist mist-2"></div><div class="mist mist-3"></div></div>
+<div id="page-transition" class="page-transition"></div>
+<div class="sidebar-overlay"></div>
+<aside class="sidebar">
+  <div class="sidebar-brand"><div class="sidebar-title">Aetherfall</div><div class="sidebar-subtitle">Rules Reference</div></div>
+  <nav class="sidebar-nav"></nav>
+  <div class="sidebar-footer"><a href="../">← Back to Aetherfall</a></div>
+</aside>
+<header class="site-header">
+  <button class="header-toggle" aria-label="Toggle navigation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+  <span class="header-logo">Aetherfall <span>RPG</span></span>
+  <span class="header-separator"></span>
+  <span class="header-chapter">Chapter 13 &mdash; Artifacts &amp; Enchantments</span>
+</header>
+<main class="main-content">
+  <div class="page-content">
+
+    <nav class="page-nav-compact">
+      <a href="equipment.html">&larr; Arms &amp; Equipment</a>
+      <a href="running-the-game.html">Running the Game &rarr;</a>
+    </nav>
+
+    <div class="page-hero">
+      <span class="page-number">Chapter 13</span>
+      <h1 class="page-title">Artifacts &amp; Enchantments</h1>
+      <p class="page-subtitle">Enchanted blades, fading wards, and brewed miracles &mdash; magic made material</p>
+    </div>
+
+    <p class="flavor">
+      A revolver is a machine. It fires the same way every time. An enchanted blade is a
+      conversation &mdash; between steel and Aether, between the wielder and something old
+      and strange. Sometimes the blade listens. Sometimes it has its own ideas.
+    </p>
+
+    <div class="callout callout-believer">
+      <span class="callout-label">The Believer</span>
+      <p>An artifact is not a tool with a spell bolted on. It is an object that has been
+      <em>changed</em> &mdash; the Aether woven into its grain, its edge, its weight. A truly
+      enchanted blade is no more &ldquo;a sword with magic&rdquo; than a living tree is
+      &ldquo;wood with sap.&rdquo; The magic is the thing. The steel just gives it shape.</p>
+    </div>
+
+    <!-- ── The Fundamental Divide ─────────────────────────────── -->
+
+    <h3 id="the-divide">The Fundamental Divide</h3>
+
+    <p>
+      Not all magical objects are created equal. The difference between an enchanted artifact
+      and a ward or potion is not one of degree &mdash; it is one of <em>kind</em>.
+    </p>
+
+    <table>
+      <tr><th></th><th>Artifacts</th><th>Wards &amp; Potions</th></tr>
+      <tr>
+        <td><strong>Nature</strong></td>
+        <td>Aether bonded into the object &mdash; it <em>becomes</em> magical</td>
+        <td>Aether stored in a vessel &mdash; energy that slowly leaks out</td>
+      </tr>
+      <tr>
+        <td><strong>Duration</strong></td>
+        <td>Permanent</td>
+        <td>Decays over time</td>
+      </tr>
+      <tr>
+        <td><strong>Rarity</strong></td>
+        <td>Exceptionally rare</td>
+        <td>Uncommon but achievable</td>
+      </tr>
+    </table>
+
+    <p>
+      An enchanted sword is not a sword with a spell stored inside it. The Aether has been
+      bonded into the blade&rsquo;s nature &mdash; the steel <em>is</em> magical. A ward or
+      potion is merely bathed in Aether &mdash; energy poured into a vessel that slowly leaks
+      away. One is a transformation. The other is a battery.
+    </p>
+
+    <div class="callout callout-note">
+      <span class="callout-label">Design Note</span>
+      <p>If the artifact rules feel familiar, they should. Enchanted items use the same
+      reliability-and-disruption framework as <a href="equipment.html#firearms">firearms</a>
+      and <a href="equipment.html#galvanic">Galvanic weapons</a>, with the Aetheric balance
+      working in the opposite direction. Where technology fears magic, artifacts fear the
+      Engine. If you know one system, you know both.</p>
+    </div>
+
+    <!-- ── Enchanted Artifacts ────────────────────────────────── -->
+
+    <h3 id="enchanted-artifacts">Enchanted Artifacts</h3>
+
+    <p>
+      An enchanted artifact is a mundane object that has been permanently imbued with a magical
+      property through the <strong>Enchant</strong> spell (Ley Weaving, Ritual). The object
+      retains its normal function and gains a <strong>mystical tag</strong> &mdash; a magical
+      property that triggers on use. A sword, a shield, a lock,
+      a healer&rsquo;s scalpel, a singer&rsquo;s lute &mdash; any handcrafted object can
+      become an artifact.
+    </p>
+
+    <h4>Handcrafted, Not Manufactured</h4>
+
+    <p>
+      The Aether bonds with objects that have <strong>deep roots in human understanding</strong>
+      &mdash; things that people have made by hand, used, trusted, and believed in for
+      centuries. A sword is ancient. A hammer is ancient. A ring, a cloak clasp, a mortar
+      and pestle &mdash; these are objects humanity has shaped and understood for millennia.
+      Collective belief has soaked into their very concept, and the Aether responds to that
+      accumulated resonance.
+    </p>
+
+    <p>
+      Manufactured objects &mdash; factory-produced, mechanically complex, assembled from
+      interchangeable parts &mdash; lack those roots. People use a revolver without truly
+      understanding propellant chemistry or barrel metallurgy. They trust the
+      <em>mechanism</em> without grasping the <em>nature</em>. The Aether finds nothing to
+      grip. This is the same principle that makes complex technology more vulnerable to
+      Aetheric disruption &mdash; the newer and more manufactured a thing is, the less the
+      world&rsquo;s primal forces recognize it.
+    </p>
+
+    <p>
+      A sword forged last week by a skilled smith can be enchanted &mdash; the act of
+      hand-forging connects it to the same deep tradition of shaped steel that humans have
+      known for thousands of years. A factory-stamped blade from an industrial press cannot
+      &mdash; it was <em>produced</em>, not <em>made</em>.
+    </p>
+
+    <p>
+      <strong>One enchantment per item.</strong> The Aether bonds once. An object carries one
+      mystical tag. This keeps artifacts distinct &mdash; &ldquo;the Thundering blade&rdquo;
+      is a named thing, not a stack of bonuses. &ldquo;The Whispering Lock&rdquo; is a
+      specific artifact, not a lock with three spells bolted on.
+    </p>
+
+    <div class="callout callout-handler">
+      <span class="callout-label">The Handler</span>
+      <p>An enchanted blade is the magical answer to a good revolver. Reliable in a Wild Zone
+      where your guns jam. Dangerous in a Galvanic factory where the tech drowns the magic.
+      A smart operative carries both &mdash; and knows when to reach for which.</p>
+    </div>
+
+    <!-- ── Using an Enchanted Item ───────────────────────────── -->
+
+    <h3 id="using-enchanted">Using an Enchanted Item</h3>
+
+    <p>
+      Every time an enchanted item&rsquo;s magical property matters &mdash; a weapon striking,
+      a lock resisting a pick, a healer&rsquo;s scalpel meeting a wound &mdash; the
+      enchantment has to <em>wake up</em>. Sometimes it does. Sometimes it doesn&rsquo;t.
+    </p>
+
+    <p>
+      For enchanted weapons in combat, this works like firing a gun: <strong>first roll your
+      attack</strong> (Melee or Ranged as normal), <strong>then check Magical
+      Reliability</strong> (roll d100 against the item&rsquo;s rating &mdash; under means the
+      mystical tag triggers, over means the weapon hits but the magic stays quiet). The weapon
+      always works as a weapon. The enchantment is the part that can fail.
+    </p>
+
+    <p>
+      For non-weapon artifacts, the GM calls for a Magical Reliability check whenever the
+      enchantment is tested &mdash; when someone tries to pick the enchanted lock, when the
+      scout&rsquo;s warded cloak is all that stands between her and a search party, when the
+      healer reaches for an artifact scalpel with a dying patient on the table. The stakes
+      make the roll matter.
+    </p>
+
+    <div class="callout callout-scene">
+      <span class="callout-label">At the Table</span>
+      <p>Kael swings an enchanted longsword with the Thundering tag (Standard tier, Magical
+      Reliability 85). He rolls his Melee check &mdash; hits. Then rolls d100 for Magical
+      Reliability: 62. Under 85. The enchantment fires &mdash; +1d6 bonus damage and the
+      target is knocked back a step. If he&rsquo;d rolled 91, the sword would have hit normally,
+      but the thunder stays silent. Same blade, same swing. The magic just didn&rsquo;t wake up.</p>
+    </div>
+
+    <!-- ── Magical Reliability ────────────────────────────────── -->
+
+    <h3 id="magical-reliability">Magical Reliability</h3>
+
+    <p>
+      Every enchanted artifact has a <strong>Magical Reliability</strong> rating &mdash; how
+      resistant the enchantment is to Galvanic disruption. Higher is better. A Spectacular
+      enchantment at 95 almost always fires in neutral territory. A Weak enchantment at 80
+      fizzles one time in five even on a good day &mdash; and in a Galvanic zone, it barely
+      works at all.
+    </p>
+
+    <p>
+      The base rating is set when the Enchant spell is cast. The better the casting result,
+      the more stable the bond:
+    </p>
+
+    <table>
+      <tr><th>Enchantment Tier</th><th>Base Magical Reliability</th></tr>
+      <tr><td>Weak</td><td>80</td></tr>
+      <tr><td>Standard</td><td>85</td></tr>
+      <tr><td>Strong</td><td>90</td></tr>
+      <tr><td>Spectacular</td><td>95</td></tr>
+      <tr><td>Pre-Eruption</td><td>98</td></tr>
+    </table>
+
+    <p>
+      <strong>Effective Magical Reliability</strong> =
+      <code class="formula">Base + (net Aetheric balance &times; 2)</code>
+    </p>
+
+    <p>
+      The local Aetheric balance shifts these numbers. In a Wild Zone, where the Aether
+      runs thick, enchantments strengthen &mdash; the magic has more to draw on. In a
+      Galvanic zone, where the Engine dominates, enchantments weaken as the industrial
+      resonance smothers the Aether bond.
+    </p>
+
+    <table>
+      <tr><th>Net Balance</th><th>Eff. Weak (80)</th><th>Disruption%</th><th>Eff. Spectacular (95)</th><th>Disruption%</th></tr>
+      <tr><td>+15 (Wild Zone)</td><td>110</td><td>0%</td><td>125</td><td>0%</td></tr>
+      <tr><td>+10 (heavy magic)</td><td>100</td><td>0%</td><td>115</td><td>0%</td></tr>
+      <tr><td>+5 (moderate magic)</td><td>90</td><td>10%</td><td>105</td><td>0%</td></tr>
+      <tr><td>0 (neutral)</td><td>80</td><td>20%</td><td>95</td><td>5%</td></tr>
+      <tr><td>&minus;5 (moderate Galvanic)</td><td>70</td><td>30%</td><td>85</td><td>15%</td></tr>
+      <tr><td>&minus;10 (heavy Galvanic)</td><td>60</td><td>40%</td><td>75</td><td>25%</td></tr>
+      <tr><td>&minus;15 (Galvanic Zone)</td><td>50</td><td>50%</td><td>65</td><td>35%</td></tr>
+      <tr><td>&minus;20 (Deep Galvanic)</td><td>40</td><td>60%</td><td>55</td><td>45%</td></tr>
+    </table>
+
+    <p>
+      At the extremes, the math resolves itself. An artifact at effective 100 or higher
+      <strong>cannot be disrupted</strong> &mdash; the Aether is so dense that the Engine
+      can&rsquo;t touch it. An artifact at effective 0 or below <strong>simply does not
+      function</strong> &mdash; the Galvanic field has drowned the magic entirely. Between
+      those poles, every swing is a question: will the enchantment wake up this time?
+    </p>
+
+
+    <!-- ── Disruption Severity ────────────────────────────────── -->
+
+    <h3 id="disruption">Disruption Severity</h3>
+
+    <p>
+      When an enchantment fails to activate, it doesn&rsquo;t always fail quietly. Most of
+      the time the magic just doesn&rsquo;t fire &mdash; the blade hits, the thunder stays
+      silent, no harm done. But sometimes the disrupted energy goes somewhere it
+      shouldn&rsquo;t. Roll d10 when a Magical Reliability check fails.
+    </p>
+
+    <table>
+      <tr><th>d10</th><th>Severity</th><th>Effect</th></tr>
+      <tr><td>1&ndash;5</td><td><strong>Fizzle</strong></td><td>Enchantment doesn&rsquo;t trigger this use. The item functions normally as a mundane object.</td></tr>
+      <tr><td>6&ndash;8</td><td><strong>Backfire</strong></td><td>The mystical tag misfires &mdash; the effect hits you, an ally, or the environment. GM determines the most dramatically appropriate victim.</td></tr>
+      <tr><td>9</td><td><strong>Burnout</strong></td><td>Enchantment goes dormant. Magical Reliability drops by 10 until the item is re-attuned (10 minutes of rest, no cost).</td></tr>
+      <tr><td>10</td><td><strong>Shatter</strong></td><td>The enchantment is <strong>permanently destroyed</strong>. The Aether bond breaks. The item reverts to mundane. Re-enchanting requires casting Enchant from scratch.</td></tr>
+    </table>
+
+    <p>
+      <strong>In Galvanic Zones</strong> (net &minus;10 or worse): add <strong>+2</strong> to
+      the severity roll. Backfire, Burnout, and Shatter become significantly more likely.
+      Using an artifact in heavy Galvanic territory risks losing the enchantment forever.
+      <strong>Put it away.</strong>
+    </p>
+
+    <div class="callout callout-handler">
+      <span class="callout-label">The Handler</span>
+      <p>You can replace a broken revolver. You cannot replace a shattered enchantment.
+      Know where you are. If the Galvanic readings are spiking, sheathe the magic blade
+      and pull steel. Losing an enchantment to carelessness is a mistake you make once.
+      If you're lucky enough to make it at all.</p>
+    </div>
+
+    <!-- ── Mystical Weapon Tags ───────────────────────────────── -->
+
+    <h3 id="mystical-tags">Mystical Weapon Tags</h3>
+
+    <p>
+      Every enchanted item carries a <strong>mystical tag</strong> that describes what the
+      enchantment actually does. A Thundering blade hits with concussive force. A Keen edge
+      finds gaps in armor that shouldn&rsquo;t exist. A Silent weapon kills without a whisper.
+      Each tag has four tiers of power, locked permanently when the Enchant spell is cast
+      &mdash; the better the casting result, the more potent and reliable the enchantment.
+    </p>
+
+    <p>
+      Creating a specific enchantment requires the enchanter to know the <strong>source
+      spell</strong> behind the tag in addition to Enchant itself. You can&rsquo;t weave
+      thunder into a blade without understanding Force. This means an enchanter needs at
+      minimum two magic schools &mdash; Ley Weaving for Enchant, plus access to the source
+      spell for the desired tag.
+    </p>
+
+    <table>
+      <tr><th>Tag</th><th>Source Spell</th><th>Weak</th><th>Standard</th><th>Strong</th><th>Spectacular</th></tr>
+      <tr>
+        <td><strong>Thundering</strong></td><td>Force (Aetheric)</td>
+        <td>+1d4 dmg, push 1 step</td><td>+1d6 dmg, push 1 step</td>
+        <td>+1d8 dmg, push 2 steps</td><td>+1d10 dmg, push 2 steps, stun</td>
+      </tr>
+      <tr>
+        <td><strong>Elemental [type]</strong></td><td>Elemental Manip. (Aetheric)</td>
+        <td>+1d4 [type] dmg</td><td>+1d6 [type] dmg</td>
+        <td>+1d8 [type] dmg</td><td>+1d10 [type] dmg</td>
+      </tr>
+      <tr>
+        <td><strong>Keen</strong></td><td>Alter Property (Transmutation)</td>
+        <td>+1 armor piercing</td><td>+2 armor piercing</td>
+        <td>+3 armor piercing</td><td>+3 AP, crit range +5%</td>
+      </tr>
+      <tr>
+        <td><strong>Homing</strong></td><td>Foresight (Divination)</td>
+        <td>+5% to hit</td><td>+10% to hit</td>
+        <td>+10%, ignore cover</td><td>+15%, ignore cover</td>
+      </tr>
+      <tr>
+        <td><strong>Venomous</strong></td><td>Wither (Vivimancy)</td>
+        <td>1d4 dmg next round</td><td>1d6 dmg next round</td>
+        <td>1d6 for 2 rounds</td><td>1d8 for 2 rounds</td>
+      </tr>
+      <tr>
+        <td><strong>Shielding</strong></td><td>Shield (Warding)</td>
+        <td>+5% parry</td><td>+10% parry</td>
+        <td>+10% parry, +1 soak</td><td>+15% parry, +2 soak</td>
+      </tr>
+      <tr>
+        <td><strong>Silent</strong></td><td>Dampen (Ley Weaving)</td>
+        <td>Strikes silent</td><td>Strikes silent</td>
+        <td>Silent, no glow</td><td>Silent, no glow, pain delayed 1 rd</td>
+      </tr>
+    </table>
+
+    <p>
+      GMs and players can propose additional mystical tags based on known spells. If a spell
+      concept can plausibly be bonded into an object, it&rsquo;s a candidate. The table above
+      covers the most common combat enchantments; use it as a template for other items.
+    </p>
+
+    <!-- ── Aetheric Accumulation ──────────────────────────────── -->
+
+    <h3 id="aetheric-accumulation">Aetheric Accumulation</h3>
+
+    <p>
+      Every time an enchantment fires &mdash; every time the Thundering blade booms or the
+      Keen edge finds its impossible sharpness &mdash; it pushes <strong>+1 Aetheric
+      accumulation</strong> into the local environment. Fizzles generate nothing; the magic
+      has to actually activate to leave a mark. But a party swinging enchanted weapons through
+      a prolonged fight is steadily tipping the Aetheric balance toward magic, whether they
+      realize it or not. That&rsquo;s good for the enchantments. It&rsquo;s bad for anyone
+      counting on a firearm.
+    </p>
+
+    <!-- ── Attunement ─────────────────────────────────────────── -->
+
+    <h3 id="attunement">Attunement</h3>
+
+    <p>
+      An owner can <strong>attune</strong> to an enchanted artifact, forging a personal bond
+      between themselves and the Aether woven into the object. The process takes about an hour
+      of quiet focus &mdash; and costs <strong>1 XP</strong>, which makes it a real sacrifice.
+      That experience could have gone toward improving a skill or learning a new spell. Instead,
+      it goes into the bond.
+    </p>
+
+    <p>
+      The payoff is significant. An attuned artifact gains <strong>+10% Magical
+      Reliability</strong> for its bonded owner &mdash; which can mean the difference between
+      an enchantment that fizzles at the wrong moment and one you can count on when it matters.
+    </p>
+
+    <p>
+      More importantly, an attuned artifact <strong>protects itself</strong>. If someone else
+      picks it up and tries to use it, the enchantment turns on them &mdash; the
+      <strong>source spell&rsquo;s misfire effect</strong> triggers against the unauthorized
+      user every time they attempt to activate the tag. A thief who grabs a Thundering sword
+      gets a face full of concussive Force. Someone who picks up an Elemental [fire] blade
+      burns their own hands. The enchantment is unharmed. The thief is not. The artifact
+      doesn&rsquo;t break &mdash; it <em>bites</em>.
+    </p>
+
+    <p>
+      A new owner can replace an existing bond by paying 1 XP and performing the attunement
+      ritual themselves. The previous bond dissolves.
+    </p>
+
+    <div class="callout callout-scene">
+      <span class="callout-label">At the Table</span>
+      <p>A thief steals Kael&rsquo;s attuned Thundering longsword and swings it at an ally.
+      He hits &mdash; but the enchantment recognizes a stranger&rsquo;s grip. Instead of
+      thunder hitting the target, the Force misfire triggers: 1d6 concussive damage rebounds
+      into the thief, knocking him back. He swings again. Same result. The blade is fine.
+      The enchantment is fine. The thief has two broken ribs and a growing suspicion that
+      this sword hates him. He&rsquo;s right.</p>
+    </div>
+
+    <!-- ── The Enchant Spell ──────────────────────────────────── -->
+
+    <h3 id="enchant-spell">The Enchant Spell</h3>
+
+    <p>
+      <strong>Enchant</strong> is a Ley Weaving ritual &mdash; hours or days of sustained
+      focus, channeling the Aether into an object until it becomes part of the thing&rsquo;s
+      nature. It demands a rare combination of talents: the caster must know Enchant (Ley
+      Weaving), must have access to the <strong>source spell</strong> for the desired tag
+      (scholarly casters need the specific spell in their book; wild casters have access
+      through their school), and must have <strong>Craft at 2+</strong> to prepare the
+      vessel properly. The object itself must be handcrafted &mdash; forged, carved, woven,
+      or shaped by human hands. Manufactured objects cannot hold the bond.
+    </p>
+
+    <p>
+      The process has three stages. First, <strong>prepare the vessel</strong> &mdash; a Craft
+      check to ensure the object can accept the enchantment. If the vessel isn&rsquo;t right,
+      the materials are wasted. Second, <strong>cast Enchant</strong> &mdash; roll against your
+      casting target. Your margin of success determines the tier, which permanently locks the
+      tag&rsquo;s power level and the item&rsquo;s Magical Reliability. Third, check for
+      <strong>backlash</strong>. Backlash during enchanting is especially dangerous &mdash; if
+      it triggers, roll d100: on 50 or under, the object is destroyed, the magic destabilizes,
+      and the caster is left with wreckage and bruises.
+    </p>
+
+    <table>
+      <tr><th>Tier</th><th>Exhaustion</th><th>Ritual Time</th><th>Result</th></tr>
+      <tr><td>Weak</td><td>6 EP</td><td>2 hours</td><td>Tag at Weak, Magical Reliability 80</td></tr>
+      <tr><td>Standard</td><td>10 EP</td><td>4 hours</td><td>Tag at Standard, Magical Reliability 85</td></tr>
+      <tr><td>Strong</td><td>16 EP</td><td>1 day</td><td>Tag at Strong, Magical Reliability 90</td></tr>
+      <tr><td>Spectacular</td><td>24 EP</td><td>2&ndash;3 days</td><td>Tag at Spectacular, Magical Reliability 95</td></tr>
+      <tr><td><em>Misfire</em></td><td>6 EP</td><td>&mdash;</td><td>Object destroyed. Caster takes 1d6 damage.</td></tr>
+    </table>
+
+    <p>
+      Scholarly casters can choose a lower tier than achieved. Wild casters get what they get.
+    </p>
+
+    <div class="callout callout-believer">
+      <span class="callout-label">The Believer</span>
+      <p>I watched a Weaver spend three days forging an enchantment. By the end she could
+      barely stand &mdash; hands shaking, burns on both palms, and a look in her eyes like
+      she&rsquo;d been staring into the sun. She slept for two days afterward. The blade she
+      made will outlast her grandchildren. That is the cost of making something permanent.</p>
+    </div>
+
+    <!-- ── Wards ──────────────────────────────────────────────── -->
+
+    <h3 id="wards">Wards &amp; Charms</h3>
+
+    <p>
+      A ward is Aether stored in a location, object, or threshold. Unlike artifacts, wards
+      are not permanent &mdash; the magic leaks out over time, like heat from a cooling
+      stone. Eventually, it runs out. This makes wards more common than artifacts but less
+      valuable. They are the everyday magic of the world &mdash; camp perimeters, safehouse
+      protections, concealed vaults.
+    </p>
+
+    <p>
+      <strong>Wearable charms</strong> &mdash; enchanted amulets, rings, inscribed tokens
+      &mdash; are simply wards you carry on your body. Same rules, same decay, portable
+      form factor. A charm that boosts your aim is just an alarm ward&rsquo;s cousin, worn
+      around your neck instead of inscribed on a doorframe.
+    </p>
+
+    <h4>Ward Types</h4>
+
+    <table>
+      <tr><th>Type</th><th>What It Does</th></tr>
+      <tr><td><strong>Alarm</strong></td><td>Alerts the caster when a threshold is crossed or a condition is met. The alert can be a silent mental ping, an audible chime, or a visible flash &mdash; obvious but unmissable.</td></tr>
+      <tr><td><strong>Barrier</strong></td><td>Blocks physical or magical passage through a threshold. Can be keyed to allow specific people through while stopping everyone else. Strength ranges from &ldquo;slows you down&rdquo; to &ldquo;impassable wall of force.&rdquo;</td></tr>
+      <tr><td><strong>Concealment</strong></td><td>Hides an area from magical detection. Divination spells like Detect and Reveal return nothing &mdash; the warded area appears magically blank. Doesn&rsquo;t make anything physically invisible, just magically opaque.</td></tr>
+      <tr><td><strong>Protection</strong></td><td>Provides damage reduction or resistance to everyone inside the warded area. A well-warded safe room might grant +2 soak against magical damage or impose &minus;10% on attackers&rsquo; rolls within its boundary.</td></tr>
+      <tr><td><strong>Trap</strong></td><td>Stores an offensive spell that triggers when a condition is met &mdash; someone crosses a threshold, touches a warded object, speaks a word. The trapped spell fires once, then the ward is spent.</td></tr>
+      <tr><td><strong>Charm</strong></td><td>A portable ward worn on the body &mdash; amulets, rings, bracers, inscribed tokens. Provides a passive effect while worn: a skill boost, damage resistance, sharpened senses, minor utility. Requires 10 minutes of contact to attune.</td></tr>
+    </table>
+
+    <!-- ── Ward Duration ──────────────────────────────────────── -->
+
+    <h3 id="ward-duration">Ward Duration &mdash; Decay</h3>
+
+    <p>
+      Every ward is on a clock. How long the magic holds depends on how much power was
+      poured into it &mdash; a quick field ward scratched into a doorframe might last a
+      few days, while a masterwork ward laid by a skilled Warder over the course of a week
+      can stand for years.
+    </p>
+
+    <table>
+      <tr><th>Effort Level</th><th>Creation Tier</th><th>Creation Time</th><th>Duration</th><th>Typical Use</th></tr>
+      <tr><td><strong>Field</strong></td><td>Weak</td><td>10&ndash;30 min</td><td>1d6 days</td><td>Camp perimeter, quick alarm, temporary charm</td></tr>
+      <tr><td><strong>Prepared</strong></td><td>Standard</td><td>2&ndash;6 hours</td><td>1d6 weeks</td><td>Safehouse, supply cache, working charm</td></tr>
+      <tr><td><strong>Ritual</strong></td><td>Strong</td><td>1&ndash;3 days</td><td>1d6 months</td><td>HQ protection, long-term concealment, quality charm</td></tr>
+      <tr><td><strong>Masterwork</strong></td><td>Spectacular</td><td>1+ week</td><td>1d6 years</td><td>Stronghold ward, institutional protection, prized charm</td></tr>
+    </table>
+
+    <p>
+      The creator rolls the d6 openly at creation time and knows the result. A field ward
+      that rolls a 2 lasts two days &mdash; use it or lose it. A masterwork ward that rolls
+      a 5 stands for five years &mdash; a point of pride.
+    </p>
+
+    <!-- ── Ward Breaking ──────────────────────────────────────── -->
+
+    <h3 id="ward-breaking">Breaking Wards</h3>
+
+    <p>
+      The clean way to break a ward is to <strong>Unbind</strong> it &mdash; cast the Unbind
+      spell at the ward&rsquo;s effective tier or higher, and the ward unravels silently. A
+      Weak ward falls to any successful Unbind. A Spectacular ward demands a Spectacular
+      Unbind, which means a very skilled caster with a very good roll. Matching power with
+      power.
+    </p>
+
+    <p>
+      The other option is <strong>Galvanic weakening</strong>. Every 5 points of net Galvanic
+      shift drops a ward&rsquo;s effective tier by one. Drag enough generators and capacitors
+      into the area, shift the balance hard enough, and even a Spectacular ward becomes
+      breakable &mdash; or collapses on its own.
+    </p>
+
+    <table>
+      <tr><th>Net Balance</th><th>Spectacular</th><th>Strong</th><th>Standard</th><th>Weak</th></tr>
+      <tr><td>0 (neutral)</td><td>Spectacular</td><td>Strong</td><td>Standard</td><td>Weak</td></tr>
+      <tr><td>&minus;5 (moderate)</td><td>Strong</td><td>Standard</td><td>Weak</td><td><em>Fails</em></td></tr>
+      <tr><td>&minus;10 (heavy)</td><td>Standard</td><td>Weak</td><td><em>Fails</em></td><td><em>Fails</em></td></tr>
+      <tr><td>&minus;15 (Galvanic Zone)</td><td>Weak</td><td><em>Fails</em></td><td><em>Fails</em></td><td><em>Fails</em></td></tr>
+      <tr><td>&minus;20 (Deep Galvanic)</td><td><em>Fails</em></td><td><em>Fails</em></td><td><em>Fails</em></td><td><em>Fails</em></td></tr>
+    </table>
+
+    <p>
+      This approach is anything but subtle. The Galvanic gear is loud, heavy, and obvious.
+      Anyone with magical sensitivity can feel the balance shifting &mdash; it&rsquo;s like
+      watching someone drain a lake. But it works, and sometimes brute-force logistics is
+      easier than finding a caster powerful enough to Unbind a masterwork ward.
+    </p>
+
+    <p>
+      Wards that fail from Galvanic drowning stop functioning, but they aren&rsquo;t
+      destroyed. When the Galvanic shift subsides, the ward resumes &mdash; if it still has
+      decay time remaining. Turn off the generators and the door locks itself again.
+    </p>
+
+    <p>
+      Finding wards before you walk into them is its own challenge. The <em>Detect</em> spell
+      (Divination) reveals a ward&rsquo;s presence and general nature. <em>Reveal</em> shows
+      exact boundaries and trigger conditions. For those without magic, a <em>Voltaic
+      Lantern</em> makes ward residue glow faintly under its beam &mdash; not as precise as
+      Divination, but it doesn&rsquo;t require a caster.
+    </p>
+
+    <p>
+      <strong>Wards cannot be physically destroyed.</strong> A warded door doesn&rsquo;t break
+      when you hit it with an axe &mdash; the ward <em>is</em> the protection. The magic
+      reinforces the object it&rsquo;s placed on. A Spectacular Barrier ward on a wooden gate
+      means that gate stands until someone deals with the ward, regardless of how many times
+      you swing. You need magical means to get past it.
+    </p>
+
+    <p>
+      <strong>Unbind</strong> permanently destroys the ward &mdash; the magic unravels and
+      is gone. <strong>Galvanic weakening</strong> just puts the ward to sleep. The Aether
+      goes dormant, the effect stops, and you can walk through the door or past the alarm.
+      But when the Galvanic shift subsides &mdash; when someone turns off the generators or
+      you move them away &mdash; the ward wakes back up. The magic was suppressed, not
+      destroyed. Plan accordingly.
+    </p>
+
+    <div class="callout callout-scholar">
+      <span class="callout-label">The Scholar</span>
+      <p>Never brute-force a trap ward. That is the advice of someone who once watched a
+      colleague kick down a warded door and catch whatever was stored inside it square in
+      the chest. The ward broke. So did three of his ribs. Unbind it first. Always.</p>
+    </div>
+
+    <!-- ── Potions ────────────────────────────────────────────── -->
+
+    <h3 id="potions">Potions</h3>
+
+    <p>
+      Potions are the most common magical objects in the world &mdash; and the most
+      perishable. A single-use consumable that delivers a magical effect when drunk, applied,
+      or thrown. Any caster with basic alchemical knowledge and a few hours can brew one.
+      The catch is that they don&rsquo;t last. A potion is Aether in a bottle, and the
+      bottle leaks.
+    </p>
+
+    <h4>Healing Potions</h4>
+
+    <table>
+      <tr><th>Potency</th><th>Tier</th><th>Effect</th><th>Shelf Life</th></tr>
+      <tr><td>Minor</td><td>Weak</td><td>Heal 1d6 HP, stop bleeding</td><td>1d6 days</td></tr>
+      <tr><td>Moderate</td><td>Standard</td><td>Heal 2d8 HP, knit minor fractures</td><td>1d6 weeks</td></tr>
+      <tr><td>Major</td><td>Strong</td><td>Heal 3d10 HP, mend broken bones</td><td>1d6 months</td></tr>
+      <tr><td>Critical</td><td>Spectacular</td><td>Heal 4d12 HP, purge disease, stabilize dying</td><td>1d6 years</td></tr>
+    </table>
+
+    <h4>Fortifying Potions</h4>
+
+    <table>
+      <tr><th>Potency</th><th>Tier</th><th>Effect</th><th>Effect Duration</th><th>Shelf Life</th></tr>
+      <tr><td>Minor</td><td>Weak</td><td>+5% to one skill</td><td>1 hour</td><td>1d6 days</td></tr>
+      <tr><td>Moderate</td><td>Standard</td><td>+10% to one skill OR +1 attribute for skill checks</td><td>4 hours</td><td>1d6 weeks</td></tr>
+      <tr><td>Major</td><td>Strong</td><td>+15% to one skill OR +1 attribute (all uses)</td><td>8 hours</td><td>1d6 months</td></tr>
+    </table>
+
+    <h4>Curative Potions</h4>
+
+    <table>
+      <tr><th>Type</th><th>Tier</th><th>Effect</th></tr>
+      <tr><td>Antidote</td><td>Weak</td><td>Neutralize one specific poison (brewed for that poison)</td></tr>
+      <tr><td>Panacea</td><td>Standard</td><td>Cure one disease or infection</td></tr>
+      <tr><td>Cleansing Draft</td><td>Strong</td><td>Remove one magical contamination or curse</td></tr>
+    </table>
+
+    <h4>Utility Potions</h4>
+
+    <table>
+      <tr><th>Type</th><th>Tier</th><th>Effect</th><th>Effect Duration</th></tr>
+      <tr><td>Night Eye</td><td>Weak</td><td>See in darkness as if dimly lit</td><td>4 hours</td></tr>
+      <tr><td>Iron Skin</td><td>Standard</td><td>+2 armor soak (skin hardens)</td><td>1 hour</td></tr>
+      <tr><td>Featherfall</td><td>Weak</td><td>Negate fall damage</td><td>10 minutes</td></tr>
+      <tr><td>Silence</td><td>Standard</td><td>Suppress sound within arm's reach</td><td>30 minutes</td></tr>
+      <tr><td>Aqua Lung</td><td>Standard</td><td>Breathe underwater</td><td>2 hours</td></tr>
+    </table>
+
+    <p>
+      These tables are starting points, not a complete catalog. Any spell effect that can
+      plausibly be bottled is a candidate for a potion &mdash; if a player proposes something
+      reasonable and a caster has the right skills, let them brew it.
+    </p>
+
+    <h4>Expired Potions</h4>
+
+    <p>
+      Past its shelf life, a potion doesn&rsquo;t go inert &mdash; it goes
+      <strong>unpredictable</strong>. The Aether hasn&rsquo;t vanished; it&rsquo;s just lost
+      its structure. Drinking an expired potion is a gamble. Roll d100.
+    </p>
+
+    <table>
+      <tr><th>d100</th><th>Result</th></tr>
+      <tr><td>01&ndash;50</td><td>Reduced effect (half potency)</td></tr>
+      <tr><td>51&ndash;80</td><td>No effect</td></tr>
+      <tr><td>81&ndash;95</td><td>Wrong effect (GM picks something thematically related but unhelpful)</td></tr>
+      <tr><td>96&ndash;100</td><td>Harmful (treat as a spell misfire)</td></tr>
+    </table>
+
+    <div class="callout callout-handler">
+      <span class="callout-label">The Handler</span>
+      <p>A quick potion brewed in an afternoon might last two days. Use it or lose it. The
+      good stuff &mdash; the kind a master brewer spends a week on &mdash; that radiates
+      power and stays potent for years. The best potions are worth protecting. The cheap
+      ones are worth using immediately. And the expired ones? They&rsquo;re worth a gamble,
+      if you&rsquo;re desperate enough.</p>
+    </div>
+
+    <h4>Economy</h4>
+
+    <p>
+      Potions aren&rsquo;t mass-produced, but they are traded. A healer in a magical
+      neighborhood might sell remedies alongside mundane medicines. Adventuring Societies
+      trade them as favors or currency. A skilled brewer with a reputation can charge
+      handsomely for commissioned work. Abandoned laboratories sometimes yield a few
+      surviving bottles &mdash; if the shelf life hasn&rsquo;t run out. There&rsquo;s no
+      alchemy industry, no chain of potion shops &mdash; but where there are casters,
+      there is commerce.
+    </p>
+
+    <!-- ── Pre-Eruption Artifacts ─────────────────────────────── -->
+
+    <h3 id="pre-eruption">Pre-Eruption Artifacts</h3>
+
+    <p>
+      Most artifacts in the world are recently made &mdash; experimental, first-generation
+      work. But there are exceptions.
+    </p>
+
+    <p>
+      Rare objects exist that predate the Eruption. A sword that hums with energy, sealed in
+      a vault unopened for two centuries. An amulet from a shipwreck older than anyone's
+      grandparents. A ward-stone in ruins that predate the Veil's thinning by decades
+      &mdash; or centuries.
+    </p>
+
+    <p>
+      Nobody can explain them. Magic is supposed to be new. These objects shouldn't exist.
+      Was magic here before the Eruption, hidden? Did someone know it was coming? Are these
+      objects even human-made?
+    </p>
+
+    <p>
+      What makes them mechanically distinctive is their stability. Pre-Eruption artifacts
+      have Magical Reliability <strong>98</strong> &mdash; nearly immune to disruption even
+      in heavy Galvanic territory. Whoever made them knew something that modern enchanters
+      don&rsquo;t. They may carry effects that don&rsquo;t map to any known spell, or
+      multiple enchantments on a single object &mdash; something that should be impossible.
+      Finding one changes a campaign. Understanding one might change the world.
+    </p>
+
+    <div class="callout callout-believer">
+      <span class="callout-label">The Believer</span>
+      <p>I held one, once. An amulet pulled from a collapsed mine in the Thornreach. It was
+      warm. Not enchanted-warm &mdash; <em>alive</em>-warm. Like holding something that was
+      dreaming. The scholars said it was two hundred years old. Older than the Eruption by a
+      century. I asked them how that was possible. They stopped answering my questions after
+      that.</p>
+    </div>
+
+    <!-- ── Navigation ─────────────────────────────────────────── -->
+
+    <nav class="page-nav">
+      <a href="equipment.html" class="page-nav-link">
+        <span class="page-nav-direction">&larr; Previous</span>
+        <span class="page-nav-title">Arms &amp; Equipment</span>
+      </a>
+      <a href="running-the-game.html" class="page-nav-link page-nav-link--next">
+        <span class="page-nav-direction">Next &rarr;</span>
+        <span class="page-nav-title">Running the Game</span>
+      </a>
+    </nav>
+  </div>
+  <footer class="site-footer"><p>Aetherfall RPG &mdash; Playtest Draft</p></footer>
+</main>
+<script src="js/main.js"></script>
+</body>
+</html>

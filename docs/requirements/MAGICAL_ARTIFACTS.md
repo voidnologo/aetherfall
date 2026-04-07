@@ -1,9 +1,9 @@
-# Magical Artifacts
+# Magical Artifacts & Enchantments
 
-## Document Status: DRAFT — First Pass
+## Document Status: DRAFT — Second Pass
 **Last Updated:** 2026-04-07
 
-Rules for enchanted weapons, potions, charms, and wards. Covers creation, use, and the mystery of Pre-Eruption artifacts.
+Rules for enchanted artifacts, wards (including wearable charms), and potions. Covers creation, use, and the mystery of Pre-Eruption artifacts.
 
 **Relationship to Other Documents:**
 - [MAGIC_SYSTEM.md](MAGIC_SYSTEM.md) — Casting mechanics, backlash, schools, exhaustion (§3), spell acquisition (§5)
@@ -19,14 +19,22 @@ Magic is new to the world. The first generation of trained casters is just now r
 
 ### Core Principles
 
-- **Artifacts are rare and valuable.** There is no enchanting industry, no magic item shop, no standardized production. Every artifact is handmade by a skilled caster-artisan, and most of them are imperfect.
+- **Artifacts are rare and valuable.** There is no enchanting industry, no magic item shop, no standardized production. Every artifact is handmade by a skilled caster, and most of them are imperfect.
 - **Creation is dangerous.** Enchanting follows the same backlash rules as casting. Every artifact carries a trace of the risk that went into making it.
-- **Nothing is permanent by default.** Most enchantments fade over time. How long they last depends on how much power was channeled into them (see §1.1 — Decay). Permanent enchantments are master-level work — rare, expensive, and deeply impressive.
-- **Magic items are not better weapons.** An enchanted sword is not strictly superior to a well-made steel blade. It can do things steel can't — but it can also fail in ways steel never would. In a Wild Zone, your enchanted blade might surge uncontrollably. In a Galvanic Zone, it might go dead. A good fighter wants both options.
+- **Enchantments are permanent. Wards and potions are not.** This is the fundamental divide. An enchantment bonds Aether into an object's nature — the object *becomes* magical. A ward or potion is merely bathed in Aether — energy stored in a vessel that slowly leaks out.
+- **Artifacts use the same reliability framework as Galvanic items**, with the Aetheric balance working in the opposite direction. If you know one system, you know both.
 
-### 1.1 Decay — Universal Duration Rule
+### The Fundamental Divide
 
-Every non-permanent enchantment fades. The duration depends on the **tier at which the artifact was created** — more power channeled into the object means more magical energy bound into its structure, which means it holds together longer. A weak potion barely clings to coherence; a spectacular enchantment radiates stability for years.
+| | Artifacts (Enchantments) | Wards & Potions |
+|---|---|---|
+| **What happens** | Aether is bonded into the object's nature — it *becomes* magical | Aether is stored in a vessel — energy bathed into the object, not intrinsic to it |
+| **Duration** | Permanent | Decays (see §1.1) |
+| **Rarity** | Exceptionally rare | Uncommon but achievable |
+
+### 1.1 Decay — Duration Rule for Wards & Potions
+
+Wards and potions fade over time. The duration depends on the **tier at which they were created** — more power channeled means more energy stored, which means it holds together longer.
 
 | Creation Tier | Duration |
 |--------------|----------|
@@ -34,17 +42,12 @@ Every non-permanent enchantment fades. The duration depends on the **tier at whi
 | Standard | **1d6 weeks** |
 | Strong | **1d6 months** |
 | Spectacular | **1d6 years** |
-| Permanent | Indefinite (master-level, see §3) |
 
-The creator rolls the d6 openly at the time of creation and knows the result. They can label, date, and plan accordingly — a potion brewer who rolls a 2 on a Weak potion knows they have two days to use or sell it.
+The creator rolls the d6 openly at the time of creation and knows the result. They can label, date, and plan accordingly.
 
-This rule applies universally across all artifact categories: enchanted weapons, potions, charms, and wards. One system, one roll, one table.
-
-**Design intent:** This inverts the intuitive expectation that "powerful = fragile." In Aetherfall, powerful magic is *stable* magic — a spectacular enchantment was forged with enough energy to sustain itself for years. A weak enchantment is a candle guttering in the wind. This creates natural pressure: that healing potion brewed at Weak tier? Use it soon. That legendary enchanted blade forged at Spectacular tier? It'll outlast its wielder. The best artifacts in the world *glow* with their own permanence.
+**This rule applies to wards and potions only.** Enchanted artifacts do not decay — their permanence is what makes them special.
 
 ### Pre-Eruption Artifacts
-
-Most artifacts in the world are recently made — experimental, first-generation work by the pioneers of a new discipline. But there are exceptions.
 
 Rare objects exist that predate the Eruption. A sword that hums with magical energy, found sealed in a vault that hasn't been opened in two centuries. An amulet pulled from a shipwreck older than anyone's grandparents. A ward-stone buried in ruins that predate the Veil's thinning by decades — or centuries.
 
@@ -54,75 +57,54 @@ Nobody can explain them. Magic is supposed to be new. These objects shouldn't ex
 
 ---
 
-## 2. Artifact Categories
+## 2. Enchanted Artifacts
 
-### 2.1 Enchanted Weapons
+An enchanted artifact is a mundane object that has been permanently imbued with a magical property through the Enchant spell (see §3.1). The Aether is not stored in the object — it is *part* of the object. The blade doesn't carry fire; the blade *is* fire, bound into steel. The lock doesn't hold a Seal spell; the lock *is* sealed, in a way that transcends its physical mechanism.
 
-An enchanted weapon is a mundane weapon (melee, ranged, or firearm) that has been imbued with a magical effect drawn from a specific spell. The weapon retains its normal stats and gains an additional magical property.
+### Why Some Objects Can Be Enchanted and Others Cannot
 
-#### Effects
+The Aether bonds with objects that have **deep roots in human understanding** — things that people have made by hand, used, trusted, and believed in for centuries. A sword is ancient. A hammer is ancient. A ring, a cloak clasp, a healer's mortar — these are objects humanity has shaped and understood for millennia. Collective belief has soaked into their very concept, and the Aether responds to that accumulated resonance.
 
-Enchantments are drawn from existing spells. The caster must know (scholarly) or have access to (wild) the spell being imbued. Common enchantments:
+Manufactured objects — factory-produced, mechanically complex, assembled from interchangeable parts — lack those roots. They are too new, too poorly understood at a fundamental level. People use firearms without truly understanding the chemistry of propellant or the metallurgy of a rifled barrel. They trust the *mechanism* without grasping the *nature*. The Aether finds nothing to grip. A revolver is reliable because it's well-engineered, not because it's well-understood in the way a knife is understood. This is the same principle that makes complex technology more vulnerable to Aetheric disruption (see DESIGN_PHILOSOPHY.md §2.2 — the Friedman influence).
 
-| Effect | Source Spell | Example |
-|--------|-------------|---------|
-| **Elemental Damage** | Elemental Manipulation | +1d6 fire/ice/lightning damage on hit |
-| **Force Strike** | Force | +1d4 force damage, knockback on strong hits |
-| **Accuracy** | Foresight | +5% to hit (the weapon subtly guides the wielder's hand) |
-| **Defensive** | Shield | +10% to parry rolls when wielded |
-| **Sharpening** | Alter Property | +1 armor piercing (edge stays impossibly keen) |
-| **Silent** | Dampen | Strikes make no sound — ideal for stealth kills |
-| **Venomous** | Wither | Target takes 1d4 additional damage next round (vitality drain) |
-| **Illuminated** | Elemental Manipulation | Blade glows on command — light source + unsettling |
+The line is not "old vs. new" or "simple vs. complex" in absolute terms. It is **handcrafted vs. manufactured**. A sword forged last week by a skilled smith can be enchanted — the act of hand-forging connects it to the same deep tradition of shaped steel that humans have known for thousands of years. A factory-stamped blade from an industrial press cannot — it was *produced*, not *made*.
 
-GMs and players can propose other enchantments based on known spells. If a spell can plausibly be channeled through a weapon strike, it's a candidate.
+### 2.1 Enchanted Items
 
-#### Charges
+Any handcrafted object can be enchanted: weapons, armor, tools, jewelry, locks, instruments, clothing. The most common artifacts are enchanted weapons — adventurers want blades that hit harder — but there is no mechanical reason the Enchant spell cannot bond Aether into a healer's scalpel, a locksmith's picks, or a singer's lute. Each gains a single mystical property appropriate to its nature.
 
-Most enchanted weapons are **charge-based**. The enchantment holds a limited number of uses before it must be re-enchanted.
+**One enchantment per item.** The Aether bonds once. An object carries one mystical tag. This keeps artifacts distinct — "the Thundering blade" is a named thing, not a stack of bonuses. "The Whispering Lock" is a specific artifact, not a lock with three spells bolted on.
 
-| Quality | Charges | Creator Requirements |
-|---------|---------|---------------------|
-| Basic | 3 charges | Casting skill 2+, Craft 1+ |
-| Standard | 5 charges | Casting skill 3+, Craft 2+ |
-| Superior | 10 charges | Casting skill 4+, Craft 3+ |
-| **Permanent** | Unlimited | Casting skill 4+, Craft 3+, ritual (see §3) |
+#### Using an Enchanted Item
 
-Each activation of the enchantment consumes one charge. Re-enchanting costs exhaustion and time (see §3 — Creation Rules) but no additional XP.
+When an enchanted item's magical property is relevant — a weapon striking, a lock resisting a pick, a healer's scalpel meeting a wound — check **Magical Reliability** to see if the enchantment activates.
 
-Permanent enchantments are master-level work. They are rare, valuable, and mark the creator as one of the best in the world — a world where "the best" is barely a generation old.
+For enchanted weapons in combat, this is a two-step process identical to firing a firearm:
 
-#### Aetheric Interaction
+1. **Attack** — Roll Melee (or Ranged for enchanted bows/crossbows) as normal.
+2. **Check Magical Reliability** — Roll d100 against the item's Magical Reliability. Under = the mystical tag triggers. Over = the item functions normally as a mundane object, no magical bonus.
 
-Enchanted weapons generate Aetheric accumulation when their magical effect activates:
-
-| Enchantment Activation | Accumulation |
-|------------------------|-------------|
-| Charge used | +1 per activation |
-| Permanent enchantment (passive) | +1 per minute while drawn |
-| Permanent enchantment (active strike) | +2 per activation |
-
-This means enchanted weapons push the Aetheric balance toward magic — making firearms less reliable nearby. A party with multiple enchanted weapons is creating a localized magic zone just by fighting. This is an intentional tension: the more magic items you carry, the worse your guns work.
+For non-weapon artifacts, the GM calls for a Magical Reliability check when the enchantment is tested. The item always functions as an item. The enchantment is the part that can fail.
 
 #### Magical Reliability
 
-Enchanted artifacts have a **Magical Reliability** rating — the mirror of a firearm's Reliability stat. Where firearms resist Aetheric disruption, enchanted items resist Galvanic disruption. The mechanic is deliberately parallel:
+Every enchanted artifact has a **Magical Reliability** rating — a measure of how resistant the enchantment is to Galvanic disruption. Higher is better.
 
-**Magical Reliability check:** When activating an enchanted weapon (or when the GM calls for a charm/ward check in a Galvanic-heavy environment), roll d100. Disruption chance = **100 − Magical Reliability**, modified by the Aetheric balance.
+**Base Magical Reliability** is determined by the tier at which the Enchant spell was cast:
 
-**Effective Magical Reliability** = Base Magical Reliability + (net balance × 2)
-
-Positive net (Aetheric) *helps* artifacts. Negative net (Galvanic) *hurts* them — the exact mirror of how the Aetheric balance affects firearms.
-
-| Artifact Quality | Base Magical Reliability |
+| Enchantment Tier | Base Magical Reliability |
 |-----------------|------------------------|
-| Basic (3 charges) | 80 |
-| Standard (5 charges) | 85 |
-| Superior (10 charges) | 90 |
-| Permanent | 95 |
-| Pre-Eruption | 98 (they were built to last by someone who knew what they were doing) |
+| Weak | 80 |
+| Standard | 85 |
+| Strong | 90 |
+| Spectacular | 95 |
+| Pre-Eruption | 98 |
 
-| Net Balance | Eff. Basic (80) | Disruption% | Eff. Permanent (95) | Disruption% |
+**Effective Magical Reliability** = Base + (net Aetheric balance × 2)
+
+Aetheric environments help artifacts. Galvanic environments hurt them.
+
+| Net Balance | Eff. Weak (80) | Disruption% | Eff. Spectacular (95) | Disruption% |
 |-------------|----|----|----|----|
 | +15 (Wild Zone) | 110 | 0% | 125 | 0% |
 | +10 (heavy magic) | 100 | 0% | 115 | 0% |
@@ -133,44 +115,176 @@ Positive net (Aetheric) *helps* artifacts. Negative net (Galvanic) *hurts* them 
 | −15 (Galvanic Zone) | 50 | 50% | 65 | 35% |
 | −20 (Deep Galvanic) | 40 | 60% | 55 | 45% |
 
-**On disruption:** The enchantment fizzles for that activation. The charge is still consumed (the magic fired but the Galvanic field scattered it). For charms, the passive effect drops for 1d4 hours. For wards, the ward flickers — any effect dependent on it is suspended for 1 round/1 minute (field/combat vs. narrative scale).
+At effective Magical Reliability 100+, the artifact **cannot be disrupted**. At 0 or below, the artifact **simply does not function**.
 
-At effective Magical Reliability 100+, the artifact **cannot be disrupted** — the magical field is overwhelming the Galvanic interference. At effective Magical Reliability 0 or below, the artifact **simply does not function** — the Engine has drowned it completely.
+#### Disruption Severity
 
-**Design parallel:**
+When Magical Reliability fails, roll on the disruption severity table:
 
-| Aspect | Firearms | Enchanted Artifacts |
-|--------|----------|-------------------|
-| Base stat | Reliability | Magical Reliability |
-| Disrupted by | Aetheric accumulation | Galvanic accumulation |
-| Empowered by | Galvanic accumulation | Aetheric accumulation |
-| On failure | Weapon doesn't fire, severity roll | Enchantment fizzles, charge wasted |
-| At 100+ effective | Cannot malfunction | Cannot be disrupted |
-| At 0 or below | Does not function | Does not function |
+| d10 | Severity | Effect |
+|-----|----------|--------|
+| 1–5 | **Fizzle** | Enchantment doesn't trigger this use. Item functions normally as a mundane object. |
+| 6–8 | **Backfire** | The mystical tag misfires — the effect hits you, an ally, or the environment. GM determines the most dramatically appropriate victim. |
+| 9 | **Burnout** | The enchantment goes dormant. Magical Reliability drops by 10 until the item is re-attuned (10 minutes of rest, no cost). |
+| 10 | **Shatter** | The enchantment is **permanently destroyed**. The Aether bond breaks. The item reverts to mundane. Re-enchanting requires casting Enchant from scratch. |
 
-This creates the same push-pull tension that defines the Aetheric balance: in a Wild Zone, your enchanted sword is rock-solid but your revolver jams every other shot. In a Galvanic factory, your pistol fires true but your magic blade sputters and dies. **A smart adventurer carries both.**
+**In Galvanic Zones** (net −10 or worse): add +2 to the severity roll. Backfire, Burnout, and Shatter become significantly more likely. Using an artifact in heavy Galvanic territory risks losing the enchantment forever. **Put it away.**
 
-In **Wild Zones** (net +10 or more), enchanted weapons may also **surge**. When activated, roll d100. On 10 or under, the enchantment fires at one tier higher than intended — a +1d6 fire weapon deals +2d8 fire instead, but consumes 2 charges. Dramatic and dangerous. This is the flip side of the Wild Zone's empowerment: the magic is *too* strong, and control slips.
+#### Aetheric Accumulation
 
-#### Weapon Tags
+Enchanted items generate **+1 Aetheric accumulation** each time the mystical tag triggers (Reliability check passed). Fizzles generate nothing. A party using enchanted gear pushes the local Aetheric balance toward magic just by relying on their artifacts.
 
-Enchanted weapons gain tags that integrate with the existing weapon system:
+#### Mystical Weapon Tags
 
-| Tag | Effect |
-|-----|--------|
-| **Enchanted** | Weapon carries a magical effect. Generates Aetheric accumulation on use. |
-| **Charged [X]** | Has X charges remaining. Track on character sheet. |
-| **Permanent** | Enchantment does not expire or consume charges. |
-| **Elemental [type]** | Deals bonus damage of specified element. |
-| **Attuned** | Enchantment is keyed to a specific wielder. Functions at reduced power (half bonus) for anyone else. |
+Mystical tags are defined in the weapon tag section alongside Melee, Firearm, and Galvanic tags. Each tag has four tiers — the tier is locked permanently when the Enchant spell is cast. Each tag requires the caster to know a **source spell** in addition to Enchant (see §3.1).
+
+| Tag | Source Spell | Weak | Standard | Strong | Spectacular |
+|-----|-------------|------|----------|--------|-------------|
+| **Thundering** | Force (Aetheric) | +1d4 dmg, push back 1 step | +1d6 dmg, push back 1 step | +1d8 dmg, push back 2 steps | +1d10 dmg, push back 2 steps, target stunned (+2 speed next action) |
+| **Elemental [type]** | Elemental Manipulation (Aetheric) | +1d4 [type] damage | +1d6 [type] damage | +1d8 [type] damage | +1d10 [type] damage |
+| **Keen** | Alter Property (Transmutation) | +1 armor piercing | +2 armor piercing | +3 armor piercing | +3 armor piercing, crit range +5% |
+| **Homing** | Foresight (Divination) | +5% to hit | +10% to hit | +10% to hit, ignore cover penalty | +15% to hit, ignore cover penalty |
+| **Venomous** | Wither (Vivimancy) | 1d4 damage next round | 1d6 damage next round | 1d6 damage for 2 rounds | 1d8 damage for 2 rounds |
+| **Shielding** | Shield (Warding) | +5% to parry | +10% to parry | +10% to parry, +1 Martial soak | +15% to parry, +2 Martial soak |
+| **Silent** | Dampen (Ley Weaving) | Strikes make no sound | Strikes make no sound | No sound, no visible magical glow | No sound, no glow, target doesn't feel pain for 1 round |
+
+GMs and players can propose additional mystical tags based on known spells. If a spell concept can plausibly be channeled through an object, it's a candidate — but the Enchant spell description (§3.1) defines which tags are available at each tier.
+
+**Non-weapon artifacts** use the same tag framework. A shield with Shielding, a lock enchanted with Seal, a lantern with Elemental [light], a healer's scalpel with Mend — define the effect at each tier, assign a source spell, and apply the standard Magical Reliability rules. The weapon tag table above covers the most common combat enchantments; GMs should use it as a template for other items. Detailed non-weapon tags can be expanded as play demands.
+
+#### Attunement
+
+An owner can **attune** to an enchanted artifact, bonding it to themselves. This is a deliberate, expensive commitment.
+
+| Aspect | Detail |
+|--------|--------|
+| **Cost** | 1 XP (performed as a ritual, takes ~1 hour) |
+| **Benefit** | +10% Magical Reliability for the bonded owner |
+| **For others** | The enchantment's **source spell misfire effect** triggers against the unauthorized user every time they try to activate the tag. A thief swinging a Thundering sword (source: Force) takes the Force misfire — 1d6 damage as the concussive energy rebounds into them. A stolen Elemental [fire] blade burns the wielder's hands. A Shielding dagger inverts its protection — the user takes bonus damage instead of reducing it. The enchantment is unharmed. The thief is not. |
+| **Re-attunement** | A new owner can attune by paying 1 XP, which replaces the previous bond. |
+
+Attunement is expensive — 1 XP is real advancement opportunity. You're trading a session's worth of growth for a meaningful bond with a specific artifact. The payoff: your enchantment is significantly more reliable, and nobody can steal your artifact and use it against you. The item protects itself and its owner — not by self-destructing, but by punishing misuse.
 
 ---
 
-### 2.2 Potions
+## 3. The Enchant Spell
 
-A potion is a single-use consumable that delivers a magical effect when drunk, applied, or (in some cases) thrown. Potions are the most accessible form of magical artifact — a skilled caster with basic alchemical knowledge can brew them. They are also the most perishable.
+### 3.1 Enchant (Ley Weaving)
 
-#### Categories
+*Complexity: 4 — Casting Time: Ritual (2 hours minimum)*
+
+Bond Aether permanently into a prepared object, transforming it into a magical artifact. The caster must know Enchant and have access to the **source spell** for the desired mystical tag (see §2.1 — Mystical Weapon Tags) — scholarly casters must know the specific spell, wild casters have access through their school. This means an enchanter needs at minimum two schools: Ley Weaving (for Enchant) and the school containing the source spell.
+
+**Requirements:**
+- Caster must know Enchant (Ley Weaving)
+- Caster must have access to the **source spell** for the desired tag — scholarly casters must know the specific spell; wild casters have access through their school
+- Object must be **handcrafted** — forged, carved, woven, or shaped by human hands from raw materials. Manufactured objects (factory-produced, mass-stamped, assembled from interchangeable parts) cannot hold an enchantment. The Aether bonds with things that carry the resonance of human craft and centuries of accumulated understanding, not with products of industrial process (see §2 — Why Some Objects Can Be Enchanted).
+- Caster must have Craft skill at level 2+ (to prepare the vessel properly)
+
+**Process:**
+1. **Prepare the vessel.** Craft check to ensure the object can accept the enchantment. Failure = wasted materials, start over.
+2. **Cast Enchant.** Roll against casting target as normal. The margin of success determines the tier, which locks the mystical tag's power level permanently.
+3. **Backlash check.** Normal backlash rules apply at the achieved tier. Backlash during enchanting can destroy the object — if backlash triggers, roll d100: on 50 or under, the object is destroyed.
+
+| Tier | Exhaust | Tag Tier Applied | Magical Reliability | Ritual Time |
+|------|---------|-----------------|-------------------|-------------|
+| **Weak** | 6 | Weak | 80 | 2 hours |
+| **Standard** | 10 | Standard | 85 | 4 hours |
+| **Strong** | 16 | Strong | 90 | 1 day |
+| **Spectacular** | 24 | Spectacular | 95 | 2–3 days |
+| *Misfire* | 6 | — | — | Object is ruined. Caster takes 1d6 damage from the magical backlash. If the object was already enchanted (re-enchanting attempt), the existing enchantment is permanently destroyed. |
+
+**Design note:** Complexity 4 with ritual casting makes this one of the most demanding spells in the game. At Spectacular tier, 24 EP of exhaustion spread over 2–3 days of sustained ritual work — the caster will be physically wrecked by the end. Backlash at Spectacular (25% scholarly, 30% wild) means there is a real chance the caster takes physical damage and a meaningful chance the object is destroyed. This is why enchanted artifacts are rare: the process is grueling, risky, and demands a caster who has invested heavily in both Ley Weaving and at least one other school.
+
+**Scholarly casters** can choose to cast at a lower tier for more predictable results. A scholarly caster who rolls well enough for Strong can choose Standard if they want a safer outcome.
+
+**Wild casters** get what they get — which makes wild-forged artifacts unpredictable. A wild caster might produce a Spectacular enchantment on a lucky day, or ruin three swords in a row. This mirrors their casting philosophy: raw power, unreliable control.
+
+### 3.2 Enchant in the Ley Weaving School
+
+Enchant becomes the 6th spell in Ley Weaving, bringing the school to 6 spells — matching most other schools.
+
+| Spell | Complexity | Casting Time | Role |
+|-------|-----------|-------------|------|
+| Dampen | 3 | 6ct | Suppress magic |
+| Channel | 3 | 6ct | Redirect mana flows |
+| Attune | 2 | 5ct | Harmonize with magical sources |
+| Surge | 3 | 6ct | Flood area with mana |
+| Sever | 4 | 8ct | Cut mana connection |
+| **Enchant** | **4** | **Ritual (2 hours+)** | **Bond Aether into an object** |
+
+---
+
+## 4. Wards
+
+A ward is an enchantment placed on a location, object, or threshold that fades over time. Unlike artifacts, wards are Aether **stored** in a structure, not bonded into it. The magic leaks. Eventually, it runs out.
+
+Wards include both stationary protections (alarm wards, barrier wards) and **wearable charms** (amulets, rings, tokens). A charm is simply a ward you wear — same rules, same decay, portable form factor.
+
+### 4.1 Ward Types
+
+**Alarm** — Warding (Circle, Seal) + Occult Lore
+Alerts the caster when a threshold is crossed or a condition is met. Alert form: mental ping (silent, range depends on potency), audible sound (local), or visible flash (obvious).
+
+**Barrier** — Warding (Seal, Barrier) + Occult Lore
+Blocks physical or magical passage through a threshold. Can be keyed to specific people. Strength ranges from "slows passage" to "physically impassable wall of force."
+
+**Concealment** — Divination (Detect) + Warding (Circle) + Occult Lore
+Hides an area from magical detection. Divination spells return nothing — the warded area appears magically blank. Does not make the area physically invisible.
+
+**Protection** — Warding (Shield, Circle) + Occult Lore
+Provides damage reduction or resistance to occupants. A warded safe room might grant +2 armor soak against magical damage or impose −10% on attackers' rolls within the boundary.
+
+**Trap** — Warding (Seal) + relevant offensive spell + Occult Lore
+Triggers an offensive spell effect when a condition is met. Fires once, then the ward is spent.
+
+**Charm (wearable ward)** — Various schools + Craft
+A portable ward worn on the body. Provides a passive magical effect while worn. Examples: skill boost amulet (+5% to a specific skill), resistance pendant (−2 damage from a type), warmth charm (comfortable in cold). Requires 10 minutes of contact to attune. Follows the same decay rules as all wards.
+
+### 4.2 Ward Duration (Decay)
+
+Ward duration follows the decay rule (§1.1), with the creation tier determined by casting result:
+
+| Effort Level | Creation Tier | Creation Time | Duration (1d6 ×) | Typical Use |
+|-------------|--------------|--------------|-------------------|-------------|
+| **Field** (1) | Weak | 10–30 minutes | 1d6 days | Camp perimeter, quick alarm, temporary charm |
+| **Prepared** (2) | Standard | 2–6 hours | 1d6 weeks | Safehouse ward, supply cache, working charm |
+| **Ritual** (3) | Strong | 1–3 days | 1d6 months | Headquarters protection, long-term concealment, quality charm |
+| **Masterwork** (4) | Spectacular | 1+ week | 1d6 years | Stronghold ward, institutional protection, prized charm |
+
+The creator rolls the d6 openly at creation time and knows the result.
+
+### 4.3 Ward Breaking
+
+**Counter-spell method:** Cast Unbind at the ward's **effective tier** or higher. A Weak ward falls to any successful Unbind. A Spectacular ward requires a Spectacular Unbind.
+
+**Galvanic weakening:** Every 5 points of net Galvanic shift drops a ward's effective tier by 1:
+
+| Net Balance | Spectacular Ward | Strong Ward | Standard Ward | Weak Ward |
+|---|---|---|---|---|
+| 0 (neutral) | Spectacular | Strong | Standard | Weak |
+| −5 (moderate Galvanic) | Strong | Standard | Weak | **Fails** |
+| −10 (heavy Galvanic) | Standard | Weak | **Fails** | **Fails** |
+| −15 (Galvanic Zone) | Weak | **Fails** | **Fails** | **Fails** |
+| −20 (Deep Galvanic) | **Fails** | **Fails** | **Fails** | **Fails** |
+
+This creates tactical options: drag Galvanic equipment to a warded location, shift the balance, and the ward becomes easier to Unbind — or fails outright. This is noticeable (the Galvanic gear is loud, the shift is detectable by anyone with magical sensitivity) and takes effort, but it's a viable path.
+
+Wards that fail due to Galvanic drowning stop functioning. When the Galvanic shift subsides, the ward resumes if it still has decay time remaining.
+
+**Detection:** Detect spell (Divination) reveals the presence and general nature of a ward. Reveal shows exact boundaries and trigger conditions. Voltaic Lantern (Galvanic oddity) shows magical residue — wards glow faintly under its beam.
+
+**Wards cannot be physically destroyed.** The magic reinforces the object it's placed on — a warded door doesn't break when you hit it with an axe. You need magical means to get past it.
+
+**Unbind** permanently destroys the ward — the magic unravels and is gone. **Galvanic weakening** just puts the ward to sleep — the Aether goes dormant, the effect stops, but when the Galvanic shift subsides the ward wakes back up. The magic was suppressed, not destroyed.
+
+---
+
+## 5. Potions
+
+A potion is a single-use consumable that delivers a magical effect when drunk, applied, or thrown. Potions are the most accessible form of magical creation — a skilled caster with basic alchemical knowledge can brew them. They are also the most perishable.
+
+### 5.1 Categories
 
 **Healing Potions** — Vivimancy (Mend, Purge, Bloom)
 
@@ -180,8 +294,6 @@ A potion is a single-use consumable that delivers a magical effect when drunk, a
 | Moderate | Standard | Heal 2d8 HP, knit minor fractures | 4 hours |
 | Major | Strong | Heal 3d10 HP, mend broken bones | 8 hours |
 | Critical | Spectacular | Heal 4d12 HP, purge disease, stabilize dying | 1 day |
-
-Shelf life follows the universal decay rule (§1.1): a Minor healing potion lasts 1d6 days. A Critical healing potion lasts 1d6 years.
 
 **Fortifying Potions** — Vivimancy (Fortify) or Transmutation (Alter Property)
 
@@ -209,179 +321,38 @@ Shelf life follows the universal decay rule (§1.1): a Minor healing potion last
 | Silence | Ley Weaving (Dampen) | Standard | Suppress all sound within arm's reach | 30 minutes | 4 hours |
 | Aqua Lung | Vivimancy (Fortify) | Standard | Breathe underwater | 2 hours | 4 hours |
 
-GMs should use these as templates. Any spell effect that can plausibly be bottled is a candidate for a potion.
+GMs should use these as templates. Any spell effect that can plausibly be bottled is a candidate.
 
-#### Shelf Life
+### 5.2 Shelf Life
 
-Potion shelf life follows the universal decay rule (§1.1). A Weak-tier potion lasts 1d6 days. A Spectacular-tier potion lasts 1d6 years. The creator rolls openly at brewing time and knows exactly how long they have.
+Potion shelf life follows the decay rule (§1.1). A Weak-tier potion lasts 1d6 days. A Spectacular-tier potion lasts 1d6 years. The creator rolls openly at brewing time.
 
-Past its shelf life, a potion doesn't become inert — it becomes **unpredictable**. Roll d100 when consuming an expired potion: 01–50 reduced effect (half potency), 51–80 no effect, 81–95 wrong effect (GM chooses something thematically related but unhelpful), 96–100 harmful (treat as a spell misfire).
+Past its shelf life, a potion becomes **unpredictable**. Roll d100: 01–50 reduced effect (half potency), 51–80 no effect, 81–95 wrong effect (GM chooses something thematically related but unhelpful), 96–100 harmful (treat as a spell misfire).
 
-This creates natural pressure. A minor healing potion brewed at Weak tier might only last two days — use it or lose it. A critical healing potion brewed at Spectacular tier radiates power and stays potent for years. The best potions are worth protecting; the cheapest ones are worth using immediately.
+### 5.3 Potion Creation
 
-#### Economy
+Creating a potion requires a casting skill (Scholarly or Wild) and a preparation skill (Medicine or Science). Both must be held by the same character.
 
-There is no potion shop. Potions are crafted by casters for their own use or as favors, traded between Adventuring Societies, found as valuable loot in abandoned laboratories, or commissioned from the rare caster who has both the skill and the inclination to brew for hire. A reliable source of potions is a relationship worth protecting — not a storefront.
+| Potency | Min Casting | Min Medicine/Science | Exhaustion |
+|---------|-----------|---------------------|-----------|
+| Minor (Weak) | 1 | 1 | Weak tier |
+| Moderate (Standard) | 2 | 2 | Standard tier |
+| Major (Strong) | 3 | 2 | Strong tier |
+| Critical (Spectacular) | 4 | 3 | Spectacular tier |
 
----
+Process follows standard casting: roll against casting target, achieve a tier, apply backlash rules. Backlash during potion creation can ruin the potion (d100, 50 or under = destroyed).
 
-### 2.3 Charms
+### 5.4 Economy
 
-A charm is a wearable enchanted object that provides a passive magical effect while worn. Amulets, rings, bracers, inscribed tokens, enchanted gloves, warded cloaks — any object that can be worn or carried on the body can be a charm.
-
-#### Effects
-
-| Type | Effect | Example Item |
-|------|--------|-------------|
-| **Skill Boost** | +5% to a specific skill | Marksman's ring (+5% Firearms), thief's gloves (+5% Sleight of Hand) |
-| **Enhanced Skill Boost** | +10% to a specific skill | Rare. Master-level crafting. A surgeon's amulet (+10% Medicine). |
-| **Resistance** | Reduce damage from one type by 2 | Fire-ward pendant (−2 fire damage), grounding bracelet (−2 lightning) |
-| **Sense Enhancement** | Sharpen one sense | Owl-eye monocle (see clearly in dim light), whispering earring (hear through one wall) |
-| **Attribute Boost** | +1 to an attribute for specific checks | Extremely rare. A strength charm (+1 PP for Athletics only). |
-| **Utility** | Minor passive effect | Warmth charm (comfortable in cold), water-pure token (purifies water you touch), light-stone (glows on command) |
-
-Attribute boost charms are the rarest and most valuable. A charm that grants +1 to an attribute even for limited checks is master-level work, and the kind of thing powerful factions would pay dearly — or kill — to acquire.
-
-#### Attunement and Interference
-
-Wearing a charm requires **attunement** — a brief period (10 minutes) of contact where the wearer's body adapts to the enchantment's magical signature. Once attuned, the charm's effect is persistent as long as it's worn.
-
-**Interference.** Multiple charms create overlapping magical fields that can disrupt each other. There is no hard limit on how many charms a character can wear, but the risk of interference grows:
-
-| Charms Worn | Interference Chance |
-|-------------|-------------------|
-| 1–2 | None |
-| 3 | 10% per day (or per dramatically appropriate moment) |
-| 4 | 20% |
-| 5 | 30% |
-| 6+ | +10% per additional charm |
-
-When interference triggers, roll d6:
-
-| d6 | Interference Effect |
-|----|-------------------|
-| 1 | **Flicker** — One random charm (d6, reroll if no charm in that slot) goes inert for 1d4 hours. |
-| 2 | **Cross-talk** — Wrong charm activates. The GM picks a dramatic (mis)application. A strength charm boosts Persuasion instead; a fire ward flares heat instead of absorbing it. |
-| 3 | **Static** — All charms crackle with visible magical discharge. −10% to Stealth and Social checks for 1 hour. Everyone nearby notices. |
-| 4 | **Surge** — One random charm's effect doubles for 10 minutes, then goes inert for 1d4 hours. |
-| 5 | **Drain** — All charms draw extra energy. Wearer takes 1d4 exhaustion damage. |
-| 6 | **Cascade** — All charms go inert for 1d4 hours. Must re-attune to each one. |
-
-**Design intent:** This is a push-your-luck system. Wearing 3 charms is a manageable risk most characters will accept. Wearing 5 is gambling. Wearing 7 is begging for a cascade failure at the worst possible moment. The interference table is designed to create memorable moments, not just penalties — a charm surging at the wrong time can be as dramatic as it going dead.
-
-#### Duration
-
-Charm duration follows the universal decay rule (§1.1). A charm created at Weak tier lasts 1d6 days — barely worth the effort. A Standard charm lasts 1d6 weeks. A Strong charm lasts 1d6 months. A Spectacular charm lasts 1d6 years — a prized possession. Re-enchanting an expired charm is routine maintenance for a caster with the right skills — costs exhaustion and time but no XP.
+Potions aren't mass-produced, but they are traded. A healer in a magical neighborhood might sell remedies alongside mundane medicines. Adventuring Societies trade them as favors or currency. A skilled brewer with a reputation can charge for commissioned work. Abandoned laboratories sometimes yield surviving bottles. There's no alchemy industry, no chain of potion shops — but where there are casters, there is commerce.
 
 ---
 
-### 2.4 Wards
+## 6. Open Questions
 
-A ward is a stationary enchantment placed on a location, object, or threshold. Unlike portable artifacts, wards are fixed — they protect a place rather than a person. Wards represent the most "respectable" application of enchanting, because everyone wants protection from the magical chaos engulfing the world.
-
-#### Types
-
-**Alarm Ward** — Warding (Circle, Seal) + Occult Lore
-Alerts the caster when a threshold is crossed or a condition is met. The alert can be a mental ping (silent, range depends on potency), an audible sound (local), or a visible flash (obvious but unmissable).
-
-**Barrier Ward** — Warding (Seal, Barrier) + Occult Lore
-Blocks physical or magical passage through a threshold. Can be keyed to allow specific people (the caster, named allies) while blocking everyone else. Strength ranges from "slows passage" to "physically impassable wall of force."
-
-**Concealment Ward** — Divination (Detect) + Warding (Circle) + Occult Lore
-Hides an area from magical detection. Divination spells (Detect, Reveal, Scry) return nothing — the warded area appears magically blank. Does not make the area physically invisible, just magically opaque.
-
-**Protection Ward** — Warding (Shield, Circle) + Occult Lore
-Provides damage reduction or resistance to occupants within the warded area. A well-warded safe room might grant +2 armor soak against magical damage, or impose a −10% penalty on attackers' rolls within the ward's boundary.
-
-**Trap Ward** — Warding (Seal) + relevant offensive spell + Occult Lore
-Triggers an offensive magical effect when a condition is met (someone crosses a threshold, touches a warded object, speaks a word). The trapped spell can be any offensive effect the creator knows — a blast of Force, a Wither touch, an Elemental discharge. The trap fires once, then the ward is spent.
-
-#### Duration
-
-Ward duration follows the universal decay rule (§1.1), with the creation tier determined by the effort invested:
-
-| Effort Level | Creation Tier | Creation Time | Duration (1d6 ×) | Typical Use |
-|-------------|--------------|--------------|-------------------|-------------|
-| **Field** | Weak | 10–30 minutes | 1d6 days | Securing a campsite, blocking a doorway, quick alarm on an escape route |
-| **Prepared** | Standard | 2–6 hours | 1d6 weeks | Protecting a safehouse, warding a supply cache, securing a base of operations |
-| **Ritual** | Strong | 1–3 days | 1d6 months | Headquarters protection, long-term concealment, securing a vault |
-| **Permanent** | Spectacular+ | 1+ week, master-level | Indefinite | Protecting a stronghold, sealing a dangerous site, institutional wards |
-
-Permanent wards require casting skill 4+, Occult Lore 3+, and a significant exhaustion investment spread over the creation period. They are the pride of the Warding discipline — and the most valuable service a Warder can offer.
-
-#### Detection and Breaking
-
-Wards can be found and broken:
-
-- **Detection:** Detect spell (Divination) reveals the presence and general nature of a ward. Reveal shows its exact boundaries and trigger conditions. Non-magical detection is possible with the right Galvanic equipment (see FIREARMS_EQUIPMENT.md — Aetheric Lamp).
-- **Breaking:** Unbind spell (Warding) directly unravels a ward. Banish (Warding) can suppress a ward temporarily. Brute-force magical or physical damage can overwhelm a ward's threshold (GM determines hit points based on ward quality). Galvanic devices in sufficient quantity can drown out a ward's magic by shifting the local Aetheric balance.
-
-A ward broken by Unbind fails silently. A ward broken by damage or Galvanic overload fails dramatically — the stored magical energy discharges in an uncontrolled burst. Anyone within arm's reach takes 1d4 damage per effort level of the ward (a ritual ward explodes for 3d4; a field ward pops for 1d4).
-
----
-
-## 3. Artifact Creation
-
-Creating a magical artifact is a specialized discipline that combines casting ability with physical craftsmanship. It is not a separate skill — it emerges from the intersection of existing skills.
-
-### 3.1 Requirements
-
-**Casting skill:** Scholarly Casting or Wild Casting at sufficient level (see individual artifact tables).
-
-**Craft skill:** Craft for physical objects (weapons, amulets, tokens), Engineering for complex mechanisms (Galvanic-hybrid devices, mechanical wards), Medicine for potions and biological preparations, Science for alchemical formulations.
-
-Both skills must be held by the **same character**. A caster who can't shape metal can't enchant a sword. A blacksmith who can't cast can't imbue a blade. This makes enchanter-artisans a rare and valuable specialization.
-
-> **Design Note:** We considered requiring caster + artisan collaboration (two characters), which would reinforce the "mixed party" philosophy. We chose single-character for simplicity and because the dual-skill requirement already creates interesting character build tension — a character investing in both casting and Craft is sacrificing depth in either. GMs who prefer the collaborative model can house-rule that two characters working together each contribute their best relevant skill.
-
-### 3.2 The Creation Process
-
-**Step 1 — Prepare the vessel.** The physical object must be crafted or acquired. A weapon must be forged, a potion vessel prepared, a charm carved or shaped. **Craft/Engineering/Medicine/Science check** determines the quality of the physical vessel. Failure = wasted materials, start over.
-
-**Step 2 — Channel the enchantment.** The caster imbues the vessel with a spell effect. This is sustained casting — the caster maintains focus and channels magical energy over the creation period. **Casting check** against the caster's Scholarly or Wild Casting target. Success = enchantment takes hold. Failure = the magic dissipates, time is wasted, and the caster suffers exhaustion as if they'd cast the spell.
-
-**Step 3 — Backlash check.** Normal backlash rules apply at the end of creation, rolled at the tier corresponding to the enchantment's power:
-
-| Artifact Quality | Backlash Tier |
-|-----------------|--------------|
-| Basic / Minor potion | Weak |
-| Standard / Moderate potion | Standard |
-| Superior / Major potion | Strong |
-| Permanent / Critical potion | Spectacular |
-
-Backlash during creation can **ruin the item**. If backlash triggers, in addition to the normal physical damage and possible Wild Effect, roll d100: on 50 or under, the item is destroyed — the magic destabilizes the vessel and the enchantment collapses. The caster is left with wreckage, bruises, and a story to tell.
-
-**Step 4 — Exhaustion.** The caster accumulates exhaustion equal to the spell's tier cost (from SPELL_COMPENDIUM.md) for the enchantment's tier. This exhaustion is **not recovered until the creation process completes** — it represents sustained magical effort over hours or days. A caster creating a Standard-quality enchanted weapon with a Complexity 2 spell burns 6 EP that they carry for the entire creation period. This naturally limits how many artifacts a single caster can create before they need extended rest.
-
-### 3.3 Creation Summary Table
-
-| Artifact | Min Casting | Min Craft* | Time | Exhaustion |
-|----------|-----------|-----------|------|-----------|
-| Basic enchanted weapon (3 charges) | 2 | Craft 1 | 4 hours | Weak tier |
-| Standard enchanted weapon (5 charges) | 3 | Craft 2 | 1 day | Standard tier |
-| Superior enchanted weapon (10 charges) | 4 | Craft 3 | 2 days | Strong tier |
-| Permanent enchanted weapon | 4 | Craft 3 | 1 week | Spectacular tier |
-| Minor potion | 1 | Medicine 1 or Science 1 | 2 hours | Weak tier |
-| Moderate potion | 2 | Medicine 2 or Science 2 | 4–8 hours | Standard tier |
-| Major potion | 3 | Medicine 2 or Science 2 | 8 hours–1 day | Strong tier |
-| Critical potion | 4 | Medicine 3 or Science 3 | 1 day | Spectacular tier |
-| Skill boost charm (+5%) | 2 | Craft 1 | 4 hours | Weak tier |
-| Skill boost charm (+10%) | 3 | Craft 2 | 1 day | Standard tier |
-| Resistance charm | 3 | Craft 2 | 1 day | Standard tier |
-| Attribute boost charm | 4 | Craft 3 | 3 days | Strong tier |
-| Field ward | 1 | Occult Lore 1 | 10–30 min | Weak tier |
-| Prepared ward | 2 | Occult Lore 2 | 2–6 hours | Standard tier |
-| Ritual ward | 3 | Occult Lore 3 | 1–3 days | Strong tier |
-| Permanent ward | 4 | Occult Lore 3 | 1+ week | Spectacular tier |
-
-*Craft column shows the secondary skill and minimum level required. Substitute Engineering, Medicine, or Science where noted.
-
----
-
-## 4. Open Questions
-
-1. **Artifact pricing** — What does an enchanted weapon cost in currency? Depends on currency system design (see pending-tasks.md). For now, treat as "extremely valuable, GM determines."
-2. **Re-enchanting frequency** — How often do charge-based weapons need topping up in practice? Needs playtesting to determine if 3/5/10 charges feel right.
+1. **Enchanted firearms** — Can firearms be enchanted? The current rule says no (non-modern weapons only). This creates a clean magic/tech divide but closes off an interesting design space. If revisited: an enchanted firearm would be fighting itself — pushing the Aetheric balance against its own Reliability. Needs specific rules if ever allowed.
+2. **Artifact pricing** — What does an enchanted weapon cost in currency? Depends on currency system design (see pending-tasks.md). For now, treat as "extremely valuable, GM determines."
 3. **Potion ingredients** — Should there be a codified ingredient system, or leave it to GM narrative? Leaning toward narrative (avoids herbalism minigame that doesn't fit the system's philosophy).
-4. **Enchanted firearms** — Can firearms be enchanted? The magic/tech tension suggests this should be possible but problematic — an enchanted firearm pushes the Aetheric balance against itself. Needs specific rules.
-5. **Pre-Eruption artifact mechanics** — Should Pre-Eruption artifacts follow different rules? They might have effects that don't map to known spells, or durations that shouldn't be possible. Left intentionally vague for GMs.
+4. **Pre-Eruption artifact mechanics** — Should Pre-Eruption artifacts follow different rules? They might have effects that don't map to known spells, or multiple enchantments on a single object. Left intentionally vague for GMs.
+5. **Non-weapon artifact tags** — The framework supports enchanted armor, tools, and other objects, but specific tag tables haven't been written yet. Expand as play demands.
+6. **Charm stacking** — Currently no special rules for wearing multiple charms (wearable wards). If playtesting reveals abuse, revisit with an interference system.

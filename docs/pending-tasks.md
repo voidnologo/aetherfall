@@ -24,4 +24,4 @@
 - [ ] Mobile sidebar UX testing on real devices
 - [ ] Enchanted firearms rules — magic/tech tension when imbuing a firearm
 - [ ] Artifact pricing — depends on currency system design
-- [ ] Add artifacts section to web rulebook (equipment.html and/or new page)
+- [x] Add artifacts section to web rulebook (new artifacts.html, Chapter 13)
