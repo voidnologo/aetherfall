@@ -1,11 +1,13 @@
 # Pending Tasks
 
 ## Next Up
-- [ ] Visual polish and iteration on web rulebook based on feedback
 - [ ] Character sheet art / watermarks
+- [ ] Refine landing page tagline for Aetherfall identity
 - [ ] Save/load character data in builder (localStorage)
+- [ ] Visual polish and iteration on web rulebook based on feedback
 
 ## Backlog
+- [ ] Bundle Mermaid.js locally so flowcharts work offline
 - [ ] Builder: validate creation-time skill cap (level 3 max at creation)
 - [ ] Multiplayer sync for GM tools (WebRTC peer-to-peer?) — stretch goal
 - [ ] Additional GM tools: NPC generator, mission brief generator, Society generator
