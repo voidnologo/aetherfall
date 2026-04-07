@@ -1,7 +1,6 @@
 # Pending Tasks
 
 ## Next Up
-- [ ] Web rulebook update for mid-campaign spell learning (magic.html — rules exist in MAGIC_SYSTEM.md §5.4)
 - [ ] Character sheet art / watermarks
 - [ ] Refine landing page tagline for Aetherfall identity
 - [ ] Save/load character data in builder (localStorage)
