@@ -763,7 +763,7 @@ function renderSkills() {
             <select onchange="skillRows[${i}].skill=this.value;renderSkills()">${opts}</select>
             <div class="skill-stat">${statDisplay}</div>
             <select onchange="skillRows[${i}].level=+this.value;renderSkills()" style="text-align:center;">
-                ${[1,2,3,4,5].map(l => `<option value="${l}"${l===row.level?' selected':''}>${l}</option>`).join('')}
+                ${[1,2,3].map(l => `<option value="${l}"${l===row.level?' selected':''}>${l}</option>`).join('')}
             </select>
             <div class="skill-target">${target}</div>
             <button class="remove-btn" onclick="removeSkill(${i})">&times;</button>

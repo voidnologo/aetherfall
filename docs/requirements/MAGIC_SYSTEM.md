@@ -406,7 +406,54 @@ The rarest and most feared school. Ley Weavers don't cast spells so much as resh
 - **Scholarly:** Choose specific spells from **any school**. These go in your spellbook. You can only cast spells in your book. Breadth of access, limited selection.
 - **Wild:** You don't choose individual spells. You have access to your schools **as a whole** — every spell in every school you can reach. You can attempt any spell in any of your accessible schools. Narrow access, complete depth.
 
-> **OPEN:** Can scholarly casters learn new spells mid-campaign through research, mentorship, or discovery? Can wild casters develop more control over time (hybrid progression)?
+### 5.4 Mid-Campaign Spell Acquisition
+
+#### Scholarly Casters — Learning New Spells
+
+A scholarly caster's spellbook is never finished. New spells can be learned during play — but learning magic is an experience, not a transaction. Each new spell requires four things:
+
+**1. A source.** You can't learn from nothing. Three methods:
+
+- **Mentor** — Find a caster who knows the spell and convince them to teach you. This means building relationships, joining factions, or earning trust. A mentor makes the learning check easier but requires narrative investment to find and maintain.
+- **Research** — Access a library, archive, university, or private collection with magical texts. Harder than learning from a mentor (you're teaching yourself from written theory), but you can find spells nobody nearby knows how to cast. Scholarly institutions may restrict access, charge fees, or demand favors.
+- **Discovery** — You found something in the field: a scroll, a spellbook fragment, an inscription on a ruin wall. You must decode it before you can learn from it. Risk: misreading a formula can cause a misfire on your first cast attempt of the new spell (GM's call).
+
+**2. Downtime.** Learning a spell takes roughly 1–2 weeks of focused study and practice. This cannot be compressed into a long rest. The GM determines what's reasonable given the narrative — learning from a patient mentor in a quiet library is different from deciphering a water-damaged scroll in a besieged city.
+
+**3. XP investment.** The cost depends on familiarity:
+
+| Situation | Success Cost | Failure Cost |
+|-----------|-------------|-------------|
+| Spell in a school where you already know at least one spell | **2 XP** | **1 XP** |
+| Spell in a school where you know no spells (branching out) | **3 XP** | **1 XP** |
+
+On failure, the 1 XP isn't wasted — you learned *something*, just not enough. You must find new downtime and attempt again (with a fresh source or continued access to the original one).
+
+**4. Scholarly Casting check.** Roll against your Scholarly Casting target number. Success means the spell is learned and added to your spellbook. Failure means partial understanding — the theory is there but the practical execution isn't clicking yet. Try again after more study.
+
+**Design intent:** Each new spell should feel like an achievement — a story the player remembers. "I learned Barrier from old Magister Holt after we saved his archive from the fire" is a character moment. "I spent 2 XP" is not. The combination of narrative investment, time, XP, and a roll that might fail creates genuine tension and makes spell acquisition a memorable part of the campaign.
+
+#### Wild Casters — Gaining New Schools
+
+Wild casters don't learn individual spells — they already have access to every spell in their schools. Their mid-campaign growth comes from expanding which schools they can reach.
+
+**Cost: 7 XP + narrative quest.**
+
+The narrative quest is non-negotiable. Gaining a new school means your instinctive connection to the Aether has fundamentally deepened. This happens through profound magical experiences:
+
+- Surviving a catastrophic Wild Zone storm
+- Making direct contact with a ley line nexus
+- Communion with a Veil entity (terrifying and not fully understood)
+- Channeling through an unknown magical phenomenon during a crisis
+- A near-death experience while casting that cracks open a new part of your awareness
+
+The adventure IS part of the cost. A wild caster cannot gain a new school by meditating in a tavern. The magic must be *felt*, viscerally and dangerously, in a moment that reshapes how the caster relates to the Aether.
+
+**No cap on schools gained this way.** PW determines starting schools at character creation (minimum 1), but mid-campaign school acquisition is not gated by PW. A wild caster who plays long enough — and seeks out the experiences — can eventually access all six schools. At 7 XP per school, a wild caster starting with 1 school would need 35 XP to reach all six. That's a long campaign of dedicated investment, and it should feel like one.
+
+#### Path Switching
+
+Scholarly and Wild paths cannot be switched. The two paths represent fundamentally different relationships with magic — one is discipline imposed on chaos, the other is instinct riding the current. You cannot unlearn how you feel the Aether. This choice is permanent and defining.
 
 ---
 
@@ -471,7 +518,7 @@ Each spell needs a unique misfire description that:
 3. ~~**Backlash severity**~~ **RESOLVED** — 1d4 flat physical damage + 25% chance of Wild Effect (d10 table with 3-tier escalation, permanent on 3rd)
 4. **Wild vs Scholarly backlash rates** — Exact multiplier/modifier for wild casters' higher backlash chance
 5. ~~**Push It mechanic details**~~ **RESOLVED** — Push one tier up. Cost: half qualified tier's EP + full pushed tier's EP. Backlash: doubled at pushed tier's rate. Hard cap applies. One push per cast. (Session 8)
-6. **Mid-campaign spell learning** — Can scholarly casters find/learn new spells? Can wild casters develop control?
+6. ~~**Mid-campaign spell learning**~~ **RESOLVED** — Scholarly: narrative source + downtime + 2-3 XP + casting check (fail costs 1 XP). Wild: 7 XP + narrative quest for new schools, no PW cap. No path switching. See §5.4. (Session 19)
 7. **Spell interaction with magic/tech zones** — How do zone levels modify casting? Penalty to target number? Forced tier reduction? Automatic backlash increase?
 8. ~~**Individual spell tier tables**~~ **RESOLVED** — All 37 spells designed with full tier tables, costs, casting times, and misfire effects. See SPELL_COMPENDIUM.md (Session 2).
 9. ~~**Wild caster tier suppression**~~ **RESOLVED** — Can step down tiers based on 25% skill brackets (0/1/2/2 tiers at 1-25/26-50/51-75/76+). Capped at 2 — even masters can't fully tame wild magic. Mirrors crit range mechanic.
