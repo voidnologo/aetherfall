@@ -258,38 +258,49 @@
             .no-print { display: none; }
         }
 
-        /* ── Screen toolbar ── */
+        /* ── Screen ── */
         @media screen {
-            .print-toolbar {
-                position: fixed; top: 0; left: 0; right: 0;
-                background: #333; color: #fff;
-                padding: 8px 16px; display: flex;
-                justify-content: space-between; align-items: center;
-                z-index: 100; font-family: sans-serif;
+            body {
+                background: #0e1117; padding: 2rem;
+                font-family: 'Source Serif 4', 'Segoe UI', serif;
             }
-            .print-toolbar button {
-                background: #c8a04e; color: #1a1a1a; border: none;
-                padding: 6px 16px; border-radius: 4px; cursor: pointer;
-                font-weight: 600; font-size: 13px;
+            .tool-header {
+                text-align: center; margin-bottom: 2rem;
             }
-            .print-toolbar button:hover { background: #d4b05e; }
-            .print-toolbar a { color: #c8a04e; text-decoration: none; }
-            body { padding-top: 50px; background: #e0e0e0; }
+            .tool-header h1 {
+                font-family: 'Playfair Display', serif;
+                font-size: 2rem; font-weight: 700;
+                color: #eef0f5; margin-bottom: 0.3rem;
+            }
+            .tool-header p {
+                color: #8a92a4; font-size: 0.95rem;
+            }
+            .tool-header a {
+                color: #8a92a4; text-decoration: none; font-size: 0.85rem;
+            }
+            .tool-header a:hover { color: #eef0f5; }
+            .tool-header button {
+                background: #3dc8e0; color: #080b14; border: none;
+                padding: 8px 20px; border-radius: 4px; cursor: pointer;
+                font-weight: 600; font-size: 14px; margin-top: 0.75rem;
+            }
+            .tool-header button:hover { background: #5dd8ec; }
             .page {
-                background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-                margin: 16px auto; padding: 0.35in;
+                background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+                margin: 0 auto 16px; padding: 0.35in;
             }
         }
     </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<div class="print-toolbar no-print">
-    <div>
-        <a href="../character-sheet.html">&larr; Character Sheet</a>
-        &nbsp;&middot;&nbsp;
-        <strong>Adventure Character Sheet (Sample)</strong>
-    </div>
+<div class="tool-header no-print">
+    <a href="../character-sheet.html">&larr; Back to Character Sheet</a>
+    <h1>Sample Character Sheet</h1>
+    <p>Elara Voss &mdash; Smoke Surgeon &mdash; a filled-out example of what a character looks like</p>
     <button onclick="window.print()">Print / Save PDF</button>
 </div>
 

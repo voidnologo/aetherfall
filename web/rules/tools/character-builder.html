@@ -11,19 +11,35 @@
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
         body {
-            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-            background: #080b14; color: #d4dae3;
-            line-height: 1.5;
+            font-family: 'Source Serif 4', 'Segoe UI', serif;
+            background: #0e1117; color: #d4dae3;
+            line-height: 1.5; padding: 2rem 2rem 80px;
         }
 
-        .toolbar {
-            position: sticky; top: 0; z-index: 100;
-            background: #0b0e17; border-bottom: 1px solid #1a1f32;
-            padding: 10px 20px; display: flex;
-            justify-content: space-between; align-items: center;
+        .tool-header {
+            text-align: center; margin-bottom: 2rem;
         }
-        .toolbar a { color: #3dc8e0; text-decoration: none; }
-        .toolbar-title { font-weight: 700; font-size: 16px; }
+        .tool-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem; font-weight: 700;
+            color: #eef0f5; margin-bottom: 0.3rem;
+        }
+        .tool-header p {
+            color: #8a92a4; font-size: 0.95rem;
+        }
+        .tool-header a {
+            color: #8a92a4; text-decoration: none; font-size: 0.85rem;
+        }
+        .tool-header a:hover { color: #eef0f5; }
+
+        .action-bar {
+            position: fixed; bottom: 0; left: 0; right: 0;
+            z-index: 100; background: rgba(11, 14, 23, 0.92);
+            backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+            border-top: 1px solid #1a1f32;
+            padding: 10px 20px; display: flex;
+            justify-content: center; align-items: center; gap: 12px;
+        }
         .btn {
             background: #3dc8e0; color: #080b14; border: none;
             padding: 8px 20px; border-radius: 4px; cursor: pointer;
@@ -382,19 +398,21 @@
             }
         }
     </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<div class="toolbar">
-    <div>
-        <a href="../character-sheet.html">&larr; Character Sheet</a>
-        &nbsp;&middot;&nbsp;
-        <span class="toolbar-title">Character Builder</span>
-    </div>
-    <div style="display:flex;gap:8px;">
-        <button class="btn btn-secondary" onclick="resetForm()">Reset</button>
-        <button class="btn" onclick="generateAndPrint()">Print / Save PDF</button>
-    </div>
+<div class="tool-header">
+    <a href="../character-sheet.html">&larr; Back to Character Sheet</a>
+    <h1>Character Builder</h1>
+    <p>Fill in your character details below &mdash; all math is done for you. Hit Print when you&rsquo;re done.</p>
+</div>
+
+<div class="action-bar">
+    <button class="btn btn-secondary" onclick="resetForm()">Reset</button>
+    <button class="btn" onclick="generateAndPrint()">Print / Save PDF</button>
 </div>
 
 <!-- ══════════════ FORM WIZARD ══════════════ -->
