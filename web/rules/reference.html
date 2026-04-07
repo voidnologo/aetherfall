@@ -8,6 +8,130 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
+<style>
+  /* ── Quick Reference Cards ── */
+  .ref-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+  @media (max-width: 768px) {
+    .ref-grid { grid-template-columns: 1fr; }
+  }
+
+  .ref-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--glass-border);
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+  }
+  .ref-card.full-width {
+    grid-column: 1 / -1;
+  }
+
+  .ref-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.95rem;
+    color: var(--theme-accent);
+    margin-bottom: 0.6rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--glass-border);
+    letter-spacing: 0.03em;
+  }
+  .ref-card h3::after { display: none; }
+
+  .ref-card p, .ref-card li {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--text);
+  }
+
+  .ref-card ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .ref-card li {
+    padding: 0.15rem 0;
+  }
+
+  .ref-card li::before {
+    content: '\203A';
+    color: var(--theme-accent);
+    margin-right: 0.4em;
+    font-weight: 700;
+  }
+
+  .ref-formula {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.82rem;
+    color: var(--text-bright);
+    background: var(--bg-raised);
+    border-radius: 3px;
+    padding: 0.15rem 0.4rem;
+    white-space: nowrap;
+  }
+
+  .ref-card table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.82rem;
+    margin: 0.4rem 0;
+  }
+  .ref-card th {
+    text-align: left;
+    font-weight: 600;
+    color: var(--text-dim);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 0.25rem 0.5rem;
+    border-bottom: 1px solid var(--glass-border);
+  }
+  .ref-card td {
+    padding: 0.25rem 0.5rem;
+    color: var(--text);
+    border-bottom: 1px solid rgba(255,255,255,0.02);
+  }
+  .ref-card td:first-child {
+    font-weight: 600;
+    color: var(--text-bright);
+    white-space: nowrap;
+  }
+
+  .ref-note {
+    font-size: 0.78rem;
+    color: var(--text-dim);
+    font-style: italic;
+    margin-top: 0.3rem;
+  }
+
+  .ref-highlight {
+    color: var(--galvanic);
+    font-weight: 600;
+  }
+
+  .ref-aether { color: var(--aether); }
+  .ref-galvanic { color: var(--galvanic); }
+
+  /* ── Flowcharts ── */
+  .flowchart-section {
+    margin: 2rem 0;
+  }
+  .flowchart-container {
+    background: var(--bg-surface);
+    border: 1px solid var(--glass-border);
+    border-radius: 6px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    overflow-x: auto;
+  }
+  .mermaid {
+    display: flex;
+    justify-content: center;
+  }
+</style>
 </head>
 <body>
 <div id="atmosphere"><canvas id="particle-canvas"></canvas><div class="mist mist-1"></div><div class="mist mist-2"></div><div class="mist mist-3"></div></div>
@@ -16,7 +140,7 @@
 <aside class="sidebar">
   <div class="sidebar-brand"><div class="sidebar-title">Adventure</div><div class="sidebar-subtitle">Rules Reference</div></div>
   <nav class="sidebar-nav"></nav>
-  <div class="sidebar-footer"><a href="../">← Back to Adventure</a></div>
+  <div class="sidebar-footer"><a href="../">&larr; Back to Adventure</a></div>
 </aside>
 <header class="site-header">
   <button class="header-toggle" aria-label="Toggle navigation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
@@ -35,76 +159,330 @@
     <div class="page-hero">
       <span class="page-number">Chapter 14</span>
       <h1 class="page-title">Quick Reference</h1>
-      <p class="page-subtitle">Everything you need at the table, on one page</p>
+      <p class="page-subtitle">Everything you need at the table</p>
     </div>
 
-    <p>
-      Everything in the rulebook, compressed onto one page. Print this, keep it at the table, and
-      you'll rarely need to look anything else up.
-    </p>
+    <!-- ══════════════ CORE MECHANICS ══════════════ -->
 
-    <div class="cheat-sheet">
-  <h3>Adventure RPG &mdash; Cheat Sheet</h3>
-  <pre>THE ROLL: d100 &le; target = success
-  01 = always crit | 00 = always fumble
-  Crit range: 1pt per 25% of target, counted down
+    <h2 id="core" data-toc="Core Mechanics">Core Mechanics</h2>
 
-OPPOSED: both roll, larger margin wins | one success beats one fail
+    <div class="ref-grid">
 
-STATS: PP PC IN SP AW PW | range -3 to +3
+      <div class="ref-card">
+        <h3>The Roll</h3>
+        <ul>
+          <li>Roll <span class="ref-formula">d100 &le; target</span> = success</li>
+          <li><strong>01</strong> = always a critical success</li>
+          <li><strong>00</strong> = always a fumble</li>
+          <li>Crit range: 1 point per 25% of target, counted down from 01</li>
+          <li><strong>Opposed:</strong> both roll, larger margin wins; one success beats one failure</li>
+        </ul>
+      </div>
 
-SKILL TARGET: ((10 + stat) &times; level) + 30
-UNSKILLED:    (5 + stat) &times; 5
+      <div class="ref-card">
+        <h3>Skill Targets</h3>
+        <p style="margin-bottom:0.4rem;">
+          <span class="ref-formula">Target = ((10 + stat) &times; level) + 30</span>
+        </p>
+        <p style="margin-bottom:0.4rem;">
+          <span class="ref-formula">Unskilled = (5 + stat) &times; 5</span>
+        </p>
+        <table>
+          <tr><th>Stat</th><th>Full Name</th><th>Range</th></tr>
+          <tr><td>PP</td><td>Physical Prowess</td><td>&minus;3 to +3</td></tr>
+          <tr><td>PC</td><td>Physical Coordination</td><td>&minus;3 to +3</td></tr>
+          <tr><td>IN</td><td>Intellect</td><td>&minus;3 to +3</td></tr>
+          <tr><td>SP</td><td>Social Prowess</td><td>&minus;3 to +3</td></tr>
+          <tr><td>AW</td><td>Awareness</td><td>&minus;3 to +3</td></tr>
+          <tr><td>PW</td><td>Power</td><td>&minus;3 to +3</td></tr>
+        </table>
+      </div>
 
-WOUNDS (HP per tier = 7+PP)     EXHAUSTION (EP per tier = 7+PW)
-  OK         &mdash;                    OK          &mdash;
-  Harmed    -10%                  Weakened   -10%
-  Maimed    -25%                  Sev. Weak  -25%
-  Incap     -50%                  Incap      -50%
-  Penalties STACK across both tracks
+    </div>
 
-DEATH SAVES: every 3 counts, d100
-  Under 50 = hold | Over 50 = fail | 3 fails = dead
-  01 = stabilize | 00 = instant death
-  Medicine (spd 5) stabilizes | Mend heals
+    <!-- ══════════════ DAMAGE & RECOVERY ══════════════ -->
 
-CASTING: fixed time per spell &rarr; roll d100 &rarr; tier by margin
-  1-10 Weak | 11-30 Standard | 31-50 Strong | 51+ Spectacular
-  Scholarly: 1d100, choose tier, all 6 schools, learned spells only
-  Wild: 2d100 (farther from target), +10 bonus, PW schools, all spells in school
-    Suppress tiers: target 1-25 = 0 | 26-50 = 1 | 51+ = 2
-  Misfire (roll over target): pay misfire EP, suffer misfire effect, 0 accumulation
-  Backlash (% chance, roll d100):
-    Scholarly: W5% S10% St15% Sp25%
-    Wild:      W10% S15% St20% Sp30%
-  Push It: +1 tier, cost = &frac12; current EP + full pushed EP, 2&times; backlash
-  Concentration check: (PW+4) &times; 10 | Cancel: &frac12; Weak EP, 10% backlash
+    <h2 id="damage" data-toc="Damage &amp; Recovery">Damage &amp; Recovery</h2>
 
-AETHERIC BALANCE: sliding scale, Aetheric &harr; Galvanic
-  Spells: +1/+2/+3/+4 Aetheric by tier
-  Galvanic weapons: &minus;(Galvanic rating) per shot (1-3 per weapon)
-  Eff. Reliability = Base &minus; (net &times; 2) | Eff. Casting = Base + (net &times; 2)
-  Each side HELPS its own AND HURTS the other
-  Decays 1/min toward zone baseline (normal = 0)
+    <div class="ref-grid">
 
-COMBAT: timing track &mdash; declare, place token, resolve on count
-  Declaration order: lowest PC first (best react last)
-  Active defense: Melee/Brawl/Athletics opposed, costs +2 speed
-  Parrying tag: +10% defense | Shields: passive soak (B or M)
-  Armor: Ballistic (firearms) / Martial (melee), 25% degrade if exceeded (Crushing: 50%)
-  Hinder: -5%/pt to PC/Athletics/Stealth/Swimming, +1 cast speed/pt
+      <div class="ref-card">
+        <h3>Wound Track</h3>
+        <p style="margin-bottom:0.3rem;">HP per tier = <span class="ref-formula">7 + PP</span></p>
+        <table>
+          <tr><th>Tier</th><th>Penalty</th></tr>
+          <tr><td>OK</td><td>&mdash;</td></tr>
+          <tr><td>Harmed</td><td>&minus;10% to all rolls</td></tr>
+          <tr><td>Maimed</td><td>&minus;25% to all rolls</td></tr>
+          <tr><td>Incapacitated</td><td>&minus;50% to all rolls</td></tr>
+        </table>
+        <p class="ref-note">Wound and exhaustion penalties stack.</p>
+      </div>
 
-RANGE: Close (melee) | Near (no mod) | Far (-10%) | Distant (-20%)
-  Sprint: speed 3 to move one band
-  Cover: partial -10%, heavy -20% | Into melee: -10%
+      <div class="ref-card">
+        <h3>Exhaustion Track</h3>
+        <p style="margin-bottom:0.3rem;">EP per tier = <span class="ref-formula">7 + PW</span></p>
+        <table>
+          <tr><th>Tier</th><th>Penalty</th></tr>
+          <tr><td>OK</td><td>&mdash;</td></tr>
+          <tr><td>Wearied</td><td>&minus;10% to all rolls</td></tr>
+          <tr><td>Drained</td><td>&minus;25% to all rolls</td></tr>
+          <tr><td>Overwhelmed</td><td>&minus;50% to all rolls</td></tr>
+        </table>
+      </div>
 
-MALFUNCTION: ALWAYS roll Reliability first (d100 roll-under), then Ranged
-  Eff. Reliability = Base &minus; (net balance &times; 2)
-  Severity d10: 1-5 Click | 6-7 Jam | 8 Misfire | 9 Mech Fail | 10 Catastrophic
-  Galvanic: +1 severity
+      <div class="ref-card">
+        <h3>Death Saves</h3>
+        <ul>
+          <li>Triggered when reduced below 0 HP in Incapacitated tier</li>
+          <li>Every 3 counts, roll <span class="ref-formula">d100</span></li>
+          <li>Under 50 = hold &nbsp;|&nbsp; Over 50 = fail &nbsp;|&nbsp; 3 fails = dead</li>
+          <li><strong>01</strong> = stabilize &nbsp;|&nbsp; <strong>00</strong> = instant death</li>
+          <li>Medicine (speed 5) stabilizes &nbsp;|&nbsp; Mend spell heals</li>
+        </ul>
+      </div>
 
-RECOVERY: HP 1d4/hour | EP 1d8/hour | +1d4 HP with medical care</pre>
-</div>
+      <div class="ref-card">
+        <h3>Recovery</h3>
+        <table>
+          <tr><th>Type</th><th>Rate</th></tr>
+          <tr><td>HP (natural)</td><td>1d4 per hour of rest</td></tr>
+          <tr><td>HP (medical care)</td><td>1d4 + 1d4 per hour</td></tr>
+          <tr><td>EP (natural)</td><td>1d8 per hour of rest</td></tr>
+        </table>
+      </div>
+
+    </div>
+
+    <!-- ══════════════ SPELLCASTING ══════════════ -->
+
+    <h2 id="casting" data-toc="Spellcasting">Spellcasting</h2>
+
+    <div class="ref-grid">
+
+      <div class="ref-card full-width">
+        <h3>Casting Basics</h3>
+        <ul>
+          <li>Each spell has a fixed casting time &rarr; roll <span class="ref-formula">d100</span> against casting target &rarr; tier determined by margin</li>
+          <li>Concentration check (if interrupted): <span class="ref-formula">(PW + 4) &times; 10</span></li>
+          <li>Cancel a spell: pay &frac12; Weak EP cost, 10% backlash chance</li>
+        </ul>
+        <table>
+          <tr><th>Margin Under Target</th><th>Tier Achieved</th></tr>
+          <tr><td>1&ndash;10</td><td>Weak</td></tr>
+          <tr><td>11&ndash;30</td><td>Standard</td></tr>
+          <tr><td>31&ndash;50</td><td>Strong</td></tr>
+          <tr><td>51+</td><td>Spectacular</td></tr>
+          <tr><td>Over target</td><td>Misfire</td></tr>
+        </table>
+      </div>
+
+      <div class="ref-card">
+        <h3>Scholarly Casting</h3>
+        <ul>
+          <li>Roll <span class="ref-formula">1d100</span></li>
+          <li>Access to all 6 schools</li>
+          <li>Learned spells only (spellbook)</li>
+          <li>Can freely choose a lower tier than rolled</li>
+          <li>Spells known: <span class="ref-formula">7 + PW</span></li>
+        </ul>
+      </div>
+
+      <div class="ref-card">
+        <h3>Wild Casting</h3>
+        <ul>
+          <li>Roll <span class="ref-formula">2d100</span>, use the one farther from target</li>
+          <li>+10 bonus to casting target</li>
+          <li>Access to selected schools only</li>
+          <li>Know all spells in accessible schools</li>
+          <li>Limited tier suppression based on skill level</li>
+        </ul>
+      </div>
+
+      <div class="ref-card">
+        <h3>Backlash</h3>
+        <table>
+          <tr><th>Tier</th><th>Scholarly</th><th>Wild</th></tr>
+          <tr><td>Weak</td><td>5%</td><td>10%</td></tr>
+          <tr><td>Standard</td><td>10%</td><td>15%</td></tr>
+          <tr><td>Strong</td><td>15%</td><td>20%</td></tr>
+          <tr><td>Spectacular</td><td>25%</td><td>30%</td></tr>
+        </table>
+        <p class="ref-note">On backlash: 1d4 physical damage + 25% chance of wild effect.</p>
+      </div>
+
+      <div class="ref-card">
+        <h3>Misfire &amp; Push</h3>
+        <ul>
+          <li><strong>Misfire</strong> (roll over target): pay misfire EP, suffer misfire effect, 0 accumulation</li>
+          <li><strong>Push It:</strong> +1 tier; cost = &frac12; current EP + full pushed EP; 2&times; backlash chance</li>
+        </ul>
+      </div>
+
+      <div class="ref-card">
+        <h3>Aetheric Balance</h3>
+        <ul>
+          <li>Spells shift <span class="ref-aether">Aetheric</span>: +1/+2/+3/+4 by tier</li>
+          <li>Galvanic weapons shift <span class="ref-galvanic">Galvanic</span>: &minus;rating per shot (1&ndash;3)</li>
+          <li><span class="ref-formula">Eff. Reliability = Base &minus; (net &times; 2)</span></li>
+          <li><span class="ref-formula">Eff. Casting = Base + (net &times; 2)</span></li>
+          <li>Each side helps its own and hurts the other</li>
+          <li>Decays 1 point/min toward zone baseline</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- ══════════════ SPELLCASTING FLOWCHART ══════════════ -->
+
+    <div class="flowchart-section">
+      <h3 id="spell-flow" data-toc="Spellcasting Flowchart">Spellcasting Flowchart</h3>
+      <div class="flowchart-container">
+        <pre class="mermaid">
+flowchart TD
+    A(["Declare spell, begin casting"]):::start --> B["Wait casting time"]
+    B --> C{Interrupted?}
+    C -- Yes --> D["Roll concentration check"]
+    D -- Pass --> E
+    D -- Fail --> CANCEL["Spell fizzles"]:::warn
+    C -- No --> E["Roll d100 vs target"]
+    E --> F{Success?}
+    F -- Yes --> G["Check margin for tier"]
+    F -- No --> MISFIRE["MISFIRE"]:::bad
+    G --> H{Push +1 tier?}
+    H -- No --> I["Pay EP, apply effect"]
+    H -- Yes --> PUSH["Pay extra EP"]
+    PUSH --> I
+    I --> J{Backlash check}
+    J -- Pass --> K(["Spell complete"]):::good
+    J -- Fail --> L["Backlash! 1d4 HP"]:::warn
+    L --> K
+
+    classDef start fill:#1a8fa8,color:#fff,stroke:#3dc8e0
+    classDef good fill:#1a6b30,color:#fff,stroke:#2a9b40
+    classDef bad fill:#8b3a3a,color:#fff,stroke:#c45c3e
+    classDef warn fill:#6b5a2a,color:#fff,stroke:#b07d18
+        </pre>
+      </div>
+    </div>
+
+    <!-- ══════════════ COMBAT ══════════════ -->
+
+    <h2 id="combat" data-toc="Combat">Combat</h2>
+
+    <div class="ref-grid">
+
+      <div class="ref-card">
+        <h3>Timing Track</h3>
+        <ul>
+          <li>Declare action &rarr; place token at current count + action speed</li>
+          <li>Resolve when the count reaches the token</li>
+          <li>Declaration order: lowest PC first (best reactions declare last)</li>
+        </ul>
+      </div>
+
+      <div class="ref-card">
+        <h3>Active Defense</h3>
+        <ul>
+          <li>Melee/Brawl/Athletics opposed roll</li>
+          <li>Costs +2 speed on your next action</li>
+          <li><strong>Parrying</strong> tag: +10% to defense roll</li>
+          <li><strong>Shields:</strong> passive soak (Ballistic or Martial)</li>
+        </ul>
+      </div>
+
+      <div class="ref-card">
+        <h3>Armor</h3>
+        <table>
+          <tr><th>Type</th><th>Stops</th></tr>
+          <tr><td>Ballistic soak</td><td>Firearms damage</td></tr>
+          <tr><td>Martial soak</td><td>Melee damage</td></tr>
+        </table>
+        <ul>
+          <li>If damage exceeds soak: 25% chance of degradation (&minus;1 soak)</li>
+          <li><strong>Crushing</strong> tag: 50% degradation chance</li>
+          <li><strong>Hinder:</strong> &minus;5%/pt to PC, Athletics, Stealth, Swimming; +1 cast speed/pt</li>
+        </ul>
+      </div>
+
+      <div class="ref-card">
+        <h3>Range &amp; Cover</h3>
+        <table>
+          <tr><th>Band</th><th>Modifier</th></tr>
+          <tr><td>Close</td><td>Melee range</td></tr>
+          <tr><td>Near</td><td>No modifier</td></tr>
+          <tr><td>Far</td><td>&minus;10%</td></tr>
+          <tr><td>Distant</td><td>&minus;20%</td></tr>
+        </table>
+        <ul>
+          <li><strong>Sprint:</strong> speed 3 to move one band</li>
+          <li>Partial cover: &minus;10% &nbsp;|&nbsp; Heavy cover: &minus;20%</li>
+          <li>Firing into melee: &minus;10%</li>
+        </ul>
+      </div>
+
+      <div class="ref-card full-width">
+        <h3>Malfunction</h3>
+        <ul>
+          <li><strong>Always</strong> roll Reliability first (<span class="ref-formula">d100 roll-under</span>), then roll Ranged to hit</li>
+          <li><span class="ref-formula">Eff. Reliability = Base &minus; (net balance &times; 2)</span></li>
+        </ul>
+        <table>
+          <tr><th>d10</th><th>Severity</th><th>Effect</th></tr>
+          <tr><td>1&ndash;5</td><td>Click</td><td>Weapon doesn&rsquo;t fire, lose action</td></tr>
+          <tr><td>6&ndash;7</td><td>Jam</td><td>Weapon jammed, must clear (speed 3)</td></tr>
+          <tr><td>8</td><td>Misfire</td><td>Round fires wildly, random direction</td></tr>
+          <tr><td>9</td><td>Mechanical Failure</td><td>Weapon needs repair, unusable</td></tr>
+          <tr><td>10</td><td>Catastrophic</td><td>Weapon destroyed, 1d6 damage to wielder</td></tr>
+        </table>
+        <p class="ref-note">Galvanic weapons: +1 to severity roll.</p>
+      </div>
+
+    </div>
+
+    <!-- ══════════════ COMBAT FLOWCHART ══════════════ -->
+
+    <div class="flowchart-section">
+      <h3 id="combat-flow" data-toc="Combat Flowchart">Combat Flowchart</h3>
+      <div class="flowchart-container">
+        <pre class="mermaid">
+flowchart TD
+    START(["New count"]):::start --> CHECK{Tokens here?}
+    CHECK -- No --> ADV["Advance count"]
+    ADV --> START
+    CHECK -- Yes --> RESOLVE["Resolve actions"]
+
+    RESOLVE --> TYPE{Attack type?}
+    TYPE -- Melee --> MROLL["Roll vs Melee/Brawl"]
+    TYPE -- Ranged --> RROLL["Roll vs Ranged"]
+    TYPE -- Firearm --> REL["Roll Reliability"]
+    TYPE -- Spell --> SPELL["See Spell Flowchart"]:::spell
+
+    REL --> RELCHECK{Pass?}
+    RELCHECK -- Fail --> MAL["MALFUNCTION"]:::bad
+    RELCHECK -- Pass --> FROLL["Roll vs Firearms"]
+
+    MROLL --> HIT{Hit?}
+    RROLL --> HIT
+    FROLL --> HIT
+    HIT -- Miss --> DECLARE
+    HIT -- Hit --> DMG["Roll damage"]
+    DMG --> SOAK["Subtract armor soak"]
+    SOAK --> APPLY["Apply to wound track"]
+    APPLY --> DEGRADE{Damage > soak?}
+    DEGRADE -- No --> DECLARE
+    DEGRADE -- Yes --> DEG["Armor may degrade"]
+    DEG --> DECLARE
+
+    MAL --> DECLARE(["Declare next action"]):::start
+    DECLARE --> START
+
+    classDef start fill:#1a8fa8,color:#fff,stroke:#3dc8e0
+    classDef bad fill:#8b3a3a,color:#fff,stroke:#c45c3e
+    classDef spell fill:#2a5a6b,color:#fff,stroke:#3dc8e0
+        </pre>
+      </div>
+    </div>
 
     <nav class="page-nav">
       <a href="running-the-game.html" class="page-nav-link">
@@ -112,7 +490,7 @@ RECOVERY: HP 1d4/hour | EP 1d8/hour | +1d4 HP with medical care</pre>
         <span class="page-nav-title">Running the Game</span>
       </a>
       <a href="tables.html" class="page-nav-link page-nav-link--next">
-        <span class="page-nav-direction">Next →</span>
+        <span class="page-nav-direction">Next &rarr;</span>
         <span class="page-nav-title">Table Index</span>
       </a>
     </nav>
@@ -120,5 +498,30 @@ RECOVERY: HP 1d4/hour | EP 1d8/hour | +1d4 HP with medical care</pre>
   <footer class="site-footer"><p>Adventure RPG &mdash; Playtest Draft</p></footer>
 </main>
 <script src="js/main.js"></script>
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: 'dark',
+    themeVariables: {
+      primaryColor: '#1a1f32',
+      primaryTextColor: '#d4dae3',
+      primaryBorderColor: '#3dc8e0',
+      lineColor: '#8a92a4',
+      secondaryColor: '#141828',
+      tertiaryColor: '#0f1220',
+      fontFamily: 'Segoe UI, Helvetica Neue, Arial, sans-serif',
+      fontSize: '15px'
+    },
+    flowchart: {
+      curve: 'basis',
+      padding: 20,
+      nodeSpacing: 30,
+      rankSpacing: 40,
+      htmlLabels: true,
+      wrappingWidth: 200
+    }
+  });
+</script>
 </body>
 </html>

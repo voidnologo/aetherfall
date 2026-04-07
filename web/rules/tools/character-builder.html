@@ -1236,7 +1236,7 @@ function generateAndPrint() {
         </div>
         <div class="s-track">
             <div class="s-track-title">Exhaustion <span class="s-track-formula">(7+PW per tier)</span></div>
-            ${['OK','Weakened <span class="s-tier-penalty">-10%</span>','Sev. Weak <span class="s-tier-penalty">-25%</span>','Incap. <span class="s-tier-penalty">-50%</span>'].map(label =>
+            ${['OK','Wearied <span class="s-tier-penalty">-10%</span>','Drained <span class="s-tier-penalty">-25%</span>','Overwhelmed <span class="s-tier-penalty">-50%</span>'].map(label =>
                 `<div class="s-tier"><div class="s-tier-boxes">${tierBoxes(epTier)}</div><span class="s-tier-label">${label}</span></div>`
             ).join('')}
             <div class="s-track-notes"><div class="s-track-notes-label">Effects:</div><div style="min-height:14pt;"></div></div>

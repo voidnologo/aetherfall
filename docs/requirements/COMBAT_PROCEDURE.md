@@ -245,9 +245,9 @@ Wound penalties and exhaustion penalties **stack.**
 | Wound | Exhaustion | Total Penalty |
 |-------|------------|---------------|
 | Harmed (-10%) | OK | -10% |
-| Harmed (-10%) | Weakened (-10%) | -20% |
-| Maimed (-25%) | Weakened (-10%) | -35% |
-| Maimed (-25%) | Severely Weak (-25%) | -50% |
+| Harmed (-10%) | Wearied (-10%) | -20% |
+| Maimed (-25%) | Wearied (-10%) | -35% |
+| Maimed (-25%) | Drained (-25%) | -50% |
 
 At -50%, your skill target of 60 becomes 30. You're rolling to succeed at all, not rolling to do well. This is the death spiral working as intended — getting hurt makes you worse, which makes you more likely to get hurt again. The lesson: don't get hit.
 
@@ -529,9 +529,9 @@ MALFUNCTION: d100 > effective Reliability = malfunction
 
 WOUNDS          EXHAUSTION          RANGE BANDS
 OK: —           OK: —               Close: melee
-Harmed: -10%    Weakened: -10%      Near: same room
-Maimed: -25%    Sev. Weak: -25%     Far: -10% ranged
-Incap: -50%     Incap: -50%         Distant: -20%, rifles only
+Harmed: -10%    Wearied: -10%       Near: same room
+Maimed: -25%    Drained: -25%       Far: -10% ranged
+Incap: -50%     Overwhelmed: -50%   Distant: -20%, rifles only
                 Penalties STACK
 
 DYING: every 3 counts, d100 → over 50 = fail → 3 fails = dead

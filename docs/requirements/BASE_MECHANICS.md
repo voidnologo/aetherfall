@@ -134,11 +134,11 @@ Skill points are allocated per stat group:
 | Tier | Status | Penalty |
 |------|--------|---------|
 | 1 | OK | None |
-| 2 | Weakened | -10% to all rolls |
-| 3 | Severely Weak | -25% to all rolls |
-| 4 | Incapacitated | -50% to all rolls |
+| 2 | Wearied | -10% to all rolls |
+| 3 | Drained | -25% to all rolls |
+| 4 | Overwhelmed | -50% to all rolls |
 
-Wound and exhaustion penalties **stack.** Harmed + Weakened = -20%.
+Wound and exhaustion penalties **stack.** Harmed + Wearied = -20%.
 
 ---
 
@@ -274,9 +274,9 @@ XP: 1/session + table vote bonus │ Skill to N costs N │ Attribute +1 costs 1
 
 WOUNDS (HP per tier = 7+PP)     EXHAUSTION (EP per tier = 7+PW)
   OK         —                    OK          —
-  Harmed    -10%                  Weakened   -10%
-  Maimed    -25%                  Sev. Weak  -25%
-  Incap     -50%                  Incap      -50%
+  Harmed    -10%                  Wearied    -10%
+  Maimed    -25%                  Drained    -25%
+  Incap     -50%                  Overwhelmed -50%
   Penalties STACK across both tracks
 
 CASTING: fixed time per spell → roll d100 → tier by margin

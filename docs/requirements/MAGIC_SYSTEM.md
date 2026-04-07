@@ -248,17 +248,17 @@ The exhaustion track covers all non-physical strain: magical drain, stress, fati
 | Level | Status | Penalty |
 |-------|--------|---------|
 | 1 | OK | None |
-| 2 | Weakened | -10% to all rolls |
-| 3 | Severely Weak | -25% to all rolls |
-| 4 | Incapacitated | -50% to all rolls |
+| 2 | Wearied | -10% to all rolls |
+| 3 | Drained | -25% to all rolls |
+| 4 | Overwhelmed | -50% to all rolls |
 
 **Recovery:** 1d8 EP per hour of full rest (mental strain recovers faster than flesh).
 
-Note: Exhaustion penalties stack with wound penalties. A Harmed (-10%) and Weakened (-10%) character is at -20% to all rolls. The death spiral applies to both tracks simultaneously.
+Note: Exhaustion penalties stack with wound penalties. A Harmed (-10%) and Wearied (-10%) character is at -20% to all rolls. The death spiral applies to both tracks simultaneously.
 
 #### 3.6.1 Exhaustion Overflow
 
-When a spell's exhaustion cost exceeds your remaining EP, the spell still fires. You spend all remaining EP (dropping to zero, Incapacitated on the exhaustion track). The overflow — the exhaustion you couldn't pay — converts to physical HP damage at a rate of **half the overflow, rounded down**.
+When a spell's exhaustion cost exceeds your remaining EP, the spell still fires. You spend all remaining EP (dropping to zero, Overwhelmed on the exhaustion track). The overflow — the exhaustion you couldn't pay — converts to physical HP damage at a rate of **half the overflow, rounded down**.
 
 **Example:** You have 7 EP remaining. You cast (or are forced to cast, as a wild caster) a Spectacular Mend costing 18 exhaustion. You spend all 7 EP → Incapacitated on the exhaustion track. The remaining 11 overflows → you take 5 physical HP damage (11 ÷ 2 = 5.5, rounded down). The spell works. You're on the floor.
 
@@ -518,7 +518,7 @@ Heal wounds, knit bone, cure disease, purge poison. The most valued spell in the
 **Design notes:**
 - Mend costs roughly 2× Force at every tier — Complexity 3 vs Complexity 1. This makes healing precious and limited; a dedicated healer can't just spam it.
 - Casting time (5ct) is longer than Force (2ct). Healing takes time; you're knitting biological systems back together.
-- A caster with 28 EP can cast Mend at Standard (8 exhaustion) 3 times before hitting Weakened. Healing is a limited resource — use it wisely.
+- A caster with 28 EP can cast Mend at Standard (8 exhaustion) 3 times before hitting Wearied. Healing is a limited resource — use it wisely.
 - Spectacular Mend at 18 exhaustion is deliberately punishing. Miraculous healing should cost you almost everything. This is the kind of cast where exhaustion overflow (§3.6.1) is a real possibility.
 - The misfire is intentionally horrifying — inverting a healing spell into a drain creates high drama and reinforces that magic is dangerous.
 

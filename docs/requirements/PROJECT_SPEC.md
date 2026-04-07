@@ -342,11 +342,11 @@ The exhaustion track covers **all non-physical strain**: stress, fatigue, sleep 
 | Level | Status | Penalty |
 |-------|--------|---------|
 | 1 | OK | None |
-| 2 | Weakened | -10% to all rolls |
-| 3 | Severely Weak | -25% to all rolls |
-| 4 | Incapacitated | -50% to all rolls |
+| 2 | Wearied | -10% to all rolls |
+| 3 | Drained | -25% to all rolls |
+| 4 | Overwhelmed | -50% to all rolls |
 
-Exhaustion penalties **stack** with wound penalties. A Harmed (-10%) and Weakened (-10%) character is at -20% to all rolls.
+Exhaustion penalties **stack** with wound penalties. A Harmed (-10%) and Wearied (-10%) character is at -20% to all rolls.
 
 **Typical EP range:** 16-40 total (4-10 per tier). A PW +3 character has 10 EP per tier (40 total) — deep mental reserves. A PW -2 character has only 5 per tier (20 total) — they'll buckle fast under pressure.
 
