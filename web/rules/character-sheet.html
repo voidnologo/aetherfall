@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="aether">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Character Sheet — Adventure RPG</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="atmosphere"><canvas id="particle-canvas"></canvas><div class="mist mist-1"></div><div class="mist mist-2"></div><div class="mist mist-3"></div></div>
+<div id="page-transition" class="page-transition"></div>
+<div class="sidebar-overlay"></div>
+<aside class="sidebar">
+  <div class="sidebar-brand"><div class="sidebar-title">Adventure</div><div class="sidebar-subtitle">Rules Reference</div></div>
+  <nav class="sidebar-nav"></nav>
+  <div class="sidebar-footer"><a href="../">&larr; Back to Adventure</a></div>
+</aside>
+<header class="site-header">
+  <button class="header-toggle" aria-label="Toggle navigation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+  <span class="header-logo">Adventure <span>RPG</span></span>
+  <span class="header-separator"></span>
+  <span class="header-chapter">Character Sheet</span>
+</header>
+<main class="main-content">
+  <div class="page-content">
+
+    <nav class="page-nav-compact">
+      <a href="creating.html">&larr; Creating Your Adventurer</a>
+      <a href="rolling.html">Rolling the Dice &rarr;</a>
+    </nav>
+
+    <div class="page-hero">
+      <span class="page-number">&nbsp;</span>
+      <h1 class="page-title">Character Sheet</h1>
+      <p class="page-subtitle">Build your character online or grab a blank sheet to fill by hand</p>
+    </div>
+
+    <p class="flavor">
+      The character builder does all the math for you &mdash; click attributes,
+      pick skills from dropdowns, select spells, and it calculates targets,
+      exhaustion costs, and health tracks automatically. When you&rsquo;re done,
+      hit Print to get a clean two-page character sheet.
+    </p>
+
+    <p class="flavor">
+      If you prefer pen and paper, grab the blank printable sheet and fill it
+      in at the table.
+    </p>
+
+    <!-- ── Character Builder ────────────────────────────── -->
+
+    <h2 id="builder">Character Builder</h2>
+
+    <p>
+      An interactive form that walks you through character creation. Click
+      attributes to set them, pick skills from dropdowns with auto-calculated
+      targets, select your casting path and spells, and fill in weapons, armor,
+      society details, and contacts. Everything prints as a formatted two-page
+      character sheet.
+    </p>
+
+    <table>
+      <tr><th>Feature</th><th>What It Does</th></tr>
+      <tr><td>Attributes</td><td>Click &minus;3 to +3 for each stat; derived values update live</td></tr>
+      <tr><td>Skills</td><td>Pick from all 27 skills; stat, target, and pool budget calculated automatically</td></tr>
+      <tr><td>Magic</td><td>Choose Scholarly (pick individual spells) or Wild (pick 2 schools, get all spells)</td></tr>
+      <tr><td>Equipment</td><td>Type in weapons, armor, and inventory; soak and hinder auto-totaled</td></tr>
+      <tr><td>Print</td><td>Generates a clean two-page sheet matching the blank template</td></tr>
+    </table>
+
+    <p style="margin-top: 1rem;">
+      <a href="tools/character-builder.html" style="color: var(--aether); font-weight: 600; font-size: 1.1rem;">
+        Open Character Builder &rarr;
+      </a>
+    </p>
+
+    <!-- ── Blank Sheet ──────────────────────────────────── -->
+
+    <h2 id="blank-sheet">Blank Printable Sheet</h2>
+
+    <p>
+      A two-page printable character sheet with all the fields you need.
+      Open it in your browser and use Print or &ldquo;Save as PDF&rdquo; to
+      get a clean blank sheet ready to fill in by hand.
+    </p>
+
+    <table>
+      <tr><th>Page</th><th>Contents</th></tr>
+      <tr><td>Page 1</td><td>Identity, attributes, weapons, armor, character description, skills, XP, wound &amp; exhaustion tracks</td></tr>
+      <tr><td>Page 2</td><td>Magic, spells, inventory, adventuring society, faction, contacts, backlash effects, notes</td></tr>
+    </table>
+
+    <p style="margin-top: 1rem;">
+      <a href="tools/character-sheet.html" style="color: var(--galvanic); font-weight: 600; font-size: 1.1rem;">
+        Open Blank Sheet &rarr;
+      </a>
+      &nbsp;&nbsp;
+      <a href="tools/character-sheet-sample.html" style="color: var(--theme-dim); font-size: 0.95rem;">
+        (view sample)
+      </a>
+    </p>
+
+    <!-- ── Quick Reference ──────────────────────────────── -->
+
+    <h2 id="formulas">Quick Reference</h2>
+
+    <table>
+      <tr><th>Formula</th><th>Calculation</th></tr>
+      <tr><td>Skill Target</td><td>((10 + Stat) &times; Level) + 30</td></tr>
+      <tr><td>Unskilled Attempt</td><td>(5 + Stat) &times; 5</td></tr>
+      <tr><td>HP per Tier</td><td>7 + PP</td></tr>
+      <tr><td>EP per Tier</td><td>7 + PW</td></tr>
+      <tr><td>Concentration</td><td>(PW + 4) &times; 10</td></tr>
+      <tr><td>Effective Reliability</td><td>Base Reliability &minus; (Net Balance &times; 2)</td></tr>
+      <tr><td>Effective Casting</td><td>Base Target + (Net Balance &times; 2)</td></tr>
+    </table>
+
+    <nav class="page-nav">
+      <a href="creating.html" class="page-nav-link">
+        <span class="page-nav-direction">&larr; Previous</span>
+        <span class="page-nav-title">Creating Your Adventurer</span>
+      </a>
+      <a href="rolling.html" class="page-nav-link">
+        <span class="page-nav-direction">Next &rarr;</span>
+        <span class="page-nav-title">Rolling the Dice</span>
+      </a>
+    </nav>
+  </div>
+  <footer class="site-footer"><p>Adventure RPG &mdash; Playtest Draft</p></footer>
+</main>
+<script src="js/main.js"></script>
+</body>
+</html>
