@@ -356,7 +356,10 @@ flowchart TD
     I --> J{Backlash check}
     J -- Pass --> K(["Spell complete"]):::good
     J -- Fail --> L["Backlash! 1d4 HP"]:::warn
-    L --> K
+    L --> M{25% wild effect?}
+    M -- No --> K
+    M -- Yes --> N["Roll wild effect"]:::warn
+    N --> K
 
     classDef start fill:#1a8fa8,color:#fff,stroke:#3dc8e0
     classDef good fill:#1a6b30,color:#fff,stroke:#2a9b40
