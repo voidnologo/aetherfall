@@ -12,6 +12,7 @@
     { id: 'world',         file: 'state-of-the-world.html', title: 'The State of the World',       num: '02', theme: 'split' },
     { id: 'societies',     file: 'societies.html',          title: 'Adventuring Societies',        num: '03', theme: 'neutral' },
     { id: 'creating',      file: 'creating.html',           title: 'Creating Your Adventurer',     num: '04', theme: 'neutral' },
+    { id: 'char-builder',  file: 'tools/character-builder.html', title: 'Character Builder',    num: '\u2192', theme: 'aether' },
     { id: 'rolling',       file: 'rolling.html',            title: 'Rolling the Dice',             num: '05', theme: 'neutral' },
     { id: 'getting-hurt',  file: 'getting-hurt.html',       title: 'Getting Hurt',                 num: '06', theme: 'galvanic' },
     { id: 'skills',        file: 'skills.html',             title: 'Skills',                       num: '07', theme: 'neutral' },
