@@ -12,40 +12,40 @@
 
         body {
             font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-            background: #1a1a1a; color: #e0e0e0;
+            background: #080b14; color: #d4dae3;
             line-height: 1.5;
         }
 
         .toolbar {
             position: sticky; top: 0; z-index: 100;
-            background: #222; border-bottom: 1px solid #444;
+            background: #0b0e17; border-bottom: 1px solid #1a1f32;
             padding: 10px 20px; display: flex;
             justify-content: space-between; align-items: center;
         }
-        .toolbar a { color: #c8a04e; text-decoration: none; }
+        .toolbar a { color: #3dc8e0; text-decoration: none; }
         .toolbar-title { font-weight: 700; font-size: 16px; }
         .btn {
-            background: #c8a04e; color: #1a1a1a; border: none;
+            background: #3dc8e0; color: #080b14; border: none;
             padding: 8px 20px; border-radius: 4px; cursor: pointer;
             font-weight: 600; font-size: 14px;
         }
-        .btn:hover { background: #d4b05e; }
+        .btn:hover { background: #5dd8ec; }
         .btn-secondary {
-            background: #444; color: #e0e0e0;
+            background: #1a1f32; color: #d4dae3;
         }
-        .btn-secondary:hover { background: #555; }
+        .btn-secondary:hover { background: #252a3e; }
 
         .builder { max-width: 900px; margin: 0 auto; padding: 20px; }
 
         .form-section {
-            background: #252525; border: 1px solid #383838;
+            background: #0f1220; border: 1px solid #1a1f32;
             border-radius: 8px; padding: 16px 20px; margin-bottom: 16px;
         }
         .form-section h2 {
             font-size: 14px; text-transform: uppercase;
-            letter-spacing: 1px; color: #c8a04e;
+            letter-spacing: 1px; color: #3dc8e0;
             margin-bottom: 12px; padding-bottom: 6px;
-            border-bottom: 1px solid #383838;
+            border-bottom: 1px solid #1a1f32;
         }
 
         /* Identity fields */
@@ -58,16 +58,16 @@
 
         label {
             font-size: 11px; text-transform: uppercase;
-            letter-spacing: 0.5px; color: #999; display: block;
+            letter-spacing: 0.5px; color: #8a92a4; display: block;
             margin-bottom: 3px;
         }
         input[type="text"], input[type="number"], textarea, select {
-            width: 100%; background: #1a1a1a; border: 1px solid #444;
-            border-radius: 4px; padding: 6px 8px; color: #e0e0e0;
+            width: 100%; background: #080b14; border: 1px solid #1a1f32;
+            border-radius: 4px; padding: 6px 8px; color: #d4dae3;
             font-size: 13px; font-family: inherit;
         }
         input:focus, select:focus, textarea:focus {
-            outline: none; border-color: #c8a04e;
+            outline: none; border-color: #3dc8e0;
         }
         textarea { resize: vertical; min-height: 50px; }
         select { cursor: pointer; }
@@ -81,25 +81,25 @@
         .attr-name { font-size: 12px; font-weight: 600; }
         .attr-btn {
             width: 32px; height: 32px; border-radius: 50%;
-            border: 2px solid #555; background: transparent;
-            color: #999; font-size: 11px; cursor: pointer;
+            border: 2px solid #1a1f32; background: transparent;
+            color: #8a92a4; font-size: 11px; cursor: pointer;
             display: flex; align-items: center; justify-content: center;
             transition: all 0.15s;
         }
-        .attr-btn:hover { border-color: #c8a04e; color: #c8a04e; }
-        .attr-btn.selected { background: #c8a04e; color: #1a1a1a; border-color: #c8a04e; font-weight: 700; }
+        .attr-btn:hover { border-color: #3dc8e0; color: #3dc8e0; }
+        .attr-btn.selected { background: #3dc8e0; color: #080b14; border-color: #3dc8e0; font-weight: 700; }
         .attr-desc-input {
-            background: #1a1a1a; border: 1px solid #444;
-            border-radius: 4px; padding: 4px 8px; color: #e0e0e0;
+            background: #080b14; border: 1px solid #1a1f32;
+            border-radius: 4px; padding: 4px 8px; color: #d4dae3;
             font-size: 12px; width: 100%;
         }
 
         .derived-summary {
             display: flex; gap: 20px; margin-top: 10px;
-            padding-top: 8px; border-top: 1px solid #383838;
-            font-size: 12px; color: #999;
+            padding-top: 8px; border-top: 1px solid #1a1f32;
+            font-size: 12px; color: #8a92a4;
         }
-        .derived-summary strong { color: #c8a04e; }
+        .derived-summary strong { color: #e8a825; }
         .pool-warning { color: #e06060; font-size: 11px; margin-top: 4px; }
 
         /* Skills */
@@ -110,21 +110,21 @@
         }
         .skill-row.header {
             font-size: 10px; text-transform: uppercase;
-            color: #666; letter-spacing: 0.5px; margin-bottom: 6px;
+            color: #565e72; letter-spacing: 0.5px; margin-bottom: 6px;
         }
-        .skill-stat { text-align: center; color: #999; font-size: 12px; }
-        .skill-target { text-align: center; color: #c8a04e; font-weight: 600; font-size: 13px; }
+        .skill-stat { text-align: center; color: #8a92a4; font-size: 12px; }
+        .skill-target { text-align: center; color: #e8a825; font-weight: 600; font-size: 13px; }
         .remove-btn {
-            background: none; border: none; color: #666;
+            background: none; border: none; color: #565e72;
             cursor: pointer; font-size: 16px; padding: 0;
         }
         .remove-btn:hover { color: #e06060; }
         .add-btn {
-            background: none; border: 1px dashed #555; border-radius: 4px;
-            color: #888; cursor: pointer; padding: 6px 12px;
+            background: none; border: 1px dashed #1a1f32; border-radius: 4px;
+            color: #8a92a4; cursor: pointer; padding: 6px 12px;
             font-size: 12px; margin-top: 6px; width: 100%;
         }
-        .add-btn:hover { border-color: #c8a04e; color: #c8a04e; }
+        .add-btn:hover { border-color: #3dc8e0; color: #3dc8e0; }
 
         /* Weapon rows */
         .weapon-row {
@@ -134,10 +134,10 @@
         }
         .weapon-row.header {
             font-size: 10px; text-transform: uppercase;
-            color: #666; letter-spacing: 0.5px; margin-bottom: 6px;
+            color: #565e72; letter-spacing: 0.5px; margin-bottom: 6px;
         }
         .weapon-row input { font-size: 12px; padding: 4px 6px; }
-        .weapon-prefilled { color: #888; font-size: 12px; }
+        .weapon-prefilled { color: #8a92a4; font-size: 12px; }
 
         /* Armor */
         .armor-row {
@@ -147,12 +147,12 @@
         }
         .armor-row.header {
             font-size: 10px; text-transform: uppercase;
-            color: #666; letter-spacing: 0.5px; margin-bottom: 6px;
+            color: #565e72; letter-spacing: 0.5px; margin-bottom: 6px;
         }
         .armor-totals {
             display: flex; gap: 20px; margin-top: 8px;
-            padding-top: 6px; border-top: 1px solid #383838;
-            font-size: 12px; color: #999;
+            padding-top: 6px; border-top: 1px solid #1a1f32;
+            font-size: 12px; color: #8a92a4;
         }
 
         /* Magic */
@@ -161,18 +161,18 @@
         }
         .path-btn {
             padding: 8px 16px; border-radius: 4px;
-            border: 2px solid #555; background: transparent;
-            color: #999; cursor: pointer; font-size: 13px;
+            border: 2px solid #1a1f32; background: transparent;
+            color: #8a92a4; cursor: pointer; font-size: 13px;
             transition: all 0.15s;
         }
-        .path-btn:hover { border-color: #c8a04e; color: #c8a04e; }
-        .path-btn.selected { background: #c8a04e; color: #1a1a1a; border-color: #c8a04e; font-weight: 600; }
+        .path-btn:hover { border-color: #3dc8e0; color: #3dc8e0; }
+        .path-btn.selected { background: #3dc8e0; color: #080b14; border-color: #3dc8e0; font-weight: 600; }
         .magic-derived {
             display: grid; grid-template-columns: 1fr 1fr;
-            gap: 6px 16px; font-size: 12px; color: #999;
+            gap: 6px 16px; font-size: 12px; color: #8a92a4;
             margin-bottom: 10px;
         }
-        .magic-derived strong { color: #e0e0e0; }
+        .magic-derived strong { color: #eef0f5; }
 
         /* Spell rows */
         .spell-row {
@@ -182,9 +182,9 @@
         }
         .spell-row.header {
             font-size: 10px; text-transform: uppercase;
-            color: #666; letter-spacing: 0.5px; margin-bottom: 6px;
+            color: #565e72; letter-spacing: 0.5px; margin-bottom: 6px;
         }
-        .spell-auto { text-align: center; color: #999; font-size: 12px; }
+        .spell-auto { text-align: center; color: #8a92a4; font-size: 12px; }
 
         /* Contacts */
         .contact-row-form {
@@ -413,19 +413,19 @@
 
     <!-- Attributes -->
     <div class="form-section">
-        <h2>Attributes <span style="font-weight:400;font-size:11px;color:#888;">&mdash; click to set each attribute (-3 to +3, must total to GM's net bonus)</span></h2>
+        <h2>Attributes <span style="font-weight:400;font-size:11px;color:#565e72;">&mdash; click to set each attribute (-3 to +3, must total to GM's net bonus)</span></h2>
         <div id="attr-grid"></div>
         <div class="derived-summary">
             <span>Net Total: <strong id="net-total">0</strong></span>
-            <span>HP/Tier: <strong id="hp-tier">7</strong> <span style="color:#666">(7+PP)</span></span>
-            <span>EP/Tier: <strong id="ep-tier">7</strong> <span style="color:#666">(7+PW)</span></span>
-            <span>Concentration: <strong id="concentration">40</strong> <span style="color:#666">(PW+4)&times;10</span></span>
+            <span>HP/Tier: <strong id="hp-tier">7</strong> <span style="color:#565e72">(7+PP)</span></span>
+            <span>EP/Tier: <strong id="ep-tier">7</strong> <span style="color:#565e72">(7+PW)</span></span>
+            <span>Concentration: <strong id="concentration">40</strong> <span style="color:#565e72">(PW+4)&times;10</span></span>
         </div>
     </div>
 
     <!-- Skills -->
     <div class="form-section">
-        <h2>Skills <span style="font-weight:400;font-size:11px;color:#888;">&mdash; max 15 skills, creation max level 3</span></h2>
+        <h2>Skills <span style="font-weight:400;font-size:11px;color:#565e72;">&mdash; max 15 skills, creation max level 3</span></h2>
         <div class="skill-row header">
             <span>Skill</span><span style="text-align:center;">Stat</span>
             <span style="text-align:center;">Level</span><span style="text-align:center;">Target</span><span></span>
@@ -433,9 +433,9 @@
         <div id="skill-list"></div>
         <button class="add-btn" onclick="addSkill()">+ Add Skill</button>
         <div class="derived-summary" style="margin-top:8px;">
-            <span>Physical Pool: <strong id="phys-pool">10</strong> <span style="color:#666">(10+PP+PC)</span> &mdash; Used: <strong id="phys-used">0</strong></span>
-            <span>Mental Pool: <strong id="ment-pool">10</strong> <span style="color:#666">(10+IN+AW+PW)</span> &mdash; Used: <strong id="ment-used">0</strong></span>
-            <span>Social Pool: <strong id="soc-pool">10</strong> <span style="color:#666">(10+SP)</span> &mdash; Used: <strong id="soc-used">0</strong></span>
+            <span>Physical Pool: <strong id="phys-pool">10</strong> <span style="color:#565e72">(10+PP+PC)</span> &mdash; Used: <strong id="phys-used">0</strong></span>
+            <span>Mental Pool: <strong id="ment-pool">10</strong> <span style="color:#565e72">(10+IN+AW+PW)</span> &mdash; Used: <strong id="ment-used">0</strong></span>
+            <span>Social Pool: <strong id="soc-pool">10</strong> <span style="color:#565e72">(10+SP)</span> &mdash; Used: <strong id="soc-used">0</strong></span>
         </div>
         <div id="pool-warnings"></div>
     </div>
@@ -447,7 +447,7 @@
             <span>Weapon</span><span>Skill</span><span>Spd</span>
             <span>Damage</span><span>Cap</span><span>Rld</span><span>Rel%</span><span>Tags</span><span></span>
         </div>
-        <div class="weapon-row" style="color:#666;font-size:12px;">
+        <div class="weapon-row" style="color:#565e72;font-size:12px;">
             <span>Unarmed</span><span>Brawl</span><span>2</span>
             <span>1d3+PP</span><span>&mdash;</span><span>&mdash;</span><span>&mdash;</span><span></span><span></span>
         </div>
@@ -485,7 +485,7 @@
                 <span>Schools: <strong id="casting-schools">&mdash;</strong></span>
                 <span>Spells Known: <strong id="spells-known">&mdash;</strong></span>
             </div>
-            <div style="font-size:11px;color:#666;margin-bottom:10px;">
+            <div style="font-size:11px;color:#565e72;margin-bottom:10px;">
                 Backlash: Scholarly 5/10/15/25% by tier &middot; Wild +5% flat/tier &middot; On backlash: 1d4 HP + 25% wild effect
             </div>
 
@@ -515,7 +515,7 @@
             <div><label>Total XP</label><input type="number" id="totalXP" value="0" min="0"></div>
             <div><label>XP Spent</label><input type="number" id="xpSpent" value="0" min="0"></div>
         </div>
-        <div style="font-size:11px;color:#666;margin-top:4px;">
+        <div style="font-size:11px;color:#565e72;margin-top:4px;">
             Skill 0&rarr;1: 1 XP &middot; 1&rarr;2: 2 &middot; 2&rarr;3: 3 &middot; 3&rarr;4: 4 &middot; 4&rarr;5: 5 &middot; Attribute +1: 10 XP
         </div>
     </div>
@@ -544,7 +544,7 @@
     <!-- Contacts -->
     <div class="form-section">
         <h2>Notable Contacts</h2>
-        <div class="contact-row-form" style="font-size:10px;text-transform:uppercase;color:#666;letter-spacing:0.5px;margin-bottom:6px;">
+        <div class="contact-row-form" style="font-size:10px;text-transform:uppercase;color:#565e72;letter-spacing:0.5px;margin-bottom:6px;">
             <span>Name</span><span>Affiliation</span><span>Notes</span><span></span>
         </div>
         <div id="contact-list"></div>
@@ -909,11 +909,11 @@ function toggleWildSchool(school) {
 function renderWildSpellPreview() {
     const preview = document.getElementById('wild-spell-preview');
     if (state.wildSchools.length === 0) {
-        preview.innerHTML = '<div style="color:#666;font-size:12px;">Select 2 schools above to see your spell list.</div>';
+        preview.innerHTML = '<div style="color:#565e72;font-size:12px;">Select 2 schools above to see your spell list.</div>';
         return;
     }
     const spells = SPELLS.filter(s => state.wildSchools.includes(s.school));
-    let html = '<div style="font-size:11px;color:#999;margin-bottom:6px;">You know all ' + spells.length + ' spells in your selected schools:</div>';
+    let html = '<div style="font-size:11px;color:#8a92a4;margin-bottom:6px;">You know all ' + spells.length + ' spells in your selected schools:</div>';
     html += '<div class="spell-row header"><span>Spell</span><span>School</span><span>Cast</span><span>W</span><span>S</span><span>St</span><span>Sp</span><span></span></div>';
     spells.forEach(sp => {
         html += `<div class="spell-row">
