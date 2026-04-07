@@ -82,14 +82,6 @@ Write the design doc collaboratively, section by section, pausing for user feedb
 
 ## Execution Plan
 
-1. **Write Sections 1-2** (Design Principles + Before/After) — establish the rules and the history
-2. **Pause for user review** — these set the foundation for everything else
-3. **Write Sections 3-4** (Rumors/Wonders + Meta-Factions) — the world shape and big currents
-4. **Pause for user review**
-5. **Write Sections 5-6** (Sample Factions + Societies) — the usable detail. Most collaborative section — expect iteration
-6. **Write Sections 7-8** (Voice Guide + Zone Politics) — synthesis sections
-7. **Write Section 9** (Open Questions) and update cross-references
-
 After all sections are drafted:
 - Update `docs/requirements/PROJECT_SPEC.md` §2.5 and §2.6 with cross-references to the new doc
 - Update session notes with decisions made
