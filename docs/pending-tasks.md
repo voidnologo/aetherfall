@@ -1,6 +1,7 @@
 # Pending Tasks
 
 ## Next Up
+- [ ] Web rulebook update for mid-campaign spell learning (magic.html — rules exist in MAGIC_SYSTEM.md §5.4)
 - [ ] Character sheet art / watermarks
 - [ ] Refine landing page tagline for Aetherfall identity
 - [ ] Save/load character data in builder (localStorage)
@@ -24,4 +25,5 @@
 - [ ] Mobile sidebar UX testing on real devices
 - [ ] Enchanted firearms rules — magic/tech tension when imbuing a firearm
 - [ ] Artifact pricing — depends on currency system design
-- [x] Add artifacts section to web rulebook (new artifacts.html, Chapter 13)
+- [ ] Non-weapon artifact tag tables — expand as play demands
+- [ ] Ward creation process — detailed rules like Enchant spell (currently less specified)
