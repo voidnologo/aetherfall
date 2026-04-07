@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/salt/personal/card-game/.claude/**)",
+      "Read(//Users/salt/Work/telegraph-backend/.claude/skills/**)",
+      "Skill(session-start)",
+      "Skill(session-end)",
+      "Bash(find:*)"
+    ]
+  }
+}
