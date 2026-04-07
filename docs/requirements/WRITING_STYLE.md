@@ -3,7 +3,7 @@
 ## Document Status: ACTIVE
 **Last Updated:** 2026-04-01
 
-This document defines how Adventure RPG content should be written, depending on who will read it.
+This document defines how Aetherfall RPG content should be written, depending on who will read it.
 
 ---
 

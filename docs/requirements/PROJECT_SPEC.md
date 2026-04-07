@@ -1,4 +1,4 @@
-# Adventure RPG - Project Specification
+# Aetherfall RPG - Project Specification
 
 ## Document Status: DRAFT - In Development
 **Last Updated:** 2026-04-02

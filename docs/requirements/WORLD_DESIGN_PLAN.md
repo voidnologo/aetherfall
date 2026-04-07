@@ -2,7 +2,7 @@
 
 ## Context
 
-The Adventure RPG has complete mechanical systems (13-chapter web rulebook) but no narrative layer. The world's cosmological framework (Aetheric/Galvanic tension, zones, the Veil/Engine) is locked in DESIGN_PHILOSOPHY.md and PROJECT_SPEC.md §2, but the *political, social, and geographic* reality that players and GMs inhabit doesn't exist yet. This is the next critical piece — without it, GMs have mechanics but no world to run them in.
+The Aetherfall RPG has complete mechanical systems (13-chapter web rulebook) but no narrative layer. The world's cosmological framework (Aetheric/Galvanic tension, zones, the Veil/Engine) is locked in DESIGN_PHILOSOPHY.md and PROJECT_SPEC.md §2, but the *political, social, and geographic* reality that players and GMs inhabit doesn't exist yet. This is the next critical piece — without it, GMs have mechanics but no world to run them in.
 
 The user's vision: a balkanized, fragmented world where magic's eruption physically remade geography, collapsed governments, and created a patchwork of local power centers. Think Neal Stephenson's Diamond Age/Snow Crash (phyles, burbclaves, franchise-states) crossed with Arcane's Piltover/Zaun divide. Stories start local. Rumors outpace facts. Adventure is close.
 
