@@ -193,7 +193,7 @@ The player sees the final numbers per tier in the spell description. For example
 
 ### 3.4 Backlash
 
-Backlash is **separate from misfire**. Misfire = the spell goes wrong (spell-specific). Backlash = the raw magical energy burns you physically. You can have a **successful cast with backlash** — the spell works, but it hurts you too.
+Backlash is **separate from misfire**. Misfire = the spell goes wrong (spell-specific). Backlash = the raw magical energy burns you physically. You check for backlash on **every cast** — successful or misfire. A misfire means the spell went wrong, but the energy still flowed through you. Cancellation does **not** trigger a backlash check (cancellation has its own lighter consequences — see §3.5).
 
 **Backlash chance scales with tier used** — higher tier = more power channeled = more chance of getting burned:
 
@@ -216,7 +216,16 @@ When backlash triggers, two things happen:
 
 #### 3.4.2 Wild Effect Table
 
-Wild effects have three escalation tiers. If you roll the same effect while a previous instance is still active, it **escalates**. A third escalation while still active makes the effect **permanent**. Escalation tracking is **per-effect** — rolling different numbers gives separate base effects, not escalation.
+Wild effects have three escalation tiers. Escalation tracking is **per-effect** — rolling different numbers gives separate base effects, not escalation.
+
+**Residue:** When a wild effect occurs, it leaves **aetheric residue** that persists until you take an **uninterrupted long rest after the effect has worn off**. If you roll the same wild effect number while residue from a previous instance is still present, the effect **escalates** to the next tier. A third occurrence while residue is present makes the effect **permanent**.
+
+This means:
+- An immediate effect (e.g., nosebleed) wears off quickly, but the residue lingers until your next long rest. Cast again before resting and roll the same number? Escalation.
+- A base effect lasting 1d4 hours wears off, but you still carry the residue until you rest that night. Roll the same number the next morning before resting? Escalation.
+- An escalated effect lasting 1d4 days wears off after 3 days, but the residue remains until you take a long rest after it fades. Skip rest or keep casting? You're one roll away from permanent.
+
+The residue model dramatically extends the escalation window compared to "while active," making the fear of permanent effects a genuine tactical consideration rather than a near-impossibility.
 
 | d10 | Effect | Base (1st) | Escalated (2nd, same while active) | Permanent (3rd, same while active) |
 |-----|--------|-----------|-----------------------------------|-------------------------------------|
@@ -231,13 +240,14 @@ Wild effects have three escalation tiers. If you roll the same effect while a pr
 | 9 | **Voice Shift** | Voice changes pitch or timbre for 1d4 hours — unsettling to others | Voice deeply unnatural for 1d4 days — -10% to Persuasion and Social rolls | Voice permanently altered, recognizably inhuman — SP reduced by 1, but +10% to Interrogation |
 | 10 | **Bleed** | Nosebleed — dramatic-looking, socially alarming | Bleeding from nose and ears for 1d4 hours, -10% to SP-based checks | Bleed unpredictably from small capillaries when stressed — PP reduced by 1 |
 
-**Design intent:** The escalation mechanic acts as a natural limiter on magic use. After one or two backlash effects, casters become hesitant to keep casting for fear of escalation — especially when a permanent stat reduction is on the line. This reinforces the design goal that not every character should be a caster and that a mixed party of casters and non-casters is the smart approach. The probability of rolling the same number on a d10 three times while previous effects are still active is low, but the *fear* of it is a constant presence.
+**Design intent:** The escalation mechanic acts as a natural limiter on magic use. After one or two backlash effects, casters become hesitant to keep casting for fear of escalation — especially when a permanent stat reduction is on the line. This reinforces the design goal that not every character should be a caster and that a mixed party of casters and non-casters is the smart approach. The residue model means that even a harmless nosebleed lingers as a threat until you rest — and in a dungeon, on a mission, or in a multi-day pursuit, rest may not come easily.
 
 ### 3.5 Spell Cancellation
 
 Cancelling a spell mid-cast:
 - Costs exhaustion equal to **half** the normal cost for the tier you were attempting
-- Additionally: **10% chance of backlash**, dealing 1d4 physical damage per 2 tiers of the spell AND causing full casting exhaustion
+- Additionally: **10% chance of backlash**, dealing 1d4 physical damage if triggered
+- Cancellation backlash is **burn only** — no wild effect check. You cut the flow before it fully formed; the energy hurts but doesn't warp you.
 
 ### 3.6 Exhaustion Track
 

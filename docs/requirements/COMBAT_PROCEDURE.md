@@ -98,12 +98,12 @@ The balance affects both sides: net Aetheric reduces Reliability, net Galvanic i
 5. **Wild casters** ride the wave — they get what they get. The magic gives and you take it. No choice, no restriction.
 6. Apply the spell's effect at the final tier.
 7. Pay exhaustion cost for the tier used (deduct from EP).
-8. Roll backlash check — percentage chance based on tier (Weak 5%, Standard 10%, Strong 15%, Spectacular 25%). On failure: 1d4 physical damage + 25% chance of Wild Effect.
+8. Roll backlash check — percentage chance based on tier (Weak 5%, Standard 10%, Strong 15%, Spectacular 25%). Checked on every cast (success or misfire). On failure: 1d4 physical damage + 25% chance of Wild Effect. Wild effect residue persists until long rest after effect fades — same number while residue present = escalation.
 9. Apply Aetheric accumulation to the area (Weak +1, Standard +2, Strong +3, Spectacular +4).
 
 > **Design Note:** Fixed casting times mean wild and scholarly casters follow the same timing rules. The difference is purely what happens at resolution — control vs. chaos. A wild caster throwing Force might get a Weak puff or a Spectacular blast; the casting *time* is the same either way. This also makes spell design cleaner: a spell's casting time is an independent balance lever from its tier effects.
 
-**Spell cancellation:** Cancel mid-cast at any time before resolution. Pay **half the Weak tier's exhaustion cost** for that spell. 10% chance of backlash (1d4 damage). Fixed, predictable, easy to remember — the narrative is that some power was already flowing when you cut it off.
+**Spell cancellation:** Cancel mid-cast at any time before resolution. Pay **half the Weak tier's exhaustion cost** for that spell. 10% chance of backlash (1d4 damage, burn only — no wild effect check). Fixed, predictable, easy to remember — the narrative is that some power was already flowing when you cut it off, but you cut it before it could warp you.
 
 **Casting interruption:** If a caster takes damage while casting (between declaration and resolution), they must make a **concentration check**: roll d100 under their (PW + 4) × 10. Failure means the spell fizzles — treat as cancellation (half Weak tier cost, 10% backlash chance). The caster may choose to voluntarily abort instead of rolling.
 

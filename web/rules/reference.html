@@ -265,7 +265,7 @@
         <ul>
           <li>Each spell has a fixed casting time &rarr; roll <span class="ref-formula">d100</span> against casting target &rarr; tier determined by margin</li>
           <li>Concentration check (if interrupted): <span class="ref-formula">(PW + 4) &times; 10</span></li>
-          <li>Cancel a spell: pay &frac12; Weak EP cost, 10% backlash chance</li>
+          <li>Cancel a spell: pay &frac12; Weak EP cost, 10% backlash chance (burn only, no wild effect)</li>
         </ul>
         <table>
           <tr><th>Margin Under Target</th><th>Tier Achieved</th></tr>
@@ -308,7 +308,7 @@
           <tr><td>Strong</td><td>15%</td><td>20%</td></tr>
           <tr><td>Spectacular</td><td>25%</td><td>30%</td></tr>
         </table>
-        <p class="ref-note">On backlash: 1d4 physical damage + 25% chance of wild effect.</p>
+        <p class="ref-note">Checked on every cast (success or misfire). On backlash: 1d4 physical damage + 25% chance of wild effect. Wild effect residue persists until long rest after effect fades.</p>
       </div>
 
       <div class="ref-card">
@@ -360,6 +360,13 @@ flowchart TD
     M -- No --> K
     M -- Yes --> N["Roll wild effect"]:::warn
     N --> K
+    MISFIRE --> MJ{Backlash check}
+    MJ -- Pass --> MK(["Misfire resolved"]):::bad
+    MJ -- Fail --> ML["Backlash! 1d4 HP"]:::warn
+    ML --> MM{25% wild effect?}
+    MM -- No --> MK
+    MM -- Yes --> MN["Roll wild effect"]:::warn
+    MN --> MK
 
     classDef start fill:#1a8fa8,color:#fff,stroke:#3dc8e0
     classDef good fill:#1a6b30,color:#fff,stroke:#2a9b40

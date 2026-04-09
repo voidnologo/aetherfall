@@ -275,13 +275,14 @@
     <h3 id="backlash">Backlash</h3>
 
     <p>
-      Magic is not tame. Every time you cast, there's a chance it bites back. This is
-      separate from misfire &mdash; you can have a perfectly successful cast that still
-      burns you. More power channeled means more risk.
+      Magic is not tame. Every time you cast, there's a chance it bites back. Backlash is
+      separate from misfire &mdash; a misfire means the spell went wrong, backlash means
+      the raw energy burned you. You check for backlash on <strong>every cast</strong>,
+      whether the spell succeeded or misfired. More power channeled means more risk.
     </p>
 
     <p>
-      After a successful cast, roll d100 for backlash. The higher the tier you channeled,
+      After casting, roll d100 for backlash. The higher the tier you channeled,
       the greater the chance the magic bites back:
     </p>
 
@@ -305,24 +306,148 @@
 
     <p>
       <strong>2. Wild effect (25% chance):</strong> Something
-      <em>strange</em> happens. The GM rolls d10 on the Wild Effect table. Your eyes glow.
-      Objects levitate around you. Your voice shifts to something inhuman. These effects
-      escalate &mdash; if you roll the same effect while a previous one is still active, it
-      gets worse. A third escalation while active makes it <strong>permanent</strong>.
+      <em>strange</em> happens. Roll d100 &mdash; on 25 or under, the GM rolls d10 on the
+      Wild Effect table below.
     </p>
+
+    <h4 id="wild-effects">The Wild Effect Table</h4>
+
+    <p>
+      Wild effects have three escalation tiers. Each effect leaves <strong>aetheric
+      residue</strong> &mdash; a trace of the warping that lingers in your body after the
+      visible effect fades. Residue clears only when you take an <strong>uninterrupted long
+      rest after the effect has worn off</strong>. If you roll the same number on the Wild
+      Effect table while residue from a previous instance is still present, the effect
+      <strong>escalates</strong>. A third occurrence while residue is present makes the
+      effect <strong>permanent</strong>.
+    </p>
+
+    <table>
+      <tr>
+        <th>d10</th>
+        <th>Effect</th>
+        <th>Base (1st)</th>
+        <th>Escalated (2nd)</th>
+        <th>Permanent (3rd)</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td><strong>Caster&rsquo;s Mark</strong></td>
+        <td>Eyes glow faintly for 1d4 hours</td>
+        <td>Eyes glow brightly for 1d4 days, visible in darkness</td>
+        <td>Eyes permanently luminous &mdash; always visibly marked as a caster</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><strong>Thermal Flux</strong></td>
+        <td>Temperature shifts sharply around you for several minutes</td>
+        <td>Extreme shift for 1d4 hours &mdash; frost forms or things smolder near you</td>
+        <td>Permanently radiate unnatural cold or heat &mdash; affects those nearby, can&rsquo;t be hidden</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><strong>Aetheric Ring</strong></td>
+        <td>Sharp ringing sound emanates from you, everyone nearby notices</td>
+        <td>Ringing persists for 1d4 hours, &minus;10% to Stealth</td>
+        <td>Faint persistent hum permanently &mdash; Stealth always at &minus;10%, animals react to you</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td><strong>Poltergeist</strong></td>
+        <td>Nearby small loose objects levitate briefly then drop</td>
+        <td>Objects within arm&rsquo;s reach rattle and shift for 1d4 hours, &minus;10% to Conceal and delicate work</td>
+        <td>Small objects always drift and shift around you &mdash; &minus;10% to Conceal permanently</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td><strong>Sense Burn</strong></td>
+        <td>Lose sense of taste and smell for 1d4 hours</td>
+        <td>Lose taste, smell, and touch sensitivity for 1d4 days, &minus;10% to Awareness checks</td>
+        <td>One sense permanently dulled &mdash; AW reduced by 1</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td><strong>Tremors</strong></td>
+        <td>Hands tremble for 10 minutes, &minus;10% to fine motor tasks</td>
+        <td>Hands tremble for 1d4 hours, &minus;10% to all PC-based rolls</td>
+        <td>Permanent slight tremor &mdash; PC reduced by 1</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td><strong>Veil Slip</strong></td>
+        <td>Brief vivid hallucination &mdash; you see something that isn&rsquo;t there (GM describes)</td>
+        <td>Hallucinations recur for 1d4 hours, &minus;10% to AW checks</td>
+        <td>Permanently see things at the edge of vision &mdash; AW reduced by 1, but GM may occasionally feed genuine supernatural glimpses</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td><strong>Static Discharge</strong></td>
+        <td>You shock the next person or metal object you touch &mdash; startling but harmless</td>
+        <td>Crackle with static for 1d4 hours &mdash; metal sparks, &minus;10% to Social interactions, nearby tech glitches</td>
+        <td>Permanent low-level static field &mdash; tech in your hands always slightly unreliable, &minus;10% to tech-related skill checks</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td><strong>Voice Shift</strong></td>
+        <td>Voice changes pitch or timbre for 1d4 hours &mdash; unsettling to others</td>
+        <td>Voice deeply unnatural for 1d4 days &mdash; &minus;10% to Persuasion and Social rolls</td>
+        <td>Voice permanently altered, recognizably inhuman &mdash; SP reduced by 1, but +10% to Interrogation</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td><strong>Bleed</strong></td>
+        <td>Nosebleed &mdash; dramatic-looking, socially alarming</td>
+        <td>Bleeding from nose and ears for 1d4 hours, &minus;10% to SP-based checks</td>
+        <td>Bleed unpredictably from small capillaries when stressed &mdash; PP reduced by 1</td>
+      </tr>
+    </table>
+
+    <div class="callout callout-gm">
+      <span class="callout-label">GM Note</span>
+      <p>Residue tracking is per-effect. A caster can carry residue from multiple different
+      effects simultaneously &mdash; a nosebleed and trembling hands are separate threats.
+      Rolling different numbers gives separate base effects, not escalation. Only the
+      <em>same</em> number escalates.</p>
+    </div>
+
+    <div class="callout callout-gm">
+      <span class="callout-label">GM Note &mdash; Beyond Backlash</span>
+      <p>This table is designed for spell backlash, but it doubles as a toolkit for any
+      situation where raw aetheric energy is warping the environment. High-accumulation zones,
+      Veil-thin locations, unstable artifacts &mdash; roll on the Wild Effect table to give
+      those areas immediate, tangible consequences. Adjust the severity tier to match the
+      intensity: a mildly charged ruin might inflict base effects, while a ruptured Veil
+      site could jump straight to escalated or permanent. Use it wherever you want magic
+      to feel dangerous and unpredictable.</p>
+    </div>
 
     <div class="callout callout-warning">
       <span class="callout-label">The Fear</span>
-      <p>The probability of rolling the same wild effect on a d10 three times while previous
-      instances are still active is low. But the <em>fear</em> of it is a constant presence.
-      After one or two backlash effects, casters start hesitating. That permanent stat
-      reduction is always lurking. This is by design &mdash; a mixed party of casters and
-      non-casters is the smart approach.</p>
+      <p>A nosebleed fades in seconds. The residue doesn&rsquo;t. Until you take a long rest,
+      every backlash check carries the threat of escalation. After one or two wild effects,
+      casters start hesitating &mdash; and in a dungeon or on a long mission, rest may not
+      come easily. That permanent stat reduction is always lurking. This is by design &mdash;
+      a mixed party of casters and non-casters is the smart approach.</p>
     </div>
 
-    <div class="callout callout-street">
-      <span class="callout-label">The Street</span>
-      <p>I've seen backlash drop a caster mid-sentence. One second they're shaping fire, the next they're on the ground bleeding from the eyes. Magic bites back. Every spell is a deal, and the Aether always collects. Know your limits or pay the price — and on the gradient, the price is usually your life.</p>
+    <div class="callout callout-scene">
+      <span class="callout-label">At the Table</span>
+      <p>Sera casts Force at Standard tier. The spell fires. Now she checks for backlash.</p>
+      <p><strong>Backlash roll:</strong> Standard for a wild caster is 15%. She rolls d100: 09.
+      That&rsquo;s under 15 &mdash; backlash. She takes 1d4 = 3 physical HP damage. The burn
+      hurts, but now comes the second question.</p>
+      <p><strong>Wild effect roll:</strong> She rolls d100: 18. That&rsquo;s 25 or under &mdash;
+      a wild effect triggers. The GM rolls d10: 10 &mdash; <em>Bleed</em>. Sera&rsquo;s nose
+      starts gushing. Dramatic, alarming, but mechanically harmless at base tier.</p>
+      <p>The nosebleed stops in seconds. But the <strong>residue</strong> doesn&rsquo;t fade.
+      Later that session, Sera casts again. Standard tier, 15% backlash &mdash; she rolls 11.
+      Backlash again. 1d4 = 2 HP. Wild effect check: she rolls 03. Another wild effect. The
+      GM rolls d10: 6 &mdash; <em>Tremors</em>. A different number from her first effect, so
+      no escalation. Now she has residue from two separate effects.</p>
+      <p>If that second d10 had been another 10 &mdash; Bleed again, while residue was still
+      present &mdash; it would have <strong>escalated</strong>. Bleeding from nose and ears
+      for 1d4 hours, &minus;10% to SP-based checks. And <em>that</em> residue would linger
+      until she rests after it wears off. One more 10 and it goes permanent.</p>
     </div>
 
     <!-- ── Spell Cancellation & Interruption ──────────────── -->
@@ -338,7 +463,7 @@
 
     <ul>
       <li>Pay exhaustion equal to <strong>half the Weak tier's cost</strong> for that spell (rounded up)</li>
-      <li><strong>10% chance of backlash</strong> (1d4 HP damage if triggered)</li>
+      <li><strong>10% chance of backlash</strong> (1d4 HP damage if triggered &mdash; burn only, no wild effect check)</li>
     </ul>
 
     <p>
@@ -433,7 +558,9 @@
 
     <p>
       A misfire still costs exhaustion &mdash; equal to the <strong>Weak tier cost</strong>
-      of that spell. The power was spent. You just didn't get to aim it.
+      of that spell. The power was spent. You just didn't get to aim it. You also still check
+      for <a href="#backlash">backlash</a> &mdash; the energy flowed through you whether you
+      controlled it or not.
     </p>
 
     <div class="callout callout-warning">
