@@ -846,6 +846,238 @@ code.inline, code {
   margin-top: 0.1rem;
 }
 
+/* ── Location Block ───────────────────────────────────────── */
+.location-block {
+  margin: 2rem 0;
+  border-radius: 6px;
+  border: 1px solid var(--glass-border);
+  background: var(--bg-surface);
+  overflow: hidden;
+}
+
+.location-block-header {
+  padding: 1rem 1.4rem;
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.location-block-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-bright);
+  letter-spacing: 0.03em;
+  margin: 0;
+}
+
+.location-block-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  border-radius: 3px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.location-block-badge.zone-galvanic {
+  color: var(--galvanic);
+  background: var(--galvanic-faint);
+  border: 1px solid rgba(232, 168, 37, 0.2);
+}
+
+.location-block-badge.zone-aetheric {
+  color: var(--aether);
+  background: var(--aether-faint);
+  border: 1px solid rgba(61, 200, 224, 0.2);
+}
+
+.location-block-badge.zone-neutral {
+  color: #8a7ec8;
+  background: rgba(138, 126, 200, 0.06);
+  border: 1px solid rgba(138, 126, 200, 0.2);
+}
+
+.location-block-body {
+  padding: 1rem 1.4rem;
+}
+
+.location-block-desc {
+  color: var(--text-dim);
+  font-style: italic;
+  font-size: 0.92rem;
+  margin: 0 0 0.8rem;
+  line-height: 1.55;
+}
+
+.location-block-effects {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.25rem 0.8rem;
+  font-size: 0.88rem;
+}
+
+.location-block-effects dt {
+  color: var(--text-bright);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.location-block-effects dd {
+  color: var(--text-dim);
+  margin: 0;
+}
+
+/* accent bar — color set by zone type */
+.location-block::before {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 100%;
+}
+
+.location-block.zone-galvanic::before { background: var(--galvanic); }
+.location-block.zone-aetheric::before { background: var(--aether); }
+.location-block.zone-neutral::before  { background: #8a7ec8; }
+
+/* ── Stat Block (NPC / PC card) ──────────────────────────── */
+.stat-block {
+  margin: 2rem 0;
+  border-radius: 6px;
+  border: 1px solid var(--glass-border);
+  background: var(--bg-surface);
+  overflow: hidden;
+  position: relative;
+}
+
+.stat-block::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+}
+
+.stat-block.npc::before { background: #a0a0a0; }
+.stat-block.pc-gunfighter::before { background: var(--galvanic); }
+.stat-block.pc-wild::before { background: var(--aether); }
+.stat-block.pc-scholar::before { background: var(--aether); }
+.stat-block.pc-social::before { background: #8a7ec8; }
+.stat-block.hostile::before { background: var(--warning); }
+
+.stat-block-header {
+  padding: 1rem 1.4rem 0.7rem;
+  border-bottom: 1px solid var(--glass-border);
+  text-align: center;
+}
+
+.stat-block-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-bright);
+  margin: 0;
+  letter-spacing: 0.04em;
+}
+
+.stat-block-role {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin: 0.2rem 0 0;
+}
+
+.stat-block-body {
+  padding: 0.8rem 1.4rem 1rem;
+}
+
+.stat-block-attrs {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: 0.7rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  padding-bottom: 0.7rem;
+}
+
+.stat-block-attr {
+  text-align: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.stat-block-attr-label {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  margin-bottom: 0.15rem;
+}
+
+.stat-block-attr-val {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9rem;
+  color: var(--text-bright);
+  font-weight: 700;
+}
+
+.stat-block-derived {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 0.7rem;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  font-size: 0.82rem;
+}
+
+.stat-block-derived span {
+  color: var(--text-dim);
+}
+
+.stat-block-derived strong {
+  color: var(--text-bright);
+  font-weight: 600;
+}
+
+.stat-block-rows {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.3rem 0.8rem;
+  font-size: 0.85rem;
+}
+
+.stat-block-rows dt {
+  color: var(--text-bright);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.stat-block-rows dd {
+  color: var(--text-dim);
+  margin: 0;
+}
+
+/* reset heading styles inside stat-block and location-block */
+.stat-block h3, .stat-block h4,
+.location-block h3, .location-block h4 {
+  margin: 0;
+  color: var(--text-bright);
+  text-transform: none;
+  letter-spacing: 0.04em;
+}
+
 /* ── Galvanic Weapon Descriptions ─────────────────────────── */
 dl.galvanic-weapons dt {
   font-family: 'Playfair Display', serif;
