@@ -5,7 +5,6 @@
 - [ ] Refine landing page tagline for Aetherfall identity
 - [ ] Save/load character data in builder (localStorage)
 - [ ] Visual polish and iteration on web rulebook based on feedback
-- [ ] Design corruption/madness mechanics for dark magic exposure
 
 ## Backlog
 - [ ] Bundle Mermaid.js locally so flowcharts work offline
@@ -26,3 +25,4 @@
 - [ ] Artifact pricing — depends on currency system design
 - [ ] Non-weapon artifact tag tables — expand as play demands
 - [ ] Ward creation process — detailed rules like Enchant spell (currently less specified)
+- [ ] Corruption/madness mechanics — expansion candidate, let tables homebrew for now

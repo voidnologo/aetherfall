@@ -26,6 +26,7 @@
     { id: 'reference',     file: 'reference.html',          title: 'Quick Reference',              num: '15', theme: 'neutral' },
     { id: 'tables',        file: 'tables.html',             title: 'Table Index',                  num: '16', theme: 'neutral' },
     { id: 'gm-tools',     file: 'gm-tools.html',           title: 'GM Tools',                     num: '17', theme: 'neutral' },
+    { id: 'quickstart',   file: 'quickstart.html',          title: 'The Ashwick Job',              num: 'QS', theme: 'split' },
   ];
 
   // ── Detect Current Page ────────────────────────────────────

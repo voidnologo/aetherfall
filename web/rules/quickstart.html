@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="split">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Ashwick Job — Aetherfall RPG</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="atmosphere"><canvas id="particle-canvas"></canvas><div class="mist mist-1"></div><div class="mist mist-2"></div><div class="mist mist-3"></div></div>
+<div id="page-transition" class="page-transition"></div>
+<div class="sidebar-overlay"></div>
+<aside class="sidebar">
+  <div class="sidebar-brand"><div class="sidebar-title">Aetherfall</div><div class="sidebar-subtitle">Rules Reference</div></div>
+  <nav class="sidebar-nav"></nav>
+  <div class="sidebar-footer"><a href="../">← Back to Aetherfall</a></div>
+</aside>
+<header class="site-header">
+  <button class="header-toggle" aria-label="Toggle navigation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+  <span class="header-logo">Aetherfall <span>RPG</span></span>
+  <span class="header-separator"></span>
+  <span class="header-chapter">Quickstart &mdash; The Ashwick Job</span>
+</header>
+<main class="main-content">
+  <div class="page-content">
+
+    <nav class="page-nav-compact">
+      <a href="gm-tools.html">&larr; GM Tools</a>
+    </nav>
+
+    <div class="page-hero">
+      <span class="page-number">Quickstart</span>
+      <h1 class="page-title">The Ashwick Job</h1>
+      <p class="page-subtitle">A one-session starter adventure for 4 players</p>
+    </div>
+
+    <p class="flavor">
+      A missing scholar. A decommissioned foundry. Something underground that shouldn&rsquo;t
+      be there. Your Society is one week old and this is your first job. Make it count.
+    </p>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!--  GM OVERVIEW                                           -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+
+    <h2 id="overview" data-toc="GM Overview">For the Game Master</h2>
+
+    <p>
+      <strong>The Ashwick Job</strong> is a one-session quickstart adventure designed
+      to introduce new players to Aetherfall. It runs 3&ndash;4 hours and moves through
+      three distinct environments &mdash; neutral ground, a Galvanic industrial ruin, and
+      Aetheric tunnels &mdash; so the table experiences how the zone system shapes play.
+      Four pre-generated characters are included.
+    </p>
+
+    <p>
+      The adventure follows a noir investigation that escalates into action. Players begin
+      by gathering information, follow leads into a decommissioned foundry controlled by
+      smugglers, and descend into tunnels where the Aether has been bleeding through for
+      months. Along the way, they&rsquo;ll use social skills, fire weapons, cast spells,
+      and feel the world push back against both magic and technology.
+    </p>
+
+    <h3 id="the-plot">The Plot</h3>
+
+    <p>
+      <strong>Fen Harker</strong>, a Gradient Scholar researcher, went missing three days ago
+      in the Ashwick district. He was mapping zone drift patterns along the border between the
+      Galvanic industrial quarter and the Aetheric old town. His last report mentioned
+      &ldquo;anomalous readings&rdquo; near a decommissioned resonance foundry.
+    </p>
+
+    <p>
+      The truth: Harker stumbled onto a <strong>Lamplighter Syndicate</strong> operation
+      smuggling charged Aetheric artifacts through tunnel networks beneath the foundry. The
+      Syndicate grabbed him to keep him quiet while they finish moving the shipment. Harker
+      is alive &mdash; the Syndicate doesn&rsquo;t want the heat of a dead Scholar &mdash;
+      but he&rsquo;s running out of time. The shipment moves tonight, and once it&rsquo;s
+      gone, Harker becomes a loose end.
+    </p>
+
+    <h3 id="the-arc">The Arc</h3>
+
+    <table>
+      <tr><th>Act</th><th>Zone</th><th>Location</th><th>Primary Mechanics</th></tr>
+      <tr>
+        <td><strong>1: The Lead</strong></td>
+        <td>Neutral</td>
+        <td>The Wet Ember tavern, Harker&rsquo;s boarding house</td>
+        <td>Social encounters, skill checks, investigation</td>
+      </tr>
+      <tr>
+        <td><strong>2: The Foundry</strong></td>
+        <td>Galvanic +3</td>
+        <td>Ashworth decommissioned resonance foundry</td>
+        <td>Gun combat, timing track, Galvanic zone effects</td>
+      </tr>
+      <tr>
+        <td><strong>3: The Tunnels</strong></td>
+        <td>Aetheric +4</td>
+        <td>Smuggling tunnels beneath the foundry</td>
+        <td>Magic casting, Aetheric zone effects, non-combat utility, final confrontation</td>
+      </tr>
+    </table>
+
+    <h3 id="pacing">Pacing Guide</h3>
+
+    <table>
+      <tr><th>Segment</th><th>Time</th><th>Notes</th></tr>
+      <tr><td>Introduction &amp; character handout</td><td>10&ndash;15 min</td><td>Read the cold open, players review pre-gens</td></tr>
+      <tr><td>Act 1: The Lead</td><td>45&ndash;60 min</td><td>Investigation, social encounters, 2&ndash;3 skill checks per player</td></tr>
+      <tr><td>Act 2: The Foundry</td><td>45&ndash;60 min</td><td>Infiltration or assault, one full combat encounter</td></tr>
+      <tr><td>Act 3: The Tunnels</td><td>45&ndash;60 min</td><td>Exploration, utility magic/tech, final confrontation, rescue</td></tr>
+      <tr><td>Wrap-up</td><td>10&ndash;15 min</td><td>Resolution, hooks for continued play</td></tr>
+    </table>
+
+    <hr class="section-divider">
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!--  PRE-GENERATED CHARACTERS                              -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+
+    <h2 id="characters" data-toc="Pre-Generated Characters">Pre-Generated Characters</h2>
+
+    <p>
+      Four characters designed to cover the mechanical spread. Each has a distinct role, a
+      reason to be in the Society, and a personal detail that gives them personality without
+      constraining the player. Hand these out and let players choose.
+    </p>
+
+    <div class="callout callout-handler">
+      <span class="callout-label">Printable Character Sheets</span>
+      <p>Each character has a complete, printable two-page character sheet. Print or
+      save as PDF and hand one to each player.</p>
+      <ul>
+        <li><a href="tools/quickstart-kael.html">Kael Dunn &mdash; The Steady Hand</a> (Gunfighter)</li>
+        <li><a href="tools/quickstart-sera.html">Sera Voss &mdash; The Spark</a> (Wild Caster)</li>
+        <li><a href="tools/quickstart-aldric.html">Aldric Wynn &mdash; The Surgeon</a> (Scholarly Caster)</li>
+        <li><a href="tools/quickstart-mira.html">Mira Cade &mdash; The Fixer</a> (Social Operator)</li>
+      </ul>
+    </div>
+
+    <!-- ── Kael ────────────────────────────────────────── -->
+
+    <h3 id="kael">Kael Dunn &mdash; &ldquo;The Steady Hand&rdquo;</h3>
+
+    <p>
+      <strong>Role:</strong> Gunfighter and squad anchor. The one who keeps his head when
+      everything goes sideways.
+    </p>
+
+    <table>
+      <tr><th>Attribute</th><th>Value</th><th>Derived</th><th>Value</th></tr>
+      <tr><td>PP</td><td>+1</td><td>HP / Tier</td><td>8</td></tr>
+      <tr><td>PC</td><td>+2</td><td>EP / Tier</td><td>7</td></tr>
+      <tr><td>IN</td><td>0</td><td></td><td></td></tr>
+      <tr><td>SP</td><td>0</td><td></td><td></td></tr>
+      <tr><td>AW</td><td>+1</td><td></td><td></td></tr>
+      <tr><td>PW</td><td>&minus;2</td><td></td><td></td></tr>
+    </table>
+
+    <p>
+      <strong>Key Skills:</strong> Firearms 66%, Observation 63%, Streetwise 60%,
+      Stealth 54%, Melee 52%, Athletics 52%, Tactics 50%, Persuasion 50%
+    </p>
+    <p>
+      <strong>Casting:</strong> None. PW &minus;2 &mdash; Kael has no connection to the
+      Aether and doesn&rsquo;t want one.
+    </p>
+    <p>
+      <strong>Equipment:</strong> Revolver (speed 3, 2d6), hunting knife (speed 2,
+      1d6+1), leather jacket (Soak 2), ammunition, binoculars, hip flask
+    </p>
+
+    <div class="callout callout-handler">
+      <span class="callout-label">Background</span>
+      <p>Former Greycoat constable. Left because the job stopped being about protecting
+      people. Joined the Society because at least you get to pick which problems you solve.</p>
+    </div>
+
+    <p>
+      <em>Best for players who want straightforward mechanics. Point, shoot, reliable. Kael
+      shines in combat and investigation, and his high PC means he declares last &mdash;
+      seeing what everyone else does before committing.</em>
+    </p>
+
+    <!-- ── Sera ────────────────────────────────────────── -->
+
+    <h3 id="sera">Sera Voss &mdash; &ldquo;The Spark&rdquo;</h3>
+
+    <p>
+      <strong>Role:</strong> Wild caster (Force, Kinesis). Raw power, unpredictable results.
+      The party&rsquo;s heavy hitter when magic works &mdash; and a liability when it doesn&rsquo;t.
+    </p>
+
+    <table>
+      <tr><th>Attribute</th><th>Value</th><th>Derived</th><th>Value</th></tr>
+      <tr><td>PP</td><td>&minus;1</td><td>HP / Tier</td><td>6</td></tr>
+      <tr><td>PC</td><td>0</td><td>EP / Tier</td><td>9</td></tr>
+      <tr><td>IN</td><td>+1</td><td>Casting Target</td><td>56</td></tr>
+      <tr><td>SP</td><td>0</td><td></td><td></td></tr>
+      <tr><td>AW</td><td>0</td><td></td><td></td></tr>
+      <tr><td>PW</td><td>+2</td><td></td><td></td></tr>
+    </table>
+
+    <p>
+      <strong>Key Skills:</strong> Wild Casting 54% (target 64 with wild bonus), Occult Lore 63%,
+      Stealth 60%, Persuasion 60%, Streetwise 60%, Resolve 54%, Observation 50%
+    </p>
+    <p>
+      <strong>Casting:</strong> Wild caster &mdash; Aetheric Manipulation, Artifice. Rolls 2d100,
+      takes the result farther from target. Can suppress up to 2 tiers (target 64, bracket 51&ndash;75).
+    </p>
+    <p>
+      <strong>Spells:</strong> Force, Amplify, Barrier, Kinesis, Reshape, Enchant (all spells
+      in her schools)
+    </p>
+    <p>
+      <strong>Equipment:</strong> Reinforced coat (Soak 1), belt knife (speed 2, 1d4+1),
+      journal, chalk, brass compass that spins in Aetheric zones
+    </p>
+
+    <div class="callout callout-believer">
+      <span class="callout-label">Background</span>
+      <p>Felt the Aether her whole life. Never had formal training. Joined the Society because
+      they don&rsquo;t care where the power comes from, only that you can use it.</p>
+    </div>
+
+    <p>
+      <em>Best for players who like risk and excitement. Wild casting is unpredictable &mdash;
+      Sera might get a Weak puff or a Spectacular blast. She&rsquo;s devastating in Aetheric
+      zones and struggling in Galvanic ones. The contrast is the point.</em>
+    </p>
+
+    <!-- ── Aldric ──────────────────────────────────────── -->
+
+    <h3 id="aldric">Aldric Wynn &mdash; &ldquo;The Surgeon&rdquo;</h3>
+
+    <p>
+      <strong>Role:</strong> Scholarly caster (Mend, Reveal). Precise, controlled,
+      support-focused. The one who patches you up and finds the thing you missed.
+    </p>
+
+    <table>
+      <tr><th>Attribute</th><th>Value</th><th>Derived</th><th>Value</th></tr>
+      <tr><td>PP</td><td>&minus;1</td><td>HP / Tier</td><td>6</td></tr>
+      <tr><td>PC</td><td>0</td><td>EP / Tier</td><td>9</td></tr>
+      <tr><td>IN</td><td>+2</td><td>Casting Target</td><td>50</td></tr>
+      <tr><td>SP</td><td>&minus;1</td><td></td><td></td></tr>
+      <tr><td>AW</td><td>+1</td><td></td><td></td></tr>
+      <tr><td>PW</td><td>+1</td><td></td><td></td></tr>
+    </table>
+
+    <p>
+      <strong>Key Skills:</strong> Scholarly Casting 63% (casting target 63), Occult Lore 66%,
+      Medicine 66%, Investigation 52%, Observation 52%, Persuasion 57%
+    </p>
+    <p>
+      <strong>Casting:</strong> Scholarly caster &mdash; all 6 schools, 8 spells known. Rolls
+      1d100, can restrict down to any lower tier. Base backlash rates.
+    </p>
+    <p>
+      <strong>Spells:</strong> Mend, Reveal, Detect, Shield, Force, Anchor, Kinesis, Reshape
+    </p>
+    <p>
+      <strong>Equipment:</strong> Reinforced coat (Soak 1), walking stick (speed 2, 1d4),
+      revolver (speed 3, 2d6), medical kit, magnifying lens, spellbook, lantern
+    </p>
+
+    <div class="callout callout-scholar">
+      <span class="callout-label">Background</span>
+      <p>Trained at the Gradient Scholars before funding cuts eliminated his research post.
+      Knows the academic world, knows Fen Harker by reputation. This job is personal &mdash;
+      scholars look after their own.</p>
+    </div>
+
+    <p>
+      <em>Best for players who like solving problems. Aldric&rsquo;s spells don&rsquo;t deal
+      damage &mdash; they heal allies and reveal hidden things. He controls the investigation
+      scenes and keeps the party standing in combat.</em>
+    </p>
+
+    <!-- ── Mira ────────────────────────────────────────── -->
+
+    <h3 id="mira">Mira Cade &mdash; &ldquo;The Fixer&rdquo;</h3>
+
+    <p>
+      <strong>Role:</strong> Social operator and zone navigator. No magic, no formal
+      training &mdash; just nerve, charm, and a Galvanic arc pistol she won in a card game.
+    </p>
+
+    <table>
+      <tr><th>Attribute</th><th>Value</th><th>Derived</th><th>Value</th></tr>
+      <tr><td>PP</td><td>0</td><td>HP / Tier</td><td>7</td></tr>
+      <tr><td>PC</td><td>+1</td><td>EP / Tier</td><td>6</td></tr>
+      <tr><td>IN</td><td>+1</td><td></td><td></td></tr>
+      <tr><td>SP</td><td>+2</td><td></td><td></td></tr>
+      <tr><td>AW</td><td>+1</td><td></td><td></td></tr>
+      <tr><td>PW</td><td>&minus;2</td><td></td><td></td></tr>
+    </table>
+
+    <p>
+      <strong>Key Skills:</strong> Persuasion 66%, Deception 66%, Streetwise 66%,
+      Firearms 63%, Stealth 63%, Sleight of Hand 63%, Investigation 60%, Intimidation 54%
+    </p>
+    <p>
+      <strong>Casting:</strong> None. PW &minus;2.
+    </p>
+    <p>
+      <strong>Equipment:</strong> Arc pistol (Galvanic, speed 3, 2d6+2, Rating 2 &mdash;
+      shifts zone Galvanic by 2 per shot; unreliable in Aetheric zones), holdout derringer
+      (speed 2, 1d6, hidden), fine clothes, lockpicks, forged Greycoat credentials,
+      cigarette case
+    </p>
+
+    <div class="callout callout-street">
+      <span class="callout-label">Background</span>
+      <p>Grew up on Harrier Street, right on the gradient border. She&rsquo;s been talking
+      her way in and out of trouble in every zone since she was twelve. Joined the Society
+      because it&rsquo;s a better class of trouble.</p>
+    </div>
+
+    <p>
+      <em>Best for players who like roleplay. Mira owns the social scenes and carries the
+      investigation. Her arc pistol hits hard in Galvanic zones but is unreliable in Aetheric
+      ones &mdash; she always carries the derringer as backup.</em>
+    </p>
+
+    <hr class="section-divider">
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!--  COLD OPEN                                             -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+
+    <h2 id="cold-open" data-toc="Cold Open">Cold Open</h2>
+
+    <p>
+      Read this to the players after they&rsquo;ve had a few minutes to look at their
+      character sheets. This sets the tone and drops them into the world.
+    </p>
+
+    <div class="callout callout-scene">
+      <span class="callout-label">Tell It to Them Straight</span>
+      <p>The Wet Ember smells like pipe smoke and old wood. It&rsquo;s a tavern on the
+      neutral side of Ashwick &mdash; the kind of place where the Galvanic hum from the
+      factory quarter and the faint Aetheric prickle from the old town cancel each other
+      out. Neutral ground. The lamps are gas, not electric, not magical. The beer is warm.
+      The fire is real.</p>
+      <p>You&rsquo;re sitting at a corner table &mdash; the four of you, your Society
+      charter still fresh enough that the ink smudges if you rub it. One week chartered.
+      Zero jobs completed. The Greycoat Authority posted the contract yesterday: missing
+      person, academic, last seen in the Ashwick border district. Pay is 200 marks split
+      however you like, plus expenses. Not glamorous. But it&rsquo;s your first job, and
+      first jobs matter.</p>
+      <p>The door opens. A woman in a grey coat &mdash; actual Greycoat, not just the
+      color &mdash; crosses the room and sits down across from you without asking.
+      She&rsquo;s mid-forties, sharp eyes, ink stains on her fingers. She sets a thin
+      folder on the table.</p>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!--  ACT 1                                                 -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+
+    <h2 id="act-1" data-toc="Act 1: The Lead">Act 1: The Lead</h2>
+
+    <h3 id="act-1-goals">Scene Goals</h3>
+
+    <ul>
+      <li>Introduce the mission and key NPCs</li>
+      <li>Let every player make at least one skill check</li>
+      <li>Establish the three-zone geography of Ashwick</li>
+      <li>Give the party 2&ndash;3 leads that converge on the foundry</li>
+    </ul>
+
+    <!-- ── The Briefing ──────────────────────────────── -->
+
+    <h3 id="the-briefing">The Briefing &mdash; The Wet Ember</h3>
+
+    <p>
+      <strong>Mood:</strong> Warm, dim, crowded enough for privacy. A neutral-ground
+      tavern where factory workers and old-town residents drink side by side. Not friendly,
+      exactly, but civil. The walls are dark-stained oak. A radio behind the bar plays
+      something with brass and piano, barely audible over the murmur of conversation. The
+      kind of place where people mind their own business and expect you to do the same.
+    </p>
+
+    <h4>NPC: Inspector Renna Laine</h4>
+
+    <p>
+      Greycoat Authority. The party&rsquo;s handler for this job. Pragmatic, overworked,
+      mildly skeptical of a brand-new Society but willing to give them a shot because she
+      doesn&rsquo;t have the bodies to investigate this herself. She speaks in clipped,
+      efficient sentences. Doesn&rsquo;t waste words. Respects competence.
+    </p>
+
+    <table>
+      <tr><th>PP</th><th>PC</th><th>IN</th><th>SP</th><th>AW</th><th>PW</th><th>HP/Tier</th></tr>
+      <tr><td>0</td><td>0</td><td>+2</td><td>+1</td><td>+2</td><td>&minus;1</td><td>7</td></tr>
+    </table>
+
+    <p>
+      <strong>Key Skills:</strong> Investigation 58%, Observation 58%, Persuasion 54%,
+      Streetwise 54%, Firearms 50%<br>
+      <strong>Equipment:</strong> Service revolver, badge, notebook, cynicism
+    </p>
+
+    <div class="callout callout-scene">
+      <span class="callout-label">Tell It to Them Straight</span>
+      <p>Laine opens the folder. Inside: a sketch of a thin man with round spectacles and a
+      distracted expression, a hand-drawn map of the Ashwick district with zone boundaries
+      marked in colored ink, and a note on university letterhead.</p>
+      <p>&ldquo;Fen Harker. Gradient Scholar. Forty-three years old, nearsighted, terrible
+      card player. He&rsquo;s been in Ashwick for two months measuring zone drift &mdash;
+      where the Aetheric and Galvanic boundaries shift over time. Boring work, but someone
+      has to do it. Three days ago he stopped checking in. His people at the Gradient
+      Scholars filed with us yesterday.&rdquo;</p>
+      <p>She taps the note. &ldquo;This is his last dead-drop. Read it.&rdquo;</p>
+      <p>The note, in cramped handwriting: <em>&ldquo;Anomalous readings near the
+      decommissioned Ashworth foundry. Drift pattern inconsistent with natural decay &mdash;
+      something is actively pulling the boundary. Investigating tomorrow. Will report
+      findings at next check-in.&rdquo;</em></p>
+      <p>Laine looks at you. &ldquo;He didn&rsquo;t report. His room&rsquo;s paid through
+      the month. His equipment is gone. Either he found something interesting and lost
+      track of time &mdash; which is possible, I&rsquo;m told academics do that &mdash;
+      or he found something dangerous. Find him. Bring him back. Try not to start a
+      war with anyone.&rdquo;</p>
+    </div>
+
+    <div class="callout callout-handler">
+      <span class="callout-label">GM Note &mdash; What Laine Knows</span>
+      <p><strong>Will share freely:</strong> Harker&rsquo;s description, his boarding house
+      address, the dead-drop note, the foundry&rsquo;s location, that it&rsquo;s been
+      officially decommissioned for two years.</p>
+      <p><strong>Requires a Persuasion check (50+):</strong> Lamplighter Syndicate activity
+      in the area has been higher than usual. Cargo moving through the border district at
+      odd hours. She can&rsquo;t prove a connection but she suspects one.</p>
+      <p><strong>Doesn&rsquo;t know:</strong> The tunnel network. That Harker is being held.
+      The Syndicate&rsquo;s specific operation.</p>
+    </div>
+
+    <div class="callout callout-note">
+      <span class="callout-label">Mechanics Spotlight &mdash; Skill Checks</span>
+      <p>This is a good first moment for a <strong>Persuasion</strong> roll. Mira has
+      Persuasion 58% &mdash; she rolls d100, and anything equal to or under 58 succeeds.
+      Walk the table through it: roll, compare to target, announce result. If the roll is
+      well under (say, 30 against 58), describe Laine warming up &mdash; &ldquo;she
+      pauses, looks at you differently, and leans in.&rdquo; Margin matters narratively
+      even when the rules just say pass/fail.</p>
+    </div>
+
+    <!-- ── Boarding House ────────────────────────────── -->
+
+    <h3 id="boarding-house">Harker&rsquo;s Boarding House</h3>
+
+    <p>
+      <strong>Mood:</strong> Quiet residential street on the neutral side. Late-afternoon
+      light slanting through sash windows. The boarding house is three stories of grey
+      stone with a brass plaque reading &ldquo;Olt&rsquo;s &mdash; Rooms by the
+      Week.&rdquo; Inside it smells like floor polish and yesterday&rsquo;s soup. The
+      staircase creaks. The wallpaper is faded roses. It&rsquo;s the kind of place that
+      was respectable twenty years ago and is holding on through sheer stubbornness.
+    </p>
+
+    <div class="callout callout-scene">
+      <span class="callout-label">Tell It to Them Straight</span>
+      <p>The landlady answers on the second knock. She&rsquo;s sixty-odd, flour on her
+      apron, reading glasses pushed up into her hair. Her hands are steady but her
+      eyes aren&rsquo;t.</p>
+      <p>&ldquo;You&rsquo;re here about Mr. Harker? Thank goodness. Come in, come in.
+      His room&rsquo;s upstairs. I haven&rsquo;t touched anything &mdash; seemed wrong
+      to, with him not back yet.&rdquo;</p>
+    </div>
+
+    <h4>NPC: Mrs. Olt</h4>
+
+    <p>
+      Not a combatant or a faction operative. Just a worried landlady. She likes
+      Harker &mdash; he&rsquo;s quiet, polite, pays on time. She&rsquo;ll answer any
+      question honestly.
+    </p>
+
+    <p><strong>What Mrs. Olt knows:</strong></p>
+    <ul>
+      <li>Harker left three mornings ago with his equipment bag (heavy, clanking &mdash;
+      survey instruments)</li>
+      <li>He said he&rsquo;d be back by evening</li>
+      <li>He&rsquo;d been going to the foundry area regularly for the past two weeks</li>
+      <li>She saw a man watching the boarding house yesterday &mdash; &ldquo;rough-looking,
+      long coat, smoking by the lamp post for an hour.&rdquo; He left when she stared at
+      him from the window.</li>
+      <li>She&rsquo;s never seen the man before</li>
+    </ul>
+
+    <h4>Searching Harker&rsquo;s Room</h4>
+
+    <p>
+      <strong>Mood:</strong> Small, neat, obsessively organized. A single bed with military
+      corners. A desk covered in graph paper, colored inks, and hand-drawn zone maps pinned
+      to the wall with brass tacks. A shelf of reference books. The window overlooks the
+      street. The dust on the windowsill has been disturbed &mdash; recently, from outside.
+    </p>
+
+    <div class="callout callout-scene">
+      <span class="callout-label">Tell It to Them Straight</span>
+      <p>The room is small and meticulously organized. Zone maps cover the wall above the
+      desk &mdash; hand-drawn, annotated in three colors of ink, bristling with measurement
+      notes and dates. This is not the room of a careless person. Whatever happened to
+      Harker, he didn&rsquo;t just wander off.</p>
+      <p>His personal effects are here: spare clothes, toiletries, a dog-eared copy of
+      <em>Veil Cartography: Methods and Madness</em>. What&rsquo;s missing is his field
+      equipment &mdash; the survey instruments, the resonance compass, the leather satchel
+      Mrs. Olt described. He took his tools and didn&rsquo;t come back.</p>
+    </div>
+
+    <p>Let the players describe what they&rsquo;re looking for and call for appropriate checks:</p>
+
+    <table>
+      <tr><th>Check</th><th>What They Find</th></tr>
+      <tr>
+        <td><strong>Investigation</strong> (IN-based)</td>
+        <td>Harker&rsquo;s personal journal on the desk. Recent entries describe zone
+        readings near the foundry. The last entry: <em>&ldquo;Sub-basement access &mdash;
+        ventilation grate on the east wall. Readings are strongest below ground.&rdquo;</em></td>
+      </tr>
+      <tr>
+        <td><strong>Observation</strong> (AW-based)</td>
+        <td>Boot prints in the dust under the window. Someone climbed up from outside and
+        searched the room before the party arrived. They were careful but missed the journal.</td>
+      </tr>
+      <tr>
+        <td><strong>Occult Lore</strong> (IN-based)</td>
+        <td>Harker&rsquo;s calibration notes show Aetheric intensity <em>increasing</em>
+        near the foundry sub-basement &mdash; unusual, because the foundry is in the
+        Galvanic quarter. Something Aetheric is down there that shouldn&rsquo;t be.</td>
+      </tr>
+      <tr>
+        <td><strong>Streetwise</strong> (IN-based)</td>
+        <td>The man Mrs. Olt described &mdash; long coat, smoking, watching the house &mdash;
+        sounds like a Lamplighter Syndicate lookout. The Syndicate uses that pattern:
+        one watcher, rotating shifts, always near a lamppost.</td>
+      </tr>
+    </table>
+
+    <div class="callout callout-note">
+      <span class="callout-label">Mechanics Spotlight &mdash; Ability Checks</span>
+      <p>If a player wants to force Harker&rsquo;s locked desk drawer, call for a
+      <strong>raw PP check</strong>: roll d100 under (PP + 4) &times; 10. Kael (PP +1)
+      rolls under 50%. This demonstrates that you don&rsquo;t need a specific skill for
+      everything &mdash; sometimes you just need to be strong enough.</p>
+      <p>Alternatively, Mira can pick the lock with <strong>Sleight of Hand</strong> (52%).
+      Let the table see that different characters solve the same problem differently.</p>
+    </div>
+
+    <!-- ── Following the Leads ───────────────────────── -->
+
+    <h3 id="following-leads">Following the Leads</h3>
+
+    <p>By this point the party should have 2&ndash;3 leads pointing to the foundry:</p>
+
+    <ol>
+      <li>Harker&rsquo;s journal mentions the foundry sub-basement</li>
+      <li>The Lamplighter lookout suggests organized criminal interest</li>
+      <li>Harker&rsquo;s readings show anomalous Aetheric activity underground</li>
+    </ol>
+
+    <div class="callout callout-handler">
+      <span class="callout-label">GM Note &mdash; Decision Branches</span>
+      <p><strong>Go straight to the foundry.</strong> The most direct path. Proceed to
+      Act 2. The party arrives during daylight. Two Lamplighter guards are posted at
+      the loading bay, posing as demolition workers.</p>
+      <p><strong>Investigate the Lamplighter connection first.</strong> A Streetwise check
+      at The Wet Ember turns up a local informant who confirms the Syndicate has been
+      moving cargo through the area for the past month. &ldquo;Something big, heavy, and
+      makes your teeth itch if you stand too close.&rdquo; Adds useful context but
+      ultimately still leads to the foundry. Adds 15&ndash;20 minutes.</p>
+      <p><strong>Report back to Laine.</strong> Cautious play. Laine thanks them but
+      can&rsquo;t spare constables. &ldquo;That&rsquo;s why I hired you.&rdquo; She provides
+      one bonus: a Greycoat signal whistle that will bring constables within 15 minutes
+      if blown in the neutral zone. It won&rsquo;t work inside Galvanic or Aetheric
+      territory &mdash; nice mechanical flavor.</p>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!--  ACT 2                                                 -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+
+    <h2 id="act-2" data-toc="Act 2: The Foundry">Act 2: The Foundry</h2>
+
+    <h3 id="act-2-goals">Scene Goals</h3>
+
+    <ul>
+      <li>First combat encounter on the timing track</li>
+      <li>Demonstrate firearms, melee, and weapon speed differences</li>
+      <li>Show Galvanic zone effects (guns reliable, magic weakened)</li>
+      <li>Demonstrate wound penalties (death spiral) on NPCs</li>
+      <li>Create a clear transition into the Aetheric tunnels below</li>
+    </ul>
+
+    <h3 id="the-foundry">The Ashworth Decommissioned Resonance Foundry</h3>
+
+    <p>
+      <strong>Mood:</strong> Industrial ruin. Hulking, dark, and wrong. The foundry is a
+      monument to the Galvanic age &mdash; three stories of soot-stained brick and riveted
+      iron, smokestacks cold against the sky, loading bay doors chained shut with bright
+      new steel. The air tastes like rust and ozone. Pigeons roost in the broken upper
+      windows. The Galvanic hum is louder here than anywhere else in Ashwick &mdash; a
+      low, bone-deep vibration that Sera feels as pressure behind her eyes and Aldric
+      notices as a deadening in his fingertips, like his hands have gone partially numb.
+    </p>
+
+    <div class="callout callout-note">
+      <span class="callout-label">Zone Level: Galvanic +3</span>
+      <p><strong>Firearms:</strong> Normal reliability. No penalties.</p>
+      <p><strong>Galvanic devices:</strong> +6% to effective operation.</p>
+      <p><strong>Casting:</strong> &minus;6% to casting target. Sera drops from 64 to 58.
+      Aldric drops from 63 to 57. Magic is harder here &mdash; the Aether feels distant,
+      like trying to shout through a closed door.</p>
+    </div>
+
+    <div class="callout callout-scene">
+      <span class="callout-label">Tell It to Them Straight</span>
+      <p>The foundry hunches against the skyline like something that died standing up. Three
+      stories of soot-stained brick, riveted iron beams, smokestacks that haven&rsquo;t
+      breathed in two years. Weeds push through cracks in the cobblestones. A rusted
+      conveyor arm juts from the second story like a broken limb.</p>
+      <p>The loading bay faces the street. Its doors are chained &mdash; but the chain is
+      bright steel. New. Someone is maintaining this place.</p>
+      <p>A sign on the fence reads &ldquo;ASHWORTH INDUSTRIAL &mdash; DECOMMISSIONED &mdash;
+      NO TRESPASSING &mdash; GREYCOAT AUTHORITY.&rdquo; Beneath it, someone has scratched
+      in chalk: &ldquo;NOT EMPTY.&rdquo;</p>
+      <p>Two men in work clothes are sitting on crates near the loading bay, eating lunch
+      out of tin boxes. They look like demolition workers. They have the build of men who
+      carry heavy things for a living. They don&rsquo;t look like they want company.</p>
+    </div>
+
+    <h4>NPC: Lamplighter Guards (2)</h4>
+
+    <p>
+      Low-level Syndicate muscle. Their job is to keep people away and report anything
+      unusual. They&rsquo;re not killers &mdash; they&rsquo;ll fight if cornered but
+      prefer to bluff or intimidate first.
+    </p>
+
+    <table>
+      <tr><th>PP</th><th>PC</th><th>IN</th><th>SP</th><th>AW</th><th>PW</th><th>HP/Tier</th></tr>
+      <tr><td>+1</td><td>0</td><td>&minus;1</td><td>0</td><td>0</td><td>&minus;2</td><td>8</td></tr>
+    </table>
+
+    <p>
+      <strong>Key Skills:</strong> Firearms 50%, Melee 52%, Intimidation 50%, Observation 46%<br>
+      <strong>Equipment:</strong> Revolver (Medium speed 4, 2d6), work knife (Light speed 2,
+      1d4+1), leather vest (Soak 1)
+    </p>
+
+    <!-- ── Approaching ───────────────────────────────── -->
+
+    <h3 id="approaching">Approaching the Foundry</h3>
+
+    <div class="callout callout-handler">
+      <span class="callout-label">GM Note &mdash; Decision Branches</span>
+      <p><strong>Talk your way in.</strong> Mira&rsquo;s strength. A Persuasion or Deception
+      check against the guards. Possible covers: Greycoat inspection (Mira has forged
+      credentials), demolition assessment, or just being lost. On success, the guards let
+      them look around the ground floor but get nervous if the party heads toward the
+      stairs down. On failure, the guards tell them to leave and reach for their weapons
+      if pushed.</p>
+      <p><strong>Sneak in another way.</strong> An Observation check reveals a broken window
+      on the second floor, reachable by climbing a drainpipe (Athletics check). Inside,
+      the second floor is empty, but footprints in the dust lead to a stairwell going
+      down.</p>
+      <p><strong>Confront directly.</strong> Announce who they are, demand entry. The
+      guards refuse. Things escalate. This is the fastest path to combat.</p>
+    </div>
+
+    <!-- ── Combat Encounter ──────────────────────────── -->
+
+    <h3 id="foundry-combat">Combat: The Loading Bay</h3>
+
+    <p>
+      This encounter triggers when the social approach fails, when the party is discovered
+      sneaking, or when they choose direct confrontation. It can also trigger when the
+      guards realize the party is heading for the sub-basement.
+    </p>
+
+    <div class="callout callout-scene">
+      <span class="callout-label">Tell It to Them Straight</span>
+      <p>The pretense drops. The nearest guard kicks his crate aside and reaches for the
+      revolver under his jacket. The other one is already moving, putting a stack of iron
+      pipes between himself and you.</p>
+      <p>The foundry floor is cluttered &mdash; old machinery, rusted conveyor frames,
+      stacks of salvage, a toppled filing cabinet spilling yellowed invoices. Plenty of
+      cover. Plenty of things to trip over. Pale daylight filters through grimy upper
+      windows. The Galvanic hum is steady and strong.</p>
+      <p>Everyone acts.</p>
+    </div>
+
+    <div class="callout callout-note">
+      <span class="callout-label">Mechanics Spotlight &mdash; Running Combat</span>
+      <p>This is likely the table&rsquo;s first Aetherfall combat. Walk them through it
+      step by step.</p>
+      <p><strong>1. Declaration order:</strong> Lowest PC declares first. Kael (PC +2) and
+      Mira (PC +1) declare last &mdash; they see what everyone else is doing before they
+      commit. This matters.</p>
+      <p><strong>2. Timing track:</strong> Set up a simple count track. Each action has a
+      speed: Light weapons are speed 2, revolvers speed 4, Force is speed 3. Place tokens
+      at the action&rsquo;s speed. Resolve in order.</p>
+      <p><strong>3. Example exchange:</strong></p>
+      <ul>
+        <li>Guard B charges Kael with a knife. Speed 2 &mdash; resolves at count 2.</li>
+        <li>Sera casts Force at Guard A. Speed 3 &mdash; resolves at count 3.</li>
+        <li>Guard A fires his revolver. Speed 4 &mdash; resolves at count 4.</li>
+        <li>Kael fires back at Guard A. Speed 4 &mdash; also count 4.</li>
+        <li>Mira fires her arc pistol at Guard B. Speed 4 &mdash; also count 4.</li>
+        <li>Aldric holds &mdash; no offensive spells, but ready to Mend if someone gets hit.</li>
+      </ul>
+      <p><strong>4. Resolving:</strong> Count 2 first (the knife), then count 3 (Force),
+      then all the count 4 actions simultaneously. Roll d100 under the relevant skill for
+      each. On a hit, roll damage and subtract the target&rsquo;s Soak.</p>
+      <p><strong>5. Wound penalties:</strong> When a guard takes enough damage to cross a
+      wound tier, they&rsquo;re Harmed (&minus;10% to everything). Describe it &mdash; they
+      flinch, slow down, miss shots they shouldn&rsquo;t. The death spiral is visible.</p>
+    </div>
+
+    <div class="callout callout-handler">
+      <span class="callout-label">GM Note &mdash; Sera in the Galvanic Zone</span>
+      <p>Sera&rsquo;s casting target is 58 here (down from 64). When she rolls, call it
+      out: &ldquo;You can feel the Galvanic field pressing against you. The magic is
+      sluggish, reluctant. Your target is 58 instead of 64.&rdquo; If she misfires,
+      describe the spell fizzling against the industrial hum. The zone is fighting her.
+      This is the Galvanic advantage &mdash; and the reason smart parties carry guns.</p>
+    </div>
+
+    <div class="callout callout-handler">
+      <span class="callout-label">GM Note &mdash; After the Fight</span>
+      <p>The guards go down or surrender. They&rsquo;re not loyal enough to die for
+      the Syndicate. If interrogated (Persuasion or Intimidation), they reveal:</p>
+      <ul>
+        <li>They work for the Lamplighter Syndicate</li>
+        <li>There&rsquo;s cargo in the sub-basement &mdash; &ldquo;heavy crates, weird
+        glow, gives you a headache&rdquo;</li>
+        <li>A man matching Harker&rsquo;s description was brought in two nights ago &mdash;
+        &ldquo;the boss said hold him till the shipment moves tonight&rdquo;</li>
+        <li>There are 3 more Syndicate members below, including the operation lead,
+        a woman named Corva</li>
+        <li>The sub-basement connects to old tunnels that run under the zone border
+        into Aetheric territory</li>
+      </ul>
+    </div>
+
+    <!-- ── Stairwell ─────────────────────────────────── -->
+
+    <h3 id="stairwell">The Stairwell Down</h3>
+
+    <div class="callout callout-scene">
+      <span class="callout-label">Tell It to Them Straight</span>
+      <p>The stairwell spirals down into darkness. The air changes with the first turn
+      &mdash; warmer, thicker, with a faint smell like ozone and old copper. The Galvanic
+      hum from the factory above fades with each step, replaced by something else. A low,
+      resonant pulse. Not mechanical. Not quite a sound. More like a pressure in the
+      chest.</p>
+      <p>Sera recognizes it immediately. The Aether. Strong. Getting stronger.</p>
+      <p>Aldric&rsquo;s spellbook feels lighter in his satchel. The casting headache he&rsquo;s
+      had since entering the Galvanic quarter eases, then vanishes. His fingertips tingle.
+      For the first time in an hour, the magic is close again.</p>
+      <p>Mira checks her arc pistol. The charge indicator is flickering &mdash; a steady
+      blue light guttering to orange and back. Down here, the rules are about to change.</p>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!--  ACT 3                                                 -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+
+    <h2 id="act-3" data-toc="Act 3: The Tunnels">Act 3: The Tunnels</h2>
+
+    <h3 id="act-3-goals">Scene Goals</h3>
+
+    <ul>
+      <li>Demonstrate Aetheric zone effects (magic enhanced, tech degraded)</li>
+      <li>Showcase non-combat magical and Galvanic utility</li>
+      <li>Final confrontation with Syndicate operation lead</li>
+      <li>Rescue Harker</li>
+      <li>Provide a satisfying resolution with hooks for future play</li>
+    </ul>
+
+    <h3 id="the-tunnels">The Smuggling Tunnels</h3>
+
+    <p>
+      <strong>Mood:</strong> Strange and wondrous. These aren&rsquo;t just tunnels &mdash;
+      the Aether has been bleeding through here for months, warping the environment. What
+      was once a brick-lined maintenance corridor is now something else entirely. The walls
+      are slick with condensation that catches the light wrong. Crystalline formations
+      &mdash; thin as fingers, sharp as glass &mdash; grow from the ceiling in clusters,
+      pulsing with a soft blue-white light like something breathing in its sleep. The air
+      tastes metallic and sweet. Sound carries strangely &mdash; footsteps echo twice,
+      once from ahead and once from somewhere that doesn&rsquo;t seem to exist.
+    </p>
+
+    <p>
+      It&rsquo;s beautiful. It&rsquo;s deeply unsettling. This is what the world looks like
+      when the Veil gets thin.
+    </p>
+
+    <div class="callout callout-note">
+      <span class="callout-label">Zone Level: Aetheric +4</span>
+      <p><strong>Casting:</strong> +8% to casting target. Sera jumps to 72. Aldric to 71.
+      Magic comes easy here &mdash; almost too easy. The Aether is practically begging
+      to be shaped.</p>
+      <p><strong>Firearms:</strong> Revolvers jam on 85+ (instead of 96+). Mechanical,
+      simple, but the Aether doesn&rsquo;t like them.</p>
+      <p><strong>Galvanic devices:</strong> Mira&rsquo;s arc pistol jams on 75+. The charge
+      indicator is erratic. Galvanic tech is actively suppressed down here.</p>
+    </div>
+
+    <div class="callout callout-scene">
+      <span class="callout-label">Tell It to Them Straight</span>
+      <p>The tunnels open up ahead. What was brick is now something organic &mdash; the walls
+      curve and flow like they were shaped by water, or by something that thought about water
+      and decided to try it. Crystalline formations cluster along the ceiling in long veins
+      of pale blue light, pulsing in slow rhythm. The air is warm and thick and tastes like
+      pennies and honey.</p>
+      <p>Sera feels it on her skin &mdash; the Aether, not distant and reluctant like
+      upstairs, but immediate, eager, <em>alive</em>. Her fingers crackle faintly with
+      static that isn&rsquo;t Galvanic. This is a Wild Zone, or close to one. The kind
+      of place where magic doesn&rsquo;t just work &mdash; it sings.</p>
+      <p>Ahead, the tunnel branches. Left curves downward into deeper darkness. Right opens
+      into something wider &mdash; you can hear voices, low and tense, and the scrape of
+      heavy objects on stone.</p>
+    </div>
+
+    <!-- ── Exploration ───────────────────────────────── -->
+
+    <h3 id="exploration">Exploration Phase</h3>
+
+    <p>
+      This section is less structured than Act 2 &mdash; let the party explore, use their
+      abilities, and engage with the environment.
+    </p>
+
+    <h4>Non-Combat Magic: Reveal</h4>
+
+    <p>
+      Aldric can cast <strong>Reveal</strong> to scout ahead. In this Aetheric zone his
+      target is 71 &mdash; comfortable odds. A Standard result shows the layout clearly:
+      the right tunnel leads to a large chamber where three people are loading crates onto
+      a handcart. One figure sits against the far wall, hands bound. Harker. A Weak result
+      gives a vaguer sense &mdash; &ldquo;people ahead, one of them isn&rsquo;t moving
+      freely.&rdquo;
+    </p>
+
+    <div class="callout callout-handler">
+      <span class="callout-label">GM Note</span>
+      <p>This is the moment to show that magic isn&rsquo;t just for damage. Reveal gives
+      the party <em>information</em> &mdash; the layout, the number of enemies, where
+      Harker is. It changes how they plan the next encounter. Let the player describe
+      what the spell feels like: Aldric&rsquo;s eyes unfocus, the walls go translucent,
+      and for a few seconds he can see through stone.</p>
+    </div>
+
+    <h4>Non-Combat Galvanic Utility</h4>
+
+    <p>
+      If the party has a resonance detector (Laine may have provided one as standard
+      investigative equipment), it&rsquo;s going haywire down here &mdash; but usefully
+      so. The needle is pinned to the Aetheric end of the scale. The readings confirm
+      massive artifact concentration in the chamber ahead. This demonstrates that Galvanic
+      technology has utility beyond weapons &mdash; it&rsquo;s a tool for understanding
+      the environment, even when the environment is hostile to it.
+    </p>
+
+    <h4>The Crystals</h4>
+
+    <p>
+      If anyone examines the crystalline growths, an <strong>Occult Lore</strong> check
+      reveals they&rsquo;re condensed Aether &mdash; raw magical energy crystallized over
+      months of sustained exposure. Fragile, worthless commercially, but striking evidence
+      that the Aether has been bleeding through here for a long time. This is what Harker
+      was tracking: the zone drift that shouldn&rsquo;t exist beneath a Galvanic foundry.
+    </p>
+
+    <h4>The Left Tunnel (Optional Shortcut)</h4>
+
+    <p>
+      The left branch has a partially collapsed section. Getting through requires either:
+    </p>
+
+    <ul>
+      <li>A <strong>raw PP check</strong> to shift rubble (non-skill ability check)</li>
+      <li>A <strong>Kinesis</strong> spell from Sera to move the debris (magic solving a
+      physical problem &mdash; and in this zone, she&rsquo;ll roll with confidence)</li>
+      <li>Ignoring it entirely (the right tunnel reaches the chamber directly)</li>
+    </ul>
+
+    <p>
+      The left tunnel loops around to the far side of the chamber, behind the crates. It&rsquo;s
+      a flanking position &mdash; useful if the party wants to split and approach from two
+      directions.
+    </p>
+
+    <!-- ── Final Confrontation ───────────────────────── -->
+
+    <h3 id="the-chamber">The Chamber: Final Confrontation</h3>
+
+    <h4>NPC: Corva Sable &mdash; Lamplighter Operation Lead</h4>
+
+    <p>
+      Smart, calm, professional. Corva runs smuggling operations, not a street gang. She
+      wears a coat that costs more than most people make in a month and speaks with the
+      precise diction of someone who grew up poor and taught herself to sound expensive.
+      She doesn&rsquo;t want to fight &mdash; violence brings Greycoat attention, which
+      is bad for business. But she won&rsquo;t let the party take Harker or the cargo
+      without negotiation.
+    </p>
+
+    <table>
+      <tr><th>PP</th><th>PC</th><th>IN</th><th>SP</th><th>AW</th><th>PW</th><th>HP/Tier</th></tr>
+      <tr><td>0</td><td>+1</td><td>+2</td><td>+2</td><td>+1</td><td>&minus;1</td><td>7</td></tr>
+    </table>
+
+    <p>
+      <strong>Key Skills:</strong> Persuasion 58%, Deception 60%, Intimidation 54%,
+      Firearms 52%, Streetwise 58%, Observation 54%<br>
+      <strong>Equipment:</strong> Revolver (Medium speed 4, 2d6), boot knife (Light speed 2,
+      1d4+1), ledger, keys to Harker&rsquo;s restraints
+    </p>
+
+    <h4>Syndicate Workers (2)</h4>
+
+    <p>
+      Same statline as the guards upstairs. One has a revolver, one has a shotgun
+      (Medium speed 5, 3d4 &mdash; devastating at close range but slow).
+    </p>
+
+    <div class="callout callout-scene">
+      <span class="callout-label">Tell It to Them Straight</span>
+      <p>The chamber is larger than you expected &mdash; an old cistern or storm drain,
+      thirty feet across, the ceiling vaulted in crumbling brick laced with crystal veins.
+      The Aetheric growths are thickest here, throwing pale blue-white light across
+      everything like moonlight trapped underground. Shadows move wrong. The air hums.</p>
+      <p>Three people work around a stack of wooden crates. Two of them are the same kind
+      of muscle you met upstairs &mdash; hired hands, uncomfortable down here, stealing
+      glances at the crystal formations like they expect them to move. The third is a
+      woman in a dark coat that has no business being in a smuggling tunnel. She&rsquo;s
+      reading a ledger by crystal-light, making annotations with a fountain pen.</p>
+      <p>She sees you. Doesn&rsquo;t reach for a weapon. Doesn&rsquo;t flinch. She caps
+      the pen, sets the ledger on a crate, and tilts her head like she&rsquo;s
+      calculating something.</p>
+      <p>Against the far wall, a thin man with broken spectacles sits with his hands tied
+      in front of him. Fen Harker. Alive. His lip is split and his coat is filthy, but
+      his eyes are sharp. He sees you and straightens, but doesn&rsquo;t speak. He&rsquo;s
+      been down here long enough to know when to stay quiet.</p>
+      <p>The woman in the coat folds her arms.</p>
+      <p>&ldquo;Well. That was faster than I expected. Let&rsquo;s talk about how this
+      ends without anyone getting hurt.&rdquo;</p>
+    </div>
+
+    <!-- ── Decision Point ────────────────────────────── -->
+
+    <h3 id="standoff">The Standoff</h3>
+
+    <div class="callout callout-handler">
+      <span class="callout-label">GM Note &mdash; Decision Branches</span>
+      <p><strong>Negotiate.</strong> Corva&rsquo;s preferred outcome. She offers a deal: the
+      party takes Harker and walks away. The cargo disappears tonight. Everyone pretends
+      this never happened. She&rsquo;ll even sweeten it &mdash; 100 marks on top of whatever
+      the Greycoats are paying. A Persuasion or Intimidation check can improve the terms:
+      she releases the cargo manifest so the Greycoats know what was moving, or she gives
+      up her local contact network. This is the quietest resolution and showcases social
+      mechanics at high stakes.</p>
+      <p><strong>Demand everything.</strong> Harker AND the cargo AND Corva&rsquo;s surrender.
+      Corva refuses &mdash; the Syndicate doesn&rsquo;t accept total losses. Combat starts.
+      This is a harder fight than Act 2: three enemies in a confined space with cover, and
+      the Aetheric zone means Sera is supercharged while the party&rsquo;s guns are less
+      reliable.</p>
+      <p><strong>Create magical chaos.</strong> Sera or Aldric use magic to seize the moment
+      &mdash; Force to scatter the crates, Kinesis to rip weapons from hands, Reveal to
+      flood the room with blinding light. In this Aetheric zone, even modest rolls produce
+      solid results. The workers panic (they&rsquo;re not soldiers), and the party grabs
+      Harker in the confusion. Corva escapes &mdash; she&rsquo;s too smart to fight a
+      losing battle in a crystal cave.</p>
+    </div>
+
+    <div class="callout callout-note">
+      <span class="callout-label">Mechanics Spotlight &mdash; Zone Contrast</span>
+      <p>If combat happens here, the contrast with Act 2 should be stark. Sera&rsquo;s
+      casting target is 72 &mdash; she was struggling at 58 upstairs. Call it out:
+      &ldquo;The Aether floods in. You&rsquo;ve never felt this strong.&rdquo;</p>
+      <p>Meanwhile, Mira&rsquo;s arc pistol jams on 75+. She fires and rolls 81 &mdash;
+      the charge sputters and dies. The Galvanic energy can&rsquo;t stabilize in the
+      Aetheric field. She still has her derringer (mechanical, no zone penalty) as
+      backup. Standard revolvers work but jam on 85+.</p>
+      <p>If Sera casts Force, the Aetheric accumulation pushes the zone even further,
+      making subsequent gun rolls riskier. The tug of war is visible, tangible, and
+      consequential.</p>
+    </div>
+
+    <div class="callout callout-handler">
+      <span class="callout-label">GM Note &mdash; Mend in Action</span>
+      <p>If anyone gets hurt, this is the perfect moment for Aldric to cast
+      <strong>Mend</strong>. In this zone his target is 71 &mdash; good odds. Walk through
+      the casting time on the timing track, the tier result, and the healing. If he
+      restores enough HP to move an ally out of a wound penalty tier, describe it
+      physically: the bruise fading, the cut knitting shut, the ally standing straighter.
+      This demonstrates that Mend changes the math of a fight, not just the numbers on
+      a sheet.</p>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!--  RESOLUTION                                            -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+
+    <h2 id="resolution" data-toc="Resolution">Resolution</h2>
+
+    <h3 id="rescue">Harker Freed</h3>
+
+    <div class="callout callout-scene">
+      <span class="callout-label">Tell It to Them Straight</span>
+      <p>Fen Harker&rsquo;s hands shake as you cut the rope. He flexes his fingers, winces,
+      and looks up at you with an expression that&rsquo;s equal parts relief and academic
+      excitement &mdash; the kind of look that says <em>I nearly died and I can&rsquo;t
+      wait to write about it.</em></p>
+      <p>&ldquo;Thank you. Genuinely. I was beginning to worry they&rsquo;d&mdash;&rdquo;
+      He pauses. Pushes his broken spectacles up his nose. Looks at the crates.</p>
+      <p>&ldquo;Do you know what those are? Charged Aetheric artifacts. Someone has been
+      <em>harvesting</em> condensed Aether from these tunnels and packaging it for
+      transport. The zone drift I was tracking &mdash; it wasn&rsquo;t natural. They&rsquo;ve
+      been mining the Aether. Pulling it through. That&rsquo;s why the readings were
+      wrong.&rdquo;</p>
+      <p>He stands, unsteady. Looks around the crystal-lit chamber with something like
+      wonder.</p>
+      <p>&ldquo;This is the biggest find of my career and I discovered it by getting
+      kidnapped. The Gradient Scholars are going to have questions. The Greycoats are
+      going to have questions. Everyone is going to have questions.&rdquo;</p>
+      <p>He looks at you. &ldquo;I imagine you&rsquo;ll be the ones answering most
+      of them.&rdquo;</p>
+    </div>
+
+    <h3 id="returning">Returning to Inspector Laine</h3>
+
+    <div class="callout callout-handler">
+      <span class="callout-label">GM Note &mdash; Outcomes</span>
+      <p><strong>If they negotiated with Corva:</strong> Laine frowns but accepts it.
+      &ldquo;You got the Scholar back alive. That was the job. But the Syndicate is still
+      operating, and now they know we&rsquo;re looking. This isn&rsquo;t over.&rdquo;
+      Hook: the Syndicate as a known quantity &mdash; wary respect, future leverage.</p>
+      <p><strong>If they took down the operation:</strong> Laine is genuinely pleased.
+      &ldquo;The cargo is evidence. Corva&rsquo;s in custody. The Scholar is safe. Not
+      bad for your first job.&rdquo; She stamps their charter. &ldquo;Congratulations.
+      You&rsquo;re no longer the new Society.&rdquo; Hook: the Syndicate wants payback.</p>
+      <p><strong>If they used chaos and Corva escaped:</strong> Laine is satisfied with
+      Harker&rsquo;s return but warns them. &ldquo;The Lamplighter doesn&rsquo;t forget
+      faces. You&rsquo;ve made an enemy. Make sure you&rsquo;re worth the trouble.&rdquo;
+      Hook: Corva as a recurring figure &mdash; antagonist or reluctant ally.</p>
+    </div>
+
+    <h3 id="closing">Closing Scene</h3>
+
+    <div class="callout callout-scene">
+      <span class="callout-label">Tell It to Them Straight</span>
+      <p>The Wet Ember again. Same corner table. The fire is lower now, and the tavern is
+      emptying out as the evening shift heads to the factories. Through the window, gas
+      lamps flicker to life along the street, one by one. Harker is at the bar, nursing
+      something stronger than tea and scribbling furiously in a new journal &mdash; Mrs. Olt
+      brought him a spare from his room. Laine left an hour ago with the evidence and a
+      look that might have been approval.</p>
+      <p>Your charter sits on the table between you. One job completed. First of many.</p>
+      <p>Outside, the Galvanic hum of the factory quarter competes with something
+      fainter &mdash; the pulse of the Aether, just past the edge of the old town. Two
+      forces that refuse to share. You&rsquo;re standing in the middle, same as everyone
+      else.</p>
+      <p>But now you know what&rsquo;s under the ground. And you&rsquo;re starting to
+      wonder what else is hiding in the spaces between.</p>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!--  QUICK RULES REFERENCE                                 -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+
+    <h2 id="rules-reference" data-toc="Quick Rules Reference">Quick Rules Reference</h2>
+
+    <p>
+      A condensed reference covering only what&rsquo;s needed for this adventure. For the
+      full rules, see the <a href="reference.html">Quick Reference</a> chapter.
+    </p>
+
+    <h3 id="ref-core">Core Mechanic</h3>
+
+    <p>
+      Roll d100. Equal to or under your target number = success. Lower is better.
+      The margin under your target determines how well you succeed.
+    </p>
+
+    <h3 id="ref-skills">Skill Checks</h3>
+
+    <p>
+      Target = the skill percentage on your character sheet. The GM may apply modifiers
+      for difficulty (&minus;10% hard, &minus;20% very hard, +10% easy).
+    </p>
+
+    <h3 id="ref-ability">Non-Skill Ability Checks</h3>
+
+    <p>
+      When no specific skill applies, roll d100 under
+      <code class="formula">(Attribute + 4) &times; 10</code>. A PP +1 character rolls
+      under 50%. A SP +2 character rolls under 60%.
+    </p>
+
+    <h3 id="ref-combat">Combat Sequence</h3>
+
+    <ol>
+      <li><strong>Declare:</strong> Lowest PC declares first (commits before faster characters)</li>
+      <li><strong>Place tokens</strong> on the timing track at each action&rsquo;s speed</li>
+      <li><strong>Resolve</strong> tokens in count order (lowest first)</li>
+      <li><strong>Roll d100</strong> under the relevant skill (Firearms, Melee, Casting)</li>
+      <li><strong>On hit:</strong> Roll damage, subtract Soak from armor, apply to HP</li>
+      <li><strong>Check wound tier</strong> &mdash; penalties apply immediately</li>
+    </ol>
+
+    <h3 id="ref-wounds">Wound Tiers</h3>
+
+    <table>
+      <tr><th>Tier</th><th>Status</th><th>Penalty</th></tr>
+      <tr><td>1</td><td>OK</td><td>None</td></tr>
+      <tr><td>2</td><td>Harmed</td><td>&minus;10% to all rolls</td></tr>
+      <tr><td>3</td><td>Wounded</td><td>&minus;25% to all rolls</td></tr>
+      <tr><td>4</td><td>Critical</td><td>&minus;50% to all rolls, death saves</td></tr>
+    </table>
+
+    <h3 id="ref-casting">Casting</h3>
+
+    <ol>
+      <li>Declare spell and target. Place token at the spell&rsquo;s casting time.</li>
+      <li>When your token resolves, roll d100 under your casting target.</li>
+      <li>Margin determines tier: 1&ndash;10 = Weak, 11&ndash;30 = Standard, 31&ndash;50 = Strong, 51+ = Spectacular</li>
+      <li><strong>Wild casters:</strong> Roll 2d100, take the result farther from target</li>
+      <li><strong>Scholarly casters:</strong> Roll 1d100, can restrict down to any lower tier</li>
+      <li>Pay exhaustion for the tier used</li>
+    </ol>
+
+    <h3 id="ref-zones">Zone Effects (This Adventure)</h3>
+
+    <table>
+      <tr><th>Zone</th><th>Casting</th><th>Firearms</th><th>Galvanic Devices</th></tr>
+      <tr><td>Neutral (Wet Ember)</td><td>Normal</td><td>Normal</td><td>Normal</td></tr>
+      <tr><td>Galvanic +3 (Foundry)</td><td>&minus;6% to target</td><td>Normal</td><td>+6% reliability</td></tr>
+      <tr><td>Aetheric +4 (Tunnels)</td><td>+8% to target</td><td>Jam on 85+</td><td>Jam on 75+</td></tr>
+    </table>
+
+    <nav class="page-nav">
+      <a href="gm-tools.html" class="page-nav-link">
+        <span class="page-nav-direction">&larr; Previous</span>
+        <span class="page-nav-title">GM Tools</span>
+      </a>
+    </nav>
+  </div>
+  <footer class="site-footer"><p>Aetherfall RPG &mdash; Playtest Draft</p></footer>
+</main>
+<script src="js/main.js"></script>
+</body>
+</html>
