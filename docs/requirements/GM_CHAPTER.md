@@ -81,7 +81,7 @@ Sometimes neither skill nor "unskilled attempt" fits. The character isn't attemp
 (5 + stat) × 10
 ```
 
-Range: 20 (stat −3) to 80 (stat +3). Wider range, higher ceiling. A PP +3 character resists the toxin 80% of the time — they're exceptionally tough. A PP −2 character manages it 30% of the time — they're frail.
+Range: 20 (stat −3) to 80 (stat +3). Wider range, higher ceiling. A BR +3 character resists the toxin 80% of the time — they're exceptionally tough. A BR −2 character manages it 30% of the time — they're frail.
 
 > **Design Note:** This is distinct from the unskilled formula. "Unskilled" is "I don't know how to do this." A stat check is "I know how to do this — it's not a skill, it's a capacity." The unskilled formula (×5) maxes at 40 because you're out of your depth. The stat check (×10) maxes at 80 because you're testing something fundamental about the character.
 
@@ -173,13 +173,13 @@ The social skills and their applications:
 
 ### 2.4 Intimidation as Flex-Stat
 
-Intimidation is the only skill in the game that can be assigned to either Physical (PP) or Social (SP) at character creation. The choice reflects how the character threatens people.
+Intimidation is the only skill in the game that can be assigned to either Physical (BR) or Social (SP) at character creation. The choice reflects how the character threatens people.
 
-**PP Intimidation (Physical Menace):** Looming in doorways. Cracking knuckles. Picking up the table one-handed. This works on people who can be physically threatened — thugs, merchants, bureaucrats. It doesn't work well on people who are physically fearless (soldiers, monsters) or who operate in contexts where physical violence is off the table (courtrooms, diplomatic functions).
+**BR Intimidation (Physical Menace):** Looming in doorways. Cracking knuckles. Picking up the table one-handed. This works on people who can be physically threatened — thugs, merchants, bureaucrats. It doesn't work well on people who are physically fearless (soldiers, monsters) or who operate in contexts where physical violence is off the table (courtrooms, diplomatic functions).
 
 **SP Intimidation (Social Pressure):** Naming someone's secrets in public. Mentioning their patron's displeasure. Letting them see you make a note. This works on people with something to lose — reputation, position, connections. It doesn't work on people who have nothing to lose or who operate outside social structures.
 
-**GM guidance:** When a player attempts Intimidation, consider which type applies. If the context doesn't match their stat (a PP Intimidator trying to pressure a noble at a dinner party), apply a −10% to −20% modifier. If the context is perfect (that same PP Intimidator cornering a snitch in an alley), no modifier or even +10%.
+**GM guidance:** When a player attempts Intimidation, consider which type applies. If the context doesn't match their stat (a BR Intimidator trying to pressure a noble at a dinner party), apply a −10% to −20% modifier. If the context is perfect (that same BR Intimidator cornering a snitch in an alley), no modifier or even +10%.
 
 ### 2.5 Social Skills Don't Mind-Control
 
@@ -456,7 +456,7 @@ Not every device is available at shops. The rarity system from FIREARMS_EQUIPMEN
 
 **Situation:** The party needs passage on a cargo ship leaving port tonight. The dockmaster, Greaves, controls berth assignments. He's heard rumors about the party causing trouble at a warehouse (he's Unfriendly, −15%).
 
-**Characters:** Sera (SP +2, Persuasion 3, Etiquette 2, Deception 3) and Kael (PP +2, Intimidation 2 under PP).
+**Characters:** Sera (SP +2, Persuasion 3, Etiquette 2, Deception 3) and Kael (BR +2, Intimidation 2 under BR).
 
 **Step 1 — Read the room.**
 
@@ -504,7 +504,7 @@ One success beats one failure. The lie holds completely. GM: The inspector notes
 
 **What if Kael had tried Intimidation instead?**
 
-Kael's PP Intimidation target: ((10 + 2) × 2) + 30 = 54. He'd loom over Greaves and growl about consequences. Against Greaves' Resolve — say target 50 — it's an opposed check. But even if Kael wins, Intimidation creates compliance, not goodwill. Greaves would give them the berths, then report them to the harbor watch. Persuasion was the right tool here.
+Kael's BR Intimidation target: ((10 + 2) × 2) + 30 = 54. He'd loom over Greaves and growl about consequences. Against Greaves' Resolve — say target 50 — it's an opposed check. But even if Kael wins, Intimidation creates compliance, not goodwill. Greaves would give them the berths, then report them to the harbor watch. Persuasion was the right tool here.
 
 ### 7.2 Foot Chase: "Through the Market District"
 

@@ -82,7 +82,7 @@ Several new mechanics were designed during codification: active defense (opposed
 - 10 playtest questions in COMBAT_PROCEDURE.md §13 (active defense balance, dodging bullets, sprint speed, etc.)
 - Wild caster backlash modifier still TBD (exact +% per tier)
 - Concentration check may need tuning after playtesting
-- Death save 50/50 threshold may benefit from PP modifier
+- Death save 50/50 threshold may benefit from BR modifier
 
 ## Next Session
 

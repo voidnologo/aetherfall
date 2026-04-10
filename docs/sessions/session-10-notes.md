@@ -17,7 +17,7 @@ The second half restructured the 8-page web rulebook into 12 chapters, splitting
 - Consolidated from 34 to 27 skills across all 6 attributes
 - Added: Firearms (PC), Piloting (PC), Investigation (AW), Occult Lore (IN), Sleight of Hand (PC), Streetwise (SP), Deception (SP), Resolve (PW)
 - Removed/consolidated: Running, Swimming, Climbing → Athletics; Metalworking, Woodworking, Repair → Craft; Acting, Disguise, Forgery → Deception; Hunting → Survival; Security → Sleight of Hand; Gambling, Business, Interrogation → removed
-- Intimidation is flex-stat (PP physical menace or SP social pressure)
+- Intimidation is flex-stat (BR physical menace or SP social pressure)
 - PW added to Mental group (Mental = IN + AW + PW)
 
 ### Progression System

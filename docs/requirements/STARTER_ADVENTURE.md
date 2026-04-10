@@ -74,7 +74,7 @@ Four characters designed to cover the mechanical spread. Each has a distinct rol
 
 | Attribute | Value | | Derived | Value |
 |-----------|-------|-|---------|-------|
-| PP | +1 | | HP/Tier | 8 |
+| BR | +1 | | HP/Tier | 8 |
 | PC | +2 | | Exhaustion/Tier | 7 |
 | IN | 0 | | |
 | SP | 0 | | |
@@ -94,7 +94,7 @@ Four characters designed to cover the mechanical spread. Each has a distinct rol
 
 | Attribute | Value | | Derived | Value |
 |-----------|-------|-|---------|-------|
-| PP | -1 | | HP/Tier | 6 |
+| BR | -1 | | HP/Tier | 6 |
 | PC | 0 | | Exhaustion/Tier | 9 |
 | IN | +1 | | Casting Target | 56 |
 | SP | 0 | | |
@@ -115,7 +115,7 @@ Four characters designed to cover the mechanical spread. Each has a distinct rol
 
 | Attribute | Value | | Derived | Value |
 |-----------|-------|-|---------|-------|
-| PP | -1 | | HP/Tier | 6 |
+| BR | -1 | | HP/Tier | 6 |
 | PC | 0 | | Exhaustion/Tier | 9 |
 | IN | +2 | | Casting Target | 50 |
 | SP | -1 | | |
@@ -136,7 +136,7 @@ Four characters designed to cover the mechanical spread. Each has a distinct rol
 
 | Attribute | Value | | Derived | Value |
 |-----------|-------|-|---------|-------|
-| PP | 0 | | HP/Tier | 7 |
+| BR | 0 | | HP/Tier | 7 |
 | PC | +1 | | Exhaustion/Tier | 6 |
 | IN | +1 | | |
 | SP | +2 | | |
@@ -186,7 +186,7 @@ The party's handler for this job. Pragmatic, overworked, mildly skeptical of a b
 
 | Attribute | Value |
 |-----------|-------|
-| PP | 0 |
+| BR | 0 |
 | PC | 0 |
 | IN | +2 |
 | SP | +1 |
@@ -260,7 +260,7 @@ This is the investigation showcase. Let the players describe what they're lookin
 | **Streetwise** (IN-based) | Standard success | The man Mrs. Olt described — long coat, smoking, watching the house — sounds like a Lamplighter lookout. The Syndicate uses that pattern: one watcher, rotating shifts, always near a lamppost (ironic, given their name). |
 
 **GM Notes — Non-Skill Ability Check:**
-If a player wants to force Harker's locked desk drawer, call for a **raw PP check** — roll d100 under (PP + 4) x 10. This is a good moment to demonstrate that you don't need a specific skill for everything; sometimes you just need to be strong enough.
+If a player wants to force Harker's locked desk drawer, call for a **raw BR check** — roll d100 under (BR + 4) x 10. This is a good moment to demonstrate that you don't need a specific skill for everything; sometimes you just need to be strong enough.
 
 Alternatively, Mira can pick the lock with **Sleight of Hand** — a skill-based approach to the same problem. Let the table see that different characters solve problems differently.
 
@@ -311,7 +311,7 @@ Low-level Syndicate muscle. Their job is to keep people away from the foundry an
 
 | Attribute | Value | | Derived | Value |
 |-----------|-------|-|---------|-------|
-| PP | +1 | | HP/Tier | 8 |
+| BR | +1 | | HP/Tier | 8 |
 | PC | 0 | | |
 | IN | -1 | | |
 | SP | 0 | | |
@@ -325,7 +325,7 @@ Low-level Syndicate muscle. Their job is to keep people away from the foundry an
 
 **Branch A — Talk your way in.** Mira's strength. A **Persuasion** or **Deception** check against the guards. Possible covers: Greycoat inspection (Mira has forged credentials), demolition assessment, lost and looking for directions. On success, the guards let them look around the ground floor — but get nervous if the party heads toward the stairs down. On failure, the guards tell them to leave and get visibly tense.
 
-**Branch B — Sneak in.** Find another entrance. An **Observation** check reveals a broken window on the second floor, reachable by climbing a drainpipe (**Athletics** check, PP-based). Inside, the second floor is empty but footprints in the dust lead to a stairwell going down.
+**Branch B — Sneak in.** Find another entrance. An **Observation** check reveals a broken window on the second floor, reachable by climbing a drainpipe (**Athletics** check, BR-based). Inside, the second floor is empty but footprints in the dust lead to a stairwell going down.
 
 **Branch C — Confront directly.** Announce who they are, demand entry. The guards refuse and things escalate to combat. This is the fastest path to a fight.
 
@@ -433,7 +433,7 @@ If anyone examines the crystals, an **Occult Lore** check reveals they're conden
 
 **Ability check showcase:**
 The left tunnel has a partially collapsed section. Getting through requires either:
-- A **raw PP check** to shift rubble (non-skill ability check)
+- A **raw BR check** to shift rubble (non-skill ability check)
 - A **Kinesis** spell from Sera to move the debris (magic solving a physical problem)
 - Ignoring the left tunnel entirely (it's a shortcut to flank the chamber, but not required)
 
@@ -445,7 +445,7 @@ Smart, calm, professional. She runs smuggling operations, not a gang. She doesn'
 
 | Attribute | Value | | Derived | Value |
 |-----------|-------|-|---------|-------|
-| PP | 0 | | HP/Tier | 7 |
+| BR | 0 | | HP/Tier | 7 |
 | PC | +1 | | Exhaustion/Tier | 7 |
 | IN | +2 | | |
 | SP | +2 | | |
@@ -539,7 +539,7 @@ Roll d100. Equal to or under target = success. Lower is better. Margin under tar
 Target = skill percentage on character sheet. GM sets difficulty by applying modifiers (-10% hard, -20% very hard, +10% easy).
 
 ### Non-Skill Ability Checks
-When no skill applies, roll d100 under (Attribute + 4) x 10. A PP +1 character rolls under 50%. A SP +2 character rolls under 60%.
+When no skill applies, roll d100 under (Attribute + 4) x 10. A BR +1 character rolls under 50%. A SP +2 character rolls under 60%.
 
 ### Combat Sequence
 1. Lowest PC declares first (tells table what they're doing)

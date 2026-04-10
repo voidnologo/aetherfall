@@ -77,7 +77,7 @@ Also removed "complexity" as a player-facing concept from the grimoire — it re
 - **Wild casters pick schools, not spells.** Wild casters select 2 schools and automatically know all spells in those schools. The form reflects this with a school picker instead of individual spell selection.
 - **Complexity removed from player-facing content.** Complexity is a design-side concept that maps to exhaustion costs. Players just need to see the costs directly on each spell. Complexity remains in design docs.
 - **Character Sheet as a top-level page.** Not buried under GM Tools — players need it immediately after character creation. Arrow icon in sidebar distinguishes it from numbered chapters.
-- **10 boxes per tier row.** Maximum possible is 7+3=10 (PP or PW at +3). Players cross out unused boxes based on their actual attribute values.
+- **10 boxes per tier row.** Maximum possible is 7+3=10 (BR or PW at +3). Players cross out unused boxes based on their actual attribute values.
 
 ## Open Issues
 

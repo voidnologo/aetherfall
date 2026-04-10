@@ -109,7 +109,7 @@ When to call for a roll (uncertain outcome + interesting failure + not guarantee
 |--------|--------------|
 | Resolution | d100 roll-under; 01 = crit, 00 = fumble |
 | Skills | `((10 + stat) × level) + 30` target number |
-| Wounds | 4-tier track (OK → Harmed → Maimed → Incapacitated), 7+PP per tier |
+| Wounds | 4-tier track (OK → Harmed → Maimed → Incapacitated), 7+BR per tier |
 | Exhaustion | 4-tier track (OK → Wearied → Drained → Overwhelmed), 7+PW per tier |
 | Combat | Timing track with count-based action resolution |
 | Spellcasting | Roll margin determines tier (Weak/Standard/Strong/Spectacular) |

@@ -125,7 +125,7 @@ Expanded web/rules/index.html from ~1400 to ~2400 lines:
 - Piercing tag: 1 point → 2 points (matched all design docs)
 - Versatile tag: "+1 damage" → "one die step up"
 - Throwable tag: added "+2 speed, one die step lower damage"
-- Kael's Ranged stat: PC → PP (Ranged is PP-based)
+- Kael's Ranged stat: PC → BR (Ranged is BR-based)
 - Kael's armor: "leather jacket (Soak 2)" → "reinforced leather coat (Soak 2)" to avoid conflict with Modern Armor table
 - Worked combat example: fully reworked for Force 2ct, 2d100 wild rolls, correct backlash rates
 - Combat section reordered: weapons→tags→malfunction; armor→hinder

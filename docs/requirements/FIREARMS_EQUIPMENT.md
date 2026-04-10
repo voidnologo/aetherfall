@@ -61,7 +61,7 @@ Exotic weapons are **rare, emerging technology** — expensive, unreliable, and 
 | Exotic Pistol | 3 | 1d10 | 12 | 2 | 70 | 1 | Pneumatic flechette, needle gun, compressed air pistol |
 | Exotic Sidearm | 4 | 2d8 | 6 | 3 | 65 | 2 | Arc gun, voltaic pistol, spark thrower |
 | Exotic Heavy | 7 | 3d8 | 3 | 5 | 55 | 3 | Aether lance, beam projector, lightning cannon |
-| Exotic Melee | 2 | 1d8+PP | 10 | — | 60 | 1 | Shock gauntlet, arc knuckles, voltaic blade |
+| Exotic Melee | 2 | 1d8+BR | 10 | — | 60 | 1 | Shock gauntlet, arc knuckles, voltaic blade |
 
 > **Exotic Availability:** These weapons cannot simply be purchased at a shop. They are prototype-level technology — acquired through faction connections, black markets, salvage, or theft. GMs should treat them as notable gear, not standard loadouts.
 
@@ -359,12 +359,12 @@ These are templates. The specific names and flavors are examples — GMs should 
 - *Design note:* Unlike the spell Reveal, this only shows magical residue — not hidden mundane objects, secret doors, or disguised people. It's a forensics tool, not a perception enhancer. An investigator with both this AND the Reveal spell covers different ground with each.
 
 **Galvanic Brace** — *Physical Augmentation*
-- An exoskeletal frame of brass rods and voltaic muscle-wire worn over one arm or across the back. While active, provides the equivalent of +1 PP for lifting, carrying, and feats of brute strength (not combat damage). Hums loudly — no stealth while wearing one.
+- An exoskeletal frame of brass rods and voltaic muscle-wire worn over one arm or across the back. While active, provides the equivalent of +1 BR for lifting, carrying, and feats of brute strength (not combat damage). Hums loudly — no stealth while wearing one.
 - Galvanic Rating: 1 (sustained while active)
 - Reliability: 65
 - Power: Sustained — runs until deactivated. Overheats after ~1 hour of continuous use (needs 30 minutes to cool).
 - Rarity: Uncommon
-- *Design note:* This doesn't increase PP for skill calculations — it's a narrative tool. You can carry the wounded soldier, force the jammed door, lift the collapsed beam. The +1 PP is a guideline for the GM, not a character sheet modification. The loud humming is a deliberate drawback — Stealth is effectively impossible.
+- *Design note:* This doesn't increase BR for skill calculations — it's a narrative tool. You can carry the wounded soldier, force the jammed door, lift the collapsed beam. The +1 BR is a guideline for the GM, not a character sheet modification. The loud humming is a deliberate drawback — Stealth is effectively impossible.
 
 **Signal Caster** — *Communication*
 - Sends encoded pulses through Galvanic frequencies. Two paired devices can transmit short messages (a sentence or two) at ranges up to a few city blocks. Works in Wild Zones where conventional radios fail — the Engine signal punches through Aetheric interference.

@@ -34,7 +34,7 @@ When two characters act in direct opposition, both roll d100 against their relev
 - **One succeeds, one fails:** The success wins.
 - **Both fail:** Stalemate — situation doesn't change. GM adjudicates.
 
-*Examples: arm wrestling (PP vs PP), chase (Running vs Running), stealth vs observation, resisting a spell (caster's roll vs target's PW).*
+*Examples: arm wrestling (BR vs BR), chase (Running vs Running), stealth vs observation, resisting a spell (caster's roll vs target's PW).*
 
 ---
 
@@ -44,7 +44,7 @@ Six stats, rated **-3 to +3.**
 
 | Abbr | Stat | Covers |
 |------|------|--------|
-| PP | Physical Prowess | Strength, endurance, fortitude |
+| BR | Brawn | Strength, endurance, fortitude |
 | PC | Physical Coordination | Grace, dexterity, finesse |
 | IN | Intellect | Knowledge, quick-thinking, academics |
 | SP | Social Prowess | Etiquette, poise, likability |
@@ -73,7 +73,7 @@ Six stats, rated **-3 to +3.**
 (5 + associated stat) × 5
 ```
 
-*Example: Unskilled Athletics, PP +1 → (5 + 1) × 5 = 30. Unskilled Medicine, IN -1 → (5 + -1) × 5 = 20.*
+*Example: Unskilled Athletics, BR +1 → (5 + 1) × 5 = 30. Unskilled Medicine, IN -1 → (5 + -1) × 5 = 20.*
 
 ### 4.3 Skill Points
 
@@ -85,16 +85,16 @@ Skill points are allocated per stat group:
 
 | Group | Stats | Skills |
 |-------|-------|--------|
-| Physical | PP, PC | Athletics (PP), Brawl (PP), Melee (PP), Intimidation ★ (PP), Firearms (PC), Piloting (PC), Ranged (PC), Sleight of Hand (PC), Stealth (PC) |
+| Physical | BR, PC | Athletics (BR), Brawl (BR), Melee (BR), Intimidation ★ (BR), Firearms (PC), Piloting (PC), Ranged (PC), Sleight of Hand (PC), Stealth (PC) |
 | Mental | IN, AW, PW | Craft (IN), Engineering (IN), Medicine (IN), Occult Lore (IN), Science (IN), Tactics (IN), Empathy (AW), Investigation (AW), Observation (AW), Survival (AW), Resolve (PW), Scholarly Casting (PW), Wild Casting (PW) |
 | Social | SP | Deception, Etiquette, Intimidation ★, Leadership, Persuasion, Streetwise |
 
 **Skill cap:** Maximum 15 skills per character.
 **Character creation cap:** 3 per skill. **Gameplay maximum:** 5 per skill.
 
-*Example: PP +2, PC +1 → Physical skill points = 10 + 2 + 1 = 13.*
+*Example: BR +2, PC +1 → Physical skill points = 10 + 2 + 1 = 13.*
 
-> ★ **Intimidation** is a flex-stat skill. Place it under PP (physical menace) or SP (social pressure) — your choice at character creation.
+> ★ **Intimidation** is a flex-stat skill. Place it under BR (physical menace) or SP (social pressure) — your choice at character creation.
 
 ### 4.4 Progression
 
@@ -113,7 +113,7 @@ Skill points are allocated per stat group:
 
 | Value | Formula |
 |-------|---------|
-| HP per wound tier | 7 + PP |
+| HP per wound tier | 7 + BR |
 | EP per exhaustion tier | 7 + PW |
 | Skill target number | ((10 + stat) × skill level) + 30 |
 | Unskilled attempt | (5 + stat) × 5 |
@@ -251,7 +251,7 @@ Net Aetheric hurts firearms AND helps magic. Net Galvanic hurts magic AND helps 
 2. **Skills:** Up to 15. Points per group = 10 + stat group net.
 3. **Spells (if caster):** Magic is a skill choice (Scholarly or Wild). 7 + PW base spells (min 1). Schools = PW modifier (min 1). Scholarly casters need a spellbook. Extra spells cost 3 skill points each.
 4. **Archetype label:** Name your character concept. Flavor, not restriction.
-5. **Derived values:** HP per tier (7+PP), EP per tier (7+PW), skill targets, concentration check target.
+5. **Derived values:** HP per tier (7+BR), EP per tier (7+PW), skill targets, concentration check target.
 6. **Equip:** Weapons (category + 1-2 tags), armor, gear.
 
 ---
@@ -265,14 +265,14 @@ THE ROLL: d100 ≤ target = success
 
 OPPOSED: both roll, larger margin wins │ one success beats one fail
 
-STATS: PP PC IN SP AW PW │ range -3 to +3
+STATS: BR PC IN SP AW PW │ range -3 to +3
 
 SKILL TARGET: ((10 + stat) × level) + 30   max level 5 (cap 3 at creation)
 UNSKILLED:    (5 + stat) × 5
 
 XP: 1/session + table vote bonus │ Skill to N costs N │ Attribute +1 costs 10
 
-WOUNDS (HP per tier = 7+PP)     EXHAUSTION (EP per tier = 7+PW)
+WOUNDS (HP per tier = 7+BR)     EXHAUSTION (EP per tier = 7+PW)
   OK         —                    OK          —
   Harmed    -10%                  Wearied    -10%
   Maimed    -25%                  Drained    -25%

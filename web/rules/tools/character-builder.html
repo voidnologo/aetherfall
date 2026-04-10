@@ -435,7 +435,7 @@
         <div id="attr-grid"></div>
         <div class="derived-summary">
             <span>Net Total: <strong id="net-total">0</strong></span>
-            <span>HP/Tier: <strong id="hp-tier">7</strong> <span style="color:#565e72">(7+PP)</span></span>
+            <span>HP/Tier: <strong id="hp-tier">7</strong> <span style="color:#565e72">(7+BR)</span></span>
             <span>EP/Tier: <strong id="ep-tier">7</strong> <span style="color:#565e72">(7+PW)</span></span>
             <span>Concentration: <strong id="concentration">40</strong> <span style="color:#565e72">(PW+4)&times;10</span></span>
         </div>
@@ -451,7 +451,7 @@
         <div id="skill-list"></div>
         <button class="add-btn" onclick="addSkill()">+ Add Skill</button>
         <div class="derived-summary" style="margin-top:8px;">
-            <span>Physical Pool: <strong id="phys-pool">10</strong> <span style="color:#565e72">(10+PP+PC)</span> &mdash; Used: <strong id="phys-used">0</strong></span>
+            <span>Physical Pool: <strong id="phys-pool">10</strong> <span style="color:#565e72">(10+BR+PC)</span> &mdash; Used: <strong id="phys-used">0</strong></span>
             <span>Mental Pool: <strong id="ment-pool">10</strong> <span style="color:#565e72">(10+IN+AW+PW)</span> &mdash; Used: <strong id="ment-used">0</strong></span>
             <span>Social Pool: <strong id="soc-pool">10</strong> <span style="color:#565e72">(10+SP)</span> &mdash; Used: <strong id="soc-used">0</strong></span>
         </div>
@@ -467,7 +467,7 @@
         </div>
         <div class="weapon-row" style="color:#565e72;font-size:12px;">
             <span>Unarmed</span><span>Brawl</span><span>2</span>
-            <span>1d3+PP</span><span>&mdash;</span><span>&mdash;</span><span>&mdash;</span><span></span><span></span>
+            <span>1d3+BR</span><span>&mdash;</span><span>&mdash;</span><span>&mdash;</span><span></span><span></span>
         </div>
         <div id="weapon-list"></div>
         <button class="add-btn" onclick="addWeapon()">+ Add Weapon</button>
@@ -589,7 +589,7 @@
 <script>
 // ── DATA ──
 const ATTRS = [
-    {key: 'PP', name: 'Physical Prowess (PP)', short: 'PP'},
+    {key: 'BR', name: 'Brawn (BR)', short: 'BR'},
     {key: 'PC', name: 'Phys. Coordination (PC)', short: 'PC'},
     {key: 'IN', name: 'Intellect (IN)', short: 'IN'},
     {key: 'SP', name: 'Social Prowess (SP)', short: 'SP'},
@@ -598,20 +598,20 @@ const ATTRS = [
 ];
 
 const SKILLS = [
-    {name: 'Athletics', stat: 'PP', group: 'physical'},
-    {name: 'Brawl', stat: 'PP', group: 'physical'},
+    {name: 'Athletics', stat: 'BR', group: 'physical'},
+    {name: 'Brawl', stat: 'BR', group: 'physical'},
     {name: 'Craft', stat: 'IN', group: 'mental'},
     {name: 'Deception', stat: 'SP', group: 'social'},
     {name: 'Empathy', stat: 'AW', group: 'mental'},
     {name: 'Engineering', stat: 'IN', group: 'mental'},
     {name: 'Etiquette', stat: 'SP', group: 'social'},
     {name: 'Firearms', stat: 'PC', group: 'physical'},
-    {name: 'Intimidation (PP)', stat: 'PP', group: 'physical'},
+    {name: 'Intimidation (BR)', stat: 'BR', group: 'physical'},
     {name: 'Intimidation (SP)', stat: 'SP', group: 'social'},
     {name: 'Investigation', stat: 'AW', group: 'mental'},
     {name: 'Leadership', stat: 'SP', group: 'social'},
     {name: 'Medicine', stat: 'IN', group: 'mental'},
-    {name: 'Melee', stat: 'PP', group: 'physical'},
+    {name: 'Melee', stat: 'BR', group: 'physical'},
     {name: 'Observation', stat: 'AW', group: 'mental'},
     {name: 'Occult Lore', stat: 'IN', group: 'mental'},
     {name: 'Persuasion', stat: 'SP', group: 'social'},
@@ -675,8 +675,8 @@ const SCHOOLS = [
 
 // ── STATE ──
 const state = {
-    attrs: {PP: null, PC: null, IN: null, SP: null, AW: null, PW: null},
-    attrDescs: {PP: '', PC: '', IN: '', SP: '', AW: '', PW: ''},
+    attrs: {BR: null, PC: null, IN: null, SP: null, AW: null, PW: null},
+    attrDescs: {BR: '', PC: '', IN: '', SP: '', AW: '', PW: ''},
     path: 'none',
     wildSchools: []
 };
@@ -710,15 +710,15 @@ function setAttr(key, val) {
 }
 
 function updateDerived() {
-    const pp = getAttr('PP'), pc = getAttr('PC'), in_ = getAttr('IN');
+    const br = getAttr('BR'), pc = getAttr('PC'), in_ = getAttr('IN');
     const sp = getAttr('SP'), aw = getAttr('AW'), pw = getAttr('PW');
-    const net = pp + pc + in_ + sp + aw + pw;
+    const net = br + pc + in_ + sp + aw + pw;
     document.getElementById('net-total').textContent = (net >= 0 ? '+' : '') + net;
-    document.getElementById('hp-tier').textContent = 7 + pp;
+    document.getElementById('hp-tier').textContent = 7 + br;
     document.getElementById('ep-tier').textContent = 7 + pw;
     document.getElementById('concentration').textContent = (pw + 4) * 10;
 
-    document.getElementById('phys-pool').textContent = 10 + pp + pc;
+    document.getElementById('phys-pool').textContent = 10 + br + pc;
     document.getElementById('ment-pool').textContent = 10 + in_ + aw + pw;
     document.getElementById('soc-pool').textContent = 10 + sp;
     updatePoolUsage();
@@ -789,10 +789,10 @@ function updatePoolUsage() {
     document.getElementById('ment-used').textContent = ment;
     document.getElementById('soc-used').textContent = soc;
 
-    const pp = getAttr('PP'), pc = getAttr('PC'), in_ = getAttr('IN');
+    const br = getAttr('BR'), pc = getAttr('PC'), in_ = getAttr('IN');
     const sp = getAttr('SP'), aw = getAttr('AW'), pw = getAttr('PW');
     const warns = [];
-    if (phys > 10 + pp + pc) warns.push('Physical pool over budget!');
+    if (phys > 10 + br + pc) warns.push('Physical pool over budget!');
     if (ment > 10 + in_ + aw + pw) warns.push('Mental pool over budget!');
     if (soc > 10 + sp) warns.push('Social pool over budget!');
     document.getElementById('pool-warnings').innerHTML = warns.map(w => `<div class="pool-warning">${w}</div>`).join('');
@@ -1042,9 +1042,9 @@ function resetForm() {
 
 // ── GENERATE PRINT SHEET ──
 function generateAndPrint() {
-    const pp = getAttr('PP'), pc = getAttr('PC'), in_ = getAttr('IN');
+    const br = getAttr('BR'), pc = getAttr('PC'), in_ = getAttr('IN');
     const sp = getAttr('SP'), aw = getAttr('AW'), pw = getAttr('PW');
-    const hpTier = 7 + pp;
+    const hpTier = 7 + br;
     const epTier = 7 + pw;
 
     function bubbles(key) {
@@ -1097,7 +1097,7 @@ function generateAndPrint() {
     }
 
     // Weapon rows
-    let weapHtml = `<tr><td style="color:#999;">Unarmed</td><td style="color:#999;text-align:center;">Brawl</td><td style="color:#999;text-align:center;">2</td><td style="color:#999;text-align:center;">1d3+PP</td><td style="color:#999;text-align:center;">&mdash;</td><td style="color:#999;text-align:center;">&mdash;</td><td style="color:#999;text-align:center;">&mdash;</td><td></td></tr>`;
+    let weapHtml = `<tr><td style="color:#999;">Unarmed</td><td style="color:#999;text-align:center;">Brawl</td><td style="color:#999;text-align:center;">2</td><td style="color:#999;text-align:center;">1d3+BR</td><td style="color:#999;text-align:center;">&mdash;</td><td style="color:#999;text-align:center;">&mdash;</td><td style="color:#999;text-align:center;">&mdash;</td><td></td></tr>`;
     weaponRows.forEach(w => {
         weapHtml += `<tr><td>${escHtml(w.name)}</td><td style="text-align:center;">${escHtml(w.skill)}</td><td style="text-align:center;">${escHtml(w.spd)}</td><td style="text-align:center;">${escHtml(w.dmg)}</td><td style="text-align:center;">${escHtml(w.cap)}</td><td style="text-align:center;">${escHtml(w.rld)}</td><td style="text-align:center;">${escHtml(w.rel)}</td><td>${escHtml(w.tags)}</td></tr>`;
     });
@@ -1151,7 +1151,7 @@ function generateAndPrint() {
     const charter = document.getElementById('charter').value;
     const factionRel = document.getElementById('factionRelation').value;
 
-    const net = pp + pc + in_ + sp + aw + pw;
+    const net = br + pc + in_ + sp + aw + pw;
 
     document.getElementById('print-output').innerHTML = `
 <!-- PAGE 1 -->
@@ -1174,7 +1174,7 @@ function generateAndPrint() {
                 </table>
                 <div class="s-derived-row">
                     <div class="s-derived-item"><span class="s-derived-label">Net Total:</span><div class="s-derived-box">${net >= 0 ? '+' : ''}${net}</div></div>
-                    <div class="s-derived-item"><span class="s-derived-label">HP/Tier:</span><div class="s-derived-box">${hpTier}</div><span style="font-size:6pt;color:#888;">(7+PP)</span></div>
+                    <div class="s-derived-item"><span class="s-derived-label">HP/Tier:</span><div class="s-derived-box">${hpTier}</div><span style="font-size:6pt;color:#888;">(7+BR)</span></div>
                     <div class="s-derived-item"><span class="s-derived-label">EP/Tier:</span><div class="s-derived-box">${epTier}</div><span style="font-size:6pt;color:#888;">(7+PW)</span></div>
                 </div>
             </div>
@@ -1210,7 +1210,7 @@ function generateAndPrint() {
                     <tbody>${skillHtml}</tbody>
                 </table>
                 <div class="s-pool-summary">
-                    <span><strong>Physical:</strong> 10+PP+PC = ${10+pp+pc}</span>
+                    <span><strong>Physical:</strong> 10+BR+PC = ${10+br+pc}</span>
                     <span><strong>Mental:</strong> 10+IN+AW+PW = ${10+in_+aw+pw}</span>
                     <span><strong>Social:</strong> 10+SP = ${10+sp}</span>
                 </div>
@@ -1227,7 +1227,7 @@ function generateAndPrint() {
     </div>
     <div class="s-track-section">
         <div class="s-track">
-            <div class="s-track-title">Wounds <span class="s-track-formula">(7+PP per tier)</span></div>
+            <div class="s-track-title">Wounds <span class="s-track-formula">(7+BR per tier)</span></div>
             ${['OK','Harmed <span class="s-tier-penalty">-10%</span>','Maimed <span class="s-tier-penalty">-25%</span>','Incap. <span class="s-tier-penalty">-50%</span>'].map(label =>
                 `<div class="s-tier"><div class="s-tier-boxes">${tierBoxes(hpTier)}</div><span class="s-tier-label">${label}</span></div>`
             ).join('')}

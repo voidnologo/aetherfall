@@ -33,7 +33,7 @@ Large session covering three distinct areas. First, added the full Wild Effect t
 - Leverages existing lore: Greycoat Authority, Lamplighter Syndicate, Gradient Scholars, Ashworth Foundry
 
 ### Pre-Generated Character Sheets (4 individual printable files)
-- **Kael Dunn** — Gunfighter, PP+1/PC+2, 15 skills, Firearms 66%, non-caster
+- **Kael Dunn** — Gunfighter, BR+1/PC+2, 15 skills, Firearms 66%, non-caster
 - **Sera Voss** — Wild caster (Aeth. Manip + Artifice), casting target 64, 6 spells
 - **Aldric Wynn** — Scholarly caster (all 6 schools), casting target 63, 8 spells
 - **Mira Cade** — Social fixer, Persuasion/Deception/Streetwise all 66%, arc pistol

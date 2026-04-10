@@ -38,7 +38,7 @@ Skill points per group = 10 + (sum of attributes in that group)
 
 | Group | Attributes | Point Range |
 |-------|-----------|-------------|
-| Physical | PP + PC | 4–16 |
+| Physical | BR + PC | 4–16 |
 | Mental | IN + AW + PW | 1–19 |
 | Social | SP | 7–13 |
 
@@ -50,9 +50,9 @@ Not all points need to be spent. A combat-focused character may have leftover So
 
 ## 3. Complete Skill List (27 Skills)
 
-### Physical Group — Points: 10 + PP + PC
+### Physical Group — Points: 10 + BR + PC
 
-#### PP — Physical Prowess
+#### BR — Brawn
 
 | Skill | Description |
 |-------|-------------|
@@ -109,12 +109,12 @@ Not all points need to be spent. A combat-focused character may have leftover So
 |-------|-------------|
 | **Deception** | Lying, disguise, forgery, acting, misdirection. Making people believe things that aren't true — with words, appearance, or documents. |
 | **Etiquette** | High society, formal situations, cultural knowledge, diplomacy. Knowing which fork to use, how to address a baroness, and when to shut up. |
-| **Intimidation** ★ | Social pressure — veiled threats, cold authority, weaponized silence. *Flex stat: may be placed under PP instead.* |
+| **Intimidation** ★ | Social pressure — veiled threats, cold authority, weaponized silence. *Flex stat: may be placed under BR instead.* |
 | **Leadership** | Inspiring, commanding, rallying, organizing. Getting people to follow you — in a firefight, a boardroom, or a revolution. |
 | **Persuasion** | Convincing, negotiating, charming, haggling. Changing minds through argument, appeal, or sheer likability. |
 | **Streetwise** | Underworld contacts, black market access, reading a neighborhood, knowing who runs what. The opposite of Etiquette — knowing which alley to take and who to ask. |
 
-> ★ **Intimidation** appears in both Physical and Social. When you take this skill, choose which attribute defines it for your character and buy it from that group's points. A bruiser who looms (PP) and a spymaster who whispers threats (SP) both intimidate — differently.
+> ★ **Intimidation** appears in both Physical and Social. When you take this skill, choose which attribute defines it for your character and buy it from that group's points. A bruiser who looms (BR) and a spymaster who whispers threats (SP) both intimidate — differently.
 
 ---
 
@@ -179,6 +179,6 @@ At 1–2 XP per session, here's what different investments feel like:
 
 **Cheap to try, expensive to master.** Picking up a new skill costs 1 XP — almost nothing. This encourages characters to grow from story moments. Your grizzled soldier starts learning Occult Lore after a terrifying encounter with a Veil entity? That's 1 XP and a great character moment. But taking that same skill to level 5 is a 15 XP commitment over many sessions. Breadth is cheap; depth is earned.
 
-**Attributes are landmarks.** At 10 XP per point, raising an attribute is a campaign event — the culmination of sessions of sustained investment. But the cascading effect (every skill under that attribute improves) makes it transformative. A character who raises PP from +1 to +2 doesn't just get stronger — their Athletics, Brawl, and Melee all improve. Their HP per tier increases. They are fundamentally different.
+**Attributes are landmarks.** At 10 XP per point, raising an attribute is a campaign event — the culmination of sessions of sustained investment. But the cascading effect (every skill under that attribute improves) makes it transformative. A character who raises BR from +1 to +2 doesn't just get stronger — their Athletics, Brawl, and Melee all improve. Their HP per tier increases. They are fundamentally different.
 
 **Players make meaningful choices.** With 1–2 XP per session and multiple avenues for spending, every point matters. Do you push your best skill toward mastery? Pick up something new the story demands? Save for an attribute increase? The scarcity comes from opportunity cost, not raw cost.

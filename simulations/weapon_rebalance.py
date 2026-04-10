@@ -12,7 +12,7 @@ import statistics
 # ─── PROPOSED CATEGORY SYSTEM ───
 
 MELEE_CATEGORIES = {
-    "Unarmed":  {"speed": 2, "damage": "1d3+PP", "avg": 2.0, "avg_pp1": 3.0},
+    "Unarmed":  {"speed": 2, "damage": "1d3+BR", "avg": 2.0, "avg_br1": 3.0},
     "Small":    {"speed": 2, "damage": "1d4",     "avg": 2.5},
     "Light":    {"speed": 3, "damage": "1d6",     "avg": 3.5},
     "Medium":   {"speed": 5, "damage": "1d8+1",   "avg": 5.5},
@@ -41,9 +41,9 @@ FIREARM_CATEGORIES = {
 }
 
 
-def roll_damage(damage_str, pp=0):
-    """Parse and roll a damage string like '2d6+1' or '1d3+PP'."""
-    damage_str = damage_str.replace("PP", str(pp))
+def roll_damage(damage_str, br=0):
+    """Parse and roll a damage string like '2d6+1' or '1d3+BR'."""
+    damage_str = damage_str.replace("BR", str(br))
     total = 0
     parts = damage_str.replace("-", "+-").split("+")
     for part in parts:

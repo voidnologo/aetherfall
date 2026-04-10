@@ -28,8 +28,8 @@ WEAPONS = {
     "Trident":          {"speed": 7, "damage": "1d6+1",  "avg": 4.5,  "type": "melee"},
     "Warhammer":        {"speed": 5, "damage": "2d4+1",  "avg": 6.0,  "type": "melee"},
     "Whip":             {"speed": 8, "damage": "1d3",    "avg": 2.0,  "type": "utility"},
-    "Punch (unarmed)":  {"speed": 2, "damage": "1d3+PP", "avg": 2.0,  "type": "unarmed"},
-    "Kick (unarmed)":   {"speed": 3, "damage": "1d4+PP", "avg": 2.5,  "type": "unarmed"},
+    "Punch (unarmed)":  {"speed": 2, "damage": "1d3+BR", "avg": 2.0,  "type": "unarmed"},
+    "Kick (unarmed)":   {"speed": 3, "damage": "1d4+BR", "avg": 2.5,  "type": "unarmed"},
     # Ranged (non-firearm)
     "Blow Gun":         {"speed": 5, "damage": "1d2",    "avg": 1.5,  "type": "ranged-utility"},
     "Bow - Composite":  {"speed": 7, "damage": "1d8",    "avg": 4.5,  "type": "ranged"},

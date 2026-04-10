@@ -58,7 +58,7 @@ A character can abandon their current action at any time before it resolves. The
 
 ### 2.2 Attack (Ranged — Martial)
 
-**Skill:** Ranged (PP-based).
+**Skill:** Ranged (BR-based).
 
 **Speed:** Per weapon category. Bows can fire again immediately; crossbows require reload time.
 
@@ -69,7 +69,7 @@ A character can abandon their current action at any time before it resolves. The
 
 ### 2.3 Attack (Firearms)
 
-**Skill:** Ranged (PP-based).
+**Skill:** Ranged (BR-based).
 
 **Speed:** Per firearm category.
 
@@ -225,7 +225,7 @@ One check per hit that exceeds Soak. Simple, no math — did the blow punch thro
 
 ### 5.1 Hit Points & Wound Tiers
 
-**HP per tier:** 7 + PP
+**HP per tier:** 7 + BR
 
 A character has four wound tiers. Each tier is a separate HP pool of equal size. Damage fills them top to bottom.
 
@@ -268,7 +268,7 @@ The fastest possible death is **9 counts** (three checks, three failures). That'
 - **Mend spell:** Healing restores HP normally. If it pushes them above 0 in Incapacitated, they regain consciousness. Remember: casting Mend takes time on the timing track and generates Aetheric accumulation.
 - **Healing potion** (speed 3, must be in hand): Force-fed to the dying character. Restores HP per potion strength.
 
-> **Design intent:** Death should be possible but not instant. The 3-count interval gives allies a genuine rescue window — they might need to cancel an action (+1 penalty), sprint (3 counts), and apply Medicine (5 counts) = roughly 9-10 counts. That's a close race against the death clock, which is exactly the tension we want. The flat 50/50 is intentionally simple — it may evolve into something tied to PP after playtesting.
+> **Design intent:** Death should be possible but not instant. The 3-count interval gives allies a genuine rescue window — they might need to cancel an action (+1 penalty), sprint (3 counts), and apply Medicine (5 counts) = roughly 9-10 counts. That's a close race against the death clock, which is exactly the tension we want. The flat 50/50 is intentionally simple — it may evolve into something tied to BR after playtesting.
 
 ### 5.4 Hinder
 
@@ -276,7 +276,7 @@ Armor with a **Hinder** value imposes penalties to physical actions:
 
 - **-5% per Hinder point** to rolls using PC (Coordination), Athletics, Stealth, and Swimming.
 - **+1 speed per Hinder point** to all spellcasting (the encumbrance disrupts somatic components and concentration).
-- Hinder does **not** affect Melee, Brawl, Ranged, PP-based rolls, or mental/social skills.
+- Hinder does **not** affect Melee, Brawl, Ranged, BR-based rolls, or mental/social skills.
 
 | Armor | Hinder | Effect |
 |-------|--------|--------|
@@ -409,7 +409,7 @@ Degraded armor can be repaired with a **Metalworking check** (or Repair for mode
 
 **Count 3 — Three tokens resolve.** All three started at count 0, so they resolve simultaneously.
 - **Sera's Force spell:** Rolls d100 against casting target 55. Rolls 38 — success, margin 17 → Standard tier. She's a wild caster — she rides the surge, no choice. Targets Thug B. Deals 2d6 = 8 damage. Sera pays 4 exhaustion from her EP track. Backlash check: 10% chance, rolls 67 — no backlash. Aetheric accumulation in the area: +2.
-- **Thug A fires at Kael:** Rolls 44 against skill 50. Hit. Damage: 2d6 = 9. Kael is wearing leather (Soak 2). 9 − 2 = 7 damage. Armor degradation check: 9 exceeds Soak 2, so roll — 63, no degradation. Kael has 9 HP per tier (PP +2). He takes 7 into his OK tier, leaving 2 HP before Harmed. Close call.
+- **Thug A fires at Kael:** Rolls 44 against skill 50. Hit. Damage: 2d6 = 9. Kael is wearing leather (Soak 2). 9 − 2 = 7 damage. Armor degradation check: 9 exceeds Soak 2, so roll — 63, no degradation. Kael has 9 HP per tier (BR +2). He takes 7 into his OK tier, leaving 2 HP before Harmed. Close call.
 - **Thug B fires at Sera:** Rolls 71 against skill 50. Miss. No malfunction check needed — there was 0 accumulation when the shot was declared (accumulation from Sera's spell and the shot resolve simultaneously on this count).
 
 **Post-count 3:** Area now has 2 Aetheric accumulation. Both revolvers (Reliability 95) drop to effective 89 — barely noticeable, but the clock is ticking.
@@ -417,7 +417,7 @@ Degraded armor can be repaired with a **Metalworking check** (or Repair for mode
 **Count 3 — New declarations (declaration order matters now):**
 Three characters need to declare: Sera (PC +0), Thug A (PC +0, AW -1), Thug B (PC +0, AW -1). Thugs declare first (tied PC, lower AW). Then Sera. Sera gets to see what both thugs are committing to before she decides.
 - Thug A: fires again at Kael (speed 3, token at 6). Malfunction check required — accumulation is now 2.
-- Thug B: took 8 damage. HP per tier is 7 (PP +0). 7 fills OK, 1 overflows to Harmed. He's at -10%. Fires at Sera (speed 3, token at 6, skill now 40 after penalty).
+- Thug B: took 8 damage. HP per tier is 7 (BR +0). 7 fills OK, 1 overflows to Harmed. He's at -10%. Fires at Sera (speed 3, token at 6, skill now 40 after penalty).
 - Sera: sees both thugs shooting again. Casts Force again (casting time 3, token at 6).
 
 *Note: Kael doesn't declare here — his sword attack is already on the track at count 7.*
@@ -447,7 +447,7 @@ Thugs (PC +0, AW -1) declare first. Then Sera (PC +0, AW +1). Kael (PC +2) isn't
 
 | Category | Speed | Damage | Examples |
 |----------|-------|--------|----------|
-| Unarmed | 2 | 1d3+PP | Punch, kick, headbutt |
+| Unarmed | 2 | 1d3+BR | Punch, kick, headbutt |
 | Small | 2 | 1d4 | Knife, dagger, stiletto |
 | Light | 3 | 1d6 | Short sword, hatchet, club, rapier |
 | Medium | 5 | 1d8+1 | Longsword, mace, saber, spear |
@@ -484,7 +484,7 @@ Thugs (PC +0, AW -1) declare first. Then Sera (PC +0, AW +1). Kael (PC +2) isn't
 | Exotic Pistol | 3 | 1d10 | 12 | 4 | 70 | Flechette gun, needle gun |
 | Exotic Sidearm | 4 | 2d8 | 6 | 6 | 65 | Arc gun, voltaic pistol |
 | Exotic Heavy | 7 | 3d8 | 3 | 8 | 55 | Aether lance, lightning cannon |
-| Exotic Melee | 2 | 1d8+PP | 10 | — | 60 | Shock gauntlet, voltaic blade |
+| Exotic Melee | 2 | 1d8+BR | 10 | — | 60 | Shock gauntlet, voltaic blade |
 
 ### Armor
 
@@ -558,7 +558,7 @@ HINDER: -5% per point to PC/Athletics/Stealth/Swim
 
 1. **Active defense balance** — Is +2 speed cost enough? Too much? Should shields grant free defense once per round?
 2. **Concentration check ((PW + 4) × 10)** — Range is 10% (PW -3) to 70% (PW +3). Does this properly reward PW investment at character creation?
-3. **Death save threshold (50/50)** — Should PP modify the threshold? Should damage severity affect it? The 3-count interval feels right but the 50/50 split is arbitrary.
+3. **Death save threshold (50/50)** — Should BR modify the threshold? Should damage severity affect it? The 3-count interval feels right but the 50/50 split is arbitrary.
 4. **One-roll vs. two-roll malfunction** — The sidebar suggests using the attack roll as the malfunction check too. Playtest both and see which feels better at the table.
 5. **Firing into melee** — -10% and hitting allies on near-miss. Does this feel right or should it be harsher/softer?
 6. **Active defense vs. ranged** — Can you dodge a bullet? Currently yes (Athletics). Should firearms be un-dodgeable, or is the +2 speed cost enough penalty for the narrative stretch?

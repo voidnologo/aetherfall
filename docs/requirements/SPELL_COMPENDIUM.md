@@ -83,7 +83,7 @@ Move objects at a distance. Telekinesis — fine manipulation to brute force.
 | Tier | Exhaust | Effect |
 |------|---------|--------|
 | **Weak** | 3 | Move a small object (up to a few pounds) slowly and crudely. Slide a key off a table, pull a lever, push a button from across a room. No precision — like using a clumsy invisible hand. |
-| **Standard** | 6 | Move a moderate object (up to 50 lbs) with reasonable control. Lift a chair, pull a weapon from someone's hand (opposed check vs their PP), manipulate a mechanism. Sustained for several minutes. |
+| **Standard** | 6 | Move a moderate object (up to 50 lbs) with reasonable control. Lift a chair, pull a weapon from someone's hand (opposed check vs their BR), manipulate a mechanism. Sustained for several minutes. |
 | **Strong** | 9 | Move heavy objects (up to 500 lbs) or multiple smaller ones with fine control. Hurl furniture, rip a door off hinges, manipulate multiple locks simultaneously. Can be used as a crude attack — hurl objects for 2d6 damage. |
 | **Spectacular** | 14 | Move massive objects (up to several tons) or exert precise control over many objects simultaneously. Lift a vehicle, rearrange a room's contents, create a whirlwind of debris (3d8 damage to all in area). Sustained concentration required. |
 | *Misfire* | 3 | The caster loses kinetic control of their own body — they stumble, drop what they're holding, and are knocked prone. Items they're carrying scatter within arm's reach. |
@@ -153,18 +153,18 @@ Bolster stamina, resist pain, harden flesh, enhance physical resilience. Tempora
 |------|---------|--------|
 | **Weak** | 3 | Dull pain and sharpen focus. Negate wound penalties for 1d4 rounds. Target is still injured but can fight through it. |
 | **Standard** | 6 | Toughen flesh and bolster endurance. Target gains +2 natural soak (stacks with armor) and wound penalties are reduced by one tier for 10 minutes. |
-| **Strong** | 9 | Significant physical enhancement. Target gains +4 natural soak, wound penalties reduced by two tiers, and +10% to PP-based checks for up to 1 hour. Skin visibly toughens — takes on a faintly unnatural sheen. |
-| **Spectacular** | 14 | Extraordinary fortification. Target gains +6 natural soak, all wound penalties negated, +20% to PP-based checks for several hours. The target feels nearly invulnerable. Visible transformation — skin becomes almost stone-like in resilience. Deeply unnerving to witness. |
+| **Strong** | 9 | Significant physical enhancement. Target gains +4 natural soak, wound penalties reduced by two tiers, and +10% to BR-based checks for up to 1 hour. Skin visibly toughens — takes on a faintly unnatural sheen. |
+| **Spectacular** | 14 | Extraordinary fortification. Target gains +6 natural soak, all wound penalties negated, +20% to BR-based checks for several hours. The target feels nearly invulnerable. Visible transformation — skin becomes almost stone-like in resilience. Deeply unnerving to witness. |
 | *Misfire* | 3 | The target's body seizes — muscles lock rigid for 1d4 rounds. They can't move or act. The body "fortified" the wrong systems — skeletal muscles locked instead of toughened. |
 
 ### 2.3 Wither
 *Complexity: 3 — Casting Time: 5ct*
 
-Drain vitality, accelerate decay, weaken biological systems. Offensive Vivimancy. Opposed check vs target's PP to resist.
+Drain vitality, accelerate decay, weaken biological systems. Offensive Vivimancy. Opposed check vs target's BR to resist.
 
 | Tier | Exhaust | Effect |
 |------|---------|--------|
-| **Weak** | 4 | 1d4 damage, target feels fatigue and weakness. -10% to PP-based rolls for 1d4 rounds. Living plants in contact with target wilt. |
+| **Weak** | 4 | 1d4 damage, target feels fatigue and weakness. -10% to BR-based rolls for 1d4 rounds. Living plants in contact with target wilt. |
 | **Standard** | 8 | 2d6 damage, target suffers muscle weakness and nausea. -10% to all physical rolls for 10 minutes. Organic material near target ages visibly. |
 | **Strong** | 12 | 3d8 damage, target's body begins to fail — joints ache, vision blurs, stamina drains. -25% to all physical rolls for 1 hour. Food and drink near target spoils. |
 | **Spectacular** | 18 | 4d10 damage, catastrophic biological degradation. Target can barely stand — all physical rolls at -50% for several hours. Hair grays, skin sags, body ages years in moments. Terrifying to witness. Effect fades but the psychological trauma doesn't. |
@@ -186,13 +186,13 @@ Feel the presence, health, and condition of living things nearby.
 ### 2.5 Shape Flesh
 *Complexity: 4 — Casting Time: Ritual (30 min)*
 
-Alter biological features — cosmetic changes, functional adaptations, temporary mutations. At high tiers, dramatic physical transformation. Opposed check vs target's PP if unwilling.
+Alter biological features — cosmetic changes, functional adaptations, temporary mutations. At high tiers, dramatic physical transformation. Opposed check vs target's BR if unwilling.
 
 | Tier | Exhaust | Effect |
 |------|---------|--------|
 | **Weak** | 6 | Minor cosmetic alteration — change eye color, smooth scars, alter skin tone, grow or remove hair. Lasts 1d4 hours. Uncomfortable tingling during transformation. |
 | **Standard** | 10 | Significant alteration — reshape facial features (basic disguise), grow functional claws (+1d4 unarmed damage), develop night-adapted eyes (+10% to AW in darkness), webbed fingers (swim bonus). Lasts up to a day. Painful. |
-| **Strong** | 16 | Major transformation — completely change appearance (perfect disguise), grow functional gills, develop armored skin (+3 natural soak), elongate limbs for reach, enhance muscle density (+1 temporary PP). Lasts up to a week. Very painful, psychologically disorienting. |
+| **Strong** | 16 | Major transformation — completely change appearance (perfect disguise), grow functional gills, develop armored skin (+3 natural soak), elongate limbs for reach, enhance muscle density (+1 temporary BR). Lasts up to a week. Very painful, psychologically disorienting. |
 | **Spectacular** | 24 | Radical reshaping — complete physical transformation into a different body type, grow wings (limited gliding, not true flight), develop multiple functional adaptations simultaneously. Lasts up to a month. Agonizing process, risk of identity dysphoria. Multiple uses risk addiction — the body starts to feel "wrong" in its natural form. |
 | *Misfire* | 6 | Uncontrolled mutation — something on the caster changes wrong. A finger bends backward, an ear reshapes, skin texture changes on one hand. Cosmetically disturbing, fades in 1d4 days. -10% to SP until it fades. |
 
@@ -246,7 +246,7 @@ Lock, close, bind shut. Works on doors, containers, wounds, portals, magical bre
 
 | Tier | Exhaust | Effect |
 |------|---------|--------|
-| **Weak** | 3 | Seal a single simple closure — lock a door, bind a chest shut, seal a jar, close a shallow wound (stops bleeding but doesn't heal). Requires physical effort equivalent to a strong person (PP +2) to force open. Lasts hours. |
+| **Weak** | 3 | Seal a single simple closure — lock a door, bind a chest shut, seal a jar, close a shallow wound (stops bleeding but doesn't heal). Requires physical effort equivalent to a strong person (BR +2) to force open. Lasts hours. |
 | **Standard** | 6 | Strong seal — reinforce a door beyond its normal strength, seal a room's exits, bind a container so tightly nothing leaks. Requires tools or significant force to break. Resists casual magic (opposed check to Unbind). Lasts days. |
 | **Strong** | 9 | Powerful seal — seal a vault, bind a breach in a wall, seal a magical portal or rift closed. Requires siege equipment or Strong-tier Unbind/Disruption to break. Lasts weeks. Sealed objects faintly glow at the edges. |
 | **Spectacular** | 14 | Absolute seal — nothing passes in or out. Seal an entire building, permanently bind a portal, seal away a dangerous artifact so completely that it can't be sensed. Requires Spectacular-tier magic or extraordinary physical force to break. Lasts months to years. The seal is visible as glowing lines of power. |
@@ -432,14 +432,14 @@ Purify, separate, distill. Extract metals from ore, purify water, separate compo
 ### 5.4 Enlarge/Reduce
 *Complexity: 3 — Casting Time: 6ct*
 
-Change the size of objects or creatures. Temporary and stressful on living targets. Opposed check vs PP if targeting unwilling creature.
+Change the size of objects or creatures. Temporary and stressful on living targets. Opposed check vs BR if targeting unwilling creature.
 
 | Tier | Exhaust | Effect |
 |------|---------|--------|
 | **Weak** | 4 | Change size by roughly 25% — make a person noticeably larger or smaller, enlarge a tool for better leverage, shrink an object to pocket size. Lasts 1d4 minutes. Mild discomfort on living targets. |
-| **Standard** | 8 | Change size by roughly 50% — a person becomes notably large (7-8 feet) or small (3 feet). Enlarged targets gain +1 PP, -1 PC. Reduced targets gain +1 PC, -1 PP. Objects scale accordingly. Lasts up to 10 minutes. Painful for living targets. |
-| **Strong** | 12 | Double or halve size — a person becomes massive (10+ feet, +2 PP, -2 PC) or tiny (1-2 feet, +2 PC, -2 PP). Objects can be shrunk small enough to hide easily or enlarged for dramatic effect. Lasts up to 1 hour. Very painful and disorienting for living targets. |
-| **Spectacular** | 18 | Triple or quarter size — person becomes giant (15+ feet, +3 PP, -3 PC, can lift vehicles) or miniature (inches tall, +3 PC, -3 PP). Dramatic enough to reshape tactical situations entirely. Lasts several hours. Agonizing for living targets — risk of 1d4 physical damage from the stress of transformation. |
+| **Standard** | 8 | Change size by roughly 50% — a person becomes notably large (7-8 feet) or small (3 feet). Enlarged targets gain +1 BR, -1 PC. Reduced targets gain +1 PC, -1 BR. Objects scale accordingly. Lasts up to 10 minutes. Painful for living targets. |
+| **Strong** | 12 | Double or halve size — a person becomes massive (10+ feet, +2 BR, -2 PC) or tiny (1-2 feet, +2 PC, -2 BR). Objects can be shrunk small enough to hide easily or enlarged for dramatic effect. Lasts up to 1 hour. Very painful and disorienting for living targets. |
+| **Spectacular** | 18 | Triple or quarter size — person becomes giant (15+ feet, +3 BR, -3 PC, can lift vehicles) or miniature (inches tall, +3 PC, -3 BR). Dramatic enough to reshape tactical situations entirely. Lasts several hours. Agonizing for living targets — risk of 1d4 physical damage from the stress of transformation. |
 | *Misfire* | 4 | Random body parts change size inconsistently — one arm swells, a leg shrinks, head enlarges. -10% to all physical rolls for 1d4 hours as the caster struggles with a body that doesn't fit together. Deeply uncomfortable and grotesque-looking. |
 
 ### 5.5 Fuse

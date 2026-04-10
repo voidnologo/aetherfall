@@ -120,7 +120,7 @@ When two characters act in direct opposition — resisting a spell, arm wrestlin
 
 **Examples:**
 - **Sever vs caster:** Ley Weaver rolls casting target, defending caster rolls PW to resist. Larger margin wins.
-- **Arm wrestling:** Both roll PP. Larger margin wins.
+- **Arm wrestling:** Both roll BR. Larger margin wins.
 - **Chase:** Both roll Running. Larger margin gains or closes distance.
 - **Stealth vs Observation:** Sneaker rolls Stealth, watcher rolls Observation. Larger margin determines if they're spotted.
 - **Resisting Persuasion:** Speaker rolls Persuasion, target rolls an appropriate resistance (AW, SP, or relevant skill — GM decides based on how they're resisting).
@@ -133,7 +133,7 @@ Six stats, rated from **-3 to +3**:
 
 | Abbr | Stat | Covers |
 |------|------|--------|
-| PP | Physical Prowess | Strength, brawn, endurance, fortitude |
+| BR | Brawn | Strength, brawn, endurance, fortitude |
 | PC | Physical Coordination | Grace, dexterity, finesse |
 | IN | Intellect | Knowledge, intelligence, quick-thinking, academics |
 | SP | Social Prowess | Etiquette, refinement, social standing, poise, likability |
@@ -167,13 +167,13 @@ Six stats, rated from **-3 to +3**:
 ```
 
 **Stat Groups:**
-- **Physical:** PP, PC
+- **Physical:** BR, PC
 - **Mental:** IN, AW, PW
 - **Social:** SP
 
 #### Skill List (27 Skills)
 
-**PP — Physical Prowess:**
+**BR — Brawn:**
 Athletics, Brawl, Melee, Intimidation ★
 
 **PC — Physical Coordination:**
@@ -191,7 +191,7 @@ Resolve, Scholarly Casting, Wild Casting
 **SP — Social Prowess:**
 Deception, Etiquette, Intimidation ★, Leadership, Persuasion, Streetwise
 
-> ★ **Intimidation** is a flex-stat skill — it can be placed under PP (physical menace) or SP (social pressure). The player chooses at character creation which attribute and group it belongs to.
+> ★ **Intimidation** is a flex-stat skill — it can be placed under BR (physical menace) or SP (social pressure). The player chooses at character creation which attribute and group it belongs to.
 
 ### 3.4 Classes (Archetype Labels)
 
@@ -243,7 +243,7 @@ Weapons use a **category-based system** rather than individual stat lines. Each 
 
 | Category | Speed | Damage | Examples |
 |----------|-------|--------|----------|
-| Unarmed | 2 | 1d3+PP | Punch, kick, headbutt |
+| Unarmed | 2 | 1d3+BR | Punch, kick, headbutt |
 | Small | 2 | 1d4 | Knife, dagger, stiletto, knuckle dusters |
 | Light | 3 | 1d6 | Short sword, hatchet, club, baton, rapier |
 | Medium | 5 | 1d8+1 | Longsword, battle axe, mace, saber, warhammer, spear |
@@ -320,7 +320,7 @@ Armor absorbs (soaks) damage but can be **degraded** when hit hard.
 
 ### 5.1 Hit Points
 
-**Formula:** 7 + PP per health level.
+**Formula:** 7 + BR per health level.
 
 Four wound tiers with escalating penalties (death spiral):
 
@@ -447,7 +447,7 @@ Expensive (5–10 sessions of saving everything) but the payoff cascades: every 
 4. **Label your archetype:** Write a class name that describes your concept. This is flavor, not restriction.
 5. **Select race:** (TBD)
 6. **Calculate derived values:**
-   - HP per level: 7 + PP
+   - HP per level: 7 + BR
    - EP per tier: 7 + PW
    - Skill target numbers: ((10 + stat mod) × skill level) + 30
 7. **Equip:** Select weapons, armor, and gear.
