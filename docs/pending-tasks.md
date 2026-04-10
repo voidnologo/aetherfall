@@ -1,8 +1,8 @@
 # Pending Tasks
 
 ## Next Up
+- [ ] Review starter adventure and character sheets after rendering/printing
 - [ ] Character sheet art / watermarks
-- [ ] Refine landing page tagline for Aetherfall identity
 - [ ] Save/load character data in builder (localStorage)
 - [ ] Visual polish and iteration on web rulebook based on feedback
 
@@ -17,7 +17,6 @@
 - [ ] Design bestiary (monsters, cultists, corrupted beings)
 - [ ] Create simplified NPC stat block format
 - [ ] Spell compendium second pass — tuning after playtesting
-- [ ] Write sample adventure/starter scenario
 - [ ] Adventuring Society generator tool
 - [ ] Table Index link verification after restructure
 - [ ] Mobile sidebar UX testing on real devices
@@ -26,3 +25,4 @@
 - [ ] Non-weapon artifact tag tables — expand as play demands
 - [ ] Ward creation process — detailed rules like Enchant spell (currently less specified)
 - [ ] Corruption/madness mechanics — expansion candidate, let tables homebrew for now
+- [ ] Starter adventure map sketches (foundry layout, tunnel branches)
