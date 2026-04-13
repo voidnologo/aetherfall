@@ -1,10 +1,12 @@
 # Pending Tasks
 
 ## Next Up
-- [ ] Review starter adventure and character sheets after rendering/printing
+- [ ] Evaluate web framework / build system for rulebook site (discussion item)
+- [ ] Review economy chapter and starter adventure in browser
+- [ ] Add Station field to character sheet builder and blank sheet
+- [ ] Add Backing and Ledger fields to Society section on character sheet
 - [ ] Character sheet art / watermarks
 - [ ] Save/load character data in builder (localStorage)
-- [ ] Visual polish and iteration on web rulebook based on feedback
 
 ## Backlog
 - [ ] Bundle Mermaid.js locally so flowcharts work offline
@@ -24,12 +26,6 @@
 - [ ] Ward creation process — detailed rules like Enchant spell (currently less specified)
 - [ ] Corruption/madness mechanics — expansion candidate, let tables homebrew for now
 - [ ] Starter adventure map sketches (foundry layout, tunnel branches)
-- [ ] Add Cost Tier column to weapon/armor/equipment tables in web rulebook (per ECONOMY.md §11)
-- [ ] Add Station field to character sheet builder and blank sheet
-- [ ] Add Backing and Ledger fields to Society sheet / group record
-- [ ] Write economy sections for Societies chapter, Equipment chapter, and GM chapter in web rulebook
+- [ ] Write economy cross-reference sections for Societies chapter, Equipment chapter, and GM chapter
 - [ ] Playtest Station Check frequency and -15% modifier tuning
 
-## Resolved
-- [x] Design currency system and equipment prices — see `docs/requirements/ECONOMY.md` (session 23)
-- [x] Artifact pricing — depends on currency system design — see `ECONOMY.md` §10.1 (session 23)
