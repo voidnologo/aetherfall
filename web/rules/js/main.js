@@ -279,73 +279,10 @@
     });
   }
 
-  // ── Page Chrome (chapter numbers, prev/next nav) ────────────
-  // Driven entirely by the PAGES registry — update the table
-  // above and every page picks up the new numbers and links.
-  function initPageChrome() {
-    const current = getCurrentPage();
-    const idx = PAGES.indexOf(current);
-    const prev = idx > 0 ? PAGES[idx - 1] : null;
-    const next = idx < PAGES.length - 1 ? PAGES[idx + 1] : null;
-
-    // HTML-escape a plain-text string
-    function esc(s) {
-      const el = document.createElement('span');
-      el.textContent = s;
-      return el.innerHTML;
-    }
-
-    const isNumbered = /^\d+$/.test(current.num);
-
-    // Header bar: "Chapter 12 — Coin & Commerce"
-    const headerChapter = document.querySelector('.header-chapter');
-    if (headerChapter) {
-      headerChapter.innerHTML = isNumbered
-        ? `Chapter ${current.num} &mdash; ${esc(current.title)}`
-        : esc(current.title);
-    }
-
-    // Hero section: "Chapter 12"
-    const pageNumber = document.querySelector('.page-number');
-    if (pageNumber) {
-      pageNumber.textContent = isNumbered ? `Chapter ${current.num}` : current.num;
-    }
-
-    // Compact nav (top of page)
-    const compactNav = document.querySelector('.page-nav-compact');
-    if (compactNav) {
-      let html = prev
-        ? `<a href="${prev.file}">&larr; ${esc(prev.title)}</a>`
-        : '<span></span>';
-      html += next
-        ? `<a href="${next.file}">${esc(next.title)} &rarr;</a>`
-        : '<span></span>';
-      compactNav.innerHTML = html;
-    }
-
-    // Full nav (bottom of page)
-    const fullNav = document.querySelector('.page-nav');
-    if (fullNav) {
-      let html = '';
-      if (prev) {
-        html += `<a href="${prev.file}" class="page-nav-link">
-          <span class="page-nav-direction">&larr; Previous</span>
-          <span class="page-nav-title">${esc(prev.title)}</span>
-        </a>`;
-      }
-      if (next) {
-        html += `<a href="${next.file}" class="page-nav-link page-nav-link--next">
-          <span class="page-nav-direction">Next &rarr;</span>
-          <span class="page-nav-title">${esc(next.title)}</span>
-        </a>`;
-      }
-      fullNav.innerHTML = html;
-    }
-  }
-
   // ── Init ───────────────────────────────────────────────────
+  // Page chrome (chapter numbers, prev/next nav) is now generated
+  // at build time by the Eleventy layout template.
   document.addEventListener('DOMContentLoaded', () => {
-    initPageChrome();
     buildSidebar();
     initScrollSpy();
     initSidebarToggle();
