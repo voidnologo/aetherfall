@@ -496,27 +496,25 @@ These numbers are not tracked. They exist so the GM can put a number in an NPC's
 
 ## 9. The Drift (Downtime Pressure)
 
-### 9.1 How Drift Works
+Between adventures, the Ledger **drifts** toward Lean. This is not a mechanical countdown — it is the GM's pacing tool for economic pressure.
 
-Between adventures, the Ledger **drifts** toward Lean. This is a narrative tool, not a mechanical countdown.
-
-**Guideline:** After every 2–3 sessions of game time without a paying job, the Ledger moves one step toward Lean. The GM accelerates (unexpected expense, patron withdrawing support, equipment failure) or slows (side income established, patron grant, favor cashed in) the Drift as the fiction demands.
+**Guideline:** After every 2–3 sessions of game time without a paying job, the Ledger moves one step toward Lean. The GM accelerates (unexpected expense, patron withdrawing support, equipment failure) or slows (patron grant, favor cashed in) the Drift as the fiction demands.
 
 The Drift exists because life costs money: rent, food, equipment maintenance, the handler's cut, safehouse upkeep, ammunition. None of these are tracked individually. They are the fictional justification for the Ledger's natural slide. When the GM says "the Ledger moves to Lean," the players understand that it represents the accumulated weight of daily expenses catching up.
 
-### 9.2 Downtime Actions
+**The answer to the Drift is work.** There are no downtime mini-games to slow it. If the Society isn't taking jobs, the Ledger slides. That's the point — the economy creates pressure to stay active, take risks, and engage with the world. Side hustles and odd jobs are fiction, not mechanics. If a character spends their downtime doing guard work, that's color — it doesn't change the Ledger. The Ledger moves when the Society completes a paying mission, and it drifts when they don't.
 
-Between adventures, characters can take actions that interact with the Drift:
+### 9.2 Downtime Actions (REJECTED)
 
-| Action | Effect | Check Required |
-|--------|--------|---------------|
-| **Side work** — guard duty, courier runs, manual labor | Slows Drift. Ledger stays at current state instead of sliding. | None — grunt work is always available. |
-| **Hustle** — gambling, deal-making, odd jobs through contacts | If successful, holds Ledger at current state. If failed, no effect but time is spent. | Streetwise or Persuasion |
-| **Craft for sale** — brew potions, forge equipment, repair for pay | Can generate income equivalent to a Scraps or Honest Work effect, depending on skill and market. | Relevant Craft or Casting check |
-| **Invest** — put money into a business, property, or scheme | Long-term: eventual Station increase if the fiction supports it. Short-term: may accelerate Drift (spent reserves up front). | GM adjudication |
-| **Patron favor** — take on a small task for the patron outside normal missions | Slows Drift. May help restore wavering Backing. | Task-dependent |
+*The following was considered and rejected. Kept here for design record.*
 
-These downtime actions are not mini-games. They are one-roll-and-narrate activities that the GM can offer between missions to give players agency over their economic situation. A player who says "I spend the downtime doing side work to keep us afloat" makes one check (or none) and the group moves on.
+An earlier draft included a Downtime Actions table (side work, hustle, craft for sale, invest, patron favor) that let characters make skill checks between adventures to slow the Drift. This was cut because:
+
+- **It dilutes the Drift's purpose.** The whole point is "take a job or things get worse." If players can slow the Drift with downtime rolls, the pressure evaporates.
+- **It's a vague mini-game.** The actions had no real consequence or benefit — they were story hooks disguised as mechanics, without the teeth to make them matter.
+- **It competes with the main game.** The interesting content is the missions. Downtime actions pull attention toward bookkeeping between missions rather than driving players toward the next adventure.
+
+If a character does side work between missions, that's narrative flavor the player can describe. It doesn't mechanically affect the Ledger.
 
 ---
 
@@ -672,8 +670,7 @@ The following tables appear in the published rulebook:
 
 **Running the Game chapter (GM-facing):**
 11. **Mission Payout Reference** (§8.1) — Scraps through Windfall
-12. **Drift Guidelines** (§9.1) — pacing tool for between-session pressure
-13. **Downtime Actions** (§9.2) — what characters can do between jobs
+12. **Drift Guidelines** (§9) — pacing tool for between-session pressure
 
 ### 12.3 Voice Callout Opportunities
 
