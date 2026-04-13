@@ -123,19 +123,87 @@ permalink: rules/economy.html
     <h3 id="starting-station">Starting Station</h3>
 
     <p>
-      Your starting Station is determined during Society creation &mdash; the same session
-      where your group chooses a patron and builds the team. The patron&rsquo;s Backing
-      rating sets a <strong>floor</strong>: the minimum Station that the patron&rsquo;s
-      support guarantees. Most starting characters land at <strong>Station 2</strong>
-      (Getting By). The patron covers a roof, steady meals, and standard equipment &mdash;
-      better than most people manage in a fractured city, but nobody&rsquo;s getting rich.
+      Your starting Station is set during character creation. The patron&rsquo;s Backing
+      rating determines your <strong>default</strong> &mdash; the Station Floor from the
+      Backing table. With the standard Backing of 3, most characters start at
+      <strong>Station 2</strong> (Getting By). The patron covers a roof, steady meals,
+      and standard equipment &mdash; better than most people manage in a fractured city,
+      but nobody&rsquo;s getting rich.
     </p>
 
     <p>
-      Characters from wealthy backgrounds might start at Station 3 if their personal history
-      supports it. Characters who came from nothing might sit at Station 1, with the
-      patron&rsquo;s backing being the only thing keeping them there.
+      But not everyone starts at the default. During character creation, you may
+      <strong>trade Station for skill levels</strong>:
     </p>
+
+    <table>
+      <tr><th>Choice</th><th>Station</th><th>Skill Effect</th><th>The Character</th></tr>
+      <tr>
+        <td><strong>Trade down</strong></td>
+        <td>Floor &minus; 1</td>
+        <td>Gain 3 bonus skill levels to one group pool</td>
+        <td>The scrapper &mdash; came from nothing, learned everything the hard way</td>
+      </tr>
+      <tr>
+        <td><strong>Default</strong></td>
+        <td>Floor</td>
+        <td>No change</td>
+        <td>The professional &mdash; patron&rsquo;s support, standard competence</td>
+      </tr>
+      <tr>
+        <td><strong>Trade up</strong></td>
+        <td>Floor + 1</td>
+        <td>Spend 3 skill levels from one group pool</td>
+        <td>The comfortable one &mdash; better connected, less battle-tested</td>
+      </tr>
+    </table>
+
+    <p>
+      Trading up removes 3 points from one skill group pool of your choice
+      <em>before</em> you allocate skills. Trading down adds 3 points to one pool.
+      The trade is &plusmn;1 Station only &mdash; you cannot trade multiple levels.
+      <strong>Station 3 is the maximum at character creation.</strong> Nobody starts
+      as a wealthy industrialist. Station 4&ndash;5 is earned through play.
+    </p>
+
+    <p>
+      Station 0 (Destitute) is available, but if your patron provides a floor above
+      that, something is eating your resources &mdash; debts, a vice, a dependent, an
+      obligation. That&rsquo;s a character hook, not just a number.
+    </p>
+
+    <p>
+      <strong>Starting equipment:</strong> Pick gear that fits within your Station.
+      Items at or below your Cost Tier are yours.
+    </p>
+
+    {% example %}
+      <p>
+        <strong>Sera</strong> is building her character with a Backing 3 patron (Station Floor 2).
+        She wants to play someone from a rough background, so she trades down to Station 1.
+        She gains 3 bonus skill levels to her Mental pool &mdash; she puts those into Occult Lore
+        and Observation. She&rsquo;s sharper than her peers, but she can&rsquo;t afford a private
+        room and her gear is patched together.
+      </p>
+      <p>
+        <strong>Aldric</strong> keeps the default Station 2. No trade, no cost. Solid footing.
+      </p>
+      <p>
+        <strong>Mira</strong> trades up to Station 3. She loses 3 levels from her Physical pool &mdash;
+        she&rsquo;s less athletic, worse with a blade. But she has a nice flat, good clothes, and
+        can walk into establishments that won&rsquo;t let Sera through the front door.
+      </p>
+    {% endexample %}
+
+    {% gmnote %}
+      <p>
+        The 3-level trade is roughly 15% of a typical character&rsquo;s starting skill investment.
+        It&rsquo;s the equivalent of one level-3 primary skill &mdash; meaningful enough to create
+        a real choice, not so much that it cripples a build. If every player at your table picks
+        the same option, the cost may need tuning &mdash; the goal is organic diversity, not a
+        dominant strategy.
+      </p>
+    {% endgmnote %}
 
     <h3 id="station-changes">How Station Changes</h3>
 
@@ -487,6 +555,47 @@ permalink: rules/economy.html
       baseline: how well-equipped you are, how comfortable your members live, and what
       resources are within reach before you spend a single mark of your own.
     </p>
+
+    <h3 id="starting-backing">Starting Backing</h3>
+
+    <p>
+      The table chooses starting Backing during Session Zero. The <strong>default
+      is Backing 3 (Full Package)</strong> &mdash; a well-supported Society with
+      good equipment, a reliable handler, and a decent safehouse. This is the
+      recommended starting point, the same way the default attribute net bonus is +1.
+    </p>
+
+    <p>
+      The GM adjusts Backing to set the campaign&rsquo;s economic tone:
+    </p>
+
+    <table>
+      <tr><th>Backing</th><th>Tone</th><th>Why Choose This</th></tr>
+      <tr>
+        <td>1&ndash;2</td>
+        <td><strong>Gritty</strong></td>
+        <td>Under-resourced, desperate, every job matters. The patron is broke, disinterested, or testing you.</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><strong>Standard</strong></td>
+        <td>Solid footing. The patron invests in your success. You have what you need but nothing to waste.</td>
+      </tr>
+      <tr>
+        <td>4&ndash;5</td>
+        <td><strong>Elite</strong></td>
+        <td>Well-equipped, high-profile, high-stakes. The patron has deep pockets &mdash; and proportional expectations.</td>
+      </tr>
+    </table>
+
+    {% gmnote %}
+      <p>
+        Starting Backing is a table-level decision, not a per-player choice. Everyone in the
+        Society has the same patron, so everyone operates under the same Backing. Think of it
+        like the attribute net bonus &mdash; a dial you set once during Session Zero to shape
+        the campaign&rsquo;s feel.
+      </p>
+    {% endgmnote %}
 
     <h3 id="backing-table">Backing Rating</h3>
 
