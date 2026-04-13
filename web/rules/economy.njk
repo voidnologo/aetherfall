@@ -1,39 +1,9 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="neutral">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Coin &amp; Commerce — Aetherfall RPG</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-<div id="atmosphere"><canvas id="particle-canvas"></canvas><div class="mist mist-1"></div><div class="mist mist-2"></div><div class="mist mist-3"></div></div>
-<div id="page-transition" class="page-transition"></div>
-<div class="sidebar-overlay"></div>
-<aside class="sidebar">
-  <div class="sidebar-brand"><div class="sidebar-title">Aetherfall</div><div class="sidebar-subtitle">Rules Reference</div></div>
-  <nav class="sidebar-nav"></nav>
-  <div class="sidebar-footer"><a href="../">← Back to Aetherfall</a></div>
-</aside>
-<header class="site-header">
-  <button class="header-toggle" aria-label="Toggle navigation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
-  <span class="header-logo">Aetherfall <span>RPG</span></span>
-  <span class="header-separator"></span>
-  <span class="header-chapter"></span>
-</header>
-<main class="main-content">
-  <div class="page-content">
-
-    <nav class="page-nav-compact"></nav>
-
-    <div class="page-hero">
-      <span class="page-number"></span>
-      <h1 class="page-title">Coin &amp; Commerce</h1>
-      <p class="page-subtitle">What you can afford, what you can reach, and what it costs to keep going</p>
-    </div>
+---
+layout: chapter.njk
+pageId: economy
+subtitle: "What you can afford, what you can reach, and what it costs to keep going"
+permalink: rules/economy.html
+---
 
     <p class="flavor">
       Two hundred marks, plus expenses. That&rsquo;s what the handler said when your Society
@@ -43,15 +13,14 @@
       nobody&rsquo;s getting rich, but the people who keep working don&rsquo;t starve.
     </p>
 
-    <div class="callout callout-handler">
-      <span class="callout-label">The Handler</span>
+    {% handler %}
       <p>
         My first Society, we ate rice and sardines for three weeks straight between jobs.
         Handler kept saying &ldquo;next week, next week.&rdquo; When the next job finally
         came, it was sewer clearance in the Ashwick tunnels. We took it without asking
         what it paid. You would have too.
       </p>
-    </div>
+    {% endhandler %}
 
     <!-- ── Marks ─────────────────────────────────────────── -->
 
@@ -195,8 +164,7 @@
       the kind of thing that shifts between adventures, not between scenes.
     </p>
 
-    <div class="callout callout-street">
-      <span class="callout-label">The Street</span>
+    {% street %}
       <p>
         You want to know the difference between Fenwick Row and the Gaslight Quarter?
         On Fenwick, Mrs. Chen at the noodle shop will feed you if you&rsquo;re short
@@ -204,10 +172,9 @@
         he checks your name. Same city, same marks in your pocket. Doesn&rsquo;t matter.
         They can smell where you&rsquo;re from.
       </p>
-    </div>
+    {% endstreet %}
 
-    <div class="callout callout-scholar">
-      <span class="callout-label">The Scholar</span>
+    {% scholar %}
       <p>
         I interviewed a bank manager in the Greycoat district &mdash; a man who used to
         oversee loans for half the merchant class. He&rsquo;s a landlord now, renting rooms
@@ -215,7 +182,7 @@
         he told me. &ldquo;It just stopped meaning what it used to.&rdquo; I think about
         that more than I&rsquo;d like.
       </p>
-    </div>
+    {% endscholar %}
 
     <!-- ── Cost Tiers ────────────────────────────────────── -->
 
@@ -341,8 +308,7 @@
       a different source, a patron request, or accept that it&rsquo;s out of reach for now.
     </p>
 
-    <div class="callout callout-example">
-      <span class="callout-label">At the Table</span>
+    {% example %}
       <p>
         Sera needs formal attire for the Ashworth gala &mdash; that&rsquo;s Tier 3
         (Quality), one above her Station 2. She visits a tailor on Gaslight Row and
@@ -360,10 +326,9 @@
         <strong>GM:</strong> &ldquo;He agrees, but he wants the dress back by morning
         and your name on a tab. You owe him a favour now &mdash; he&rsquo;ll collect.&rdquo;
       </p>
-    </div>
+    {% endexample %}
 
-    <div class="callout callout-note">
-      <span class="callout-label">For the GM</span>
+    {% gmnote %}
       <p>
         Not every purchase needs a Station Check. If a player asks &ldquo;can I buy a
         drink?&rdquo; and they&rsquo;re Station 1, just say yes. The Access Rule exists
@@ -371,7 +336,7 @@
         not to slow down routine shopping. Reserve Station Checks for situations where
         the stretch creates tension or story.
       </p>
-    </div>
+    {% endgmnote %}
 
     <!-- ── Reaching Beyond Your Means ────────────────────── -->
 
@@ -491,8 +456,7 @@
       changes Station, and it reverses the moment Dire is cleared.
     </p>
 
-    <div class="callout callout-handler">
-      <span class="callout-label">The Handler</span>
+    {% handler %}
       <p>
         I&rsquo;ve run lean before. You start rationing ammunition. The safehouse gets cold
         because nobody can cover the coal. Your handler stops buying rounds at the pub and
@@ -500,10 +464,9 @@
         nobody else wants, in a district nobody else will go to. And you take it. Because
         that&rsquo;s what lean means. You don&rsquo;t get to be choosy.
       </p>
-    </div>
+    {% endhandler %}
 
-    <div class="callout callout-believer">
-      <span class="callout-label">The Believer</span>
+    {% believer %}
       <p>
         When old Thessaly lost her workshop in the zone shift, she didn&rsquo;t have a single
         mark saved. But she had thirty years of mending wards for every family on Ember Street.
@@ -511,7 +474,7 @@
         Nobody asked her to pay. That&rsquo;s worth more than any bank account, and no eruption
         can take it from you.
       </p>
-    </div>
+    {% endbeliever %}
 
     <!-- ── Patron Backing ────────────────────────────────── -->
 
@@ -634,8 +597,7 @@
       the Exotics&rdquo; is a real cost.
     </p>
 
-    <div class="callout callout-note">
-      <span class="callout-label">For the GM</span>
+    {% gmnote %}
       <p>
         Backing changes at campaign-level inflection points &mdash; not session by session.
         It rises through consistent mission success or a major win for the patron. It falls
@@ -644,7 +606,7 @@
         who were living at the floor suddenly feel their lifestyle degrading. That squeeze
         is where the best patron-politics stories come from.
       </p>
-    </div>
+    {% endgmnote %}
 
     <!-- ── The Drift ─────────────────────────────────────── -->
 
@@ -703,8 +665,7 @@
       </tr>
     </table>
 
-    <div class="callout callout-note">
-      <span class="callout-label">For the GM</span>
+    {% gmnote %}
       <p>
         The Drift is a pacing tool, not a punishment. Use it to create the feeling that
         jobs matter &mdash; that the Society can&rsquo;t sit idle forever. But
@@ -713,7 +674,7 @@
         When you want urgency &mdash; when the table needs a reason to take the
         next job &mdash; let it catch up.
       </p>
-    </div>
+    {% endgmnote %}
 
     <!-- ── Special Items ─────────────────────────────────── -->
 
@@ -753,15 +714,14 @@
       </tr>
     </table>
 
-    <div class="callout callout-scholar">
-      <span class="callout-label">The Scholar</span>
+    {% scholar %}
       <p>
         A colleague once traded a warding charm for passage across three zone boundaries
         and a month&rsquo;s lodging. No marks changed hands. The ferryman didn&rsquo;t want
         money &mdash; he wanted his daughter to sleep through the night without the dreams.
         The charm was worth whatever that was worth to him.
       </p>
-    </div>
+    {% endscholar %}
 
     <h3 id="potions">Potions</h3>
 
@@ -795,11 +755,3 @@
         <td>Exceedingly rare. Created by master brewers under specific conditions. Faction-level assets when found.</td>
       </tr>
     </table>
-
-    <nav class="page-nav"></nav>
-  </div>
-  <footer class="site-footer"><p>Aetherfall RPG &mdash; Playtest Draft</p></footer>
-</main>
-<script src="js/main.js"></script>
-</body>
-</html>

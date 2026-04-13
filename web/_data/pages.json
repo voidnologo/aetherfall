@@ -1,0 +1,22 @@
+[
+  { "id": "welcome",       "file": "index.html",              "title": "Welcome to the Age of Wonder", "num": "01", "theme": "aether" },
+  { "id": "world",         "file": "state-of-the-world.html", "title": "The State of the World",       "num": "02", "theme": "split" },
+  { "id": "societies",     "file": "societies.html",          "title": "Adventuring Societies",        "num": "03", "theme": "neutral" },
+  { "id": "creating",      "file": "creating.html",           "title": "Creating Your Adventurer",     "num": "04", "theme": "neutral" },
+  { "id": "char-sheet",    "file": "character-sheet.html",    "title": "Character Sheet",              "num": "\u2192", "theme": "aether" },
+  { "id": "rolling",       "file": "rolling.html",            "title": "Rolling the Dice",             "num": "05", "theme": "neutral" },
+  { "id": "getting-hurt",  "file": "getting-hurt.html",       "title": "Getting Hurt",                 "num": "06", "theme": "galvanic" },
+  { "id": "skills",        "file": "skills.html",             "title": "Skills",                       "num": "07", "theme": "neutral" },
+  { "id": "magic",         "file": "magic.html",              "title": "The Two Paths of Magic",       "num": "08", "theme": "aether" },
+  { "id": "grimoire",      "file": "grimoire.html",           "title": "The Grimoire",                 "num": "09", "theme": "aether" },
+  { "id": "world-between", "file": "world-between.html",      "title": "The World Between",            "num": "10", "theme": "split" },
+  { "id": "combat",        "file": "combat.html",             "title": "When Violence Finds You",      "num": "11", "theme": "galvanic" },
+  { "id": "economy",       "file": "economy.html",            "title": "Coin & Commerce",              "num": "12", "theme": "neutral" },
+  { "id": "equipment",     "file": "equipment.html",          "title": "Arms & Equipment",             "num": "13", "theme": "galvanic" },
+  { "id": "artifacts",     "file": "artifacts.html",          "title": "Artifacts & Enchantments",     "num": "14", "theme": "aether" },
+  { "id": "running",       "file": "running-the-game.html",   "title": "Running the Game",             "num": "15", "theme": "neutral" },
+  { "id": "reference",     "file": "reference.html",          "title": "Quick Reference",              "num": "16", "theme": "neutral" },
+  { "id": "tables",        "file": "tables.html",             "title": "Table Index",                  "num": "17", "theme": "neutral" },
+  { "id": "gm-tools",      "file": "gm-tools.html",          "title": "GM Tools",                     "num": "18", "theme": "neutral" },
+  { "id": "quickstart",    "file": "quickstart.html",         "title": "The Ashwick Job",              "num": "QS", "theme": "split" }
+]
