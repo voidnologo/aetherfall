@@ -239,11 +239,28 @@ When an NPC quotes a price in marks, it's world-building. The GM translates it t
 
 ### 4.2 Starting Station
 
-A character's starting Station is determined during Society creation (Session Zero). The patron's Backing rating sets a **floor** — the minimum Station that the patron's support guarantees (see §6.1).
+A character's starting Station is determined during character creation. The patron's Backing rating sets a **default** — the Station Floor from the Backing table (see §6.1). With the default Backing of 3, most characters start at **Station 2** (Getting By).
 
-Most starting characters are **Station 2** (Getting By). The patron's backing provides a roof, steady meals, and standard equipment — better than most people manage in a fractured city, but nobody's getting rich. Characters from wealthy backgrounds might start at Station 3 if their personal history justifies it; characters who came from nothing might be at Station 1, with the patron's support being the only thing keeping them there.
+Players may **trade Station for skill levels** during character creation:
 
-Station is set during character creation and does not advance through XP or level-ups. It changes through fiction.
+| Choice | Station | Skill Cost | The Character |
+|--------|---------|-----------|---------------|
+| **Trade down** | Floor - 1 | Gain 3 bonus skill levels (add to any one group pool) | The scrapper — came from nothing, learned everything the hard way |
+| **Default** | Floor | No cost | The professional — patron's support, standard competence |
+| **Trade up** | Floor + 1 | Spend 3 skill levels (remove from any one group pool) | The comfortable one — better connected, less battle-tested |
+
+**How it works:**
+- Trading up removes 3 points from one skill group pool of your choice before you allocate skills. A character with a 14-point Physical pool who trades up has 11 points to spend — the equivalent of losing one primary skill's worth of competence.
+- Trading down adds 3 points to one skill group pool of your choice. A character who grew up hard and hungry picks up tricks that comfortable people never needed.
+- The trade is ±1 Station only. You cannot trade multiple levels.
+- **Station 3 is the maximum at character creation.** Nobody starts as a wealthy industrialist. Station 4–5 is earned through play.
+- **Station 0 (Destitute) is available** but flags a character hook — if the patron provides a floor and you're below it, something is eating your resources (debts, a vice, a dependent, an obligation). The GM should ask: "Why are you Destitute despite your patron's support?"
+
+**Design rationale:** 3 skill levels is approximately 15% of a typical character's starting investment (~20 total levels). It's the equivalent of one level-3 primary skill, or one level-2 plus one level-1 — meaningful enough to create a real choice, not so much that it cripples a build. Players will naturally pick the pool that hurts least (trading up) or helps most (trading down), which creates organic diversity without punishing any particular build.
+
+**Starting equipment:** Pick gear that fits within your Station. Items at or below your Cost Tier are yours — no formal starting kit list needed.
+
+Station does not advance through XP or level-ups after creation. It changes through fiction.
 
 ### 4.3 Station Changes
 
@@ -312,6 +329,20 @@ The Ledger and Station interact in specific ways:
 ## 6. Backing (Patron Support)
 
 Every Adventuring Society has a patron — a faction, organization, or individual that provides its charter and resources. **Backing** is a rating from 1 to 5 that describes how generously the patron supports the Society.
+
+### 6.0 Starting Backing
+
+The table chooses starting Backing during Session Zero. The **default is Backing 3 (Full Package)** — a well-supported Society with good equipment, a reliable handler, and a decent safehouse. This is the recommended starting point for most campaigns, the same way the default attribute net bonus is +1.
+
+The GM adjusts Backing to set the campaign's economic tone:
+
+| Starting Backing | Campaign Tone | Why Choose This |
+|-----------------|---------------|-----------------|
+| 1–2 | **Gritty** | Under-resourced, desperate, every job matters. The patron is broke, disinterested, or testing you. Good for survival-focused campaigns where scrounging is part of the fun. |
+| 3 | **Standard** | Solid footing. The patron invests in your success. You have what you need but nothing to waste. The recommended default. |
+| 4–5 | **Elite** | Well-equipped, high-profile, high-stakes. The patron has deep pockets — and proportional expectations. Good for campaigns where the Society is already established and the drama comes from patron politics, not poverty. |
+
+Starting Backing is a **table-level decision**, not a per-player choice. Everyone in the Society has the same patron, so everyone operates under the same Backing. It sets the campaign's resource baseline — the same way the GM decides whether the world is gritty or heroic.
 
 ### 6.1 Backing Rating Table
 
@@ -725,3 +756,5 @@ These items are flagged for future sessions or playtesting:
 6. **Zone-specific economies.** WORLD_DESIGN.md notes that each zone "has its own economy." Should different zones have different Cost Tier adjustments? (Galvanic equipment cheaper in Galvanic districts, etc.) Interesting but potentially complex — flag for playtesting.
 
 7. **Gambling and windfall mechanics.** If a character gambles, how does the outcome interact with Station? A big win could temporarily boost Station; a loss could temporarily lower it. Probably handled through narrative + a skill check, not a separate system.
+
+8. **Station trade balance tuning.** The 3-skill-level cost per Station shift is based on pre-gen analysis (~20 total levels at creation, so 3 ≈ 15%). Playtest whether this creates the intended diversity (mix of Station levels at the table) or whether players overwhelmingly pick one option. If everyone trades down, the cost is too low. If no one trades, the cost is too high.
