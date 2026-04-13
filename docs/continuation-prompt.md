@@ -1,31 +1,34 @@
 # Continuation Prompt
 
-## Last Session (23) — Economy & Resource System Design
-- Designed complete narrative-first economy: Station (0–5), Ledger (Flush/Level/Lean/Dire), Backing (1–5), Cost Tiers, the Drift
-- Full design doc with 10-system research survey: `docs/requirements/ECONOMY.md`
-- Built "Coin & Commerce" web chapter (Chapter 12) with all tables, voice callouts, GM guidance
-- Added Cost Tier column to all weapon/armor tables in equipment chapter
-- Centralized chapter numbers and prev/next nav in PAGES registry — single-table update for chapter changes
-- Confirmed: no enchanted firearms (violates Aetheric/Galvanic split), starting gear = pick within Station
+## Last Session (24) — Eleventy Migration & Economy Integration
+- Migrated entire web rulebook to Eleventy: layout template, pages.json data file, 9 callout shortcodes, all 20 chapters converted to .njk
+- GitHub Action updated to build before deploy. `npm run dev` for local preview.
+- Added Starting Station trade (±3 skill levels per ±1 Station) and Starting Backing rules (default 3) to design doc and rulebook
+- Removed Downtime Actions (rejected — Drift pressure is the point)
+- Integrated economy into Creating (new Station step), Societies (Backing + Ledger), Character Sheet, and Equipment chapters
 
 ## Current State
 - **Game title:** Aetherfall (repo: voidnologo/aetherfall)
-- **Website live:** 19-chapter rulebook (incl. Economy + Quickstart) + Character Sheet page with builder, blank sheet, and sample
-- **CRITICAL RULE:** Rulebook content must NEVER be changed without explicit user approval. Layout/design only.
+- **Build system:** Eleventy 3.x — source in `web/`, output to `_site/`, deployed via GitHub Action
+- **Website:** 20-chapter rulebook (all .njk templates) + Character Sheet page + interactive tools
+- **Dev:** `npm run dev` for local server, `npm run build` for production build
+- **CRITICAL RULE:** Rulebook content must NEVER be changed without explicit user approval.
 - **CRITICAL WORKFLOW:** Always persist design decisions in docs/requirements/ BEFORE writing rulebook content.
-- **CRITICAL VOICE RULE:** Voice callouts are in-world people sharing experiences. Never rules commentary. Use "the tavern test" (WRITING_STYLE.md). GM notes handle rules perspective.
+- **CRITICAL VOICE RULE:** Voice callouts are in-world people sharing experiences. Never rules commentary. GM notes handle rules perspective.
 - **CRITICAL INTERNAL:** Spell Complexity is essential in design docs but NEVER exposed in the web rulebook.
-- **Navigation:** Chapter numbers, header text, and prev/next links are driven by PAGES array in `web/rules/js/main.js`. Update one table to reorder/insert chapters.
-- **Chapter flow:** Welcome → State of the World → Adventuring Societies → Creating → Character Sheet → Rolling → Getting Hurt → Skills → Magic → Grimoire → World Between → Combat → **Coin & Commerce** → Arms & Equipment → Artifacts & Enchantments → Running the Game → Quick Reference → Table Index → GM Tools → The Ashwick Job (QS)
+- **Chapter registry:** `web/_data/pages.json` is the single source of truth for chapter order, numbers, themes. Also duplicated in `web/rules/js/main.js` PAGES const (for sidebar TOC — Phase 3 cleanup pending).
+- **Callout shortcodes:** handler, scholar, street, believer, gmnote, example, warning, scene
+- **Chapter flow:** Welcome → State of the World → Societies → Creating → Character Sheet → Rolling → Getting Hurt → Skills → Magic → Grimoire → World Between → Combat → Coin & Commerce → Arms & Equipment → Artifacts & Enchantments → Running the Game → Quick Reference → Table Index → GM Tools → The Ashwick Job (QS)
 - **Not yet designed:** Zone formation mechanics, Push Timing, archetypes, bestiary, NPC stat blocks, corruption/madness
 
 ## Immediate Next Task
-Discuss whether the web rulebook warrants a framework/build system (user-initiated). Then: review economy chapter in browser, add Station/Backing/Ledger to character sheets.
+Review site in browser for visual regression after 11ty conversion. Then add Station to character sheet builder tool and blank printable sheet.
 
 ## Key References
+- `eleventy.config.js` — Build config, shortcodes, filters, passthrough
+- `web/_data/pages.json` — Chapter registry (single source of truth)
+- `web/_includes/chapter.njk` — Layout template for all chapters
 - `docs/requirements/ECONOMY.md` — Full economy design doc with research and system
-- `web/rules/economy.html` — "Coin & Commerce" web chapter
-- `web/rules/js/main.js` — PAGES registry (single source of truth for chapter order/numbers)
-- `docs/requirements/MAGIC_SYSTEM.md` §3.4 — Backlash, Wild Effect table, residue escalation
+- `web/rules/economy.njk` — Coin & Commerce web chapter
 - `docs/requirements/WRITING_STYLE.md` — Voice conventions, voice vs GM note distinction
-- `docs/sessions/session-23-notes.md` — Full record of session 23
+- `docs/sessions/session-24-notes.md` — Full record of session 24

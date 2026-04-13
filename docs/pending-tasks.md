@@ -1,10 +1,10 @@
 # Pending Tasks
 
 ## Next Up
-- [ ] Evaluate web framework / build system for rulebook site (discussion item)
-- [ ] Review economy chapter and starter adventure in browser
-- [ ] Add Station field to character sheet builder and blank sheet
-- [ ] Add Backing and Ledger fields to Society section on character sheet
+- [ ] Review all chapters in browser for visual regression after 11ty conversion
+- [ ] Add Station field to character sheet builder (interactive tool)
+- [ ] Add Station/Backing/Ledger fields to blank printable character sheet
+- [ ] Phase 3 cleanup: resolve PAGES duplication (pages.json vs main.js), build-time sidebar
 - [ ] Character sheet art / watermarks
 - [ ] Save/load character data in builder (localStorage)
 
@@ -19,13 +19,12 @@
 - [ ] Create simplified NPC stat block format
 - [ ] Spell compendium second pass — tuning after playtesting
 - [ ] Adventuring Society generator tool
-- [ ] Table Index link verification after restructure
 - [ ] Mobile sidebar UX testing on real devices
-- [ ] Enchanted firearms rules — magic/tech tension when imbuing a firearm (note: violates Aetheric/Galvanic split, likely not for main game — edge-case adventure content only)
 - [ ] Non-weapon artifact tag tables — expand as play demands
 - [ ] Ward creation process — detailed rules like Enchant spell (currently less specified)
 - [ ] Corruption/madness mechanics — expansion candidate, let tables homebrew for now
 - [ ] Starter adventure map sketches (foundry layout, tunnel branches)
-- [ ] Write economy cross-reference sections for Societies chapter, Equipment chapter, and GM chapter
+- [ ] Write economy cross-reference sections for GM chapter (Running the Game)
 - [ ] Playtest Station Check frequency and -15% modifier tuning
-
+- [ ] Landing page (web/index.html) could get its own 11ty layout to deduplicate CSS
+- [ ] Add shortcode for bare `callout` class (Intimidation flex-stat note)
