@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="neutral">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coin &amp; Commerce — Aetherfall RPG</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="atmosphere"><canvas id="particle-canvas"></canvas><div class="mist mist-1"></div><div class="mist mist-2"></div><div class="mist mist-3"></div></div>
+<div id="page-transition" class="page-transition"></div>
+<div class="sidebar-overlay"></div>
+<aside class="sidebar">
+  <div class="sidebar-brand"><div class="sidebar-title">Aetherfall</div><div class="sidebar-subtitle">Rules Reference</div></div>
+  <nav class="sidebar-nav"></nav>
+  <div class="sidebar-footer"><a href="../">← Back to Aetherfall</a></div>
+</aside>
+<header class="site-header">
+  <button class="header-toggle" aria-label="Toggle navigation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+  <span class="header-logo">Aetherfall <span>RPG</span></span>
+  <span class="header-separator"></span>
+  <span class="header-chapter">Chapter 12 &mdash; Coin &amp; Commerce</span>
+</header>
+<main class="main-content">
+  <div class="page-content">
+
+    <nav class="page-nav-compact">
+      <a href="combat.html">&larr; When Violence Finds You</a>
+      <a href="equipment.html">Arms &amp; Equipment &rarr;</a>
+    </nav>
+
+    <div class="page-hero">
+      <span class="page-number">Chapter 12</span>
+      <h1 class="page-title">Coin &amp; Commerce</h1>
+      <p class="page-subtitle">What you can afford, what you can reach, and what it costs to keep going</p>
+    </div>
+
+    <p class="flavor">
+      Two hundred marks, plus expenses. That&rsquo;s what the handler said when your Society
+      took its first job. Split four ways, that&rsquo;s fifty marks each &mdash; rent for a
+      week, ammunition for the next job, and a few drinks if you&rsquo;re careful. Not enough
+      to live on. Enough to keep going. That&rsquo;s the economy of the post-eruption world:
+      nobody&rsquo;s getting rich, but the people who keep working don&rsquo;t starve.
+    </p>
+
+    <div class="callout callout-handler">
+      <span class="callout-label">The Handler</span>
+      <p>
+        My first Society, we ate rice and sardines for three weeks straight between jobs.
+        Handler kept saying &ldquo;next week, next week.&rdquo; When the next job finally
+        came, it was sewer clearance in the Ashwick tunnels. We took it without asking
+        what it paid. You would have too.
+      </p>
+    </div>
+
+    <!-- ── Marks ─────────────────────────────────────────── -->
+
+    <h2 id="marks">Marks</h2>
+
+    <p>
+      The <strong>mark</strong> is the standard unit of currency across post-eruption society.
+      NPCs talk in marks. Contracts are written in marks. A drink costs a few marks. A revolver
+      costs a couple hundred. When someone quotes you a price, the number is real in the
+      fiction &mdash; it makes the world feel grounded, gives conversations texture, and lets
+      you feel the weight of what things cost.
+    </p>
+
+    <p>
+      But you never track a mark balance. Not on your character sheet, not in a notebook,
+      not anywhere. Your economic position is handled by a single number called Station,
+      which we&rsquo;ll get to next. Marks exist in dialogue and world-building. They make
+      the fiction feel lived-in without asking anyone to do subtraction.
+    </p>
+
+    <h3 id="what-marks-buy">What Marks Buy</h3>
+
+    <p>
+      These are reference points &mdash; narrative anchors for conversations, contracts,
+      and colour. They are not prices to track.
+    </p>
+
+    <table>
+      <tr><th>Amount</th><th>What It Represents</th></tr>
+      <tr><td>1&ndash;5 marks</td><td>A drink, a street meal, a tram fare, a newspaper</td></tr>
+      <tr><td>10&ndash;25 marks</td><td>A night at a flophouse, basic supplies, a day&rsquo;s unskilled labor</td></tr>
+      <tr><td>50&ndash;100 marks</td><td>A week&rsquo;s rent in a modest district, a decent meal for a group, a conventional weapon</td></tr>
+      <tr><td>200&ndash;500 marks</td><td>A month&rsquo;s rent, a quality firearm, a full set of working gear, a doctor&rsquo;s visit</td></tr>
+      <tr><td>1,000&ndash;3,000 marks</td><td>A Galvanic device, a season&rsquo;s comfortable living, a vehicle</td></tr>
+      <tr><td>5,000&ndash;15,000 marks</td><td>An enchanted weapon, a small property, a personal airship passage</td></tr>
+      <tr><td>50,000+ marks</td><td>An estate, a rare artifact, a faction-level asset</td></tr>
+    </table>
+
+    <p>
+      When an NPC quotes a price, the GM translates it to a Cost Tier for mechanical purposes.
+      &ldquo;Five thousand marks&rdquo; means &ldquo;that&rsquo;s well beyond what a working
+      adventurer can swing without help.&rdquo; The fiction carries the number. The system
+      carries the access.
+    </p>
+
+    <!-- ── Station ───────────────────────────────────────── -->
+
+    <h2 id="station">Station</h2>
+
+    <p>
+      Forget bank accounts. Forget ledgers full of numbers. In this world, what matters
+      is not how many marks are in your pocket &mdash; it&rsquo;s the life you lead. The
+      doors that are open to you. The places where people know your name and the places
+      where the doorman won&rsquo;t let you through.
+    </p>
+
+    <p>
+      <strong>Station</strong> is your character&rsquo;s economic position in the world &mdash;
+      a single number from 0 to 5. It represents your material comfort, your social access,
+      and your purchasing power. It is not a bank balance. It is the answer to a simple
+      question: <em>what kind of life does this person lead?</em>
+    </p>
+
+    <h3 id="station-table">The Station Table</h3>
+
+    <table>
+      <tr><th>Station</th><th>Name</th><th>What Life Looks Like</th></tr>
+      <tr>
+        <td>0</td>
+        <td><strong>Destitute</strong></td>
+        <td>No fixed address. Eats at soup kitchens or not at all. Owns the clothes on their back &mdash; barely. Owes people. Invisible to anyone with power.</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td><strong>Scraping</strong></td>
+        <td>Rents a room &mdash; maybe shared. Eats daily, nothing fancy. Owns their tools and one set of decent clothes. Known at the corner shop. Can afford a tram ticket but thinks about it.</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><strong>Getting By</strong></td>
+        <td>Modest flat in a working district. Reliable meals. Can replace worn gear without agonizing. Has a coat for winter and boots that don&rsquo;t leak. The grocer extends credit.</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><strong>Comfortable</strong></td>
+        <td>Good flat or small house in a decent neighbourhood. Eats well. Can afford small luxuries &mdash; a night at a restaurant, a bottle of something worth drinking, a new coat when the old one is fine. Known by name at a few establishments.</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td><strong>Prosperous</strong></td>
+        <td>Fine home. Possibly staff &mdash; a housekeeper, maybe a driver. Travels comfortably. Known by name at good establishments. Can make things happen with a word and a handshake. Dresses well without thinking about it.</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td><strong>Affluent</strong></td>
+        <td>Property. Influence. Multiple residences or a significant estate. Moves in circles where marks are vulgar to discuss. Opens doors that most people don&rsquo;t know exist.</td>
+      </tr>
+    </table>
+
+    <h3 id="starting-station">Starting Station</h3>
+
+    <p>
+      Your starting Station is determined during Society creation &mdash; the same session
+      where your group chooses a patron and builds the team. The patron&rsquo;s Backing
+      rating sets a <strong>floor</strong>: the minimum Station that the patron&rsquo;s
+      support guarantees. Most starting characters land at <strong>Station 2</strong>
+      (Getting By). The patron covers a roof, steady meals, and standard equipment &mdash;
+      better than most people manage in a fractured city, but nobody&rsquo;s getting rich.
+    </p>
+
+    <p>
+      Characters from wealthy backgrounds might start at Station 3 if their personal history
+      supports it. Characters who came from nothing might sit at Station 1, with the
+      patron&rsquo;s backing being the only thing keeping them there.
+    </p>
+
+    <h3 id="station-changes">How Station Changes</h3>
+
+    <p>
+      Station does not advance through experience points or level-ups. It changes through
+      the fiction &mdash; through events in the story that genuinely alter your character&rsquo;s
+      place in the world. The GM adjusts Station when the narrative warrants it, not on
+      a schedule or through a formula.
+    </p>
+
+    <p>
+      <strong>Station rises</strong> when the Society completes a major score, when a
+      character receives a personal windfall, when the patron increases support, or when
+      a campaign milestone reflects real economic advancement.
+    </p>
+
+    <p>
+      <strong>Station falls</strong> when the Society&rsquo;s finances hit rock bottom,
+      when a character suffers a personal disaster, when the patron pulls back support,
+      or when a character makes a deliberate sacrifice to fund something that matters
+      more than comfort.
+    </p>
+
+    <p>
+      Station almost never changes mid-session. It is a slow-moving indicator &mdash;
+      the kind of thing that shifts between adventures, not between scenes.
+    </p>
+
+    <div class="callout callout-street">
+      <span class="callout-label">The Street</span>
+      <p>
+        You want to know the difference between Fenwick Row and the Gaslight Quarter?
+        On Fenwick, Mrs. Chen at the noodle shop will feed you if you&rsquo;re short
+        and pay her back next week. In the Gaslight, the doorman checks your coat before
+        he checks your name. Same city, same marks in your pocket. Doesn&rsquo;t matter.
+        They can smell where you&rsquo;re from.
+      </p>
+    </div>
+
+    <div class="callout callout-scholar">
+      <span class="callout-label">The Scholar</span>
+      <p>
+        I interviewed a bank manager in the Greycoat district &mdash; a man who used to
+        oversee loans for half the merchant class. He&rsquo;s a landlord now, renting rooms
+        in a building he used to finance. &ldquo;The money didn&rsquo;t disappear,&rdquo;
+        he told me. &ldquo;It just stopped meaning what it used to.&rdquo; I think about
+        that more than I&rsquo;d like.
+      </p>
+    </div>
+
+    <!-- ── Cost Tiers ────────────────────────────────────── -->
+
+    <h2 id="cost-tiers">Cost Tiers</h2>
+
+    <p>
+      Everything in the world has an implied <strong>Cost Tier</strong> from 0 to 5 &mdash;
+      a rough measure of how exclusive it is. A street meal is Tier 0. A revolver is Tier 2.
+      A Galvanic weapon is Tier 4. An enchanted artifact is Tier 5. The GM assigns tiers on
+      the fly by comparing what you want to the descriptions below. There is no exhaustive
+      price list. The table gives the shape; the GM fills in the specifics.
+    </p>
+
+    <table>
+      <tr><th>Tier</th><th>Name</th><th>What It Covers</th></tr>
+      <tr>
+        <td>0</td>
+        <td><strong>Scrap</strong></td>
+        <td>Discarded items, street food, charity, public knowledge, improvised tools</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td><strong>Common</strong></td>
+        <td>Basic tools, simple meals, shared lodging, ammunition, a tram ticket, a drink at a tavern, a used knife</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><strong>Standard</strong></td>
+        <td>A conventional firearm, working clothes, a week&rsquo;s rent, passage on a cargo vessel, a doctor&rsquo;s visit, standard adventuring gear</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><strong>Quality</strong></td>
+        <td>A fine meal, custom-tailored clothes, a reliable vehicle, a warded charm, a specialist&rsquo;s time, passenger airship passage</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td><strong>Premium</strong></td>
+        <td>A Galvanic device, enchanted equipment, membership at a private club, a surgeon with a reputation, a favour from a faction official</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td><strong>Exclusive</strong></td>
+        <td>An enchanted artifact, a personal airship, a seat at a faction council table, an estate, Pre-Eruption technology</td>
+      </tr>
+    </table>
+
+    <!-- ── The Access Rule ───────────────────────────────── -->
+
+    <h3 id="the-access-rule">The Access Rule</h3>
+
+    <p>
+      This is the heart of the economy. Compare the Cost Tier of what you want to your
+      Station. That comparison tells you everything you need to know.
+    </p>
+
+    <p>
+      <strong>At or below your Station:</strong> You can afford it. No roll, no tracking,
+      no discussion. It is within your means. Buy the ammunition, rent the room, take the
+      cab. The GM narrates it and the game moves on.
+    </p>
+
+    <p>
+      <strong>One tier above your Station:</strong> You can reach for it, but it costs
+      you. The GM calls for a <strong>Station Check</strong> &mdash; a skill roll with
+      a &minus;15% modifier. Success means you get it, though the strain shows. Failure
+      means you need another approach.
+    </p>
+
+    <p>
+      <strong>Two or more tiers above your Station:</strong> You cannot simply buy your
+      way in. This requires a <strong>narrative solution</strong> &mdash; a patron request,
+      a debt, a heist, a favour, a sacrifice. The economy says <em>not like this</em>,
+      and the story has to find another way.
+    </p>
+
+    <h3 id="station-checks">Station Checks</h3>
+
+    <p>
+      When you reach for something one tier above your Station, the skill you roll
+      depends on <em>how</em> you&rsquo;re trying to get it.
+    </p>
+
+    <table>
+      <tr><th>Context</th><th>Skill</th><th>Example</th></tr>
+      <tr>
+        <td>Formal venue, official channels</td>
+        <td>Etiquette</td>
+        <td>Getting a table at an exclusive restaurant, attending a faction event</td>
+      </tr>
+      <tr>
+        <td>Black market, underworld goods</td>
+        <td>Streetwise</td>
+        <td>Finding a Galvanic weapon through back channels, hiring muscle</td>
+      </tr>
+      <tr>
+        <td>Negotiating a price, extending credit</td>
+        <td>Persuasion</td>
+        <td>Talking a merchant down, convincing a landlord to waive a deposit</td>
+      </tr>
+      <tr>
+        <td>Faking wealth you don&rsquo;t have</td>
+        <td>Deception</td>
+        <td>Bluffing into a premium hotel, posing as someone with deeper pockets</td>
+      </tr>
+    </table>
+
+    <p>
+      The base modifier is <strong>&minus;15%</strong>. The GM adjusts from there &mdash;
+      a relevant contact or a recent favour might add +10%, while trying to access something
+      at a hostile faction&rsquo;s establishment could impose an additional &minus;10% to &minus;20%.
+    </p>
+
+    <p>
+      <strong>On success:</strong> you get what you&rsquo;re after, but the GM notes the
+      stretch. The Ledger might tick one step toward Lean. A narrative consequence might
+      surface later &mdash; the merchant remembers you owe them, the landlord expects a
+      favour, you skipped rent this month.
+    </p>
+
+    <p>
+      <strong>On failure:</strong> this approach didn&rsquo;t work. Try a different skill,
+      a different source, a patron request, or accept that it&rsquo;s out of reach for now.
+    </p>
+
+    <div class="callout callout-example">
+      <span class="callout-label">At the Table</span>
+      <p>
+        Sera needs formal attire for the Ashworth gala &mdash; that&rsquo;s Tier 3
+        (Quality), one above her Station 2. She visits a tailor on Gaslight Row and
+        tries to negotiate a loaner arrangement.
+      </p>
+      <p>
+        <strong>GM:</strong> &ldquo;He looks you over. You&rsquo;re clearly not his
+        usual clientele. Give me a Persuasion check, minus fifteen.&rdquo;
+      </p>
+      <p>
+        Sera&rsquo;s Persuasion is 55%. With the &minus;15% modifier, her target is 40%.
+        She rolls a 32 &mdash; success.
+      </p>
+      <p>
+        <strong>GM:</strong> &ldquo;He agrees, but he wants the dress back by morning
+        and your name on a tab. You owe him a favour now &mdash; he&rsquo;ll collect.&rdquo;
+      </p>
+    </div>
+
+    <div class="callout callout-note">
+      <span class="callout-label">For the GM</span>
+      <p>
+        Not every purchase needs a Station Check. If a player asks &ldquo;can I buy a
+        drink?&rdquo; and they&rsquo;re Station 1, just say yes. The Access Rule exists
+        to create interesting moments when characters reach beyond their means &mdash;
+        not to slow down routine shopping. Reserve Station Checks for situations where
+        the stretch creates tension or story.
+      </p>
+    </div>
+
+    <!-- ── Reaching Beyond Your Means ────────────────────── -->
+
+    <h2 id="reaching-beyond">Reaching Beyond Your Means</h2>
+
+    <p>
+      When something is two or more tiers above your Station &mdash; or when a Station Check
+      fails &mdash; the normal path closes. But the economy never says <em>no</em>. It says
+      <em>not like this</em>. What opens instead are the four narrative paths, and every one
+      of them is an adventure hook.
+    </p>
+
+    <h3 id="patron-request">The Patron Request</h3>
+
+    <p>
+      Ask the patron for it. Restoration patrons can requisition Galvanic equipment. Awakening
+      patrons can commission enchanted items. Arrangement patrons can pull strings. The cost
+      is never marks &mdash; it&rsquo;s obligation. A mission completed, a favour owed,
+      intelligence delivered, silence kept. The bigger the ask, the deeper the debt.
+    </p>
+
+    <h3 id="the-debt">The Debt</h3>
+
+    <p>
+      Borrow from someone outside the patron structure. The Lamplighter Syndicate lends.
+      Rival factions extend credit with strings attached. Local merchants carry tabs for
+      good customers. Debts are tracked as narrative obligations, not numbers. The GM notes
+      who is owed and what was promised, and brings it back when it creates the most
+      interesting story.
+    </p>
+
+    <h3 id="the-score">The Score</h3>
+
+    <p>
+      Steal it, win it, find it, earn it through a specific action. &ldquo;We need a Galvanic
+      resonance damper and we can&rsquo;t afford one&rdquo; is not a dead end &mdash; it&rsquo;s
+      the next adventure.
+    </p>
+
+    <h3 id="the-sacrifice">The Sacrifice</h3>
+
+    <p>
+      Give up something you have to get something you need. Sell the enchanted blade to buy
+      passage on the airship. Burn a contact&rsquo;s goodwill to get through the door. Accept
+      a lower Station to fund the expedition. Sacrifice is always visible in the fiction &mdash;
+      something real leaves your hands.
+    </p>
+
+    <!-- ── The Society Ledger ────────────────────────────── -->
+
+    <h2 id="society-ledger">The Society Ledger</h2>
+
+    <p>
+      Station tracks where <em>you</em> stand. The Ledger tracks where your
+      <strong>Society</strong> stands &mdash; the collective financial health of the whole
+      group. It is one state, visible to everyone at the table, and it shapes what jobs
+      you take, what resources you can access, and how much pressure you&rsquo;re under.
+    </p>
+
+    <p>
+      The Ledger has four states. The GM moves it based on mission outcomes, the passage
+      of time, and events in the fiction.
+    </p>
+
+    <table>
+      <tr><th>State</th><th>What It Means</th><th>Effect on the Society</th></tr>
+      <tr>
+        <td><strong>Flush</strong></td>
+        <td>Jobs are going well. Patron is pleased. Cash reserves exist.</td>
+        <td>Society can take time between missions. Can make modest group purchases without justification. Patron offers choice of assignments.</td>
+      </tr>
+      <tr>
+        <td><strong>Level</strong></td>
+        <td>Normal operations. Bills are paid. Nothing to spare.</td>
+        <td>Society takes jobs as they come. Standard access to patron resources. No breathing room for extras.</td>
+      </tr>
+      <tr>
+        <td><strong>Lean</strong></td>
+        <td>Behind. Debts accumulating. Patron is impatient.</td>
+        <td>Society must take the next available job &mdash; even an unpleasant one. Patron assigns rather than offers. Equipment requests are questioned or denied.</td>
+      </tr>
+      <tr>
+        <td><strong>Dire</strong></td>
+        <td>Underwater. Patron support on probation. Charter at risk.</td>
+        <td>Complete this job or lose the charter. Patron may demand concessions. Every member&rsquo;s Station drops by 1 until the crisis is resolved.</td>
+      </tr>
+    </table>
+
+    <h3 id="ledger-movement">How the Ledger Moves</h3>
+
+    <p>
+      The Ledger moves toward Flush after successful missions with good payouts, patron
+      windfalls, or significant favours repaid to the Society. It moves toward Lean after
+      failed missions, time between paying jobs, unexpected expenses, or when the patron
+      falls on hard times.
+    </p>
+
+    <p>
+      Under normal circumstances, the Ledger moves one step at a time. A catastrophic
+      event &mdash; the patron abandons the Society, the safehouse is destroyed in a zone
+      shift &mdash; might push from Level straight to Dire. A legendary score might jump
+      from Lean to Flush. But these are the exceptions.
+    </p>
+
+    <h3 id="ledger-and-station">How the Ledger Affects Station</h3>
+
+    <p>
+      When the Ledger is <strong>Flush</strong>, the Society can temporarily boost a
+      member&rsquo;s effective Station for a specific purpose. &ldquo;The Society is paying
+      for Kael to dress up for the gala &mdash; that&rsquo;s a Station 4 appearance, even
+      though he&rsquo;s Station 2.&rdquo; This is a group decision, not individual.
+    </p>
+
+    <p>
+      When the Ledger hits <strong>Dire</strong>, every member&rsquo;s actual Station drops
+      by 1 until the crisis is resolved. This is the only case where the Ledger mechanically
+      changes Station, and it reverses the moment Dire is cleared.
+    </p>
+
+    <div class="callout callout-handler">
+      <span class="callout-label">The Handler</span>
+      <p>
+        I&rsquo;ve run lean before. You start rationing ammunition. The safehouse gets cold
+        because nobody can cover the coal. Your handler stops buying rounds at the pub and
+        starts talking about &ldquo;priorities.&rdquo; Then a job comes in &mdash; something
+        nobody else wants, in a district nobody else will go to. And you take it. Because
+        that&rsquo;s what lean means. You don&rsquo;t get to be choosy.
+      </p>
+    </div>
+
+    <div class="callout callout-believer">
+      <span class="callout-label">The Believer</span>
+      <p>
+        When old Thessaly lost her workshop in the zone shift, she didn&rsquo;t have a single
+        mark saved. But she had thirty years of mending wards for every family on Ember Street.
+        She slept in a different house every night for two months. Nobody asked her to leave.
+        Nobody asked her to pay. That&rsquo;s worth more than any bank account, and no eruption
+        can take it from you.
+      </p>
+    </div>
+
+    <!-- ── Patron Backing ────────────────────────────────── -->
+
+    <h2 id="patron-backing">Patron Backing</h2>
+
+    <p>
+      Your Society&rsquo;s patron is not just a source of jobs &mdash; they are your
+      primary economic engine. <strong>Backing</strong> is a rating from 1 to 5 that
+      describes how generously the patron supports your Society. It determines your
+      baseline: how well-equipped you are, how comfortable your members live, and what
+      resources are within reach before you spend a single mark of your own.
+    </p>
+
+    <h3 id="backing-table">Backing Rating</h3>
+
+    <table>
+      <tr><th>Backing</th><th>Name</th><th>What the Patron Provides</th><th>Station Floor</th></tr>
+      <tr>
+        <td>1</td>
+        <td><strong>Bare Charter</strong></td>
+        <td>A charter document and a name. Maybe a contact or two. No equipment beyond what members bring themselves. A meeting place &mdash; borrowed, cramped, or improvised.</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><strong>Field Support</strong></td>
+        <td>Basic equipment and standard ammunition restocked between missions. A handler who checks in periodically. A safehouse that is functional but not comfortable.</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><strong>Full Package</strong></td>
+        <td>Good equipment, including one signature faction-specific item per member. Reliable handler. Decent safehouse. Access to faction training.</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td><strong>Favoured</strong></td>
+        <td>Excellent equipment, including prototype or rare faction-specific items. Priority handler. Well-appointed safehouse. Access to faction specialists on request.</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td><strong>Inner Circle</strong></td>
+        <td>The best the faction has to offer. Unique equipment. Direct access to faction leadership. Resources that other Societies don&rsquo;t know exist.</td>
+        <td>3</td>
+      </tr>
+    </table>
+
+    <p>
+      The <strong>Station Floor</strong> is the minimum Station guaranteed to Society
+      members by the patron&rsquo;s support. A Backing 3 patron ensures members live at
+      least at Station 2 &mdash; the patron covers rent, meals, and basic needs as part
+      of the arrangement. You can be higher than this floor through personal means, but
+      you cannot fall below it while the patron relationship holds.
+    </p>
+
+    <h3 id="faction-gear">Faction-Specific Gear by Backing</h3>
+
+    <p>
+      Different patrons supply different types of equipment based on their factional
+      philosophy. What the Restoration provides looks nothing like what the Awakening
+      offers &mdash; and the Arrangement has its own way of doing things.
+    </p>
+
+    <table>
+      <tr><th>Backing</th><th>Restoration (Galvanic)</th><th>Awakening (Aetheric)</th><th>Arrangement (Pragmatic)</th></tr>
+      <tr>
+        <td>1</td>
+        <td>Conventional firearms only</td>
+        <td>Mundane gear, maybe a charm</td>
+        <td>Whatever you brought with you</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Conventional loadout, one Galvanic oddity (shared)</td>
+        <td>Mundane gear, 1&ndash;2 minor charms, basic alchemical supplies</td>
+        <td>Reliable conventional loadout, one specialty item</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Full loadout plus one Exotic weapon per member or one significant Galvanic device (shared)</td>
+        <td>One enchanted weapon per member or several warded items, regular potion supply</td>
+        <td>Mixed loadout with 1&ndash;2 faction contacts for specialty procurement</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Multiple Exotics, a significant Galvanic device, access to prototype equipment</td>
+        <td>Multiple enchanted items per member, a significant ward, healer on retainer</td>
+        <td>Best conventional gear plus one &ldquo;acquired&rdquo; exotic or enchanted piece per member</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Cutting-edge prototypes, fully personal Galvanic loadouts, faction R&amp;D access</td>
+        <td>Personally commissioned artifacts, access to senior casters, ward networks</td>
+        <td>&ldquo;Whatever you need. Don&rsquo;t ask where it came from.&rdquo;</td>
+      </tr>
+    </table>
+
+    <h3 id="owned-vs-issued">Owned vs. Issued Gear</h3>
+
+    <p>
+      There is a meaningful difference between <strong>owned gear</strong> &mdash; things
+      you acquired through your own Station &mdash; and <strong>issued gear</strong> &mdash;
+      equipment provided through patron Backing.
+    </p>
+
+    <p>
+      Owned gear is yours. It survives patron changes, Society dissolution, and career
+      transitions. A revolver you bought at Station 2 stays in your holster no matter
+      what happens to the charter.
+    </p>
+
+    <p>
+      Issued gear is contingent on the relationship. It comes with the charter and
+      leaves with it. Losing Backing or breaking with the patron means Exotic weapons
+      lose access to charging and specialized ammunition, enchanted items may be recalled,
+      and replacement parts disappear. This makes patron loyalty an economic choice, not
+      just a political one. &ldquo;We could break with the Collective, but then we lose
+      the Exotics&rdquo; is a real cost.
+    </p>
+
+    <div class="callout callout-note">
+      <span class="callout-label">For the GM</span>
+      <p>
+        Backing changes at campaign-level inflection points &mdash; not session by session.
+        It rises through consistent mission success or a major win for the patron. It falls
+        through repeated failures, defiance of patron orders, or when the patron&rsquo;s
+        faction loses power. When Backing drops, the Station Floor drops with it. Members
+        who were living at the floor suddenly feel their lifestyle degrading. That squeeze
+        is where the best patron-politics stories come from.
+      </p>
+    </div>
+
+    <!-- ── The Drift ─────────────────────────────────────── -->
+
+    <h2 id="the-drift">The Drift</h2>
+
+    <p>
+      Life costs money. Rent, food, equipment maintenance, the handler&rsquo;s cut,
+      safehouse upkeep, ammunition &mdash; none of these are tracked individually, but
+      they are always there. Between adventures, the Ledger <strong>drifts</strong>
+      toward Lean. This is the quiet pressure that keeps the story moving: even when
+      nothing dramatic happens, the clock is ticking.
+    </p>
+
+    <p>
+      <strong>Guideline:</strong> After every 2&ndash;3 sessions of game time without
+      a paying job, the Ledger moves one step toward Lean. The GM accelerates the Drift
+      when expenses spike &mdash; unexpected repairs, patron support wavering, equipment
+      failure &mdash; and slows it when the Society establishes side income or cashes in
+      a favour.
+    </p>
+
+    <h3 id="downtime-actions">Downtime Actions</h3>
+
+    <p>
+      Between adventures, characters can take actions that push back against the Drift.
+      These are not mini-games &mdash; they are one-roll-and-narrate activities that give
+      you agency over your economic situation.
+    </p>
+
+    <table>
+      <tr><th>Action</th><th>Effect</th><th>Check Required</th></tr>
+      <tr>
+        <td><strong>Side work</strong> &mdash; guard duty, courier runs, manual labour</td>
+        <td>Slows Drift. Ledger stays at current state instead of sliding.</td>
+        <td>None &mdash; grunt work is always available</td>
+      </tr>
+      <tr>
+        <td><strong>Hustle</strong> &mdash; gambling, deal-making, odd jobs through contacts</td>
+        <td>If successful, holds Ledger at current state. If failed, no effect but time is spent.</td>
+        <td>Streetwise or Persuasion</td>
+      </tr>
+      <tr>
+        <td><strong>Craft for sale</strong> &mdash; brew potions, forge equipment, repair for pay</td>
+        <td>Can generate modest income, depending on skill and market.</td>
+        <td>Relevant Craft or Casting check</td>
+      </tr>
+      <tr>
+        <td><strong>Invest</strong> &mdash; put money into a business, property, or scheme</td>
+        <td>Long-term: eventual Station increase if the fiction supports it. Short-term: may accelerate Drift.</td>
+        <td>GM adjudication</td>
+      </tr>
+      <tr>
+        <td><strong>Patron favour</strong> &mdash; take on a small task outside normal missions</td>
+        <td>Slows Drift. May help restore wavering Backing.</td>
+        <td>Task-dependent</td>
+      </tr>
+    </table>
+
+    <div class="callout callout-note">
+      <span class="callout-label">For the GM</span>
+      <p>
+        The Drift is a pacing tool, not a punishment. Use it to create the feeling that
+        jobs matter &mdash; that the Society can&rsquo;t sit idle forever. But
+        don&rsquo;t rush it. If the group is deep in a personal storyline or
+        investigating something interesting between missions, slow the Drift down.
+        When you want urgency &mdash; when the table needs a reason to take the
+        next job &mdash; let it catch up.
+      </p>
+    </div>
+
+    <!-- ── Special Items ─────────────────────────────────── -->
+
+    <h2 id="special-items">Special Items</h2>
+
+    <h3 id="artifacts">Artifacts</h3>
+
+    <p>
+      Enchanted artifacts are handmade, rare, and individually significant. They do not
+      have Cost Tiers because they are not commodities &mdash; you do not walk into a
+      shop and browse the artifact aisle. When an artifact needs to be valued for fiction
+      purposes &mdash; trade, negotiation, theft &mdash; the GM uses narrative anchors
+      rather than mark amounts.
+    </p>
+
+    <table>
+      <tr><th>Enchantment Tier</th><th>Narrative Value</th></tr>
+      <tr>
+        <td><strong>Weak</strong></td>
+        <td>Several months of comfortable living. A meaningful windfall for a person.</td>
+      </tr>
+      <tr>
+        <td><strong>Standard</strong></td>
+        <td>A year of comfortable living. Enough to change someone&rsquo;s Station.</td>
+      </tr>
+      <tr>
+        <td><strong>Strong</strong></td>
+        <td>A small property or a vehicle. Enough to fund a Society for months.</td>
+      </tr>
+      <tr>
+        <td><strong>Spectacular</strong></td>
+        <td>A building or a ship. A faction-level asset. Recovery could define a campaign arc.</td>
+      </tr>
+      <tr>
+        <td><strong>Pre-Eruption</strong></td>
+        <td>Priceless. Nations would compete for it. Wars have started over less.</td>
+      </tr>
+    </table>
+
+    <div class="callout callout-scholar">
+      <span class="callout-label">The Scholar</span>
+      <p>
+        A colleague once traded a warding charm for passage across three zone boundaries
+        and a month&rsquo;s lodging. No marks changed hands. The ferryman didn&rsquo;t want
+        money &mdash; he wanted his daughter to sleep through the night without the dreams.
+        The charm was worth whatever that was worth to him.
+      </p>
+    </div>
+
+    <h3 id="potions">Potions</h3>
+
+    <p>
+      Potions occupy a middle ground between commodities and artifacts. They are traded,
+      commissioned, and occasionally found &mdash; but not mass-produced. There are no
+      potion shops. There are healers who sell remedies, brewers who take commissions, and
+      abandoned laboratories that sometimes yield surviving bottles.
+    </p>
+
+    <table>
+      <tr><th>Potion Potency</th><th>Cost Tier</th><th>Access Notes</th></tr>
+      <tr>
+        <td><strong>Weak</strong></td>
+        <td>2 (Standard)</td>
+        <td>Available from Aetheric Quarter healers and some faction suppliers. Accessible to working adventurers.</td>
+      </tr>
+      <tr>
+        <td><strong>Standard</strong></td>
+        <td>3 (Quality)</td>
+        <td>Commissioned from skilled brewers or provided by an Awakening-backed patron at Backing 3+. Not casual purchases.</td>
+      </tr>
+      <tr>
+        <td><strong>Strong</strong></td>
+        <td>4 (Premium)</td>
+        <td>Rare. Requires a specific brewer, a patron request, or a lucky find.</td>
+      </tr>
+      <tr>
+        <td><strong>Spectacular</strong></td>
+        <td>5 (Exclusive)</td>
+        <td>Exceedingly rare. Created by master brewers under specific conditions. Faction-level assets when found.</td>
+      </tr>
+    </table>
+
+    <nav class="page-nav">
+      <a href="combat.html" class="page-nav-link">
+        <span class="page-nav-direction">&larr; Previous</span>
+        <span class="page-nav-title">When Violence Finds You</span>
+      </a>
+      <a href="equipment.html" class="page-nav-link page-nav-link--next">
+        <span class="page-nav-direction">Next &rarr;</span>
+        <span class="page-nav-title">Arms &amp; Equipment</span>
+      </a>
+    </nav>
+  </div>
+  <footer class="site-footer"><p>Aetherfall RPG &mdash; Playtest Draft</p></footer>
+</main>
+<script src="js/main.js"></script>
+</body>
+</html>

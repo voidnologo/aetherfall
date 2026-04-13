@@ -722,10 +722,6 @@ These items are flagged for future sessions or playtesting:
 
 5. **Backing during patron transition.** If a Society switches patrons, what happens to Backing? Presumably it resets — the new patron hasn't invested yet. But a Society with a strong reputation might negotiate starting Backing. Leave to GM adjudication for now.
 
-6. **Enchanted firearms economy.** Enchanted firearms are a pending design item (see pending-tasks.md). When those rules are designed, their Cost Tier assignment should consider both the base firearm tier and the enchantment tier. A Tier 2 revolver with a Weak enchantment is probably Tier 3–4, not Tier 2.
+6. **Zone-specific economies.** WORLD_DESIGN.md notes that each zone "has its own economy." Should different zones have different Cost Tier adjustments? (Galvanic equipment cheaper in Galvanic districts, etc.) Interesting but potentially complex — flag for playtesting.
 
-7. **Zone-specific economies.** WORLD_DESIGN.md notes that each zone "has its own economy." Should different zones have different Cost Tier adjustments? (Galvanic equipment cheaper in Galvanic districts, etc.) Interesting but potentially complex — flag for playtesting.
-
-8. **Gambling and windfall mechanics.** If a character gambles, how does the outcome interact with Station? A big win could temporarily boost Station; a loss could temporarily lower it. Probably handled through narrative + a skill check, not a separate system.
-
-9. **Starting equipment by Station.** At character creation, what specific equipment does each Station level start with? Probably a simple guideline: "You own gear appropriate to your Station. Pick items at or below your Cost Tier." Formal list unnecessary.
+7. **Gambling and windfall mechanics.** If a character gambles, how does the outcome interact with Station? A big win could temporarily boost Station; a loss could temporarily lower it. Probably handled through narrative + a skill check, not a separate system.

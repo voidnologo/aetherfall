@@ -19,7 +19,7 @@
 - [ ] Adventuring Society generator tool
 - [ ] Table Index link verification after restructure
 - [ ] Mobile sidebar UX testing on real devices
-- [ ] Enchanted firearms rules — magic/tech tension when imbuing a firearm (Cost Tier TBD per ECONOMY.md §14.6)
+- [ ] Enchanted firearms rules — magic/tech tension when imbuing a firearm (note: violates Aetheric/Galvanic split, likely not for main game — edge-case adventure content only)
 - [ ] Non-weapon artifact tag tables — expand as play demands
 - [ ] Ward creation process — detailed rules like Enchant spell (currently less specified)
 - [ ] Corruption/madness mechanics — expansion candidate, let tables homebrew for now
