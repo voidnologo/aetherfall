@@ -1,80 +1,29 @@
 /* ═══════════════════════════════════════════════════════════════
    THE AETHERIC CODEX — Interactive Systems
-   Navigation, particles, scroll reveals, page transitions
+   Section TOC, scroll spy, particles, scroll reveals
+   ═══════════════════════════════════════════════════════════════
+   Chapter list, page chrome, and prev/next navigation are
+   generated at build time by the Eleventy layout template.
+   The PAGES registry lives in web/_data/pages.json.
    ═══════════════════════════════════════════════════════════════ */
 
 (function () {
   'use strict';
 
-  // ── Page Registry ──────────────────────────────────────────
-  const PAGES = [
-    { id: 'welcome',       file: 'index.html',              title: 'Welcome to the Age of Wonder', num: '01', theme: 'aether' },
-    { id: 'world',         file: 'state-of-the-world.html', title: 'The State of the World',       num: '02', theme: 'split' },
-    { id: 'societies',     file: 'societies.html',          title: 'Adventuring Societies',        num: '03', theme: 'neutral' },
-    { id: 'creating',      file: 'creating.html',           title: 'Creating Your Adventurer',     num: '04', theme: 'neutral' },
-    { id: 'char-sheet',    file: 'character-sheet.html',     title: 'Character Sheet',          num: '\u2192', theme: 'aether' },
-    { id: 'rolling',       file: 'rolling.html',            title: 'Rolling the Dice',             num: '05', theme: 'neutral' },
-    { id: 'getting-hurt',  file: 'getting-hurt.html',       title: 'Getting Hurt',                 num: '06', theme: 'galvanic' },
-    { id: 'skills',        file: 'skills.html',             title: 'Skills',                       num: '07', theme: 'neutral' },
-    { id: 'magic',         file: 'magic.html',              title: 'The Two Paths of Magic',       num: '08', theme: 'aether' },
-    { id: 'grimoire',      file: 'grimoire.html',           title: 'The Grimoire',                 num: '09', theme: 'aether' },
-    { id: 'world-between', file: 'world-between.html',      title: 'The World Between',            num: '10', theme: 'split' },
-    { id: 'combat',        file: 'combat.html',             title: 'When Violence Finds You',      num: '11', theme: 'galvanic' },
-    { id: 'economy',      file: 'economy.html',            title: 'Coin & Commerce',              num: '12', theme: 'neutral' },
-    { id: 'equipment',     file: 'equipment.html',          title: 'Arms & Equipment',             num: '13', theme: 'galvanic' },
-    { id: 'artifacts',     file: 'artifacts.html',          title: 'Artifacts & Enchantments',     num: '14', theme: 'aether' },
-    { id: 'running',       file: 'running-the-game.html',   title: 'Running the Game',             num: '15', theme: 'neutral' },
-    { id: 'reference',     file: 'reference.html',          title: 'Quick Reference',              num: '16', theme: 'neutral' },
-    { id: 'tables',        file: 'tables.html',             title: 'Table Index',                  num: '17', theme: 'neutral' },
-    { id: 'gm-tools',     file: 'gm-tools.html',           title: 'GM Tools',                     num: '18', theme: 'neutral' },
-    { id: 'quickstart',   file: 'quickstart.html',          title: 'The Ashwick Job',              num: 'QS', theme: 'split' },
-  ];
+  // ── Section TOC (current page headings) ────────────────────
+  // The sidebar chapter list is build-time HTML. This function
+  // populates the section-level links under the active chapter.
+  function buildSectionToc() {
+    const list = document.getElementById('toc-sections');
+    if (!list) return;
 
-  // ── Detect Current Page ────────────────────────────────────
-  function getCurrentPage() {
-    const path = window.location.pathname;
-    const filename = path.split('/').pop() || 'index.html';
-    return PAGES.find(p => p.file === filename) || PAGES[0];
-  }
-
-  // ── Sidebar TOC ────────────────────────────────────────────
-  function buildSidebar() {
-    const nav = document.querySelector('.sidebar-nav');
-    if (!nav) return;
-
-    const current = getCurrentPage();
-
-    const html = PAGES.map(page => {
-      const isActive = page.id === current.id;
-      const sections = isActive ? getSections() : [];
-      const expanded = isActive && sections.length > 0 ? ' expanded' : '';
-
-      let sectionsHtml = '';
-      if (sections.length > 0) {
-        sectionsHtml = '<ul class="toc-sections">' +
-          sections.map(s =>
-            `<li><a href="#${s.id}" class="toc-section-link" data-section="${s.id}">${s.text}</a></li>`
-          ).join('') +
-          '</ul>';
-      }
-
-      return `<div class="toc-chapter${expanded}">
-        <a href="${page.file}" class="toc-chapter-link${isActive ? ' active' : ''}" data-page="${page.id}">
-          <span class="toc-number">${page.num}</span>${page.title}
-        </a>
-        ${sectionsHtml}
-      </div>`;
-    }).join('');
-
-    nav.innerHTML = html;
-  }
-
-  function getSections() {
     const headings = document.querySelectorAll('.page-content h2[id], .page-content h3[id]');
-    return Array.from(headings).map(h => ({
-      id: h.id,
-      text: h.dataset.toc || h.textContent.trim(),
-    }));
+    if (headings.length === 0) return;
+
+    list.innerHTML = Array.from(headings).map(h => {
+      const text = h.dataset.toc || h.textContent.trim();
+      return `<li><a href="#${h.id}" class="toc-section-link" data-section="${h.id}">${text}</a></li>`;
+    }).join('');
   }
 
   // ── Scroll Spy (active section tracking) ───────────────────
@@ -138,31 +87,6 @@
       link.addEventListener('click', () => {
         if (window.innerWidth <= 900) close();
       });
-    });
-  }
-
-  // ── Page Transitions ───────────────────────────────────────
-  function initPageTransitions() {
-    const current = getCurrentPage();
-
-    // Intercept internal navigation clicks
-    document.addEventListener('click', (e) => {
-      const link = e.target.closest('a[href]');
-      if (!link) return;
-
-      const href = link.getAttribute('href');
-      if (!href) return;
-
-      // Only intercept local page links
-      const target = PAGES.find(p => p.file === href);
-      if (!target) return;
-      if (target.id === current.id && !href.includes('#')) return;
-
-      // If it's a same-page anchor, let it scroll naturally
-      if (href.startsWith('#')) return;
-
-      e.preventDefault();
-      window.location.href = href;
     });
   }
 
@@ -280,15 +204,11 @@
   }
 
   // ── Init ───────────────────────────────────────────────────
-  // Page chrome (chapter numbers, prev/next nav) is now generated
-  // at build time by the Eleventy layout template.
   document.addEventListener('DOMContentLoaded', () => {
-    buildSidebar();
+    buildSectionToc();
     initScrollSpy();
     initSidebarToggle();
-    initPageTransitions();
     initScrollReveal();
     initParticles();
-    playEntranceAnimation();
   });
 })();

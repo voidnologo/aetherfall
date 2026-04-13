@@ -21,7 +21,18 @@
 <div class="sidebar-overlay"></div>
 <aside class="sidebar">
   <div class="sidebar-brand"><div class="sidebar-title">Aetherfall</div><div class="sidebar-subtitle">Rules Reference</div></div>
-  <nav class="sidebar-nav"></nav>
+  <nav class="sidebar-nav">
+    {%- for page in pages %}
+    <div class="toc-chapter{% if page.id == pageId %} expanded{% endif %}">
+      <a href="{{ page.file }}" class="toc-chapter-link{% if page.id == pageId %} active{% endif %}" data-page="{{ page.id }}">
+        <span class="toc-number">{{ page.num }}</span>{{ page.title }}
+      </a>
+      {%- if page.id == pageId %}
+      <ul class="toc-sections" id="toc-sections"></ul>
+      {%- endif %}
+    </div>
+    {%- endfor %}
+  </nav>
   <div class="sidebar-footer"><a href="../">&larr; Back to Aetherfall</a></div>
 </aside>
 <header class="site-header">
