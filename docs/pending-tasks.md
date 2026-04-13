@@ -2,7 +2,6 @@
 
 ## Next Up
 - [ ] Review all chapters in browser for visual regression after 11ty conversion
-- [ ] Add Station field to character sheet builder (interactive tool)
 - [ ] Add Station/Backing/Ledger fields to blank printable character sheet
 - [ ] Phase 3 cleanup: resolve PAGES duplication (pages.json vs main.js), build-time sidebar
 - [ ] Character sheet art / watermarks
