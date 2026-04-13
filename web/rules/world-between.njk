@@ -1,39 +1,9 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="split">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The World Between — Aetherfall RPG</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-<div id="atmosphere"><canvas id="particle-canvas"></canvas><div class="mist mist-1"></div><div class="mist mist-2"></div><div class="mist mist-3"></div></div>
-<div id="page-transition" class="page-transition"></div>
-<div class="sidebar-overlay"></div>
-<aside class="sidebar">
-  <div class="sidebar-brand"><div class="sidebar-title">Aetherfall</div><div class="sidebar-subtitle">Rules Reference</div></div>
-  <nav class="sidebar-nav"></nav>
-  <div class="sidebar-footer"><a href="../">← Back to Aetherfall</a></div>
-</aside>
-<header class="site-header">
-  <button class="header-toggle" aria-label="Toggle navigation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
-  <span class="header-logo">Aetherfall <span>RPG</span></span>
-  <span class="header-separator"></span>
-  <span class="header-chapter"></span>
-</header>
-<main class="main-content">
-  <div class="page-content">
-
-    <nav class="page-nav-compact"></nav>
-
-    <div class="page-hero">
-      <span class="page-number"></span>
-      <h1 class="page-title">The World Between</h1>
-      <p class="page-subtitle">Where the Veil meets the Engine &mdash; and reality bends</p>
-    </div>
+---
+layout: chapter.njk
+pageId: world-between
+subtitle: "Where the Veil meets the Engine &mdash; and reality bends"
+permalink: rules/world-between.html
+---
 
     <p class="flavor">
       The Veil thinned within living memory, and the Aether poured through. The Engine woke
@@ -76,10 +46,9 @@
       reliable things in a world being pulled in two directions.
     </p>
 
-    <div class="callout callout-handler">
-      <span class="callout-label">The Handler</span>
+    {% handler %}
       <p>This is why every member of every Society carries a blade. Not because we're old-fashioned. Because steel doesn't care about the Aether or the Engine. Your gun might jam. Your ward might fail. Your sword works. That's not nostalgia — that's operational doctrine.</p>
-    </div>
+    {% endhandler %}
 
     <table>
       <tr><th>Term</th><th>What It Means</th></tr>
@@ -92,8 +61,7 @@
       <tr><td>Martial</td><td>Physical weapons and tools. Immune to both forces. Swords, crossbows, muscle. Always work.</td></tr>
     </table>
 
-    <div class="callout callout-scene">
-      <span class="callout-label">The Three Theories</span>
+    {% scene "The Three Theories" %}
       <p><strong>The Immune Response Theory:</strong> The Veil thinned. The Engine woke up to
       fight back. Galvanic technology is the world's antibodies. This view is popular among
       industrialists. It frames the Aether as a disease and the Engine as the cure.</p>
@@ -104,12 +72,11 @@
       <p><strong>The Engineer's Shrug:</strong> It's just interference. Two strong signals in
       the same medium. Tune one up and the other degrades. No gods required. This view is
       popular among people who don't have time for philosophy.</p>
-    </div>
+    {% endscene %}
 
-    <div class="callout callout-believer">
-      <span class="callout-label">The Believer</span>
+    {% believer %}
       <p>The Veil is not a wall. It is a membrane — thin in places, thick in others, and always breathing. When I stand in a Wild Zone, I can feel it pulse. The Engine answers with its own rhythm, mechanical and relentless. Between them, the world holds its breath. That is where we live. That is what we navigate.</p>
-    </div>
+    {% endbeliever %}
 
     <h3 id="number-line">The Number Line</h3>
 
@@ -193,8 +160,7 @@
       The balance makes it better or worse from there.
     </p>
 
-    <div class="callout callout-example">
-      <span class="callout-label">Example</span>
+    {% example "Example" %}
       <p>Sera casts three Standard spells (+2 each = +6 Aetheric). Meanwhile, a thug fires
       an arc gun twice (Aetheric 2, so &minus;2 each = &minus;4 Galvanic). Net balance:
       <strong>+2 Aetheric</strong>. Every firearm loses 4 Reliability. Sera's casting
@@ -202,10 +168,9 @@
       her magic while degrading the guns.</p>
       <p>If the thug had fired a third shot (&minus;2 more), the net would be
       <strong>0</strong> &mdash; perfectly balanced. Neither side boosted or penalized.</p>
-    </div>
+    {% endexample %}
 
-    <div class="callout callout-example">
-      <span class="callout-label">The Other Direction</span>
+    {% example "The Other Direction" %}
       <p>Now imagine the reverse. A factory enforcer fires an aether lance (Aetheric 3,
       Suppressing +1 = 4 per shot) three times. That's &minus;12 Galvanic. Sera has
       cast one Standard spell (+2 Aetheric). Net: <strong>&minus;10 Galvanic</strong>.
@@ -213,15 +178,14 @@
       barely manage Standard, and she'll misfire more often than not. Meanwhile,
       every firearm gains +20 Reliability. The enforcer's tommy gun (Rel 70 + 20 = 90)
       has only a 10% malfunction chance. The Engine is drowning out the Veil.</p>
-    </div>
+    {% endexample %}
 
-    <div class="callout callout-scene">
-      <span class="callout-label">At the Table</span>
+    {% scene "At the Table" %}
       <p><em>"Two spells and an arc gun shot. Where's the balance?"</em></p>
       <p>"Plus four Aetheric, minus two Galvanic. Net two Aetheric."</p>
       <p><em>"Revolvers are at minus four Reliability. A little twitchy. Your sword doesn't
       care."</em></p>
-    </div>
+    {% endscene %}
 
     <h3 id="decay">Decay</h3>
 
@@ -277,13 +241,11 @@
       can map these gradients and find anything.
     </p>
 
-    <div class="callout callout-street">
-      <span class="callout-label">The Street</span>
+    {% street %}
       <p>You learn to read a zone the way you read weather. Light Aetheric — your radio crackles, your sidearm feels heavier. Moderate — the streetlights flicker, cats scatter. Deep Wild — you put the gun away and draw the blade, because nothing with a firing pin is going to help you where you're headed.</p>
-    </div>
+    {% endstreet %}
 
-    <div class="callout callout-note">
-      <span class="callout-label">Why This Matters</span>
+    {% gmnote "Why This Matters" %}
       <p>This mechanic is the reason the game supports such a wide range of character types.
       The swordsman isn't obsolete because guns exist &mdash; guns <em>fail</em> where the
       Veil is thin. The gunfighter isn't useless because magic exists &mdash; there are
@@ -293,12 +255,4 @@
       <p>Your caster and your Galvanic gunner are pulling the environment in opposite
       directions. Your swordsman doesn't care. Carry a sword <em>and</em> a gun. Know
       when to rely on which.</p>
-    </div>
-
-    <nav class="page-nav"></nav>
-  </div>
-  <footer class="site-footer"><p>Aetherfall RPG — Playtest Draft</p></footer>
-</main>
-<script src="js/main.js"></script>
-</body>
-</html>
+    {% endgmnote %}

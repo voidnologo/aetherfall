@@ -1,39 +1,9 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="neutral">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Adventuring Societies — Aetherfall RPG</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-<div id="atmosphere"><canvas id="particle-canvas"></canvas><div class="mist mist-1"></div><div class="mist mist-2"></div><div class="mist mist-3"></div></div>
-<div id="page-transition" class="page-transition"></div>
-<div class="sidebar-overlay"></div>
-<aside class="sidebar">
-  <div class="sidebar-brand"><div class="sidebar-title">Aetherfall</div><div class="sidebar-subtitle">Rules Reference</div></div>
-  <nav class="sidebar-nav"></nav>
-  <div class="sidebar-footer"><a href="../">← Back to Aetherfall</a></div>
-</aside>
-<header class="site-header">
-  <button class="header-toggle" aria-label="Toggle navigation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
-  <span class="header-logo">Aetherfall <span>RPG</span></span>
-  <span class="header-separator"></span>
-  <span class="header-chapter"></span>
-</header>
-<main class="main-content">
-  <div class="page-content">
-
-    <nav class="page-nav-compact"></nav>
-
-    <div class="page-hero">
-      <span class="page-number"></span>
-      <h1 class="page-title">Adventuring Societies</h1>
-      <p class="page-subtitle">Your team, your patron, your place in the world</p>
-    </div>
+---
+layout: chapter.njk
+pageId: "societies"
+subtitle: "Your team, your patron, your place in the world"
+permalink: rules/societies.html
+---
 
     <p class="flavor">
       You know the world now &mdash; the eruption, the balance, the factions
@@ -55,8 +25,7 @@
       that come with all of it.
     </p>
 
-    <div class="callout callout-handler">
-      <span class="callout-label">The Handler</span>
+    {% handler %}
       <p>
         Welcome to the Society. Don&rsquo;t die on your first job. Here&rsquo;s
         how this works: we get paid by people with agendas. We do the work they
@@ -64,7 +33,7 @@
         gear is good, the contacts are real, and the paychecks clear. What you
         do with the moral complications is between you and whatever you pray to.
       </p>
-    </div>
+    {% endhandler %}
 
     <h3 id="what-you-get">What Your Society Gives You</h3>
 
@@ -176,8 +145,7 @@
       thing.
     </p>
 
-    <div class="callout callout-note">
-      <span class="callout-label">For the GM</span>
+    {% gmnote %}
       <p>
         Use mission briefs to put the Society in situations where the right
         thing to do and the patron&rsquo;s objective diverge. This doesn&rsquo;t
@@ -186,7 +154,7 @@
         question: <em>what do we owe the people who pay us, and what do we owe
         ourselves?</em>
       </p>
-    </div>
+    {% endgmnote %}
 
     <p>
       <strong>Changing patrons.</strong> Societies can switch factions &mdash;
@@ -257,8 +225,7 @@
       </tr>
     </table>
 
-    <div class="callout callout-handler">
-      <span class="callout-label">The Handler</span>
+    {% handler %}
       <p>
         That &ldquo;Tension&rdquo; column? That&rsquo;s not decoration.
         A Monster Team that never questions a kill order is missing the point.
@@ -266,7 +233,7 @@
         a different game. The archetype tells you what you do. The tension tells
         you what makes it interesting.
       </p>
-    </div>
+    {% endhandler %}
 
     <!-- ── Your Gear Tells a Story ───────────────────────── -->
 
@@ -304,8 +271,7 @@
       for any single environment. Versatile but never dominant.
     </p>
 
-    <div class="callout callout-street">
-      <span class="callout-label">The Street</span>
+    {% street %}
       <p>
         You can tell who a Society works for by what they carry. Galvanic
         kit head to toe? Restoration money. Enchanted everything? Awakening.
@@ -313,7 +279,7 @@
         markets? Arrangement &mdash; or broke. Usually both. The smart ones
         always have a blade. The blade doesn&rsquo;t care about your patron.
       </p>
-    </div>
+    {% endstreet %}
 
     <!-- ── The Society Ecosystem ─────────────────────────── -->
 
@@ -419,8 +385,7 @@
       walk into.
     </p>
 
-    <div class="callout callout-note">
-      <span class="callout-label">For the GM</span>
+    {% gmnote %}
       <p>
         Building the Society together is more valuable than individual backstories.
         It answers the question &ldquo;why are we together?&rdquo; before anyone
@@ -430,10 +395,9 @@
         character creation becomes a question of <em>who am I within this
         group?</em> &mdash; which is exactly the right question.
       </p>
-    </div>
+    {% endgmnote %}
 
-    <div class="callout callout-handler">
-      <span class="callout-label">The Handler</span>
+    {% handler %}
       <p>
         You&rsquo;ve got a patron. You&rsquo;ve got a charter. You know who
         pays the bills and what they expect. Good. Now you need to figure out
@@ -441,12 +405,4 @@
         good at, and what happens when you push your luck too far. That&rsquo;s
         the next chapter. Go build your adventurer.
       </p>
-    </div>
-
-    <nav class="page-nav"></nav>
-  </div>
-  <footer class="site-footer"><p>Aetherfall RPG &mdash; Playtest Draft</p></footer>
-</main>
-<script src="js/main.js"></script>
-</body>
-</html>
+    {% endhandler %}

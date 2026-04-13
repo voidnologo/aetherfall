@@ -1,39 +1,9 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="galvanic">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Getting Hurt — Aetherfall RPG</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-<div id="atmosphere"><canvas id="particle-canvas"></canvas><div class="mist mist-1"></div><div class="mist mist-2"></div><div class="mist mist-3"></div></div>
-<div id="page-transition" class="page-transition"></div>
-<div class="sidebar-overlay"></div>
-<aside class="sidebar">
-  <div class="sidebar-brand"><div class="sidebar-title">Aetherfall</div><div class="sidebar-subtitle">Rules Reference</div></div>
-  <nav class="sidebar-nav"></nav>
-  <div class="sidebar-footer"><a href="../">← Back to Aetherfall</a></div>
-</aside>
-<header class="site-header">
-  <button class="header-toggle" aria-label="Toggle navigation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
-  <span class="header-logo">Aetherfall <span>RPG</span></span>
-  <span class="header-separator"></span>
-  <span class="header-chapter"></span>
-</header>
-<main class="main-content">
-  <div class="page-content">
-
-    <nav class="page-nav-compact"></nav>
-
-    <div class="page-hero">
-      <span class="page-number"></span>
-      <h1 class="page-title">Getting Hurt</h1>
-      <p class="page-subtitle">And getting better &mdash; if you're lucky</p>
-    </div>
+---
+layout: chapter.njk
+pageId: getting-hurt
+subtitle: "And getting better &mdash; if you're lucky"
+permalink: rules/getting-hurt.html
+---
 
     <p class="flavor">
       In this game, violence has consequences. There are no bags of hit points to whittle
@@ -58,13 +28,11 @@
       <tr><td>4</td><td>Incapacitated</td><td>&minus;50% to all rolls &mdash; you're barely conscious</td></tr>
     </table>
 
-    <div class="callout callout-handler">
-      <span class="callout-label">The Handler</span>
+    {% handler %}
       <p>First real wound you take, everything changes. Your hands shake. Your aim drifts. Take another and you can barely hold your weapon. I've seen people try to fight through it &mdash; push past the pain and keep swinging. Most of them are dead now. The ones who lived are the ones who knew when to run. That line between brave and stupid? Thinner than you think.</p>
-    </div>
+    {% endhandler %}
 
-    <div class="callout callout-example">
-      <span class="callout-label">What This Feels Like</span>
+    {% example "What This Feels Like" %}
       <p>Kael has 9 HP per tier (BR +2). A thug shoots him with a revolver &mdash; 2d6 = 9 damage.
       That's a firearm, so Kael's leather coat uses its Ballistic rating: <strong>0</strong>.
       No protection. All 9 damage fills his OK tier. He's standing, but barely.</p>
@@ -74,7 +42,7 @@
       <p>If that thug had a knife instead? The leather coat's Martial rating of 2 would absorb
       some of the damage. Different armor for different threats. This is why you think about
       what you're wearing &mdash; and what you're facing.</p>
-    </div>
+    {% endexample %}
 
     <h3 id="exhaustion">Exhaustion</h3>
 
@@ -102,14 +70,13 @@
       kind of damage &mdash; it punishes you for existing in a dangerous world.
     </p>
 
-    <div class="callout callout-scene">
-      <span class="callout-label">At the Table</span>
+    {% scene "At the Table" %}
       <p>Kael takes a stun grenade to the face. No wound damage &mdash; but 8 points of
       exhaustion flood his track. His 5 EP per tier (PW &minus;2) means that fills OK entirely
       and pushes 3 into Wearied. He's already Harmed from a gunshot. That's &minus;10% from
       wounds <em>and</em> &minus;10% from exhaustion. Every roll he makes is at &minus;20% now.
       The room is spinning. His hands are shaking. And there are still two guys with knives.</p>
-    </div>
+    {% endscene %}
 
     <h3 id="going-down">Going Down</h3>
 
@@ -173,8 +140,7 @@
       the floor.
     </p>
 
-    <div class="callout callout-scene">
-      <span class="callout-label">At the Table</span>
+    {% scene "At the Table" %}
       <p>Kael goes down at count 14. At count 17, he rolls his first death save: 63.
       That's a failure. Sera abandons her spell and declares a Medicine check &mdash;
       speed 5, so it resolves at count 22. At count 20, Kael rolls again: 31. Holding
@@ -182,20 +148,18 @@
       stabilized with one failure on the sheet. He'll live &mdash; but he's not waking
       up anytime soon, and Sera just gave up the most important spell of the fight to
       save him.</p>
-    </div>
+    {% endscene %}
 
-    <div class="callout callout-warning">
-      <span class="callout-label">Design Note</span>
+    {% warning "Design Note" %}
       <p>Death saves are deliberately simple &mdash; no stat bonuses, no modifiers. When
       you're bleeding out on the floor, your combat prowess and willpower don't matter.
       What matters is whether your allies can reach you in time. The tension belongs to
       the people still standing, not the person on the ground.</p>
-    </div>
+    {% endwarning %}
 
-    <div class="callout callout-note">
-      <span class="callout-label">For the GM</span>
+    {% gmnote %}
       <p>Death saves are the most dramatic rolls in the game. Slow them down. Describe the character's breathing. Let the table go quiet. A d100 roll that determines whether someone lives or dies deserves more than 'roll it.' Make the moment matter.</p>
-    </div>
+    {% endgmnote %}
 
     <h3 id="recovery">Recovery</h3>
 
@@ -217,15 +181,6 @@
       resting is an hour the cult spends completing their ritual.
     </p>
 
-    <div class="callout callout-street">
-      <span class="callout-label">The Street</span>
+    {% street %}
       <p>Rest is a luxury. Out on the gradient, you don't always get three days to heal. You patch what you can, you lean on whoever knows Vivimancy, and you keep moving. The job doesn't wait for you to feel better.</p>
-    </div>
-
-    <nav class="page-nav"></nav>
-  </div>
-  <footer class="site-footer"><p>Aetherfall RPG — Playtest Draft</p></footer>
-</main>
-<script src="js/main.js"></script>
-</body>
-</html>
+    {% endstreet %}

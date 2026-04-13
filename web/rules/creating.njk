@@ -1,53 +1,9 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="neutral">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Creating Your Adventurer — Aetherfall RPG</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-<div id="atmosphere">
-  <canvas id="particle-canvas"></canvas>
-  <div class="mist mist-1"></div>
-  <div class="mist mist-2"></div>
-  <div class="mist mist-3"></div>
-</div>
-<div id="page-transition" class="page-transition"></div>
-<div class="sidebar-overlay"></div>
-<aside class="sidebar">
-  <div class="sidebar-brand">
-    <div class="sidebar-title">Aetherfall</div>
-    <div class="sidebar-subtitle">Rules Reference</div>
-  </div>
-  <nav class="sidebar-nav"></nav>
-  <div class="sidebar-footer">
-    <a href="../">← Back to Aetherfall</a>
-  </div>
-</aside>
-<header class="site-header">
-  <button class="header-toggle" aria-label="Toggle navigation">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
-    </svg>
-  </button>
-  <span class="header-logo">Aetherfall <span>RPG</span></span>
-  <span class="header-separator"></span>
-  <span class="header-chapter"></span>
-</header>
-<main class="main-content">
-  <div class="page-content">
-
-    <nav class="page-nav-compact"></nav>
-
-    <div class="page-hero">
-      <span class="page-number"></span>
-      <h1 class="page-title">Creating Your Adventurer</h1>
-      <p class="page-subtitle">Before you can brave the wild zones, you need to know who you are</p>
-    </div>
+---
+layout: chapter.njk
+pageId: "creating"
+subtitle: "Before you can brave the wild zones, you need to know who you are"
+permalink: rules/creating.html
+---
 
     <p class="flavor">
       Before you can brave the wild zones and back-alley cults, you need to know who you are.
@@ -72,10 +28,9 @@
       setting-flavored titles: Relic Hunter, Wardbreaker, Channeler, Artificer.
     </p>
 
-    <div class="callout callout-handler">
-      <span class="callout-label">The Handler</span>
+    {% handler %}
       <p>I tell every new recruit the same thing: tell me who you were before the Society found you, and I'll tell you how you survive. Last year I ran a job with a disgraced university lecturer and a dockhand from Greywater. The lecturer talked us past a ward that would have killed us. The dockhand carried two of us out when the floor collapsed. They both made it home because they knew what they were good at.</p>
-    </div>
+    {% endhandler %}
 
     <h3 id="attributes">Step 2: Your Attributes</h3>
 
@@ -103,15 +58,14 @@
       Every choice is a trade-off.
     </p>
 
-    <div class="callout callout-example">
-      <span class="callout-label">What the Numbers Feel Like</span>
+    {% example "What the Numbers Feel Like" %}
       <p><strong>-3:</strong> A serious limitation. BR -3 is frail &mdash; can barely carry their own pack. PW -3 is mentally fragile &mdash; almost no capacity for stress, fatigue, or magical strain.</p>
       <p><strong>-1:</strong> Below average, but functional. PC -1 is a bit clumsy. Not disabling, but you'll feel it.</p>
       <p><strong>0:</strong> An ordinary person. Unremarkable. This is the baseline for most people in the world.</p>
       <p><strong>+1:</strong> Notably capable. IN +1 is well-read, quick-thinking. Most people would describe them as smart.</p>
       <p><strong>+2:</strong> Exceptional. AW +2 is the person who notices <em>everything</em> &mdash; the wrong shadow, the nervous twitch, the faint smell of cordite.</p>
       <p><strong>+3:</strong> At the peak of human ability. SP +3 is the person who walks into a room and everyone turns to listen before they've said a word.</p>
-    </div>
+    {% endexample %}
 
     <p>
       For each attribute, write a brief <strong>description</strong> on your character sheet
@@ -208,10 +162,9 @@
 
     <code class="formula">Skill points per group = 10 + (sum of stats in that group)</code>
 
-    <div class="callout callout-note">
-      <span class="callout-label">For the GM</span>
+    {% gmnote %}
       <p>Skill allocation is where characters diverge most. Two characters with identical attributes will play completely differently based on where they put their points. Pay attention to what players invest in — it tells you what kind of game they want to play.</p>
-    </div>
+    {% endgmnote %}
 
     <table>
       <tr><th>Group</th><th>Attributes</th><th>Skills</th></tr>
@@ -244,15 +197,14 @@
       makes every level of skill more effective. Let's see how it works for Kael:
     </p>
 
-    <div class="callout callout-example">
-      <span class="callout-label">Kael's Skill Targets</span>
+    {% example "Kael's Skill Targets" %}
       <p>Kael has BR +2 and puts 3 points into <strong>Melee</strong>:</p>
       <p>((10 + 2) &times; 3) + 30 = <strong>66%</strong> &mdash; he hits about two-thirds of the time.</p>
       <p>He also puts 2 points into <strong>Firearms</strong> (PC +2):</p>
       <p>((10 + 2) &times; 2) + 30 = <strong>54%</strong> &mdash; decent shot, but swords are his thing.</p>
       <p>And 2 points into <strong>Stealth</strong> (PC +2):</p>
       <p>((10 + 2) &times; 2) + 30 = <strong>54%</strong> &mdash; military training keeps him quiet when he needs to be.</p>
-    </div>
+    {% endexample %}
 
     <p>
       See how that works? The same skill level of 3 gives different results depending on
@@ -271,12 +223,11 @@
 
     <code class="formula">Unskilled attempt = (5 + attribute) &times; 5</code>
 
-    <div class="callout callout-example">
-      <span class="callout-label">Example</span>
+    {% example %}
       <p>Kael needs to do field medicine (IN +0, no Medicine skill): (5 + 0) &times; 5 = <strong>25%</strong>. A long shot &mdash; he's guessing.</p>
       <p>If his companion Sera tried the same (IN +2): (5 + 2) &times; 5 = <strong>35%</strong>. Her smarts help, but she still doesn't really know what she's doing.</p>
       <p>If Sera had Medicine at level 1? That's ((10 + 2) &times; 1) + 30 = <strong>42%</strong>. Even basic training makes a real difference, and every level after that pulls further ahead.</p>
-    </div>
+    {% endexample %}
 
     <h4>What Your Character Sheet Looks Like</h4>
 
@@ -466,23 +417,12 @@
       <a href="magic.html">its own section</a>, but here's what you need for character creation:
     </p>
 
-    <div class="callout callout-scholar">
-      <span class="callout-label">The Scholar</span>
+    {% scholar %}
       <p>I came to casting late &mdash; I was thirty before I felt the Aether for the first time. My colleague was born sensitive to it. We both started at the same level. The difference was endurance: she could push through six workings in a day and barely feel it. I was spent after two. Power is not talent. It is stamina, and some of us simply have deeper wells than others.</p>
-    </div>
+    {% endscholar %}
 
     <ul>
       <li>Choose your path: <strong>Scholarly</strong> (controlled, requires a spellbook) or <strong>Wild</strong> (instinctive, unpredictable, no book needed).</li>
       <li><strong>Scholarly:</strong> You can learn spells from <strong>any of the six schools</strong> &mdash; breadth is your advantage. You know <strong>7 + PW</strong> base spells (minimum 1), and can buy more at <strong>3 skill points</strong> each. You can only cast what's in your book.</li>
       <li><strong>Wild:</strong> You access a number of <strong>schools</strong> equal to your PW modifier (minimum 1) &mdash; but you can cast <strong>every spell</strong> in those schools. No spellbook, no memorization. Depth is your advantage.</li>
     </ul>
-
-    <nav class="page-nav"></nav>
-  </div>
-  <footer class="site-footer">
-    <p>Aetherfall RPG — Playtest Draft</p>
-  </footer>
-</main>
-<script src="js/main.js"></script>
-</body>
-</html>

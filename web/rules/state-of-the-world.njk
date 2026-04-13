@@ -1,39 +1,9 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="split">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The State of the World — Aetherfall RPG</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-<div id="atmosphere"><canvas id="particle-canvas"></canvas><div class="mist mist-1"></div><div class="mist mist-2"></div><div class="mist mist-3"></div></div>
-<div id="page-transition" class="page-transition"></div>
-<div class="sidebar-overlay"></div>
-<aside class="sidebar">
-  <div class="sidebar-brand"><div class="sidebar-title">Aetherfall</div><div class="sidebar-subtitle">Rules Reference</div></div>
-  <nav class="sidebar-nav"></nav>
-  <div class="sidebar-footer"><a href="../">← Back to Aetherfall</a></div>
-</aside>
-<header class="site-header">
-  <button class="header-toggle" aria-label="Toggle navigation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
-  <span class="header-logo">Aetherfall <span>RPG</span></span>
-  <span class="header-separator"></span>
-  <span class="header-chapter"></span>
-</header>
-<main class="main-content">
-  <div class="page-content">
-
-    <nav class="page-nav-compact"></nav>
-
-    <div class="page-hero">
-      <span class="page-number"></span>
-      <h1 class="page-title">The State of the World</h1>
-      <p class="page-subtitle">What happened, what&rsquo;s left, and why it matters to you</p>
-    </div>
+---
+layout: chapter.njk
+pageId: "world"
+subtitle: "What happened, what&rsquo;s left, and why it matters to you"
+permalink: rules/state-of-the-world.html
+---
 
     <p class="flavor">
       The Veil thinned within living memory. The Aether poured through.
@@ -69,8 +39,7 @@
 
     <p>Then the Veil thinned, and the trajectory shattered.</p>
 
-    <div class="callout callout-handler">
-      <span class="callout-label">The Handler</span>
+    {% handler %}
       <p>
         You want the short version? The Veil ripped open before your parents
         were born. Magic poured in. Half the world went sideways. Then the Engine
@@ -80,7 +49,7 @@
         because it usually works. And you carry your wits because nothing else is
         reliable.
       </p>
-    </div>
+    {% endhandler %}
 
     <!-- ── The Eruption ─────────────────────────────────── -->
 
@@ -126,8 +95,7 @@
       awe competed in the streets.
     </p>
 
-    <div class="callout callout-believer">
-      <span class="callout-label">The Believer</span>
+    {% believer %}
       <p>
         They call it an eruption. As if it were a disaster. As if the ground
         opening up and showing you what was always underneath is something to
@@ -137,7 +105,7 @@
         And then the feeling. Like being noticed. Like something vast had turned
         its attention to a place it had forgotten, and found us here.
       </p>
-    </div>
+    {% endbeliever %}
 
     <h3>The Old Order Buckled</h3>
 
@@ -184,8 +152,7 @@
       production of Galvanic devices meant controlling the balance of power itself.
     </p>
 
-    <div class="callout callout-scholar">
-      <span class="callout-label">The Scholar</span>
+    {% scholar %}
       <p>
         The popular narrative &mdash; &ldquo;magic arrived and broke everything&rdquo;
         &mdash; is reductive to the point of uselessness. What occurred was a
@@ -197,7 +164,7 @@
         age, and I assure you, shouting about it in a broadsheet editorial
         will not bring us closer to an answer.
       </p>
-    </div>
+    {% endscholar %}
 
     <!-- ── The World Now ────────────────────────────────── -->
 
@@ -249,8 +216,7 @@
       lives materially better than the chaos outside.
     </p>
 
-    <div class="callout callout-street">
-      <span class="callout-label">The Street</span>
+    {% street %}
       <p>
         Listen. The suits in the factory district, they&rsquo;ll tell you the
         Engine is progress. The weirdos in the Veil quarter, they&rsquo;ll
@@ -260,7 +226,7 @@
         checkpoints? I can do that too. The only ideology that matters is the one
         where I get paid and nobody gets killed. Usually in that order.
       </p>
-    </div>
+    {% endstreet %}
 
     <h3 id="local">Stories Start Local</h3>
 
@@ -349,8 +315,7 @@
       run these districts don&rsquo;t appreciate uninvited visitors.
     </p>
 
-    <div class="callout callout-street">
-      <span class="callout-label">The Street</span>
+    {% street %}
       <p>
         You want to know what the gradient&rsquo;s like? Come stand on Harrier
         Street at sundown. West side, the factories are cycling up for night
@@ -361,7 +326,7 @@
         sidearm you&rsquo;d better check the Reliability because it just
         dropped ten points. Right in the middle, there&rsquo;s me.
       </p>
-    </div>
+    {% endstreet %}
 
     <h3 id="archipelago">The Archipelago of Wonders</h3>
 
@@ -413,8 +378,7 @@
       deaf, or like a limb going numb.
     </p>
 
-    <div class="callout callout-scholar">
-      <span class="callout-label">The Scholar</span>
+    {% scholar %}
       <p>
         The border regions between Deep Zones and the wider world are where
         the most dramatic shifts occur. A morning fog carrying Aetheric residue
@@ -424,7 +388,7 @@
         extremes. The extremes are settled questions. The borders are where
         the argument is still happening.
       </p>
-    </div>
+    {% endscholar %}
 
     <!-- ── The Currents ──────────────────────────────────── -->
 
@@ -476,8 +440,7 @@
       leadership or the oldest con in history: miracles as marketing.
     </p>
 
-    <div class="callout callout-believer">
-      <span class="callout-label">The Believer</span>
+    {% believer %}
       <p>
         I know what the Handler will say. I know what the Scholar will say.
         They&rsquo;ll say I&rsquo;m romanticizing a catastrophe. People died.
@@ -489,7 +452,7 @@
         is <em>real</em>, and it is <em>ours</em>, and turning our backs on it
         because it frightens us is the most dangerous thing we could do.
       </p>
-    </div>
+    {% endbeliever %}
 
     <h3 id="arrangement">The Arrangement</h3>
 
@@ -507,8 +470,7 @@
       <em>and</em> spells because ideology doesn&rsquo;t stop a monster.
     </p>
 
-    <div class="callout callout-handler">
-      <span class="callout-label">The Handler</span>
+    {% handler %}
       <p>
         Most of you will lean Arrangement whether you admit it or not. You
         carry everything. You work for whoever&rsquo;s paying. You deal with
@@ -519,7 +481,7 @@
         different coming from a factory owner than from a relief agency. You&rsquo;ll
         figure that out soon enough.
       </p>
-    </div>
+    {% endhandler %}
 
     <!-- ── Sample Factions ───────────────────────────────── -->
 
@@ -562,14 +524,13 @@
       poisoning.
     </p>
 
-    <div class="callout callout-scene">
-      <span class="callout-label">Adventure Hooks</span>
+    {% scene "Adventure Hooks" %}
       <ul>
         <li>A border neighborhood hires a Society to investigate the health complaints &mdash; but the Collective has hired a different Society to discredit the investigation.</li>
         <li>A shipment of rare stabilizer components is hijacked en route to the Foundry.</li>
         <li>An engineer inside the Collective wants to defect &mdash; she&rsquo;s seen the zone intensification plans.</li>
       </ul>
-    </div>
+    {% endscene %}
 
     <h3 id="veilwright">The Veilwright Quarter</h3>
 
@@ -599,14 +560,13 @@
       pulling the zone deeper than it&rsquo;s ever been.
     </p>
 
-    <div class="callout callout-scene">
-      <span class="callout-label">Adventure Hooks</span>
+    {% scene "Adventure Hooks" %}
       <ul>
         <li>A child manifests wild casting ability of unprecedented strength &mdash; multiple factions want to recruit her.</li>
         <li>The sustained rituals have attracted something from beyond the Veil.</li>
         <li>A politician is pushing to have the Quarter classified as a hazardous zone, justifying forced evacuation.</li>
       </ul>
-    </div>
+    {% endscene %}
 
     <h3 id="lamplighter">The Lamplighter Syndicate</h3>
 
@@ -635,14 +595,13 @@
       don&rsquo;t know.
     </p>
 
-    <div class="callout callout-scene">
-      <span class="callout-label">Adventure Hooks</span>
+    {% scene "Adventure Hooks" %}
       <ul>
         <li>The Syndicate hires your Society for a delivery across a zone border. The cargo is sealed and radiates Aetheric resonance far stronger than any spell component should.</li>
         <li>A lieutenant has been murdered using magical forensics.</li>
         <li>Your patron wants you to investigate the Syndicate &mdash; and the Syndicate has just offered you a very lucrative job.</li>
       </ul>
-    </div>
+    {% endscene %}
 
     <h3 id="ironveil">The Ironveil Circle</h3>
 
@@ -670,14 +629,13 @@
       knows and cannot stop it.
     </p>
 
-    <div class="callout callout-scene">
-      <span class="callout-label">Adventure Hooks</span>
+    {% scene "Adventure Hooks" %}
       <ul>
         <li>Your Society discovers that its mission &mdash; investigating a suspected cult &mdash; is actually a proxy move by one church faction to discredit the other.</li>
         <li>A neutral sanctuary has lost its balance for reasons nobody can explain.</li>
         <li>A priest has been found dead in a border zone, and both internal factions blame the other.</li>
       </ul>
-    </div>
+    {% endscene %}
 
     <!-- Summary factions -->
 
@@ -721,8 +679,7 @@
       </tr>
     </table>
 
-    <div class="callout callout-note">
-      <span class="callout-label">For the GM</span>
+    {% gmnote %}
       <p>
         These factions are designed to interlock. The Collective&rsquo;s expansion
         threatens the Quarter and displaces the Sootborn. The Syndicate connects
@@ -732,7 +689,7 @@
         scenario. Use the <em>structures</em> but change every name for a world
         that&rsquo;s entirely yours.
       </p>
-    </div>
+    {% endgmnote %}
 
     <!-- ── Zone Politics ─────────────────────────────────── -->
 
@@ -784,8 +741,7 @@
       cannot be bribed</em>.
     </p>
 
-    <div class="callout callout-scholar">
-      <span class="callout-label">The Scholar</span>
+    {% scholar %}
       <p>
         The popular understanding of zones is, charitably, a simplification.
         They are not rooms with walls. They are gradients &mdash; continuous
@@ -796,7 +752,7 @@
         asking questions and start walking. Your instruments will tell you
         more than any informant.
       </p>
-    </div>
+    {% endscholar %}
 
     <h3 id="front-lines">The Front Lines</h3>
 
@@ -823,8 +779,7 @@
       reliable, and the work is at its most interesting.
     </p>
 
-    <div class="callout callout-handler">
-      <span class="callout-label">The Handler</span>
+    {% handler %}
       <p>
         Your Society exists because the world needs people who can walk into
         the mess and come out the other side with answers. Or at least with
@@ -832,12 +787,4 @@
         job. The next chapter will tell you how it&rsquo;s organized.
         Don&rsquo;t die on your first assignment.
       </p>
-    </div>
-
-    <nav class="page-nav"></nav>
-  </div>
-  <footer class="site-footer"><p>Aetherfall RPG &mdash; Playtest Draft</p></footer>
-</main>
-<script src="js/main.js"></script>
-</body>
-</html>
+    {% endhandler %}

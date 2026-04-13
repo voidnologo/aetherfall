@@ -1,39 +1,9 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="neutral">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rolling the Dice — Aetherfall RPG</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-<div id="atmosphere"><canvas id="particle-canvas"></canvas><div class="mist mist-1"></div><div class="mist mist-2"></div><div class="mist mist-3"></div></div>
-<div id="page-transition" class="page-transition"></div>
-<div class="sidebar-overlay"></div>
-<aside class="sidebar">
-  <div class="sidebar-brand"><div class="sidebar-title">Aetherfall</div><div class="sidebar-subtitle">Rules Reference</div></div>
-  <nav class="sidebar-nav"></nav>
-  <div class="sidebar-footer"><a href="../">← Back to Aetherfall</a></div>
-</aside>
-<header class="site-header">
-  <button class="header-toggle" aria-label="Toggle navigation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
-  <span class="header-logo">Aetherfall <span>RPG</span></span>
-  <span class="header-separator"></span>
-  <span class="header-chapter"></span>
-</header>
-<main class="main-content">
-  <div class="page-content">
-
-    <nav class="page-nav-compact"></nav>
-
-    <div class="page-hero">
-      <span class="page-number"></span>
-      <h1 class="page-title">Rolling the Dice</h1>
-      <p class="page-subtitle">One system for everything &mdash; d100, roll under, that's it</p>
-    </div>
+---
+layout: chapter.njk
+pageId: rolling
+subtitle: "One system for everything &mdash; d100, roll under, that's it"
+permalink: rules/rolling.html
+---
 
     <p class="flavor">
       You've got your character. Now you need to know how the dice work. The good news is:
@@ -49,14 +19,13 @@
       mechanic for combat, magic, skills, everything.
     </p>
 
-    <div class="callout callout-scene">
-      <span class="callout-label">At the Table</span>
+    {% scene "At the Table" %}
       <p><em>"There's a padlock on the warehouse door. Kael, what do you do?"</em></p>
       <p>"I don't have Security. Can I try anyway?"</p>
       <p><em>"Sure &mdash; unskilled attempt. Your AW is +1, so that's (5 + 1) &times; 5 = 30. Roll under 30."</em></p>
       <p>"I got a 73."</p>
       <p><em>"The pick snaps. You hear footsteps inside."</em></p>
-    </div>
+    {% endscene %}
 
     <h3 id="crits">Critical Successes and Failures</h3>
 
@@ -81,18 +50,16 @@
       <tr><td>76&ndash;99</td><td>3</td><td>Target, target&minus;1, target&minus;2</td></tr>
     </table>
 
-    <div class="callout callout-example">
-      <span class="callout-label">Example</span>
+    {% example "Example" %}
       <p>Kael's Melee target is 66. That falls in the 51&ndash;75 bracket, so his crit range is 2.
       He crits on a roll of <strong>64, 65, or 66</strong>. When you're good at something, the
       sweet spot at the top of your range becomes a critical &mdash; not just a success, but
       a devastating one.</p>
-    </div>
+    {% endexample %}
 
-    <div class="callout callout-handler">
-      <span class="callout-label">The Handler</span>
+    {% handler %}
       <p>I watched a fencer in Ashenmere put down three men in as many seconds. She wasn't faster than them &mdash; she was so precise that every stroke landed exactly where it would do the most damage. When someone drills a skill until it's second nature, they don't just get luckier. They start doing things the rest of us didn't think were possible.</p>
-    </div>
+    {% endhandler %}
 
     <h3 id="opposed">Opposed Checks</h3>
 
@@ -108,18 +75,16 @@
       <li><strong>Both fail?</strong> Stalemate. The situation doesn't change. The GM adjudicates what that looks like.</li>
     </ul>
 
-    <div class="callout callout-scene">
-      <span class="callout-label">At the Table</span>
+    {% scene "At the Table" %}
       <p><em>"The cultist tries to wrench the artifact from your hands. That's BR vs BR."</em></p>
       <p>Kael's BR target: (5 + 2) &times; 5 = 35 (no skill, just raw strength). He rolls 22 &mdash; success, margin 13.</p>
       <p>The cultist's BR target: 30. Rolls 28 &mdash; success, margin 2.</p>
       <p><em>"You both hold on, but Kael's grip is iron. The cultist's hands slip. The artifact is yours."</em></p>
-    </div>
+    {% endscene %}
 
-    <div class="callout callout-note">
-      <span class="callout-label">For the GM</span>
+    {% gmnote %}
       <p>When both sides fail an opposed check, the situation doesn't resolve — it escalates. The lock resists the pick AND the pick slips, making noise. The lie isn't believed AND the liar's nervousness is noticed. Mutual failure should make things worse, not maintain the status quo.</p>
-    </div>
+    {% endgmnote %}
 
     <h3 id="timing-track">The Timing Track</h3>
 
@@ -141,15 +106,6 @@
       time, and time is a resource.
     </p>
 
-    <div class="callout callout-street">
-      <span class="callout-label">The Street</span>
+    {% street %}
       <p>Last month on Vicker Street I watched a kid with a snub-nose drop a man carrying an arc rifle. Big guy, expensive gear, could have punched a hole through a wall with that thing. Didn't matter. The kid drew and fired before the rifleman even had the barrel up. Out there, the person who acts first walks away. The person who acts second usually doesn't.</p>
-    </div>
-
-    <nav class="page-nav"></nav>
-  </div>
-  <footer class="site-footer"><p>Aetherfall RPG — Playtest Draft</p></footer>
-</main>
-<script src="js/main.js"></script>
-</body>
-</html>
+    {% endstreet %}

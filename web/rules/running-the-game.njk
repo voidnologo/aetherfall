@@ -1,39 +1,9 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="neutral">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Running the Game — Aetherfall RPG</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-<div id="atmosphere"><canvas id="particle-canvas"></canvas><div class="mist mist-1"></div><div class="mist mist-2"></div><div class="mist mist-3"></div></div>
-<div id="page-transition" class="page-transition"></div>
-<div class="sidebar-overlay"></div>
-<aside class="sidebar">
-  <div class="sidebar-brand"><div class="sidebar-title">Aetherfall</div><div class="sidebar-subtitle">Rules Reference</div></div>
-  <nav class="sidebar-nav"></nav>
-  <div class="sidebar-footer"><a href="../">← Back to Aetherfall</a></div>
-</aside>
-<header class="site-header">
-  <button class="header-toggle" aria-label="Toggle navigation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
-  <span class="header-logo">Aetherfall <span>RPG</span></span>
-  <span class="header-separator"></span>
-  <span class="header-chapter"></span>
-</header>
-<main class="main-content">
-  <div class="page-content">
-
-    <nav class="page-nav-compact"></nav>
-
-    <div class="page-hero">
-      <span class="page-number"></span>
-      <h1 class="page-title">Running the Game</h1>
-      <p class="page-subtitle">Adjudication, rulings, and the art of keeping the world honest</p>
-    </div>
+---
+layout: chapter.njk
+pageId: running
+subtitle: "Adjudication, rulings, and the art of keeping the world honest"
+permalink: rules/running-the-game.html
+---
 
     <p class="flavor">
       The rules give you a skeleton. You give it breath. Your job is not to enforce
@@ -42,10 +12,9 @@
       matters.
     </p>
 
-    <div class="callout callout-scholar">
-      <span class="callout-label">The Scholar</span>
+    {% scholar %}
       <p>I spent years trying to map the Aether with precise instruments. I failed. The Veil does not yield clean data, and the Engine resists controlled observation. What I have instead are patterns — reliable enough to build on, imprecise enough to demand constant judgement. Every survey I publish carries the same footnote: conditions at time of measurement. The world shifts between readings. Accept that, and the patterns become remarkably useful.</p>
-    </div>
+    {% endscholar %}
 
     <!-- ═══════════════════════════════════════════════════════ -->
     <!--  1. ADJUDICATION PHILOSOPHY                            -->
@@ -104,13 +73,12 @@
       even a skilled character is sweating.
     </p>
 
-    <div class="callout callout-note">
-      <span class="callout-label">Don&rsquo;t Over-Modify</span>
+    {% gmnote "Don&rsquo;t Over-Modify" %}
       <p>One or two modifiers is typical. If you find yourself stacking four penalties,
       consider whether the task is simply impossible in these conditions, or whether a
       single dramatic modifier (&minus;30%, the situation is terrible) serves better
       than granular accounting.</p>
-    </div>
+    {% endgmnote %}
 
     <h3 id="osr-loop">The OSR Loop</h3>
 
@@ -129,14 +97,13 @@
         it. If it is uncertain, call for the appropriate roll.</li>
     </ol>
 
-    <div class="callout callout-example">
-      <span class="callout-label">Describe Situations, Not Solutions</span>
+    {% example "Describe Situations, Not Solutions" %}
       <p>&ldquo;The door is locked, and you can hear footsteps approaching from the
       corridor&rdquo; &mdash; not &ldquo;You need to pick the lock.&rdquo; The locked
       door and the footsteps are facts. What to do about them is the players&rsquo;
       problem. Maybe they pick the lock. Maybe they hide. Maybe they kick the door
       down. Maybe they ambush whoever is coming.</p>
-    </div>
+    {% endexample %}
 
     <h3 id="ad-hoc-checks">Ad-Hoc Checks</h3>
 
@@ -328,14 +295,13 @@
         loyalty.</li>
     </ul>
 
-    <div class="callout callout-example">
-      <span class="callout-label">The Margin Rule</span>
+    {% example "The Margin Rule" %}
       <p>The more extraordinary the request, the higher the margin required. Asking a
       guard to look the other way for a minute? A basic success. Asking a guard to
       abandon his post? Strong margin territory (31+). Asking a guard to betray his
       employer? Spectacular (51+) <em>if it is possible at all</em> &mdash; and for
       many NPCs, it simply is not.</p>
-    </div>
+    {% endexample %}
 
     <hr class="section-divider">
 
@@ -405,12 +371,11 @@
       <tr><td>Airship</td><td>3 counts/band</td><td>3D chase. Engine stalls at altitude are catastrophic.</td></tr>
     </table>
 
-    <div class="callout callout-note">
-      <span class="callout-label">Ending a Chase</span>
+    {% gmnote "Ending a Chase" %}
       <p>If a chase drags past 15&ndash;20 counts without resolution, force an ending.
       Both sides make one final opposed Athletics (or Piloting) check. Highest margin
       wins. Ties go to the quarry &mdash; chases favor the pursued.</p>
-    </div>
+    {% endgmnote %}
 
     <hr class="section-divider">
 
@@ -455,14 +420,13 @@
       your guns will jam, the caster thrives but the forest is watching.
     </p>
 
-    <div class="callout callout-example">
-      <span class="callout-label">The Zone IS the Challenge</span>
+    {% example "The Zone IS the Challenge" %}
       <p>A dungeon with a vertical gradient &mdash; neutral on the surface, increasingly
       Aetheric as you descend &mdash; forces the party to choose: bring guns for the
       upper floors and switch to swords below? Leave the caster topside as a rearguard?
       The zone makes tactical decisions richer without adding new mechanics. It is the
       same Reliability and Casting math the players already know, applied spatially.</p>
-    </div>
+    {% endexample %}
 
     <h3 id="dynamic-zones">Dynamic Zones</h3>
 
@@ -514,15 +478,14 @@
       features that change how encounters play out.
     </p>
 
-    <div class="callout callout-scene">
-      <span class="callout-label">Encounter Design</span>
+    {% scene "Encounter Design" %}
       <p>A fight in a warehouse. The main floor is Neutral (0). The back room houses a
       humming Galvanic generator (&minus;8). The old stone cellar has Aetheric traces
       (+5). Three zones in one building. The caster wants to fight from the cellar.
       The enemy gunners want the back room. The main floor is contested ground where
       everything kind-of works but nobody has an edge. The fight becomes a territorial
       struggle over which zone to control.</p>
-    </div>
+    {% endscene %}
 
     <hr class="section-divider">
 
@@ -571,12 +534,11 @@
       Standard, but you could crack a support beam.&rdquo;
     </p>
 
-    <div class="callout callout-warning">
-      <span class="callout-label">Scope Limits</span>
+    {% warning "Scope Limits" %}
       <p>If a proposed use would make another spell obsolete, it is too broad. If Force
       can do what Kinesis does, why does Kinesis exist? Spell boundaries are load-bearing
       walls &mdash; removing one brings down the house.</p>
-    </div>
+    {% endwarning %}
 
     <h3 id="backlash">Backlash as Narrative</h3>
 
@@ -597,10 +559,9 @@
       <tr><td>Sever</td><td>The severing cuts both ways. Something inside disconnects momentarily.</td></tr>
     </table>
 
-    <div class="callout callout-believer">
-      <span class="callout-label">The Believer</span>
+    {% believer %}
       <p>I was standing beside a young caster when backlash tore through her like a living thing. The light changed color. The air screamed. I watched her eyes go white and felt the Aether recoil through my own bones, even though I wasn't the one casting. That moment taught me more about magic than a year of study. Backlash is the most honest moment in magic — the Aether showing you exactly what it thinks of your presumption.</p>
-    </div>
+    {% endbeliever %}
 
     <p>
       The 25% wild effect chance after backlash is a storytelling gift. A Wild Effect
@@ -671,13 +632,12 @@
 
     <h3 id="example-social" data-toc="Example: Social">The Dockmaster&rsquo;s Favor</h3>
 
-    <div class="callout callout-scene">
-      <span class="callout-label">Setup</span>
+    {% scene "Setup" %}
       <p>The party needs passage on a cargo ship leaving tonight. The dockmaster,
       Greaves, controls berth assignments. He has heard rumors about the party causing
       trouble (Unfriendly, &minus;15%). Characters: Sera (SP +2, Persuasion 3,
       Etiquette 2, Deception 3) and Kael (BR +2, Intimidation 2 under BR).</p>
-    </div>
+    {% endscene %}
 
     <p>
       <strong>Step 1 &mdash; Read the room.</strong> Sera&rsquo;s player asks about
@@ -707,22 +667,20 @@
       rolls 52 (fail). One success beats one failure &mdash; the lie holds completely.
     </p>
 
-    <div class="callout callout-note">
-      <span class="callout-label">What If Kael Had Intimidated Instead?</span>
+    {% gmnote "What If Kael Had Intimidated Instead?" %}
       <p>Kael&rsquo;s BR Intimidation target is 54. He could loom and growl. Even if he
       wins the opposed check against Greaves&rsquo; Resolve, Intimidation creates
       compliance, not goodwill. Greaves would give them the berths &mdash; then report
       them to the harbor watch.</p>
-    </div>
+    {% endgmnote %}
 
     <h3 id="example-chase" data-toc="Example: Chase">Through the Market District</h3>
 
-    <div class="callout callout-scene">
-      <span class="callout-label">Setup</span>
+    {% scene "Setup" %}
       <p>Finch grabs a stolen document and bolts. Kael (PC +2, Athletics 3) gives chase
       through a crowded market toward the old quarter (Light Aetheric, +3 baseline).
       Finch starts at Near range.</p>
-    </div>
+    {% endscene %}
 
     <p>
       <strong>Count 0:</strong> Both Sprint (speed 3, tokens at 3).
@@ -770,12 +728,11 @@
 
     <h3 id="example-exploration" data-toc="Example: Exploration">The Holloway House</h3>
 
-    <div class="callout callout-scene">
-      <span class="callout-label">Setup</span>
+    {% scene "Setup" %}
       <p>The party investigates a haunted manor. Baseline: +5 Aetheric (main floors),
       +8 (cellar), +2 (garden). Party: Sera (casting target 55), Kael (revolver Rel 95),
       Marsh (semi-auto Rel 85, Aetheric Compass).</p>
-    </div>
+    {% endscene %}
 
     <p>
       <strong>The garden (+2 baseline).</strong> Marsh activates the Compass (Galvanic
@@ -811,23 +768,21 @@
       magical entity will be empowered.
     </p>
 
-    <div class="callout callout-note">
-      <span class="callout-label">The Zone Does the Work</span>
+    {% gmnote "The Zone Does the Work" %}
       <p>The players know the math. They know their guns are unreliable down here. They
       know the caster is strong. They know whatever is in the circle will be stronger
       too. The zone baseline created a tactical dilemma without the GM lifting a
       finger.</p>
-    </div>
+    {% endgmnote %}
 
     <h3 id="example-device" data-toc="Example: Device">The Resonance Cage</h3>
 
-    <div class="callout callout-scene">
-      <span class="callout-label">Setup</span>
+    {% scene "Setup" %}
       <p>The party needs to capture a magical creature &mdash; an Aetheric predator that
       manifests from the Veil, feeds on residue, and vanishes when threatened. Physical
       weapons pass through it. Magic can hurt it but also feeds it. A player asks:
       &ldquo;Could we build some kind of Galvanic trap?&rdquo;</p>
-    </div>
+    {% endscene %}
 
     <p>
       <strong>The GM uses the quick creation method:</strong>
@@ -880,11 +835,3 @@
       <tr><td>Creative spell use?</td><td>Three questions test</td><td>Concept + tier + scope</td></tr>
       <tr><td>Need a device?</td><td>Quick creation method</td><td>Function &rarr; analog &rarr; rating &rarr; drawback</td></tr>
     </table>
-
-    <nav class="page-nav"></nav>
-  </div>
-  <footer class="site-footer"><p>Aetherfall RPG &mdash; Playtest Draft</p></footer>
-</main>
-<script src="js/main.js"></script>
-</body>
-</html>

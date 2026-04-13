@@ -1,48 +1,17 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="galvanic">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Arms &amp; Equipment — Aetherfall RPG</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-<div id="atmosphere"><canvas id="particle-canvas"></canvas><div class="mist mist-1"></div><div class="mist mist-2"></div><div class="mist mist-3"></div></div>
-<div id="page-transition" class="page-transition"></div>
-<div class="sidebar-overlay"></div>
-<aside class="sidebar">
-  <div class="sidebar-brand"><div class="sidebar-title">Aetherfall</div><div class="sidebar-subtitle">Rules Reference</div></div>
-  <nav class="sidebar-nav"></nav>
-  <div class="sidebar-footer"><a href="../">← Back to Aetherfall</a></div>
-</aside>
-<header class="site-header">
-  <button class="header-toggle" aria-label="Toggle navigation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
-  <span class="header-logo">Aetherfall <span>RPG</span></span>
-  <span class="header-separator"></span>
-  <span class="header-chapter"></span>
-</header>
-<main class="main-content">
-  <div class="page-content">
-
-    <nav class="page-nav-compact"></nav>
-
-    <div class="page-hero">
-      <span class="page-number"></span>
-      <h1 class="page-title">Arms &amp; Equipment</h1>
-      <p class="page-subtitle">Steel, gunpowder, Galvanic oddities, and what stands between you and the grave</p>
-    </div>
+---
+layout: chapter.njk
+pageId: equipment
+subtitle: "Steel, gunpowder, Galvanic oddities, and what stands between you and the grave"
+permalink: rules/equipment.html
+---
 
     <p class="flavor">
       A blade never jams. A gun never parries. Choose what you carry, and carry what you trust.
     </p>
 
-    <div class="callout callout-handler">
-      <span class="callout-label">The Handler</span>
+    {% handler %}
       <p>First rule of kit selection: know where you're going. Galvanic district? Bring the good guns. Wild Zone? Blade and a prayer. Neutral ground? Bring everything and sort it out when you get there. Second rule: always carry a blade. Always.</p>
-    </div>
+    {% endhandler %}
 
     <h3 id="melee-weapons">Melee Weapons</h3>
 
@@ -90,10 +59,9 @@
       <a href="combat.html#malfunction">The Malfunction System</a> for the full rules.
     </p>
 
-    <div class="callout callout-street">
-      <span class="callout-label">The Street</span>
+    {% street %}
       <p>A good revolver will fire every single time you pull the trigger. I trust mine with my life and I have, plenty of times. A tommy gun? I watched a man die in a warehouse on Fenwick Street because his automatic jammed three seconds into a fight. Three seconds. He was still slapping the receiver when they shot him. Fancy firepower means nothing if the weapon won't speak when you need it to.</p>
-    </div>
+    {% endstreet %}
 
     <table>
       <tr><th>Weapon</th><th>Speed</th><th>Damage</th><th>Capacity</th><th>Reload</th><th>Reliability</th><th>Tier</th></tr>
@@ -124,10 +92,9 @@
       strengths, and risks.
     </p>
 
-    <div class="callout callout-scholar">
-      <span class="callout-label">The Scholar</span>
+    {% scholar %}
       <p>Each Galvanic weapon is, in a very real sense, unique. They are not mass-produced &mdash; they are engineered individually, tuned to channel the Engine's resonance in specific patterns. This is why their Reliability scores vary so dramatically, and why a well-maintained exotic is worth more than its weight in currency.</p>
-    </div>
+    {% endscholar %}
 
     <h4>Galvanic Ranged</h4>
 
@@ -271,10 +238,9 @@
       Use whichever rating matches the attack.
     </p>
 
-    <div class="callout callout-handler">
-      <span class="callout-label">The Handler</span>
+    {% handler %}
       <p>Armor is a bet on what's going to hit you. Full plate stops swords &mdash; doesn't stop bullets. A ballistic vest stops bullets &mdash; a blade goes right through the weave. In this world, you might face both in the same fight. Pick your armor for your most likely threat, and pray you guessed right.</p>
-    </div>
+    {% endhandler %}
 
     <p>
       <strong>Degradation rule:</strong> if raw damage exceeds the relevant soak rating, there's
@@ -348,13 +314,12 @@
       <tr><td>Knight Shield</td><td>2</td></tr>
     </table>
 
-    <div class="callout callout-example">
-      <span class="callout-label">At the Table</span>
+    {% example %}
       <p>Kael picks up a kite shield (Hinder 1). His Athletics drops by 5%. His casting speed
       would increase by 1 &mdash; not that he casts. If he also strapped on half plate (Hinder 1),
       he'd be at Hinder 2 total: -10% to PC, Athletics, Stealth, Swimming, and +2 casting speed.
       He'd be a fortress. A slow one.</p>
-    </div>
+    {% endexample %}
 
     <h3 id="oddities">Galvanic Oddities</h3>
 
@@ -369,10 +334,9 @@
       patterns so GMs can create new devices that feel consistent with the world.
     </p>
 
-    <div class="callout callout-note">
-      <span class="callout-label">For the GM</span>
+    {% gmnote %}
       <p>Galvanic oddities are investigation and exploration tools, not combat equipment. They expand what players can sense and do outside of fights. A Voltaic Lantern that reveals Aetheric residue or a Resonance Compass that tracks zone gradients &mdash; these are the tools that drive mystery and discovery.</p>
-    </div>
+    {% endgmnote %}
 
     <dl class="galvanic-weapons">
       <dt>Aetheric Compass</dt>
@@ -427,27 +391,24 @@
       </dd>
     </dl>
 
-    <div class="callout callout-note">
-      <span class="callout-label">Creating Your Own</span>
+    {% gmnote "Creating Your Own" %}
       <p>These are templates, not a complete list. When a player or GM wants a new device:
       start with a single clear function, find the magical spell equivalent to ground its
       power level, assign Reliability (50&ndash;60 prototype, 65&ndash;75 field-ready, 80+ robust),
       and give it at least one drawback (loud, heavy, fragile, limited charges, short range).
       Galvanic tech is powerful but imperfect.</p>
-    </div>
+    {% endgmnote %}
 
-    <div class="callout callout-note">
-      <span class="callout-label">The Other Side</span>
+    {% gmnote "The Other Side" %}
       <p>Galvanic weapons use Reliability to resist Aetheric disruption. Enchanted artifacts
       use the same framework in reverse &mdash; <strong>Magical Reliability</strong> to resist
       Galvanic disruption. If you know one system, you know both. See
       <a href="artifacts.html">Artifacts &amp; Enchantments</a> for the full rules.</p>
-    </div>
+    {% endgmnote %}
 
-    <div class="callout callout-street">
-      <span class="callout-label">The Street</span>
+    {% street %}
       <p>Plan your exit before you enter a zone. A car stalls in the Wild &mdash; I've seen it happen, engine just dies like someone flipped a switch. A horse doesn't care about the Aether or the Engine. Motorcycles are fast but fragile. Know your route home before you pick your ride.</p>
-    </div>
+    {% endstreet %}
 
     <h3 id="vehicles">Vehicles &amp; Conveyance</h3>
 
@@ -476,18 +437,9 @@
       <tr><td><strong>Train</strong></td><td>Passenger, freight</td><td>Fast</td><td>Dozens&ndash;hundreds</td><td>Moderate &mdash; robust but locked to rails</td></tr>
     </table>
 
-    <div class="callout callout-note">
-      <span class="callout-label">Beasts &amp; Magic</span>
+    {% gmnote "Beasts &amp; Magic" %}
       <p>Animals are immune to Aetheric zone interference &mdash; no engines to stall. But they
       can <em>sense</em> magic zones and many balk at entering them. Getting a horse into a
       moderate Aetheric zone requires a Survival check. Deep Wild Zones? Most animals flatly
       refuse. The rare beasts that will go are bred for it, trained for years, and worth a fortune.</p>
-    </div>
-
-    <nav class="page-nav"></nav>
-  </div>
-  <footer class="site-footer"><p>Aetherfall RPG &mdash; Playtest Draft</p></footer>
-</main>
-<script src="js/main.js"></script>
-</body>
-</html>
+    {% endgmnote %}

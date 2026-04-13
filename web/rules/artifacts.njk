@@ -1,39 +1,9 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="aether">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Artifacts &amp; Enchantments — Aetherfall RPG</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-<div id="atmosphere"><canvas id="particle-canvas"></canvas><div class="mist mist-1"></div><div class="mist mist-2"></div><div class="mist mist-3"></div></div>
-<div id="page-transition" class="page-transition"></div>
-<div class="sidebar-overlay"></div>
-<aside class="sidebar">
-  <div class="sidebar-brand"><div class="sidebar-title">Aetherfall</div><div class="sidebar-subtitle">Rules Reference</div></div>
-  <nav class="sidebar-nav"></nav>
-  <div class="sidebar-footer"><a href="../">← Back to Aetherfall</a></div>
-</aside>
-<header class="site-header">
-  <button class="header-toggle" aria-label="Toggle navigation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
-  <span class="header-logo">Aetherfall <span>RPG</span></span>
-  <span class="header-separator"></span>
-  <span class="header-chapter"></span>
-</header>
-<main class="main-content">
-  <div class="page-content">
-
-    <nav class="page-nav-compact"></nav>
-
-    <div class="page-hero">
-      <span class="page-number"></span>
-      <h1 class="page-title">Artifacts &amp; Enchantments</h1>
-      <p class="page-subtitle">Enchanted blades, fading wards, and brewed miracles &mdash; magic made material</p>
-    </div>
+---
+layout: chapter.njk
+pageId: artifacts
+subtitle: "Enchanted blades, fading wards, and brewed miracles &mdash; magic made material"
+permalink: rules/artifacts.html
+---
 
     <p class="flavor">
       A revolver is a machine. It fires the same way every time. An enchanted blade is a
@@ -41,13 +11,12 @@
       and strange. Sometimes the blade listens. Sometimes it has its own ideas.
     </p>
 
-    <div class="callout callout-believer">
-      <span class="callout-label">The Believer</span>
+    {% believer %}
       <p>An artifact is not a tool with a spell bolted on. It is an object that has been
       <em>changed</em> &mdash; the Aether woven into its grain, its edge, its weight. A truly
       enchanted blade is no more &ldquo;a sword with magic&rdquo; than a living tree is
       &ldquo;wood with sap.&rdquo; The magic is the thing. The steel just gives it shape.</p>
-    </div>
+    {% endbeliever %}
 
     <!-- ── The Fundamental Divide ─────────────────────────────── -->
 
@@ -84,14 +53,13 @@
       away. One is a transformation. The other is a battery.
     </p>
 
-    <div class="callout callout-note">
-      <span class="callout-label">Design Note</span>
+    {% gmnote "Design Note" %}
       <p>If the artifact rules feel familiar, they should. Enchanted items use the same
       reliability-and-disruption framework as <a href="equipment.html#firearms">firearms</a>
       and <a href="equipment.html#galvanic">Galvanic weapons</a>, with the Aetheric balance
       working in the opposite direction. Where technology fears magic, artifacts fear the
       Engine. If you know one system, you know both.</p>
-    </div>
+    {% endgmnote %}
 
     <!-- ── Enchanted Artifacts ────────────────────────────────── -->
 
@@ -141,12 +109,11 @@
       specific artifact, not a lock with three spells bolted on.
     </p>
 
-    <div class="callout callout-handler">
-      <span class="callout-label">The Handler</span>
+    {% handler %}
       <p>An enchanted blade is the magical answer to a good revolver. Reliable in a Wild Zone
       where your guns jam. Dangerous in a Galvanic factory where the tech drowns the magic.
       A smart operative carries both &mdash; and knows when to reach for which.</p>
-    </div>
+    {% endhandler %}
 
     <!-- ── Using an Enchanted Item ───────────────────────────── -->
 
@@ -174,14 +141,13 @@
       make the roll matter.
     </p>
 
-    <div class="callout callout-scene">
-      <span class="callout-label">At the Table</span>
+    {% scene "At the Table" %}
       <p>Kael swings an enchanted longsword with the Thundering tag (Standard tier, Magical
       Reliability 85). He rolls his Melee check &mdash; hits. Then rolls d100 for Magical
       Reliability: 62. Under 85. The enchantment fires &mdash; +1d6 bonus damage and the
       target is knocked back a step. If he&rsquo;d rolled 91, the sword would have hit normally,
       but the thunder stays silent. Same blade, same swing. The magic just didn&rsquo;t wake up.</p>
-    </div>
+    {% endscene %}
 
     <!-- ── Magical Reliability ────────────────────────────────── -->
 
@@ -268,13 +234,12 @@
       <strong>Put it away.</strong>
     </p>
 
-    <div class="callout callout-handler">
-      <span class="callout-label">The Handler</span>
+    {% handler %}
       <p>You can replace a broken revolver. You cannot replace a shattered enchantment.
       Know where you are. If the Galvanic readings are spiking, sheathe the magic blade
       and pull steel. Losing an enchantment to carelessness is a mistake you make once.
       If you're lucky enough to make it at all.</p>
-    </div>
+    {% endhandler %}
 
     <!-- ── Mystical Weapon Tags ───────────────────────────────── -->
 
@@ -388,15 +353,14 @@
       ritual themselves. The previous bond dissolves.
     </p>
 
-    <div class="callout callout-scene">
-      <span class="callout-label">At the Table</span>
+    {% scene "At the Table" %}
       <p>A thief steals Kael&rsquo;s attuned Thundering longsword and swings it at an ally.
       He hits &mdash; but the enchantment recognizes a stranger&rsquo;s grip. Instead of
       thunder hitting the target, the Force misfire triggers: 1d6 concussive damage rebounds
       into the thief, knocking him back. He swings again. Same result. The blade is fine.
       The enchantment is fine. The thief has two broken ribs and a growing suspicion that
       this sword hates him. He&rsquo;s right.</p>
-    </div>
+    {% endscene %}
 
     <!-- ── The Enchant Spell ──────────────────────────────────── -->
 
@@ -437,13 +401,12 @@
       Scholarly casters can choose a lower tier than achieved. Wild casters get what they get.
     </p>
 
-    <div class="callout callout-believer">
-      <span class="callout-label">The Believer</span>
+    {% believer %}
       <p>I watched a Weaver spend three days forging an enchantment. By the end she could
       barely stand &mdash; hands shaking, burns on both palms, and a look in her eyes like
       she&rsquo;d been staring into the sun. She slept for two days afterward. The blade she
       made will outlast her grandchildren. That is the cost of making something permanent.</p>
-    </div>
+    {% endbeliever %}
 
     <!-- ── Wards ──────────────────────────────────────────────── -->
 
@@ -567,12 +530,11 @@
       destroyed. Plan accordingly.
     </p>
 
-    <div class="callout callout-scholar">
-      <span class="callout-label">The Scholar</span>
+    {% scholar %}
       <p>Never brute-force a trap ward. That is the advice of someone who once watched a
       colleague kick down a warded door and catch whatever was stored inside it square in
       the chest. The ward broke. So did three of his ribs. Unbind it first. Always.</p>
-    </div>
+    {% endscholar %}
 
     <!-- ── Potions ────────────────────────────────────────────── -->
 
@@ -647,14 +609,13 @@
       <tr><td>96&ndash;100</td><td>Harmful (treat as a spell misfire)</td></tr>
     </table>
 
-    <div class="callout callout-handler">
-      <span class="callout-label">The Handler</span>
+    {% handler %}
       <p>A quick potion brewed in an afternoon might last two days. Use it or lose it. The
       good stuff &mdash; the kind a master brewer spends a week on &mdash; that radiates
       power and stays potent for years. The best potions are worth protecting. The cheap
       ones are worth using immediately. And the expired ones? They&rsquo;re worth a gamble,
       if you&rsquo;re desperate enough.</p>
-    </div>
+    {% endhandler %}
 
     <h4>Economy</h4>
 
@@ -699,21 +660,10 @@
       Finding one changes a campaign. Understanding one might change the world.
     </p>
 
-    <div class="callout callout-believer">
-      <span class="callout-label">The Believer</span>
+    {% believer %}
       <p>I held one, once. An amulet pulled from a collapsed mine in the Thornreach. It was
       warm. Not enchanted-warm &mdash; <em>alive</em>-warm. Like holding something that was
       dreaming. The scholars said it was two hundred years old. Older than the Eruption by a
       century. I asked them how that was possible. They stopped answering my questions after
       that.</p>
-    </div>
-
-    <!-- ── Navigation ─────────────────────────────────────────── -->
-
-    <nav class="page-nav"></nav>
-  </div>
-  <footer class="site-footer"><p>Aetherfall RPG &mdash; Playtest Draft</p></footer>
-</main>
-<script src="js/main.js"></script>
-</body>
-</html>
+    {% endbeliever %}

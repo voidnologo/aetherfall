@@ -1,39 +1,9 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="galvanic">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>When Violence Finds You — Aetherfall RPG</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-<div id="atmosphere"><canvas id="particle-canvas"></canvas><div class="mist mist-1"></div><div class="mist mist-2"></div><div class="mist mist-3"></div></div>
-<div id="page-transition" class="page-transition"></div>
-<div class="sidebar-overlay"></div>
-<aside class="sidebar">
-  <div class="sidebar-brand"><div class="sidebar-title">Aetherfall</div><div class="sidebar-subtitle">Rules Reference</div></div>
-  <nav class="sidebar-nav"></nav>
-  <div class="sidebar-footer"><a href="../">← Back to Aetherfall</a></div>
-</aside>
-<header class="site-header">
-  <button class="header-toggle" aria-label="Toggle navigation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
-  <span class="header-logo">Aetherfall <span>RPG</span></span>
-  <span class="header-separator"></span>
-  <span class="header-chapter"></span>
-</header>
-<main class="main-content">
-  <div class="page-content">
-
-    <nav class="page-nav-compact"></nav>
-
-    <div class="page-hero">
-      <span class="page-number"></span>
-      <h1 class="page-title">When Violence Finds You</h1>
-      <p class="page-subtitle">Steel, gunpowder, and the timing track</p>
-    </div>
+---
+layout: chapter.njk
+pageId: combat
+subtitle: "Steel, gunpowder, and the timing track"
+permalink: rules/combat.html
+---
 
     <p class="flavor">
       There is no initiative roll. There are no turns. When a fight starts, everyone acts
@@ -41,10 +11,9 @@
       timeline. Welcome to the timing track.
     </p>
 
-    <div class="callout callout-handler">
-      <span class="callout-label">The Handler</span>
+    {% handler %}
       <p>I lost three operatives before I understood how a real fight works. Everything happens at once. The fastest person in the room isn't the one who hits hardest — they're the one who gets to choose while everyone else is still reacting. I've watched a knife fighter with quick hands carve up a gunman who thought his revolver made him king. It didn't. He was still drawing when the blade found his ribs.</p>
-    </div>
+    {% endhandler %}
 
     <h3 id="timing-track">The Timing Track</h3>
 
@@ -78,14 +47,13 @@
       they see what the opposition is committing to before they choose their response.
     </p>
 
-    <div class="callout callout-example">
-      <span class="callout-label">Why This Matters</span>
+    {% example "Why This Matters" %}
       <p>Kael has PC +2. A thug has PC +0. When both need to declare on the same count, the thug
       commits first &mdash; he's pulling a knife. Kael <em>sees this</em> and then decides: draw
       his sword and meet the charge, or step back and reach for his revolver? The thug is locked
       in. Kael gets to react. That's a significant advantage, and it's a real reason to invest in
       PC and AW at character creation.</p>
-    </div>
+    {% endexample %}
 
     <h3 id="changing-your-mind">Changing Your Mind</h3>
 
@@ -111,14 +79,13 @@
       <li><strong>Check for armor degradation.</strong> If the raw damage <em>exceeded</em> the relevant soak rating, there's a <strong>25% chance</strong> the armor loses 1 point from that rating permanently. Crushing weapons raise this to <strong>50%</strong>. Armor wears down. Every fight costs something.</li>
     </ol>
 
-    <div class="callout callout-example">
-      <span class="callout-label">At the Table</span>
+    {% example %}
       <p>Kael swings his longsword at a thug wearing a trench coat (Ballistic 1, Martial 2). He rolls 31 against
       Melee 66 &mdash; hit. Damage: 1d8+1 = 7. It's a melee attack, so the coat's Martial rating applies &mdash;
       absorbs 2, leaving 5 damage into the thug's HP. Since 7 exceeded Martial 2, the GM rolls
       for degradation &mdash; 25% chance. Rolls 18. Bad luck &mdash; the coat splits. Its Martial
       rating drops to 1. Next hit, it'll barely help.</p>
-    </div>
+    {% endexample %}
 
     <h3 id="attack-modifiers">Attack Modifiers</h3>
 
@@ -139,12 +106,11 @@
       <tr><td>Exhaustion penalties</td><td>Varies</td><td>Stack with everything</td></tr>
     </table>
 
-    <div class="callout callout-note">
-      <span class="callout-label">Firing into Melee</span>
+    {% gmnote "Firing into Melee" %}
       <p>When you shoot into a Close-range scuffle and miss, there's a real chance you hit
       your friend instead. The GM determines who catches the stray shot. If Sera fires a
       bolt into the tangle where Kael is fighting, she'd better not miss.</p>
-    </div>
+    {% endgmnote %}
 
     <h3 id="active-defense">Active Defense</h3>
 
@@ -187,14 +153,13 @@
       with an Athletics check for a chance to negate the hit entirely, same rules as active defense.
     </p>
 
-    <div class="callout callout-example">
-      <span class="callout-label">At the Table</span>
+    {% example %}
       <p>Kael finishes his swing at count 7. On count 8, Thug B lunges at him with a knife.
       Kael's not mid-action &mdash; he just resolved &mdash; so he can defend. He uses Melee
       (skill 66) to parry. Kael rolls 41 (margin 25). Thug B rolled 22 against Melee 45
       (margin 23). Kael's margin wins &mdash; the knife glances off his longsword. But his
       next action now costs +2 speed. That parry saved him damage but cost him time.</p>
-    </div>
+    {% endexample %}
 
     <h3 id="range-bands">Range Bands</h3>
 
@@ -211,10 +176,9 @@
       <tr><td>Distant</td><td>Edge of visibility</td><td>-20% ranged. Only Accurate weapons and rifles.</td></tr>
     </table>
 
-    <div class="callout callout-street">
-      <span class="callout-label">The Street</span>
+    {% street %}
       <p>Close range, blades rule. Near range, pistols. Far range, rifles. Distant, you'd better have a scope or a spell. On the gradient, range shifts with the zone — a gun that reaches Far in neutral might barely manage Near when the Aether thickens. Know your distances. They change.</p>
-    </div>
+    {% endstreet %}
 
     <h4>Movement</h4>
 
@@ -283,8 +247,7 @@
       At 0 or below, it simply doesn't function.
     </p>
 
-    <div class="callout callout-example">
-      <span class="callout-label">At the Table</span>
+    {% example %}
       <p>Thug A fires his revolver (Reliability 95) in an area with net +4 Aetheric.
       Effective Reliability: 95 &minus; 8 = <strong>87</strong>.
       He rolls 91 &mdash; over 87, malfunction. He rolls d10 on the severity table
@@ -295,7 +258,7 @@
       <p>Later, the party clears out a Galvanic lab (net &minus;8). That same revolver has
       effective Reliability 95 + 16 = <strong>111</strong>. It <em>cannot malfunction</em>.
       The Engine is holding every mechanism in the building together.</p>
-    </div>
+    {% endexample %}
 
     <h4>Malfunction Severity</h4>
 
@@ -313,13 +276,12 @@
       <tr><td>10+</td><td>Catastrophic</td><td>The weapon is destroyed. Shrapnel deals 1d6 damage to the wielder.</td></tr>
     </table>
 
-    <div class="callout callout-warning">
-      <span class="callout-label">Galvanic Weapons Are Fragile</span>
+    {% warning "Galvanic Weapons Are Fragile" %}
       <p>Galvanic weapons add +1 to the malfunction severity roll. That means a roll of 9 becomes
       10 &mdash; catastrophic. Weapons with the Unstable keyword add +2 instead. That Galvanic Lance
       is magnificent until it detonates on your shoulder. This is the trade-off for superior
       firepower.</p>
-    </div>
+    {% endwarning %}
 
     <h3 id="fight-in-the-alley">A Fight in the Alley</h3>
 
@@ -328,13 +290,12 @@
       against two armed thugs.
     </p>
 
-    <div class="callout callout-scene">
-      <span class="callout-label">The Setup</span>
+    {% scene "The Setup" %}
       <p><strong>Kael</strong> (swordsman, PC +2, Melee 66, leather coat B0/M2, 9 HP/tier) and
       <strong>Sera</strong> (wild caster, PC +0, casting target 55, 8 HP/tier) are caught in an
       alley by two thugs with revolvers (Firearms 50, Reliability 95, 7 HP/tier, no armor).
       Range: Near. No prior Aetheric accumulation.</p>
-    </div>
+    {% endscene %}
 
     <p>
       <strong>Count 0 &mdash; First declarations (all simultaneous).</strong>
@@ -483,8 +444,7 @@
       become perfect &mdash; and Sera's magic is about to become useless.</em>
     </p>
 
-    <div class="callout callout-note">
-      <span class="callout-label">What Just Happened</span>
+    {% gmnote "What Just Happened" %}
       <p>Seven counts of combat, then the battlefield flipped. The thugs went from losing
       the environmental war to winning it &mdash; not with better aim, but with a piece of
       Galvanic hardware. The generator didn't fire a shot. It just changed the rules of the
@@ -494,12 +454,4 @@
       worse. Kael's sword doesn't care either way. Every participant is pulling the environment
       in a different direction &mdash; and the smart play isn't always "hit harder." Sometimes
       it's "destroy the thing that's changing the air."</p>
-    </div>
-
-    <nav class="page-nav"></nav>
-  </div>
-  <footer class="site-footer"><p>Aetherfall RPG — Playtest Draft</p></footer>
-</main>
-<script src="js/main.js"></script>
-</body>
-</html>
+    {% endgmnote %}

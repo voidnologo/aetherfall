@@ -1,163 +1,160 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="neutral">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Quick Reference — Aetherfall RPG</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
-<style>
-  /* ── Quick Reference Cards ── */
-  .ref-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    margin: 1.5rem 0;
-  }
-  @media (max-width: 768px) {
-    .ref-grid { grid-template-columns: 1fr; }
-  }
+---
+layout: chapter.njk
+pageId: reference
+subtitle: "Everything you need at the table"
+permalink: rules/reference.html
+extraHead: |
+  <style>
+    /* ── Quick Reference Cards ── */
+    .ref-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    @media (max-width: 768px) {
+      .ref-grid { grid-template-columns: 1fr; }
+    }
 
-  .ref-card {
-    background: var(--bg-surface);
-    border: 1px solid var(--glass-border);
-    border-radius: 6px;
-    padding: 1rem 1.25rem;
-  }
-  .ref-card.full-width {
-    grid-column: 1 / -1;
-  }
+    .ref-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--glass-border);
+      border-radius: 6px;
+      padding: 1rem 1.25rem;
+    }
+    .ref-card.full-width {
+      grid-column: 1 / -1;
+    }
 
-  .ref-card h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 0.95rem;
-    color: var(--theme-accent);
-    margin-bottom: 0.6rem;
-    padding-bottom: 0.4rem;
-    border-bottom: 1px solid var(--glass-border);
-    letter-spacing: 0.03em;
-  }
-  .ref-card h3::after { display: none; }
+    .ref-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.95rem;
+      color: var(--theme-accent);
+      margin-bottom: 0.6rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--glass-border);
+      letter-spacing: 0.03em;
+    }
+    .ref-card h3::after { display: none; }
 
-  .ref-card p, .ref-card li {
-    font-size: 0.85rem;
-    line-height: 1.6;
-    color: var(--text);
-  }
+    .ref-card p, .ref-card li {
+      font-size: 0.85rem;
+      line-height: 1.6;
+      color: var(--text);
+    }
 
-  .ref-card ul {
-    list-style: none;
-    padding: 0;
-  }
+    .ref-card ul {
+      list-style: none;
+      padding: 0;
+    }
 
-  .ref-card li {
-    padding: 0.15rem 0;
-  }
+    .ref-card li {
+      padding: 0.15rem 0;
+    }
 
-  .ref-card li::before {
-    content: '\203A';
-    color: var(--theme-accent);
-    margin-right: 0.4em;
-    font-weight: 700;
-  }
+    .ref-card li::before {
+      content: '\203A';
+      color: var(--theme-accent);
+      margin-right: 0.4em;
+      font-weight: 700;
+    }
 
-  .ref-formula {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.82rem;
-    color: var(--text-bright);
-    background: var(--bg-raised);
-    border-radius: 3px;
-    padding: 0.15rem 0.4rem;
-    white-space: nowrap;
-  }
+    .ref-formula {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.82rem;
+      color: var(--text-bright);
+      background: var(--bg-raised);
+      border-radius: 3px;
+      padding: 0.15rem 0.4rem;
+      white-space: nowrap;
+    }
 
-  .ref-card table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 0.82rem;
-    margin: 0.4rem 0;
-  }
-  .ref-card th {
-    text-align: left;
-    font-weight: 600;
-    color: var(--text-dim);
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    padding: 0.25rem 0.5rem;
-    border-bottom: 1px solid var(--glass-border);
-  }
-  .ref-card td {
-    padding: 0.25rem 0.5rem;
-    color: var(--text);
-    border-bottom: 1px solid rgba(255,255,255,0.02);
-  }
-  .ref-card td:first-child {
-    font-weight: 600;
-    color: var(--text-bright);
-    white-space: nowrap;
-  }
+    .ref-card table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.82rem;
+      margin: 0.4rem 0;
+    }
+    .ref-card th {
+      text-align: left;
+      font-weight: 600;
+      color: var(--text-dim);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 0.25rem 0.5rem;
+      border-bottom: 1px solid var(--glass-border);
+    }
+    .ref-card td {
+      padding: 0.25rem 0.5rem;
+      color: var(--text);
+      border-bottom: 1px solid rgba(255,255,255,0.02);
+    }
+    .ref-card td:first-child {
+      font-weight: 600;
+      color: var(--text-bright);
+      white-space: nowrap;
+    }
 
-  .ref-note {
-    font-size: 0.78rem;
-    color: var(--text-dim);
-    font-style: italic;
-    margin-top: 0.3rem;
-  }
+    .ref-note {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      font-style: italic;
+      margin-top: 0.3rem;
+    }
 
-  .ref-highlight {
-    color: var(--galvanic);
-    font-weight: 600;
-  }
+    .ref-highlight {
+      color: var(--galvanic);
+      font-weight: 600;
+    }
 
-  .ref-aether { color: var(--aether); }
-  .ref-galvanic { color: var(--galvanic); }
+    .ref-aether { color: var(--aether); }
+    .ref-galvanic { color: var(--galvanic); }
 
-  /* ── Flowcharts ── */
-  .flowchart-section {
-    margin: 2rem 0;
-  }
-  .flowchart-container {
-    background: var(--bg-surface);
-    border: 1px solid var(--glass-border);
-    border-radius: 6px;
-    padding: 1.5rem;
-    margin: 1rem 0;
-    overflow-x: auto;
-  }
-  .mermaid {
-    display: flex;
-    justify-content: center;
-  }
-</style>
-</head>
-<body>
-<div id="atmosphere"><canvas id="particle-canvas"></canvas><div class="mist mist-1"></div><div class="mist mist-2"></div><div class="mist mist-3"></div></div>
-<div id="page-transition" class="page-transition"></div>
-<div class="sidebar-overlay"></div>
-<aside class="sidebar">
-  <div class="sidebar-brand"><div class="sidebar-title">Aetherfall</div><div class="sidebar-subtitle">Rules Reference</div></div>
-  <nav class="sidebar-nav"></nav>
-  <div class="sidebar-footer"><a href="../">&larr; Back to Aetherfall</a></div>
-</aside>
-<header class="site-header">
-  <button class="header-toggle" aria-label="Toggle navigation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
-  <span class="header-logo">Aetherfall <span>RPG</span></span>
-  <span class="header-separator"></span>
-  <span class="header-chapter"></span>
-</header>
-<main class="main-content">
-  <div class="page-content">
-
-    <nav class="page-nav-compact"></nav>
-
-    <div class="page-hero">
-      <span class="page-number"></span>
-      <h1 class="page-title">Quick Reference</h1>
-      <p class="page-subtitle">Everything you need at the table</p>
-    </div>
+    /* ── Flowcharts ── */
+    .flowchart-section {
+      margin: 2rem 0;
+    }
+    .flowchart-container {
+      background: var(--bg-surface);
+      border: 1px solid var(--glass-border);
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin: 1rem 0;
+      overflow-x: auto;
+    }
+    .mermaid {
+      display: flex;
+      justify-content: center;
+    }
+  </style>
+extraFoot: |
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'dark',
+      themeVariables: {
+        primaryColor: '#1a1f32',
+        primaryTextColor: '#d4dae3',
+        primaryBorderColor: '#3dc8e0',
+        lineColor: '#8a92a4',
+        secondaryColor: '#141828',
+        tertiaryColor: '#0f1220',
+        fontFamily: 'Segoe UI, Helvetica Neue, Arial, sans-serif',
+        fontSize: '15px'
+      },
+      flowchart: {
+        curve: 'basis',
+        padding: 20,
+        nodeSpacing: 30,
+        rankSpacing: 40,
+        htmlLabels: true,
+        wrappingWidth: 200
+      }
+    });
+  </script>
+---
 
     <!-- ══════════════ CORE MECHANICS ══════════════ -->
 
@@ -490,36 +487,3 @@ flowchart TD
         </pre>
       </div>
     </div>
-
-    <nav class="page-nav"></nav>
-  </div>
-  <footer class="site-footer"><p>Aetherfall RPG &mdash; Playtest Draft</p></footer>
-</main>
-<script src="js/main.js"></script>
-<script type="module">
-  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
-  mermaid.initialize({
-    startOnLoad: true,
-    theme: 'dark',
-    themeVariables: {
-      primaryColor: '#1a1f32',
-      primaryTextColor: '#d4dae3',
-      primaryBorderColor: '#3dc8e0',
-      lineColor: '#8a92a4',
-      secondaryColor: '#141828',
-      tertiaryColor: '#0f1220',
-      fontFamily: 'Segoe UI, Helvetica Neue, Arial, sans-serif',
-      fontSize: '15px'
-    },
-    flowchart: {
-      curve: 'basis',
-      padding: 20,
-      nodeSpacing: 30,
-      rankSpacing: 40,
-      htmlLabels: true,
-      wrappingWidth: 200
-    }
-  });
-</script>
-</body>
-</html>

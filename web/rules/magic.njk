@@ -1,39 +1,9 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="aether">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Two Paths of Magic — Aetherfall RPG</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-<div id="atmosphere"><canvas id="particle-canvas"></canvas><div class="mist mist-1"></div><div class="mist mist-2"></div><div class="mist mist-3"></div></div>
-<div id="page-transition" class="page-transition"></div>
-<div class="sidebar-overlay"></div>
-<aside class="sidebar">
-  <div class="sidebar-brand"><div class="sidebar-title">Aetherfall</div><div class="sidebar-subtitle">Rules Reference</div></div>
-  <nav class="sidebar-nav"></nav>
-  <div class="sidebar-footer"><a href="../">← Back to Aetherfall</a></div>
-</aside>
-<header class="site-header">
-  <button class="header-toggle" aria-label="Toggle navigation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
-  <span class="header-logo">Aetherfall <span>RPG</span></span>
-  <span class="header-separator"></span>
-  <span class="header-chapter"></span>
-</header>
-<main class="main-content">
-  <div class="page-content">
-
-    <nav class="page-nav-compact"></nav>
-
-    <div class="page-hero">
-      <span class="page-number"></span>
-      <h1 class="page-title">The Two Paths of Magic</h1>
-      <p class="page-subtitle">Scholarly precision or Wild instinct &mdash; choose your relationship with the Veil</p>
-    </div>
+---
+layout: chapter.njk
+pageId: magic
+subtitle: "Scholarly precision or Wild instinct &mdash; choose your relationship with the Veil"
+permalink: rules/magic.html
+---
 
     <p class="flavor">
       Magic came roaring into the world within living memory. Nobody fully understands it.
@@ -42,10 +12,9 @@
       they can barely steer. Both paths are dangerous. Both paths are necessary.
     </p>
 
-    <div class="callout callout-believer">
-      <span class="callout-label">The Believer</span>
+    {% believer %}
       <p>Magic is not a tool you pick up and put down. It is a conversation with something vast that does not think like you do. Every spell you cast, you are reaching through the Veil and asking the Aether to reshape reality on your behalf. Sometimes it listens. Sometimes it has its own ideas. Respect that, or it will teach you respect the hard way.</p>
-    </div>
+    {% endbeliever %}
 
     <!-- ── The Six Schools ───────────────────────────────── -->
 
@@ -109,12 +78,11 @@
       degrading nearby technology).
     </p>
 
-    <div class="callout callout-note">
-      <span class="callout-label">Design Note</span>
+    {% warning "Design Note" %}
       <p>Casting time is per-spell, not per-tier. Tier measures how much power you draw, not how
       long it takes. A Spectacular Force and a Weak Force both take 2 counts &mdash; but the
       Spectacular version costs far more exhaustion and is far more likely to burn you.</p>
-    </div>
+    {% endwarning %}
 
     <!-- ── The Scholarly Path ─────────────────────────────── -->
 
@@ -154,8 +122,7 @@
       across schools but constrains you to your specific selection.
     </p>
 
-    <div class="callout callout-scene">
-      <span class="callout-label">At the Table</span>
+    {% scene "At the Table" %}
       <p>Kael's ally, a scholarly caster named Aldric, casts Mend on a wounded comrade. His
       casting target is 58. He rolls 19 &mdash; that's 39 under. Strong tier.</p>
       <p>But Aldric only needs to close a knife wound, and Strong Mend costs 12 exhaustion.
@@ -166,7 +133,7 @@
       protecting Kael, it amplifies the next hit he takes by 1d4. Aldric doesn't know it
       failed until Kael gets hit and the damage is worse than it should be. He still pays
       3 exhaustion for the attempt. Magic is never free, even when it goes wrong.</p>
-    </div>
+    {% endscene %}
 
     <!-- ── The Wild Path ──────────────────────────────────── -->
 
@@ -228,8 +195,7 @@
       narrow but deep.
     </p>
 
-    <div class="callout callout-scene">
-      <span class="callout-label">At the Table</span>
+    {% scene "At the Table" %}
       <p>Sera is a wild caster with a casting target of 55 (45 base + 10 wild bonus). She casts
       Force at a thug. She rolls 2d100: a 38 and a 72.</p>
       <p>Her target is 55. The 38 is 17 under. The 72 is 17 over. Equal distance &mdash; either counts,
@@ -246,7 +212,7 @@
       Force deals 3d8 damage and costs 6 exhaustion. She wanted a quick Standard blast. The
       magic had other plans. That's the wild path &mdash; sometimes you get more than you
       asked for, and you pay for every bit of it.</p>
-    </div>
+    {% endscene %}
 
     <h4>The Trade-Off at a Glance</h4>
 
@@ -262,10 +228,9 @@
       <tr><td>Power ceiling</td><td>Reliable but bounded</td><td>Unpredictable, swings to extremes</td></tr>
     </table>
 
-    <div class="callout callout-handler">
-      <span class="callout-label">The Handler</span>
+    {% handler %}
       <p>Scholarly casters win you long operations — controlled, predictable, professional. Wild casters win you desperate moments — raw power when everything else has failed. I've worked with both. I sleep better when the scholarly caster is on the roster. I'm more grateful when the wild caster saves our lives.</p>
-    </div>
+    {% endhandler %}
 
     <!-- ── Backlash ───────────────────────────────────────── -->
 
@@ -399,16 +364,14 @@
       </tr>
     </table>
 
-    <div class="callout callout-gm">
-      <span class="callout-label">GM Note</span>
+    {% gmnote "GM Note" %}
       <p>Residue tracking is per-effect. A caster can carry residue from multiple different
       effects simultaneously &mdash; a nosebleed and trembling hands are separate threats.
       Rolling different numbers gives separate base effects, not escalation. Only the
       <em>same</em> number escalates.</p>
-    </div>
+    {% endgmnote %}
 
-    <div class="callout callout-gm">
-      <span class="callout-label">GM Note &mdash; Beyond Backlash</span>
+    {% gmnote "GM Note &mdash; Beyond Backlash" %}
       <p>This table is designed for spell backlash, but it doubles as a toolkit for any
       situation where raw aetheric energy is warping the environment. High-accumulation zones,
       Veil-thin locations, unstable artifacts &mdash; roll on the Wild Effect table to give
@@ -416,19 +379,17 @@
       intensity: a mildly charged ruin might inflict base effects, while a ruptured Veil
       site could jump straight to escalated or permanent. Use it wherever you want magic
       to feel dangerous and unpredictable.</p>
-    </div>
+    {% endgmnote %}
 
-    <div class="callout callout-warning">
-      <span class="callout-label">The Fear</span>
+    {% warning "The Fear" %}
       <p>A nosebleed fades in seconds. The residue doesn&rsquo;t. Until you take a long rest,
       every backlash check carries the threat of escalation. After one or two wild effects,
       casters start hesitating &mdash; and in a dungeon or on a long mission, rest may not
       come easily. That permanent stat reduction is always lurking. This is by design &mdash;
       a mixed party of casters and non-casters is the smart approach.</p>
-    </div>
+    {% endwarning %}
 
-    <div class="callout callout-scene">
-      <span class="callout-label">At the Table</span>
+    {% scene "At the Table" %}
       <p>Sera casts Force at Standard tier. The spell fires. Now she checks for backlash.</p>
       <p><strong>Backlash roll:</strong> Standard for a wild caster is 15%. She rolls d100: 09.
       That&rsquo;s under 15 &mdash; backlash. She takes 1d4 = 3 physical HP damage. The burn
@@ -445,7 +406,7 @@
       present &mdash; it would have <strong>escalated</strong>. Bleeding from nose and ears
       for 1d4 hours, &minus;10% to SP-based checks. And <em>that</em> residue would linger
       until she rests after it wears off. One more 10 and it goes permanent.</p>
-    </div>
+    {% endscene %}
 
     <!-- ── Spell Cancellation & Interruption ──────────────── -->
 
@@ -501,14 +462,13 @@
       just let the spell go. Same cancellation costs, but you don't risk a worse outcome.
     </p>
 
-    <div class="callout callout-example">
-      <span class="callout-label">Tactical Implication</span>
+    {% example "Tactical Implication" %}
       <p>If you can see an enemy caster begin casting at count 3 with resolution at count 7,
       you have a 4-count window to hit them and force a concentration check. Fast weapons &mdash;
       daggers, punches, pistols &mdash; become valuable for disrupting casters. Protecting your
       own caster while they cast is a real battlefield role. The swordsman standing between
       Sera and the thugs isn't just being brave &mdash; he's enabling her magic.</p>
-    </div>
+    {% endexample %}
 
     <!-- ── Exhaustion Overflow ────────────────────────────── -->
 
@@ -521,13 +481,12 @@
       HP damage at half rate</strong>. The magic is tearing your body apart to fuel itself.
     </p>
 
-    <div class="callout callout-scene">
-      <span class="callout-label">At the Table</span>
+    {% scene "At the Table" %}
       <p>Sera has 7 EP remaining. She casts Spectacular Mend &mdash; 18 exhaustion. She spends all
       7 EP. Incapacitated on the exhaustion track. The remaining 11 overflows: 11 &divide; 2 = 5
       physical HP damage (rounded down). The spell works. Her ally's bones snap back into place.
       Sera is on the floor.</p>
-    </div>
+    {% endscene %}
 
     <p>
       This is a deliberate design choice: a desperate caster can always reach for one more
@@ -560,12 +519,11 @@
       controlled it or not.
     </p>
 
-    <div class="callout callout-warning">
-      <span class="callout-label">Wild Casters Beware</span>
+    {% warning "Wild Casters Beware" %}
       <p>The 2d100-take-farther mechanic pushes toward extremes in both directions. When you
       succeed, you succeed big. When you misfire, you misfire <em>hard</em> &mdash; the farther
       die is likely well over your target. The wild path giveth and the wild path taketh away.</p>
-    </div>
+    {% endwarning %}
 
     <!-- ── Push It ────────────────────────────────────────── -->
 
@@ -588,14 +546,13 @@
       <li>One push per cast. You can't push twice.</li>
     </ul>
 
-    <div class="callout callout-example">
-      <span class="callout-label">Example</span>
+    {% example "Example" %}
       <p>Sera casts Mend and qualifies for Standard (8 EP). Her ally is dying &mdash;
       she needs Strong. She pushes. Cost: half of Standard (4) + full Strong (12) =
       <strong>16 exhaustion</strong>. Backlash at Strong is normally 20% for a wild caster
       &mdash; pushed, it's <strong>40%</strong>. She's burning herself hollow to save
       someone. That's what Push It is for.</p>
-    </div>
+    {% endexample %}
 
     <p>
       Pushing is a gamble. Sometimes it saves the day. Sometimes it puts you on the floor.
@@ -693,8 +650,7 @@
       source or a new one.
     </p>
 
-    <div class="callout callout-scene">
-      <span class="callout-label">At the Table</span>
+    {% scene "At the Table" %}
       <p>Aldric wants to learn Barrier. He&rsquo;s never cast a Warding spell before &mdash;
       this is a new school for him. He tracks down old Magister Holt, a retired Warder living
       above a bookshop in the Ashcroft district. It takes two sessions of roleplay to earn
@@ -704,7 +660,7 @@
       success. He pays 3 XP (new school) and Barrier goes in the book. If he&rsquo;d rolled
       a 71, he&rsquo;d have failed, paid only 1 XP, and needed to find more study time
       before trying again. Either way, that spell has a story behind it.</p>
-    </div>
+    {% endscene %}
 
     <h4>Wild Casters &mdash; New Schools</h4>
 
@@ -740,15 +696,14 @@
       should feel like one.
     </p>
 
-    <div class="callout callout-believer">
-      <span class="callout-label">The Believer</span>
+    {% believer %}
       <p>The third school came to me in a storm on the Blackmere Ridge. Lightning hit the
       standing stones and the world went white. When I could see again, I could feel
       something I&rsquo;d never felt before &mdash; a whole new way the Aether moved, like
       hearing a chord you&rsquo;d only ever known one note of. I didn&rsquo;t learn it. It
       just &hellip; arrived. The bruises and the nosebleed took a week to heal. The new
       school stayed.</p>
-    </div>
+    {% endbeliever %}
 
     <h4>No Path Switching</h4>
 
@@ -758,11 +713,3 @@
       instinct riding the current. You cannot unlearn how you feel the Aether. This choice
       is permanent and defining.
     </p>
-
-    <nav class="page-nav"></nav>
-  </div>
-  <footer class="site-footer"><p>Aetherfall RPG — Playtest Draft</p></footer>
-</main>
-<script src="js/main.js"></script>
-</body>
-</html>

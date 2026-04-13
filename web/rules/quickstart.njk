@@ -1,39 +1,9 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="split">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Ashwick Job — Aetherfall RPG</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-<div id="atmosphere"><canvas id="particle-canvas"></canvas><div class="mist mist-1"></div><div class="mist mist-2"></div><div class="mist mist-3"></div></div>
-<div id="page-transition" class="page-transition"></div>
-<div class="sidebar-overlay"></div>
-<aside class="sidebar">
-  <div class="sidebar-brand"><div class="sidebar-title">Aetherfall</div><div class="sidebar-subtitle">Rules Reference</div></div>
-  <nav class="sidebar-nav"></nav>
-  <div class="sidebar-footer"><a href="../">← Back to Aetherfall</a></div>
-</aside>
-<header class="site-header">
-  <button class="header-toggle" aria-label="Toggle navigation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
-  <span class="header-logo">Aetherfall <span>RPG</span></span>
-  <span class="header-separator"></span>
-  <span class="header-chapter"></span>
-</header>
-<main class="main-content">
-  <div class="page-content">
-
-    <nav class="page-nav-compact"></nav>
-
-    <div class="page-hero">
-      <span class="page-number"></span>
-      <h1 class="page-title">The Ashwick Job</h1>
-      <p class="page-subtitle">A one-session starter adventure for 4 players</p>
-    </div>
+---
+layout: chapter.njk
+pageId: quickstart
+subtitle: "A one-session starter adventure for 4 players"
+permalink: rules/quickstart.html
+---
 
     <div style="background: #5a1a1a; border: 2px solid #c44; border-radius: 6px; padding: 1.2rem 1.5rem; margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem;">
       <span style="font-size: 2.5rem; line-height: 1; flex-shrink: 0;">&#x1F6D1;</span>
@@ -137,8 +107,7 @@
       constraining the player. Hand these out and let players choose.
     </p>
 
-    <div class="callout callout-handler">
-      <span class="callout-label">Printable Character Sheets</span>
+    {% handler "Printable Character Sheets" %}
       <p>Each character has a complete, printable two-page character sheet. Print or
       save as PDF and hand one to each player.</p>
       <ul>
@@ -147,7 +116,7 @@
         <li><a href="tools/quickstart-aldric.html">Aldric Wynn &mdash; The Surgeon</a> (Scholarly Caster)</li>
         <li><a href="tools/quickstart-mira.html">Mira Cade &mdash; The Fixer</a> (Social Operator)</li>
       </ul>
-    </div>
+    {% endhandler %}
 
     <!-- ── Kael ────────────────────────────────────────── -->
 
@@ -180,11 +149,10 @@
       </div>
     </div>
 
-    <div class="callout callout-handler">
-      <span class="callout-label">Background</span>
+    {% handler "Background" %}
       <p>Former Greycoat constable. Left because the job stopped being about protecting
       people. Joined the Society because at least you get to pick which problems you solve.</p>
-    </div>
+    {% endhandler %}
 
     <p>
       <em>Best for players who want straightforward mechanics. Point, shoot, reliable. Kael
@@ -226,11 +194,10 @@
       </div>
     </div>
 
-    <div class="callout callout-believer">
-      <span class="callout-label">Background</span>
+    {% believer "Background" %}
       <p>Felt the Aether her whole life. Never had formal training. Joined the Society because
       they don&rsquo;t care where the power comes from, only that you can use it.</p>
-    </div>
+    {% endbeliever %}
 
     <p>
       <em>Best for players who like risk and excitement. Wild casting is unpredictable &mdash;
@@ -272,12 +239,11 @@
       </div>
     </div>
 
-    <div class="callout callout-scholar">
-      <span class="callout-label">Background</span>
+    {% scholar "Background" %}
       <p>Trained at the Gradient Scholars before funding cuts eliminated his research post.
       Knows the academic world, knows Fen Harker by reputation. This job is personal &mdash;
       scholars look after their own.</p>
-    </div>
+    {% endscholar %}
 
     <p>
       <em>Best for players who like solving problems. Aldric&rsquo;s spells don&rsquo;t deal
@@ -316,12 +282,11 @@
       </div>
     </div>
 
-    <div class="callout callout-street">
-      <span class="callout-label">Background</span>
+    {% street "Background" %}
       <p>Grew up on Harrier Street, right on the gradient border. She&rsquo;s been talking
       her way in and out of trouble in every zone since she was twelve. Joined the Society
       because it&rsquo;s a better class of trouble.</p>
-    </div>
+    {% endstreet %}
 
     <p>
       <em>Best for players who like roleplay. Mira owns the social scenes and carries the
@@ -342,8 +307,7 @@
       character sheets. This sets the tone and drops them into the world.
     </p>
 
-    <div class="callout callout-scene">
-      <span class="callout-label">Tell It to Them Straight</span>
+    {% scene "Tell It to Them Straight" %}
       <p>The Wet Ember smells like pipe smoke and old wood. It&rsquo;s a tavern on the
       neutral side of Ashwick &mdash; the kind of place where the Galvanic hum from the
       factory quarter and the faint Aetheric prickle from the old town cancel each other
@@ -359,7 +323,7 @@
       color &mdash; crosses the room and sits down across from you without asking.
       She&rsquo;s mid-forties, sharp eyes, ink stains on her fingers. She sets a thin
       folder on the table.</p>
-    </div>
+    {% endscene %}
 
     <hr class="section-divider">
 
@@ -441,8 +405,7 @@
       competence.
     </p>
 
-    <div class="callout callout-scene">
-      <span class="callout-label">Tell It to Them Straight</span>
+    {% scene "Tell It to Them Straight" %}
       <p>Laine opens the folder. Inside: a sketch of a thin man with round spectacles and a
       distracted expression, a hand-drawn map of the Ashwick district with zone boundaries
       marked in colored ink, and a note on university letterhead.</p>
@@ -461,10 +424,9 @@
       track of time &mdash; which is possible, I&rsquo;m told academics do that &mdash;
       or he found something dangerous. Find him. Bring him back. Try not to start a
       war with anyone.&rdquo;</p>
-    </div>
+    {% endscene %}
 
-    <div class="callout callout-handler">
-      <span class="callout-label">GM Note &mdash; What Laine Knows</span>
+    {% handler "GM Note &mdash; What Laine Knows" %}
       <p><strong>Will share freely:</strong> Harker&rsquo;s description, his boarding house
       address, the dead-drop note, the foundry&rsquo;s location, that it&rsquo;s been
       officially decommissioned for two years.</p>
@@ -473,17 +435,16 @@
       odd hours. She can&rsquo;t prove a connection but she suspects one.</p>
       <p><strong>Doesn&rsquo;t know:</strong> The tunnel network. That Harker is being held.
       The Syndicate&rsquo;s specific operation.</p>
-    </div>
+    {% endhandler %}
 
-    <div class="callout callout-note">
-      <span class="callout-label">Mechanics Spotlight &mdash; Skill Checks</span>
+    {% gmnote "Mechanics Spotlight &mdash; Skill Checks" %}
       <p>This is a good first moment for a <strong>Persuasion</strong> roll. Mira has
       Persuasion 58% &mdash; she rolls d100, and anything equal to or under 58 succeeds.
       Walk the table through it: roll, compare to target, announce result. If the roll is
       well under (say, 30 against 58), describe Laine warming up &mdash; &ldquo;she
       pauses, looks at you differently, and leans in.&rdquo; Margin matters narratively
       even when the rules just say pass/fail.</p>
-    </div>
+    {% endgmnote %}
 
     <!-- ── Boarding House ────────────────────────────── -->
 
@@ -498,15 +459,14 @@
       was respectable twenty years ago and is holding on through sheer stubbornness.
     </p>
 
-    <div class="callout callout-scene">
-      <span class="callout-label">Tell It to Them Straight</span>
+    {% scene "Tell It to Them Straight" %}
       <p>The landlady answers on the second knock. She&rsquo;s sixty-odd, flour on her
       apron, reading glasses pushed up into her hair. Her hands are steady but her
       eyes aren&rsquo;t.</p>
       <p>&ldquo;You&rsquo;re here about Mr. Harker? Thank goodness. Come in, come in.
       His room&rsquo;s upstairs. I haven&rsquo;t touched anything &mdash; seemed wrong
       to, with him not back yet.&rdquo;</p>
-    </div>
+    {% endscene %}
 
     <h4>NPC: Mrs. Olt</h4>
 
@@ -537,8 +497,7 @@
       street. The dust on the windowsill has been disturbed &mdash; recently, from outside.
     </p>
 
-    <div class="callout callout-scene">
-      <span class="callout-label">Tell It to Them Straight</span>
+    {% scene "Tell It to Them Straight" %}
       <p>The room is small and meticulously organized. Zone maps cover the wall above the
       desk &mdash; hand-drawn, annotated in three colors of ink, bristling with measurement
       notes and dates. This is not the room of a careless person. Whatever happened to
@@ -547,7 +506,7 @@
       <em>Veil Cartography: Methods and Madness</em>. What&rsquo;s missing is his field
       equipment &mdash; the survey instruments, the resonance compass, the leather satchel
       Mrs. Olt described. He took his tools and didn&rsquo;t come back.</p>
-    </div>
+    {% endscene %}
 
     <p>Let the players describe what they&rsquo;re looking for and call for appropriate checks:</p>
 
@@ -578,15 +537,14 @@
       </tr>
     </table>
 
-    <div class="callout callout-note">
-      <span class="callout-label">Mechanics Spotlight &mdash; Ability Checks</span>
+    {% gmnote "Mechanics Spotlight &mdash; Ability Checks" %}
       <p>If a player wants to force Harker&rsquo;s locked desk drawer, call for a
       <strong>raw BR check</strong>: roll d100 under (BR + 4) &times; 10. Kael (BR +1)
       rolls under 50%. This demonstrates that you don&rsquo;t need a specific skill for
       everything &mdash; sometimes you just need to be strong enough.</p>
       <p>Alternatively, Mira can pick the lock with <strong>Sleight of Hand</strong> (52%).
       Let the table see that different characters solve the same problem differently.</p>
-    </div>
+    {% endgmnote %}
 
     <!-- ── Following the Leads ───────────────────────── -->
 
@@ -600,8 +558,7 @@
       <li>Harker&rsquo;s readings show anomalous Aetheric activity underground</li>
     </ol>
 
-    <div class="callout callout-handler">
-      <span class="callout-label">GM Note &mdash; Decision Branches</span>
+    {% handler "GM Note &mdash; Decision Branches" %}
       <p><strong>Go straight to the foundry.</strong> The most direct path. Proceed to
       Act 2. The party arrives during daylight. Two Lamplighter guards are posted at
       the loading bay, posing as demolition workers.</p>
@@ -615,7 +572,7 @@
       one bonus: a Greycoat signal whistle that will bring constables within 15 minutes
       if blown in the neutral zone. It won&rsquo;t work inside Galvanic or Aetheric
       territory &mdash; nice mechanical flavor.</p>
-    </div>
+    {% endhandler %}
 
     <hr class="section-divider">
 
@@ -665,8 +622,7 @@
       </div>
     </div>
 
-    <div class="callout callout-scene">
-      <span class="callout-label">Tell It to Them Straight</span>
+    {% scene "Tell It to Them Straight" %}
       <p>The foundry hunches against the skyline like something that died standing up. Three
       stories of soot-stained brick, riveted iron beams, smokestacks that haven&rsquo;t
       breathed in two years. Weeds push through cracks in the cobblestones. A rusted
@@ -679,7 +635,7 @@
       <p>Two men in work clothes are sitting on crates near the loading bay, eating lunch
       out of tin boxes. They look like demolition workers. They have the build of men who
       carry heavy things for a living. They don&rsquo;t look like they want company.</p>
-    </div>
+    {% endscene %}
 
     <div class="stat-block hostile">
       <div class="stat-block-header">
@@ -717,8 +673,7 @@
 
     <h3 id="approaching">Approaching the Foundry</h3>
 
-    <div class="callout callout-handler">
-      <span class="callout-label">GM Note &mdash; Decision Branches</span>
+    {% handler "GM Note &mdash; Decision Branches" %}
       <p><strong>Talk your way in.</strong> Mira&rsquo;s strength. A Persuasion or Deception
       check against the guards. Possible covers: Greycoat inspection (Mira has forged
       credentials), demolition assessment, or just being lost. On success, the guards let
@@ -731,7 +686,7 @@
       down.</p>
       <p><strong>Confront directly.</strong> Announce who they are, demand entry. The
       guards refuse. Things escalate. This is the fastest path to combat.</p>
-    </div>
+    {% endhandler %}
 
     <!-- ── Combat Encounter ──────────────────────────── -->
 
@@ -743,8 +698,7 @@
       guards realize the party is heading for the sub-basement.
     </p>
 
-    <div class="callout callout-scene">
-      <span class="callout-label">Tell It to Them Straight</span>
+    {% scene "Tell It to Them Straight" %}
       <p>The pretense drops. The nearest guard kicks his crate aside and reaches for the
       revolver under his jacket. The other one is already moving, putting a stack of iron
       pipes between himself and you.</p>
@@ -753,10 +707,9 @@
       cover. Plenty of things to trip over. Pale daylight filters through grimy upper
       windows. The Galvanic hum is steady and strong.</p>
       <p>Everyone acts.</p>
-    </div>
+    {% endscene %}
 
-    <div class="callout callout-note">
-      <span class="callout-label">Mechanics Spotlight &mdash; Running Combat</span>
+    {% gmnote "Mechanics Spotlight &mdash; Running Combat" %}
       <p>This is likely the table&rsquo;s first Aetherfall combat. Walk them through it
       step by step.</p>
       <p><strong>1. Declaration order:</strong> Lowest PC declares first. Kael (PC +2) and
@@ -780,19 +733,17 @@
       <p><strong>5. Wound penalties:</strong> When a guard takes enough damage to cross a
       wound tier, they&rsquo;re Harmed (&minus;10% to everything). Describe it &mdash; they
       flinch, slow down, miss shots they shouldn&rsquo;t. The death spiral is visible.</p>
-    </div>
+    {% endgmnote %}
 
-    <div class="callout callout-handler">
-      <span class="callout-label">GM Note &mdash; Sera in the Galvanic Zone</span>
+    {% handler "GM Note &mdash; Sera in the Galvanic Zone" %}
       <p>Sera&rsquo;s casting target is 58 here (down from 64). When she rolls, call it
       out: &ldquo;You can feel the Galvanic field pressing against you. The magic is
       sluggish, reluctant. Your target is 58 instead of 64.&rdquo; If she misfires,
       describe the spell fizzling against the industrial hum. The zone is fighting her.
       This is the Galvanic advantage &mdash; and the reason smart parties carry guns.</p>
-    </div>
+    {% endhandler %}
 
-    <div class="callout callout-handler">
-      <span class="callout-label">GM Note &mdash; After the Fight</span>
+    {% handler "GM Note &mdash; After the Fight" %}
       <p>The guards go down or surrender. They&rsquo;re not loyal enough to die for
       the Syndicate. If interrogated (Persuasion or Intimidation), they reveal:</p>
       <ul>
@@ -806,14 +757,13 @@
         <li>The sub-basement connects to old tunnels that run under the zone border
         into Aetheric territory</li>
       </ul>
-    </div>
+    {% endhandler %}
 
     <!-- ── Stairwell ─────────────────────────────────── -->
 
     <h3 id="stairwell">The Stairwell Down</h3>
 
-    <div class="callout callout-scene">
-      <span class="callout-label">Tell It to Them Straight</span>
+    {% scene "Tell It to Them Straight" %}
       <p>The stairwell spirals down into darkness. The air changes with the first turn
       &mdash; warmer, thicker, with a faint smell like ozone and old copper. The Galvanic
       hum from the factory above fades with each step, replaced by something else. A low,
@@ -825,7 +775,7 @@
       For the first time in an hour, the magic is close again.</p>
       <p>Mira checks her arc pistol. The charge indicator is flickering &mdash; a steady
       blue light guttering to orange and back. Down here, the rules are about to change.</p>
-    </div>
+    {% endscene %}
 
     <hr class="section-divider">
 
@@ -881,8 +831,7 @@
       </div>
     </div>
 
-    <div class="callout callout-scene">
-      <span class="callout-label">Tell It to Them Straight</span>
+    {% scene "Tell It to Them Straight" %}
       <p>The tunnels open up ahead. What was brick is now something organic &mdash; the walls
       curve and flow like they were shaped by water, or by something that thought about water
       and decided to try it. Crystalline formations cluster along the ceiling in long veins
@@ -895,7 +844,7 @@
       <p>Ahead, the tunnel branches. Left curves downward into deeper darkness. Right opens
       into something wider &mdash; you can hear voices, low and tense, and the scrape of
       heavy objects on stone.</p>
-    </div>
+    {% endscene %}
 
     <!-- ── Exploration ───────────────────────────────── -->
 
@@ -917,14 +866,13 @@
       freely.&rdquo;
     </p>
 
-    <div class="callout callout-handler">
-      <span class="callout-label">GM Note</span>
+    {% handler "GM Note" %}
       <p>This is the moment to show that magic isn&rsquo;t just for damage. Reveal gives
       the party <em>information</em> &mdash; the layout, the number of enemies, where
       Harker is. It changes how they plan the next encounter. Let the player describe
       what the spell feels like: Aldric&rsquo;s eyes unfocus, the walls go translucent,
       and for a few seconds he can see through stone.</p>
-    </div>
+    {% endhandler %}
 
     <h4>Non-Combat Galvanic Utility</h4>
 
@@ -1012,8 +960,7 @@
       (Medium speed 5, 3d4 &mdash; devastating at close range but slow).
     </p>
 
-    <div class="callout callout-scene">
-      <span class="callout-label">Tell It to Them Straight</span>
+    {% scene "Tell It to Them Straight" %}
       <p>The chamber is larger than you expected &mdash; an old cistern or storm drain,
       thirty feet across, the ceiling vaulted in crumbling brick laced with crystal veins.
       The Aetheric growths are thickest here, throwing pale blue-white light across
@@ -1033,14 +980,13 @@
       <p>The woman in the coat folds her arms.</p>
       <p>&ldquo;Well. That was faster than I expected. Let&rsquo;s talk about how this
       ends without anyone getting hurt.&rdquo;</p>
-    </div>
+    {% endscene %}
 
     <!-- ── Decision Point ────────────────────────────── -->
 
     <h3 id="standoff">The Standoff</h3>
 
-    <div class="callout callout-handler">
-      <span class="callout-label">GM Note &mdash; Decision Branches</span>
+    {% handler "GM Note &mdash; Decision Branches" %}
       <p><strong>Negotiate.</strong> Corva&rsquo;s preferred outcome. She offers a deal: the
       party takes Harker and walks away. The cargo disappears tonight. Everyone pretends
       this never happened. She&rsquo;ll even sweeten it &mdash; 100 marks on top of whatever
@@ -1059,10 +1005,9 @@
       solid results. The workers panic (they&rsquo;re not soldiers), and the party grabs
       Harker in the confusion. Corva escapes &mdash; she&rsquo;s too smart to fight a
       losing battle in a crystal cave.</p>
-    </div>
+    {% endhandler %}
 
-    <div class="callout callout-note">
-      <span class="callout-label">Mechanics Spotlight &mdash; Zone Contrast</span>
+    {% gmnote "Mechanics Spotlight &mdash; Zone Contrast" %}
       <p>If combat happens here, the contrast with Act 2 should be stark. Sera&rsquo;s
       casting target is 72 &mdash; she was struggling at 58 upstairs. Call it out:
       &ldquo;The Aether floods in. You&rsquo;ve never felt this strong.&rdquo;</p>
@@ -1073,10 +1018,9 @@
       <p>If Sera casts Force, the Aetheric accumulation pushes the zone even further,
       making subsequent gun rolls riskier. The tug of war is visible, tangible, and
       consequential.</p>
-    </div>
+    {% endgmnote %}
 
-    <div class="callout callout-handler">
-      <span class="callout-label">GM Note &mdash; Mend in Action</span>
+    {% handler "GM Note &mdash; Mend in Action" %}
       <p>If anyone gets hurt, this is the perfect moment for Aldric to cast
       <strong>Mend</strong>. In this zone his target is 71 &mdash; good odds. Walk through
       the casting time on the timing track, the tier result, and the healing. If he
@@ -1084,7 +1028,7 @@
       physically: the bruise fading, the cut knitting shut, the ally standing straighter.
       This demonstrates that Mend changes the math of a fight, not just the numbers on
       a sheet.</p>
-    </div>
+    {% endhandler %}
 
     <hr class="section-divider">
 
@@ -1096,8 +1040,7 @@
 
     <h3 id="rescue">Harker Freed</h3>
 
-    <div class="callout callout-scene">
-      <span class="callout-label">Tell It to Them Straight</span>
+    {% scene "Tell It to Them Straight" %}
       <p>Fen Harker&rsquo;s hands shake as you cut the rope. He flexes his fingers, winces,
       and looks up at you with an expression that&rsquo;s equal parts relief and academic
       excitement &mdash; the kind of look that says <em>I nearly died and I can&rsquo;t
@@ -1116,12 +1059,11 @@
       going to have questions. Everyone is going to have questions.&rdquo;</p>
       <p>He looks at you. &ldquo;I imagine you&rsquo;ll be the ones answering most
       of them.&rdquo;</p>
-    </div>
+    {% endscene %}
 
     <h3 id="returning">Returning to Inspector Laine</h3>
 
-    <div class="callout callout-handler">
-      <span class="callout-label">GM Note &mdash; Outcomes</span>
+    {% handler "GM Note &mdash; Outcomes" %}
       <p><strong>If they negotiated with Corva:</strong> Laine frowns but accepts it.
       &ldquo;You got the Scholar back alive. That was the job. But the Syndicate is still
       operating, and now they know we&rsquo;re looking. This isn&rsquo;t over.&rdquo;
@@ -1134,12 +1076,11 @@
       Harker&rsquo;s return but warns them. &ldquo;The Lamplighter doesn&rsquo;t forget
       faces. You&rsquo;ve made an enemy. Make sure you&rsquo;re worth the trouble.&rdquo;
       Hook: Corva as a recurring figure &mdash; antagonist or reluctant ally.</p>
-    </div>
+    {% endhandler %}
 
     <h3 id="closing">Closing Scene</h3>
 
-    <div class="callout callout-scene">
-      <span class="callout-label">Tell It to Them Straight</span>
+    {% scene "Tell It to Them Straight" %}
       <p>The Wet Ember again. Same corner table. The fire is lower now, and the tavern is
       emptying out as the evening shift heads to the factories. Through the window, gas
       lamps flicker to life along the street, one by one. Harker is at the bar, nursing
@@ -1153,7 +1094,7 @@
       else.</p>
       <p>But now you know what&rsquo;s under the ground. And you&rsquo;re starting to
       wonder what else is hiding in the spaces between.</p>
-    </div>
+    {% endscene %}
 
     <hr class="section-divider">
 
@@ -1230,11 +1171,3 @@
       <tr><td>Galvanic +3 (Foundry)</td><td>&minus;6% to target</td><td>Normal</td><td>+6% reliability</td></tr>
       <tr><td>Aetheric +4 (Tunnels)</td><td>+8% to target</td><td>Jam on 85+</td><td>Jam on 75+</td></tr>
     </table>
-
-    <nav class="page-nav"></nav>
-  </div>
-  <footer class="site-footer"><p>Aetherfall RPG &mdash; Playtest Draft</p></footer>
-</main>
-<script src="js/main.js"></script>
-</body>
-</html>
