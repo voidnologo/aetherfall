@@ -427,6 +427,22 @@
             <div><label>Archetype</label><input type="text" id="archetype"></div>
         </div>
         <div><label>Character Description</label><textarea id="description" rows="2"></textarea></div>
+        <div class="field-row two" style="margin-top:8px;">
+            <div>
+                <label>Station <span style="font-weight:400;color:#565e72;">(economic position, 0&ndash;5)</span></label>
+                <select id="station">
+                    <option value="0">0 &mdash; Destitute</option>
+                    <option value="1">1 &mdash; Scraping</option>
+                    <option value="2" selected>2 &mdash; Getting By</option>
+                    <option value="3">3 &mdash; Comfortable</option>
+                    <option value="4">4 &mdash; Prosperous</option>
+                    <option value="5">5 &mdash; Affluent</option>
+                </select>
+            </div>
+            <div style="font-size:11px;color:#565e72;padding-top:18px;">
+                Default = Backing floor. Trade &plusmn;1 for 3 skill levels from one pool. Max 3 at creation.
+            </div>
+        </div>
     </div>
 
     <!-- Attributes -->
@@ -550,6 +566,27 @@
             <div><label>Handler</label><input type="text" id="handler"></div>
         </div>
         <div><label>Charter / Mission</label><textarea id="charter" rows="2"></textarea></div>
+        <div class="field-row two" style="margin-top:8px;">
+            <div>
+                <label>Backing <span style="font-weight:400;color:#565e72;">(patron support, 1&ndash;5)</span></label>
+                <select id="backing">
+                    <option value="1">1 &mdash; Bare Charter</option>
+                    <option value="2">2 &mdash; Field Support</option>
+                    <option value="3" selected>3 &mdash; Full Package</option>
+                    <option value="4">4 &mdash; Favoured</option>
+                    <option value="5">5 &mdash; Inner Circle</option>
+                </select>
+            </div>
+            <div>
+                <label>Ledger <span style="font-weight:400;color:#565e72;">(Society financial state)</span></label>
+                <select id="ledger">
+                    <option value="Flush">Flush</option>
+                    <option value="Level" selected>Level</option>
+                    <option value="Lean">Lean</option>
+                    <option value="Dire">Dire</option>
+                </select>
+            </div>
+        </div>
     </div>
 
     <!-- Faction -->
@@ -1036,6 +1073,9 @@ function resetForm() {
     document.querySelectorAll('input[type="text"],input[type="number"],textarea').forEach(el => {
         el.value = el.type === 'number' ? '0' : '';
     });
+    document.getElementById('station').value = '2';
+    document.getElementById('backing').value = '3';
+    document.getElementById('ledger').value = 'Level';
     buildAttrGrid(); updateDerived(); renderSkills(); renderWeapons();
     renderArmor(); renderSpells(); renderContacts(); setPath('none');
 }
@@ -1160,7 +1200,10 @@ function generateAndPrint() {
         <div class="s-header-title">Aetherfall</div>
         <div><div class="s-field-label">Character Name</div><div class="s-field-value">${escHtml(document.getElementById('charName').value)}</div></div>
         <div><div class="s-field-label">Player</div><div class="s-field-value">${escHtml(document.getElementById('playerName').value)}</div></div>
-        <div><div class="s-field-label">Archetype</div><div class="s-field-value">${escHtml(document.getElementById('archetype').value)}</div></div>
+        <div style="display:grid;grid-template-columns:1fr auto;gap:6pt;">
+            <div><div class="s-field-label">Archetype</div><div class="s-field-value">${escHtml(document.getElementById('archetype').value)}</div></div>
+            <div style="text-align:center;"><div class="s-field-label">Station</div><div class="s-field-value" style="font-weight:700;font-size:9pt;min-width:20pt;">${document.getElementById('station').value}</div></div>
+        </div>
     </div>
     <div class="s-two-col">
         <div>
@@ -1297,6 +1340,8 @@ function generateAndPrint() {
                     <div><div class="s-field-label">Society Type</div><div class="s-field-value">${escHtml(document.getElementById('societyType').value)}</div></div>
                     <div><div class="s-field-label">Patron</div><div class="s-field-value">${escHtml(document.getElementById('patron').value)}</div></div>
                     <div><div class="s-field-label">Handler</div><div class="s-field-value">${escHtml(document.getElementById('handler').value)}</div></div>
+                    <div><div class="s-field-label">Backing</div><div class="s-field-value">${document.getElementById('backing').value} &mdash; ${document.getElementById('backing').selectedOptions[0].text.split(' \u2014 ')[1] || ''}</div></div>
+                    <div><div class="s-field-label">Ledger</div><div class="s-field-value">${document.getElementById('ledger').value}</div></div>
                 </div>
                 <div style="margin-top:2pt;"><div class="s-field-label">Charter / Mission</div>${lines(charter, 2)}</div>
             </div>
