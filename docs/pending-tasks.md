@@ -1,11 +1,10 @@
 # Pending Tasks
 
 ## Next Up
-- [ ] Review all chapters in browser for visual regression after 11ty conversion
-- [ ] Add Station/Backing/Ledger fields to blank printable character sheet
-- [ ] Phase 3 cleanup: resolve PAGES duplication (pages.json vs main.js), build-time sidebar
+- [ ] Review site and character sheets in browser for visual verification
 - [ ] Character sheet art / watermarks
-- [ ] Save/load character data in builder (localStorage)
+- [ ] Update character builder print template to match sheet.njk structure (last duplication point)
+- [ ] Landing page (web/index.html) could get its own 11ty layout to deduplicate CSS
 
 ## Backlog
 - [ ] Bundle Mermaid.js locally so flowcharts work offline
@@ -23,7 +22,5 @@
 - [ ] Ward creation process — detailed rules like Enchant spell (currently less specified)
 - [ ] Corruption/madness mechanics — expansion candidate, let tables homebrew for now
 - [ ] Starter adventure map sketches (foundry layout, tunnel branches)
-- [ ] Write economy cross-reference sections for GM chapter (Running the Game)
 - [ ] Playtest Station Check frequency and -15% modifier tuning
-- [ ] Landing page (web/index.html) could get its own 11ty layout to deduplicate CSS
 - [ ] Add shortcode for bare `callout` class (Intimidation flex-stat note)

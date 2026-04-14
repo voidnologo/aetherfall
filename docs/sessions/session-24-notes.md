@@ -1,43 +1,51 @@
-# Session 24: Eleventy Migration, Economy Rules & Integration
+# Session 24: Eleventy Migration, Economy Integration & Unified Character Sheets
 
 **Date:** 2026-04-13
-**Goal:** Evaluate and implement a web framework for the rulebook site, design starting Station/Backing mechanics, integrate economy system into all relevant chapters, update character builder.
+**Goal:** Migrate rulebook to Eleventy, design starting Station/Backing mechanics, integrate economy across all chapters, unify character sheets into a single template with JSON data.
 
 ## Overview
 
-Evaluated Jekyll, Astro, and Eleventy for the rulebook site. Chose Eleventy (11ty) for zero client-side overhead, clean shortcode syntax, and Node-based local dev (no Ruby). Built the full infrastructure — layout template, pages.json data file, 9 callout shortcodes, flat-URL permalinks, GitHub Action with build step — then converted all 20 chapter files from static HTML to .njk templates. Removed ~920 lines of duplicated boilerplate. The `initPageChrome()` JS function was deleted since page chrome is now generated at build time.
+Major infrastructure and content session. Migrated the entire web rulebook from 20 static HTML files to Eleventy with a shared layout template, 9 callout shortcodes, and build-time page chrome. Added Starting Station trade mechanic and Starting Backing rules to the economy system. Removed Downtime Actions (rejected). Integrated economy references into Creating, Societies, Equipment, and GM chapters. Updated the character builder with Station/Backing/Ledger fields and save/load JSON.
 
-Added Starting Station trade mechanic (±1 Station for 3 skill levels) and Starting Backing rules (default 3, GM adjusts for tone) to the economy design doc and rulebook. Removed Downtime Actions (rejected — the Drift's pressure is the point). Integrated economy references into Creating Your Adventurer (new Station step, equipment rewritten around Cost Tiers), Adventuring Societies (Backing + Ledger as step 5), Character Sheet (Station and Society economy fields), and Equipment (Cost Tier explanation). Updated the interactive character builder with Station, Backing, and Ledger fields.
+Then unified all 7 character sheet files (blank, sample, 4 quickstart pre-gens) into a single Nunjucks template driven by JSON data files — eliminating 4,065 lines of duplication. Character data now lives in `web/_data/characters/*.json`; 11ty pagination generates all sheets at build time. The builder exports/imports the same JSON format, so player saves and build configs are interchangeable.
+
+Also completed Phase 3 cleanup: sidebar chapter list moved to build-time, PAGES duplication eliminated from main.js (-125 lines), and added an "Economy at the Table" section to the GM chapter.
 
 ---
 
 ## Changes Made
 
 ### Eleventy Migration
-- **11ty config** (`eleventy.config.js`): Input from `web/`, output to `_site/`, flat URL permalinks, passthrough for CSS/JS/tools/assets
-- **Layout template** (`web/_includes/chapter.njk`): Single source of truth for page shell — theme, fonts, atmosphere, sidebar, header, nav, footer, scripts. Supports `extraHead`/`extraFoot` for special pages.
-- **Pages data** (`web/_data/pages.json`): PAGES registry as build-time data — drives chapter numbers, titles, themes, and prev/next navigation
-- **9 callout shortcodes**: handler, scholar, street, believer (fixed label), gmnote, example, warning, scene (custom label with defaults)
-- **All 20 chapters** converted from .html to .njk — boilerplate stripped, callouts converted to shortcodes
-- **GitHub Action** updated to install Node, run `npm ci` + `npx @11ty/eleventy`, deploy `_site/`
-- **main.js** simplified — `initPageChrome()` removed (65 lines), sidebar still JS-generated from PAGES
+- 11ty config, layout template, pages.json, 9 callout shortcodes, flat-URL permalinks
+- All 20 chapters converted from .html to .njk (920 lines boilerplate removed)
+- GitHub Action updated with Node + build step
+- main.js simplified: removed PAGES const, initPageChrome(), buildSidebar(), initPageTransitions() (-125 lines total)
+- Sidebar chapter list generated at build time in layout template
 
-### Economy Design Updates
-- **Starting Station trade**: ±1 from Backing floor costs/gains 3 skill levels from one group pool. Max Station 3 at creation. Station 0 requires a character hook.
-- **Starting Backing**: Default 3 (Full Package), GM adjusts for campaign tone (gritty 1-2, standard 3, elite 4-5). Table-level decision.
-- **Downtime Actions rejected**: Drift pressure is the point — no mini-games to counteract it. Record kept in design doc with rationale.
+### Economy Design & Rulebook Updates
+- Starting Station trade (±1 for 3 skill levels) — design doc + rulebook
+- Starting Backing (default 3, GM adjusts) — design doc + rulebook
+- Downtime Actions rejected (Drift is the point) — kept in design doc with rationale
+- Creating chapter: new Step 6 (Station), Step 7 (Equipment with Cost Tiers), Magic → Step 8
+- Societies chapter: Backing + Ledger as step 5
+- Equipment chapter: Cost Tier explanation
+- Character Sheet page: Station and Society economy fields in builder/sheet descriptions
+- GM chapter: new "Economy at the Table" section + economy entries in GM Toolkit table
 
-### Economy Integration Across Chapters
-- **Creating Your Adventurer**: New Step 6 (Station), Step 7 (Equipment rewritten around Cost Tiers), Magic renumbered to Step 8
-- **Adventuring Societies**: New step 5 (Backing + Ledger) in Building Your Society section
-- **Character Sheet page**: Station and Society economy fields added to builder and blank sheet descriptions
-- **Equipment**: Cost Tier explanation paragraph added before weapon tables
+### Character Builder
+- Station (0-5, default 2) in Identity section
+- Backing (1-5, default 3) and Ledger (4 states, default Level) in Society section
+- All three print to character sheet output
+- Save JSON: exports character as JSON file (same format as build data)
+- Load JSON: imports a file and populates entire form
 
-### Character Builder Tool
-- **Station** (0-5, default 2) added to Identity section with trade hint
-- **Backing** (1-5, default 3) and **Ledger** (Flush/Level/Lean/Dire, default Level) added to Society section
-- All three print to the character sheet output
-- Reset clears to defaults
+### Unified Character Sheets
+- Single `sheet.njk` template replaces 6 standalone HTML files (4,065 lines deleted)
+- Character data as JSON: `web/_data/characters/{blank,sample,kael,sera,aldric,mira}.json`
+- `characters.js` data aggregator + `sheets.njk` pagination driver
+- All existing URLs preserved via `filename` field
+- To add a character: drop a JSON file, it builds automatically
+- Player save files and build configs are the same format
 
 ---
 
@@ -45,46 +53,51 @@ Added Starting Station trade mechanic (±1 Station for 3 skill levels) and Start
 
 | File | Change |
 |------|--------|
-| `eleventy.config.js` | New — 11ty config with shortcodes, filters, passthrough, flat URLs |
-| `package.json` | New — 11ty dependency, build/dev scripts |
-| `package-lock.json` | New — lockfile |
-| `.gitignore` | Added node_modules/ and _site/ |
-| `.github/workflows/pages.yml` | Added Node setup + 11ty build step before deploy |
-| `web/_data/pages.json` | New — PAGES registry as build-time data |
-| `web/_includes/chapter.njk` | New — layout template for all chapters |
-| `web/rules/tools/tools.json` | New — excludes tools/ from 11ty processing |
-| `web/rules/js/main.js` | Removed initPageChrome() (now build-time) |
-| `web/rules/*.njk` (20 files) | All chapters converted from .html to .njk with frontmatter + shortcodes |
-| `web/rules/creating.njk` | New Station step, equipment rewritten around Cost Tiers |
-| `web/rules/societies.njk` | Backing + Ledger as step 5 in Society creation |
-| `web/rules/character-sheet.njk` | Station and Society economy fields added |
-| `web/rules/equipment.njk` | Cost Tier explanation paragraph added |
+| `eleventy.config.js` | New — 11ty config |
+| `package.json`, `package-lock.json` | New — 11ty dependency |
+| `.gitignore` | Added node_modules/, _site/ |
+| `.github/workflows/pages.yml` | Node + build step |
+| `web/_data/pages.json` | New — chapter registry |
+| `web/_data/characters.js` | New — aggregates character JSONs for pagination |
+| `web/_data/characters/*.json` (6 files) | New — character data (blank, sample, 4 pre-gens) |
+| `web/_includes/chapter.njk` | New — chapter layout with build-time sidebar |
+| `web/_includes/sheet.njk` | New — canonical character sheet template |
+| `web/rules/sheets.njk` | New — pagination driver for sheet generation |
+| `web/rules/js/main.js` | Removed PAGES, buildSidebar, initPageChrome, initPageTransitions |
+| `web/rules/*.njk` (20 files) | All chapters: .html → .njk with shortcodes |
+| `web/rules/creating.njk` | Station step, equipment with Cost Tiers |
+| `web/rules/societies.njk` | Backing + Ledger as step 5 |
+| `web/rules/equipment.njk` | Cost Tier explanation |
 | `web/rules/economy.njk` | Starting Station trade, Starting Backing, Downtime Actions removed |
-| `docs/requirements/ECONOMY.md` | Starting Station trade, Starting Backing, Downtime Actions rejected |
-| `web/rules/tools/character-builder.html` | Station, Backing, Ledger fields added to form + print |
+| `web/rules/running-the-game.njk` | Economy at the Table section, GM Toolkit entries |
+| `web/rules/character-sheet.njk` | Updated builder/sheet field descriptions |
+| `web/rules/tools/character-builder.html` | Station/Backing/Ledger fields, save/load JSON |
+| `web/rules/tools/tools.json` | Excludes tools/ from 11ty processing |
+| `docs/requirements/ECONOMY.md` | Starting Station/Backing rules, Downtime Actions rejected |
+| Deleted: `web/rules/tools/character-sheet.html` | Replaced by sheet.njk template |
+| Deleted: `web/rules/tools/character-sheet-sample.html` | Replaced by sample.json + template |
+| Deleted: `web/rules/tools/quickstart-{kael,sera,aldric,mira}.html` | Replaced by JSON + template |
 
 ## Key Design Decisions
 
-1. **Eleventy over Jekyll** — Node-based (no Ruby dependency), cleaner paired shortcodes, unconstrained plugin ecosystem
-2. **Flat URL permalinks** — Global config outputs `rules/economy.html` not `rules/economy/index.html`
-3. **Callout shortcodes** — 4 voice (fixed label) + 5 utility (custom label with defaults)
-4. **Build-time page chrome** — Layout generates chapter numbers, header text, prev/next nav
-5. **Station trade at 3 skill levels** — ~15% of typical starting investment, meaningful not crippling
-6. **Downtime Actions rejected** — Dilutes the Drift's purpose
-7. **Station step before Equipment in character creation** — Must know your Station to pick gear
-8. **Economy fields default but adjustable** — Station defaults to 2, Backing to 3, Ledger to Level
+1. **Eleventy over Jekyll** — Node-based, clean shortcodes, no Ruby
+2. **Flat URL permalinks** — Global config preserves existing URL structure
+3. **Build-time page chrome and sidebar** — Layout generates everything, JS only does section TOC + scroll spy
+4. **Station trade at 3 skill levels** — ~15% of starting investment, creates organic diversity
+5. **Downtime Actions rejected** — The Drift is the pressure; take jobs or slide
+6. **Unified character sheets from JSON** — One template, data files, build generates all. Same format for build configs and player saves.
+7. **Save/load in builder uses build format** — A player's exported JSON can be dropped into _data/characters/ to generate a static sheet. Zero conversion needed.
 
 ## Open Issues
 
-- PAGES duplication between pages.json and main.js — resolve in Phase 3 cleanup
-- Sidebar chapter list still JS-generated — could move to build-time
-- Blank printable character sheet needs Station and Society economy fields added
-- Landing page (web/index.html) still standalone with duplicated CSS
-- Review all chapters in browser for visual regression after 11ty conversion
-- Bare `callout` class (Intimidation flex-stat note) has no shortcode
+- Character builder's print template (JS) and sheet.njk (Nunjucks) are parallel implementations of the same layout — the one remaining duplication point
+- Landing page still standalone with duplicated CSS
+- Visual review of all generated character sheets for print layout accuracy
+- Bare `callout` class has no shortcode (Intimidation flex-stat note)
 
 ## Next Session
 
-- Review site in browser for visual regression
-- Add Station/Backing/Ledger to blank printable sheet
-- Phase 3 cleanup: resolve PAGES duplication, consider build-time sidebar
+- Visual review of site and sheets in browser
+- Character sheet art / watermarks
+- Align builder print template with sheet.njk (or accept the duplication)
+- Design work: bestiary, archetypes, zone mechanics
