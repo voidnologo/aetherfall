@@ -939,5 +939,252 @@
 
 </div>
 
+<script>
+// If character data was passed via sessionStorage (from the builder's Print button),
+// populate this sheet and trigger print. This lets the builder use the same template
+// as the build-time sheets — zero duplication.
+(function() {
+  var raw = sessionStorage.getItem('aetherfall-print');
+  if (!raw) return;
+  sessionStorage.removeItem('aetherfall-print');
+
+  try { var c = JSON.parse(raw); } catch(e) { return; }
+
+  // Helper: set text of first matching element
+  function setText(selector, val) {
+    var el = document.querySelector(selector);
+    if (el && val) el.textContent = val;
+  }
+
+  // Helper: set all field-line values in a parent
+  function fillFieldLines(parentSelector, values) {
+    var lines = document.querySelectorAll(parentSelector + ' .field-line');
+    for (var i = 0; i < lines.length && i < values.length; i++) {
+      if (values[i]) lines[i].textContent = values[i];
+    }
+  }
+
+  // Update screen header
+  var h1 = document.querySelector('.tool-header h1');
+  if (h1 && c.name) h1.textContent = c.name;
+
+  // Header fields
+  var headers = document.querySelectorAll('.header .field-line');
+  if (headers[0]) headers[0].textContent = c.name || '';
+  if (headers[1]) headers[1].textContent = c.player || '';
+  if (headers[2]) headers[2].textContent = c.archetype || '';
+  if (headers[3]) headers[3].textContent = c.station != null ? c.station : '';
+
+  // Attributes: mark bubbles
+  var attrKeys = ['BR','PC','IN','SP','AW','PW'];
+  var attrRows = document.querySelectorAll('.attr-table tbody tr');
+  var brVal = 0, pcVal = 0, inVal = 0, spVal = 0, awVal = 0, pwVal = 0;
+  attrRows.forEach(function(row, idx) {
+    var key = attrKeys[idx];
+    if (!c.attrs || !c.attrs[key]) return;
+    var val = c.attrs[key].val;
+    if (val == null) return;
+
+    // Store for derived calcs
+    if (key === 'BR') brVal = val;
+    if (key === 'PC') pcVal = val;
+    if (key === 'IN') inVal = val;
+    if (key === 'SP') spVal = val;
+    if (key === 'AW') awVal = val;
+    if (key === 'PW') pwVal = val;
+
+    var bubbles = row.querySelectorAll('.attr-bubble');
+    bubbles.forEach(function(b, bi) {
+      if (bi === val + 3) b.classList.add('marked');
+    });
+
+    var descLine = row.querySelector('.attr-desc-line');
+    if (descLine && c.attrs[key].desc) descLine.textContent = c.attrs[key].desc;
+  });
+
+  // Derived values
+  var derivedBoxes = document.querySelectorAll('.derived-box');
+  var netTotal = brVal + pcVal + inVal + spVal + awVal + pwVal;
+  var hpPerTier = 7 + brVal;
+  var epPerTier = 7 + pwVal;
+  if (derivedBoxes[0]) derivedBoxes[0].textContent = (netTotal >= 0 ? '+' : '') + netTotal;
+  if (derivedBoxes[1]) derivedBoxes[1].textContent = hpPerTier;
+  if (derivedBoxes[2]) derivedBoxes[2].textContent = epPerTier;
+
+  // Description
+  var descLines = document.querySelectorAll('.section-title');
+  descLines.forEach(function(title) {
+    if (title.textContent.trim() === 'Character Description') {
+      var lines = title.parentElement.querySelectorAll('.notes-line');
+      if (lines[0] && c.description) lines[0].textContent = c.description;
+    }
+  });
+
+  // Skills
+  var skillRows = document.querySelectorAll('.skill-table tbody tr');
+  (c.skills || []).forEach(function(skill, i) {
+    if (!skillRows[i]) return;
+    var cells = skillRows[i].querySelectorAll('.field-line');
+    if (cells[0]) cells[0].textContent = skill.name;
+    if (cells[1]) { cells[1].textContent = skill.stat + '(' + (c.attrs[skill.stat] ? c.attrs[skill.stat].val : 0) + ')'; cells[1].style.textAlign = 'center'; }
+    if (cells[2]) { cells[2].textContent = skill.level; cells[2].style.textAlign = 'center'; }
+    var targetCell = skillRows[i].querySelector('.total-cell');
+    if (targetCell) targetCell.textContent = skill.target;
+  });
+
+  // Pool summary
+  var poolSummary = document.querySelector('.skill-pool-summary');
+  if (poolSummary) {
+    var spans = poolSummary.querySelectorAll('span');
+    if (spans[0]) spans[0].innerHTML = '<strong>Physical:</strong> 10+BR+PC = ' + (10 + brVal + pcVal);
+    if (spans[1]) spans[1].innerHTML = '<strong>Mental:</strong> 10+IN+AW+PW = ' + (10 + inVal + awVal + pwVal);
+    if (spans[2]) spans[2].innerHTML = '<strong>Social:</strong> 10+SP = ' + (10 + spVal);
+  }
+
+  // Weapons
+  var weaponRows = document.querySelectorAll('.weapon-table tbody tr');
+  (c.weapons || []).forEach(function(w, i) {
+    var row = weaponRows[i + 1]; // skip Unarmed row
+    if (!row) return;
+    var cells = row.querySelectorAll('td');
+    if (cells[0]) cells[0].textContent = w.name;
+    if (cells[1]) cells[1].textContent = w.skill;
+    if (cells[2]) cells[2].textContent = w.spd;
+    if (cells[3]) cells[3].textContent = w.dmg;
+    if (cells[4]) cells[4].textContent = w.cap || '\u2014';
+    if (cells[5]) cells[5].textContent = w.rld || '\u2014';
+    if (cells[6]) cells[6].textContent = w.rel || '\u2014';
+    if (cells[7]) cells[7].textContent = w.tags || '';
+  });
+
+  // Armor
+  var armorRows = document.querySelectorAll('.armor-table tbody tr');
+  var tBal = 0, tMar = 0, tHin = 0;
+  (c.armor || []).forEach(function(a, i) {
+    if (!armorRows[i]) return;
+    var cells = armorRows[i].querySelectorAll('td');
+    if (cells[0]) cells[0].textContent = a.name;
+    if (cells[1]) cells[1].textContent = a.ballistic;
+    if (cells[2]) cells[2].textContent = a.martial;
+    if (cells[3]) cells[3].textContent = a.hinder;
+    if (cells[4]) cells[4].textContent = a.notes || '';
+    tBal += (+a.ballistic || 0);
+    tMar += (+a.martial || 0);
+    tHin += (+a.hinder || 0);
+  });
+  // Armor totals (indices 3,4,5 of derived-box after attr ones)
+  if (derivedBoxes[3]) derivedBoxes[3].textContent = tBal;
+  if (derivedBoxes[4]) derivedBoxes[4].textContent = tMar;
+  if (derivedBoxes[5]) derivedBoxes[5].textContent = tHin;
+
+  // Wound/exhaustion track: mark crossed boxes
+  var allHpBoxes = document.querySelectorAll('.hp-box');
+  // First 40 are wounds (4 tiers x 10), next 40 are exhaustion
+  for (var i = 0; i < 40; i++) {
+    if (allHpBoxes[i] && (i % 10) >= hpPerTier) allHpBoxes[i].classList.add('crossed');
+  }
+  for (var i = 40; i < 80; i++) {
+    if (allHpBoxes[i] && ((i - 40) % 10) >= epPerTier) allHpBoxes[i].classList.add('crossed');
+  }
+
+  // XP
+  var xpBoxes = document.querySelectorAll('.xp-box');
+  if (xpBoxes[0] && c.xp) xpBoxes[0].textContent = c.xp.total || 0;
+  if (xpBoxes[1] && c.xp) xpBoxes[1].textContent = c.xp.spent || 0;
+
+  // Magic path checkboxes
+  var checkboxes = document.querySelectorAll('.checkbox');
+  if (c.path === 'scholarly' && checkboxes[0]) checkboxes[0].classList.add('checked');
+  if (c.path === 'wild' && checkboxes[1]) checkboxes[1].classList.add('checked');
+  if (c.path === 'none' && checkboxes[2]) checkboxes[2].classList.add('checked');
+
+  // Casting fields
+  var castingValues = document.querySelectorAll('.casting-value');
+  if (c.path !== 'none') {
+    // Find casting target from skills
+    var castSkillName = c.path === 'scholarly' ? 'Scholarly Casting' : 'Wild Casting';
+    var castSkill = (c.skills || []).find(function(s) { return s.name === castSkillName; });
+    if (castingValues[0] && castSkill) castingValues[0].textContent = castSkill.target;
+    if (castingValues[1]) castingValues[1].textContent = (pwVal + 4) * 10;
+    if (castingValues[2]) castingValues[2].textContent = c.path === 'scholarly' ? 'All' : (c.wildSchools || []).join(', ');
+    if (castingValues[3]) castingValues[3].textContent = c.path === 'scholarly' ? (7 + pwVal) : 'All in selected schools';
+  }
+
+  // Spells
+  var spellRows = document.querySelectorAll('.spell-table tbody tr');
+  (c.spells || []).forEach(function(sp, i) {
+    if (!spellRows[i]) return;
+    var cells = spellRows[i].querySelectorAll('td');
+    if (cells[0]) cells[0].textContent = sp.name;
+    if (cells[1]) cells[1].textContent = sp.school;
+    if (cells[2]) cells[2].textContent = sp.cast;
+    if (cells[3]) cells[3].textContent = sp.w;
+    if (cells[4]) cells[4].textContent = sp.s;
+    if (cells[5]) cells[5].textContent = sp.st;
+    if (cells[6]) cells[6].textContent = sp.sp;
+  });
+
+  // Inventory
+  var invLines = document.querySelectorAll('.inv-line');
+  var invItems = (c.inventory || '').split('\n').filter(Boolean);
+  invItems.forEach(function(item, i) { if (invLines[i]) invLines[i].textContent = item; });
+
+  // Society
+  var societyLines = document.querySelectorAll('.society-grid .field-line');
+  if (c.society) {
+    if (societyLines[0]) societyLines[0].textContent = c.society.name || '';
+    if (societyLines[1]) societyLines[1].textContent = c.society.type || '';
+    if (societyLines[2]) societyLines[2].textContent = c.society.patron || '';
+    if (societyLines[3]) societyLines[3].textContent = c.society.handler || '';
+    if (societyLines[4]) societyLines[4].textContent = c.society.backing || '';
+    // Ledger checkboxes
+    if (societyLines[5]) {
+      var levels = ['Flush','Level','Lean','Dire'];
+      societyLines[5].innerHTML = levels.map(function(l) {
+        return (c.society.ledger === l ? '&#9746;' : '&#9744;') + ' ' + l;
+      }).join(' &nbsp; ');
+    }
+  }
+
+  // Charter
+  var charterField = document.querySelector('.society-grid + .field .field-line');
+  if (charterField && c.society) charterField.textContent = c.society.charter || '';
+
+  // Faction
+  var factionSection = null;
+  document.querySelectorAll('.section-title').forEach(function(t) {
+    if (t.textContent.trim() === 'Faction Alignment') factionSection = t.parentElement;
+  });
+  if (factionSection) {
+    var fLines = factionSection.querySelectorAll('.field-line');
+    if (fLines[0]) fLines[0].textContent = c.faction || '';
+    if (fLines[1]) fLines[1].textContent = c.factionRelation || '';
+  }
+
+  // Contacts
+  var contactRows = document.querySelectorAll('.contact-row');
+  (c.contacts || []).forEach(function(ct, i) {
+    if (!contactRows[i]) return;
+    var lines = contactRows[i].querySelectorAll('.field-line');
+    if (lines[0]) lines[0].textContent = ct.name;
+    if (lines[1]) lines[1].textContent = ct.affiliation;
+    if (lines[2]) lines[2].textContent = ct.notes;
+  });
+
+  // Notes
+  var notesSection = null;
+  document.querySelectorAll('.section-title').forEach(function(t) {
+    if (t.textContent.trim() === 'Notes') notesSection = t.parentElement;
+  });
+  if (notesSection) {
+    var noteLines = notesSection.querySelectorAll('.notes-line');
+    var noteItems = (c.notes || '').split('\n').filter(Boolean);
+    noteItems.forEach(function(n, i) { if (noteLines[i]) noteLines[i].textContent = n; });
+  }
+
+  // Auto-print after a brief render delay
+  setTimeout(function() { window.print(); }, 200);
+})();
+</script>
 </body>
 </html>
