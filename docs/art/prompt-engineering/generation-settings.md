@@ -13,8 +13,13 @@ allow detailed description of pen technique, crosshatching, and decorative eleme
 
 | Priority | Model | Use Case |
 |----------|-------|----------|
-| 1st | `flux_dev.safetensors` | Final art — highest quality |
-| 2nd | `flux1-schnell-fp8.safetensors` | Drafts, iteration, style testing |
+| 1st | `flux1-schnell-fp8.safetensors` | FLUX — fast iteration, good quality |
+| Alt | `JuggernautXL_Ragnarok.safetensors` | SDXL — supports negative prompts, different aesthetic |
+| Alt | `sd_xl_base_1.0.safetensors` | SDXL base — stable fallback |
+| Alt | `DreamShaper_8_pruned.safetensors` | SD1.5 — lightweight, fast |
+
+**Note:** `flux_dev` is not currently installed. Schnell is the primary FLUX model.
+Schnell uses CFG 1.0, 4-8 steps, `simple` scheduler (not the dev settings below).
 
 ### LoRA Stack (Style-Critical)
 
@@ -39,10 +44,22 @@ vary by source — search for equivalents matching these descriptions:
 
 ### FLUX Generation Parameters
 
+**FLUX Schnell (primary):**
+
 | Parameter | Value | Notes |
 |-----------|-------|-------|
-| **CFG Scale** | 3.0-3.5 | Standard FLUX range |
-| **Steps** | 25 | Up to 35 for finals |
+| **CFG Scale** | 1.0 | Schnell is guidance-distilled — higher CFG degrades output |
+| **Steps** | 4-8 | Schnell converges fast; 8 for finals |
+| **Sampler** | euler | Standard FLUX sampler |
+| **Scheduler** | simple | Use `simple` for schnell (not `normal`) |
+| **Seed** | Record every seed | For reproducibility |
+
+**FLUX Dev (if installed):**
+
+| Parameter | Value | Notes |
+|-----------|-------|-------|
+| **CFG Scale** | 3.0-3.5 | Standard FLUX dev range |
+| **Steps** | 25-35 | More steps for higher quality |
 | **Sampler** | euler | Standard FLUX sampler |
 | **Scheduler** | normal | Standard FLUX scheduler |
 | **Seed** | Record every seed | For reproducibility |
