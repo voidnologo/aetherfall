@@ -5,7 +5,7 @@
   "player": "",
   "archetype": "The Spark",
   "station": 2,
-  "description": "Wiry, late twenties, sharp cheekbones. Dark eyes that catch light wrong sometimes. Ink-stained fingers, frayed coat cuffs. Carries a brass compass that hasn't pointed north since the eruption. Small objects near her drift when she concentrates.",
+  "description": "Wiry, late twenties, sharp cheekbones. Dark eyes that catch light wrong sometimes. Ink-stained fingers, frayed coat cuffs. Carries a brass compass that hasn't pointed north since the Tear. Small objects near her drift when she concentrates.",
   "attrs": {
     "BR": { "val": -1, "desc": "Slight build" },
     "PC": { "val": 0, "desc": "Average reflexes" },
@@ -64,6 +64,6 @@
     { "name": "Moth", "affiliation": "Underworld", "notes": "Courier, no questions asked" }
   ],
   "inventory": "Belt knife (hip sheath)\nJournal (leather, half-filled with sketches)\nChalk (6 sticks, various colors)\nBrass compass (spins in Aetheric zones -- talisman)\nCandles (4, beeswax)\nDried rations (3 days)\nWater flask\nSociety stipend purse (50 marks)",
-  "notes": "Felt the Aether since childhood. No formal training.\nHer compass hasn't pointed north since the eruption.\nGets migraines in deep Galvanic zones. Hides it.\nHums when she's concentrating. Doesn't realize she does it.\nObjects near her drift when she's stressed or angry.",
+  "notes": "Felt the Aether since childhood. No formal training.\nHer compass hasn't pointed north since the Tear.\nGets migraines in deep Galvanic zones. Hides it.\nHums when she's concentrating. Doesn't realize she does it.\nObjects near her drift when she's stressed or angry.",
   "xp": { "total": 0, "spent": 0 }
 }

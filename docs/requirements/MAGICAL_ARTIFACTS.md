@@ -3,7 +3,7 @@
 ## Document Status: DRAFT — Second Pass
 **Last Updated:** 2026-04-07
 
-Rules for enchanted artifacts, wards (including wearable charms), and potions. Covers creation, use, and the mystery of Pre-Eruption artifacts.
+Rules for enchanted artifacts, wards (including wearable charms), and potions. Covers creation, use, and the mystery of Pre-Tear artifacts.
 
 **Relationship to Other Documents:**
 - [MAGIC_SYSTEM.md](MAGIC_SYSTEM.md) — Casting mechanics, backlash, schools, exhaustion (§3), spell acquisition (§5)
@@ -47,13 +47,13 @@ The creator rolls the d6 openly at the time of creation and knows the result. Th
 
 **This rule applies to wards and potions only.** Enchanted artifacts do not decay — their permanence is what makes them special.
 
-### Pre-Eruption Artifacts
+### Pre-Tear Artifacts
 
-Rare objects exist that predate the Eruption. A sword that hums with magical energy, found sealed in a vault that hasn't been opened in two centuries. An amulet pulled from a shipwreck older than anyone's grandparents. A ward-stone buried in ruins that predate the Veil's thinning by decades — or centuries.
+Rare objects exist that predate the Tear. A sword that hums with magical energy, found sealed in a vault that hasn't been opened in two centuries. An amulet pulled from a shipwreck older than anyone's grandparents. A ward-stone buried in ruins that predate the Veil's thinning by decades — or centuries.
 
-Nobody can explain them. Magic is supposed to be new. These objects shouldn't exist. Every Pre-Eruption artifact is a mystery, and some of the most dangerous questions in the world orbit around them: Was magic here before the Eruption, hidden? Did someone know this was coming? Are these objects even human-made?
+Nobody can explain them. Magic is supposed to be new. These objects shouldn't exist. Every Pre-Tear artifact is a mystery, and some of the most dangerous questions in the world orbit around them: Was magic here before the Tear, hidden? Did someone know this was coming? Are these objects even human-made?
 
-**Pre-Eruption artifacts cannot be created by player characters.** Their existence is a story hook, not a crafting recipe. GMs should treat them as campaign-defining discoveries — the kind of thing that changes what a party thinks they know about the world.
+**Pre-Tear artifacts cannot be created by player characters.** Their existence is a story hook, not a crafting recipe. GMs should treat them as campaign-defining discoveries — the kind of thing that changes what a party thinks they know about the world.
 
 ---
 
@@ -98,7 +98,7 @@ Every enchanted artifact has a **Magical Reliability** rating — a measure of h
 | Standard | 85 |
 | Strong | 90 |
 | Spectacular | 95 |
-| Pre-Eruption | 98 |
+| Pre-Tear | 98 |
 
 **Effective Magical Reliability** = Base + (net Aetheric balance × 2)
 
@@ -353,6 +353,6 @@ Potions aren't mass-produced, but they are traded. A healer in a magical neighbo
 1. **Enchanted firearms** — Can firearms be enchanted? The current rule says no (non-modern weapons only). This creates a clean magic/tech divide but closes off an interesting design space. If revisited: an enchanted firearm would be fighting itself — pushing the Aetheric balance against its own Reliability. Needs specific rules if ever allowed.
 2. **Artifact pricing** — What does an enchanted weapon cost in currency? Depends on currency system design (see pending-tasks.md). For now, treat as "extremely valuable, GM determines."
 3. **Potion ingredients** — Should there be a codified ingredient system, or leave it to GM narrative? Leaning toward narrative (avoids herbalism minigame that doesn't fit the system's philosophy).
-4. **Pre-Eruption artifact mechanics** — Should Pre-Eruption artifacts follow different rules? They might have effects that don't map to known spells, or multiple enchantments on a single object. Left intentionally vague for GMs.
+4. **Pre-Tear artifact mechanics** — Should Pre-Tear artifacts follow different rules? They might have effects that don't map to known spells, or multiple enchantments on a single object. Left intentionally vague for GMs.
 5. **Non-weapon artifact tags** — The framework supports enchanted armor, tools, and other objects, but specific tag tables haven't been written yet. Expand as play demands.
 6. **Charm stacking** — Currently no special rules for wearing multiple charms (wearable wards). If playtesting reveals abuse, revisit with an interference system.

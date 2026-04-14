@@ -192,7 +192,7 @@ When something is beyond a character's Station, the system does not say "no." It
 
 ## 3. Currency: Marks
 
-The **mark** is the standard unit of currency across post-eruption society. Pre-eruption governments minted their own currencies, but the collapse of centralized authority and the rise of cross-faction commerce created demand for a common medium of exchange. The mark emerged from the Ashworth Collective's trade networks and became dominant through sheer utility — it's accepted everywhere because everyone else accepts it.
+The **mark** is the standard unit of currency across post-Tear society. Pre-Tear governments minted their own currencies, but the collapse of centralized authority and the rise of cross-faction commerce created demand for a common medium of exchange. The mark emerged from the Ashworth Collective's trade networks and became dominant through sheer utility — it's accepted everywhere because everyone else accepts it.
 
 ### 3.1 What Marks Buy (Narrative Anchors)
 
@@ -402,7 +402,7 @@ Every purchasable thing in the world has an implied **Cost Tier** from 0 to 5 th
 | 2 | **Standard** | A conventional firearm (revolver, shotgun), working clothes, a week's rent in a modest district, passage on a cargo vessel, a doctor's visit, basic alchemical components, standard adventuring gear |
 | 3 | **Quality** | A fine meal, custom-tailored clothes, a reliable vehicle, a warded charm, a specialist's time (engineer, caster, lawyer), passenger airship passage, a good hotel room |
 | 4 | **Premium** | A Galvanic device (Exotic weapon or oddity), enchanted equipment, membership at a private club, the best hotel in the district, a surgeon with a reputation, a favor from a faction official |
-| 5 | **Exclusive** | An enchanted artifact, a personal airship, a seat at a faction council table, an estate, information that could start a war, Pre-Eruption technology |
+| 5 | **Exclusive** | An enchanted artifact, a personal airship, a seat at a faction council table, an estate, information that could start a war, Pre-Tear technology |
 
 ### 7.2 The Access Rule
 
@@ -532,7 +532,7 @@ When an artifact needs to be valued for fiction purposes (trade, negotiation, th
 | Standard | A year of comfortable living | Enough to change someone's Station. A notable expenditure for a faction. |
 | Strong | A small property or a vehicle | Enough to fund a Society for months. Factions pay attention. |
 | Spectacular | A building or a ship | Faction-level asset. Recovery of one could define a campaign arc. |
-| Pre-Eruption | Priceless | Cannot be meaningfully valued in marks. Nations would compete for it. Wars have started over less. |
+| Pre-Tear | Priceless | Cannot be meaningfully valued in marks. Nations would compete for it. Wars have started over less. |
 
 These are not prices. They are narrative anchors. When a player asks "how much is this worth?" the GM does not say "twelve thousand marks." They say "enough to keep the Society funded for the rest of the year" or "enough that the Ashworth Collective would send a recovery team."
 
@@ -689,7 +689,7 @@ Voice callouts are in-world people sharing lived experiences — never rules com
 - On getting things: "An Exotic pistol off the books? I know a man in the Coalfield who knows a woman in the Quarter. It'll cost you — not in marks. She'll want a favor. And she always collects."
 
 **The Believer** (personal spiritual experiences, communal warmth):
-- On the Quarter's way of life: "When old Thessaly lost her workshop in the zone shift, she didn't have a single mark saved. But she had thirty years of mending wards for every family on Ember Street. She slept in a different house every night for two months. Nobody asked her to leave. Nobody asked her to pay. That's worth more than any bank account, and no eruption can take it from you."
+- On the Quarter's way of life: "When old Thessaly lost her workshop in the zone shift, she didn't have a single mark saved. But she had thirty years of mending wards for every family on Ember Street. She slept in a different house every night for two months. Nobody asked her to leave. Nobody asked her to pay. That's worth more than any bank account, and no calamity can take it from you."
 
 ### 12.4 Character Sheet Additions
 

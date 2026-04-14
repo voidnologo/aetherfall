@@ -227,7 +227,7 @@ When illustrating game mechanics or setting concepts, include these visual eleme
 | **Backlash** | Cracked skin, energy leaking, pain response, surrounding environment damaged |
 | **Steampunk Exotics** | Brass and copper construction, vacuum tubes, arc coils, aetheric crystals, visible energy conduits |
 | **Conventional Tech** | Standard 1920s firearms and machinery, no exotic elements, reliable and mundane |
-| **The Eruption** | Reality cracking open, the mundane world splitting to reveal something vast beneath |
+| **The Tear** | Reality cracking open, the mundane world splitting to reveal something vast beneath |
 
 ---
 

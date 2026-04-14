@@ -59,7 +59,7 @@ Start here to understand the game's design landscape:
 
 **1. [PROJECT_SPEC.md](docs/requirements/PROJECT_SPEC.md)** — What the game is
 
-The top-level vision document. Establishes the design pillars (theater of mind, mechanical consistency, OSR lethality, rulings over rules), the setting premise (a world 40 years past the Aetheric eruption), and the scope of play (Adventuring Societies chartered by patrons).
+The top-level vision document. Establishes the design pillars (theater of mind, mechanical consistency, OSR lethality, rulings over rules), the setting premise (a world 40 years past the Tear), and the scope of play (Adventuring Societies chartered by patrons).
 
 **2. [DESIGN_PHILOSOPHY.md](docs/requirements/DESIGN_PHILOSOPHY.md)** — Why the world works this way
 
@@ -91,7 +91,7 @@ Every weapon has Speed, Damage, Capacity, Reload, and Reliability. Firearms chec
 
 **9. [WORLD_DESIGN.md](docs/requirements/WORLD_DESIGN.md)** — The setting
 
-"Fog of Scale" principle: global events are rumors, regional politics are faction-driven, local detail is NPC-level. The world is 40-60 years past the eruption that brought magic back. Factions include Industrialists, Traditionalists, Academics, the Church, and criminal networks.
+"Fog of Scale" principle: global events are rumors, regional politics are faction-driven, local detail is NPC-level. The world is 40-60 years past the Tear that brought magic back. Factions include Industrialists, Traditionalists, Academics, the Church, and criminal networks.
 
 **10. [WRITING_STYLE.md](docs/requirements/WRITING_STYLE.md)** — How to write for the game
 

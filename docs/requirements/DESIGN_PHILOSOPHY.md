@@ -15,7 +15,7 @@ The world has two competing metaphysical forces. Neither is fully understood by 
 
 **The Aether — drawn from the Veil.** Primal, wild, recently erupted into the world. The Veil is the boundary between the mundane world and something vast and inhuman beyond it. When the Veil thinned within living memory, the Aether poured through. Casters draw Aetheric power through the Veil — where it's thin (Wild Zones), magic is strong. Where the Engine drowns it out (Galvanic Zones), magic can't reach. Aetheric force is wondrous, feared, and poorly understood. It disrupts the established order.
 
-**The Galvanic Force — drawn from the Engine.** The world's counter-response to the Aether — not conventional engineering, but something stranger. The Engine is the metaphysical wellspring of human industry and will, given force by the emergence of exotic technology. Galvanic devices push back against the Aether the way the Aether pushes against technology. The Engine emerged *after* the Aetheric eruption, as if the universe demanded balance. Whether this is a conscious force, an immune response, or just physics is unknown. People debate it. Cults form around both interpretations.
+**The Galvanic Force — drawn from the Engine.** The world's counter-response to the Aether — not conventional engineering, but something stranger. The Engine is the metaphysical wellspring of human industry and will, given force by the emergence of exotic technology. Galvanic devices push back against the Aether the way the Aether pushes against technology. The Engine emerged *after* the Tear, as if the universe demanded balance. Whether this is a conscious force, an immune response, or just physics is unknown. People debate it. Cults form around both interpretations.
 
 **The Baseline (Physical Reality):** Steel, wood, muscle, simple machines. The bedrock of the world. Immune to both forces. A sword works everywhere. A horse doesn't care about the Aether or the Engine. This is why martial weapons, hand tools, and pre-industrial technology remain relevant — they are the only truly reliable things in a world being pulled in two directions.
 
@@ -208,8 +208,8 @@ Slow accumulation decay means magic leaves traces. This gives rise to:
 
 ### 4.4 Faction Dynamics
 
-- **Pro-technology factions** want to expand Galvanic Zones, suppress magic, and develop exotic tech to push back the eruption. They see magic as a threat to civilization.
-- **Pro-magic factions** see the eruption as a return to something primal and true. They distrust technology's response and may view exotic tech as an abomination — a perversion of the natural order.
+- **Pro-technology factions** want to expand Galvanic Zones, suppress magic, and develop exotic tech to push back the Tear. They see magic as a threat to civilization.
+- **Pro-magic factions** see the Tear as a return to something primal and true. They distrust technology's response and may view exotic tech as an abomination — a perversion of the natural order.
 - **Pragmatist factions** use both and try to navigate the middle ground. Most Adventuring Societies probably fall here — they need everything they can get.
 - **Extremist factions** may be trying to tip the balance permanently in one direction. These are the setting's major antagonists (on both sides).
 

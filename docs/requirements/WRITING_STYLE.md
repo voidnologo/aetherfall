@@ -162,7 +162,7 @@ The game's two opposing forces have specific terminology. Use the right term for
 
 | Term | What It Is | When to Use |
 |------|-----------|-------------|
-| **The Veil** | The boundary between the mundane world and the magical beyond. Where the Aether comes from. | When describing the cosmological source of magic, the nature of wild zones ("the Veil is thin here"), or the eruption event ("when the Veil thinned"). Formal, evocative, setting-level. |
+| **The Veil** | The boundary between the mundane world and the magical beyond. Where the Aether comes from. | When describing the cosmological source of magic, the nature of wild zones ("the Veil is thin here"), or the Tear ("when the Veil thinned"). Formal, evocative, setting-level. |
 | **The Engine** | The metaphysical wellspring of human industry and will. Where Galvanic force comes from. | When describing the cosmological source of exotic tech, the nature of industrial dead zones ("the Engine hums in these walls"), or the emergence of Galvanic technology. Formal, evocative, setting-level. |
 
 ### The Forces (Mechanical)

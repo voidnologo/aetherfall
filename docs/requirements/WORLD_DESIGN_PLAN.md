@@ -4,7 +4,7 @@
 
 The Aetherfall RPG has complete mechanical systems (13-chapter web rulebook) but no narrative layer. The world's cosmological framework (Aetheric/Galvanic tension, zones, the Veil/Engine) is locked in DESIGN_PHILOSOPHY.md and PROJECT_SPEC.md §2, but the *political, social, and geographic* reality that players and GMs inhabit doesn't exist yet. This is the next critical piece — without it, GMs have mechanics but no world to run them in.
 
-The user's vision: a balkanized, fragmented world where magic's eruption physically remade geography, collapsed governments, and created a patchwork of local power centers. Think Neal Stephenson's Diamond Age/Snow Crash (phyles, burbclaves, franchise-states) crossed with Arcane's Piltover/Zaun divide. Stories start local. Rumors outpace facts. Adventure is close.
+The user's vision: a balkanized, fragmented world where the Tear physically remade geography, collapsed governments, and created a patchwork of local power centers. Think Neal Stephenson's Diamond Age/Snow Crash (phyles, burbclaves, franchise-states) crossed with Arcane's Piltover/Zaun divide. Stories start local. Rumors outpace facts. Adventure is close.
 
 **Output:** `docs/requirements/WORLD_DESIGN.md` — a design doc that establishes all parameters before any web chapter work.
 
@@ -26,7 +26,7 @@ Write the design doc collaboratively, section by section, pausing for user feedb
 
 **Section 2: The World Before and After**
 - **Before:** Industrial world, governments in control, occult societies were curiosities
-- **The Eruption:** Magic tore through. Not gradual — catastrophic. Wild Zones swallowed regions. Cities fractured. The Midwest analog became mystical forest. Coastal cities saw neighborhoods collapse into low-tech/high-magic enclaves
+- **The Tear:** Magic tore through. Not gradual — catastrophic. Wild Zones swallowed regions. Cities fractured. The Midwest analog became mystical forest. Coastal cities saw neighborhoods collapse into low-tech/high-magic enclaves
 - **The Counter-Response:** The Engine awoke. Galvanic tech emerged. New power centers formed — techno-wonder archipelagos, fortified industrial districts
 - **Now:** Governments struggle to hold territory. Communication exists but rumors dominate. Prophets and ideologues fill the vacuum. Small groups with enough magic or tech carve out sovereign territories. The world is divided but not at war — balkanized, patchwork, local
 
@@ -52,7 +52,7 @@ Write the design doc collaboratively, section by section, pausing for user feedb
 - 6-8 concrete examples, each ~150-250 words (sketch depth)
 - Each gets: name, meta-faction lean, what they want, what they do, what they're hiding, 2-3 GM hooks, one named NPC
 - All explicitly framed as samples — "file the serial numbers off"
-- Drawn from the balkanized world: a fortified factory district, a reborn Aetheric neighborhood, a prophet's growing commune, a smuggler network working the zone borders, an academic enclave studying the eruption, a government remnant trying to hold a city together, a criminal syndicate playing both sides, a wilderness community adapted to the Wild
+- Drawn from the balkanized world: a fortified factory district, a reborn Aetheric neighborhood, a prophet's growing commune, a smuggler network working the zone borders, an academic enclave studying the Tear, a government remnant trying to hold a city together, a criminal syndicate playing both sides, a wilderness community adapted to the Wild
 - Factions are purely narrative — no mechanical reputation system
 
 **Section 6: Adventuring Societies**

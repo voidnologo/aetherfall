@@ -33,7 +33,7 @@ The world is large. Communication exists — telegraph, radio, newspapers, couri
 The world has no proper name — it is simply *the world*. Everyone knows they live on a planet in a solar system. There is no space travel. This is it, as far as anyone knows. Some cultists believe there are powers from elsewhere, but they're cultists — no respectable person would hold such views.
 
 - **No named countries.** Governments exist but are struggling, fragmented, and fluid. Naming them locks in political structures that should vary by table.
-- **No canonical maps.** The eruption physically reshaped geography. What the world looks like now depends on where you are and who you ask.
+- **No canonical maps.** The Tear physically reshaped geography. What the world looks like now depends on where you are and who you ask.
 - **No named continents or oceans.** The GM defines the geography of their version of the world. This document provides *types* of places, not *specific* places.
 
 When this document describes geography, it uses archetypes: "a heartland turned mystical forest," "a coastal industrial city," "an archipelago of techno-wonder." These are templates, not canon.
@@ -44,7 +44,7 @@ All history in this setting is shallow — 40 to 60 years deep. The Veil thinned
 
 This constraint is load-bearing:
 - **The generation gap IS the history.** Elders remember a world without magic. The young have never known anything else. This tension is present in every family, every institution, every faction.
-- **Nothing is settled.** The world is still reacting to the eruption. Governments haven't finished reorganizing. Borders haven't stabilized. The rules of power are being rewritten in real time.
+- **Nothing is settled.** The world is still reacting to the Tear. Governments haven't finished reorganizing. Borders haven't stabilized. The rules of power are being rewritten in real time.
 - **Nobody is an expert.** The first generation of trained casters is just now reaching maturity. Galvanic technology is prototype-grade. Every authority figure is improvising.
 
 ### 1.4 Mystery Is Load-Bearing
@@ -88,7 +88,7 @@ The web chapter will use multiple in-world voices — different contributors wit
 
 ## 2. The World Before and After
 
-### 2.1 Before the Eruption
+### 2.1 Before the Tear
 
 Within living memory, the world was industrial and confident. Steam and steel. Telegraph wires and rail lines. Factories and foundries. Governments held territory, armies held borders, and the rules of power were understood if not always fair. Occult societies existed — parlor spiritualists, hedge scholars poring over old texts, secret clubs performing rituals by candlelight — but they were curiosities. Entertainment for the bored rich or obsessions of the unwell. Magic was not real.
 
@@ -96,7 +96,7 @@ The world was not a paradise. Labor was exploited. Colonial powers extracted wea
 
 Then the Veil thinned, and the trajectory shattered.
 
-### 2.2 The Eruption
+### 2.2 The Tear
 
 It was not gradual. Within a span of months — accounts vary, records are incomplete, and much of the infrastructure for record-keeping was destroyed in the event itself — the Veil thinned across the world. The Aether poured through.
 
@@ -107,7 +107,7 @@ The effects were catastrophic and uneven:
 - **People changed.** Some individuals discovered they could feel the Aether — could shape it, channel it, bend it toward intention. The first wild casters emerged, untrained and dangerous, performing feats of wonder and destruction in equal measure. Governments, churches, and institutions had no framework for this. Fear and awe competed in the streets.
 - **The old order buckled.** Trade routes crossed zones that were no longer navigable by machine. Military supply lines collapsed where Aetheric saturation killed engines. Communication networks — telegraph, early radio — became unreliable in affected areas. The governments that had held territory through infrastructure suddenly found that infrastructure was the very thing failing them.
 
-> **GM Note:** The eruption is the foundational trauma of the setting. Every NPC over 50 remembers it. Ask them what they lost. A farmer whose land became forest. A factory owner whose machines went silent. A soldier whose rifle stopped working in the middle of a deployment. These personal stories *are* the history — more than any timeline could be.
+> **GM Note:** The Tear is the foundational trauma of the setting. Every NPC over 50 remembers it. Ask them what they lost. A farmer whose land became forest. A factory owner whose machines went silent. A soldier whose rifle stopped working in the middle of a deployment. These personal stories *are* the history — more than any timeline could be.
 
 ### 2.3 The Counter-Response
 
@@ -121,15 +121,15 @@ The people and institutions with access to Galvanic technology gained enormous l
 
 ### 2.4 The World Now
 
-The eruption was within living memory. The counter-response is even more recent. The world has not recovered — it has *reorganized*, messily, incompletely, and without consensus.
+The Tear was within living memory. The counter-response is even more recent. The world has not recovered — it has *reorganized*, messily, incompletely, and without consensus.
 
 **The big picture:**
 
-- **Governments struggle.** The nations that existed before the eruption still claim their old borders, but claiming and controlling are different things. Entire regions are Wild Zones that no conventional military can hold. Supply lines are fragile. Tax collection requires roads, and roads require zone stability. Some governments have adapted — partnering with Galvanic manufacturers, establishing zone containment agencies, funding Adventuring Societies to do the work armies cannot. Others have fractured into regional authorities, city-states, or simply lost relevance.
+- **Governments struggle.** The nations that existed before the Tear still claim their old borders, but claiming and controlling are different things. Entire regions are Wild Zones that no conventional military can hold. Supply lines are fragile. Tax collection requires roads, and roads require zone stability. Some governments have adapted — partnering with Galvanic manufacturers, establishing zone containment agencies, funding Adventuring Societies to do the work armies cannot. Others have fractured into regional authorities, city-states, or simply lost relevance.
 
 - **The world is balkanized.** Not at war — fragmented. Think phyles, not nations. Small groups with enough magic, enough Galvanic backing, or enough sheer will have carved out sovereign territories. A factory district fortified by Galvanic dead zones. A neighborhood reborn as an Aetheric commune. A prophet's growing settlement in the unclaimed wild. A criminal syndicate that runs the border zones because nobody else will. These enclaves exist alongside (and inside) the remnants of the old governments, competing for resources, influence, and the loyalty of the people living in between.
 
-- **Prophets and ideologues are rising.** The eruption shattered the old certainties. In the vacuum, charismatic figures are building movements. Some preach the Aether as salvation — a return to something real and primal. Others preach the Engine as humanity's righteous defense. Still others preach that both forces are punishment for sins, or tests from gods, or tools to be mastered. These movements range from genuine spiritual awakenings to cynical power grabs, and telling the difference is not always easy.
+- **Prophets and ideologues are rising.** The Tear shattered the old certainties. In the vacuum, charismatic figures are building movements. Some preach the Aether as salvation — a return to something real and primal. Others preach the Engine as humanity's righteous defense. Still others preach that both forces are punishment for sins, or tests from gods, or tools to be mastered. These movements range from genuine spiritual awakenings to cynical power grabs, and telling the difference is not always easy.
 
 - **Communication exists, but trust is scarce.** Telegraph and radio work in neutral and Galvanic zones. Newspapers print. Couriers ride. Information moves — but so do rumors, propaganda, and deliberate misinformation. The further from your own territory a report originates, the less you can verify it. This is the world's default state: *locally informed, globally speculative.*
 
@@ -159,7 +159,7 @@ Travelers who cross the Reclaimed Wild report that the deeper you go, the less t
 
 ### 3.2 The Fractured Cities
 
-Most major cities survived the eruption — but not intact. A typical city now is a patchwork: districts that are functionally neutral, districts that have tipped Aetheric, districts fortified into Galvanic enclaves, and the messy gradient borders between them. City governments nominally control the whole, but in practice each zone has its own power structure, its own economy, and its own rules.
+Most major cities survived the Tear — but not intact. A typical city now is a patchwork: districts that are functionally neutral, districts that have tipped Aetheric, districts fortified into Galvanic enclaves, and the messy gradient borders between them. City governments nominally control the whole, but in practice each zone has its own power structure, its own economy, and its own rules.
 
 An Aetheric district might look like a neighborhood from two centuries ago — gas lamps (because electric ones fail), cobblestone (because asphalt crumbles near strong Aether), market stalls (because supply chains collapsed). But the healer on the corner can mend a broken bone with a touch, and the locksmith's wards are literally impenetrable. The people here aren't backward — they're *differently advanced.*
 
@@ -223,13 +223,13 @@ These are not organizations. Nobody carries a membership card. Nobody attends me
 
 **Mapped theory:** The Immune Response (see [DESIGN_PHILOSOPHY.md §1.3](DESIGN_PHILOSOPHY.md)). The Engine is the world's immune system fighting an infection. Galvanic technology is the cure.
 
-**Who leans this way:** Industrialists. Military hardliners. Old-guard government officials. Colonial-era power structures trying to reassert themselves. Engineers and inventors. Factory owners. Anyone whose wealth, status, or identity was built on the pre-eruption order.
+**Who leans this way:** Industrialists. Military hardliners. Old-guard government officials. Colonial-era power structures trying to reassert themselves. Engineers and inventors. Factory owners. Anyone whose wealth, status, or identity was built on the pre-Tear order.
 
 **What it looks like in practice:**
 - Funding Galvanic research to expand the Engine's reach
 - Clearing Wild Zones for redevelopment — farms, factories, infrastructure
 - Treating magic users with suspicion or outright hostility
-- Framing the eruption as a disaster to be recovered from, not a change to be adapted to
+- Framing the Tear as a disaster to be recovered from, not a change to be adapted to
 - Advocating for zone containment, caster registration, and Aetheric suppression policy
 
 **The tension within:** Restorationists agree on the premise but not the methods. A factory magnate who wants to bulldoze a Wild Zone for profit and a retired general who wants to retake lost territory for national honor share a meta-faction alignment — and despise each other. The movement has no leadership, no coordination, and no shortage of internal contradiction.
@@ -238,11 +238,11 @@ These are not organizations. Nobody carries a membership card. Nobody attends me
 
 ### 4.2 The Awakening
 
-**Core belief:** The Aether is not a catastrophe — it is a revelation. The Veil thinned because it was *meant* to. The world before the eruption was diminished, cut off from something vast and ancient. Magic is a return to wholeness. The Engine is the aberration.
+**Core belief:** The Aether is not a catastrophe — it is a revelation. The Veil thinned because it was *meant* to. The world before the Tear was diminished, cut off from something vast and ancient. Magic is a return to wholeness. The Engine is the aberration.
 
 **Mapped theory:** The Rival Gods (see [DESIGN_PHILOSOPHY.md §1.3](DESIGN_PHILOSOPHY.md)). The Veil and the Engine are conscious (or at least intentional) forces. The Aether is the older, truer one. The Engine is humanity's frightened reflex, manufacturing a counter-force out of denial.
 
-**Who leans this way:** Casters — especially wild casters who feel the Aether instinctively. Communities in the Reclaimed Wild who have adapted to magical living. Occult scholars. Spiritual seekers. Romantic revolutionaries who see magic as liberation from industrial exploitation. Some religious movements that interpret the eruption as divine intervention.
+**Who leans this way:** Casters — especially wild casters who feel the Aether instinctively. Communities in the Reclaimed Wild who have adapted to magical living. Occult scholars. Spiritual seekers. Romantic revolutionaries who see magic as liberation from industrial exploitation. Some religious movements that interpret the Tear as divine intervention.
 
 **What it looks like in practice:**
 - Defending Wild Zones against Galvanic encroachment
@@ -290,7 +290,7 @@ Each faction is sketched at local/regional scale: a district, a territory, a com
 
 **Meta-faction lean:** Restoration (strong)
 
-**What they are:** An industrial conglomerate that consolidated three factory districts after the eruption. They produce Galvanic components — not full weapons, but the capacitors, resonance coils, and stabilizers that other manufacturers need. They've leveraged this into enormous economic power within the city.
+**What they are:** An industrial conglomerate that consolidated three factory districts after the Tear. They produce Galvanic components — not full weapons, but the capacitors, resonance coils, and stabilizers that other manufacturers need. They've leveraged this into enormous economic power within the city.
 
 **What they want:** Expand their Galvanic dead zone to encompass the entire industrial quarter, driving out Aetheric influence and the "undesirables" who depend on it. Long-term, they want to be the sole supplier of Galvanic components in the region.
 
@@ -309,7 +309,7 @@ Each faction is sketched at local/regional scale: a district, a territory, a com
 
 **Meta-faction lean:** Awakening (moderate)
 
-**What they are:** A city district that tipped Aetheric during the eruption and never came back. The residents — those who stayed — rebuilt around magic. The Quarter is self-governing by necessity; the city government can't project authority into a zone where their equipment fails. What emerged is part commune, part guild network, part something that doesn't have a name yet.
+**What they are:** A city district that tipped Aetheric during the Tear and never came back. The residents — those who stayed — rebuilt around magic. The Quarter is self-governing by necessity; the city government can't project authority into a zone where their equipment fails. What emerged is part commune, part guild network, part something that doesn't have a name yet.
 
 **What they want:** To be left alone. Failing that, to be recognized as a legitimate district with the same rights as any other — not treated as a containment problem or a slum to be cleared.
 
@@ -322,7 +322,7 @@ Each faction is sketched at local/regional scale: a district, a territory, a com
 - The sustained rituals have attracted something from beyond the Veil — not hostile, exactly, but *present* in a way that's making even the senior casters nervous. Someone needs to figure out what it is before it becomes a crisis.
 - A Restorationist politician is pushing to have the Quarter classified as a hazardous zone, which would justify forced evacuation. The Quarter needs allies — and evidence that their zone is stable and safe.
 
-**Sample NPC:** **Maren Elia** — Unofficial leader, healer, mediator. Came to the Quarter as a refugee after the eruption and discovered she could cast. Built the clinic that became the community's anchor. She's tired, stubborn, and sick of explaining to outsiders that her home is not a disaster area. She is not part of the ritual circle but suspects it exists.
+**Sample NPC:** **Maren Elia** — Unofficial leader, healer, mediator. Came to the Quarter as a refugee after the Tear and discovered she could cast. Built the clinic that became the community's anchor. She's tired, stubborn, and sick of explaining to outsiders that her home is not a disaster area. She is not part of the ritual circle but suspects it exists.
 
 ### 5.3 The Lamplighter Syndicate
 
@@ -347,9 +347,9 @@ Each faction is sketched at local/regional scale: a district, a territory, a com
 
 **Meta-faction lean:** Awakening (strong, bordering on extreme)
 
-**What they are:** A prophet-led settlement in the Reclaimed Wild. Founded by a charismatic figure called Mother Thorn — a wild caster who claims the Aether speaks to her directly. The Communion began as a refugee camp for people displaced by the eruption and has grown into a genuine community of several hundred, with farms (Aetheric-enhanced), defenses (warded perimeter), and a shared spiritual practice centered on communion with the Veil.
+**What they are:** A prophet-led settlement in the Reclaimed Wild. Founded by a charismatic figure called Mother Thorn — a wild caster who claims the Aether speaks to her directly. The Communion began as a refugee camp for people displaced by the Tear and has grown into a genuine community of several hundred, with farms (Aetheric-enhanced), defenses (warded perimeter), and a shared spiritual practice centered on communion with the Veil.
 
-**What they want:** To build a society aligned with the Aether — proof that humanity can live *with* magic, not just *despite* it. Mother Thorn preaches that the eruption was a gift, and the Engine is humanity's fearful refusal to accept it.
+**What they want:** To build a society aligned with the Aether — proof that humanity can live *with* magic, not just *despite* it. Mother Thorn preaches that the Tear was a gift, and the Engine is humanity's fearful refusal to accept it.
 
 **What they do:** Farm, build, worship, and defend their territory. The Communion is largely self-sufficient — their Aetheric-enhanced agriculture produces more than they need, and they trade the surplus with nearby communities. They accept refugees but are increasingly selective about who they let in. They do not hire Adventuring Societies — they train their own.
 
@@ -360,13 +360,13 @@ Each faction is sketched at local/regional scale: a district, a territory, a com
 - The Communion's enhanced crops are appearing in markets far from Thornfield — someone is trading with them at scale, and the Communion says they don't know who. The supply chain leads somewhere unexpected.
 - A government remnant has classified the Communion as a hostile enclave and is assembling resources to dismantle it. The Communion is preparing to defend. A Society caught between them has to decide whose side they're on — or find a third option.
 
-**Sample NPC:** **Mother Thorn (Essara Dain)** — Founder and spiritual leader. Mid-fifties, was a schoolteacher before the eruption. Discovered she could cast when the Wild rolled over her town. Walked into the Reclaimed Wild and didn't come back for a year. When she did, she had followers. She is sincere, warm, terrifying when angry, and genuinely uncertain about the voice she hears — but she will never admit that uncertainty to anyone.
+**Sample NPC:** **Mother Thorn (Essara Dain)** — Founder and spiritual leader. Mid-fifties, was a schoolteacher before the Tear. Discovered she could cast when the Wild rolled over her town. Walked into the Reclaimed Wild and didn't come back for a year. When she did, she had followers. She is sincere, warm, terrifying when angry, and genuinely uncertain about the voice she hears — but she will never admit that uncertainty to anyone.
 
 ### 5.5 The Greycoat Authority
 
 **Meta-faction lean:** Arrangement (with Restoration sympathies)
 
-**What they are:** The remnant of a city's pre-eruption government — specifically, its civil service and constabulary. When the elected officials fled, retired, or became irrelevant, the career bureaucrats and police kept the lights on. The Greycoats (named for their old civil service uniforms) are what's left of municipal authority in a fractured city. They control the neutral zone at the city's center and claim jurisdiction over everything else, though their actual reach is limited.
+**What they are:** The remnant of a city's pre-Tear government — specifically, its civil service and constabulary. When the elected officials fled, retired, or became irrelevant, the career bureaucrats and police kept the lights on. The Greycoats (named for their old civil service uniforms) are what's left of municipal authority in a fractured city. They control the neutral zone at the city's center and claim jurisdiction over everything else, though their actual reach is limited.
 
 **What they want:** Order. Not the old order specifically — most Greycoats are pragmatic enough to know that's gone — but *an* order. Functioning courts. Collected taxes. Maintained roads. Safe streets. They want to hold the city together long enough for something better to emerge.
 
@@ -385,7 +385,7 @@ Each faction is sketched at local/regional scale: a district, a territory, a com
 
 **Meta-faction lean:** Awakening (moderate, academic)
 
-**What they are:** An independent research institute that formed after the eruption — originally a collaboration between university researchers who lost their institutions and self-taught scholars who discovered they could cast. They study the Aether, the Engine, and the relationship between them. They're based in a campus that sits deliberately on a zone border, where they can study both forces in proximity.
+**What they are:** An independent research institute that formed after the Tear — originally a collaboration between university researchers who lost their institutions and self-taught scholars who discovered they could cast. They study the Aether, the Engine, and the relationship between them. They're based in a campus that sits deliberately on a zone border, where they can study both forces in proximity.
 
 **What they want:** To understand. Not to exploit, not to suppress, not to worship — to *know*. They believe that the competing theories (Immune Response, Rival Gods, Exploitation) are all wrong, or all partially right, and that the truth is stranger than any of them. They want to find it.
 
@@ -398,7 +398,7 @@ Each faction is sketched at local/regional scale: a district, a territory, a com
 - A stolen artifact from the Scholars' collection has surfaced on the black market. It's not valuable for what it is — it's valuable for what it *does*, and what it does is destabilize zone boundaries. Multiple factions want it.
 - A young Scholar has published a paper claiming to have proven the Exploitation Theory — that someone *built* the Engine deliberately. The paper is causing a political firestorm, and the author has started receiving threats. Are they right?
 
-**Sample NPC:** **Dr. Isavel Crane** — Director of field research. Fifties, sharp, impatient with politics, fascinated by everything else. Lost her university in the eruption and rebuilt her career from scratch. She authorized the Deep Wild expedition and has been sleepless since the final report came in. She will do almost anything to get her people back — but "almost" is doing a lot of work in that sentence.
+**Sample NPC:** **Dr. Isavel Crane** — Director of field research. Fifties, sharp, impatient with politics, fascinated by everything else. Lost her university in the Tear and rebuilt her career from scratch. She authorized the Deep Wild expedition and has been sleepless since the final report came in. She will do almost anything to get her people back — but "almost" is doing a lot of work in that sentence.
 
 ### 5.7 The Sootborn
 
@@ -423,13 +423,13 @@ Each faction is sketched at local/regional scale: a district, a territory, a com
 
 **Meta-faction lean:** Cross-pressured (Restoration and Awakening simultaneously)
 
-**What they are:** A religious institution — the local diocese of a faith that predates the eruption. The church was a pillar of the old order: hospitals, schools, orphanages, spiritual authority. When the eruption hit, the institution fractured along a theological fault line that nobody saw coming.
+**What they are:** A religious institution — the local diocese of a faith that predates the Tear. The church was a pillar of the old order: hospitals, schools, orphanages, spiritual authority. When the Tear hit, the institution fractured along a theological fault line that nobody saw coming.
 
 **What they want:** Officially, unity and service. Practically, the two internal factions want incompatible things, and the institution's leadership is trying to hold them together through sheer institutional inertia.
 
 **What they do:** Run the hospitals, the orphanages, the soup kitchens — the infrastructure of mercy that every faction depends on and none want to fund. They maintain a network of sanctuaries kept deliberately neutral through a combination of Galvanic dampeners and Aetheric warding — proving, in practice, that the two forces *can* coexist, even if nobody wants to acknowledge it. They fund cult-hunting Adventuring Societies — the one thing both internal factions agree on.
 
-**What they're hiding:** The theological split is deeper than the public knows. One faction (the "Engine Orthodox") believes the Aether is a spiritual corruption — demonic, alien, fundamentally opposed to human flourishing. They want the church to align with the Restoration and actively suppress magic. The other faction (the "Veil Contemplatives") believes the eruption was a revelation — a thinning of the barrier between the mortal and the divine. They want the church to embrace the Aether as a path to spiritual truth. Both factions have members in positions of power. Both fund their own Adventuring Societies with contradictory mandates. The leadership knows this and has been unable to stop it.
+**What they're hiding:** The theological split is deeper than the public knows. One faction (the "Engine Orthodox") believes the Aether is a spiritual corruption — demonic, alien, fundamentally opposed to human flourishing. They want the church to align with the Restoration and actively suppress magic. The other faction (the "Veil Contemplatives") believes the Tear was a revelation — a thinning of the barrier between the mortal and the divine. They want the church to embrace the Aether as a path to spiritual truth. Both factions have members in positions of power. Both fund their own Adventuring Societies with contradictory mandates. The leadership knows this and has been unable to stop it.
 
 **GM hooks:**
 - A Society funded by the Ironveil Circle discovers that their mission — investigating a suspected cult — is actually a proxy move by the Engine Orthodox faction to discredit a Veil Contemplative community. The "cult" is a prayer group.
@@ -643,7 +643,7 @@ These apply to all four voices, modulated by personality:
 
 These are drafts — not final web chapter text, but demonstrations of the target voice at paragraph length. Each covers a different topic.
 
-**The Handler — on the eruption:**
+**The Handler — on the Tear:**
 
 > Forty years ago, give or take, the world broke. Your grandparents remember it — ask them sometime, if they'll talk about it. The Veil thinned and the Aether came through like a dam bursting. Whole regions went Wild overnight. Cities split down the middle. People who'd never felt anything stranger than a cold draft suddenly found out they could set things on fire with their minds. The governments panicked. The armies panicked. The churches panicked. Everyone panicked.
 >
@@ -663,7 +663,7 @@ These are drafts — not final web chapter text, but demonstrations of the targe
 
 **The Believer — on the Aether:**
 
-> They call it an eruption. As if it were a disaster. As if the ground opening up and showing you what was always underneath is something to be *fixed*. I was twelve when the Veil thinned. I remember the morning — the sky changed color. Not dramatically. Just... more. As if someone had cleaned a window I didn't know was dirty. And then the feeling. Like being noticed. Like something vast had turned its attention to a place it had forgotten, and found us here.
+> They call it the Tear. As if something *broke*. As if the Veil opening and showing you what was always on the other side is something to be *mended*. I was twelve when the Veil thinned. I remember the morning — the sky changed color. Not dramatically. Just... more. As if someone had cleaned a window I didn't know was dirty. And then the feeling. Like being noticed. Like something vast had turned its attention to a place it had forgotten, and found us here.
 >
 > I know what the Handler will say. I know what the Scholar will say. They'll say I'm romanticizing a catastrophe. People died. Communities were destroyed. I know. I was there. But I was also there when the first healers discovered they could mend a broken bone by touching it. When the first wards went up and a neighborhood that had been terrorized by a beast slept safe for the first time in months. The Aether is not safe. I have never said it was safe. I have said it is *real*, and it is *ours*, and turning our backs on it because it frightens us is the most dangerous thing we could do.
 
@@ -705,7 +705,7 @@ Questions accumulated during the design process. All resolved in Session 14.
    **RESOLVED:** Sidebars and inline annotations. The four voices are flavor text, not main content. The main text should read similarly to the WORLD_DESIGN document — structured, with GM Notes sections — but more narrative and player-focused. The voices add sidebars that make the chapter feel interactive, personal, and like a window into how people in the world actually see the world.
 
 9. **Naming conventions.** ~~Resolve before web chapter.~~
-   **RESOLVED:** The neo-Victorian, steampunk English names (Ashworth, Greycoat, Thornfield, Lamplighter) fit well and should be kept. Some "exotic" names drawn from other traditions (Orient, South America, etc.) are welcome for variety — the pre-eruption world was global in the 1920s. But the default register should feel North American / USA-adjacent, as that's where the current audience is based.
+   **RESOLVED:** The neo-Victorian, steampunk English names (Ashworth, Greycoat, Thornfield, Lamplighter) fit well and should be kept. Some "exotic" names drawn from other traditions (Orient, South America, etc.) are welcome for variety — the pre-Tear world was global in the 1920s. But the default register should feel North American / USA-adjacent, as that's where the current audience is based.
 
 10. **How much history in the web chapter?** ~~Decide during web conversion.~~
     **RESOLVED:** Some history is needed to ground the current world — it sets the tone and scope of technology, knowledge, and power dynamics. But the present is the primary focus. History explains *why* the current world works the way it does, not as deep lore for its own sake. Keep it proportional — enough to establish context, then move to the present.

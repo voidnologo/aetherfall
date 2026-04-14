@@ -57,7 +57,7 @@ The world is analogous to the 1920s. The art must reflect this.
 
 Magic is new, wondrous, and terrifying. The art must convey this.
 
-- **The eruption aesthetic** — magic breaks through reality. Cracks in the mundane world revealing something vast and inhuman beneath. Vines growing through concrete. Geometric patterns dissolving into organic chaos.
+- **The Tear aesthetic** — magic breaks through reality. Cracks in the mundane world revealing something vast and inhuman beneath. Vines growing through concrete. Geometric patterns dissolving into organic chaos.
 - **Awe and dread** — magical subjects should inspire wonder first, unease second. Not horror-gore, but the vertigo of encountering something that shouldn't exist.
 - **Corruption marks** — visual cues that power has a cost. Cracks in skin where energy leaks, exhaustion in posture, equipment corroded by magical residue.
 - **The interference** — show the magic/tech tension visually. Machines with vines growing through them. Spell effects fading near industrial equipment. The border between zones.
@@ -138,7 +138,7 @@ Monsters, summoned beings, corrupted creatures, beasts of legend.
 - **Full body, dynamic pose** — show the creature's threat and nature
 - **Scale indicator** — include a human figure, doorway, or other reference for size
 - **Mechanical identity** — visual cues for game-relevant traits (armored, fast, magical, venomous)
-- **The eruption context** — these are things that shouldn't exist in a 1920s world. The art should carry that strangeness
+- **The Tear context** — these are things that shouldn't exist in a 1920s world. The art should carry that strangeness
 
 ### Equipment & Weapon Studies
 
