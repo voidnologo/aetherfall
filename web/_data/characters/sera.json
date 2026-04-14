@@ -1,0 +1,69 @@
+{
+  "slug": "sera",
+  "filename": "quickstart-sera.html",
+  "name": "Sera Voss",
+  "player": "",
+  "archetype": "The Spark",
+  "station": 2,
+  "description": "Wiry, late twenties, sharp cheekbones. Dark eyes that catch light wrong sometimes. Ink-stained fingers, frayed coat cuffs. Carries a brass compass that hasn't pointed north since the eruption. Small objects near her drift when she concentrates.",
+  "attrs": {
+    "BR": { "val": -1, "desc": "Slight build" },
+    "PC": { "val": 0, "desc": "Average reflexes" },
+    "IN": { "val": 1, "desc": "Quick learner" },
+    "SP": { "val": 0, "desc": "Quiet intensity" },
+    "AW": { "val": 0, "desc": "Average perception" },
+    "PW": { "val": 2, "desc": "Aether runs deep" }
+  },
+  "skills": [
+    { "name": "Occult Lore", "stat": "IN", "level": 3, "target": 63 },
+    { "name": "Stealth", "stat": "PC", "level": 3, "target": 60 },
+    { "name": "Persuasion", "stat": "SP", "level": 3, "target": 60 },
+    { "name": "Streetwise", "stat": "SP", "level": 3, "target": 60 },
+    { "name": "Wild Casting", "stat": "PW", "level": 2, "target": 54 },
+    { "name": "Resolve", "stat": "PW", "level": 2, "target": 54 },
+    { "name": "Observation", "stat": "AW", "level": 2, "target": 50 },
+    { "name": "Investigation", "stat": "AW", "level": 2, "target": 50 },
+    { "name": "Sleight of Hand", "stat": "PC", "level": 2, "target": 50 },
+    { "name": "Deception", "stat": "SP", "level": 2, "target": 50 },
+    { "name": "Leadership", "stat": "SP", "level": 2, "target": 50 },
+    { "name": "Athletics", "stat": "BR", "level": 2, "target": 48 },
+    { "name": "Melee", "stat": "BR", "level": 2, "target": 48 },
+    { "name": "Science", "stat": "IN", "level": 1, "target": 41 },
+    { "name": "Empathy", "stat": "AW", "level": 1, "target": 40 }
+  ],
+  "weapons": [
+    { "name": "Belt Knife", "skill": "Melee", "spd": "2", "dmg": "1d4+1", "cap": "", "rld": "", "rel": "", "tags": "Concealable" }
+  ],
+  "armor": [
+    { "name": "Reinforced Coat", "ballistic": 1, "martial": 1, "hinder": 0, "notes": "Heavy canvas w/ steel stays" }
+  ],
+  "path": "wild",
+  "wildSchools": ["Aeth. Manipulation", "Artifice"],
+  "spells": [
+    { "name": "Force", "school": "Aeth. Manip", "cast": "2ct", "w": 2, "s": 4, "st": 6, "sp": 10 },
+    { "name": "Amplify", "school": "Aeth. Manip", "cast": "2ct", "w": 2, "s": 4, "st": 6, "sp": 10 },
+    { "name": "Barrier", "school": "Aeth. Manip", "cast": "4ct", "w": 3, "s": 6, "st": 9, "sp": 14 },
+    { "name": "Kinesis", "school": "Aeth. Manip", "cast": "4ct", "w": 3, "s": 6, "st": 9, "sp": 14 },
+    { "name": "Reshape", "school": "Artifice", "cast": "4ct", "w": 3, "s": 6, "st": 9, "sp": 14 },
+    { "name": "Enchant", "school": "Artifice", "cast": "6ct", "w": 4, "s": 8, "st": 12, "sp": 18 }
+  ],
+  "society": {
+    "name": "The Ashwick Charter",
+    "type": "Fixers",
+    "patron": "Greycoat Authority",
+    "handler": "Inspector Renna Laine",
+    "charter": "Investigate the disappearance of Fen Harker, Gradient Scholar researcher. Recover him alive. Report all findings.",
+    "backing": 3,
+    "ledger": "Level"
+  },
+  "faction": "Greycoat Authority (Arrangement)",
+  "factionRelation": "Newly contracted. The Greycoats don't care about her path -- only results.",
+  "contacts": [
+    { "name": "Old Ren", "affiliation": "Veilwright Quarter", "notes": "Wild caster elder, taught her control" },
+    { "name": "Pasha Luk", "affiliation": "Gradient border", "notes": "Herbalist, zone-grown remedies" },
+    { "name": "Moth", "affiliation": "Underworld", "notes": "Courier, no questions asked" }
+  ],
+  "inventory": "Belt knife (hip sheath)\nJournal (leather, half-filled with sketches)\nChalk (6 sticks, various colors)\nBrass compass (spins in Aetheric zones -- talisman)\nCandles (4, beeswax)\nDried rations (3 days)\nWater flask\nSociety stipend purse (50 marks)",
+  "notes": "Felt the Aether since childhood. No formal training.\nHer compass hasn't pointed north since the eruption.\nGets migraines in deep Galvanic zones. Hides it.\nHums when she's concentrating. Doesn't realize she does it.\nObjects near her drift when she's stressed or angry.",
+  "xp": { "total": 0, "spent": 0 }
+}

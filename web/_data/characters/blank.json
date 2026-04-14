@@ -1,0 +1,38 @@
+{
+  "slug": "blank",
+  "filename": "character-sheet.html",
+  "name": "",
+  "player": "",
+  "archetype": "",
+  "station": 2,
+  "description": "",
+  "attrs": {
+    "BR": { "val": 0, "desc": "" },
+    "PC": { "val": 0, "desc": "" },
+    "IN": { "val": 0, "desc": "" },
+    "SP": { "val": 0, "desc": "" },
+    "AW": { "val": 0, "desc": "" },
+    "PW": { "val": 0, "desc": "" }
+  },
+  "skills": [],
+  "weapons": [],
+  "armor": [],
+  "path": "none",
+  "wildSchools": [],
+  "spells": [],
+  "society": {
+    "name": "",
+    "type": "",
+    "patron": "",
+    "handler": "",
+    "charter": "",
+    "backing": 3,
+    "ledger": "Level"
+  },
+  "faction": "",
+  "factionRelation": "",
+  "contacts": [],
+  "inventory": "",
+  "notes": "",
+  "xp": { "total": 0, "spent": 0 }
+}

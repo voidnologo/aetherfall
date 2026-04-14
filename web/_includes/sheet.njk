@@ -1,9 +1,109 @@
+{#- ───────────────────────────────────────────────────────────────
+     Aetherfall — Character Sheet Template (Nunjucks)
+     Shared by blank, sample, and pre-gen character sheets.
+     Data arrives via the `char` variable from 11ty pagination / frontmatter.
+    ─────────────────────────────────────────────────────────────── -#}
+{%- set attrKeys = ["BR","PC","IN","SP","AW","PW"] -%}
+{%- set attrNames = {
+  "BR": "Brawn (BR)",
+  "PC": "Phys. Coordination (PC)",
+  "IN": "Intellect (IN)",
+  "SP": "Social Prowess (SP)",
+  "AW": "Awareness (AW)",
+  "PW": "Power (PW)"
+} -%}
+
+{#- Helper: resolve attribute value (null-safe) -#}
+{%- macro attrVal(key) -%}
+  {%- if char.attrs and char.attrs[key] and char.attrs[key].val != null -%}
+    {{ char.attrs[key].val }}
+  {%- endif -%}
+{%- endmacro -%}
+
+{#- Compute derived values when attributes are present -#}
+{%- if char.attrs and char.attrs.BR and char.attrs.BR.val != null -%}
+  {%- set brVal = char.attrs.BR.val -%}
+{%- else -%}
+  {%- set brVal = null -%}
+{%- endif -%}
+
+{%- if char.attrs and char.attrs.PC and char.attrs.PC.val != null -%}
+  {%- set pcVal = char.attrs.PC.val -%}
+{%- else -%}
+  {%- set pcVal = null -%}
+{%- endif -%}
+
+{%- if char.attrs and char.attrs.IN and char.attrs.IN.val != null -%}
+  {%- set inVal = char.attrs.IN.val -%}
+{%- else -%}
+  {%- set inVal = null -%}
+{%- endif -%}
+
+{%- if char.attrs and char.attrs.SP and char.attrs.SP.val != null -%}
+  {%- set spVal = char.attrs.SP.val -%}
+{%- else -%}
+  {%- set spVal = null -%}
+{%- endif -%}
+
+{%- if char.attrs and char.attrs.AW and char.attrs.AW.val != null -%}
+  {%- set awVal = char.attrs.AW.val -%}
+{%- else -%}
+  {%- set awVal = null -%}
+{%- endif -%}
+
+{%- if char.attrs and char.attrs.PW and char.attrs.PW.val != null -%}
+  {%- set pwVal = char.attrs.PW.val -%}
+{%- else -%}
+  {%- set pwVal = null -%}
+{%- endif -%}
+
+{%- if brVal != null -%}
+  {%- set netTotal = brVal + pcVal + inVal + spVal + awVal + pwVal -%}
+  {%- set hpPerTier = 7 + brVal -%}
+  {%- set epPerTier = 7 + pwVal -%}
+  {%- set physPool = 10 + brVal + pcVal -%}
+  {%- set mentalPool = 10 + inVal + awVal + pwVal -%}
+  {%- set socialPool = 10 + spVal -%}
+{%- else -%}
+  {%- set netTotal = null -%}
+  {%- set hpPerTier = null -%}
+  {%- set epPerTier = null -%}
+  {%- set physPool = null -%}
+  {%- set mentalPool = null -%}
+  {%- set socialPool = null -%}
+{%- endif -%}
+
+{#- Description lines -#}
+{%- if char.description -%}
+  {%- set descLines = char.description | wordcount -%}
+{%- endif -%}
+
+{#- Inventory lines -#}
+{%- if char.inventory -%}
+  {%- set invItems = char.inventory.split("\n") -%}
+{%- else -%}
+  {%- set invItems = [] -%}
+{%- endif -%}
+
+{#- Notes lines -#}
+{%- if char.notes -%}
+  {%- set noteItems = char.notes.split("\n") -%}
+{%- else -%}
+  {%- set noteItems = [] -%}
+{%- endif -%}
+
+{#- Charter lines -#}
+{%- if char.society and char.society.charter -%}
+  {%- set charterText = char.society.charter -%}
+{%- else -%}
+  {%- set charterText = "" -%}
+{%- endif -%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aetherfall — Kael Dunn — The Steady Hand</title>
+    <title>Aetherfall — {% if char.name %}{{ char.name }} Character Sheet{% else %}Blank Character Sheet{% endif %}</title>
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -26,7 +126,7 @@
         }
         .page:last-child { page-break-after: avoid; }
 
-        /* ── Sections ── */
+        /* -- Sections -- */
         .section {
             border: 1.2pt solid #333;
             border-radius: 3pt;
@@ -44,7 +144,7 @@
             padding-bottom: 1pt;
         }
 
-        /* ── Header ── */
+        /* -- Header -- */
         .header {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
@@ -77,10 +177,10 @@
             min-height: 11pt;
         }
 
-        /* ── Layout ── */
+        /* -- Layout -- */
         .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 3pt; }
 
-        /* ── Attributes ── */
+        /* -- Attributes -- */
         .attr-table { width: 100%; border-collapse: collapse; }
         .attr-table th {
             font-size: 6pt; text-transform: uppercase; color: #666;
@@ -93,6 +193,9 @@
         .attr-bubble {
             display: inline-block; width: 9pt; height: 9pt;
             border: 0.75pt solid #555; border-radius: 50%; margin: 0 0.25pt;
+        }
+        .attr-bubble.marked {
+            background: #333;
         }
         .attr-desc-line {
             border-bottom: 0.5pt solid #bbb; width: 100%;
@@ -110,7 +213,7 @@
             border: 0.5pt solid #999; border-radius: 2pt; text-align: center;
         }
 
-        /* ── Health/Exhaustion ── */
+        /* -- Health/Exhaustion -- */
         .track-section { display: grid; grid-template-columns: 1fr 1fr; gap: 3pt; }
         .track {
             border: 1.2pt solid #333; border-radius: 3pt; padding: 3pt 4pt;
@@ -126,6 +229,11 @@
             width: 9pt; height: 9pt;
             border: 0.5pt solid #555; border-radius: 1pt;
         }
+        .hp-box.crossed {
+            background: repeating-linear-gradient(
+                45deg, transparent, transparent 2pt, #ccc 2pt, #ccc 3pt
+            );
+        }
         .tier-label { font-size: 7pt; font-weight: 600; white-space: nowrap; }
         .tier-penalty { font-size: 6.5pt; color: #888; }
         .track-notes { margin-top: 1pt; border-top: 0.5pt solid #ccc; padding-top: 1pt; }
@@ -139,7 +247,7 @@
             width: 10pt; height: 10pt; border: 0.75pt solid #555; border-radius: 1pt;
         }
 
-        /* ── Skills ── */
+        /* -- Skills -- */
         .skill-table { width: 100%; border-collapse: collapse; }
         .skill-table th {
             font-size: 6pt; text-transform: uppercase; color: #666;
@@ -161,7 +269,7 @@
             border-top: 0.5pt solid #ccc;
         }
 
-        /* ── Weapons ── */
+        /* -- Weapons -- */
         .weapon-table, .armor-table, .spell-table {
             width: 100%; border-collapse: collapse; font-size: 7.5pt;
         }
@@ -178,33 +286,14 @@
         .weapon-table td:first-child, .armor-table td:first-child,
         .spell-table td:first-child { text-align: left; }
         .weapon-prefill { color: #999; font-size: 7pt; }
-        /* filled-in values for sample */
-        .filled { font-size: 7.5pt; color: #1a1a1a; }
-        .field-line.filled { padding-top: 1pt; }
-        .attr-bubble.marked { background: #333; }
-        .hp-box.used { position: relative; }
-        .hp-box.used::after {
-            content: ''; position: absolute; top: 1pt; left: 1pt; right: 1pt; bottom: 1pt;
-            background: #333; border-radius: 0.5pt;
-        }
-        .hp-box.crossed { position: relative; }
-        .hp-box.crossed::after {
-            content: '\00D7'; position: absolute; top: -1pt; left: 1pt;
-            font-size: 8pt; color: #999; line-height: 1;
-        }
-        .death-save-box, .hp-box, .checkbox { position: relative; }
-        .checkbox.checked::after {
-            content: '\2713'; position: absolute; top: -2pt; left: 0.5pt;
-            font-size: 8pt; color: #333; line-height: 1;
-        }
 
-        /* ── Inventory ── */
+        /* -- Inventory -- */
         .inv-line { border-bottom: 0.5pt solid #ccc; min-height: 11pt; }
 
-        /* ── Notes ── */
+        /* -- Notes -- */
         .notes-line { border-bottom: 0.5pt solid #ccc; min-height: 11pt; }
 
-        /* ── Reference box ── */
+        /* -- Reference box -- */
         .reference-box {
             background: #f5f5f5; border: 0.75pt solid #ccc;
             border-radius: 2pt; padding: 3pt 4pt;
@@ -216,7 +305,7 @@
             background: #e8e8e8; padding: 0 1pt; border-radius: 1pt;
         }
 
-        /* ── XP ── */
+        /* -- XP -- */
         .xp-grid {
             display: grid; grid-template-columns: auto 1fr auto 1fr;
             gap: 1pt 4pt; align-items: center; font-size: 7.5pt;
@@ -224,7 +313,7 @@
         .xp-label { font-weight: 600; color: #555; font-size: 7pt; }
         .xp-box { height: 12pt; border: 0.5pt solid #999; border-radius: 2pt; }
 
-        /* ── Casting ── */
+        /* -- Casting -- */
         .casting-grid {
             display: grid; grid-template-columns: 1fr 1fr;
             gap: 2pt 6pt; font-size: 7.5pt;
@@ -238,27 +327,30 @@
             width: 8pt; height: 8pt; border: 0.5pt solid #555;
             border-radius: 1pt; flex-shrink: 0;
         }
+        .checkbox.checked {
+            background: #333;
+        }
 
-        /* ── Society ── */
+        /* -- Society -- */
         .society-grid {
             display: grid; grid-template-columns: 1fr 1fr; gap: 2pt 6pt;
         }
 
-        /* ── Contacts ── */
+        /* -- Contacts -- */
         .contact-row {
             display: grid; grid-template-columns: 1fr 1fr 2fr;
             gap: 3pt; margin-bottom: 0.5pt;
         }
         .contact-row .field-line { min-height: 10pt; }
 
-        /* ── Print ── */
+        /* -- Print -- */
         @media print {
             body { background: none; }
             .page { width: auto; height: auto; margin: 0; }
             .no-print { display: none; }
         }
 
-        /* ── Screen ── */
+        /* -- Screen -- */
         @media screen {
             body {
                 background: #0e1117; padding: 2rem;
@@ -297,36 +389,45 @@
 </head>
 <body>
 
+{#- ── Screen Header (hidden on print) ── -#}
 <div class="tool-header no-print">
-    <a href="../quickstart.html">&larr; Back to The Ashwick Job</a>
-    <h1>Kael Dunn — The Steady Hand</h1>
-    <p>Pre-generated character for The Ashwick Job</p>
+    <a href="../character-sheet.html">&larr; Back to Character Sheet</a>
+    <h1>{% if char.name %}{{ char.name }}{% else %}Blank Character Sheet{% endif %}</h1>
+    <p>Print this page or save as PDF for a {% if char.name %}pre-generated{% else %}blank{% endif %} two-page character sheet</p>
     <button onclick="window.print()">Print / Save PDF</button>
 </div>
 
+{#- ═══════════════ PAGE 1 ═══════════════ -#}
 <div class="page">
 
+    {#- ── Header ── -#}
     <div class="header">
         <div class="header-title">Aetherfall</div>
         <div class="field">
             <div class="field-label">Character Name</div>
-            <div class="field-line filled">Kael Dunn</div>
+            <div class="field-line">{{ char.name | default("") }}</div>
         </div>
         <div class="field">
             <div class="field-label">Player</div>
-            <div class="field-line"></div>
+            <div class="field-line">{{ char.player | default("") }}</div>
         </div>
-        <div class="field">
-            <div class="field-label">Archetype</div>
-            <div class="field-line filled">The Steady Hand</div>
+        <div style="display:grid;grid-template-columns:1fr auto;gap:6pt;">
+            <div class="field">
+                <div class="field-label">Archetype</div>
+                <div class="field-line">{{ char.archetype | default("") }}</div>
+            </div>
+            <div class="field" style="text-align:center;">
+                <div class="field-label">Station</div>
+                <div class="field-line" style="min-width:28pt;">{% if char.station %}{{ char.station }}{% endif %}</div>
+            </div>
         </div>
     </div>
 
     <div class="two-col">
-        <!-- ── Left Column ── -->
+        {#- ── Left Column ── -#}
         <div>
 
-            <!-- Attributes -->
+            {#- Attributes -#}
             <div class="section">
                 <div class="section-title">Attributes</div>
                 <table class="attr-table">
@@ -338,57 +439,36 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><!-- BR: +1 -->
-                            <td>Brawn (BR)</td>
-                            <td><span class="attr-bubble"></span></td><td><span class="attr-bubble"></span></td><td><span class="attr-bubble"></span></td><td><span class="attr-bubble"></span></td><td><span class="attr-bubble marked"></span></td><td><span class="attr-bubble"></span></td><td><span class="attr-bubble"></span></td>
-                            <td><span class="attr-desc-line filled">Built like a brawler</span></td>
+                        {%- for key in attrKeys %}
+                        <tr>
+                            <td>{{ attrNames[key] }}</td>
+                            {%- for v in range(-3, 4) %}
+                            <td><span class="attr-bubble{% if char.attrs and char.attrs[key] and char.attrs[key].val == v %} marked{% endif %}"></span></td>
+                            {%- endfor %}
+                            <td><span class="attr-desc-line">{% if char.attrs and char.attrs[key] and char.attrs[key].desc %}{{ char.attrs[key].desc }}{% endif %}</span></td>
                         </tr>
-                        <tr><!-- PC: +2 -->
-                            <td>Phys. Coordination (PC)</td>
-                            <td><span class="attr-bubble"></span></td><td><span class="attr-bubble"></span></td><td><span class="attr-bubble"></span></td><td><span class="attr-bubble"></span></td><td><span class="attr-bubble"></span></td><td><span class="attr-bubble marked"></span></td><td><span class="attr-bubble"></span></td>
-                            <td><span class="attr-desc-line filled">Fast hands reflexes</span></td>
-                        </tr>
-                        <tr><!-- IN: 0 -->
-                            <td>Intellect (IN)</td>
-                            <td><span class="attr-bubble"></span></td><td><span class="attr-bubble"></span></td><td><span class="attr-bubble"></span></td><td><span class="attr-bubble marked"></span></td><td><span class="attr-bubble"></span></td><td><span class="attr-bubble"></span></td><td><span class="attr-bubble"></span></td>
-                            <td><span class="attr-desc-line filled">Practical not bookish</span></td>
-                        </tr>
-                        <tr><!-- SP: 0 -->
-                            <td>Social Prowess (SP)</td>
-                            <td><span class="attr-bubble"></span></td><td><span class="attr-bubble"></span></td><td><span class="attr-bubble"></span></td><td><span class="attr-bubble marked"></span></td><td><span class="attr-bubble"></span></td><td><span class="attr-bubble"></span></td><td><span class="attr-bubble"></span></td>
-                            <td><span class="attr-desc-line filled">Honest to a fault</span></td>
-                        </tr>
-                        <tr><!-- AW: +1 -->
-                            <td>Awareness (AW)</td>
-                            <td><span class="attr-bubble"></span></td><td><span class="attr-bubble"></span></td><td><span class="attr-bubble"></span></td><td><span class="attr-bubble"></span></td><td><span class="attr-bubble marked"></span></td><td><span class="attr-bubble"></span></td><td><span class="attr-bubble"></span></td>
-                            <td><span class="attr-desc-line filled">Reads a room fast</span></td>
-                        </tr>
-                        <tr><!-- PW: -2 -->
-                            <td>Power (PW)</td>
-                            <td><span class="attr-bubble"></span></td><td><span class="attr-bubble marked"></span></td><td><span class="attr-bubble"></span></td><td><span class="attr-bubble"></span></td><td><span class="attr-bubble"></span></td><td><span class="attr-bubble"></span></td><td><span class="attr-bubble"></span></td>
-                            <td><span class="attr-desc-line filled">Dead to the Aether</span></td>
-                        </tr>
+                        {%- endfor %}
                     </tbody>
                 </table>
                 <div class="derived-row">
                     <div class="derived-item">
                         <span class="derived-label">Net Total:</span>
-                        <div class="derived-box filled">+2</div>
+                        <div class="derived-box">{% if netTotal != null %}{{ netTotal }}{% endif %}</div>
                     </div>
                     <div class="derived-item">
                         <span class="derived-label">HP/Tier:</span>
-                        <div class="derived-box filled">8</div>
+                        <div class="derived-box">{% if hpPerTier != null %}{{ hpPerTier }}{% endif %}</div>
                         <span style="font-size:6pt;color:#888;">(7+BR)</span>
                     </div>
                     <div class="derived-item">
                         <span class="derived-label">EP/Tier:</span>
-                        <div class="derived-box filled">5</div>
+                        <div class="derived-box">{% if epPerTier != null %}{{ epPerTier }}{% endif %}</div>
                         <span style="font-size:6pt;color:#888;">(7+PW)</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Weapons -->
+            {#- Weapons -#}
             <div class="section">
                 <div class="section-title">Weapons</div>
                 <table class="weapon-table">
@@ -405,6 +485,7 @@
                         </tr>
                     </thead>
                     <tbody>
+                        {#- Unarmed is always first row, prefilled and grey -#}
                         <tr>
                             <td class="weapon-prefill">Unarmed</td>
                             <td class="weapon-prefill">Brawl</td>
@@ -415,16 +496,28 @@
                             <td class="weapon-prefill">&mdash;</td>
                             <td></td>
                         </tr>
-                        <tr><td class="filled">Revolver</td><td class="filled">Firearms</td><td class="filled">3</td><td class="filled">2d6</td><td class="filled">6</td><td class="filled">3</td><td class="filled">95</td><td class="filled">Reliable</td></tr>
-                        <tr><td class="filled">Hunting Knife</td><td class="filled">Melee</td><td class="filled">2</td><td class="filled">1d6+1</td><td class="filled">&mdash;</td><td class="filled">&mdash;</td><td class="filled">&mdash;</td><td class="filled">Concealable</td></tr>
+                        {%- set weaponSlots = 5 -%}
+                        {%- set weaponCount = char.weapons | length if char.weapons else 0 -%}
+                        {%- for weapon in char.weapons %}
+                        <tr>
+                            <td>{{ weapon.name }}</td>
+                            <td>{{ weapon.skill }}</td>
+                            <td>{{ weapon.spd }}</td>
+                            <td>{{ weapon.dmg }}</td>
+                            <td>{{ weapon.cap | default("&mdash;") | safe }}</td>
+                            <td>{{ weapon.rld | default("&mdash;") | safe }}</td>
+                            <td>{{ weapon.rel | default("&mdash;") | safe }}</td>
+                            <td>{{ weapon.tags | default("") }}</td>
+                        </tr>
+                        {%- endfor %}
+                        {%- for i in range(weaponCount, weaponSlots) %}
                         <tr><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-                        <tr><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-                        <tr><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                        {%- endfor %}
                     </tbody>
                 </table>
             </div>
 
-            <!-- Armor -->
+            {#- Armor -#}
             <div class="section">
                 <div class="section-title">Armor &amp; Defense</div>
                 <table class="armor-table">
@@ -438,42 +531,67 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td class="filled">Leather Jacket</td><td class="filled">2</td><td class="filled">1</td><td class="filled">0</td><td class="filled">Worn-in, comfortable</td></tr>
+                        {%- set armorSlots = 3 -%}
+                        {%- set armorCount = char.armor | length if char.armor else 0 -%}
+                        {%- for piece in char.armor %}
+                        <tr>
+                            <td>{{ piece.name }}</td>
+                            <td>{{ piece.ballistic }}</td>
+                            <td>{{ piece.martial }}</td>
+                            <td>{{ piece.hinder }}</td>
+                            <td>{{ piece.notes | default("") }}</td>
+                        </tr>
+                        {%- endfor %}
+                        {%- for i in range(armorCount, armorSlots) %}
                         <tr><td>&nbsp;</td><td></td><td></td><td></td><td></td></tr>
-                        <tr><td>&nbsp;</td><td></td><td></td><td></td><td></td></tr>
+                        {%- endfor %}
                     </tbody>
                 </table>
+                {%- set totalBallistic = 0 -%}
+                {%- set totalMartial = 0 -%}
+                {%- set totalHinder = 0 -%}
+                {%- for piece in char.armor %}
+                  {%- set totalBallistic = totalBallistic + piece.ballistic -%}
+                  {%- set totalMartial = totalMartial + piece.martial -%}
+                  {%- set totalHinder = totalHinder + piece.hinder -%}
+                {%- endfor %}
                 <div class="derived-row" style="margin-top:2pt;">
                     <div class="derived-item">
                         <span class="derived-label">Total Ballistic:</span>
-                        <div class="derived-box filled">2</div>
+                        <div class="derived-box">{% if armorCount > 0 %}{{ totalBallistic }}{% endif %}</div>
                     </div>
                     <div class="derived-item">
                         <span class="derived-label">Total Martial:</span>
-                        <div class="derived-box filled">1</div>
+                        <div class="derived-box">{% if armorCount > 0 %}{{ totalMartial }}{% endif %}</div>
                     </div>
                     <div class="derived-item">
                         <span class="derived-label">Total Hinder:</span>
-                        <div class="derived-box filled">0</div>
+                        <div class="derived-box">{% if armorCount > 0 %}{{ totalHinder }}{% endif %}</div>
                     </div>
                 </div>
             </div>
 
         </div>
 
-        <!-- ── Right Column ── -->
+        {#- ── Right Column ── -#}
         <div>
 
-            <!-- Character Description -->
+            {#- Character Description -#}
             <div class="section">
                 <div class="section-title">Character Description</div>
-                <div class="notes-line filled">Broad-shouldered, mid-thirties. Close-cropped hair going</div>
-                <div class="notes-line filled">grey at the temples. Calloused hands, steady eyes, old knife</div>
-                <div class="notes-line filled">scar across the left knuckle. Wears his leather jacket like</div>
-                <div class="notes-line filled">armor. Moves like someone used to bad neighborhoods.</div>
+                {%- if char.description %}
+                <div class="notes-line">{{ char.description }}</div>
+                {%- for i in range(0, 2) %}
+                <div class="notes-line"></div>
+                {%- endfor %}
+                {%- else %}
+                {%- for i in range(0, 3) %}
+                <div class="notes-line"></div>
+                {%- endfor %}
+                {%- endif %}
             </div>
 
-            <!-- Skills -->
+            {#- Skills -#}
             <div class="section">
                 <div class="section-title">Skills <span style="font-weight:400;font-size:6.5pt;color:#888;">&mdash; Target = ((10 + Stat) &times; Level) + 30 &nbsp;|&nbsp; Max 15</span></div>
                 <table class="skill-table">
@@ -486,38 +604,41 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td><div class="field-line filled">Firearms</div></td><td><div class="field-line filled">PC(+2)</div></td><td><div class="field-line filled">3</div></td><td class="total-cell filled">66</td></tr>
-                        <tr><td><div class="field-line filled">Observation</div></td><td><div class="field-line filled">AW(+1)</div></td><td><div class="field-line filled">3</div></td><td class="total-cell filled">63</td></tr>
-                        <tr><td><div class="field-line filled">Streetwise</div></td><td><div class="field-line filled">SP(0)</div></td><td><div class="field-line filled">3</div></td><td class="total-cell filled">60</td></tr>
-                        <tr><td><div class="field-line filled">Melee</div></td><td><div class="field-line filled">BR(+1)</div></td><td><div class="field-line filled">2</div></td><td class="total-cell filled">52</td></tr>
-                        <tr><td><div class="field-line filled">Athletics</div></td><td><div class="field-line filled">BR(+1)</div></td><td><div class="field-line filled">2</div></td><td class="total-cell filled">52</td></tr>
-                        <tr><td><div class="field-line filled">Stealth</div></td><td><div class="field-line filled">PC(+2)</div></td><td><div class="field-line filled">2</div></td><td class="total-cell filled">54</td></tr>
-                        <tr><td><div class="field-line filled">Brawl</div></td><td><div class="field-line filled">BR(+1)</div></td><td><div class="field-line filled">2</div></td><td class="total-cell filled">52</td></tr>
-                        <tr><td><div class="field-line filled">Intimidation</div></td><td><div class="field-line filled">BR(+1)</div></td><td><div class="field-line filled">2</div></td><td class="total-cell filled">52</td></tr>
-                        <tr><td><div class="field-line filled">Investigation</div></td><td><div class="field-line filled">AW(+1)</div></td><td><div class="field-line filled">2</div></td><td class="total-cell filled">52</td></tr>
-                        <tr><td><div class="field-line filled">Tactics</div></td><td><div class="field-line filled">IN(0)</div></td><td><div class="field-line filled">2</div></td><td class="total-cell filled">50</td></tr>
-                        <tr><td><div class="field-line filled">Survival</div></td><td><div class="field-line filled">AW(+1)</div></td><td><div class="field-line filled">2</div></td><td class="total-cell filled">52</td></tr>
-                        <tr><td><div class="field-line filled">Persuasion</div></td><td><div class="field-line filled">SP(0)</div></td><td><div class="field-line filled">2</div></td><td class="total-cell filled">50</td></tr>
-                        <tr><td><div class="field-line filled">Leadership</div></td><td><div class="field-line filled">SP(0)</div></td><td><div class="field-line filled">2</div></td><td class="total-cell filled">50</td></tr>
-                        <tr><td><div class="field-line filled">Deception</div></td><td><div class="field-line filled">SP(0)</div></td><td><div class="field-line filled">2</div></td><td class="total-cell filled">50</td></tr>
-                        <tr><td><div class="field-line filled">Etiquette</div></td><td><div class="field-line filled">SP(0)</div></td><td><div class="field-line filled">1</div></td><td class="total-cell filled">40</td></tr>
+                        {%- set skillSlots = 15 -%}
+                        {%- set skillCount = char.skills | length if char.skills else 0 -%}
+                        {%- for skill in char.skills %}
+                        <tr>
+                            <td><div class="field-line">{{ skill.name }}</div></td>
+                            <td><div class="field-line" style="text-align:center;">{{ skill.stat }}({% if char.attrs and char.attrs[skill.stat] %}{{ char.attrs[skill.stat].val }}{% endif %})</div></td>
+                            <td><div class="field-line" style="text-align:center;">{{ skill.level }}</div></td>
+                            <td class="total-cell">{{ skill.target }}</td>
+                        </tr>
+                        {%- endfor %}
+                        {%- for i in range(skillCount, skillSlots) %}
+                        <tr>
+                            <td><div class="field-line"></div></td>
+                            <td><div class="field-line"></div></td>
+                            <td><div class="field-line"></div></td>
+                            <td class="total-cell"></td>
+                        </tr>
+                        {%- endfor %}
                     </tbody>
                 </table>
                 <div class="skill-pool-summary">
-                    <span><strong>Physical:</strong> 10+BR+PC = <strong>13</strong></span>
-                    <span><strong>Mental:</strong> 10+IN+AW+PW = <strong>9</strong></span>
-                    <span><strong>Social:</strong> 10+SP = <strong>10</strong></span>
+                    <span><strong>Physical:</strong> 10+BR+PC = {% if physPool != null %}{{ physPool }}{% else %}___{% endif %}</span>
+                    <span><strong>Mental:</strong> 10+IN+AW+PW = {% if mentalPool != null %}{{ mentalPool }}{% else %}___{% endif %}</span>
+                    <span><strong>Social:</strong> 10+SP = {% if socialPool != null %}{{ socialPool }}{% else %}___{% endif %}</span>
                 </div>
             </div>
 
-            <!-- XP -->
+            {#- XP -#}
             <div class="section">
                 <div class="section-title">Experience</div>
                 <div class="xp-grid">
                     <span class="xp-label">Total XP:</span>
-                    <div class="xp-box filled" style="display:flex;align-items:center;justify-content:center;">0</div>
+                    <div class="xp-box">{% if char.xp and char.xp.total %}{{ char.xp.total }}{% endif %}</div>
                     <span class="xp-label">XP Spent:</span>
-                    <div class="xp-box filled" style="display:flex;align-items:center;justify-content:center;">0</div>
+                    <div class="xp-box">{% if char.xp and char.xp.spent %}{{ char.xp.spent }}{% endif %}</div>
                 </div>
                 <div style="font-size:6pt;color:#888;margin-top:1pt;">
                     Skill 0&rarr;1: 1 XP &middot; 1&rarr;2: 2 &middot; 2&rarr;3: 3 &middot; 3&rarr;4: 4 &middot; 4&rarr;5: 5 &middot; Attribute +1: 10 XP
@@ -527,26 +648,27 @@
         </div>
     </div>
 
-    <!-- Wound & Exhaustion Tracks -->
+    {#- Wound & Exhaustion Tracks -- full width below the two-col grid -#}
     <div class="track-section">
+        {#- Wounds -#}
         <div class="track">
             <div class="track-title">Wounds <span class="track-formula">(7+BR per tier)</span></div>
+            {%- set woundTiers = [
+                {"label": "OK", "penalty": ""},
+                {"label": "Harmed", "penalty": "-10%"},
+                {"label": "Maimed", "penalty": "-25%"},
+                {"label": "Incap.", "penalty": "-50%"}
+            ] -%}
+            {%- for tier in woundTiers %}
             <div class="tier">
-                <div class="tier-boxes"><div class="hp-box"></div><div class="hp-box"></div><div class="hp-box"></div><div class="hp-box"></div><div class="hp-box"></div><div class="hp-box"></div><div class="hp-box"></div><div class="hp-box"></div><div class="hp-box crossed"></div><div class="hp-box crossed"></div></div>
-                <span class="tier-label">OK</span>
+                <div class="tier-boxes">
+                    {%- for b in range(0, 10) %}
+                    <div class="hp-box{% if hpPerTier != null and b >= hpPerTier %} crossed{% endif %}"></div>
+                    {%- endfor %}
+                </div>
+                <span class="tier-label">{{ tier.label }}{% if tier.penalty %} <span class="tier-penalty">{{ tier.penalty }}</span>{% endif %}</span>
             </div>
-            <div class="tier">
-                <div class="tier-boxes"><div class="hp-box"></div><div class="hp-box"></div><div class="hp-box"></div><div class="hp-box"></div><div class="hp-box"></div><div class="hp-box"></div><div class="hp-box"></div><div class="hp-box"></div><div class="hp-box crossed"></div><div class="hp-box crossed"></div></div>
-                <span class="tier-label">Harmed <span class="tier-penalty">-10%</span></span>
-            </div>
-            <div class="tier">
-                <div class="tier-boxes"><div class="hp-box"></div><div class="hp-box"></div><div class="hp-box"></div><div class="hp-box"></div><div class="hp-box"></div><div class="hp-box"></div><div class="hp-box"></div><div class="hp-box"></div><div class="hp-box crossed"></div><div class="hp-box crossed"></div></div>
-                <span class="tier-label">Maimed <span class="tier-penalty">-25%</span></span>
-            </div>
-            <div class="tier">
-                <div class="tier-boxes"><div class="hp-box"></div><div class="hp-box"></div><div class="hp-box"></div><div class="hp-box"></div><div class="hp-box"></div><div class="hp-box"></div><div class="hp-box"></div><div class="hp-box"></div><div class="hp-box crossed"></div><div class="hp-box crossed"></div></div>
-                <span class="tier-label">Incap. <span class="tier-penalty">-50%</span></span>
-            </div>
+            {%- endfor %}
             <div class="death-saves">
                 <span style="font-weight:600;font-size:6.5pt;">Death Saves:</span>
                 <div class="death-save-box"></div>
@@ -559,24 +681,25 @@
             </div>
         </div>
 
+        {#- Exhaustion -#}
         <div class="track">
             <div class="track-title">Exhaustion <span class="track-formula">(7+PW per tier)</span></div>
+            {%- set exhaustTiers = [
+                {"label": "OK", "penalty": ""},
+                {"label": "Wearied", "penalty": "-10%"},
+                {"label": "Drained", "penalty": "-25%"},
+                {"label": "Overwhelmed", "penalty": "-50%"}
+            ] -%}
+            {%- for tier in exhaustTiers %}
             <div class="tier">
-                <div class="tier-boxes"><div class="hp-box"></div><div class="hp-box"></div><div class="hp-box"></div><div class="hp-box"></div><div class="hp-box"></div><div class="hp-box crossed"></div><div class="hp-box crossed"></div><div class="hp-box crossed"></div><div class="hp-box crossed"></div><div class="hp-box crossed"></div></div>
-                <span class="tier-label">OK</span>
+                <div class="tier-boxes">
+                    {%- for b in range(0, 10) %}
+                    <div class="hp-box{% if epPerTier != null and b >= epPerTier %} crossed{% endif %}"></div>
+                    {%- endfor %}
+                </div>
+                <span class="tier-label">{{ tier.label }}{% if tier.penalty %} <span class="tier-penalty">{{ tier.penalty }}</span>{% endif %}</span>
             </div>
-            <div class="tier">
-                <div class="tier-boxes"><div class="hp-box"></div><div class="hp-box"></div><div class="hp-box"></div><div class="hp-box"></div><div class="hp-box"></div><div class="hp-box crossed"></div><div class="hp-box crossed"></div><div class="hp-box crossed"></div><div class="hp-box crossed"></div><div class="hp-box crossed"></div></div>
-                <span class="tier-label">Wearied <span class="tier-penalty">-10%</span></span>
-            </div>
-            <div class="tier">
-                <div class="tier-boxes"><div class="hp-box"></div><div class="hp-box"></div><div class="hp-box"></div><div class="hp-box"></div><div class="hp-box"></div><div class="hp-box crossed"></div><div class="hp-box crossed"></div><div class="hp-box crossed"></div><div class="hp-box crossed"></div><div class="hp-box crossed"></div></div>
-                <span class="tier-label">Drained <span class="tier-penalty">-25%</span></span>
-            </div>
-            <div class="tier">
-                <div class="tier-boxes"><div class="hp-box"></div><div class="hp-box"></div><div class="hp-box"></div><div class="hp-box"></div><div class="hp-box"></div><div class="hp-box crossed"></div><div class="hp-box crossed"></div><div class="hp-box crossed"></div><div class="hp-box crossed"></div><div class="hp-box crossed"></div></div>
-                <span class="tier-label">Overwhelmed <span class="tier-penalty">-50%</span></span>
-            </div>
+            {%- endfor %}
             <div class="track-notes">
                 <div class="track-notes-label">Effects:</div>
                 <div style="min-height:14pt;"></div>
@@ -586,40 +709,54 @@
 
 </div>
 
-<!-- ═══════════════ KAEL DUNN — PAGE 2 ═══════════════ -->
+{#- ═══════════════ PAGE 2 ═══════════════ -#}
 <div class="page">
 
     <div class="two-col">
 
-        <!-- ── Left Column ── -->
+        {#- ── Left Column ── -#}
         <div>
 
-            <!-- Magic -->
+            {#- Magic -#}
             <div class="section">
                 <div class="section-title">Magic</div>
                 <div class="checkbox-row" style="margin-bottom:2pt;">
                     <span style="font-weight:600;font-size:7pt;color:#555;">Path:</span>
-                    <div class="checkbox-item"><div class="checkbox"></div><span>Scholarly</span></div>
-                    <div class="checkbox-item"><div class="checkbox"></div><span>Wild</span></div>
-                    <div class="checkbox-item"><div class="checkbox checked"></div><span>Non-caster</span></div>
+                    <div class="checkbox-item"><div class="checkbox{% if char.path == 'scholarly' %} checked{% endif %}"></div><span>Scholarly</span></div>
+                    <div class="checkbox-item"><div class="checkbox{% if char.path == 'wild' %} checked{% endif %}"></div><span>Wild</span></div>
+                    <div class="checkbox-item"><div class="checkbox{% if char.path == 'none' %} checked{% endif %}"></div><span>Non-caster</span></div>
                 </div>
                 <div class="casting-grid">
                     <div class="casting-field">
                         <span class="casting-label">Casting Target:</span>
-                        <div class="casting-value"></div>
+                        <div class="casting-value">
+                            {%- if char.path == 'scholarly' or char.path == 'wild' -%}
+                                {%- if char.skills -%}
+                                    {%- for skill in char.skills -%}
+                                        {%- if skill.name == 'Casting' or skill.name == 'Spellcasting' %}{{ skill.target }}{% endif -%}
+                                    {%- endfor -%}
+                                {%- endif -%}
+                            {%- endif -%}
+                        </div>
                     </div>
                     <div class="casting-field">
                         <span class="casting-label">Concentration:</span>
-                        <div class="casting-value"></div>
+                        <div class="casting-value">{% if pwVal != null and (char.path == 'scholarly' or char.path == 'wild') %}{{ (pwVal + 4) * 10 }}{% endif %}</div>
                         <span style="font-size:6pt;color:#888;">(PW+4)&times;10</span>
                     </div>
                     <div class="casting-field">
                         <span class="casting-label">Schools:</span>
-                        <div class="casting-value"></div>
+                        <div class="casting-value">
+                            {%- if char.path == 'scholarly' -%}
+                                All
+                            {%- elif char.path == 'wild' and char.wildSchools -%}
+                                {{ char.wildSchools | join(", ") }}
+                            {%- endif -%}
+                        </div>
                     </div>
                     <div class="casting-field">
                         <span class="casting-label">Spells Known:</span>
-                        <div class="casting-value"></div>
+                        <div class="casting-value">{% if pwVal != null and (char.path == 'scholarly' or char.path == 'wild') %}{{ 7 + pwVal }}{% endif %}</div>
                         <span style="font-size:6pt;color:#888;">(7+PW)</span>
                     </div>
                 </div>
@@ -629,7 +766,7 @@
                 </div>
             </div>
 
-            <!-- Spells -->
+            {#- Spells -#}
             <div class="section">
                 <div class="section-title">Spells</div>
                 <table class="spell-table">
@@ -645,18 +782,22 @@
                         </tr>
                     </thead>
                     <tbody>
+                        {%- set spellSlots = 12 -%}
+                        {%- set spellCount = char.spells | length if char.spells else 0 -%}
+                        {%- for spell in char.spells %}
+                        <tr>
+                            <td>{{ spell.name }}</td>
+                            <td>{{ spell.school }}</td>
+                            <td>{{ spell.cast }}</td>
+                            <td>{{ spell.w }}</td>
+                            <td>{{ spell.s }}</td>
+                            <td>{{ spell.st }}</td>
+                            <td>{{ spell.sp }}</td>
+                        </tr>
+                        {%- endfor %}
+                        {%- for i in range(spellCount, spellSlots) %}
                         <tr><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-                        <tr><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-                        <tr><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-                        <tr><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-                        <tr><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-                        <tr><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-                        <tr><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-                        <tr><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-                        <tr><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-                        <tr><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-                        <tr><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-                        <tr><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                        {%- endfor %}
                     </tbody>
                 </table>
                 <div style="font-size:6pt;color:#888;margin-top:1pt;">
@@ -664,70 +805,104 @@
                 </div>
             </div>
 
-            <!-- Inventory -->
+            {#- Inventory -#}
             <div class="section">
                 <div class="section-title">Inventory</div>
-                <div class="inv-line filled">Revolver ammunition (30 rounds)</div>
-                <div class="inv-line filled">Hunting knife (belt sheath)</div>
-                <div class="inv-line filled">Binoculars (brass, military surplus)</div>
-                <div class="inv-line filled">Hip flask (silver, dented, always full)</div>
-                <div class="inv-line filled">Handcuffs (kept from constable days)</div>
-                <div class="inv-line filled">Rope (30 feet, hemp)</div>
-                <div class="inv-line filled">Matches and oil lamp</div>
-                <div class="inv-line filled">Society stipend purse (50 marks)</div>
+                {%- set invSlots = 12 -%}
+                {%- for item in invItems %}
+                <div class="inv-line">{{ item }}</div>
+                {%- endfor %}
+                {%- for i in range(invItems | length, invSlots) %}
                 <div class="inv-line"></div>
-                <div class="inv-line"></div>
-                <div class="inv-line"></div>
-                <div class="inv-line"></div>
+                {%- endfor %}
             </div>
 
         </div>
 
-        <!-- ── Right Column ── -->
+        {#- ── Right Column ── -#}
         <div>
 
-            <!-- Society -->
+            {#- Society -#}
             <div class="section">
                 <div class="section-title">Adventuring Society</div>
                 <div class="society-grid">
-                    <div class="field"><div class="field-label">Society Name</div><div class="field-line filled">The Ashwick Charter</div></div>
-                    <div class="field"><div class="field-label">Society Type</div><div class="field-line filled">Fixers</div></div>
-                    <div class="field"><div class="field-label">Patron</div><div class="field-line filled">Greycoat Authority</div></div>
-                    <div class="field"><div class="field-label">Handler</div><div class="field-line filled">Inspector Renna Laine</div></div>
+                    <div class="field">
+                        <div class="field-label">Society Name</div>
+                        <div class="field-line">{% if char.society %}{{ char.society.name | default("") }}{% endif %}</div>
+                    </div>
+                    <div class="field">
+                        <div class="field-label">Society Type</div>
+                        <div class="field-line">{% if char.society %}{{ char.society.type | default("") }}{% endif %}</div>
+                    </div>
+                    <div class="field">
+                        <div class="field-label">Patron</div>
+                        <div class="field-line">{% if char.society %}{{ char.society.patron | default("") }}{% endif %}</div>
+                    </div>
+                    <div class="field">
+                        <div class="field-label">Handler</div>
+                        <div class="field-line">{% if char.society %}{{ char.society.handler | default("") }}{% endif %}</div>
+                    </div>
+                    <div class="field">
+                        <div class="field-label">Backing (1&ndash;5)</div>
+                        <div class="field-line">{% if char.society and char.society.backing %}{{ char.society.backing }}{% endif %}</div>
+                    </div>
+                    <div class="field">
+                        <div class="field-label">Ledger</div>
+                        <div class="field-line" style="font-size:6pt;">
+                            {%- set ledgerLevels = ["Flush", "Level", "Lean", "Dire"] -%}
+                            {%- set activeLedger = char.society.ledger if char.society else "" -%}
+                            {%- for level in ledgerLevels -%}
+                                {%- if activeLedger == level -%}&#9746;{%- else -%}&#9744;{%- endif %} {{ level }}{%- if not loop.last %} &nbsp; {% endif -%}
+                            {%- endfor -%}
+                        </div>
+                    </div>
                 </div>
                 <div class="field" style="margin-top:2pt;">
                     <div class="field-label">Charter / Mission</div>
-                    <div class="field-line filled">Investigate the disappearance of Fen Harker, Gradient</div>
-                    <div class="field-line filled">Scholar researcher. Recover him alive. Report all findings.</div>
+                    <div class="field-line">{{ charterText }}</div>
+                    <div class="field-line"></div>
                 </div>
             </div>
 
-            <!-- Faction -->
+            {#- Faction -#}
             <div class="section">
                 <div class="section-title">Faction Alignment</div>
-                <div class="field"><div class="field-label">Primary Faction</div><div class="field-line filled">Greycoat Authority (Arrangement)</div></div>
+                <div class="field">
+                    <div class="field-label">Primary Faction</div>
+                    <div class="field-line">{{ char.faction | default("") }}</div>
+                </div>
                 <div class="field" style="margin-top:2pt;">
                     <div class="field-label">Relationship / Standing</div>
-                    <div class="field-line filled">Newly contracted. Laine trusts competence over</div>
-                    <div class="field-line filled">credentials.</div>
+                    <div class="field-line">{{ char.factionRelation | default("") }}</div>
+                    <div class="field-line"></div>
                 </div>
             </div>
 
-            <!-- Contacts -->
+            {#- Contacts -#}
             <div class="section">
                 <div class="section-title">Notable Contacts</div>
                 <div style="display:grid;grid-template-columns:2fr 1.5fr 3fr;gap:1pt;font-size:6pt;color:#666;font-weight:600;text-transform:uppercase;margin-bottom:1pt;">
                     <span>Name</span><span>Affiliation</span><span>Notes</span>
                 </div>
-                <div class="contact-row"><div class="field-line filled">Sgt. Donal Fisk</div><div class="field-line filled">Greycoat Authority</div><div class="field-line filled">Former partner, still on the force</div></div>
-                <div class="contact-row"><div class="field-line filled">"Copper" Meraud</div><div class="field-line filled">Underworld</div><div class="field-line filled">Retired thief, now informant</div></div>
-                <div class="contact-row"><div class="field-line filled">Tomas Breck</div><div class="field-line filled">Harrier Street</div><div class="field-line filled">Bartender, hears everything</div></div>
-                <div class="contact-row"><div class="field-line"></div><div class="field-line"></div><div class="field-line"></div></div>
-                <div class="contact-row"><div class="field-line"></div><div class="field-line"></div><div class="field-line"></div></div>
-                <div class="contact-row"><div class="field-line"></div><div class="field-line"></div><div class="field-line"></div></div>
+                {%- set contactSlots = 6 -%}
+                {%- set contactCount = char.contacts | length if char.contacts else 0 -%}
+                {%- for contact in char.contacts %}
+                <div class="contact-row">
+                    <div class="field-line">{{ contact.name }}</div>
+                    <div class="field-line">{{ contact.affiliation }}</div>
+                    <div class="field-line">{{ contact.notes }}</div>
+                </div>
+                {%- endfor %}
+                {%- for i in range(contactCount, contactSlots) %}
+                <div class="contact-row">
+                    <div class="field-line"></div>
+                    <div class="field-line"></div>
+                    <div class="field-line"></div>
+                </div>
+                {%- endfor %}
             </div>
 
-            <!-- Backlash -->
+            {#- Backlash -#}
             <div class="section">
                 <div class="section-title">Active Backlash Effects</div>
                 <div class="notes-line"></div>
@@ -735,28 +910,22 @@
                 <div class="notes-line"></div>
             </div>
 
-            <!-- Notes -->
+            {#- Notes -#}
             <div class="section">
                 <div class="section-title">Notes</div>
-                <div class="notes-line filled">Left the Greycoats after 8 years. Doesn't talk about why.</div>
-                <div class="notes-line filled">Always checks exits when entering a room.</div>
-                <div class="notes-line filled">Calls everyone by their last name until he trusts them.</div>
-                <div class="notes-line filled">Keeps a worn photograph in his jacket. Won't show it.</div>
+                {%- set noteSlots = 13 -%}
+                {%- for note in noteItems %}
+                <div class="notes-line">{{ note }}</div>
+                {%- endfor %}
+                {%- for i in range(noteItems | length, noteSlots) %}
                 <div class="notes-line"></div>
-                <div class="notes-line"></div>
-                <div class="notes-line"></div>
-                <div class="notes-line"></div>
-                <div class="notes-line"></div>
-                <div class="notes-line"></div>
-                <div class="notes-line"></div>
-                <div class="notes-line"></div>
-                <div class="notes-line"></div>
+                {%- endfor %}
             </div>
 
         </div>
     </div>
 
-    <!-- Quick Reference -->
+    {#- Quick Reference -#}
     <div class="reference-box" style="margin-top:3pt;">
         <strong>Quick Reference</strong> &mdash;
         <code>Skill Target = ((10 + Stat) &times; Level) + 30</code> &middot;
@@ -769,8 +938,6 @@
     </div>
 
 </div>
-
-
 
 </body>
 </html>

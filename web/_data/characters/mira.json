@@ -1,0 +1,62 @@
+{
+  "slug": "mira",
+  "filename": "quickstart-mira.html",
+  "name": "Mira Cade",
+  "player": "",
+  "archetype": "The Fixer",
+  "station": 2,
+  "description": "Late twenties, sharp features, quick smile that doesn't always reach her eyes. Dark hair cropped short, silver earring (left ear). Dresses well enough to pass in polite company. Always smells like cigarette smoke and jasmine.",
+  "attrs": {
+    "BR": { "val": 0, "desc": "Average build" },
+    "PC": { "val": 1, "desc": "Quick and precise" },
+    "IN": { "val": 1, "desc": "Street-smart" },
+    "SP": { "val": 2, "desc": "Magnetic charm" },
+    "AW": { "val": 0, "desc": "Average perception" },
+    "PW": { "val": -2, "desc": "Null -- no Aetheric sense" }
+  },
+  "skills": [
+    { "name": "Persuasion", "stat": "SP", "level": 3, "target": 66 },
+    { "name": "Deception", "stat": "SP", "level": 3, "target": 66 },
+    { "name": "Streetwise", "stat": "SP", "level": 3, "target": 66 },
+    { "name": "Firearms", "stat": "PC", "level": 3, "target": 63 },
+    { "name": "Stealth", "stat": "PC", "level": 3, "target": 63 },
+    { "name": "Sleight of Hand", "stat": "PC", "level": 3, "target": 63 },
+    { "name": "Investigation", "stat": "AW", "level": 3, "target": 60 },
+    { "name": "Intimidation", "stat": "SP", "level": 2, "target": 54 },
+    { "name": "Observation", "stat": "AW", "level": 2, "target": 50 },
+    { "name": "Empathy", "stat": "AW", "level": 2, "target": 50 },
+    { "name": "Survival", "stat": "AW", "level": 2, "target": 50 },
+    { "name": "Etiquette", "stat": "SP", "level": 1, "target": 42 },
+    { "name": "Athletics", "stat": "BR", "level": 1, "target": 40 },
+    { "name": "Melee", "stat": "BR", "level": 1, "target": 40 }
+  ],
+  "weapons": [
+    { "name": "Arc Pistol", "skill": "Firearms", "spd": "3", "dmg": "2d6+2", "cap": "4", "rld": "4", "rel": "90", "tags": "Galvanic R2" },
+    { "name": "Holdout Derringer", "skill": "Firearms", "spd": "2", "dmg": "1d6", "cap": "2", "rld": "3", "rel": "95", "tags": "Concealable" }
+  ],
+  "armor": [
+    { "name": "Concealed Vest", "ballistic": 1, "martial": 0, "hinder": 0, "notes": "Hidden under clothes" }
+  ],
+  "path": "none",
+  "wildSchools": [],
+  "spells": [],
+  "society": {
+    "name": "The Ashwick Charter",
+    "type": "Fixers",
+    "patron": "Greycoat Authority",
+    "handler": "Inspector Renna Laine",
+    "charter": "Investigate the disappearance of Fen Harker, Gradient Scholar researcher. Recover him alive. Report all findings.",
+    "backing": 3,
+    "ledger": "Level"
+  },
+  "faction": "Greycoat Authority (Arrangement)",
+  "factionRelation": "Newly contracted. Mira has worked both sides of Ashwick her whole life -- having official backing is new.",
+  "contacts": [
+    { "name": "Jinx Alvarado", "affiliation": "Lamplighter Syndicate", "notes": "Low-level smuggler, childhood friend" },
+    { "name": "Mrs. Olt", "affiliation": "Ashwick boarding houses", "notes": "Landlady network, knows everyone" },
+    { "name": "Regan Thale", "affiliation": "Harrier Street", "notes": "Newspaper reporter, trades in favors" }
+  ],
+  "inventory": "Arc pistol ammunition (12 charges)\nDerringer ammunition (10 rounds)\nLockpicks (professional set)\nForged Greycoat credentials (passable)\nCigarette case (silver, monogrammed M.C.)\nSmall mirror (pocket-sized)\nFine pen and notepad\nChange of clothes (working class, for disguise)\nSociety stipend purse (50 marks)",
+  "notes": "Grew up on Harrier Street, right on the gradient border.\nWon the arc pistol in a card game. Hasn't asked where it came from.\nCan fake three different accents convincingly.\nAlways carries two sets of ID -- real and forged.\nKnows the Lamplighter Syndicate exists. Has bought drinks for some of their people. Not a member, not an enemy. Yet.",
+  "xp": { "total": 0, "spent": 0 }
+}

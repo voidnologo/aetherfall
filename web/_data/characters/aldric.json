@@ -1,0 +1,72 @@
+{
+  "slug": "aldric",
+  "filename": "quickstart-aldric.html",
+  "name": "Aldric Wynn",
+  "player": "",
+  "archetype": "The Surgeon",
+  "station": 2,
+  "description": "Tall, thin, early forties. Wire-rimmed spectacles, receding hairline, ink-stained fingers. Precise posture from too long in lecture halls. Smells of reagents and old paper. His spellbook is never more than arm's reach away.",
+  "attrs": {
+    "BR": { "val": -1, "desc": "Thin build" },
+    "PC": { "val": 0, "desc": "Steady hands" },
+    "IN": { "val": 2, "desc": "Brilliant mind" },
+    "SP": { "val": -1, "desc": "Socially stiff" },
+    "AW": { "val": 1, "desc": "Notices details" },
+    "PW": { "val": 1, "desc": "Attuned but controlled" }
+  },
+  "skills": [
+    { "name": "Scholarly Casting", "stat": "PW", "level": 3, "target": 63 },
+    { "name": "Occult Lore", "stat": "IN", "level": 3, "target": 66 },
+    { "name": "Medicine", "stat": "IN", "level": 3, "target": 66 },
+    { "name": "Persuasion", "stat": "SP", "level": 3, "target": 57 },
+    { "name": "Investigation", "stat": "AW", "level": 2, "target": 52 },
+    { "name": "Observation", "stat": "AW", "level": 2, "target": 52 },
+    { "name": "Stealth", "stat": "PC", "level": 2, "target": 50 },
+    { "name": "Firearms", "stat": "PC", "level": 2, "target": 50 },
+    { "name": "Etiquette", "stat": "SP", "level": 2, "target": 48 },
+    { "name": "Deception", "stat": "SP", "level": 2, "target": 48 },
+    { "name": "Streetwise", "stat": "SP", "level": 2, "target": 48 },
+    { "name": "Athletics", "stat": "BR", "level": 2, "target": 48 },
+    { "name": "Melee", "stat": "BR", "level": 2, "target": 48 },
+    { "name": "Science", "stat": "IN", "level": 1, "target": 42 },
+    { "name": "Sleight of Hand", "stat": "PC", "level": 1, "target": 40 }
+  ],
+  "weapons": [
+    { "name": "Walking Stick", "skill": "Melee", "spd": "2", "dmg": "1d4", "cap": "", "rld": "", "rel": "", "tags": "Reach" },
+    { "name": "Revolver", "skill": "Firearms", "spd": "3", "dmg": "2d6", "cap": "6", "rld": "3", "rel": "95", "tags": "Reliable" }
+  ],
+  "armor": [
+    { "name": "Reinforced Coat", "ballistic": 1, "martial": 1, "hinder": 0, "notes": "Tweed over steel stays" }
+  ],
+  "path": "scholarly",
+  "wildSchools": [],
+  "spells": [
+    { "name": "Mend", "school": "Vitae", "cast": "3ct", "w": 4, "s": 8, "st": 12, "sp": 18 },
+    { "name": "Reveal", "school": "Divination", "cast": "4ct", "w": 3, "s": 6, "st": 9, "sp": 14 },
+    { "name": "Detect", "school": "Divination", "cast": "2ct", "w": 2, "s": 4, "st": 6, "sp": 10 },
+    { "name": "Shield", "school": "Warding", "cast": "3ct", "w": 3, "s": 6, "st": 9, "sp": 14 },
+    { "name": "Force", "school": "Aeth. Manip", "cast": "2ct", "w": 2, "s": 4, "st": 6, "sp": 10 },
+    { "name": "Anchor", "school": "Warding", "cast": "3ct", "w": 3, "s": 6, "st": 9, "sp": 14 },
+    { "name": "Kinesis", "school": "Aeth. Manip", "cast": "4ct", "w": 3, "s": 6, "st": 9, "sp": 14 },
+    { "name": "Reshape", "school": "Artifice", "cast": "4ct", "w": 3, "s": 6, "st": 9, "sp": 14 }
+  ],
+  "society": {
+    "name": "The Ashwick Charter",
+    "type": "Fixers",
+    "patron": "Greycoat Authority",
+    "handler": "Inspector Renna Laine",
+    "charter": "Investigate the disappearance of Fen Harker, Gradient Scholar researcher. Recover him alive. Report all findings.",
+    "backing": 3,
+    "ledger": "Level"
+  },
+  "faction": "Greycoat Authority (Arrangement)",
+  "factionRelation": "Knows Fen Harker by reputation -- this job is personal. Scholars look after their own.",
+  "contacts": [
+    { "name": "Prof. Elise Maren", "affiliation": "Gradient Scholars", "notes": "Former colleague, zone cartography" },
+    { "name": "Dr. Hanna Reis", "affiliation": "City Hospital", "notes": "Surgeon, owes him a favor" },
+    { "name": "Fen Harker", "affiliation": "Gradient Scholars", "notes": "The missing researcher (by reputation)" }
+  ],
+  "inventory": "Spellbook (leather-bound, well-thumbed)\nMedical kit (bandages, sutures, tinctures)\nMagnifying lens (brass, pocket-sized)\nRevolver ammunition (18 rounds)\nLantern (oil, brass)\nNotebook and charcoal pencils\nReference text: Veil Cartography Primer\nSociety stipend purse (50 marks)",
+  "notes": "Trained at the Gradient Scholars. Funding cuts eliminated his post.\nKnows Harker by reputation -- respected zone cartographer.\nKeeps his spellbook in an oilskin pouch at all times.\nDoesn't drink. Disapproves of those who do (but won't say it).\nCan identify most common ailments and poisons by smell.",
+  "xp": { "total": 0, "spent": 0 }
+}

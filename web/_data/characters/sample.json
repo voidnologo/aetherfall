@@ -1,0 +1,71 @@
+{
+  "slug": "sample",
+  "filename": "character-sheet-sample.html",
+  "name": "Elara Voss",
+  "player": "Sample Player",
+  "archetype": "Smoke Surgeon",
+  "station": 2,
+  "description": "Pale, angular features. Wire-rimmed glasses. Ink-stained fingers. Always smells of old books and chemical reagents. Late 20s, dark hair pinned back, perpetual frown.",
+  "attrs": {
+    "BR": { "val": -1, "desc": "Slight build" },
+    "PC": { "val": 0, "desc": "Average dexterity" },
+    "IN": { "val": 2, "desc": "Brilliant researcher" },
+    "SP": { "val": -1, "desc": "Blunt, awkward" },
+    "AW": { "val": 0, "desc": "Average perception" },
+    "PW": { "val": 1, "desc": "Naturally attuned" }
+  },
+  "skills": [
+    { "name": "Scholarly Casting", "stat": "PW", "level": 3, "target": 63 },
+    { "name": "Occult Lore", "stat": "IN", "level": 3, "target": 66 },
+    { "name": "Medicine", "stat": "IN", "level": 2, "target": 54 },
+    { "name": "Investigation", "stat": "AW", "level": 2, "target": 50 },
+    { "name": "Observation", "stat": "AW", "level": 2, "target": 50 },
+    { "name": "Firearms", "stat": "PC", "level": 2, "target": 50 },
+    { "name": "Stealth", "stat": "PC", "level": 2, "target": 50 },
+    { "name": "Sleight of Hand", "stat": "PC", "level": 2, "target": 50 },
+    { "name": "Persuasion", "stat": "SP", "level": 2, "target": 48 },
+    { "name": "Deception", "stat": "SP", "level": 2, "target": 48 },
+    { "name": "Streetwise", "stat": "SP", "level": 2, "target": 48 },
+    { "name": "Melee", "stat": "BR", "level": 1, "target": 39 },
+    { "name": "Athletics", "stat": "BR", "level": 1, "target": 39 }
+  ],
+  "weapons": [
+    { "name": "Revolver", "skill": "Firearms", "spd": "3", "dmg": "2d6", "cap": "6", "rld": "3", "rel": "95", "tags": "Reliable" },
+    { "name": "Dagger", "skill": "Melee", "spd": "2", "dmg": "1d4", "cap": "", "rld": "", "rel": "", "tags": "Concealable" }
+  ],
+  "armor": [
+    { "name": "Trench Coat", "ballistic": 1, "martial": 2, "hinder": 0, "notes": "Standard issue" }
+  ],
+  "path": "scholarly",
+  "wildSchools": [],
+  "spells": [
+    { "name": "Force", "school": "Aeth. Manip", "cast": "2ct", "w": 2, "s": 4, "st": 6, "sp": 10 },
+    { "name": "Amplify", "school": "Aeth. Manip", "cast": "2ct", "w": 2, "s": 4, "st": 6, "sp": 10 },
+    { "name": "Barrier", "school": "Aeth. Manip", "cast": "4ct", "w": 3, "s": 6, "st": 9, "sp": 14 },
+    { "name": "Kinesis", "school": "Aeth. Manip", "cast": "4ct", "w": 3, "s": 6, "st": 9, "sp": 14 },
+    { "name": "Shield", "school": "Warding", "cast": "3ct", "w": 3, "s": 6, "st": 9, "sp": 14 },
+    { "name": "Anchor", "school": "Warding", "cast": "3ct", "w": 3, "s": 6, "st": 9, "sp": 14 },
+    { "name": "Detect", "school": "Divination", "cast": "2ct", "w": 2, "s": 4, "st": 6, "sp": 10 },
+    { "name": "Reveal", "school": "Divination", "cast": "4ct", "w": 3, "s": 6, "st": 9, "sp": 14 }
+  ],
+  "society": {
+    "name": "The Grey Ledger",
+    "type": "Asset Recovery",
+    "patron": "Thorne Industrial Concern",
+    "handler": "Marcus Cole",
+    "charter": "Recover stolen artifacts and prototypes from rival factions and rogue operators across the contested zones.",
+    "backing": 3,
+    "ledger": "Level"
+  },
+  "faction": "Industrialist (via Thorne)",
+  "factionRelation": "Trusted operative, 2 years of service. Good standing but privately uncomfortable with patron's politics.",
+  "contacts": [
+    { "name": "Dr. Fen Ashe", "affiliation": "University", "notes": "Former professor, occult texts" },
+    { "name": "\"Needles\" Katz", "affiliation": "Underworld", "notes": "Fence and info broker" },
+    { "name": "Sgt. Mara Vane", "affiliation": "Constabulary", "notes": "Friendly law contact" },
+    { "name": "Dren Sokolov", "affiliation": "Grey Ledger", "notes": "Fellow operative, demolitions" }
+  ],
+  "inventory": "Leather field journal + charcoal pencils\nMagnifying lens (brass, pocket-sized)\nRevolver ammunition (24 rounds)\nLock picks (basic set)\nChemical reagent kit (small vials)\nChalk, string, small mirror\nSociety stipend purse (12 crowns)\nPocket watch (engraved, gift from patron)",
+  "notes": "Carries leather journal with field notes at all times.\nAllergic to cats. Owes favor to the Archivist Guild.\nCurrently investigating missing Thorne prototype (Session 6).\nNeedles says the prototype was last seen in Lowbridge.",
+  "xp": { "total": 6, "spent": 0 }
+}

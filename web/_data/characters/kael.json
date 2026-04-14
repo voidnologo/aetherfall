@@ -1,0 +1,63 @@
+{
+  "slug": "kael",
+  "filename": "quickstart-kael.html",
+  "name": "Kael Dunn",
+  "player": "",
+  "archetype": "The Steady Hand",
+  "station": 2,
+  "description": "Broad-shouldered, mid-thirties. Close-cropped hair going grey at the temples. Calloused hands, steady eyes, old knife scar across the left knuckle. Wears his leather jacket like armor. Moves like someone used to bad neighborhoods.",
+  "attrs": {
+    "BR": { "val": 1, "desc": "Built like a brawler" },
+    "PC": { "val": 2, "desc": "Fast hands reflexes" },
+    "IN": { "val": 0, "desc": "Practical not bookish" },
+    "SP": { "val": 0, "desc": "Honest to a fault" },
+    "AW": { "val": 1, "desc": "Reads a room fast" },
+    "PW": { "val": -2, "desc": "Dead to the Aether" }
+  },
+  "skills": [
+    { "name": "Firearms", "stat": "PC", "level": 3, "target": 66 },
+    { "name": "Observation", "stat": "AW", "level": 3, "target": 63 },
+    { "name": "Streetwise", "stat": "SP", "level": 3, "target": 60 },
+    { "name": "Melee", "stat": "BR", "level": 2, "target": 52 },
+    { "name": "Athletics", "stat": "BR", "level": 2, "target": 52 },
+    { "name": "Stealth", "stat": "PC", "level": 2, "target": 54 },
+    { "name": "Brawl", "stat": "BR", "level": 2, "target": 52 },
+    { "name": "Intimidation", "stat": "BR", "level": 2, "target": 52 },
+    { "name": "Investigation", "stat": "AW", "level": 2, "target": 52 },
+    { "name": "Tactics", "stat": "IN", "level": 2, "target": 50 },
+    { "name": "Survival", "stat": "AW", "level": 2, "target": 52 },
+    { "name": "Persuasion", "stat": "SP", "level": 2, "target": 50 },
+    { "name": "Leadership", "stat": "SP", "level": 2, "target": 50 },
+    { "name": "Deception", "stat": "SP", "level": 2, "target": 50 },
+    { "name": "Etiquette", "stat": "SP", "level": 1, "target": 40 }
+  ],
+  "weapons": [
+    { "name": "Revolver", "skill": "Firearms", "spd": "3", "dmg": "2d6", "cap": "6", "rld": "3", "rel": "95", "tags": "Reliable" },
+    { "name": "Hunting Knife", "skill": "Melee", "spd": "2", "dmg": "1d6+1", "cap": "", "rld": "", "rel": "", "tags": "Concealable" }
+  ],
+  "armor": [
+    { "name": "Leather Jacket", "ballistic": 2, "martial": 1, "hinder": 0, "notes": "Worn-in, comfortable" }
+  ],
+  "path": "none",
+  "wildSchools": [],
+  "spells": [],
+  "society": {
+    "name": "The Ashwick Charter",
+    "type": "Fixers",
+    "patron": "Greycoat Authority",
+    "handler": "Inspector Renna Laine",
+    "charter": "Investigate the disappearance of Fen Harker, Gradient Scholar researcher. Recover him alive. Report all findings.",
+    "backing": 3,
+    "ledger": "Level"
+  },
+  "faction": "Greycoat Authority (Arrangement)",
+  "factionRelation": "Newly contracted. Laine trusts competence over credentials.",
+  "contacts": [
+    { "name": "Sgt. Donal Fisk", "affiliation": "Greycoat Authority", "notes": "Former partner, still on the force" },
+    { "name": "\"Copper\" Meraud", "affiliation": "Underworld", "notes": "Retired thief, now informant" },
+    { "name": "Tomas Breck", "affiliation": "Harrier Street", "notes": "Bartender, hears everything" }
+  ],
+  "inventory": "Revolver ammunition (30 rounds)\nHunting knife (belt sheath)\nBinoculars (brass, military surplus)\nHip flask (silver, dented, always full)\nHandcuffs (kept from constable days)\nRope (30 feet, hemp)\nMatches and oil lamp\nSociety stipend purse (50 marks)",
+  "notes": "Left the Greycoats after 8 years. Doesn't talk about why.\nAlways checks exits when entering a room.\nCalls everyone by their last name until he trusts them.\nKeeps a worn photograph in his jacket. Won't show it.",
+  "xp": { "total": 0, "spent": 0 }
+}
