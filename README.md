@@ -12,39 +12,52 @@ A tabletop roleplaying game set in a 1920s-inspired secondary world where primal
 
 ```
 aetherfall/
-  web/                          # Live web rulebook and tools
-    index.html                  # Landing page
-    rules/                      # 16-chapter rulebook (static HTML)
-      css/styles.css            # Unified design system
-      js/main.js                # Sidebar, navigation, interactions
-      tools/                    # Standalone interactive tools
-        character-builder.html  # Form-based character creator with auto-calc
-        character-sheet.html    # Blank printable 2-page sheet
-        character-sheet-sample.html
-        combat-tracker.html     # Timing track visualizer
-        zone-tracker.html       # Aetheric/Galvanic balance tracker
+  eleventy.config.js              # Build config — filters, shortcodes, passthrough copy
+  package.json                    # Single dependency: @11ty/eleventy 3.x
+  web/                            # Eleventy input — live rulebook and tools
+    index.html                    # Landing page
+    _includes/
+      chapter.njk                 # Shared template for all rulebook chapters
+      sheet.njk                   # Template for character sheet pages
+    _data/
+      pages.json                  # Chapter navigation (order, IDs, themes)
+      characters.js               # Loads character JSON for sheet rendering
+      characters/                 # Character data (blank.json, sera.json, etc.)
+    assets/                       # Images, logos, favicon
+    rules/                        # 18 chapters + quickstart (.njk templates)
+      css/styles.css              # Unified design system (dark theme, custom properties)
+      js/main.js                  # Sidebar navigation, character sheet logic
+      tools/                      # Standalone interactive HTML tools
+        character-builder.html    # Form wizard with auto-calc and print
+        combat-tracker.html       # Timing track visualizer with drag-and-drop
+        zone-tracker.html         # Aetheric/Galvanic balance tracker
+  _site/                          # Built output (generated, not committed)
   docs/
-    requirements/               # Design specifications (the "why")
-    sessions/                   # Chronological development log
-    art/                        # Art direction and style guide
-    pending-tasks.md            # Active task queue
-    continuation-prompt.md      # Session resumption context
-  simulations/                  # Python balance testing tools
-  art/                          # Reference illustrations (pen & ink)
-  rules/                        # Legacy PDFs (superseded by web/)
+    requirements/                 # Authoritative design specifications (16 docs)
+    sessions/                     # Chronological development log (27+ sessions)
+    art/                          # Art direction, style guide, prompt engineering
+    pending-tasks.md              # Active task queue
+    continuation-prompt.md        # Session resumption context
+  simulations/                    # Python balance testing tools
+  art/                            # Generated and approved illustrations
+    logo/                         # Wordmark, monogram (approved/)
+    hero/                         # Cover art (approved/, archived/)
+    emboss/                       # Embossed "A" logo (generated/, archived/)
+  rules/                          # Legacy PDFs (superseded by web/)
 ```
 
 ---
 
 ## Tech Stack
 
-No build step, no dependencies, no framework. The entire rulebook is static HTML/CSS/JS served directly.
+Built with [Eleventy 3.x](https://www.11ty.dev/) as a static site generator. Nunjucks templates, no client-side framework.
 
-- **Rulebook:** Semantic HTML with a custom dark-theme design system (CSS custom properties, responsive grid)
-- **Typography:** Playfair Display (headings), Source Serif 4 (body), JetBrains Mono (formulas), Cormorant Garamond (callouts)
-- **Tools:** Standalone single-file HTML apps (no server, no login, runs offline after first load)
+- **Build:** `npm run dev` (local server with live reload) / `npm run build` (production output to `_site/`)
+- **Deploy:** GitHub Actions → GitHub Pages with `--pathprefix=/aetherfall/`
+- **Templates:** Nunjucks (`.njk`) with custom shortcodes for voice callouts (`{% handler %}`, `{% scholar %}`, `{% street %}`, `{% believer %}`) and utility blocks (`{% gmnote %}`, `{% example %}`, `{% warning %}`, `{% scene %}`)
+- **Typography:** Playfair Display (headings), Source Serif 4 (body), JetBrains Mono (formulas), Cormorant Garamond (callouts) — all via CDN
+- **Tools:** Standalone single-file HTML apps with embedded game data (no server, runs offline)
 - **Flowcharts:** Mermaid.js via CDN for combat and spellcasting procedure diagrams
-- **Character Builder:** Vanilla JS with all game data (27 skills, 37 spells, 6 schools) embedded as constants
 - **Simulations:** Python scripts for balance testing (armor degradation, weapon curves, melee parity)
 
 ---
@@ -93,13 +106,29 @@ Every weapon has Speed, Damage, Capacity, Reload, and Reliability. Firearms chec
 
 "Fog of Scale" principle: global events are rumors, regional politics are faction-driven, local detail is NPC-level. The world is 40-60 years past the Tear that brought magic back. Factions include Industrialists, Traditionalists, Academics, the Church, and criminal networks.
 
-**10. [WRITING_STYLE.md](docs/requirements/WRITING_STYLE.md)** — How to write for the game
+**10. [ECONOMY.md](docs/requirements/ECONOMY.md)** — Wealth and commerce
+
+The Ledger system: a qualitative state track (Flush → Level → Lean → Dire) driven by mission payouts and natural Drift. Station as social currency, patron Backing, and the design principle that economy is story fuel, not simulation.
+
+**11. [MAGICAL_ARTIFACTS.md](docs/requirements/MAGICAL_ARTIFACTS.md)** — Enchanted items
+
+Enchanted weapons, protective wards, brewed potions, and ancient relics. Artifact pricing, creation guidelines, and the relationship between magical items and the Aetheric balance.
+
+**12. [STARTER_ADVENTURE.md](docs/requirements/STARTER_ADVENTURE.md)** — The Ashwick Job
+
+A ready-to-run introductory scenario designed to teach core mechanics through play. Includes pre-generated characters, scene structure, and GM guidance.
+
+**13. [GM_CHAPTER.md](docs/requirements/GM_CHAPTER.md)** — Running the game
+
+When to call for a roll (uncertain outcome + interesting failure + not guaranteed by competence). Difficulty modifiers, adjudication philosophy, the Drift/payout system, and the principle that the GM's job is to make the world feel real, not to enforce balance.
+
+**14. [WRITING_STYLE.md](docs/requirements/WRITING_STYLE.md)** — How to write for the game
 
 Two audiences: players (literary, narrative, conversational) and designers (technical, decision-focused). Voice callouts in the rulebook are in-world characters sharing experiences — never rules commentary. The "tavern test": if a character wouldn't say it over a drink, it doesn't belong in a voice callout.
 
-**11. [GM_CHAPTER.md](docs/requirements/GM_CHAPTER.md)** — Running the game
+**15. [ART_DIRECTION.md](docs/requirements/ART_DIRECTION.md)** — Visual identity
 
-When to call for a roll (uncertain outcome + interesting failure + not guaranteed by competence). Difficulty modifiers, adjudication philosophy, and the principle that the GM's job is to make the world feel real, not to enforce balance.
+Art style, mood, and production guidelines. Covers the pen-and-ink aesthetic, color palette, and the art pipeline (generated → approved/archived).
 
 ---
 
@@ -115,6 +144,7 @@ When to call for a roll (uncertain outcome + interesting failure + not guarantee
 | Spellcasting | Roll margin determines tier (Weak/Standard/Strong/Spectacular) |
 | Firearms | Reliability check every shot; malfunction in Aetheric zones |
 | Aetheric Balance | Sliding scale — spells push Aetheric, Galvanic weapons push back |
+| Economy | Ledger state track (Flush → Level → Lean → Dire) with Drift |
 
 ---
 
@@ -132,7 +162,7 @@ All tools are standalone HTML files with no server required. Open in a browser, 
 
 Session notes in `docs/sessions/` form a chronological record of every design decision, mechanic iteration, and implementation choice. Each session file includes the goal, changes made, files modified, key decisions with rationale, and open issues.
 
-`docs/pending-tasks.md` tracks the active work queue and backlog.
+`docs/pending-tasks.md` tracks the active task queue and backlog.
 
 ---
 

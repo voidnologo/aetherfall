@@ -1,17 +1,15 @@
 # Continuation Prompt
 
-## Last Session (27) — Character Sheet Fixes, Production Bugs, Lore Rename
+## Last Session (28) — HTML Entity Cleanup, Payout Clarity, README Overhaul
 
-- Fixed broken images in production: asset paths now use Eleventy `| url` filter + `--pathprefix=/aetherfall/`
-- Fixed magic path checkbox double-check bug (Wild + Non-caster both showing checked)
-- Removed hardcoded spell count from grimoire, fixed subtitle HTML entity bleed
-- Renamed "the Eruption" to "the Tear" across all lore (~80 replacements, 15 files)
-- Reworked Believer voice callout with fabric/mending metaphor
+- Fixed `&mdash;` and `&amp;` HTML entities rendering as literal text in 8 chapter subtitle frontmatter fields
+- Clarified Scraps vs Honest Work in payout table — Scraps now says "Drift still applies", Honest Work says "prevents Drift"
+- Rewrote README for Eleventy 3.x build system, accurate 18-chapter count, all 15 design docs, current project structure
 
 ## Current State
 - **Game title:** Aetherfall (repo: voidnologo/aetherfall)
 - **Build:** Eleventy 3.x — `npm run dev` / `npm run build` — deploys via GitHub Action with `--pathprefix=/aetherfall/`
-- **Website:** 20 chapters (.njk) + 6 character sheets (from JSON + sheet.njk) + interactive tools
+- **Website:** 18 chapters + quickstart (.njk) + character sheets (from JSON + sheet.njk) + interactive tools
 - **Art pipeline:** art/{type}/{generated|approved|archived}/ — art NEVER deleted, only moved
 - **Founding event:** "The Tear" (was "the Eruption" — renamed session 27)
 - **ComfyUI API:** flux1-dev via UNETLoader + DualCLIPLoader + VAELoader; schnell via CheckpointLoaderSimple
