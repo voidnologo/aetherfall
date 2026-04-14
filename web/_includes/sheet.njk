@@ -1200,8 +1200,9 @@
   if (xpBoxes[0] && c.xp) xpBoxes[0].textContent = c.xp.total || 0;
   if (xpBoxes[1] && c.xp) xpBoxes[1].textContent = c.xp.spent || 0;
 
-  // Magic path checkboxes
+  // Magic path checkboxes — clear build-time defaults, then mark the correct one
   var checkboxes = document.querySelectorAll('.checkbox');
+  checkboxes.forEach(function(cb) { cb.classList.remove('checked'); });
   if (c.path === 'scholarly' && checkboxes[0]) checkboxes[0].classList.add('checked');
   if (c.path === 'wild' && checkboxes[1]) checkboxes[1].classList.add('checked');
   if (c.path === 'none' && checkboxes[2]) checkboxes[2].classList.add('checked');
