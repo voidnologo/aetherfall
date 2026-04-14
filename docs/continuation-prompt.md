@@ -1,21 +1,19 @@
 # Continuation Prompt
 
-## Last Session (26) — Rules Site Wordmark & Character Sheet Art Deco
+## Last Session (27) — Character Sheet Fixes, Production Bugs, Lore Rename
 
-- Sidebar wordmark integrated (replaced monogram), header kept monogram+text
-- Fixed broken relative asset paths to absolute (`/assets/logo/...`)
-- Generated proper favicon.ico (32x32) and apple-touch-icon.png (180x180)
-- Renamed Ch01 "Welcome to the Age of Wonder" -> "Welcome to Aetherfall"
-- Character sheets: art deco overhaul with Playfair Display + Cormorant Garamond fonts
-- Wordmark at top of sheet page 1 (3in centered, CSS `filter: brightness(0)` for B&W)
-- Fantasy.jpg watermark full-page (upscaled to 2400x3770, 6% opacity)
-- Double-line art deco page borders, sharp geometric corners throughout
+- Fixed broken images in production: asset paths now use Eleventy `| url` filter + `--pathprefix=/aetherfall/`
+- Fixed magic path checkbox double-check bug (Wild + Non-caster both showing checked)
+- Removed hardcoded spell count from grimoire, fixed subtitle HTML entity bleed
+- Renamed "the Eruption" to "the Tear" across all lore (~80 replacements, 15 files)
+- Reworked Believer voice callout with fabric/mending metaphor
 
 ## Current State
 - **Game title:** Aetherfall (repo: voidnologo/aetherfall)
-- **Build:** Eleventy 3.x — `npm run dev` / `npm run build` — deploys via GitHub Action
+- **Build:** Eleventy 3.x — `npm run dev` / `npm run build` — deploys via GitHub Action with `--pathprefix=/aetherfall/`
 - **Website:** 20 chapters (.njk) + 6 character sheets (from JSON + sheet.njk) + interactive tools
 - **Art pipeline:** art/{type}/{generated|approved|archived}/ — art NEVER deleted, only moved
+- **Founding event:** "The Tear" (was "the Eruption" — renamed session 27)
 - **ComfyUI API:** flux1-dev via UNETLoader + DualCLIPLoader + VAELoader; schnell via CheckpointLoaderSimple
 - **CRITICAL RULE:** Rulebook content must NEVER be changed without explicit user approval.
 - **CRITICAL RULE:** Art is NEVER deleted. Moves through generated -> approved or generated -> archived.
