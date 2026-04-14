@@ -412,6 +412,9 @@
 
 <div class="action-bar">
     <button class="btn btn-secondary" onclick="resetForm()">Reset</button>
+    <button class="btn btn-secondary" onclick="saveCharacter()">Save JSON</button>
+    <button class="btn btn-secondary" onclick="document.getElementById('load-file').click()">Load JSON</button>
+    <input type="file" id="load-file" accept=".json" style="display:none" onchange="loadCharacter(this)">
     <button class="btn" onclick="generateAndPrint()">Print / Save PDF</button>
 </div>
 
@@ -1078,6 +1081,177 @@ function resetForm() {
     document.getElementById('ledger').value = 'Level';
     buildAttrGrid(); updateDerived(); renderSkills(); renderWeapons();
     renderArmor(); renderSpells(); renderContacts(); setPath('none');
+}
+
+// ── SAVE / LOAD (same JSON format as build-time character data) ──
+function serializeCharacter() {
+    const name = document.getElementById('charName').value;
+    const slug = name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'character';
+    const attrs = {};
+    for (const key of Object.keys(state.attrs)) {
+        attrs[key] = { val: state.attrs[key], desc: state.attrDescs[key] || '' };
+    }
+    return {
+        slug: slug,
+        filename: slug + '.html',
+        name: name,
+        player: document.getElementById('playerName').value,
+        archetype: document.getElementById('archetype').value,
+        station: parseInt(document.getElementById('station').value) || 2,
+        description: document.getElementById('description').value,
+        attrs: attrs,
+        skills: skillRows.filter(r => r.skill).map(r => {
+            const sk = SKILLS.find(s => s.name === r.skill);
+            const sv = sk ? getAttr(sk.stat) : 0;
+            return {
+                name: r.skill,
+                stat: sk ? sk.stat : '',
+                level: r.level,
+                target: sk ? ((10 + sv) * r.level) + 30 : 0
+            };
+        }),
+        weapons: weaponRows.map(w => ({
+            name: w.name, skill: w.skill, spd: w.spd, dmg: w.dmg,
+            cap: w.cap, rld: w.rld, rel: w.rel, tags: w.tags
+        })),
+        armor: armorRows.map(a => ({
+            name: a.name, ballistic: +a.ballistic || 0,
+            martial: +a.martial || 0, hinder: +a.hinder || 0, notes: a.notes
+        })),
+        path: state.path,
+        wildSchools: state.wildSchools,
+        spells: getActiveSpells().map(sp => ({
+            name: sp.name, school: sp.school, cast: sp.cast,
+            w: sp.w, s: sp.s, st: sp.st, sp: sp.sp
+        })),
+        society: {
+            name: document.getElementById('societyName').value,
+            type: document.getElementById('societyType').value,
+            patron: document.getElementById('patron').value,
+            handler: document.getElementById('handler').value,
+            charter: document.getElementById('charter').value,
+            backing: parseInt(document.getElementById('backing').value) || 3,
+            ledger: document.getElementById('ledger').value
+        },
+        faction: document.getElementById('faction').value,
+        factionRelation: document.getElementById('factionRelation').value,
+        contacts: contactRows.filter(c => c.name).map(c => ({
+            name: c.name, affiliation: c.affiliation, notes: c.notes
+        })),
+        inventory: document.getElementById('inventory').value,
+        notes: document.getElementById('notes').value,
+        xp: {
+            total: parseInt(document.getElementById('totalXP').value) || 0,
+            spent: parseInt(document.getElementById('xpSpent').value) || 0
+        }
+    };
+}
+
+function saveCharacter() {
+    const data = serializeCharacter();
+    const json = JSON.stringify(data, null, 2);
+    const blob = new Blob([json], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = (data.slug || 'character') + '.json';
+    a.click();
+    URL.revokeObjectURL(url);
+}
+
+function loadCharacter(input) {
+    const file = input.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        try {
+            const data = JSON.parse(e.target.result);
+            applyCharacterData(data);
+        } catch (err) {
+            alert('Failed to load character: ' + err.message);
+        }
+    };
+    reader.readAsText(file);
+    input.value = '';
+}
+
+function applyCharacterData(data) {
+    // Identity
+    document.getElementById('charName').value = data.name || '';
+    document.getElementById('playerName').value = data.player || '';
+    document.getElementById('archetype').value = data.archetype || '';
+    document.getElementById('station').value = data.station != null ? data.station : 2;
+    document.getElementById('description').value = data.description || '';
+
+    // Attributes
+    if (data.attrs) {
+        for (const key of Object.keys(state.attrs)) {
+            state.attrs[key] = data.attrs[key] ? data.attrs[key].val : null;
+            state.attrDescs[key] = data.attrs[key] ? (data.attrs[key].desc || '') : '';
+        }
+    }
+    buildAttrGrid();
+    updateDerived();
+
+    // Skills
+    skillRows = (data.skills || []).map(s => ({ skill: s.name, level: s.level }));
+    renderSkills();
+
+    // Weapons
+    weaponRows = (data.weapons || []).map(w => ({
+        name: w.name || '', skill: w.skill || '', spd: w.spd || '',
+        dmg: w.dmg || '', cap: w.cap || '', rld: w.rld || '',
+        rel: w.rel || '', tags: w.tags || ''
+    }));
+    renderWeapons();
+
+    // Armor
+    armorRows = (data.armor || []).map(a => ({
+        name: a.name || '', ballistic: a.ballistic || '',
+        martial: a.martial || '', hinder: a.hinder || '', notes: a.notes || ''
+    }));
+    renderArmor();
+
+    // Magic
+    state.wildSchools = data.wildSchools || [];
+    setPath(data.path || 'none');
+
+    // Spells (scholarly)
+    if (data.path === 'scholarly') {
+        spellRows = (data.spells || []).map(s => ({ name: s.name }));
+        renderSpells();
+    }
+
+    // Society
+    if (data.society) {
+        document.getElementById('societyName').value = data.society.name || '';
+        document.getElementById('societyType').value = data.society.type || '';
+        document.getElementById('patron').value = data.society.patron || '';
+        document.getElementById('handler').value = data.society.handler || '';
+        document.getElementById('charter').value = data.society.charter || '';
+        document.getElementById('backing').value = data.society.backing || 3;
+        document.getElementById('ledger').value = data.society.ledger || 'Level';
+    }
+
+    // Faction
+    document.getElementById('faction').value = data.faction || '';
+    document.getElementById('factionRelation').value = data.factionRelation || '';
+
+    // Contacts
+    contactRows = (data.contacts || []).map(c => ({
+        name: c.name || '', affiliation: c.affiliation || '', notes: c.notes || ''
+    }));
+    renderContacts();
+
+    // Inventory & notes
+    document.getElementById('inventory').value = data.inventory || '';
+    document.getElementById('notes').value = data.notes || '';
+
+    // XP
+    document.getElementById('totalXP').value = data.xp ? data.xp.total : 0;
+    document.getElementById('xpSpent').value = data.xp ? data.xp.spent : 0;
+
+    updateMagicDerived();
 }
 
 // ── GENERATE PRINT SHEET ──
