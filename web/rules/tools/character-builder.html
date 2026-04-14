@@ -220,7 +220,7 @@
 <div class="tool-header">
     <a href="../character-sheet.html">&larr; Back to Character Sheet</a>
     <h1>Character Builder</h1>
-    <p>Fill in your character details below &mdash; all math is done for you. Hit Print when you&rsquo;re done.</p>
+    <p>Fill in your character details below &mdash; all math is done for you. Hit Generate when you&rsquo;re done.</p>
 </div>
 
 <div class="action-bar">
@@ -228,7 +228,7 @@
     <button class="btn btn-secondary" onclick="saveCharacter()">Save JSON</button>
     <button class="btn btn-secondary" onclick="document.getElementById('load-file').click()">Load JSON</button>
     <input type="file" id="load-file" accept=".json" style="display:none" onchange="loadCharacter(this)">
-    <button class="btn" onclick="generateAndPrint()">Print / Save PDF</button>
+    <button class="btn" onclick="generateSheet()">Generate Character Sheet</button>
 </div>
 
 <!-- ══════════════ FORM WIZARD ══════════════ -->
@@ -1069,9 +1069,9 @@ function applyCharacterData(data) {
 // Serializes character data to sessionStorage, then opens the blank sheet
 // page which populates itself from the data and triggers print.
 // Zero duplication — the sheet template (sheet.njk) is the single renderer.
-function generateAndPrint() {
+function generateSheet() {
     const data = serializeCharacter();
-    sessionStorage.setItem('aetherfall-print', JSON.stringify(data));
+    localStorage.setItem('aetherfall-print', JSON.stringify(data));
     window.open('character-sheet.html', '_blank');
 }
 

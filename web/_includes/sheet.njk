@@ -1052,9 +1052,9 @@
 // populate this sheet and trigger print. This lets the builder use the same template
 // as the build-time sheets — zero duplication.
 (function() {
-  var raw = sessionStorage.getItem('aetherfall-print');
+  var raw = localStorage.getItem('aetherfall-print');
   if (!raw) return;
-  sessionStorage.removeItem('aetherfall-print');
+  localStorage.removeItem('aetherfall-print');
 
   try { var c = JSON.parse(raw); } catch(e) { return; }
 
@@ -1290,8 +1290,6 @@
     noteItems.forEach(function(n, i) { if (noteLines[i]) noteLines[i].textContent = n; });
   }
 
-  // Auto-print after a brief render delay
-  setTimeout(function() { window.print(); }, 200);
 })();
 </script>
 </body>
