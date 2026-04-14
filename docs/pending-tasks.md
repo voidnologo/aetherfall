@@ -1,9 +1,9 @@
 # Pending Tasks
 
 ## Next Up
-- [ ] Update logo/wordmark in rules site (header, sidebar) to match landing page
+- [ ] Continue character sheet styling iteration (text flow around watermark decorations)
 - [ ] Review site and character sheets in browser for visual verification
-- [ ] Character sheet art / watermarks (after logo is established)
+- [ ] Character sheet art / watermarks further refinement
 - [ ] Revisit embossed "A" design (clear left-organic/right-geometric split)
 
 ## Backlog

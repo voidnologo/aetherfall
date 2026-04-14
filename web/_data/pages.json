@@ -1,5 +1,5 @@
 [
-  { "id": "welcome",       "file": "index.html",              "title": "Welcome to the Age of Wonder", "num": "01", "theme": "aether" },
+  { "id": "welcome",       "file": "index.html",              "title": "Welcome to Aetherfall", "num": "01", "theme": "aether" },
   { "id": "world",         "file": "state-of-the-world.html", "title": "The State of the World",       "num": "02", "theme": "split" },
   { "id": "societies",     "file": "societies.html",          "title": "Adventuring Societies",        "num": "03", "theme": "neutral" },
   { "id": "creating",      "file": "creating.html",           "title": "Creating Your Adventurer",     "num": "04", "theme": "neutral" },

@@ -277,19 +277,10 @@ body::before {
 }
 
 .sidebar-logo {
-  width: 48px;
-  height: 48px;
-  border-radius: 6px;
+  width: 200px;
+  height: auto;
   margin-bottom: 0.5rem;
-}
-
-.sidebar-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.35rem;
-  font-weight: 900;
-  color: var(--text-bright);
-  letter-spacing: 0.08em;
-  line-height: 1.2;
+  filter: drop-shadow(0 0 12px rgba(61, 200, 224, 0.25));
 }
 
 .sidebar-subtitle {

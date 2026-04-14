@@ -1,13 +1,15 @@
 # Continuation Prompt
 
-## Last Session (25) — Logo & Art Generation, Landing Page Integration
-- Generated logo art via ComfyUI API: wordmark, monogram "A", hero cover (text-free), emboss attempts (archived)
-- Wordmark, monogram, hero approved and upscaled to 4K WebP
-- Integrated art into landing page: hero image as full background, transparent wordmark as title, dark text with cyan glow
-- Added monogram to rules site header and sidebar, favicon on both pages
-- Set up art pipeline: art/{type}/{generated|approved|archived}/, generation-log.md
-- Created CLAUDE.md with art-never-deleted rule
-- Scaled landing page base font to 20px for readability
+## Last Session (26) — Rules Site Wordmark & Character Sheet Art Deco
+
+- Sidebar wordmark integrated (replaced monogram), header kept monogram+text
+- Fixed broken relative asset paths to absolute (`/assets/logo/...`)
+- Generated proper favicon.ico (32x32) and apple-touch-icon.png (180x180)
+- Renamed Ch01 "Welcome to the Age of Wonder" -> "Welcome to Aetherfall"
+- Character sheets: art deco overhaul with Playfair Display + Cormorant Garamond fonts
+- Wordmark at top of sheet page 1 (3in centered, CSS `filter: brightness(0)` for B&W)
+- Fantasy.jpg watermark full-page (upscaled to 2400x3770, 6% opacity)
+- Double-line art deco page borders, sharp geometric corners throughout
 
 ## Current State
 - **Game title:** Aetherfall (repo: voidnologo/aetherfall)
@@ -18,13 +20,19 @@
 - **CRITICAL RULE:** Rulebook content must NEVER be changed without explicit user approval.
 - **CRITICAL RULE:** Art is NEVER deleted. Moves through generated -> approved or generated -> archived.
 
-## Immediate Next Task
-**Update logo/wordmark in the rules portion of the site.** The landing page is done; the rules site header and sidebar have the monogram but need the full wordmark treatment and readability pass to match.
+## Immediate Next Tasks
+- Continue iterating character sheet styling (text flow around watermark decorations)
+- Review site and character sheets in browser for visual verification
+- Character sheet art/watermarks further iteration
+- Revisit embossed "A" design (clear left-organic/right-geometric split)
 
 ## Key Art Assets
 - `web/assets/logo/wordmark.webp` — 4K transparent wordmark (4096x2048)
 - `web/assets/logo/monogram.webp` — 4K monogram "A" (3072x3072)
 - `web/assets/hero.webp` — 4K hero scene, no text (3328x4864)
+- `web/assets/logo/favicon.ico` — 32x32 monogram favicon
+- `web/assets/logo/apple-touch-icon.png` — 180x180 monogram touch icon
+- `web/assets/art/fantasy.jpg` — upscaled fantasy watermark (2400x3770)
 
 ## Color Reference
 - **Aether:** `#3dc8e0` | **Galvanic:** `#e8a825` | **Background:** `#080b14`
