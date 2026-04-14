@@ -7,8 +7,7 @@
 - Unified 6 character sheets into one template (sheet.njk) + JSON data files
 - Builder prints via shared template (sessionStorage handoff) — zero duplication
 - Save/load JSON in builder — same format as build-time character data
-- Phase 3 complete: PAGES duplication eliminated, sidebar build-time, main.js simplified
-- Created art direction doc with logo design brief
+- Created art direction doc with logo design brief, integrated with existing art pipeline
 
 ## Current State
 - **Game title:** Aetherfall (repo: voidnologo/aetherfall)
@@ -24,12 +23,18 @@
 - **Not yet designed:** Zone formation, Push Timing, archetypes, bestiary, NPC stat blocks, corruption/madness
 
 ## Immediate Next Task
-**Logo design.** Full brief at `docs/requirements/ART_DIRECTION.md` — covers the duality (Aether cyan #3dc8e0 vs. Galvanic amber #e8a825), Art Deco + arcane aesthetic, four exploration directions, deliverable specs. User will use their art generator on another computer.
+**Logo design.** User will use their art generator on another computer.
 
-After logo: character sheet watermarks, then design work (bestiary, archetypes, zones).
+## Art Pipeline References
+- `docs/requirements/ART_DIRECTION.md` — Logo brief, exploration directions, integration plan, logo-specific prompt templates
+- `docs/art/style-guide.md` — Master visual identity (pen & ink, B&W, Art Nouveau/Deco, 1920s period accuracy)
+- `docs/art/consistency-rules.md` — Quality checklist, generation logging, style enforcement, character design locks
+- `docs/art/prompt-engineering/prompt-templates.md` — Reusable prompt structures (prefix, suffix, per-type templates)
+- `docs/art/prompt-engineering/negative-prompts.md` — FLUX positive reframes, SDXL negative prompts
+- `docs/art/prompt-engineering/generation-settings.md` — FLUX/ComfyUI config, LoRA stack, resolution by art type, post-processing pipeline
+- `art/` — Reference art (cat.png, dragon.jpg, fantasy.jpg) — style mood board only, not for publication
 
-## Key References
-- `docs/requirements/ART_DIRECTION.md` — Logo brief, visual identity, prompt engineering notes
+## Key Technical References
 - `eleventy.config.js` — Build config, shortcodes, filters, passthrough
 - `web/_data/pages.json` — Chapter registry
 - `web/_data/characters/*.json` — Character data files
@@ -38,7 +43,7 @@ After logo: character sheet watermarks, then design work (bestiary, archetypes, 
 - `docs/requirements/ECONOMY.md` — Economy design doc
 - `docs/sessions/session-24-notes.md` — Full session record
 
-## Color Reference (for art work)
+## Color Reference
 - **Aether:** `#3dc8e0` (cyan/teal — magic, mystery, cool)
 - **Galvanic:** `#e8a825` (amber/gold — technology, industry, warm)
 - **Background:** `#080b14` (deep void black)
