@@ -27,7 +27,7 @@ jobs:
         with:
           node-version: '20'
       - run: npm ci
-      - run: npx @11ty/eleventy
+      - run: npx @11ty/eleventy --pathprefix=/aetherfall/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
