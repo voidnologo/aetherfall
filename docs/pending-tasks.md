@@ -1,10 +1,9 @@
 # Pending Tasks
 
 ## Next Up
+- [ ] Design Aetherfall logo (see docs/requirements/ART_DIRECTION.md for full brief)
 - [ ] Review site and character sheets in browser for visual verification
-- [ ] Character sheet art / watermarks
-- [ ] Update character builder print template to match sheet.njk structure (last duplication point)
-- [ ] Landing page (web/index.html) could get its own 11ty layout to deduplicate CSS
+- [ ] Character sheet art / watermarks (after logo is established)
 
 ## Backlog
 - [ ] Bundle Mermaid.js locally so flowcharts work offline
@@ -23,4 +22,5 @@
 - [ ] Corruption/madness mechanics — expansion candidate, let tables homebrew for now
 - [ ] Starter adventure map sketches (foundry layout, tunnel branches)
 - [ ] Playtest Station Check frequency and -15% modifier tuning
+- [ ] Landing page (web/index.html) could get its own 11ty layout to deduplicate CSS
 - [ ] Add shortcode for bare `callout` class (Intimidation flex-stat note)
