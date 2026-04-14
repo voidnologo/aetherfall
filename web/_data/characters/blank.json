@@ -4,15 +4,15 @@
   "name": "",
   "player": "",
   "archetype": "",
-  "station": 2,
+  "station": null,
   "description": "",
   "attrs": {
-    "BR": { "val": 0, "desc": "" },
-    "PC": { "val": 0, "desc": "" },
-    "IN": { "val": 0, "desc": "" },
-    "SP": { "val": 0, "desc": "" },
-    "AW": { "val": 0, "desc": "" },
-    "PW": { "val": 0, "desc": "" }
+    "BR": { "val": null, "desc": "" },
+    "PC": { "val": null, "desc": "" },
+    "IN": { "val": null, "desc": "" },
+    "SP": { "val": null, "desc": "" },
+    "AW": { "val": null, "desc": "" },
+    "PW": { "val": null, "desc": "" }
   },
   "skills": [],
   "weapons": [],
@@ -26,13 +26,13 @@
     "patron": "",
     "handler": "",
     "charter": "",
-    "backing": 3,
-    "ledger": "Level"
+    "backing": null,
+    "ledger": ""
   },
   "faction": "",
   "factionRelation": "",
   "contacts": [],
   "inventory": "",
   "notes": "",
-  "xp": { "total": 0, "spent": 0 }
+  "xp": { "total": null, "spent": null }
 }
