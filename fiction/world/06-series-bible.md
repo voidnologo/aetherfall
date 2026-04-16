@@ -26,7 +26,9 @@ The stories showcase different facets of the Aetherfall world: urban investigati
 ### Story 2: (First written story -- premise below)
 
 **Working title:** TBD
-**Premise:** The Covenant of Embers assigns Ash & Veil their first patron-directed job: recover an Aetheric artifact from a location outside Ashwick proper -- a site in the gradient borderlands where a pre-Tear structure has been exposed by recent zone shifts. The artifact is a sealed container of unknown origin that the Covenant believes holds a preserved specimen of condensed Aether predating the Tear -- evidence that the Veil was thinning long before it ruptured.
+**Premise:** The Covenant of Embers assigns Ash & Veil their first patron-directed job: recover an artifact from a location outside Ashwick proper -- a site in the gradient borderlands where a pre-Tear structure has been exposed by recent zone shifts. The artifact is a sealed container -- precise, seamless, with no maker's mark, no tool scars, no signs of fabrication. It looks *made*, but not by hands. Inside, the Covenant believes, is a preserved specimen of condensed Aether predating the Tear -- evidence that the Veil was thinning long before it ruptured.
+
+The container itself is the deeper mystery. The Veil produces ecosystems -- regions, weather, living landscapes. The Engine produces objects -- devices, structures, artifacts. A sealed container with no maker is Engine-like in every way that matters. But it predates the Tear, and the Engine is supposed to be a *response* to the Tear. If the container is Engine-made, then the Engine was active before the Veil thinned -- which breaks the Immune Response theory clean in half. If it isn't Engine-made, then what made it? The Covenant wants the contents. Aldric, once he sees the container, will want to understand the container itself. Both questions are worth killing over, and multiple factions know it.
 
 The job is straightforward until it isn't. Ironwork Solutions is also hunting the artifact, on assignment from the Ashworth Collective. The Margin shows up because Dace Rennick heard about it through his network and wants a finder's fee from whoever gets it first. A Sootborn community near the site is nervous about outsiders digging in the gradient and may help or hinder depending on how the Society approaches them.
 
@@ -37,7 +39,7 @@ The job is straightforward until it isn't. Ironwork Solutions is also hunting th
 - Creates a moral dilemma: the artifact's historical significance vs. the risk of multiple factions fighting over it, vs. the Sootborn community's legitimate concerns about zone disruption
 - Showcases all four characters in their roles: Kael handling the Ironwork confrontation, Sera navigating strong Aetheric territory, Aldric analyzing the artifact, Mira negotiating with the Sootborn and possibly with Dace
 - Demonstrates the zone gradient in a non-urban setting -- the borderlands feel different from Ashwick's streets
-- Plants seeds: what does a pre-Tear Aetheric artifact imply about the timeline everyone believes? If the Veil was thinning before the Tear, what does that mean for the three competing theories?
+- Plants seeds: the contents challenge the timeline (the Veil was thinning before the Tear), but the container challenges the *categories*. If the Engine can produce objects without human hands, and did so before the Tear, then the clean division between Veil-as-nature and Engine-as-tool collapses. The three competing theories all have to contend with this, and none of them come out clean.
 
 ---
 
@@ -99,7 +101,7 @@ These are seeds, not outlines. Each should be developed into a full premise when
 | Syndicate knows Society's faces | The Ashwick Job | Active (Fels has a debt) |
 | Sera's iris discoloration | Character backstory | Ongoing (accumulating) |
 | Covenant's interest in Galvanic tech | Patron design | Planted, not yet surfaced |
-| Pre-Tear Aetheric artifacts | Story 2 premise | Not yet written |
+| Pre-Tear artifact (container and contents) | Story 2 premise | Not yet written |
 
 ---
 
