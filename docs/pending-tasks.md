@@ -1,12 +1,16 @@
 # Pending Tasks
 
 ## Next Up
+- [ ] Review Wave 1 art (20 images in art/*/generated/) — select golden reference set
+- [ ] Lock LoRA preset and run Wave 2: character portraits (Kael, Sera, Aldric, Mira + archetypes)
+- [ ] Rework weapons prompt — arc pistol needs more visual differentiation from revolver
+- [ ] Set up S3 bucket for art sync (create bucket, add .art-sync.conf)
 - [ ] Continue character sheet styling iteration (text flow around watermark decorations)
-- [ ] Review site and character sheets in browser for visual verification
-- [ ] Character sheet art / watermarks further refinement
-- [ ] Revisit embossed "A" design (clear left-organic/right-geometric split)
 
 ## Backlog
+- [ ] Post-processing automation (threshold, contrast) in comfyui_generate.py
+- [ ] Revisit embossed "A" design (clear left-organic/right-geometric split)
+- [ ] Review site and character sheets in browser for visual verification
 - [ ] Bundle Mermaid.js locally so flowcharts work offline
 - [ ] Multiplayer sync for GM tools (WebRTC peer-to-peer?) — stretch goal
 - [ ] Additional GM tools: NPC generator, mission brief generator, Society generator

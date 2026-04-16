@@ -1,26 +1,31 @@
 # Continuation Prompt
 
-## Last Session (28) — HTML Entity Cleanup, Payout Clarity, README Overhaul
+## Last Session (29) — Art Generation Pipeline, Wave 1 Style Lock-In
 
-- Fixed `&mdash;` and `&amp;` HTML entities rendering as literal text in 8 chapter subtitle frontmatter fields
-- Clarified Scraps vs Honest Work in payout table — Scraps now says "Drift still applies", Honest Work says "prevents Drift"
-- Rewrote README for Eleventy 3.x build system, accurate 18-chapter count, all 15 design docs, current project structure
+- Built `tools/comfyui_generate.py` — ComfyUI workflow generator with LoRA presets, GPU cooling, and auto-collection into `art/{type}/generated/`
+- Downloaded 4 new LoRAs for pen & ink style: engraving, crosshatch, classic B&W fantasy, engrave (HF)
+- Ran 20 test generations: 5 pieces x 4 LoRA variants (baseline, engraving, crosshatch, combo)
+- **Combo preset** (engraving @ 0.7 + crosshatch @ 0.5) identified as best overall
+- Created `tools/art_sync.py` for S3 push/pull of art assets; updated .gitignore to exclude art binaries
+- Art binaries now gitignored; synced via S3 instead (bucket not yet created)
 
 ## Current State
 - **Game title:** Aetherfall (repo: voidnologo/aetherfall)
 - **Build:** Eleventy 3.x — `npm run dev` / `npm run build` — deploys via GitHub Action with `--pathprefix=/aetherfall/`
 - **Website:** 18 chapters + quickstart (.njk) + character sheets (from JSON + sheet.njk) + interactive tools
-- **Art pipeline:** art/{type}/{generated|approved|archived}/ — art NEVER deleted, only moved
+- **Art pipeline:** `art/{type}/{generated|approved|archived}/` — art NEVER deleted, only moved
+- **Art generation:** `python tools/comfyui_generate.py` — builds flux-dev workflows, queues via ComfyUI API
+- **Art sync:** `python tools/art_sync.py push/pull/status` — S3 sync (bucket TBD)
+- **ComfyUI:** `/home/void/AI/ComfyUI/` — flux-dev in `models/diffusion_models/`, schnell in `models/checkpoints/`
 - **Founding event:** "The Tear" (was "the Eruption" — renamed session 27)
-- **ComfyUI API:** flux1-dev via UNETLoader + DualCLIPLoader + VAELoader; schnell via CheckpointLoaderSimple
 - **CRITICAL RULE:** Rulebook content must NEVER be changed without explicit user approval.
 - **CRITICAL RULE:** Art is NEVER deleted. Moves through generated -> approved or generated -> archived.
 
 ## Immediate Next Tasks
-- Continue iterating character sheet styling (text flow around watermark decorations)
-- Review site and character sheets in browser for visual verification
-- Character sheet art/watermarks further iteration
-- Revisit embossed "A" design (clear left-organic/right-geometric split)
+- Review 20 Wave 1 images and select golden reference set
+- Lock LoRA preset, begin Wave 2 character portraits
+- Rework weapons prompt for better arc pistol differentiation
+- Set up S3 bucket and initial art push
 
 ## Key Art Assets
 - `web/assets/logo/wordmark.webp` — 4K transparent wordmark (4096x2048)

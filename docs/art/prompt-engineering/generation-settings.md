@@ -11,36 +11,64 @@ allow detailed description of pen technique, crosshatching, and decorative eleme
 
 ### Model Selection
 
-| Priority | Model | Use Case |
-|----------|-------|----------|
-| 1st | `flux1-schnell-fp8.safetensors` | FLUX — fast iteration, good quality |
-| Alt | `JuggernautXL_Ragnarok.safetensors` | SDXL — supports negative prompts, different aesthetic |
-| Alt | `sd_xl_base_1.0.safetensors` | SDXL base — stable fallback |
-| Alt | `DreamShaper_8_pruned.safetensors` | SD1.5 — lightweight, fast |
+| Priority | Model | Path | Use Case |
+|----------|-------|------|----------|
+| **1st** | `flux1-dev.safetensors` | `models/diffusion_models/` | FLUX Dev — primary generator, highest quality |
+| 2nd | `flux1-schnell-fp8.safetensors` | `models/checkpoints/` | FLUX Schnell — fast iteration/testing |
+| Alt | `JuggernautXL_Ragnarok.safetensors` | `models/checkpoints/` | SDXL — supports negative prompts, different aesthetic |
+| Alt | `sd_xl_base_1.0.safetensors` | `models/checkpoints/` | SDXL base — stable fallback |
+| Alt | `DreamShaper_8_pruned.safetensors` | `models/checkpoints/` | SD1.5 — lightweight, fast |
 
-**Note:** `flux_dev` is not currently installed. Schnell is the primary FLUX model.
+**ComfyUI root:** `/home/void/AI/ComfyUI/`
+
+**Note:** flux1-dev lives in `models/diffusion_models/` (loaded via UNETLoader),
+not `models/checkpoints/`. Schnell is in `models/checkpoints/` (loaded via
+CheckpointLoaderSimple). Use dev for all final art; schnell for quick tests only.
 Schnell uses CFG 1.0, 4-8 steps, `simple` scheduler (not the dev settings below).
 
 ### LoRA Stack (Style-Critical)
 
-Apply these LoRAs to push FLUX toward pen & ink illustration. Exact LoRA names
-vary by source — search for equivalents matching these descriptions:
+Apply these LoRAs to push FLUX toward pen & ink illustration.
 
-| LoRA | Strength | Purpose |
-|------|----------|---------|
-| Lineart / pen & ink LoRA | **0.70-0.80** | Core pen & ink line quality, crosshatching |
-| Sketch / illustration LoRA | **0.40-0.55** | Traditional media rendering, hand-drawn feel |
-| High contrast B&W LoRA | **0.30-0.45** | Push toward pure black/white, eliminate grey |
+**Installed — pen & ink stack** (in `/home/void/AI/ComfyUI/models/loras/`):
 
-**Recommended LoRA search terms:** `lineart`, `pen_and_ink`, `crosshatch`,
-`manga_lineart`, `sketch_style`, `ink_illustration`, `monochrome`
+| LoRA | File | Size | Trigger | Strength | Role |
+|------|------|------|---------|----------|------|
+| **Engraving Style** | `engraving_style_pen_ink_flux.safetensors` | 585 MB | `engraving style` | 0.7-1.0 | Primary — Dore-inspired crosshatching, pen & ink linework |
+| **Crosshatch Drawing** | `crosshatch_drawing_style_flux.safetensors` | 55 MB | `crosshatch drawing` | 0.7-1.0 | Hatching density, B&W push. Use `black and white drawing` |
+| **Classic B&W Fantasy** | `classic_bw_fantasy_shadowdark_flux.safetensors` | 165 MB | (long, see notes) | 0.3-0.5 | Old-school tabletop RPG B&W art. Trained on Flux.1-dev |
+| **Engrave (HF)** | `flux_engrave_hf.safetensors` | 86 MB | `NGRVNG, engrave` | TBD | Alternative engraving. Test against Civitai version |
+
+**Trigger for Classic B&W Fantasy:** "This is a highly detailed black-and-white ink drawing.
+The overall style is reminiscent of classic fantasy art with a focus on intricate line work
+and detailed textures."
+
+**Other installed** (lower relevance for pen & ink):
+
+| LoRA | Size | Relevance |
+|------|------|-----------|
+| `nistyle_manga_sketch_flux.safetensors` | 19 MB | Partial — sketch quality, manga-leaning |
+| `fantasy_impressions_flux.safetensors` | 321 MB | Partial — fantasy aesthetic, may push color |
+| `dark_chiaroscuro_lighting_flux.safetensors` | 621 MB | Partial — contrast/shadow, tonal not B&W |
+| `metal_gear_solid_chronoknight_flux.safetensors` | 37 MB | Low — wrong aesthetic |
+
+**Recommended stacking strategy (test during Wave 1):**
+
+| Variant | Stack | Notes |
+|---------|-------|-------|
+| A (baseline) | No LoRA | Pure flux-dev prompt-only baseline |
+| B (engraving) | Engraving @ 0.8 | Test primary pen & ink LoRA solo |
+| C (crosshatch) | Crosshatch @ 0.8 | Test crosshatch LoRA solo |
+| D (RPG style) | Classic B&W @ 0.5 | Test RPG style LoRA solo |
+| E (combo) | Engraving @ 0.7 + Crosshatch @ 0.5 | Expected best combo |
+| F (full stack) | Engraving @ 0.6 + Crosshatch @ 0.4 + Classic B&W @ 0.3 | Triple stack, lower weights |
 
 **Tuning notes:**
-- If results have too much grey/softness, increase lineart LoRA strength
-- If crosshatching looks mechanical/repetitive, decrease lineart, increase sketch
+- If results have too much grey/softness, increase engraving LoRA strength
+- If crosshatching looks mechanical/repetitive, decrease engraving, increase crosshatch
 - If results drift toward color, add "monochrome, black and white only" to prompt
-  and increase B&W LoRA strength
 - Start with one LoRA at a time to evaluate individual contributions before stacking
+- Crosshatch LoRA is potent even at low weights — start at 0.7 and adjust down
 
 ### FLUX Generation Parameters
 

@@ -17,7 +17,8 @@
       "Bash(xargs -I{} basename {})",
       "Bash(ls /Users/salt/personal/Adventure/web/rules/*.html)",
       "Bash(ls:*)",
-      "Bash(npx @11ty/eleventy --serve --port 8082)"
+      "Bash(npx @11ty/eleventy --serve --port 8082)",
+      "WebSearch"
     ]
   }
 }

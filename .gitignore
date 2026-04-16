@@ -1,3 +1,18 @@
 __pycache__/
 node_modules/
 _site/
+
+# Art assets — synced via S3 (see tools/art_sync.py)
+# Pipeline dirs are kept via .gitkeep; binary art files are excluded
+art/*/generated/*.png
+art/*/generated/*.jpg
+art/*/generated/*.webp
+art/*/approved/*.png
+art/*/approved/*.jpg
+art/*/approved/*.webp
+art/*/archived/*.png
+art/*/archived/*.jpg
+art/*/archived/*.webp
+
+# S3 sync config (machine-specific bucket name)
+.art-sync.conf
