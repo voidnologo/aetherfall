@@ -18,7 +18,7 @@
 
 Kael was born eight years after the Tear. He doesn't remember the old world, but he was raised by people who did -- his father was a rail worker whose line was severed by a Wild Zone incursion, and his mother was a seamstress who never stopped being angry about what the Aether took from her community. He grew up in a residential neighborhood on the Galvanic side of Ashwick, close enough to the factories to feel the hum but far enough to live normally.
 
-He joined the Greycoat Authority at nineteen. It was the obvious choice: steady work, clear authority, the satisfaction of keeping order in a city that needed it. He was a good constable. Patient, observant, willing to walk the difficult beats -- the gradient streets, the border neighborhoods, the places where a Greycoat uniform meant something different depending on which direction you were facing.
+He joined the Greycoat Authority at nineteen. It was the obvious choice: steady work, clear authority, the satisfaction of keeping order in a city that needed it. He was a good constable. Patient, observant, willing to walk the difficult beats -- the zone edges, the border neighborhoods, the stretches near Harrier Street where a Greycoat uniform meant something different depending on which direction you were facing.
 
 He served for eighteen years. The last five were bad. The Authority's compromises were becoming harder to ignore. Jobs he was told to drop because the suspect had connections. Neighborhoods he was told to avoid because the Collective's zone expansion was "authorized." The growing sense that the institution he'd given his career to was becoming the thing it was supposed to prevent.
 
@@ -55,7 +55,7 @@ Kael's arc is about agency. He walked away from the Greycoats because he couldn'
 ### The Facts
 
 **Age:** 23
-**Role:** Wild caster (Force, Kinesis). The party's heavy hitter when magic works and a liability when it doesn't.
+**Role:** Wild caster (Aetheric Manipulation). The party's heavy hitter when magic works and a liability when it doesn't. She doesn't know individual spells -- she has an intuitive feel for the domain, shaping force and motion the way a musician plays by ear.
 **Build:** Slight, wiry. The kind of thin that comes from burning more energy than you consume. She moves quickly -- fidgeting, pacing, never entirely still. Her hands are always doing something: tapping, spinning a coin, tracing shapes in the air that might be unconscious spellwork or might just be nerves.
 **Face:** Pale, sharp-featured, with dark eyes that are a little too intense for casual conversation. Her hair is black, cropped jaggedly to her jawline -- she cuts it herself and isn't good at it. There's a faint discoloration around her irises, a pale blue-white ring that wasn't there when she was younger. The first sign that the Aether is leaving marks.
 **Dress:** Layers. A reinforced coat over a sweater over a shirt, all slightly too large, as if she's trying to put distance between her body and the world. Heavy boots. A belt knife that she carries because Kael told her to and that she's never drawn in anger. A brass compass on a cord around her neck -- it spins uselessly in Aetheric zones, which is why she keeps it. It tells her what the air won't: how strong the field is.
@@ -68,13 +68,13 @@ She felt the Aether before she could name it. Her earliest memories include a wa
 
 She comes from a working family -- her father is a machinist in the Galvanic quarter (which meant she spent her childhood in a place where the Aether was muted and her sensitivity felt like an itch she couldn't scratch), and her mother is a laundress who works the neutral zone. Neither parent is a caster. Neither parent knows what to make of a daughter who can feel things they can't. They love her. They are also, quietly, frightened of her.
 
-Sera's first intentional casting was at fifteen. She was being hassled by older kids near the gradient -- the kind of petty cruelty that happens to weird, quiet girls who stare at things that aren't there. She didn't decide to cast. She reached for the warmth that was always there, and the warmth came through. A pulse of force that knocked her tormentors off their feet and cracked a stone wall behind them.
+Sera's first intentional casting was at fifteen. She was being hassled by older kids near the edge of the Galvanic quarter -- the kind of petty cruelty that happens to weird, quiet girls who stare at things that aren't there. She didn't decide to cast. She reached for the warmth that was always there, and the warmth came through. A pulse of force that knocked her tormentors off their feet and cracked a stone wall behind them.
 
 She was terrified. She was also, underneath the terror, exhilarated.
 
 She has never had formal training. She can't afford the Gradient Scholars' fees, and the wild casters in the Veilwright Quarter don't organize training programs. What she knows, she's taught herself through experimentation, instinct, and the increasingly detailed journal she keeps about what happens when she reaches for the Aether and it reaches back. The journal is full of scorch marks, water stains, and at least one page that glows faintly in the dark.
 
-She joined the Society because they didn't care where the power came from. Mira found her through the gradient grapevine -- the Sootborn talk about wild casters the way sailors talk about storms, with respect and wariness -- and offered her a place in an outfit that needed someone who could do what she could do. Sera said yes before Mira finished the sentence.
+She joined the Society because they didn't care where the power came from. Mira found her through the Sootborn grapevine -- they talk about wild casters the way sailors talk about storms, with respect and wariness -- and offered her a place in an outfit that needed someone who could do what she could do. Sera said yes before Mira finished the sentence.
 
 ### Personality & Voice
 
@@ -105,7 +105,13 @@ Sera's arc is about control -- not in the magical sense, but in the personal sen
 ### The Facts
 
 **Age:** 34
-**Role:** Scholarly caster (Mend, Reveal). The team's healer, investigator, and the one who sees the thing everyone else missed.
+**Role:** Scholarly caster. The team's healer, investigator, and the one who sees the thing everyone else missed.
+**Spellbook:** Eight spells across five schools -- a studied generalist's toolkit.
+- *Vitae:* Mend
+- *Divination:* Reveal, Detect
+- *Warding:* Shield, Anchor
+- *Aetheric Manipulation:* Force, Kinesis
+- *Artifice:* Reshape
 **Build:** Lean to the point of gaunt. Tall, with the slightly stooped posture of someone who's spent too many years bent over books and lab equipment. Long-fingered hands that are steadier than they look.
 **Face:** Sharp and angular. Light brown skin, close-cropped dark hair, high cheekbones. Wears round spectacles that he's constantly adjusting. His expression defaults to a mild, attentive neutrality that colleagues at the Gradient Scholars used to mistake for calmness. It's not calmness. It's the face of a man who's cataloguing everything and has decided not to share his conclusions yet.
 **Dress:** Neat. A reinforced coat (practical, not fashionable), pressed shirt, waistcoat with too many interior pockets (each containing something specific: a magnifying lens, a pencil stub, a folded reference page, three types of bandage). His spellbook is a leather-bound volume that lives in a satchel over his shoulder, well-thumbed and annotated in a handwriting so small it requires the magnifying lens to read. He carries a walking stick that doubles as a weapon, though "doubles" implies he's ever used it as a weapon with any skill.
@@ -116,7 +122,9 @@ Aldric was born twenty years after the Tear. His parents were educated -- his fa
 
 He showed sensitivity to the Aether early -- not the dramatic, overwhelming sensitivity of a wild caster like Sera, but a quiet attentiveness, like someone who hears a distant radio that nobody else can pick up. His parents, after careful consideration and one very long conversation with a Gradient Scholar who lived in their neighborhood, enrolled him in the Scholars' training program at sixteen.
 
-He took to academic magic the way some people take to music: with aptitude, dedication, and a genuine love of the craft. Scholarly casting suited his temperament perfectly -- methodical, controlled, predictable within known parameters. He specialized in Vivimancy (healing) and Divination (perception), because he wanted to fix things and find things, in that order.
+He took to academic magic the way some people take to physics: with aptitude, dedication, and the satisfaction of watching theory produce predictable results. Scholarly casting suited his temperament perfectly. Where wild casters like Sera reach into the Aether and shape what they find -- an intuitive, bodily act, the world listening to them and responding -- scholarly casters learn *spells*. Precise, formal workings. Formulas. When Aldric casts Mend, he is not asking the world to heal someone. He is executing a procedure that healing is the result of, the way an engineer doesn't ask a bridge to stand -- he builds it so that standing is what it does.
+
+He started with Vitae and Divination -- healing and perception -- because he wanted to fix things and find things, in that order. Over twelve years at the Scholars, he broadened methodically: Warding for protection, Aetheric Manipulation for the foundational physics of magical force, Artifice for the interaction between magic and material. Each new school was months of study, practice, failed attempts, and the gradual internalization of another set of formulas until casting them felt less like recitation and more like reflex. Eight spells across five schools. Not a specialist's depth -- a field researcher's breadth. The toolkit of a man who expected to encounter problems he couldn't predict and wanted an answer for each of them.
 
 He spent twelve years at the Gradient Scholars. He earned a research position studying zone drift patterns -- the same field that Fen Harker works in, which is how Aldric knew Harker's name before the Society's first job. He was good at his work: careful, thorough, the kind of researcher who finds things in data that others miss because he doesn't skip the boring parts.
 
@@ -156,7 +164,7 @@ Aldric's arc is about the gap between knowledge and action. He knows things -- a
 
 **Age:** 28
 **Role:** Social operator, zone navigator, negotiator, and the person who gets the Society into and out of trouble.
-**Build:** Medium height, athletic in a practical way -- not muscular but fast, with the reflexes of someone who grew up dodging traffic across a zone gradient. She moves well in crowds: slipping through gaps, changing direction without breaking stride, disappearing into a group and reappearing three meters away.
+**Build:** Medium height, athletic in a practical way -- not muscular but fast, with the reflexes of someone who grew up dodging traffic on Harrier Street. She moves well in crowds: slipping through gaps, changing direction without breaking stride, disappearing into a group and reappearing three meters away.
 **Face:** Brown skin, dark eyes that are warmer than they first appear, a smile that she deploys strategically and means sincerely about sixty percent of the time. A thin scar on her left cheekbone from a negotiation that went wrong when she was twenty -- she tells different stories about it depending on who's asking. Her expression shifts easily, matching whoever she's talking to: serious with Greycoats, relaxed with Syndicate contacts, earnest with Quarter residents. The real Mira -- the one that isn't performing -- surfaces in the flat on Harrier Street, after jobs, when the mask comes off and she's just tired and honest.
 **Dress:** Depends on the job. She owns three distinct wardrobes: professional (for Central and official meetings), practical (for fieldwork and gradient crossings), and street (for the Harrier Street social circuit). The one constant is an arc pistol in a concealed holster -- Galvanic, temperamental, won in a card game that she swears was fair and that everyone else suspects wasn't. She also carries a holdout derringer (mechanical, always works) and a cigarette case that she uses as a social prop more than a habit.
 

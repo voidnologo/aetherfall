@@ -53,6 +53,15 @@ Everything else. The neighborhoods between the defined zones, where ordinary peo
 
 These neighborhoods are where the city's forty thousand people actually live. They work in the factories or the Quarter or Central. They send their children to schools that teach reading, arithmetic, and "zone awareness" as a standard subject. They argue about politics at kitchen tables and in corner pubs. They are, overwhelmingly, ordinary people navigating a world that asks extraordinary adaptation.
 
+**Beyond the City**
+Ashwick has no walls, but it has edges. Beyond the residential sprawl, the city gives way to what it always gave way to: farmland, river floodplain, and the low hills that roll east toward the horizon.
+
+The surrounding country is ordinary. Small towns dot the valley -- market villages, coaching stops, farming communities that send produce to Ashwick by cart and receive manufactured goods in return. The River Ast carries barge traffic south toward the coast and the larger port cities. The rail line runs west, connecting Ashwick to other industrial centers inland. Roads go in every direction, though not all are equally reliable.
+
+The complication is northeast. A broad stretch of Wild land -- not deep, but wide and persistent -- cuts across what was once the main highway to the eastern cities. Travel that way is still possible by longer routes or with a guide who knows the safe passages, but it's slower, more expensive, and it gives Ashwick a slightly inward character. News from the east arrives late and garbled. Eastern goods carry a markup. The city's politics have developed with a degree of independence from whatever the capitals are arguing about this season.
+
+But Ashwick is not cut off. Merchants arrive daily. Families visit relatives in the outlying towns and come back with gossip and preserves. Workers travel to other cities for seasonal labor and return with stories and opinions. The train station in Central -- the busiest building in the city -- is proof that the world beyond Ashwick is real, connected, and considerably larger than any single city's concerns. Ashwick is a small city in a big world, not a fortress in a wasteland.
+
 ---
 
 ## History
@@ -187,7 +196,7 @@ The market is the best place in Ashwick to hire a zone guide, buy untraceable go
 
 What does it feel like to be an ordinary person in Ashwick?
 
-You work. In the Factory Quarter, you work shifts at one of the Collective's plants -- good pay, steady hours, the persistent hum in your bones that you stop noticing after the first year (or don't). In the Quarter, you practice a trade that relies on magic, or you serve the people who do -- cooking, cleaning, building, the mundane work that keeps a community running regardless of metaphysics. In Central, you keep the commercial machinery going: banks, shops, offices, the train station that connects Ashwick to the rest of the world.
+You work. In the Factory Quarter, you work shifts at one of the Collective's plants -- good pay, steady hours, the persistent hum in your bones that you stop noticing after the first year (or don't). In the Quarter, you practice a trade that relies on magic, or you serve the people who do -- cooking, cleaning, building, the mundane work that keeps a community running regardless of metaphysics. In Central, you keep the commercial machinery going: banks, shops, offices, the train station where goods arrive from the coast and the inland cities and crates of Galvanic components leave on the evening freight.
 
 You go home. Your flat is in one of the residential neighborhoods, probably leaning slightly one way or the other. You've learned to ignore the gradient effects -- the watch that runs fast near the bedroom window, the radio that crackles when the Quarter's evening rituals start. Your children learn zone awareness in school. Your elderly parents, if they're still alive, remember a world where none of this existed and shake their heads at what passes for normal.
 
