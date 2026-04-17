@@ -4,13 +4,13 @@
 
 ## Overview
 
-The Covenant of Embers sends Ash & Veil on their first patron-directed job: investigate rumors of a pre-Tear artifact discovered by Sootborn explorers at a site in the Wilds northeast of Ashwick. The intelligence is thin — marketplace gossip traced back to a Sootborn resupply run — but the prize is too significant to ignore. The Ashworth Collective heard the same rumors and dispatched Ironwork Solutions. Speed matters. Confirmation matters more.
+The Covenant of Embers sends Ash & Veil on their first patron-directed job: investigate rumors of an artifact discovered by Sootborn explorers inside a pre-Tear industrial ruin in the Wilds northeast of Ashwick. The intelligence is thin — marketplace gossip traced back to a Sootborn resupply run — but the prize is too significant to ignore. The Ashworth Collective heard the same rumors and dispatched Ironwork Solutions. Speed matters. Confirmation matters more.
 
-The Society travels through ordinary countryside to the Wild edges, finds a Sootborn settlement that refuses to help, pieces together enough information to navigate the Wilds on their own, discovers a pre-Tear structure of incomprehensible design, and finds the artifact sealed behind defenses no one can breach. The return trip becomes a survival fight when Ironwork Solutions decides that the Society's confirmation of the site cannot be allowed to reach the Covenant.
+The Society drives out through ordinary countryside, abandons the car at the last village on the Wild edge, finds a Sootborn settlement that refuses to help, pieces together enough information to navigate the Wilds on their own, and reaches the site: the shell of an old grain mill, pre-Tear and mundane, whose interior has been remade from the inside out by the Aether into something that was never human. The artifact is visible in a chamber within — sealed behind architectural defenses no one can breach. The return trip becomes a survival fight when Ironwork Solutions decides that the Society's confirmation of the site cannot be allowed to reach the Covenant.
 
 ## Tone
 
-Dark, propulsive, wonder-threaded. The first story in the series — it needs to establish the world, the characters, and the stakes. The Wilds are alien and magnificent. The structure is genuinely unsettling. The faction politics are lethal outside city limits. The characters are competent, flawed, and human.
+Dark, propulsive, wonder-threaded. The first story in the series — it needs to establish the world, the characters, and the stakes. The Wilds are alien and magnificent. The structure is genuinely unsettling — recognition horror, because the shell remembers being a mill where people worked. The faction politics are lethal outside city limits. The characters are competent, flawed, and human.
 
 ## Structure
 
@@ -24,7 +24,7 @@ Dark, propulsive, wonder-threaded. The first story in the series — it needs to
 
 **Setting:** The Wet Ember, evening. Then the flat on Harrier Street.
 
-**Scene:** Thessaly Vane arrives at the Wet Ember to deliver the briefing. She's composed, precise, and in a hurry — which is unusual for a Covenant representative. The job: travel northeast to the Wild edges, locate a Sootborn settlement, find and recover an artifact of pre-Tear origin. The intelligence is marketplace rumor traced through three intermediaries. The Covenant doesn't know what the artifact is, only that the Sootborn found something in a structure that shouldn't exist and that the description matches no known construction.
+**Scene:** Thessaly Vane arrives at the Wet Ember to deliver the briefing. She's composed, precise, and in a hurry — which is unusual for a Covenant representative. The job: travel northeast to the Wild edges, locate a Sootborn settlement, find and recover an artifact. The site is a pre-Tear industrial ruin — an old mill complex the Wilds swallowed fifty years ago. The unusual feature is that the interior has been actively reshaped by the Aether, not merely warped. The Sootborn explorers described geometry that doesn't match the shell.
 
 The subtext Mira reads: the Covenant is acting on excitement, not strategy. They're sending Ash & Veil because the Society can leave immediately, not because they trust them with something this significant. There's urgency beneath Thessaly's composure — someone else is moving on the same information. Thessaly doesn't name the Collective, but Mira fills in the gap.
 
@@ -37,25 +37,30 @@ Back at the flat on Harrier Street, Mira briefs the team. We see the Society's h
 - The Wet Ember: gas lamps, coal fire, Hesper Brack behind the bar
 - The flat on Harrier Street: small, functional, the Society's home
 - Financial pressure: the Ledger is stable but not comfortable
+- The target is a pre-Tear mill whose interior is being actively remade
 - Mira reads the subtext but doesn't share all of it with the team
 
 ### Chapter 2 — Kael POV
 
-**Setting:** The road northeast out of Ashwick. Countryside. Small towns.
+**Setting:** The road northeast out of Ashwick. Countryside. Small towns. A Covenant quartermaster's car.
 
-**Scene:** Dawn departure. The city thins into residential sprawl, then farms, then open countryside. Kael's eye catalogs the tactical picture: they're lightly supplied, moving fast, into territory none of them have worked before. The road is decent — packed earth, used by carts and the occasional rider. The countryside is ordinary: fields, hedgerows, a coaching inn where they stop for water. People who have nothing to do with the Aether or the Engine, living lives that the zones haven't touched.
+**Scene:** Dawn departure in a grey four-cylinder saloon lent by the Covenant quartermaster. Kael drives. The city thins into residential sprawl, then farms, then open countryside. Kael's eye catalogs the tactical picture: they're lightly supplied, moving fast, into territory none of them have worked before. The road starts paved, then cracked, then weed-grown. They stop at a coaching inn with a filling pump for fuel, water, and bread. Kael notices fresh tire tracks ahead of them — someone else went northeast recently, moving fast.
 
-Kael notices signs that suggest another party is also moving northeast. Not confirmed — hoofprints on the road that are fresh, a farmer who mentions strangers passing through yesterday. Kael files it but doesn't alarm the group. His internal voice: pragmatic, watchful, the instinct of a man who spent eighteen years reading streets for trouble.
+The landscape changes as they approach the Wild edges. Gradual — the trees are taller than they should be, the birdsong is wrong (too complex, too layered), the light has a quality that Kael can't name but Sera clearly feels. The engine starts misbehaving — a cough on an uphill climb, a misfire at idle, the ignition slow to catch. The road deteriorates further: broken asphalt, then flagstone, then packed earth.
 
-The landscape changes as they approach the Wild edges. Gradual — the trees are taller than they should be, the birdsong is wrong (too complex, too layered), the light has a quality that Kael can't name but Sera clearly feels. The road deteriorates. Fewer signs of habitation. The last village they pass through has a ward-post at its boundary — a pole carved with symbols that Aldric identifies as Aetheric protection, crude but functional. The villagers watch them pass with the wariness of people who live next to something they can't control.
+They pass quarantine markers — three rusted enamel signs on iron posts, spaced a mile apart: "AETHERIC INFLUENCE AHEAD — LEAVE VEHICLES — TURN BACK — BY ORDER." Posted by authorities in the immediate post-Fall years, when the government still believed the Wilds could be fenced and managed. They were wrong. The signs have been abandoned for decades.
+
+At the last village on the Wild edge — six houses, a shared well, a ward-post at its boundary — the engine is running on goodwill. A man in a leather apron runs a yard of abandoned cars from every motoring decade since the Tear. He charges a mark a week to watch the saloon and not promise its condition when they return. They pay. They walk from here.
 
 **Ends on:** The tree line ahead. The Wilds, visible as a wall of green too dense and too tall for the geography. Something in the air changes.
 
 **Key details:**
-- Ordinary countryside: farms, coaching inns, normal people
-- Fresh signs of another party ahead of them (Ironwork, not confirmed)
-- The gradual shift as they approach Wild edges
-- Ward-post at the last village — Aetheric protection marks
+- Covenant quartermaster's saloon — established Society status is "borrowing, not owning"
+- Fresh tire tracks heading northeast (Ironwork, not confirmed)
+- Progressive vehicle reliability failure approaching the gradient
+- Quarantine signs from the post-Fall panic: failed government attempt to cordon the Wilds
+- Last village with its yard of abandoned vehicles — decades of travelers who left cars and didn't come back for them
+- Ward-post at the boundary — Aetheric protection marks, folk practice
 - Kael's revolver is fine here. This is still neutral territory
 - The Wilds visible on the horizon before they arrive
 
@@ -89,17 +94,20 @@ Through Sera's senses: the settlement is on the very edge. The Wilds proper begi
 
 **Scene:** Mira works the settlement socially — not pushing, just being present, buying from their small market, making herself useful. Aldric watches and listens. He's not the social operator Mira is, but he's a researcher, and researchers know how to extract information from what people don't say as much as what they do.
 
-Fragments: A woman mentions "the clearing" in conversation with her neighbor, then stops when she notices Aldric listening. A child has drawn something on a plank wall with charcoal — a building? A shape? It's angular, geometric, unlike anything in the settlement's organic architecture. An old man sitting by the well tells a story that's nominally about something else but contains details about time feeling wrong, distances not matching, landmarks moving. The explorers who found the site are referenced obliquely — they went in, they came back changed (quieter, uncertain about how long they were gone), and the settlement leadership has asked people not to talk about it.
+Fragments: A woman mentions "the clearing" in conversation with her neighbor, then stops when she notices Aldric listening. A child has drawn two layered shapes on a plank wall with charcoal — a lower silhouette that reads as mill-like (silo bulk, a chimney stub) and an upper drawing of geometric interior angles that don't belong to the same building. An old man sitting by the well — Thom, whose father was a boy when the Tear happened — tells Aldric about "old Pell's grandfather's mill," a grain elevator and roller mill employing maybe thirty hands before the Wilds came in. Shift bell you could hear from here on a still morning. The explorers who found the site are referenced obliquely — they went in, they came back changed (quieter, uncertain about how long they were gone), and the settlement leadership has asked people not to talk about it.
 
-Aldric assembles the puzzle. Not a map — the Wilds resist mapping — but a set of clues. Landmarks that might hold true. A general direction. The critical detail: from the settlement's eastern ridge, with binoculars (Kael has them), you can see a cluster of structures in the forest. They look close — maybe an hour's walk. The Sootborn say the explorers were gone for what felt like days. That discrepancy is the most important piece of data Aldric collects.
+Aldric and Kael climb the eastern ridge with binoculars. Aldric reads the mill silhouette first — two silos, a loading bay, a smokestack stub — and then realizes the bones are wrong: the material is bleached, the proportions warped. The shell says *mill*. The substance says *remade*.
+
+Aldric assembles the puzzle. Not a map — the Wilds resist mapping — but a set of clues. Landmarks that might hold true. A general direction. The critical detail: the structures look close — maybe an hour's walk. The Sootborn say the explorers were gone for what felt like days. That discrepancy is the most important piece of data Aldric collects.
 
 **Ends on:** Aldric presents what he's gathered to the team. It's not much. It's enough to try.
 
 **Key details:**
 - Mira's social work happening in background through Aldric's observation
-- Fragments of information: the clearing, the child's drawing, the old man's story
+- Thom's account: Pell's grandfather's mill, grain elevator and roller mill, ~30 hands, shift bell audible to the settlement on still mornings
+- The child's two-layer drawing: mill silhouette below, alien geometry above
 - The explorers came back changed — quieter, confused about time
-- Visual confirmation: structures visible with binoculars, seemingly close
+- Visual confirmation from the eastern ridge: mill shell visible, bones wrong
 - The time/distance discrepancy — looks like an hour, took days
 - Aldric's researcher mind assembling fragments into a workable picture
 
@@ -113,93 +121,110 @@ The Wilds are immediately wrong. The forest is dense but not claustrophobic — 
 
 Mira's POV grounds this in the practical: they need to navigate, and navigation is failing. She watches Sera, who is reading the Aether like a current — moving by feel, adjusting their course based on something only she can sense. Mira trusts her because there's no alternative, but the trust is uncomfortable. Their progress is slow. Time is hard to track — Kael's watch is running but the intervals don't match Mira's sense of elapsed time.
 
-Kael's revolver starts to act up — not jamming, but the action feels sluggish, reluctant. He switches to his knife and belt without comment. Aldric's casting takes more effort. Only Sera seems to be gaining strength, and that worries Mira for different reasons.
+Kael's revolver starts to act up — not jamming, but the action feels sluggish, reluctant. He switches to his knife and belt without comment. Aldric's casting misbehaves in the opposite direction from what he expected: every cantrip comes in hotter than intended, every Detect cast a net twice as wide as he'd asked. The effort isn't pushing a spell through resistance; it's forcing a spell *down* to a useful size. The ink-too-full-of-pen metaphor, with the ink bleeding everywhere. Only Sera seems to be gaining strength, and that worries Mira for different reasons.
 
-The journey that should take an hour takes what feels like most of a day. They're tired, disoriented, and uncertain of their route back.
+The clearing, finally. The structure is there. And it's recognizable — a mill, or what was one. Two silos. A loading bay. A smokestack stub. Fifty years of forest damage, collapsed roof, missing silo cap, dead ivy climbing a wall that isn't quite brick anymore. Aldric, pale: "Somebody built this. A long time ago. But something else is building inside it now."
 
-**Ends on:** They reach a clearing. The structure is there. It's nothing like what they expected.
+**Ends on:** They approach the loading bay. The entrance is there. The interior waits.
 
 **Key details:**
 - Dawn departure, no guide, Mira's tactical decision
 - The Wilds' spatial distortion: landmarks moving, paths shifting
 - Sera navigating by Aetheric feel — the only reliable compass
-- Kael's gun declining, Aldric's casting harder, Sera stronger
+- Kael's gun declining, Aldric's casting coming in *too hot*, Sera amplified
 - Time distortion — they can't agree on how long they've been walking
 - Physical and psychological toll of sustained disorientation
 - Mira's control instinct tested — she can't manage what she can't map
+- The structure: recognizable mill shell, interior unknown
 
 ### Chapter 6 — Sera POV
 
-**Setting:** The pre-Tear structure. Interior.
+**Setting:** The mill. Interior.
 
-**Scene:** The structure is wrong in a way that makes the Wilds' strangeness feel organic by comparison. The Wilds are alien but alive — they breathe, they grow, they have the logic of an ecosystem. The structure is *deliberate*. Seamless walls of material that isn't stone, isn't metal. Corridors that turn at angles that feel wrong — not impossible, but subtly off, as if the geometry is following rules from a different textbook. The air inside is different from the Wilds' air — still saturated, but with an undertone of something mechanical, the ghost of the Engine's hum beneath the Aether's sweetness.
+**Scene:** The shell is a mill. The interior is not. Stepping through the loading bay is like stepping through a door that opens on a different building than the one you approached. No catwalks. No grain chutes. No machinery foundations. No bolt holes where the old equipment was anchored. The industrial bones are *gone*. In their place: seamless corridors of pale material that isn't stone, isn't metal, warm to the touch. Subtly wrong angles. The ghost of the Engine's hum beneath the Aether's sweetness.
 
 Sera is flooded. The Aether here is dense and strange — more power available than she's ever felt, but it behaves differently. Her reach into it produces stronger results but with an unfamiliar resonance. She lights their way (Kael's lantern is unreliable here) with a ball of pale fire that burns brighter than she intended and casts shadows that move independently.
 
 The interior shifts. Not violently — a corridor that was straight is now curved. A room they passed through has changed dimensions when they look back. Technology is embedded in the walls: veins of something luminous, panels that pulse faintly, surfaces that are warm to the touch. Nothing responds to interaction. It's like being inside a sleeping machine.
 
-They push deeper. Aldric is documenting everything — sketching, taking notes, his scholarly instinct overriding his fear. Kael is navigating by instinct and discipline, marking their route with his knife on the walls. The marks remain — the structure doesn't erase them, which is the first comforting thing they've found.
+They push deeper. Aldric is documenting everything — sketching, taking notes, his scholarly instinct overriding his fear. Kael is navigating by instinct and discipline, marking their route with his knife on the walls.
+
+**The injury:** At the fourth turn, Kael is scoring a cross-mark into the pale material. The wall *settles* — not a lurch, a slow adjustment, the way a sleeper shifts in a bed. The surface becomes three inches closer to his hand than it was a moment ago, and the blade skips off the new geometry and opens a four-inch diagonal cut across his forearm. Clean cut, bleeding well. Kael treats it as a problem to be solved. Aldric casts Mend on it — and the spell comes in too eager, forcing him to clamp down on its size. Partial close. Mira bandages the forearm from Kael's belt kit. Kael marks the next wall more carefully.
+
+The structure doesn't erase the knife marks — the first comforting thing they've found. But the geometry is more hostile than passive.
 
 They find the chamber. The container is there — visible through an opening that is either a window, a doorway, or something else. It sits on a pedestal of the same seamless material. Beyond it, the space extends into darkness that Sera's light can't penetrate.
 
 **Ends on:** They can see the artifact. They cannot reach it.
 
 **Key details:**
-- The structure: seamless, geometric, subtly wrong architecture
-- Both Aetheric and Engine-like qualities — the hum under the sweetness
+- The interior: *not* industrial bones. The mill's interior has been replaced.
+- The occasional glimpse back toward the entrance shows the shell still there
+- Both Aetheric and Engine-like qualities in the walls — dual resonance
 - Sera's power amplified but behaving strangely
-- Shifting interior — corridors change, rooms resize, but slowly
+- Shifting interior — corridors change, rooms resize, walls *settle*
 - Technology in the walls: luminous veins, warm panels, unresponsive
 - Kael's knife marks persist — the structure allows navigation aids
+- **Kael's forearm cut from a settling wall; Aldric's Mend demonstrates the too-eager magic model**
 - Aldric documenting obsessively
 - The chamber and the container: visible, unreachable
 
 ### Chapter 7 — Kael POV
 
-**Setting:** The chamber. Then the structure, retreating.
+**Setting:** The chamber. Then the structure, retreating. The loading bay on the way out.
 
 **Scene:** Kael assesses the situation with the only tools he has left: his eyes, his experience, and the knife that still works. The opening to the chamber isn't blocked — it's present, clearly showing the container inside. But the space between them and the container doesn't behave. Aldric steps through the opening and finds himself re-entering the corridor they came from. Sera tries to push through with force — the Aether deflects, not violently, but with the indifference of a river redirecting around a stone. Kael tries to walk straight through and ends up at the entrance he started from.
 
-The defenses aren't hostile. They're architectural. The structure simply doesn't permit approach to the container through any method they have available. Aldric, fascinated despite himself, notes the container's visible details from the opening: seamless, precise, no maker's mark, Engine-like in its manufactured perfection. He says something quiet about it that Kael doesn't fully understand but files away — something about the container being wrong for where they are, wrong for *when* it might be.
+The defenses aren't hostile. They're architectural. The structure simply doesn't permit approach to the container through any method they have available. Aldric, fascinated despite himself, notes the container's visible details from the opening: seamless, precise, no maker's mark, the precision of machined manufacture. It wasn't left here by the people who built the mill. It was placed here. Or made here, in this chamber, by whatever is remaking the interior.
 
 Then the structure shifts. Not the subtle corridor changes from before — a larger realignment, as if the building is stretching in its sleep. Their marked path back changes. Kael's marks are still on the walls, but the walls have rearranged. The exit isn't where it was.
 
-Kael takes point. This is what he does — when everything fails, he puts himself between the problem and the people behind him. He navigates by instinct, by the knife marks that are still readable even on rearranged walls, and by a grim refusal to let the structure dictate terms. Sera helps — she can feel the direction of the outside, the way the Aether flows toward the Wilds' open air.
+Sera casts Anchor — a desperate stabilization over the atrium, the Aetheric current stilling under her hand. It gives them a window. Kael takes point. This is what he does — when everything fails, he puts himself between the problem and the people behind him. He navigates by the knife marks that are still readable even on rearranged walls, and by a grim refusal to let the structure dictate terms.
 
-**Ends on:** They get out. Shaken, exhausted, with sketches and notes and no artifact. The Wilds outside feel almost welcoming by comparison.
+The last hundred feet back toward the loading bay — patches of pitted concrete show through the pale material, a brick-course ghosts into view for a moment, the outline of a steel I-beam floats in a wall and then is gone. The shell remembering itself, or the interior forgetting. They run out through the loading bay framed by a rust-streaked hoist mount.
+
+**Ends on:** They get out. Shaken, exhausted, with sketches and notes and no artifact. The clearing with the mill behind them. The Wilds outside feel almost welcoming by comparison.
 
 **Key details:**
 - The spatial defense: the opening is there, passage loops back
 - No violence, no hostility — architectural indifference
-- Aldric's observation of the container: Engine-like, temporally wrong
+- Aldric's observation: the container was placed or made *here*, by the agency remaking the interior
 - The larger structural shift — real danger of being lost inside
+- Sera's Anchor cast to stabilize the atrium
 - Kael leading the retreat: instinct, discipline, knife marks
-- Sera feeling the direction of outside
+- Exit through shell remnants — the transition from alien interior to recognizable industrial outline
 - Physical toll: everyone is spent
 - They have confirmation but no prize
 
 ### Chapter 8 — Aldric POV
 
-**Setting:** Outside the structure. The Wilds. Beginning the return journey.
+**Setting:** Outside the mill. The clearing. Beginning the return journey.
 
-**Scene:** The team rests outside the structure. Aldric documents while the others recover — his hands are shaking but the notes have to be made now, while the details are fresh. What he saw in the chamber disturbs him at a level he can't fully articulate yet. The container looked *manufactured* — not grown, not formed, not cast. Made, with the precision of a machined part. In a structure saturated with Aether, surrounded by Wild land, predating the Tear. The categories he was taught don't accommodate what he saw.
+**Scene:** The team rests in the clearing. Aldric documents while the others recover — his hands are shaking but the notes have to be made now, while the details are fresh. His scholarly notebook is organized around three headings: Shell, Interior, Material.
 
-He heals. Kael has a cut from a wall that moved while he was marking it. Sera is flushed, overstimulated from the Aetheric saturation — her eyes are glowing faintly and she's clearly trying to control it. Aldric uses Mend on Kael (the physical cost is real — fatigue, nausea, the familiar price of Vitae work) and considers using it on Sera before realizing that what Sera is experiencing isn't an injury. It's accumulation. He files this away with the things he needs to tell her and hasn't yet.
+**Shell:** pre-Tear mill complex. Grain elevator, roller mill, loading dock. Fifty years of Wild influence. Identifiable. Normal in its origin.
+
+**Interior:** actively remade. The industrial infrastructure has been *removed* and replaced with pale seamless construction that follows a geometry Aldric cannot reconcile with anything in his training. The remaking is ongoing — the walls settle, the corridors shift. This is not warping. This is reconstruction by an agency he cannot name.
+
+**Material:** accepts knife marks. Luminous veins. Both Aetheric and Engine-like resonance present in the same substance — a combination the literature says cannot exist. The timeline is intact (the shell is mundane, pre-Tear; the interior is post-Tear remaking) but the agency, the mechanism, and the purpose are unknown.
+
+He heals. Kael's forearm from the wall-cut earlier — Aldric's Mend work inside the structure was partial, and he finishes the close now, the spell coming in too eager again and costing more than it should. Sera is flushed, overstimulated from the Aetheric saturation — her eyes are glowing faintly and she's clearly trying to control it. Aldric considers casting on her before realizing that what Sera is experiencing isn't an injury. It's accumulation. He files this away with the things he needs to tell her and hasn't yet.
 
 They begin the return. The Wilds' spatial distortion is still present but Sera's navigation worked coming in and should work going out. They're tired, operating on depleted reserves, but moving.
 
-Then Aldric detects something. A Reveal cast at the edge of his range — expensive in these conditions, pulling hard on him — shows human presences in the Wilds between them and the settlement. Multiple. Armed. Moving to intercept.
+Then Aldric detects something. A Reveal cast at the edge of his range — expensive in these conditions, the spell wanting to keep going, forcing him to pull it back mid-cast — shows human presences in the Wilds between them and the settlement. Multiple. Armed. Moving to intercept.
 
 Ironwork Solutions found the site. Or found them. Either way, the route home has people on it who didn't come to talk.
 
 **Ends on:** Aldric delivers the news: they're not alone in the Wilds, and whoever is out there is between them and the way back.
 
 **Key details:**
-- Aldric's documentation: the container's Engine-like precision, the temporal impossibility
-- Healing Kael: the physical cost of Mend, the scholarly precision
+- Aldric's scholarly notes: Shell (pre-Tear mill) / Interior (actively remade) / Material (dual resonance, impossibility)
+- No timeline break — the mundane shell grounds the canon
+- Finishing Kael's Mend — the physical cost is real, spell too eager again
 - Sera's accumulation — eyes glowing, not an injury, not something he can heal
 - The return journey beginning in exhaustion
-- Reveal detecting Ironwork: human presences, armed, blocking the route
+- Reveal detecting Ironwork: spell leaping wider than intended, headache from filtering the flood
 - The stakes escalate: they're depleted and now hunted
 
 ### Chapter 9 — Kael POV
@@ -210,7 +235,7 @@ Ironwork Solutions found the site. Or found them. Either way, the route home has
 
 But Ironwork has one critical advantage: they don't need the Society alive. Out here, in the Wilds, beyond any authority's reach, people disappear. The Society needs to survive AND escape. Ironwork just needs to stop them.
 
-The combat is visceral. Zone shifts mid-fight — the Aether pulses, and for a moment guns work, then they don't, then they do. Kael fights with his knife when the revolver fails, draws the revolver when the zone shifts back. Sera throws force that hits harder than she intends in the saturated air — the first time she hurts someone badly with magic, and the cost is visible on her face. Aldric shields and heals, burning through his reserves, his spells behaving unpredictably in the fluctuating Aether. Mira fights with the arc pistol when it works and her derringer when it doesn't, making tactical calls — retreat angles, chokepoints where the shifting terrain works for them instead of against them.
+The combat is visceral. Zone shifts mid-fight — the Aether pulses, and for a moment guns work, then they don't, then they do. Kael fights with his knife when the revolver fails, draws the revolver when the zone shifts back. The bandage on his forearm tugs when his wrist flexes; he adjusts his grip without thinking. Sera throws force that hits harder than she intends in the saturated air — the first time she hurts someone badly with magic, and the cost is visible on her face. Aldric shields and heals, burning through his already-depleted reserves, his spells still coming in too hot and requiring active dampening. Mira fights with the arc pistol when it works and her derringer when it doesn't, making tactical calls — retreat angles, chokepoints where the shifting terrain works for them instead of against them.
 
 They don't win. They escape. They use the Wilds' distortion — which they've been navigating all day — to lose Ironwork in the shifting terrain. Sera feels the path that leads toward the settlement and they take it, moving fast, bleeding, spent.
 
@@ -221,9 +246,9 @@ The cost: injuries that Aldric doesn't have the reserves to fully heal. Sera's e
 **Key details:**
 - Combat in the Wilds: spatial distortion affects both sides
 - Zone shifts mid-fight: guns and magic flickering in and out
-- Kael: knife work, revolver when the zone allows, tactical discipline
+- Kael: knife work, revolver when the zone allows, tactical discipline; bandage on forearm visible
 - Sera: force magic amplified by the Wilds, first time hurting someone badly
-- Aldric: Shield, Mend, reserves burning out, spells behaving oddly
+- Aldric: Shield, Mend, reserves burning out, spells still coming in too hot
 - Mira: arc pistol/derringer, tactical calls, escape routing
 - They escape, not win — using Wilds navigation to lose pursuit
 - Real injuries, real cost, the pretense of professional rivalry shattered
@@ -231,27 +256,31 @@ The cost: injuries that Aldric doesn't have the reserves to fully heal. Sera's e
 
 ### Chapter 10 — Mira POV
 
-**Setting:** The Sootborn settlement. The road back. The outskirts of Ashwick.
+**Setting:** The Sootborn settlement. The road back. The last village (car retrieval). The outskirts of Ashwick.
 
-**Scene:** The Sootborn see them come back battered and understand immediately what happened. The reception shifts — not warm, but the hostility is gone. They've seen what happens when city factions bring their wars to the Wild edge. They help with basic care (food, water, a place to sleep) but the message is clear: leave, and take your problems with you.
+**Scene:** The Sootborn see them come back battered and understand immediately what happened. Pell is at the edge of the settlement with a flat look — the expression of a woman who predicted this and wished she'd been wrong. She tells them what her community is and what the site is: her grandfather built that mill. Her family ran it for two generations before the Wilds came in. The reception shifts — not warm, but the hostility is gone. They've seen what happens when city factions bring their wars to the Wild edge. They help with basic care (food, water) but the message is clear: leave, and take your problems with you.
 
-On the road back — slower now, carrying injuries — the Margin finds them. Dace Rennick on the road with his easy smile and thin cigar. He already knows something happened. He reads the injuries, the tension, the fact that the Society went in with four and came out with four but looking like they lost a fight. He wants to know what they found.
+On the road back the Society walks — Aldric sleeping on his feet for the first mile, Sera's eyes slowly dimming to almost-normal. They reach the last village. The quartermaster's saloon is where they left it, under a layer of grey pollen, the mark's watch intact. The man in the leather apron takes another mark for the service. The engine catches on the third try.
 
-Mira negotiates. She gives Dace enough to make him useful — confirmation that the site is real, that it's defended, that Ironwork tried to kill them over it. She holds back the details: the container's nature, Aldric's observations about its Engine-like precision, the temporal implications. She gives him the story, not the meaning. Dace accepts it because a story is worth money and the meaning will come out eventually anyway.
+At a crossroads eight miles south, Dace Rennick is waiting — standing in the road beside a tethered horse, a thin cigar in his hand, his casualness as constructed as Mira's mirroring. He recognizes the car (he knows what kind the Covenant quartermaster hands out) and that's the first piece of information Mira registers: the Margin has been watching.
 
-The return to Ashwick. The city from the outside — smoke from the factories, the rail line, the buildings condensing on the horizon. The ordinary world after the extraordinary. Mira drafts the report to Thessaly in her head: the site is real, the artifact is inaccessible, Ironwork tried to eliminate them, the Collective knows. The deadlock begins.
+Mira negotiates. She gives Dace enough to make him useful — confirmation that the site is real, that it's defended, that Ironwork tried to kill them over it. She holds back the details: the mill framing, Aldric's observations about the interior's active reconstruction, the container's ambiguous manufacture. She gives him the story, not the meaning. Dace accepts it because a story is worth money and the meaning will come out eventually anyway.
 
-The last beat: the Society in the flat on Harrier Street. Tired, hurt, alive. They've confirmed something that every faction in Ashwick will want to control. They've made enemies. They've earned a reputation they didn't have yesterday. And somewhere in the Wilds, in a structure that shouldn't exist, a sealed container sits behind defenses that no one can breach, waiting for someone to find the key.
+The return to Ashwick by car. The city from the outside — smoke from the factories, the rail line, the buildings condensing on the horizon. The ordinary world after the extraordinary. They drop the saloon at the Covenant depot (an acknowledgment nodded at, no conversation required) and walk the last mile to Harrier Street. Mira drafts the report to Thessaly in her head: the site is real, the artifact is inaccessible, Ironwork tried to eliminate them, the Collective knows. The deadlock begins.
+
+The last beat: the Society in the flat on Harrier Street. Tired, hurt, alive. They've confirmed something that every faction in Ashwick will want to control. They've made enemies. They've earned a reputation they didn't have yesterday. And somewhere in the Wilds, in the shell of a mill that people had built a long time ago, inside a chamber that people had not built, a sealed container sits behind defenses no one can breach, waiting for someone to find the key.
 
 **Ends on:** Mira looking at the Ledger. The job pays. The next one will be harder.
 
 **Key details:**
+- Pell reveals her grandfather built the mill; family ties to the site
 - Sootborn's shifted attitude: hostility to grim understanding
-- Dace Rennick on the road: charming, probing, given a controlled leak
+- Car retrieval at the last village — engine grudging, another mark paid
+- Dace Rennick at the crossroads: tethered horse, recognized the Covenant car
 - Mira's information management: story without meaning
-- Return to Ashwick: the mundane after the extraordinary
+- Return to Ashwick by car; drop at the Covenant depot; walk the last mile
 - The flat on Harrier Street: home, exhaustion, the cost tallied
 - The deadlock established: known site, inaccessible artifact, multiple factions monitoring
 - Reputation gain: the Society proved themselves
-- Seeds planted: the key, the container's nature, Ironwork as enemies, Sera's accumulation
+- Seeds planted: the key, the container's nature, Ironwork as enemies, Sera's accumulation, the agency remaking the mill's interior
 - The Ledger: the job pays, but the real cost hasn't been calculated yet
