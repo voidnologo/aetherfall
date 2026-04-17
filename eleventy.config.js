@@ -4,6 +4,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("web/rules/css");
   eleventyConfig.addPassthroughCopy("web/rules/js");
   eleventyConfig.addPassthroughCopy("web/rules/tools");
+  eleventyConfig.addPassthroughCopy("web/fiction/css");
   eleventyConfig.addPassthroughCopy("web/assets");
 
   // ── Filter: look up a page and its neighbors from pages.json ──
