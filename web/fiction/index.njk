@@ -10,12 +10,12 @@ eleventyExcludeFromCollections: true
 <meta name="theme-color" content="#080b14">
 <title>Fiction &mdash; Aetherfall</title>
 <meta name="description" content="Short stories set in the world of Aetherfall. Glimpses of what life is like between the Veil and the Engine.">
-<link rel="icon" href="/assets/logo/favicon.ico">
-<link rel="apple-touch-icon" href="/assets/logo/apple-touch-icon.png">
+<link rel="icon" href="../assets/logo/favicon.ico">
+<link rel="apple-touch-icon" href="../assets/logo/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/fiction/css/fiction.css">
+<link rel="stylesheet" href="css/fiction.css">
 </head>
 <body>
 
@@ -23,15 +23,15 @@ eleventyExcludeFromCollections: true
 
 <div class="reader-bar">
   <div class="reader-bar-inner">
-    <a href="/" class="back-link">&larr; Aetherfall</a>
-    <a href="/rules/" class="back-link back-link--alt">The Rules &rarr;</a>
+    <a href="../" class="back-link">&larr; Aetherfall</a>
+    <a href="../rules/" class="back-link back-link--alt">The Rules &rarr;</a>
   </div>
 </div>
 
 <header class="fiction-header">
   <div class="container">
-    <a href="/" class="brand-wordmark" aria-label="Aetherfall">
-      <img src="/assets/logo/wordmark.webp" alt="Aetherfall">
+    <a href="../" class="brand-wordmark" aria-label="Aetherfall">
+      <img src="../assets/logo/wordmark.webp" alt="Aetherfall">
     </a>
     <p class="brand-sub">Fiction</p>
     <p class="tagline">
@@ -51,7 +51,7 @@ eleventyExcludeFromCollections: true
     <div class="fiction-list">
       {%- if fiction.stories and fiction.stories.length %}
         {%- for story in fiction.stories %}
-        <a href="/fiction/{{ story.slug }}.html" class="story-card">
+        <a href="{{ story.slug }}.html" class="story-card">
           <p class="story-number">Story No. {{ story.numberDisplay }}</p>
           <h2>{{ story.title }}</h2>
           <p class="story-subtitle">{{ story.subtitle }}</p>
