@@ -1,17 +1,17 @@
 # Continuation Prompt
 
-## Last Session (30) — World-Building Clarifications + Story 02 First Draft
+## Last Session (31) — Story 03 Plan: "The Lamplighter's Price"
 
-- Clarified world-building fundamentals: neutral territory as default, old-world tech is neutral, Veil produces ecosystems / Engine produces objects, gradient is physics not a place, Ashwick is connected to a broader world
-- Updated fiction docs: 01-the-world, 02-the-local-scene, 04-the-characters, 06-series-bible
-- Wrote complete 10-chapter first draft of Story 02 (~18k words, rotating POV, sequential)
-- Story follows Ash & Veil from briefing to Wilds expedition to inaccessible artifact to combat to return
+- Created 8-chapter plan for Story 03 — Fels blackmails the Society into retrieving Syndicate cargo from the foundry tunnels
+- Key narrative beats: tunnels transforming like the mill (same agency, beneath a Galvanic factory), Kael-Mira trust crack, Sera's secret vision of a network beneath the city
+- Fels is blackmailing them (not collecting a debt) — they cost him during the Ashwick Job and he has information leverage
+- Plan includes character status trackers, society status, and seed tracking tables
 
 ## Current State
 - **Game title:** Aetherfall (repo: voidnologo/aetherfall)
 - **Build:** Eleventy 3.x — `npm run dev` / `npm run build` — deploys via GitHub Action with `--pathprefix=/aetherfall/`
 - **Website:** 18 chapters + quickstart (.njk) + character sheets (from JSON + sheet.njk) + interactive tools
-- **Fiction:** 6 world reference docs in `fiction/world/`, Story 02 first draft (10 chapters) in `fiction/stories/story-02/`
+- **Fiction:** 6 world reference docs in `fiction/world/`, Story 02 first draft (10 chapters) in `fiction/stories/story-02/`, Story 03 plan in `fiction/stories/story-03/`
 - **Art pipeline:** `art/{type}/{generated|approved|archived}/` — art NEVER deleted, only moved
 - **Art generation:** `python tools/comfyui_generate.py` — builds flux-dev workflows, queues via ComfyUI API
 - **Founding event:** "The Tear" (was "the Eruption" — renamed session 27)
@@ -19,15 +19,16 @@
 - **CRITICAL RULE:** Art is NEVER deleted. Moves through generated -> approved or generated -> archived.
 
 ## Immediate Next Tasks
+- Write Story 03 chapters from `fiction/stories/story-03/PLAN.md`
 - Read and revise Story 02 — editing pass for voice, pacing, continuity
-- Choose a working title for Story 02
-- Update series bible with new NPCs, world state, seeds from the draft
+- Update series bible with Story 02 outcomes before writing Story 03
 - Review Wave 1 art and select golden reference set
 
 ## Key References
 - Fiction world docs: `fiction/world/01-the-world.md` through `06-series-bible.md`
 - Story 02 plan: `fiction/stories/story-02/PLAN.md`
 - Story 02 chapters: `fiction/stories/story-02/ch01.md` through `ch10.md`
+- Story 03 plan: `fiction/stories/story-03/PLAN.md`
 - Style guide: `fiction/world/05-style-guide.md`
 - Character sheets (game data): `web/_data/characters/*.json`
 

@@ -1,6 +1,7 @@
 # Pending Tasks
 
 ## Next Up
+- [ ] Write Story 03 chapters from plan (`fiction/stories/story-03/PLAN.md`)
 - [ ] Read and revise Story 02 — editing pass for voice, pacing, continuity
 - [ ] Choose working title for Story 02
 - [ ] Update series bible: new NPCs (Pell, Thom, Adi), world state (deadlock site), seeds planted
