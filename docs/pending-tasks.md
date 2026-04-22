@@ -1,8 +1,10 @@
 # Pending Tasks
 
 ## Next Up
-- [ ] Update series bible: new NPCs (Pell, Thom, Adi), world state (deadlock site), seeds planted — do this before writing Story 03
-- [ ] Write Story 03 chapters from revised plan (`fiction/stories/story-03/PLAN.md`)
+- [ ] Address editing notes on PR #2 (Story 03 draft — user reviewing in GitHub)
+- [ ] Merge Story 03 PR, build web reader page, generalize `web/_data/fiction.js`
+- [ ] Update series bible with final Story 03 outcomes
+- [ ] Plan combat-focused story (next in series — Kael-heavy, timing track, Galvanic devices)
 - [ ] Cross-device reading test of published fiction reader (iPhone, iPad, desktop)
 - [ ] Social preview images (og:image) for /fiction/ landing and story reader
 - [ ] Review Wave 1 art (20 images in art/*/generated/) — select golden reference set
