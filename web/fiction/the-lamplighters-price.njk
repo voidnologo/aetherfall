@@ -1,0 +1,219 @@
+---
+permalink: fiction/the-lamplighters-price.html
+eleventyExcludeFromCollections: true
+storySlug: the-lamplighters-price
+---
+{%- set story = fiction.storiesBySlug[storySlug] -%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#080b14">
+<title>{{ story.title }} &mdash; Aetherfall Fiction</title>
+<meta name="description" content="{{ story.blurb | striptags | safe }}">
+<link rel="icon" href="../assets/logo/favicon.ico">
+<link rel="apple-touch-icon" href="../assets/logo/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/fiction.css">
+</head>
+<body>
+
+<div class="atmo"></div>
+
+<div class="reader-bar">
+  <div class="reader-bar-inner">
+    <div class="reader-bar-left">
+      <button type="button" class="toc-toggle" id="toc-toggle" aria-label="Chapter list" aria-expanded="false" aria-controls="toc-drawer">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="4" y1="7" x2="20" y2="7"/>
+          <line x1="4" y1="12" x2="20" y2="12"/>
+          <line x1="4" y1="17" x2="14" y2="17"/>
+        </svg>
+      </button>
+      <a href="./" class="back-link">&larr; Fiction</a>
+    </div>
+    <a href="../" class="story-mark" aria-label="Aetherfall home">
+      <img src="../assets/logo/monogram.webp" alt="" class="story-mark-icon">
+      <span class="story-mark-num">No. {{ story.numberDisplay }}</span>
+    </a>
+  </div>
+  <div class="reader-progress" id="reader-progress"></div>
+</div>
+
+<div class="toc-backdrop" id="toc-backdrop" aria-hidden="true"></div>
+
+<aside class="toc-drawer" id="toc-drawer" aria-hidden="true" aria-label="Chapters">
+  <div class="toc-header">
+    <span class="toc-title">Chapters</span>
+    <button type="button" class="toc-close" id="toc-close" aria-label="Close chapter list">
+      <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="6" y1="6" x2="18" y2="18"/>
+        <line x1="18" y1="6" x2="6" y2="18"/>
+      </svg>
+    </button>
+  </div>
+  <nav class="toc-list" id="toc-list">
+    <a href="#top" class="toc-item" data-target="top">
+      <span class="toc-num">&mdash;</span>
+      <span class="toc-label">Title Page</span>
+    </a>
+    {%- for ch in story.chapters %}
+    <a href="#ch{{ ch.num }}" class="toc-item" data-target="ch{{ ch.num }}">
+      <span class="toc-num">{{ ch.numDisplay }}</span>
+      <span class="toc-label">
+        <span class="toc-label-main">Chapter {{ ch.num }}</span>
+        {%- if ch.pov %}<span class="toc-label-sub">{{ ch.pov }}</span>{%- endif %}
+      </span>
+    </a>
+    {%- endfor %}
+    <a href="#story-end" class="toc-item" data-target="story-end">
+      <span class="toc-num">&#9670;</span>
+      <span class="toc-label">The End</span>
+    </a>
+  </nav>
+</aside>
+
+<article class="story-article">
+
+  <header class="story-titleblock" id="top">
+    <p class="story-number">Story No. {{ story.numberDisplay }}</p>
+    <h1>{{ story.title }}</h1>
+    <p class="story-subtitle">{{ story.subtitle }}</p>
+  </header>
+
+  {%- for ch in story.chapters %}
+  <section class="chapter" id="ch{{ ch.num }}">
+    <div class="chapter-heading">
+      <span class="chapter-label">Chapter</span>
+      <span class="chapter-num">{{ ch.num }}</span>
+      {%- if ch.pov %}
+      <span class="chapter-pov">{{ ch.pov }}</span>
+      {%- endif %}
+    </div>
+    <div class="chapter-body">
+      {{ ch.html | safe }}
+    </div>
+  </section>
+  {%- endfor %}
+
+  <footer class="story-end" id="story-end">
+    <p class="end-mark">The End</p>
+    <span class="end-gem" aria-hidden="true"></span>
+    <p>
+      More tales of the Ash &amp; Veil Society &mdash; and of others like them &mdash;
+      will follow. If you'd like to know how this world runs at the table,
+      the rulebook is the next thing to read.
+    </p>
+    <div class="end-actions">
+      <a href="./" class="btn btn-ghost">More Fiction</a>
+      <a href="../rules/" class="btn btn-primary">The Rules</a>
+    </div>
+  </footer>
+
+</article>
+
+<footer class="fiction-footer">
+  <p>Aetherfall RPG &mdash; Fiction</p>
+</footer>
+
+<script>
+  (function () {
+    /* ── Reading progress bar ─────────────────────────── */
+    var bar = document.getElementById('reader-progress');
+    function updateProgress() {
+      if (!bar) return;
+      var h = document.documentElement;
+      var scrolled = h.scrollTop;
+      var max = h.scrollHeight - h.clientHeight;
+      var pct = max > 0 ? (scrolled / max) * 100 : 0;
+      bar.style.width = pct + '%';
+    }
+    updateProgress();
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    window.addEventListener('resize', updateProgress);
+
+    /* ── TOC drawer ───────────────────────────────────── */
+    var drawer = document.getElementById('toc-drawer');
+    var backdrop = document.getElementById('toc-backdrop');
+    var toggle = document.getElementById('toc-toggle');
+    var closeBtn = document.getElementById('toc-close');
+    if (!drawer || !backdrop || !toggle) return;
+
+    function openDrawer() {
+      drawer.classList.add('is-open');
+      backdrop.classList.add('is-open');
+      drawer.setAttribute('aria-hidden', 'false');
+      backdrop.setAttribute('aria-hidden', 'false');
+      toggle.setAttribute('aria-expanded', 'true');
+      document.body.classList.add('no-scroll');
+    }
+    function closeDrawer() {
+      drawer.classList.remove('is-open');
+      backdrop.classList.remove('is-open');
+      drawer.setAttribute('aria-hidden', 'true');
+      backdrop.setAttribute('aria-hidden', 'true');
+      toggle.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('no-scroll');
+    }
+    toggle.addEventListener('click', function () {
+      drawer.classList.contains('is-open') ? closeDrawer() : openDrawer();
+    });
+    if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+    backdrop.addEventListener('click', closeDrawer);
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && drawer.classList.contains('is-open')) closeDrawer();
+    });
+
+    /* Close drawer when a TOC link is tapped (mobile-friendly) */
+    var items = drawer.querySelectorAll('.toc-item');
+    items.forEach(function (item) {
+      item.addEventListener('click', function () {
+        /* Small delay so the anchor navigation commits before we close */
+        setTimeout(closeDrawer, 120);
+      });
+    });
+
+    /* ── Active chapter scroll-spy ──────────────────────
+       Deterministic: pick the deepest section whose top
+       has crossed an anchor line ~20% down the viewport. */
+    var sections = Array.prototype.slice.call(
+      document.querySelectorAll('#top, .chapter, #story-end')
+    );
+    var active = null;
+    function setActive(id) {
+      if (active === id) return;
+      active = id;
+      items.forEach(function (it) {
+        if (it.getAttribute('data-target') === id) it.classList.add('is-active');
+        else it.classList.remove('is-active');
+      });
+    }
+    function updateActive() {
+      if (!sections.length) return;
+      var anchor = window.scrollY + window.innerHeight * 0.22;
+      var found = sections[0].id;
+      for (var i = 0; i < sections.length; i++) {
+        if (sections[i].getBoundingClientRect().top + window.scrollY <= anchor) {
+          found = sections[i].id;
+        } else {
+          break;
+        }
+      }
+      /* Near-bottom edge case: if within ~80px of doc end, mark story-end */
+      var h = document.documentElement;
+      if (h.scrollTop + h.clientHeight >= h.scrollHeight - 80) {
+        found = 'story-end';
+      }
+      setActive(found);
+    }
+    updateActive();
+    window.addEventListener('scroll', updateActive, { passive: true });
+    window.addEventListener('resize', updateActive);
+  })();
+</script>
+
+</body>
+</html>
