@@ -2,12 +2,11 @@
 
 ## Next Up
 - [ ] Update series bible: new NPCs (Pell, Thom, Adi), world state (deadlock site), seeds planted — do this before writing Story 03
-- [ ] Write Story 03 chapters from plan (`fiction/stories/story-03/PLAN.md`)
+- [ ] Write Story 03 chapters from revised plan (`fiction/stories/story-03/PLAN.md`)
 - [ ] Cross-device reading test of published fiction reader (iPhone, iPad, desktop)
 - [ ] Social preview images (og:image) for /fiction/ landing and story reader
 - [ ] Review Wave 1 art (20 images in art/*/generated/) — select golden reference set
 - [ ] Lock LoRA preset and run Wave 2: character portraits (Kael, Sera, Aldric, Mira + archetypes)
-- [ ] Optional: another editing pass on Story 02 for voice/pacing/continuity
 
 ## Backlog
 - [ ] Generalize `web/_data/fiction.js` to an array of stories (when Story 03 ships, not before)
