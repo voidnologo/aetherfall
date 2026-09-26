@@ -823,6 +823,18 @@ dl.galvanic-weapons dd em {
   letter-spacing: 0.1em;
 }
 
+/* ── Flowcharts (pre-rendered by scripts/build-pdf.py) ──────────── */
+.print-diagram {
+  margin: 1em auto;
+  text-align: center;
+  break-inside: avoid;
+}
+
+.print-diagram img {
+  max-width: 100%;
+  max-height: 7.5in;
+}
+
 /* ── Prevent Page Breaks Inside Key Elements ──────────────────── */
 .callout,
 .sheet-mock,

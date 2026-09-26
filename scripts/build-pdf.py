@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
 """Build a print-ready PDF of the Aetherfall rulebook from the Eleventy _site output."""
 
+import hashlib
+import html
 import json
+import os
 import re
+import shutil
 import subprocess
 import sys
 from pathlib import Path
@@ -57,6 +61,48 @@ def prefix_ids(content, page_id):
     content = re.sub(r'(id=)"([^"]+)"', replace_id, content)
     # Also fix internal href="#..." links to match
     content = re.sub(r'(href=)"#([^"]+)"', lambda m: f'{m.group(1)}"#{page_id}--{m.group(2)}"', content)
+    return content
+
+
+def render_mermaid(content):
+    """Replace <pre class="mermaid"> blocks with pre-rendered PNGs.
+
+    WeasyPrint doesn't run JavaScript, so without this the PDF prints the raw
+    flowchart source. The web's dark classDef styling is stripped in favour of
+    mermaid's neutral theme, which reads better on paper.
+    """
+    blocks = list(re.finditer(r'<pre class="mermaid">(.*?)</pre>', content, flags=re.DOTALL))
+    if not blocks:
+        return content
+
+    diagram_dir = OUTPUT_DIR / "diagrams"
+    diagram_dir.mkdir(exist_ok=True)
+    browser = shutil.which("chromium") or shutil.which("google-chrome")
+    puppeteer_cfg = diagram_dir / "puppeteer.json"
+    puppeteer_cfg.write_text(json.dumps(
+        {"executablePath": browser, "args": ["--no-sandbox"]} if browser else {"args": ["--no-sandbox"]}
+    ))
+
+    for m in reversed(blocks):
+        source = html.unescape(re.sub(r"<[^>]+>", "", m.group(1)))
+        source = "\n".join(l for l in source.splitlines() if not l.strip().startswith("classDef"))
+        source = re.sub(r":::\w+", "", source)
+        digest = hashlib.sha1(source.encode()).hexdigest()[:12]
+        src_path = diagram_dir / f"{digest}.mmd"
+        png_path = diagram_dir / f"{digest}.png"
+        if not png_path.exists():
+            src_path.write_text(source)
+            result = subprocess.run(
+                ["npx", "-y", "-p", "@mermaid-js/mermaid-cli", "mmdc", "-p", str(puppeteer_cfg),
+                 "-t", "neutral", "-b", "white", "-s", "3", "-i", str(src_path), "-o", str(png_path)],
+                capture_output=True, text=True,
+            )
+            if result.returncode != 0:
+                print(f"  WARNING: mermaid render failed ({digest}); dropping diagram", file=sys.stderr)
+                content = content[:m.start()] + content[m.end():]
+                continue
+        img = f'<figure class="print-diagram"><img src="{png_path}" alt="Flowchart"></figure>'
+        content = content[:m.start()] + img + content[m.end():]
     return content
 
 
@@ -132,6 +178,7 @@ def build_combined_html(pages):
             continue
 
         content = prefix_ids(content, page["id"])
+        content = render_mermaid(content)
         parts.append(f'<section class="chapter" id="chapter-{page["id"]}">')
         parts.append(content)
         parts.append("</section>\n")
@@ -155,8 +202,10 @@ def main():
 
     pdf_path = OUTPUT_DIR / "aetherfall-rulebook.pdf"
     print(f"Generating PDF with WeasyPrint...")
+    # Prefer a system weasyprint; fall back to an ephemeral uvx install
+    weasyprint = ["weasyprint"] if shutil.which("weasyprint") else ["uvx", "--from", "weasyprint", "weasyprint"]
     result = subprocess.run(
-        ["weasyprint", str(combined_path), str(pdf_path)],
+        [*weasyprint, str(combined_path), str(pdf_path)],
         capture_output=True,
         text=True,
     )

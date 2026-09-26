@@ -1,6 +1,6 @@
 ---
 name: session-start
-description: Start or resume a work session by loading context from previous sessions and creating a new session log file. Use when the user says "start a session", "resume work", "pick up where I left off", "new session", "continue from last time", or begins work on the Adventure TTRPG project.
+description: Start or resume a work session by loading context from previous sessions and creating a new session log file. Use when the user says "start a session", "resume work", "pick up where I left off", "new session", "continue from last time", or begins work on the Aetherfall TTRPG project. (Also invoked as /start_session.)
 allowed-tools: Read, Write, Bash, Glob
 ---
 
