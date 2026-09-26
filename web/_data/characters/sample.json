@@ -65,7 +65,7 @@
     { "name": "Sgt. Mara Vane", "affiliation": "Constabulary", "notes": "Friendly law contact" },
     { "name": "Dren Sokolov", "affiliation": "Grey Ledger", "notes": "Fellow operative, demolitions" }
   ],
-  "inventory": "Leather field journal + charcoal pencils\nMagnifying lens (brass, pocket-sized)\nRevolver ammunition (24 rounds)\nLock picks (basic set)\nChemical reagent kit (small vials)\nChalk, string, small mirror\nSociety stipend purse (12 crowns)\nPocket watch (engraved, gift from patron)",
+  "inventory": "Leather field journal + charcoal pencils\nMagnifying lens (brass, pocket-sized)\nRevolver ammunition (24 rounds)\nLock picks (basic set)\nChemical reagent kit (small vials)\nChalk, string, small mirror\nSociety stipend purse (12 marks)\nPocket watch (engraved, gift from patron)",
   "notes": "Carries leather journal with field notes at all times.\nAllergic to cats. Owes favor to the Archivist Guild.\nCurrently investigating missing Thorne prototype (Session 6).\nNeedles says the prototype was last seen in Lowbridge.",
   "xp": { "total": 6, "spent": 0 }
 }

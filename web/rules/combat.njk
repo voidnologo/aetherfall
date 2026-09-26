@@ -50,7 +50,7 @@ permalink: rules/combat.html
     {% example "Why This Matters" %}
       <p>Kael has PC +2. A thug has PC +0. When both need to declare on the same count, the thug
       commits first &mdash; he's pulling a knife. Kael <em>sees this</em> and then decides: draw
-      his sword and meet the charge, or step back and reach for his revolver? The thug is locked
+      his knife and meet the charge, or step back and clear his revolver? The thug is locked
       in. Kael gets to react. That's a significant advantage, and it's a real reason to invest in
       PC and AW at character creation.</p>
     {% endexample %}
@@ -80,9 +80,9 @@ permalink: rules/combat.html
     </ol>
 
     {% example %}
-      <p>Kael swings his longsword at a thug wearing a trench coat (Ballistic 1, Martial 2). He rolls 31 against
-      Melee 66 &mdash; hit. Damage: 1d8+1 = 7. It's a melee attack, so the coat's Martial rating applies &mdash;
-      absorbs 2, leaving 5 damage into the thug's HP. Since 7 exceeded Martial 2, the GM rolls
+      <p>Kael slashes with his hunting knife at a thug wearing a trench coat (Ballistic 1, Martial 2). He rolls 31 against
+      Melee 52 &mdash; hit. Damage: 1d4 = 4. It's a melee attack, so the coat's Martial rating applies &mdash;
+      absorbs 2, leaving 2 damage into the thug's HP. Since 4 exceeded Martial 2, the GM rolls
       for degradation &mdash; 25% chance. Rolls 18. Bad luck &mdash; the coat splits. Its Martial
       rating drops to 1. Next hit, it'll barely help.</p>
     {% endexample %}
@@ -154,10 +154,10 @@ permalink: rules/combat.html
     </p>
 
     {% example %}
-      <p>Kael finishes his swing at count 7. On count 8, Thug B lunges at him with a knife.
+      <p>Kael's shot resolves at count 7. On count 8, Thug B lunges at him with a knife.
       Kael's not mid-action &mdash; he just resolved &mdash; so he can defend. He uses Melee
-      (skill 66) to parry. Kael rolls 41 (margin 25). Thug B rolled 22 against Melee 45
-      (margin 23). Kael's margin wins &mdash; the knife glances off his longsword. But his
+      (skill 52) to parry with his own blade. Kael rolls 27 (margin 25). Thug B rolled 22 against Melee 45
+      (margin 23). Kael's margin wins &mdash; steel scrapes steel and the thrust goes wide. But his
       next action now costs +2 speed. That parry saved him damage but cost him time.</p>
     {% endexample %}
 
@@ -229,7 +229,7 @@ permalink: rules/combat.html
 
     <p>
       Every firearm shot is a two-step process. <strong>First, roll Reliability</strong>
-      &mdash; does the weapon fire at all? <strong>Then roll Ranged</strong> &mdash; does
+      &mdash; does the weapon fire at all? <strong>Then roll Firearms</strong> &mdash; does
       the shot hit? The weapon has to work before your aim matters.
       <strong>Every shot, every time</strong> &mdash; even in clean air.
     </p>
@@ -291,8 +291,9 @@ permalink: rules/combat.html
     </p>
 
     {% scene "The Setup" %}
-      <p><strong>Kael</strong> (swordsman, PC +2, Melee 66, leather coat B0/M2, 9 HP/tier) and
-      <strong>Sera</strong> (wild caster, PC +0, casting target 55, 8 HP/tier) are caught in an
+      <p><strong>Kael</strong> (gunfighter, PC +2, Firearms 66, revolver with the Reliable tag,
+      leather jacket B0/M1, 8 HP/tier) and
+      <strong>Sera</strong> (wild caster, PC +0, casting target 64, 6 HP/tier) are caught in an
       alley by two thugs with revolvers (Firearms 50, Reliability 95, 7 HP/tier, no armor).
       Range: Near. No prior Aetheric accumulation.</p>
     {% endscene %}
@@ -303,7 +304,7 @@ permalink: rules/combat.html
     </p>
 
     <ul>
-      <li><strong>Kael:</strong> draws his sword (speed 2, token at count 2)</li>
+      <li><strong>Kael:</strong> draws his revolver (speed 2, token at count 2)</li>
       <li><strong>Sera:</strong> begins casting Force (casting time 2, token at count 2)</li>
       <li><strong>Thug A:</strong> fires revolver at Kael (speed 3, token at count 3)</li>
       <li><strong>Thug B:</strong> fires revolver at Sera (speed 3, token at count 3)</li>
@@ -311,19 +312,23 @@ permalink: rules/combat.html
 
     <p>
       <strong>Count 2 &mdash; Kael and Sera resolve simultaneously.</strong> Both started at
-      count 0, so they go together. Kael's sword is drawn. He immediately declares a melee
-      attack on Thug A (Medium weapon, speed 5, token at count 7). He's at Near range &mdash;
-      closing the last step to Close is part of the attack.
+      count 0, so they go together. Kael's revolver clears leather.
     </p>
 
     <p>
-      Sera's Force spell fires. She rolls 2d100 (wild caster): a <strong>38</strong> and a
-      <strong>72</strong>. Her target is 55. The 38 is 17 under; the 72 is 17 over. Equal
-      distance &mdash; she takes the 38. Margin 17, that's Standard tier. She could suppress
-      it to Weak (her target of 55 allows 2 tiers of suppression), but Standard Force does
+      Sera's Force spell fires. She rolls 2d100 (wild caster): a <strong>46</strong> and an
+      <strong>82</strong>. Her target is 64. The 46 is 18 under; the 82 is 18 over. Equal
+      distance &mdash; she takes the 46. Margin 18, that's Standard tier. She could suppress
+      it to Weak (her target of 64 allows 2 tiers of suppression), but Standard Force does
       2d6 damage. She keeps it. Targets Thug B. Damage: 2d6 = 8. Sera pays 4 exhaustion.
       Backlash check: 15% chance at Standard for a wild caster. She rolls 67 &mdash; no backlash. The area
       gains <strong>+2 Aetheric accumulation</strong>.
+    </p>
+
+    <p>
+      Both need new actions, so they declare in PC order: Sera (PC +0) first, then Kael (PC +2).
+      Sera begins another Force at Thug A (token at count 4). Kael, seeing that, lines up a shot
+      on Thug A too (speed 3, token at count 5). Better to finish one man than wing two.
     </p>
 
     <p>
@@ -336,122 +341,118 @@ permalink: rules/combat.html
     <ul>
       <li>
         <strong>Thug A shoots Kael:</strong> Reliability check first &mdash; rolls 44 against 91.
-        The revolver fires. Ranged roll: 44 against skill 50. Hit. Damage: 2d6 = 9.
-        That's a firearm &mdash; Kael's leather coat has Ballistic 0. No protection. All 9 damage
-        fills his OK tier (which holds 9). He's standing, but one more scratch drops him to
+        The revolver fires. Firearms roll: 44 against skill 50. Hit. Damage: 2d6 = 7.
+        That's a firearm &mdash; Kael's leather jacket has Ballistic 0. No protection. The 7 damage
+        fills 7 of the 8 boxes in his OK tier. He's standing, but one more scratch drops him to
         Harmed. <em>He really needs a ballistic vest.</em>
       </li>
       <li>
         <strong>Thug B shoots Sera:</strong> Reliability check &mdash; rolls 38 against 91. Fires.
-        Ranged roll: 71 against skill 50. Miss. The bullet sparks off the alley wall.
+        Firearms roll: 71 against skill 50. Miss. The bullet sparks off the alley wall.
       </li>
     </ul>
 
     <p>
-      <strong>Count 3 &mdash; New declarations.</strong> Now declaration order matters. Three
-      characters need to choose: Sera (PC +0), Thug A (PC +0, AW -1), Thug B (PC +0, AW -1).
-      The thugs declare first (tied PC, lower AW). Then Sera. <em>She gets to see what
-      they're committing to before she decides.</em>
+      <strong>Count 3 &mdash; New declarations.</strong> Only the thugs need to choose (tied PC,
+      same AW &mdash; simultaneous). Kael and Sera are already committed.
     </p>
 
     <ul>
       <li><strong>Thug A:</strong> fires again at Kael (speed 3, token at 6)</li>
       <li><strong>Thug B:</strong> took 8 damage. 7 fills his OK tier, 1 overflows to Harmed.
         He's at <strong>-10%</strong>. Fires at Sera anyway (skill now 40, token at 6).</li>
-      <li><strong>Sera:</strong> sees both thugs shooting again. Casts Force a second time
-        (casting time 2, token at count 5).</li>
     </ul>
 
     <p>
-      Note: Kael doesn't declare &mdash; his sword attack is already on the track at count 7.
-    </p>
-
-    <p>
-      <strong>Count 5 &mdash; Sera's second Force.</strong> She rolls 2d100: a <strong>29</strong>
-      and a <strong>84</strong>. The 84 is farther from 55 (29 away vs 26 away). Wild casters
-      take the farther die &mdash; she's stuck with the <strong>84</strong>. That's over her
+      <strong>Count 4 &mdash; Sera's second Force.</strong> She rolls 2d100: a <strong>49</strong>
+      and a <strong>93</strong>. The 93 is farther from 64 (29 away vs 15 away). Wild casters
+      take the farther die &mdash; she's stuck with the <strong>93</strong>. That's over her
       target. <strong>Misfire.</strong> The Force spell rebounds &mdash; Sera pays 2 exhaustion
       and takes 1d6 = 3 damage as invisible force slams her backward into the alley wall.
-      Backlash check at misfire rate: rolls 72 &mdash; no backlash this time, but the magic
-      already bit her. No accumulation &mdash; the spell didn't manifest, just went wrong.
-      Area stays at <strong>+2 Aetheric</strong>.
+      Half her OK tier, gone. Misfires still check for backlash: she rolls 72 &mdash; no backlash
+      this time, but the magic already bit her. No accumulation &mdash; the spell didn't manifest,
+      just went wrong. Area stays at <strong>+2 Aetheric</strong>.
       <em>This is the wild caster's bargain &mdash; access to every spell in your schools,
       but the dice can betray you. And when they do, it hurts.</em>
     </p>
 
     <p>
-      <strong>Count 6 &mdash; Both thugs fire.</strong> Accumulation is still +2. Revolvers
-      are at effective Reliability <strong>91</strong>.
+      Sera declares: she scrambles for the coal bin behind her (Take Cover, speed 2, token at 6).
+    </p>
+
+    <p>
+      <strong>Count 5 &mdash; Kael fires.</strong> Reliability first. The balance is +2, so a plain
+      revolver sits at 91 &mdash; but Kael's has the <strong>Reliable</strong> tag, +5 in magic-touched
+      air: effective <strong>96</strong>. He rolls <strong>93</strong>. A thug's revolver would have
+      clicked on that roll. Kael's fires. Firearms roll: 22 against 66. Hit &mdash; margin 44,
+      nowhere near his crit range. Damage: 2d6 = 7. Thug A has no armor; 7 fills his OK tier
+      exactly. One more hit and he's hurting.
+    </p>
+
+    <p>
+      Kael declares again: another shot at Thug A (speed 3, token at count 8).
+    </p>
+
+    <p>
+      <strong>Count 6 &mdash; Three tokens.</strong> The thugs started their shots at count 3;
+      Sera started her dive at count 4. Whoever started first resolves first &mdash; so the shots
+      land before she reaches cover.
     </p>
 
     <ul>
       <li><strong>Thug A shoots Kael:</strong> Reliability check &mdash; rolls 61 against 91. Fires.
-        Ranged roll: 61 against 50. Miss.</li>
+        Firearms roll: 61 against 50. Miss.</li>
       <li><strong>Thug B shoots Sera:</strong> Reliability check &mdash; rolls 55 against 91. Fires.
-        Ranged roll: 55 against 40 (wound penalty). Miss.</li>
+        Firearms roll: 55 against 40 (wound penalty). Miss.</li>
+      <li><strong>Sera</strong> reaches the coal bin. Partial cover: &minus;10% to anyone shooting at her.</li>
     </ul>
 
     <p>
-      <strong>Count 7 &mdash; Kael's sword connects.</strong> Rolls 22 against Melee 66. Hit &mdash;
-      margin 44. Crit range is 2 (skill 66 is in the 51-75 bracket, crits on 64-66). Rolled 22,
-      not a crit. Damage: 1d8+1 = 7. Thug A has no armor and has taken no damage yet &mdash;
-      Kael's 7 fills 7 of his 9 OK boxes. He's standing but hurting.
-    </p>
-
-    <p>
-      <strong>After count 7:</strong> Thug A is wounded but still in OK. Thug B is in Harmed
-      from Sera's first spell. Sera took 3 damage from her own misfire and paid 2 exhaustion
-      for nothing &mdash; the accumulation hasn't climbed because the spell never manifested.
-      The revolvers are still at effective Reliability <strong>91</strong>, not the 87 they'd
-      be at if both spells had landed.
-      <em>Sera needs her next cast to connect &mdash; and she's already hurt.</em>
-    </p>
-
-    <p>
-      <strong>Count 7 &mdash; Thug B gets desperate.</strong> He's Harmed, his revolver is
-      getting twitchy, and there's a wild caster throwing bolts of force down the alley. He
-      reaches into his coat and pulls out a small brass device covered in coiled wire &mdash;
-      a <strong>Galvanic force generator</strong>. He flips the switch. The air hums. The
+      <strong>Count 6 &mdash; Thug B gets desperate.</strong> He's Harmed, his partner is taking
+      fire, and there's a wild caster throwing bolts of force down the alley. He reaches into his
+      coat and pulls out a small brass device covered in coiled wire &mdash; a
+      <strong>Galvanic force generator</strong>. He flips the switch. The air hums. The
       streetlights flicker.
     </p>
 
     <p>
       The generator is a sustained Galvanic device. Every <strong>3 counts</strong>, it produces
       <strong>&minus;2 Galvanic shift</strong>, pulling the balance back toward neutral. It
-      activated at count 7 &mdash; its first pulse hits at count 10.
+      comes up at count 7 &mdash; its first pulse hits at count 10.
     </p>
 
     <p>
       <strong>Count 10 &mdash; The generator pulses.</strong> The balance was +2 Aetheric.
       The generator pulls it to <strong>0</strong>. Neutral. The revolvers are back to full
       Reliability <strong>95</strong>. Sera's casting target is back to her base
-      <strong>55</strong>. One pulse and the advantage from her first spell is gone.
+      <strong>64</strong>. One pulse and the advantage from her first spell is gone.
     </p>
 
     <p>
       <strong>Count 13 &mdash; Another pulse.</strong> Balance drops to <strong>&minus;2
-      Galvanic</strong>. Now the Engine is winning. The revolvers are at effective Reliability
-      95 + 4 = <strong>99</strong> &mdash; nearly impossible to jam. Sera's casting target
-      drops to 55 &minus; 4 = <strong>51</strong>. Her spells are harder to land and her
+      Galvanic</strong>. Now the Engine is winning. Every revolver in the alley is at effective
+      Reliability 95 + 4 = <strong>99</strong> &mdash; nearly impossible to jam. Sera's casting target
+      drops to 64 &minus; 4 = <strong>60</strong>. Her spells are harder to land and her
       wild dice just got crueler. If the generator keeps running, count 16 pushes to &minus;4:
-      Reliability <strong>103</strong> (cannot malfunction), casting target <strong>47</strong>.
+      Reliability <strong>103</strong> (cannot malfunction), casting target <strong>56</strong>.
       The Veil is being smothered.
     </p>
 
     <p>
-      Kael eyes the humming device on Thug B's belt. <em>If he can close the distance and
-      smash it, the balance swings back to neutral. If he can't, the thugs' guns are about to
-      become perfect &mdash; and Sera's magic is about to become useless.</em>
+      Kael eyes the humming device on Thug B's belt. <em>Here's the twist: it's helping him.
+      His revolver has never been more certain. But every pulse chokes Sera a little more. Shoot
+      the man, or put a bullet through the brass and give her back the air?</em>
     </p>
 
     {% gmnote "What Just Happened" %}
-      <p>Seven counts of combat, then the battlefield flipped. The thugs went from losing
+      <p>Six counts of combat, then the battlefield flipped. The thugs went from losing
       the environmental war to winning it &mdash; not with better aim, but with a piece of
       Galvanic hardware. The generator didn't fire a shot. It just changed the rules of the
       fight.</p>
       <p>This is the tug-of-war in action. Sera's spells push the balance Aetheric, making guns
       worse and magic better. The generator pushes it Galvanic, making guns better and magic
-      worse. Kael's sword doesn't care either way. Every participant is pulling the environment
-      in a different direction &mdash; and the smart play isn't always "hit harder." Sometimes
-      it's "destroy the thing that's changing the air."</p>
+      worse. Kael's hunting knife doesn't care either way &mdash; but his revolver does, and this
+      time the Engine is on his side while it's strangling his partner. The smart play isn't
+      always "hit harder." Sometimes it's "destroy the thing that's changing the air," even when
+      the thing is helping you.</p>
     {% endgmnote %}

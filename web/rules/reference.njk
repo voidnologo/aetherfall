@@ -168,7 +168,7 @@ extraFoot: |
           <li>Roll <span class="ref-formula">d100 &le; target</span> = success</li>
           <li><strong>01</strong> = always a critical success</li>
           <li><strong>00</strong> = always a fumble</li>
-          <li>Crit range: 1 point per 25% of target, counted down from 01</li>
+          <li>Crit range: 1 point per 25% of target, counted down from your target</li>
           <li><strong>Opposed:</strong> both roll, larger margin wins; one success beats one failure</li>
         </ul>
       </div>
@@ -405,7 +405,7 @@ flowchart TD
         <ul>
           <li>If damage exceeds soak: 25% chance of degradation (&minus;1 soak)</li>
           <li><strong>Crushing</strong> tag: 50% degradation chance</li>
-          <li><strong>Hinder:</strong> &minus;5%/pt to PC, Athletics, Stealth, Swimming; +1 cast speed/pt</li>
+          <li><strong>Hinder:</strong> &minus;5%/pt to PC-based rolls and Athletics; +1 cast speed/pt</li>
         </ul>
       </div>
 
@@ -428,13 +428,13 @@ flowchart TD
       <div class="ref-card full-width">
         <h3>Malfunction</h3>
         <ul>
-          <li><strong>Always</strong> roll Reliability first (<span class="ref-formula">d100 roll-under</span>), then roll Ranged to hit</li>
+          <li><strong>Always</strong> roll Reliability first (<span class="ref-formula">d100 roll-under</span>), then roll Firearms to hit</li>
           <li><span class="ref-formula">Eff. Reliability = Base &minus; (net balance &times; 2)</span></li>
         </ul>
         <table>
           <tr><th>d10</th><th>Severity</th><th>Effect</th></tr>
           <tr><td>1&ndash;5</td><td>Click</td><td>Weapon doesn&rsquo;t fire, lose action</td></tr>
-          <tr><td>6&ndash;7</td><td>Jam</td><td>Weapon jammed, must clear (speed 3)</td></tr>
+          <tr><td>6&ndash;7</td><td>Jam</td><td>Weapon jammed, must clear (weapon's reload time)</td></tr>
           <tr><td>8</td><td>Misfire</td><td>Round fires wildly, random direction</td></tr>
           <tr><td>9</td><td>Mechanical Failure</td><td>Weapon needs repair, unusable</td></tr>
           <tr><td>10</td><td>Catastrophic</td><td>Weapon destroyed, 1d6 damage to wielder</td></tr>

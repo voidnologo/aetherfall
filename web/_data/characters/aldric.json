@@ -5,7 +5,7 @@
   "player": "",
   "archetype": "The Surgeon",
   "station": 2,
-  "description": "Tall, thin, early forties. Wire-rimmed spectacles, receding hairline, ink-stained fingers. Precise posture from too long in lecture halls. Smells of reagents and old paper. His spellbook is never more than arm's reach away.",
+  "description": "Tall, gaunt, thirty-four, with a scholar's stoop. Light brown skin, close-cropped dark hair, round spectacles he never stops adjusting, ink-stained fingers. Precise posture from too long in lecture halls. Smells of reagents and old paper. His spellbook is never more than arm's reach away.",
   "attrs": {
     "BR": { "val": -1, "desc": "Thin build" },
     "PC": { "val": 0, "desc": "Steady hands" },
@@ -41,14 +41,14 @@
   "path": "scholarly",
   "wildSchools": [],
   "spells": [
-    { "name": "Mend", "school": "Vitae", "cast": "3ct", "w": 4, "s": 8, "st": 12, "sp": 18 },
+    { "name": "Mend", "school": "Vivimancy", "cast": "5ct", "w": 4, "s": 8, "st": 12, "sp": 18 },
     { "name": "Reveal", "school": "Divination", "cast": "4ct", "w": 3, "s": 6, "st": 9, "sp": 14 },
     { "name": "Detect", "school": "Divination", "cast": "2ct", "w": 2, "s": 4, "st": 6, "sp": 10 },
     { "name": "Shield", "school": "Warding", "cast": "3ct", "w": 3, "s": 6, "st": 9, "sp": 14 },
     { "name": "Force", "school": "Aeth. Manip", "cast": "2ct", "w": 2, "s": 4, "st": 6, "sp": 10 },
     { "name": "Anchor", "school": "Warding", "cast": "3ct", "w": 3, "s": 6, "st": 9, "sp": 14 },
     { "name": "Kinesis", "school": "Aeth. Manip", "cast": "4ct", "w": 3, "s": 6, "st": 9, "sp": 14 },
-    { "name": "Reshape", "school": "Artifice", "cast": "4ct", "w": 3, "s": 6, "st": 9, "sp": 14 }
+    { "name": "Reshape", "school": "Transmutation", "cast": "5ct", "w": 3, "s": 6, "st": 9, "sp": 14 }
   ],
   "society": {
     "name": "The Ashwick Charter",

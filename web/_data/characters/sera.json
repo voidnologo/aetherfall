@@ -5,7 +5,7 @@
   "player": "",
   "archetype": "The Spark",
   "station": 2,
-  "description": "Wiry, late twenties, sharp cheekbones. Dark eyes that catch light wrong sometimes. Ink-stained fingers, frayed coat cuffs. Carries a brass compass that hasn't pointed north since the Tear. Small objects near her drift when she concentrates.",
+  "description": "Slight and wiry, twenty-three, pale and sharp-featured. Jagged black hair she cuts herself. Dark eyes ringed with a pale blue-white that wasn't there a year ago. Layers of too-big clothes, frayed coat cuffs. Wears a brass compass on a cord that spins in Aetheric zones. Small objects near her drift when she concentrates.",
   "attrs": {
     "BR": { "val": -1, "desc": "Slight build" },
     "PC": { "val": 0, "desc": "Average reflexes" },
@@ -32,20 +32,20 @@
     { "name": "Empathy", "stat": "AW", "level": 1, "target": 40 }
   ],
   "weapons": [
-    { "name": "Belt Knife", "skill": "Melee", "spd": "2", "dmg": "1d4+1", "cap": "", "rld": "", "rel": "", "tags": "Concealable" }
+    { "name": "Belt Knife", "skill": "Melee", "spd": "2", "dmg": "1d4", "cap": "", "rld": "", "rel": "", "tags": "Concealable" }
   ],
   "armor": [
     { "name": "Reinforced Coat", "ballistic": 1, "martial": 1, "hinder": 0, "notes": "Heavy canvas w/ steel stays" }
   ],
   "path": "wild",
-  "wildSchools": ["Aeth. Manipulation", "Artifice"],
+  "wildSchools": ["Aeth. Manipulation", "Transmutation"],
   "spells": [
     { "name": "Force", "school": "Aeth. Manip", "cast": "2ct", "w": 2, "s": 4, "st": 6, "sp": 10 },
     { "name": "Amplify", "school": "Aeth. Manip", "cast": "2ct", "w": 2, "s": 4, "st": 6, "sp": 10 },
     { "name": "Barrier", "school": "Aeth. Manip", "cast": "4ct", "w": 3, "s": 6, "st": 9, "sp": 14 },
     { "name": "Kinesis", "school": "Aeth. Manip", "cast": "4ct", "w": 3, "s": 6, "st": 9, "sp": 14 },
-    { "name": "Reshape", "school": "Artifice", "cast": "4ct", "w": 3, "s": 6, "st": 9, "sp": 14 },
-    { "name": "Enchant", "school": "Artifice", "cast": "6ct", "w": 4, "s": 8, "st": 12, "sp": 18 }
+    { "name": "Reshape", "school": "Transmutation", "cast": "5ct", "w": 3, "s": 6, "st": 9, "sp": 14 },
+    { "name": "Alter Property", "school": "Transmutation", "cast": "5ct", "w": 3, "s": 6, "st": 9, "sp": 14 }
   ],
   "society": {
     "name": "The Ashwick Charter",
@@ -64,6 +64,6 @@
     { "name": "Moth", "affiliation": "Underworld", "notes": "Courier, no questions asked" }
   ],
   "inventory": "Belt knife (hip sheath)\nJournal (leather, half-filled with sketches)\nChalk (6 sticks, various colors)\nBrass compass (spins in Aetheric zones -- talisman)\nCandles (4, beeswax)\nDried rations (3 days)\nWater flask\nSociety stipend purse (50 marks)",
-  "notes": "Felt the Aether since childhood. No formal training.\nHer compass hasn't pointed north since the Tear.\nGets migraines in deep Galvanic zones. Hides it.\nHums when she's concentrating. Doesn't realize she does it.\nObjects near her drift when she's stressed or angry.",
+  "notes": "Felt the Aether since childhood. No formal training.\nHer compass hasn't pointed true since she was a girl -- it spins toward the Aether.\nGets migraines in deep Galvanic zones. Hides it.\nHums when she's concentrating. Doesn't realize she does it.\nObjects near her drift when she's stressed or angry.",
   "xp": { "total": 0, "spent": 0 }
 }
