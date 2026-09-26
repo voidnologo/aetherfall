@@ -37,21 +37,21 @@ permalink: rules/rolling.html
     </p>
 
     <p>
-      Beyond those extremes, your critical range depends on how good you are. For every 25%
-      of your target number, you get 1 additional point of critical range, counted <em>down</em>
-      from your target:
+      Beyond those extremes, your critical range depends on how good you are. Rolling your
+      target number exactly is always a critical. For every 25 points of target beyond the
+      first bracket, you crit on one more number, counted <em>down</em> from your target:
     </p>
 
     <table>
       <tr><th>Target Number</th><th>Crit Range</th><th>Crit On</th></tr>
-      <tr><td>1&ndash;25</td><td>0</td><td>01 only</td></tr>
-      <tr><td>26&ndash;50</td><td>1</td><td>Target value only</td></tr>
-      <tr><td>51&ndash;75</td><td>2</td><td>Target and target&minus;1</td></tr>
-      <tr><td>76&ndash;99</td><td>3</td><td>Target, target&minus;1, target&minus;2</td></tr>
+      <tr><td>1&ndash;25</td><td>1</td><td>Target only</td></tr>
+      <tr><td>26&ndash;50</td><td>2</td><td>Target and target&minus;1</td></tr>
+      <tr><td>51&ndash;75</td><td>3</td><td>Target down to target&minus;2</td></tr>
+      <tr><td>76&ndash;99</td><td>4</td><td>Target down to target&minus;3</td></tr>
     </table>
 
     {% example "Example" %}
-      <p>Kael's Firearms target is 66. That falls in the 51&ndash;75 bracket, so his crit range is 2.
+      <p>Kael's Firearms target is 66. That falls in the 51&ndash;75 bracket, so his crit range is 3.
       He crits on a roll of <strong>64, 65, or 66</strong>. When you're good at something, the
       sweet spot at the top of your range becomes a critical &mdash; not just a success, but
       a devastating one.</p>

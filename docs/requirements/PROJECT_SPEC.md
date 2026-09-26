@@ -106,7 +106,7 @@ See [WORLD_DESIGN.md §4-5](WORLD_DESIGN.md) for full design.
 
 - **00 (double zeros):** Always a critical miss.
 - **01:** Always a critical hit.
-- **Critical range:** For every 25% of your skill rating, you gain 1 point of crit range at the top end. (0-25: 0 crit range; 26-50: 1; 51-75: 2; 76-99: 3). Crits are counted down from your skill value. *Example: Skill 59 = crit range 2, so rolls of 57-59 are critical successes.*
+- **Critical range:** For every 25% of your skill rating, you gain 1 point of crit range at the top end. (0-25: target only; 26-50: 2 numbers; 51-75: 3; 76-99: 4 — locked Session 34). Crits are counted down from your skill value. *Example: Skill 59 = crit range 3, so rolls of 57-59 are critical successes.*
 - **Critical hits:** Double damage on attacks. Spectacular success on skill checks with a narrative bonus.
 
 ### 3.1b Opposed Checks

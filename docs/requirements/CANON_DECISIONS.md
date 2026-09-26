@@ -37,12 +37,31 @@ The six schools are **Aetheric Manipulation, Vivimancy, Warding, Divination, Tra
 
 Firearms (PC) governs every gun, conventional and Galvanic. Ranged (PC) is bows, crossbows, and thrown weapons.
 
+## 5. Critical range
+
+Rolling your exact target number is always a critical. Each 25-point bracket above the first adds one more number, counted down from the target:
+
+| Target | Crits on |
+|---|---|
+| 1–25 | Target only |
+| 26–50 | Target, target−1 |
+| 51–75 | Target down to target−2 (e.g. 66 → 64, 65, 66) |
+| 76–99 | Target down to target−3 |
+
+01 is always a critical and 00 always a fumble, regardless of target.
+
+## 6. No rounds
+
+The game has no rounds. Legacy "round" durations convert at **1 round = 3 counts** ("1d4 rounds" → "1d4 × 3 counts").
+
+## 7. Pregens
+
+- **Sera's wild schools:** Aetheric Manipulation + **Transmutation**.
+- **The pregen Society is "The Ashwick Charter"** (Fixers, Greycoat patron): a generic starter Society for new players. The fiction's Ash & Veil Recovery is separate.
+
 ---
 
 ## Pending (user decision needed)
 
-- Crit range: does "range N" mean N numbers (target, target−1) or N+1 numbers?
-- Durations written in "rounds": conversion to timing-track counts.
-- Sera's second wild-casting school (Transmutation suggested — fits Reshape).
-- Society name/patron on the pregen sheets (Ashwick Charter / Greycoat vs Ash & Veil / Covenant).
-- Renames for name collisions (Aldric Voss, Elara Voss).
+- Renames for name collisions (Aldric Voss, Elara Voss, "Thornfeld", two thin-cigar smokers).
+- Quick Reload rounding (web: round down; FIREARMS doc: round up).

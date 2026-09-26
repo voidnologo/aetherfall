@@ -13,16 +13,16 @@ Quick reference for core rules. For combat, see COMBAT_PROCEDURE.md. For full ma
 
 - **01:** Always a critical success.
 - **00 (double zeros):** Always a critical failure.
-- **Critical range:** 1 point per 25% of your target number, counted down from target.
+- **Critical range:** rolling your exact target is a crit; +1 number per 25-point bracket above the first, counted down from target (locked Session 34).
 
 | Target Number | Crit Range | Crit On |
 |---------------|------------|---------|
-| 1-25 | 0 | 01 only |
-| 26-50 | 1 | Target value only |
-| 51-75 | 2 | Target and target-1 |
-| 76-99 | 3 | Target, target-1, target-2 |
+| 1-25 | 1 | Target only |
+| 26-50 | 2 | Target and target-1 |
+| 51-75 | 3 | Target down to target-2 |
+| 76-99 | 4 | Target down to target-3 |
 
-*Example: Skill target 65 → crit range 2 → crits on 63, 64, 65.*
+*Example: Skill target 65 → crit range 3 → crits on 63, 64, 65.*
 
 ---
 
@@ -261,7 +261,7 @@ Net Aetheric hurts firearms AND helps magic. Net Galvanic hurts magic AND helps 
 ```
 THE ROLL: d100 ≤ target = success
   01 = always crit │ 00 = always fumble
-  Crit range: 1pt per 25% of target, counted down from target
+  Crit range: 1/2/3/4 numbers by 25-pt bracket, counted down from target
 
 OPPOSED: both roll, larger margin wins │ one success beats one fail
 
