@@ -37,7 +37,7 @@ The stories showcase different facets of the Aetherfall world: urban investigati
 - The mill interior: industrial bones completely replaced with pale seamless material, luminous veins, warm surfaces, corridors that shift. Both Aetheric and Engine-like properties in the same substance
 - Kael's forearm cut when a wall settles mid-marking; Aldric's Mend comes in too eager
 - The container visible but unreachable -- spatial defenses loop any approach back to the corridor
-- A structural shift traps them; Sera casts Anchor to stabilize the atrium; Kael leads the retreat through rearranging corridors
+- A structural shift traps them; Aldric casts Anchor to stabilize the atrium; Kael leads the retreat through rearranging corridors
 - Sera's first Force cast that hurts someone badly -- visible emotional cost
 - Running fight with Ironwork in the Wilds: zone shifts mid-combat, guns and magic flickering in and out; they escape using Wilds navigation, not combat victory
 - Pell reveals the mill was her grandfather's -- family ties to the site; Sootborn hostility shifts to grim understanding
@@ -46,9 +46,9 @@ The stories showcase different facets of the Aetherfall world: urban investigati
 
 **Outcome:** Site confirmed but artifact inaccessible. Ironwork Solutions revealed as willing to use lethal force outside city limits. The Collective knows about the site. The Margin knows the site is real. Deadlock: everyone wants what's inside the mill and nobody can get it.
 
-### Story 3: "The Lamplighter's Price" (Planned)
+### Story 3: "The Lamplighter's Price"
 
-**Status:** Plan complete. Not yet written.
+**Status:** Complete. Published at `/fiction/the-lamplighters-price.html`. Outcomes not yet folded into the trackers below (pending task).
 **Premise:** Corrigan Fels blackmails the Society into retrieving lost Syndicate cargo from the deep tunnels beneath the Ashworth Foundry. What they find -- the same transformative agency from the mill, operating beneath a Galvanic factory -- reframes the world's central mystery. Thematic focus: magic as lived experience (wild casting vs. scholarly casting showcased through Sera and Aldric).
 
 ---
@@ -142,8 +142,8 @@ These are seeds, not outlines. Each should be developed into a full premise when
 | Character | Physical Status | Magical Status | Personal Arc | Notable Changes |
 |---|---|---|---|---|
 | Kael Dunn | Healthy (forearm cut healed by Aldric) | N/A | Agency arc: stood with the team through lethal danger; knife-and-revolver identity tested by zones where his gun fails | Blood on the knife that isn't his. Forearm scar from the mill wall. |
-| Sera Voss | Healthy | Blue-white ring around irises (permanent after Story 02); eyes glow under Aetheric stress; first Force cast that hurt someone badly | Control arc: power amplified in the Wilds, navigating by Aetheric feel, accumulation accelerating faster than documented cases | First visible accumulation marker now permanent baseline. Cast Anchor to save the team in the mill. |
-| Aldric Wynn | Healthy | Normal capability; spells come in too eager/hot in strong Aetheric zones | Knowledge vs. action: documented the mill's impossible dual-resonance material; recognized Sera's accumulation but hasn't told her the full picture | Three-heading analysis: Shell, Interior, Material. Noticed the container challenges every existing theory. |
+| Sera Voss | Healthy | Blue-white ring around irises (permanent after Story 02); eyes glow under Aetheric stress; first Force cast that hurt someone badly | Control arc: power amplified in the Wilds, navigating by Aetheric feel, accumulation accelerating faster than documented cases | First visible accumulation marker now permanent baseline. |
+| Aldric Wynn | Healthy | Normal capability; spells come in too eager/hot in strong Aetheric zones | Knowledge vs. action: documented the mill's impossible dual-resonance material; recognized Sera's accumulation but hasn't told her the full picture | Cast Anchor to hold the mill's atrium still for the retreat. Three-heading analysis: Shell, Interior, Material. Noticed the container challenges every existing theory. |
 | Mira Cade | Healthy | N/A | Trust arc: filtered information from Thessaly's briefing; gave Dace the story without the meaning; managing what the team knows vs. what she knows | First patron job completed. Reputation growing. Information management becoming a pattern. |
 
 ## Society Status

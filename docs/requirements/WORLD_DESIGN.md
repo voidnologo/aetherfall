@@ -40,7 +40,7 @@ When this document describes geography, it uses archetypes: "a heartland turned 
 
 ### 1.3 Within Living Memory
 
-All history in this setting is shallow — 40 to 60 years deep. The Veil thinned within the lifetime of the oldest living generation. There are no ancient empires, no creation myths relevant to play, no deep history to memorize.
+All history in this setting is shallow — 50 years deep (locked in CANON_DECISIONS.md). The Veil thinned within the lifetime of the oldest living generation. There are no ancient empires, no creation myths relevant to play, no deep history to memorize.
 
 This constraint is load-bearing:
 - **The generation gap IS the history.** Elders remember a world without magic. The young have never known anything else. This tension is present in every family, every institution, every faction.
@@ -360,7 +360,7 @@ Each faction is sketched at local/regional scale: a district, a territory, a com
 - The Communion's enhanced crops are appearing in markets far from Thornfield — someone is trading with them at scale, and the Communion says they don't know who. The supply chain leads somewhere unexpected.
 - A government remnant has classified the Communion as a hostile enclave and is assembling resources to dismantle it. The Communion is preparing to defend. A Society caught between them has to decide whose side they're on — or find a third option.
 
-**Sample NPC:** **Mother Thorn (Essara Dain)** — Founder and spiritual leader. Mid-fifties, was a schoolteacher before the Tear. Discovered she could cast when the Wild rolled over her town. Walked into the Reclaimed Wild and didn't come back for a year. When she did, she had followers. She is sincere, warm, terrifying when angry, and genuinely uncertain about the voice she hears — but she will never admit that uncertainty to anyone.
+**Sample NPC:** **Mother Thorn (Essara Dain)** — Founder and spiritual leader. Mid-seventies, was a schoolteacher before the Tear. Discovered she could cast when the Wild rolled over her town. Walked into the Reclaimed Wild and didn't come back for a year. When she did, she had followers. She is sincere, warm, terrifying when angry, and genuinely uncertain about the voice she hears — but she will never admit that uncertainty to anyone.
 
 ### 5.5 The Greycoat Authority
 
@@ -379,7 +379,7 @@ Each faction is sketched at local/regional scale: a district, a territory, a com
 - The Authority has commissioned a Society to establish a postal route through contested territory. Simple on paper. The route crosses three faction borders and a gradient zone. Nothing about it will be simple.
 - A Greycoat judge has been assassinated. Every faction in the city had motive. The Authority wants answers, and they want them before the fragile peace falls apart.
 
-**Sample NPC:** **Commissioner Hale Dupont** — Head of the Greycoat Authority. Sixty years old, exhausted, idealistic in a beaten-down way. Genuinely believes in civic duty. Is aware that the deals keeping the Authority afloat are corroding the institution from within, but sees no alternative. Will make the wrong deal to keep the peace, and lose sleep over it.
+**Sample NPC:** **Commissioner Hale Dupont** — Head of the Greycoat Authority. Seventy-two years old, exhausted, idealistic in a beaten-down way. Genuinely believes in civic duty. Is aware that the deals keeping the Authority afloat are corroding the institution from within, but sees no alternative. Will make the wrong deal to keep the peace, and lose sleep over it.
 
 ### 5.6 The Gradient Scholars
 
@@ -398,7 +398,7 @@ Each faction is sketched at local/regional scale: a district, a territory, a com
 - A stolen artifact from the Scholars' collection has surfaced on the black market. It's not valuable for what it is — it's valuable for what it *does*, and what it does is destabilize zone boundaries. Multiple factions want it.
 - A young Scholar has published a paper claiming to have proven the Exploitation Theory — that someone *built* the Engine deliberately. The paper is causing a political firestorm, and the author has started receiving threats. Are they right?
 
-**Sample NPC:** **Dr. Isavel Crane** — Director of field research. Fifties, sharp, impatient with politics, fascinated by everything else. Lost her university in the Tear and rebuilt her career from scratch. She authorized the Deep Wild expedition and has been sleepless since the final report came in. She will do almost anything to get her people back — but "almost" is doing a lot of work in that sentence.
+**Sample NPC:** **Dr. Isavel Crane** — Director of field research. Fifties, sharp, impatient with politics, fascinated by everything else. Came up through the Scholars when they were still a handful of refugees from universities the Tear had shuttered, and helped rebuild the discipline from scratch. She authorized the Deep Wild expedition and has been sleepless since the final report came in. She will do almost anything to get her people back — but "almost" is doing a lot of work in that sentence.
 
 ### 5.7 The Sootborn
 
@@ -645,7 +645,7 @@ These are drafts — not final web chapter text, but demonstrations of the targe
 
 **The Handler — on the Tear:**
 
-> Forty years ago, give or take, the world broke. Your grandparents remember it — ask them sometime, if they'll talk about it. The Veil thinned and the Aether came through like a dam bursting. Whole regions went Wild overnight. Cities split down the middle. People who'd never felt anything stranger than a cold draft suddenly found out they could set things on fire with their minds. The governments panicked. The armies panicked. The churches panicked. Everyone panicked.
+> Fifty years ago, give or take, the world broke. Your grandparents remember it — ask them sometime, if they'll talk about it. The Veil thinned and the Aether came through like a dam bursting. Whole regions went Wild overnight. Cities split down the middle. People who'd never felt anything stranger than a cold draft suddenly found out they could set things on fire with their minds. The governments panicked. The armies panicked. The churches panicked. Everyone panicked.
 >
 > Then, a few years later, the Engine showed up — or woke up, or got built, depending on whose pamphlet you're reading — and things got complicated instead of just terrifying. Now we've got two forces pulling at each other and everyone caught between. That's where you come in. Your Society exists because the world needs people who can walk into the mess and come out the other side with answers. Or at least with everyone still breathing.
 
