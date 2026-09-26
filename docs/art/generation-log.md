@@ -115,3 +115,22 @@ Intricate decorative detail within and around the letter: fine crosshatching, st
 
 Rendered in high contrast monochrome — pure black on white background. Detailed pen and ink illustration quality with the ornamental precision of Aubrey Beardsley. The letter fills most of the frame. Square composition, centered. Every detail rewards close inspection. Traditional illustration technique, hand-drawn quality with steel nib dip pen.
 ```
+
+---
+
+## Session 34 — Style Direction Prototypes, Round 1 (2026-09-26)
+
+Runner: `tools/prototype_styles.py`. Full per-image parameters and prompts are in `docs/art/prototype-runs.jsonl`.
+Model flux1-dev fp8, 30 steps, guidance 3.5, euler/normal. Shared seeds per subject across directions.
+
+| Direction | LoRAs | Notes |
+|---|---|---|
+| A — Engraver's Folio | engraving 0.7 + crosshatch 0.5 | Clean line, strong frames; duality weak in scenes (no crystals, lamps read as gas) |
+| B — Two Inks | engraving 0.45 | Best-looking frames; colour discipline ~50% (amber magic in one spot, red brick/yellow sky leaks) |
+| D — Deco Lithograph | none | Strongest immediate read; printed "KAEL DUNN" title on one portrait |
+
+Subjects: header (1664×448), frame (832×1216), spot (1024²), portrait (832×1216). Two seeds each, plus one B spot test (seed 424242). 25 images total, all in `art/*/generated/proto-*`.
+
+**Cross-direction issues:** Kael came out white in all six portraits despite "brown skin" (Flux bias; round 2 needs a stronger prompt and reference conditioning). Revolver misfire ignored in spots. Fake signatures in A and B.
+
+**Status:** all pending review. Comparison page: https://claude.ai/artifact/KLMQwvngArrLWZpTzRGHhL

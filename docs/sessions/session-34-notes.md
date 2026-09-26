@@ -21,6 +21,12 @@ First session on Opus 5.5. Started with a full consistency read of the design do
 
 ---
 
+### Rulebook fixes (approved)
+Kael Dunn made canonical across all rules examples (creating chapter rebuilt; alley combat example rewritten); timeline fixes; ~100 mechanical fixes across 14 chapters + quickstart + pregens; crit range locked (66 → 64–66); rounds → counts (1 round = 3 counts). Details in the review's Resolution Status and `docs/requirements/CANON_DECISIONS.md`.
+
+### Art prototypes, round 1
+24 images (A/B/D × header/frame/spot/portrait × 2 shared seeds) via `tools/prototype_styles.py`. Comparison page: https://claude.ai/artifact/KLMQwvngArrLWZpTzRGHhL. The runner was killed mid-batch by Claude Code's low-memory reaper; ComfyUI finished the queue and the outputs were collected via the history API.
+
 ## Files Modified
 
 | File | Change |
@@ -40,3 +46,8 @@ First session on Opus 5.5. Started with a full consistency read of the design do
 - Canon decisions pending: which Kael, the Tear timeline, school names (Vitae/Artifice), Society identity on pregens, character appearances.
 
 ## Next Session
+
+- User picks a direction (or a hybrid) from the round 1 page
+- Round 2: fix skin-tone bias for Kael (stronger prompt, IP-Adapter/reference), enforce the two-ink palette (post-process hue mask), drop signatures
+- Replace the third-party character-sheet watermark with original art
+- Name-collision renames; Quick Reload rounding decision
