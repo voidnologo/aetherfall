@@ -21,25 +21,16 @@ Do not generate from memory or assumption. The documents are the source of truth
 
 ## Rule 2: Style Discipline
 
-**Hard rules:**
-- **Pure black and white only** — no grey tones, no color, no sepia. If the
-  generated output has grey values, it must go through the threshold
-  post-processing pipeline before evaluation
-- **Crosshatching for all shadow/volume** — not smooth gradients, not screentone
-- **Consistent line weight** — thick outlines (silhouette), medium lines
-  (structure), fine lines (detail and hatching). This hierarchy must be
-  maintained across all pieces
-- **Crosshatch density consistency** — similar shadow depth should use similar
-  hatching density across pieces. Establish density benchmarks from the
-  golden reference set
-- **Art Nouveau/Deco decorative vocabulary** — all ornamental elements must
-  draw from period-appropriate visual language, not generic fantasy decoration
-- **1920s period accuracy** — clothing, technology, architecture must be
-  era-appropriate unless a specific setting reason overrides
+> Updated Session 34: the locked direction is **D — Deco Lithograph** (see `style-guide.md`).
 
-**Verification:** After post-processing to pure B&W, compare line weight and
-hatching density against the golden reference set. If the piece looks
-noticeably lighter, heavier, or differently styled, regenerate or adjust.
+**Hard rules:**
+- **Lithograph palette only.** Midnight, bone, soot, Aether cyan, Galvanic amber, oxblood. Palette-snap in post if generation drifts.
+- **Cyan means the Aether; amber means the Engine.** Never swap them, and never use them as generic decoration.
+- **Flat shapes.** No airbrush gradients, photographic lighting, or 3D rendering.
+- **No text in images.** Crop or inpaint any lettering or signatures; never put character names in prompts.
+- **1920s-analog period accuracy.** Clothing, technology, and architecture must be era-appropriate unless a specific setting reason overrides.
+
+**Verification:** Compare each piece against the approved golden set (to be chosen from round 2) for palette, value structure, and level of simplification.
 
 ---
 
@@ -48,8 +39,8 @@ noticeably lighter, heavier, or differently styled, regenerate or adjust.
 Every accepted piece must pass ALL of these checks:
 
 - [ ] Linework quality — clear, confident pen strokes visible throughout
-- [ ] Crosshatching present — shadow and volume built from hatching, not gradients
-- [ ] Pure B&W — no grey tones survive post-processing (verify at 200% zoom)
+- [ ] Lithograph palette only; cyan = Aether, amber = Engine
+- [ ] Flat shapes, crisp edges, no airbrush or 3D look
 - [ ] Art Nouveau/Deco decorative elements consistent with established set
 - [ ] 1920s period accuracy in clothing, tech, and architecture
 - [ ] No digital smoothness — the piece looks hand-drawn, not rendered

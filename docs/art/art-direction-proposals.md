@@ -1,6 +1,6 @@
 # Art Direction Proposals — Session 34 (2026-09-26)
 
-**Status:** PROPOSAL — for discussion. Nothing here is locked until the user picks a direction and approves prototypes. When a direction is approved, it gets folded into `style-guide.md` (which currently locks in pure B&W pen & ink).
+**Status:** DECIDED (Session 34) — the user chose **Direction D, Deco Lithograph**, after round 1 prototypes. It has been folded into `style-guide.md` with the Aether-cyan / Engine-amber colour rule carried over from B.
 
 ---
 

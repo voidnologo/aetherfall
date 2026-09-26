@@ -1,50 +1,57 @@
 # Art Style Guide — Master Document
 
-*The definitive visual identity reference for all Adventure RPG art.*
+*The definitive visual identity reference for all Aetherfall art.*
+
+> **Session 34 (2026-09-26): direction changed.** The user chose **Direction D, Deco Lithograph**, over the previous pure black-and-white pen & ink style. This supersedes the old "Core Identity," "Pen & Ink Linework," technical-spec, and quality-checklist sections (see git history before commit `c369279` for the pen & ink version). Comparison of the round 1 prototypes: `docs/art/art-direction-proposals.md` and https://claude.ai/artifact/KLMQwvngArrLWZpTzRGHhL.
 
 ---
 
 ## Core Identity
 
-**Game tone:** Heroic adventurers against encroaching darkness. A 1920s world where magic has erupted into reality, colliding with industry and progress. Wonder and dread in equal measure — not grimdark nihilism, but real evil that demands real courage.
+**Game tone:** Heroic adventurers in a world where the Veil tore within living memory and the Engine answered. Wonder and dread in equal measure: noir streets, not grimdark.
 
-**Art style:** Black-and-white pen & ink illustration. Precise linework with crosshatching, stippling, and decorative Art Nouveau/Art Deco elements. The style evokes classic RPG interior illustration crossed with Aubrey Beardsley's ornamental precision and the architectural quality of Art Deco design. Every piece should look like it was drawn with a steel nib dip pen on heavy paper.
+**Art style:** 1920s Art Deco **travel-poster lithography**. Flat printed colour in a strictly limited palette, bold geometric simplification, strong diagonals and stylised light rays, crisp edges, a faint lithographic paper grain. Think Cassandre's railway posters, WPA national-park prints, Tamara de Lempicka's figures, and the London Underground poster tradition, applied to a sooty industrial town where magic leaks through the cobbles.
 
 **Key influences:**
-- **Aubrey Beardsley** — ornamental precision, bold black/white contrast, decorative borders
-- **Harry Clarke** — intricate detail, supernatural atmosphere, stained-glass-like compositions
-- **Classic TSR/D&D interior art** — Trampier, Otus, Roslof — functional RPG illustration with character
-- **Mervyn Peake** — grotesque beauty, atmospheric ink work, Gormenghast illustrations
-- **Art Nouveau posters** — Mucha's flowing organic lines, decorative framing
-- **Art Deco design** — geometric precision, sunburst motifs, the machine aesthetic
-- **1920s book illustration** — frontispiece plates, chapter headers, decorative endpapers
-
-**Existing art establishes:** The three reference pieces (bat-winged cat, multi-eyed dragon, angelic figure) demonstrate the core aesthetic — detailed crosshatching, fine linework, decorative circular and corner border elements, white backgrounds, supernatural subjects rendered with illustrative precision.
-
----
+- **A. M. Cassandre**: monumental geometry, heroic low angles, light as shape
+- **WPA / Federal Art Project posters**: flat silkscreen colour, stylised landscapes and cities
+- **Tamara de Lempicka**: sculpted, stylised figures for portraits
+- **London Underground / railway posters (1920s–30s)**: travel-poster composition, strong horizons
+- **Art Deco architecture and ornament**: sunbursts, stepped arches, chevrons, fluting
 
 ## Visual Pillars
 
-### 1. Pen & Ink Linework
+### 1. The Palette Is the Rule
 
-The defining technical element. Every piece must look hand-drawn with a steel nib.
+Every piece uses the Aetherfall lithograph palette and nothing else. Colour carries meaning:
 
-- **Confident linework** — clean, deliberate strokes with weight variation. Thick outlines for silhouettes, fine lines for interior detail.
-- **Crosshatching for tone** — build shadow and volume through hatching patterns, not grey washes or gradients. Density of hatching controls darkness.
-- **Stippling for texture** — use dot work for subtle textures, atmospheric effects, and magical energy.
-- **Pure black and white** — no grey tones, no color. Every mark is either ink or paper. The illusion of grey comes from line density.
-- **Decorative precision** — clean geometric patterns, symmetrical borders, and ornamental details that reward close inspection.
+| Token | Hex | Meaning |
+|---|---|---|
+| **Midnight** | `#0e1a2b` | Night, shadow, the default dark field |
+| **Bone** | `#efe6d2` | Paper, daylight, skin highlights, text panels |
+| **Soot** | `#17140f` | Linework, silhouettes, iron |
+| **Aether cyan** | `#3dc8e0` | The Veil: magic, crystals, casting, Wild Zones |
+| **Galvanic amber** | `#e8a825` | The Engine: arc lamps, Galvanic tech, sparks |
+| **Oxblood** | `#8e2f23` | Brick, blood, danger, factory red |
 
-### 2. Art Nouveau Meets Art Deco
+- **Cyan is only ever the Aether. Amber is only ever the Engine** (plus ordinary warm lamplight, sparingly). This keeps the Two-Inks idea inside D: you can read the balance in any picture.
+- Mundane things (people, brick, steel, the sword) live in midnight, bone, soot, and oxblood.
+- Skin tones come from bone, oxblood, and soot mixes, stylised but true to the character (see Character Design Locks). Never default everyone to pale.
 
-The period-specific visual language that distinguishes this from generic fantasy.
+### 2. Flat Shape, Not Rendering
 
-- **Art Nouveau elements** — organic flowing lines, natural forms (vines, wings, waves), decorative frames with sinuous curves. Used for magical subjects, natural forms, and ornamental borders.
-- **Art Deco elements** — geometric precision, sunburst motifs, stepped forms, machine-age symmetry. Used for technological subjects, urban scenes, and architectural elements.
-- **The tension is visual** — magic subjects trend Art Nouveau (organic, flowing). Technology subjects trend Art Deco (geometric, angular). Scenes where both coexist blend the two vocabularies.
-- **Period typography influence** — letterforms, chapter headers, and decorative text evoke 1920s print design.
+- Flat fills with at most two or three value steps per form. No airbrushed gradients, no photographic lighting, no 3D render look.
+- Light is drawn as **shape**: rays, halos, hard-edged pools under lamps.
+- A subtle lithographic grain or paper texture is welcome. Noise and painterly texture are not.
 
-### 3. 1920s Period Accuracy
+### 3. Deco Meets Nouveau (Kept)
+
+The Aether/Engine tension still maps onto ornament:
+- **Engine / Galvanic**: Deco geometry, with sunbursts, stepped arches, chevrons, rivets, zigzag bolts.
+- **Aether / Veil**: Nouveau curves inside the poster style, with whiplash ivy, crystal spires, and flowing smoke.
+- Split scenes use both vocabularies: geometry on one side, curves on the other.
+
+### 4. 1920s Period Accuracy
 
 The world is analogous to the 1920s. The art must reflect this.
 
@@ -53,7 +60,7 @@ The world is analogous to the 1920s. The art must reflect this.
 - **Architecture** — Art Deco skyscrapers, industrial districts, jazz clubs, occult bookshops, railway stations. Wild zones show these structures being consumed by magical growth.
 - **Creatures** — supernatural beings rendered with period sensibility. A dragon isn't medieval — it's something that erupted into a 1920s city. The juxtaposition of the mundane and the impossible is key.
 
-### 4. Supernatural Atmosphere
+### 5. Supernatural Atmosphere
 
 Magic is new, wondrous, and terrifying. The art must convey this.
 
@@ -62,14 +69,14 @@ Magic is new, wondrous, and terrifying. The art must convey this.
 - **Corruption marks** — visual cues that power has a cost. Cracks in skin where energy leaks, exhaustion in posture, equipment corroded by magical residue.
 - **The interference** — show the magic/tech tension visually. Machines with vines growing through them. Spell effects fading near industrial equipment. The border between zones.
 
-### 5. Illustrative Function
+### 6. Illustrative Function
 
 This is RPG interior art. Every piece must serve the book.
 
 - **Readability at print size** — art must work at the size it will appear on the page. Spot illustrations must read at 2-3 inches wide.
 - **Text-compatible** — most pieces need to coexist with body text. Clean edges, defined boundaries, white space preserved.
 - **Informative** — equipment studies should show how the thing works. Character portraits should convey class/role at a glance. Location vignettes should establish mood instantly.
-- **Reproducible in print** — pure B&W reproduces perfectly on any printer. No reliance on halftones or grey values that might muddy in reproduction.
+- **Reproducible in print** — flat palette colours print predictably in CMYK. Check that every piece still separates cleanly in greyscale, so a budget B&W print edition stays readable.
 
 ---
 
@@ -81,7 +88,7 @@ Characters look like 1920s people who happen to be adventurers — not fantasy a
 
 - **Clothing baseline:** Trousers, shirts, waistcoats, boots, overcoats, hats. Layer expedition gear over civilian clothing. Leather satchels, ammunition belts, tool rolls.
 - **Weapons carried visibly:** A holstered revolver, a sheathed sword on the hip, a slung rifle. Smart adventurers carry both — the art should show this.
-- **Magical markers (casters):** Subtle physical signs of magical ability — unusual eye quality, faint geometric marks on skin, a slight aura rendered in stippling. Not flamboyant wizard robes.
+- **Magical markers (casters):** Subtle physical signs of magical ability — unusual eye quality, faint geometric marks on skin, a slight cyan aura drawn as a flat halo. Not flamboyant wizard robes.
 - **Wear and history:** Scuffed boots, patched coats, well-maintained weapons. These are working adventurers, not fashion plates.
 
 ### Silhouette Test
@@ -154,7 +161,7 @@ Object-focused illustrations for weapons, artifacts, and gear.
 Atmospheric scene-setters for environments and zones.
 
 - **Establishing shot composition** — a view that communicates the character of a place
-- **Mood over detail** — use ink density and hatching to establish atmosphere
+- **Mood over detail** — use the midnight field, lamp pools, and light rays to establish atmosphere
 - **The zone spectrum** — show the range from industrial dead zones (geometric, mechanical, ordered) to deep wild zones (organic, chaotic, overgrown)
 - **Small to medium format** — typically 1/4 to 1/2 page
 
@@ -172,9 +179,9 @@ Borders, dividers, drop caps, page ornaments.
 
 Cartographic illustration for world and location maps.
 
-- **Hand-drawn cartographic style** — pen & ink with decorative compass roses and legends
+- **Deco cartographic style** — flat-colour poster maps with decorative compass roses and legends
 - **Period map conventions** — 1920s-era cartographic style with Art Deco titling
-- **Zone visualization** — show magic/tech zones with different hatching densities or border treatments
+- **Zone visualization** — Aetheric zones in cyan, Galvanic zones in amber, gradients as banded tints
 - **Scalable** — must work from full-page spread down to quarter-page inset
 
 ---
@@ -183,46 +190,41 @@ Cartographic illustration for world and location maps.
 
 | Parameter | Value |
 |-----------|-------|
-| **Full-page plate** | 2480 x 3508 px (A4 at 300 DPI) |
-| **Half-page illustration** | 2480 x 1754 px |
-| **Spot illustration** | 768 x 768 px to 1024 x 1024 px |
-| **Character portrait** | 1024 x 1408 px (portrait) |
-| **Equipment study** | 1024 x 1024 px |
-| **Decorative border** | 2480 x 400 px (horizontal) |
-| **Web-optimized versions** | 50% of print resolution, WEBP format |
-| **Format** | PNG (print), WEBP (web) |
-| **Color space** | Greyscale (print), sRGB (web) |
-| **Ink values** | Pure black (#000000) and pure white (#FFFFFF) only |
+| **Generation** | flux1-dev fp8, 30 steps, guidance 3.5, euler/normal, no LoRA (see `docs/art/prompt-engineering/`) |
+| **Full-page plate** | generate 832×1216, upscale to 2480×3508 (A4/Letter at 300 DPI) |
+| **Chapter header band** | generate 1664×448 |
+| **Chapter opener frame** | generate 832×1216, empty centre |
+| **Spot illustration** | generate 1024×1024 |
+| **Character portrait** | generate 832×1216 |
+| **Web** | WEBP, 50% of print resolution |
+| **Format** | PNG masters (sRGB), WEBP for web |
+
+### Prompt Rules (learned in round 1)
+
+- **Never put a character's name in the prompt.** Flux prints it as poster lettering. Describe the person instead.
+- **State skin tone first and explicitly** in any figure description. Flux defaulted every portrait to pale in round 1.
+- End every prompt with the "no text, no lettering, no title, no signature" clause.
+- Keep compositions simple: one idea per image. Complex two-action scenes lose the second action.
 
 ### Post-Processing Pipeline
 
-All AI-generated art requires post-processing to achieve the pure B&W pen & ink look:
-
-1. **Threshold** — convert to pure black/white (adjust threshold level per piece)
-2. **Contrast boost** — ensure line crispness
-3. **Cleanup** — remove artifacts, stray marks, generation noise
-4. **Edge refinement** — clean up any soft or blurred edges
-5. **Detail pass** — manually adjust any areas where thresholding lost important detail
+1. **Crop or inpaint** any stray lettering or signatures.
+2. **Palette snap** (optional): quantise to the six palette tokens, plus up to two tints of each, so every piece shares exact colours.
+3. **Upscale** for print; re-snap the palette if upscaling introduced new colours.
+4. **Export** a PNG master and a WEBP web copy.
 
 ---
 
 ## Quality Checklist
 
-Before accepting any generated piece, verify:
-
-- [ ] Linework quality is visible — clear pen strokes, not smooth digital rendering
-- [ ] Crosshatching present for shadow/volume — not grey gradients
-- [ ] Pure black and white — no accidental grey tones or color
-- [ ] Period accuracy — 1920s clothing, technology, architecture where relevant
-- [ ] Art Nouveau/Deco decorative language consistent
-- [ ] Silhouette is clear and distinctive at reproduction size
-- [ ] Tone matches — heroic wonder/dread, not cute or grimdark
-- [ ] Hands, faces, and weapons are anatomically acceptable
-- [ ] No text, watermarks, or artifacts
-- [ ] Composition serves its intended function (spot, plate, portrait, etc.)
-- [ ] Supernatural elements convey awe/strangeness, not generic fantasy
-
----
+- [ ] Uses only the lithograph palette; cyan only for Aether, amber only for Engine (or plain warm lamplight)
+- [ ] Flat shapes and crisp edges; no airbrush, photo, or 3D look
+- [ ] Reads at thumbnail size (strong silhouette, one clear idea)
+- [ ] 1920s-analog period accuracy; not steampunk, not generic fantasy
+- [ ] Character matches their Design Lock (age, skin tone, marks, kit)
+- [ ] No text, lettering, titles, or signatures
+- [ ] Composition serves its slot (header band, frame, spot, portrait, plate)
+- [ ] Works on the midnight web background and on bone paper
 
 ## Related Documents
 
