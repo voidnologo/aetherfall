@@ -442,7 +442,8 @@ def collect_from_history():
             for img in out.get("images", []):
                 src = COMFYUI_OUTPUT / img["subfolder"] / img["filename"]
                 dest = ART_DIR / SUBJECTS[subj_key]["art_type"] / "generated" / f"{desc}_v{version:02d}_seed-{seed}.png"
-                if not src.exists() or dest.exists():
+                already_filed = any((dest.parent.parent / stage / dest.name).exists() for stage in ("generated", "approved", "archived"))
+                if not src.exists() or already_filed:
                     continue
                 shutil.copy2(src, dest)
                 copied += 1
