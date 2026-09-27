@@ -176,7 +176,7 @@
       margin-bottom: 0.2rem;
     }
     .hero-title img {
-      width: clamp(500px, 92vw, 1400px);
+      width: min(92vw, 1400px);
       height: auto;
       display: block;
       margin: 0 auto;
@@ -541,8 +541,43 @@
       .pillars-list { grid-template-columns: 1fr; }
       .mist { display: none; }
     }
-    @media (max-width: 500px) {
-      .hero-title { letter-spacing: 0.06em; }
+    @media (max-width: 700px) {
+      html { font-size: 16px; }
+      .container { padding: 0 1.25rem; }
+
+      .hero-wrap-bg {
+        background-size: 170% auto;
+        mask-image: linear-gradient(to bottom, black 35%, transparent 70%);
+        -webkit-mask-image: linear-gradient(to bottom, black 35%, transparent 70%);
+      }
+      .hero { padding: 1rem; }
+      .hero-content { padding: 3rem 0 2rem; }
+      .hero-text { padding: 1rem 0.5rem 1.5rem; }
+
+      .hero-tagline,
+      .hero-pitch,
+      .world-intro h2 {
+        color: var(--text-bright);
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9), 0 0 16px rgba(0, 0, 0, 0.7);
+      }
+
+      .hero-cta { flex-direction: column; align-items: center; }
+      .hero-cta .btn,
+      .cta-section .btn {
+        width: 100%; max-width: 320px;
+        padding: 0.8rem 1.5rem;
+        letter-spacing: 0.15em;
+        text-align: center;
+      }
+
+      .world-section { padding: 4rem 0; }
+      .stories-section,
+      .mechanics-section,
+      .pillars-section { padding: 4rem 0; }
+      .cta-section { padding: 4rem 0; }
+      .world-panel { padding: 2rem 1.5rem; }
+      .story-card { padding: 1.6rem 1.4rem; }
+      .mech-card { padding: 1.8rem 1.4rem; }
     }
   </style>
 </head>
