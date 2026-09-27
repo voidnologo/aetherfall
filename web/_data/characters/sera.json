@@ -5,6 +5,7 @@
   "player": "",
   "archetype": "The Spark",
   "station": 2,
+  "portrait": "sera.webp",
   "description": "Slight and wiry, twenty-three, pale and sharp-featured. Jagged black hair she cuts herself. Dark eyes ringed with a pale blue-white that wasn't there a year ago. Layers of too-big clothes, frayed coat cuffs. Wears a brass compass on a cord that spins in Aetheric zones. Small objects near her drift when she concentrates.",
   "attrs": {
     "BR": { "val": -1, "desc": "Slight build" },

@@ -146,3 +146,7 @@ Direction D2 (Deco Lithograph, six-ink palette, cyan = Aether, amber = Engine). 
 **Kept for later (user, Session 34):** `art/decorative/approved/proto-B-twoinks_frame_v01_seed-3867070072.png`, a round 1 Two Inks frame. Approved to keep; no use assigned yet. Candidates: fiction reader openers, PDF front matter.
 
 **Mira approved (Session 34):** `mira_v02_seed-2096254533` (arms crossed under the lamp) and `mira_v02_seed-4036712205` (alley with satchel). Seeds 2370993926 and 2712825416 archived. All four leads now have approved portraits.
+
+**Mira reference (Session 35):** `mira_v02_seed-2096254533` is the reference image for Mira (web portrait, sheets, future conditioning). 4036712205 stays approved as an alternate.
+
+**Portraits wired in (Session 35):** web copies at `web/assets/art/portraits/{kael,sera,aldric,mira}.webp` (full 832×1216, WebP q86). Used on the quickstart pregen cards and in the Notes box on page 2 of each pregen sheet.
