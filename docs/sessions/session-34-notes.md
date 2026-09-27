@@ -1,4 +1,4 @@
-# Session 34: Consistency Review + Art Direction
+# Session 34: Consistency Review, Canon Lock & Deco Lithograph Art Direction
 
 **Date:** 2026-09-26
 **Goal:** Full consistency review of game/fiction/design docs with the new model; clean up web + print PDF output; propose a distinct art style (several directions), discuss, then prototype samples in ComfyUI for approval ahead of a full art suite (chapter borders, header art, in-page illustrations).
@@ -39,15 +39,21 @@ Kael Dunn made canonical across all rules examples (creating chapter rebuilt; al
 
 ## Key Design Decisions
 
+- **Deco Lithograph over pen & ink:** it reads strongest, bridges the painted brand, and flat shapes stay consistent across generations. The Two Inks color rule (cyan = Aether, amber = Engine) carries over so every picture shows the balance.
+- **Fiction is canon for the characters;** the pregens and rules follow it. Kael Dunn is the only Kael.
+- **Skin tone is ambiguous by design;** the world isn't Earth, so real-world analogs are only reader shortcuts.
+- **ComfyUI holds ~19 GB of RAM** and Claude Code reaps idle background shells, so use `/free`, then `--queue-only`, then `--collect`, with no waiters.
+
+### Later in session (after the notes above)
+- User chose **Direction D**; round 2 produced the leads, theme frames, and watermark. Approved: Kael 2439444224, Sera 3194702273, Aldric 3394774571, Mira 2096254533 + 4036712205, frames aether 131618214 / galvanic 1166265576 / split 2427297017 / neutral 1553240695, watermark 3200761920, Two Inks frame 3867070072 (PDF front matter). Everything else archived.
+- Wired in: web chapter-hero crowns, PDF full-page chapter openers, Two Inks title and table-of-contents pages, and the original sheet watermark (third-party web copies removed).
+- Canon additions: crit rule (66 → 64–66); 1 round = 3 counts; Sera = Aetheric + Transmutation; pregen Society stays The Ashwick Charter; skin tone unspecified; not-Earth rule.
+- Pipeline fix: `--collect` had re-copied filed art; it now skips anything already filed (43 identical duplicates removed, log deduped).
+
 ## Open Issues
 
-- Third-party `fantasy.jpg` is live as the character-sheet watermark (`web/_includes/sheet.njk`); it needs an original replacement.
-- Wave 1 style-lock images lost (gitignored, S3 never configured).
-- Canon decisions pending: which Kael, the Tear timeline, school names (Vitae/Artifice), Society identity on pregens, character appearances.
+- Name collisions; Quick Reload rounding; Mira's reference image not yet designated; art needs upscaling for print; pushes to `main` bypass the PR rule; series bible needs Story 03 outcomes; design-doc drift (Tier 5).
 
 ## Next Session
 
-- User picks a direction (or a hybrid) from the round 1 page
-- Round 2: fix skin-tone bias for Kael (stronger prompt, IP-Adapter/reference), enforce the two-ink palette (post-process hue mask), drop signatures
-- Replace the third-party character-sheet watermark with original art
-- Name-collision renames; Quick Reload rounding decision
+Try out the artwork: portraits in the quickstart pregens and character sheets, review the frames and watermark in the browser and PDF, then plan the next Deco art suite.

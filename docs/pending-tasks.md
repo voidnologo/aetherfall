@@ -1,33 +1,27 @@
 # Pending Tasks
 
 ## Next Up
-- [ ] Address editing notes on PR #2 (Story 03 draft — user reviewing in GitHub)
-- [ ] Merge Story 03 PR, build web reader page, generalize `web/_data/fiction.js`
-- [ ] Update series bible with final Story 03 outcomes
-- [ ] Plan combat-focused story (next in series — Kael-heavy, timing track, Galvanic devices)
-- [ ] Cross-device reading test of published fiction reader (iPhone, iPad, desktop)
-- [ ] Social preview images (og:image) for /fiction/ landing and story reader
-- [ ] Review Wave 1 art (20 images in art/*/generated/) — select golden reference set
-- [ ] Lock LoRA preset and run Wave 2: character portraits (Kael, Sera, Aldric, Mira + archetypes)
+- [ ] Try out the approved art: lead portraits in the quickstart pregen sections and the character sheets; review crowns, openers, and watermark in the browser and PDF
+- [ ] Designate Mira's reference image (2096254533 recommended)
+- [ ] Plan the next Deco art suite: spot illustrations per chapter, header bands, section dividers, drop caps
+- [ ] Upscale approved art for print (RealESRGAN; currently ~100 DPI on a letter page)
+- [ ] Name-collision renames: Aldric Voss, Elara Voss, "Thornfeld", two thin-cigar smokers
+- [ ] Quick Reload rounding decision (web: down; FIREARMS doc: up)
+- [ ] Update series bible trackers with Story 03 outcomes
+- [ ] Plan combat-focused story (Kael-heavy, timing track, Galvanic devices)
 
 ## Backlog
-- [ ] Generalize `web/_data/fiction.js` to an array of stories (when Story 03 ships, not before)
-- [ ] Consider self-hosting or consolidating Google Fonts across fiction + rulebook
-- [ ] Rework weapons prompt — arc pistol needs more visual differentiation from revolver
-- [ ] Set up S3 bucket for art sync (create bucket, add .art-sync.conf)
-- [ ] Continue character sheet styling iteration (text flow around watermark decorations)
-- [ ] Post-processing automation (threshold, contrast) in comfyui_generate.py
-- [ ] Revisit embossed "A" design (clear left-organic/right-geometric split)
-- [ ] Review site and character sheets in browser for visual verification
-- [ ] Bundle Mermaid.js locally so flowcharts work offline
-- [ ] Multiplayer sync for GM tools (WebRTC peer-to-peer?) — stretch goal
-- [ ] Additional GM tools: NPC generator, mission brief generator, Society generator
-- [ ] Design "Push Timing" mechanic
-- [ ] Design zone formation/shift mechanics
-- [ ] Brainstorm setting-flavored archetype (class) names
-- [ ] Design bestiary (monsters, cultists, corrupted beings)
-- [ ] Create simplified NPC stat block format
+- [ ] Confirm git workflow: pushes to main bypass the repo's PR rule
+- [ ] Design-doc drift cleanup (review Tier 5: COMBAT_PROCEDURE, MAGIC_SYSTEM, FIREARMS)
+- [ ] Palette-snap post-processing step (quantise to the six inks)
+- [ ] Two Inks look for fiction reader openers? (frame kept)
+- [ ] Redraw the hero/logo in Deco Lithograph eventually
+- [ ] Cross-device reading test of published fiction reader
+- [ ] Social preview images (og:image)
+- [ ] Set up S3 bucket for art sync (art binaries are gitignored)
+- [ ] Bundle Mermaid.js locally for offline web flowcharts
+- [ ] More GM tools: NPC, mission brief, and Society generators
+- [ ] Design "Push Timing" and zone formation/shift mechanics
+- [ ] Bestiary; simplified NPC stat blocks
 - [ ] Spell compendium second pass
 - [ ] Mobile sidebar UX testing on real devices
-- [ ] Landing page readability: continue iterating on text contrast over hero image
-- [ ] Check "gradient" overuse in fiction docs 02, 03, 05, 06 — minor spot fixes
