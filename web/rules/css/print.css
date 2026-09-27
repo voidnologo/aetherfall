@@ -81,6 +81,8 @@
 
 /* Title page and TOC: no running headers */
 @page title-page {
+  margin: 0;
+  background: #efe6d2 url(../../assets/art/frames/front.webp) center / 100% 100% no-repeat;
   @top-left { content: none; }
   @top-right { content: none; }
   @bottom-center { content: none; }
@@ -89,8 +91,13 @@
 }
 
 @page toc-page {
+  margin: 0;
+  background: #efe6d2 url(../../assets/art/frames/front.webp) center / 100% 100% no-repeat;
   @top-left { content: none; }
   @top-right { content: none; }
+  @bottom-center { content: none; }
+  @bottom-left { content: none; }
+  @bottom-right { content: none; }
 }
 
 /* First page of each chapter: no running header (title is already visible) */
@@ -134,7 +141,7 @@ body {
 .title-page {
   page: title-page;
   break-after: recto;
-  padding-top: 35%;
+  padding: 3.6in 1.7in 0;
   text-align: center;
 }
 
@@ -178,6 +185,7 @@ body {
 .toc-chapter {
   page: toc-page;
   break-after: recto;
+  padding: 1.7in 1.6in 0 1.9in;
 }
 
 .toc-title {
