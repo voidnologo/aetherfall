@@ -5,6 +5,7 @@
   "player": "",
   "archetype": "The Steady Hand",
   "station": 2,
+  "portrait": "kael.webp",
   "description": "Broad-shouldered and lean, forty-two. Weathered and sun-worn from years of walking beats. Short-cropped dark hair going grey at the temples. Steady brown eyes, calloused hands, a thin old knife scar across the bridge of his nose. Wears his leather jacket like armor. Moves like someone used to bad neighborhoods.",
   "attrs": {
     "BR": { "val": 1, "desc": "Built like a brawler" },

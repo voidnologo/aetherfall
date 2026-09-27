@@ -5,6 +5,7 @@
   "player": "",
   "archetype": "The Fixer",
   "station": 2,
+  "portrait": "mira.webp",
   "description": "Twenty-eight, sharp features, quick smile that doesn't always reach her eyes. Dark hair cropped short, a thin scar on her left cheekbone she tells different stories about. Dresses well enough to pass in polite company. Always smells like cigarette smoke and jasmine.",
   "attrs": {
     "BR": { "val": 0, "desc": "Average build" },

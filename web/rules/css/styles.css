@@ -1010,6 +1010,22 @@ code.inline, code {
 .stat-block.pc-social::before { background: #8a7ec8; }
 .stat-block.hostile::before { background: var(--warning); }
 
+/* Pregen portrait: a full-height column beside the card */
+.stat-block.has-portrait {
+  display: grid;
+  grid-template-columns: 11rem 1fr;
+  grid-template-rows: auto 1fr;
+}
+.stat-block-portrait {
+  grid-row: 1 / 3;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 15%;
+  border-right: 1px solid var(--glass-border);
+  display: block;
+}
+
 .stat-block-header {
   padding: 1rem 1.4rem 0.7rem;
   border-bottom: 1px solid var(--glass-border);
@@ -1470,6 +1486,13 @@ dl.galvanic-weapons dd em {
 }
 
 @media (max-width: 500px) {
+  .stat-block.has-portrait { grid-template-columns: 1fr; }
+  .stat-block-portrait {
+    grid-row: auto;
+    height: 16rem;
+    border-right: 0;
+    border-bottom: 1px solid var(--glass-border);
+  }
   .page-title {
     font-size: 1.6rem;
   }

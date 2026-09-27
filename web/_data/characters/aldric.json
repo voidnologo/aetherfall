@@ -5,6 +5,7 @@
   "player": "",
   "archetype": "The Surgeon",
   "station": 2,
+  "portrait": "aldric.webp",
   "description": "Tall, gaunt, thirty-four, with a scholar's stoop. Indoor pallor, close-cropped dark hair, round spectacles he never stops adjusting, ink-stained fingers. Precise posture from too long in lecture halls. Smells of reagents and old paper. His spellbook is never more than arm's reach away.",
   "attrs": {
     "BR": { "val": -1, "desc": "Thin build" },
