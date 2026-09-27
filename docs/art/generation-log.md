@@ -134,3 +134,11 @@ Subjects: header (1664×448), frame (832×1216), spot (1024²), portrait (832×1
 **Cross-direction issues:** Kael came out white in all six portraits despite "brown skin" (Flux bias; round 2 needs a stronger prompt and reference conditioning). Revolver misfire ignored in spots. Fake signatures in A and B.
 
 **Status:** all pending review. Comparison page: https://claude.ai/artifact/KLMQwvngArrLWZpTzRGHhL
+
+## Session 34 — Round 2, Direction D locked (2026-09-26)
+
+Direction D2 (Deco Lithograph, six-ink palette, cyan = Aether, amber = Engine). 18 images: 4 lead portraits, 4 chapter-theme frames (aether/galvanic/split/neutral), sheet watermark, 2 seeds each, all `*_v02_*`. Per-image parameters are in `docs/art/prototype-runs.jsonl`. Queued with `--queue-only` and collected with `--collect`; the local wait loop was reaped for low RAM (ComfyUI holds about 19 GB), but ComfyUI finished unaffected.
+
+**Findings:** strong series consistency across all four leads. Neutral and galvanic frames are near book-ready. One aether frame broke the colour rule (amber ivy). Both watermark emblems are usable (the crystal-fan seed reads best small). Tiny signature marks appear in corners and need cropping.
+
+**Status:** pending user review. Page: https://claude.ai/artifact/KLMQwvngArrLWZpTzRGHhL
