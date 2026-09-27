@@ -142,3 +142,5 @@ Direction D2 (Deco Lithograph, six-ink palette, cyan = Aether, amber = Engine). 
 **Findings:** strong series consistency across all four leads. Neutral and galvanic frames are near book-ready. One aether frame broke the colour rule (amber ivy). Both watermark emblems are usable (the crystal-fan seed reads best small). Tiny signature marks appear in corners and need cropping.
 
 **Status:** pending user review. Page: https://claude.ai/artifact/KLMQwvngArrLWZpTzRGHhL
+
+**Kept for later (user, Session 34):** `art/decorative/approved/proto-B-twoinks_frame_v01_seed-3867070072.png`, a round 1 Two Inks frame. Approved to keep; no use assigned yet. Candidates: fiction reader openers, PDF front matter.
