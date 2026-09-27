@@ -36,7 +36,7 @@ Every piece uses the Aetherfall lithograph palette and nothing else. Colour carr
 
 - **Cyan is only ever the Aether. Amber is only ever the Engine** (plus ordinary warm lamplight, sparingly). This keeps the Two-Inks idea inside D: you can read the balance in any picture.
 - Mundane things (people, brick, steel, the sword) live in midnight, bone, soot, and oxblood.
-- Skin tones come from bone, oxblood, and soot mixes, stylised but true to the character (see Character Design Locks). Never default everyone to pale.
+- Skin tones come from bone, oxblood, and soot mixes, stylised. Specific tones are never required unless characterful (see Character Design Locks).
 
 ### 2. Flat Shape, Not Rendering
 
@@ -202,7 +202,7 @@ Cartographic illustration for world and location maps.
 ### Prompt Rules (learned in round 1)
 
 - **Never put a character's name in the prompt.** Flux prints it as poster lettering. Describe the person instead.
-- **State skin tone first and explicitly** in any figure description. Flux defaulted every portrait to pale in round 1.
+- **Don't specify skin tone or ethnicity** unless it's characterful (indoor pallor, outdoor weathering, Aetheric marks). Canon leaves it ambiguous, and the model's defaults are acceptable.
 - End every prompt with the "no text, no lettering, no title, no signature" clause.
 - Keep compositions simple: one idea per image. Complex two-action scenes lose the second action.
 
@@ -221,7 +221,7 @@ Cartographic illustration for world and location maps.
 - [ ] Flat shapes and crisp edges; no airbrush, photo, or 3D look
 - [ ] Reads at thumbnail size (strong silhouette, one clear idea)
 - [ ] 1920s-analog period accuracy; not steampunk, not generic fantasy
-- [ ] Character matches their Design Lock (age, skin tone, marks, kit)
+- [ ] Character matches their Design Lock (age, build, hair, marks, kit)
 - [ ] No text, lettering, titles, or signatures
 - [ ] Composition serves its slot (header band, frame, spot, portrait, plate)
 - [ ] Works on the midnight web background and on bone paper

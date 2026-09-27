@@ -154,7 +154,7 @@ SUBJECTS = {
         "width": 1024,
         "height": 1024,
         "subject": (
-            "A slight, wiry young woman of twenty-three with pale skin and jagged "
+            "A slight, wiry young woman of twenty-three with jagged "
             "jaw-length black hair, wearing an oversized layered coat and a brass compass "
             "on a cord around her neck, flings one hand forward as she casts a spell: the "
             "air in front of her palm bends and ripples with raw magical force, and her "
@@ -171,7 +171,7 @@ SUBJECTS = {
         "height": 1216,
         "subject": (
             "Three-quarter-length character portrait of Kael Dunn, a forty-two-year-old "
-            "former city constable turned adventurer. Brown skin, weathered face, "
+            "former city constable turned adventurer. Weathered, sun-worn face, "
             "short-cropped dark hair going grey at the temples, a thin old scar across the "
             "bridge of his nose, steady brown eyes that give nothing away. Broad-shouldered "
             "and lean, average height, standing easy but alert. A leather jacket repaired "
@@ -187,8 +187,8 @@ SUBJECTS = {
         "art_type": "characters",
         "width": 832, "height": 1216,
         "subject": (
-            "Three-quarter-length portrait of a brown-skinned man of forty-two with a "
-            "weathered dark-brown complexion, short-cropped black hair going grey at "
+            "Three-quarter-length portrait of a man of forty-two with a weathered, "
+            "sun-worn face, short-cropped black hair going grey at "
             "the temples, and a thin pale scar across the bridge of his nose. Steady, "
             "guarded brown eyes. Broad-shouldered and lean, average height, standing easy "
             "but alert under a gas lamp at a tavern doorway at night. A battered brown "
@@ -202,7 +202,7 @@ SUBJECTS = {
         "art_type": "characters",
         "width": 832, "height": 1216,
         "subject": (
-            "Three-quarter-length portrait of a slight, wiry pale-skinned young woman of "
+            "Three-quarter-length portrait of a slight, wiry young woman of "
             "twenty-three with sharp features and jagged, self-cut black hair at jaw "
             "length. Her dark eyes are ringed with a thin pale turquoise halo. Layers of "
             "oversized clothes: a heavy canvas coat over a sweater, frayed cuffs, heavy "
@@ -217,7 +217,7 @@ SUBJECTS = {
         "width": 832, "height": 1216,
         "subject": (
             "Three-quarter-length portrait of a tall, gaunt, slightly stooped man of "
-            "thirty-four with light brown skin, high cheekbones, close-cropped dark hair "
+            "thirty-four with an indoor pallor, high cheekbones, close-cropped dark hair "
             "and round wire spectacles. A neat waistcoat with many small pockets, pressed "
             "shirt, a practical long coat, a leather satchel with a thick book strapped "
             "to it, a plain wooden walking stick. He holds a small flat rectangle of "
@@ -230,7 +230,7 @@ SUBJECTS = {
         "art_type": "characters",
         "width": 832, "height": 1216,
         "subject": (
-            "Three-quarter-length portrait of a brown-skinned woman of twenty-eight with "
+            "Three-quarter-length portrait of a woman of twenty-eight with "
             "warm dark eyes, short-cropped dark hair and a thin scar on her left "
             "cheekbone, a knowing half-smile. Medium height, athletic. A sharp tailored "
             "coat over a waistcoat, gloves, a silver cigarette case in one hand. A small "
