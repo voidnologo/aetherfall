@@ -1,9 +1,10 @@
 # Pending Tasks
 
 ## Next Up
-- [ ] Try out the approved art: lead portraits in the quickstart pregen sections and the character sheets; review crowns, openers, and watermark in the browser and PDF
-- [ ] Designate Mira's reference image (2096254533 recommended)
-- [ ] Plan the next Deco art suite: spot illustrations per chapter, header bands, section dividers, drop caps
+- [x] Try out the approved art: portraits on quickstart + sheets (PR #4); crowns cut out to alpha (PR #5)
+- [x] Designate Mira's reference image → 2096254533
+- [x] Plan the next Deco art suite → `docs/art/deco-suite-plan.md` (approved)
+- [ ] Deco suite Wave 1: dividers ×3, drop-cap tiles ×3, tailpiece, spots (The Tear; revolver misfire); build `tools/deco_suite.py` + `tools/cutout.py`
 - [ ] Upscale approved art for print (RealESRGAN; currently ~100 DPI on a letter page)
 - [ ] Name-collision renames: Aldric Voss, Elara Voss, "Thornfeld", two thin-cigar smokers
 - [ ] Quick Reload rounding decision (web: down; FIREARMS doc: up)
@@ -11,7 +12,7 @@
 - [ ] Plan combat-focused story (Kael-heavy, timing track, Galvanic devices)
 
 ## Backlog
-- [ ] Confirm git workflow: pushes to main bypass the repo's PR rule
+- [x] Git workflow: PR per chunk, self squash-merged via gh (Session 35)
 - [ ] Design-doc drift cleanup (review Tier 5: COMBAT_PROCEDURE, MAGIC_SYSTEM, FIREARMS)
 - [ ] Palette-snap post-processing step (quantise to the six inks)
 - [ ] Two Inks look for fiction reader openers? (frame kept)
