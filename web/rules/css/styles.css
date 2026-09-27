@@ -462,7 +462,7 @@ body::before {
 .page-hero--framed { text-align: center; }
 .page-hero--framed::after { left: 50%; transform: translateX(-50%); background: linear-gradient(90deg, transparent, var(--theme-accent), transparent); }
 .hero-crown {
-  aspect-ratio: 832 / 423;
+  aspect-ratio: var(--crown-ar);
   max-width: 560px;
   margin: 0 auto 1rem;
   padding: 0 21% 4%;
@@ -470,12 +470,13 @@ body::before {
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  background: var(--crown) center / 100% 100% no-repeat;
+  /* Crowns carry alpha (margin cleared, tools/crown_alpha.py); keep their own proportions */
+  background: var(--crown) center / contain no-repeat;
 }
-.hero-aether   { --crown: url(../../assets/art/frames/aether-crown.webp); }
-.hero-galvanic { --crown: url(../../assets/art/frames/galvanic-crown.webp); }
-.hero-split    { --crown: url(../../assets/art/frames/split-crown.webp); }
-.hero-neutral  { --crown: url(../../assets/art/frames/neutral-crown.webp); }
+.hero-aether   { --crown: url(../../assets/art/frames/aether-crown.webp);   --crown-ar: 804 / 430; }
+.hero-galvanic { --crown: url(../../assets/art/frames/galvanic-crown.webp); --crown-ar: 769 / 425; }
+.hero-split    { --crown: url(../../assets/art/frames/split-crown.webp);    --crown-ar: 818 / 430; }
+.hero-neutral  { --crown: url(../../assets/art/frames/neutral-crown.webp);  --crown-ar: 805 / 430; }
 .hero-crown .page-number { color: #8e2f23; margin-bottom: 0.35rem; }
 .hero-crown .page-title {
   color: #17140f;
