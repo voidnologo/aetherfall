@@ -137,8 +137,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover;
-            object-position: left top;
+            object-fit: contain;
+            object-position: center;
             opacity: 0.06;
             pointer-events: none;
             z-index: 0;
@@ -543,7 +543,7 @@
 
 {#- ═══════════════ PAGE 1 ═══════════════ -#}
 <div class="page">
-    <img src="{{ '/assets/art/fantasy.jpg' | url }}" alt="" class="page-watermark">
+    <img src="{{ '/assets/art/watermark.webp' | url }}" alt="" class="page-watermark">
 
     {#- ── Wordmark ── -#}
     <div class="sheet-wordmark">
@@ -860,7 +860,7 @@
 
 {#- ═══════════════ PAGE 2 ═══════════════ -#}
 <div class="page">
-    <img src="{{ '/assets/art/fantasy.jpg' | url }}" alt="" class="page-watermark">
+    <img src="{{ '/assets/art/watermark.webp' | url }}" alt="" class="page-watermark">
 
     <div class="two-col">
 

@@ -226,17 +226,20 @@ SUBJECTS = {
         ),
     },
     "mira": {
-        "name": "Portrait — the Fixer (canon lock)",
+        "name": "Portrait — the Fixer (canon lock, v2 composition)",
         "art_type": "characters",
         "width": 832, "height": 1216,
         "subject": (
-            "Three-quarter-length portrait of a woman of twenty-eight with "
-            "warm dark eyes, short-cropped dark hair and a thin scar on her left "
-            "cheekbone, a knowing half-smile. Medium height, athletic. A sharp tailored "
-            "coat over a waistcoat, gloves, a silver cigarette case in one hand. A small "
-            "brass-and-copper pistol with a glowing amber coil in a shoulder holster "
-            "half-hidden by the coat. Behind her, a street where amber arc lamps glow on "
-            "one side and turquoise-lit ivy on the other."
+            "Full-length standing figure seen from a little distance, the whole body "
+            "visible from head to boots, in the same framing as a 1920s travel-poster "
+            "figure. A woman of twenty-eight, medium height and athletic, short-cropped "
+            "dark hair, a thin scar on her left cheekbone, a composed, watchful "
+            "expression. No makeup, no glamour. Practical clothes: a long dark "
+            "working coat over a waistcoat and trousers, flat boots, gloves. A small "
+            "brass pistol with a glowing amber coil half-hidden in a shoulder holster "
+            "under the open coat. She leans against a lamp post at the corner of a "
+            "cobbled street at dusk: amber arc lamps glow down one side of the street "
+            "and turquoise-lit ivy climbs the buildings on the other."
         ),
     },
     "frame_aether": {

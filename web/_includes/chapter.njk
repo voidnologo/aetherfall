@@ -62,9 +62,11 @@
       {%- endif %}
     </nav>
 
-    <div class="page-hero">
-      <span class="page-number">{% if numbered %}Chapter {{ pg.num }}{% else %}{{ pg.num }}{% endif %}</span>
-      <h1 class="page-title">{{ pg.title }}</h1>
+    <div class="page-hero page-hero--framed hero-{{ pg.theme }}">
+      <div class="hero-crown">
+        <span class="page-number">{% if numbered %}Chapter {{ pg.num }}{% else %}{{ pg.num }}{% endif %}</span>
+        <h1 class="page-title">{{ pg.title }}</h1>
+      </div>
       {%- if subtitle %}
       <p class="page-subtitle">{{ subtitle }}</p>
       {%- endif %}

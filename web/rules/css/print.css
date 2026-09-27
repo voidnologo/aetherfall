@@ -270,6 +270,32 @@ body {
   margin: 0;
 }
 
+/* ── Chapter openers: full-page Deco frame per chapter theme ───── */
+@page opener-aether   { margin: 0; background: #0e1a2b url(../../assets/art/frames/aether.webp) center / cover no-repeat; @top-left { content: none; } @top-right { content: none; } @bottom-center { content: none; } @bottom-right { content: none; } @bottom-left { content: none; } }
+@page opener-galvanic { margin: 0; background: #0e1a2b url(../../assets/art/frames/galvanic.webp) center / cover no-repeat; @top-left { content: none; } @top-right { content: none; } @bottom-center { content: none; } @bottom-right { content: none; } @bottom-left { content: none; } }
+@page opener-split    { margin: 0; background: #0e1a2b url(../../assets/art/frames/split.webp) center / cover no-repeat; @top-left { content: none; } @top-right { content: none; } @bottom-center { content: none; } @bottom-right { content: none; } @bottom-left { content: none; } }
+@page opener-neutral  { margin: 0; background: #0e1a2b url(../../assets/art/frames/neutral.webp) center / cover no-repeat; @top-left { content: none; } @top-right { content: none; } @bottom-center { content: none; } @bottom-right { content: none; } @bottom-left { content: none; } }
+.hero-aether   { page: opener-aether; }
+.hero-galvanic { page: opener-galvanic; }
+.hero-split    { page: opener-split; }
+.hero-neutral  { page: opener-neutral; }
+.page-hero--framed {
+  break-after: page;
+  height: 11in;
+  margin: 0;
+  padding: 0 2in;
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.page-hero--framed .hero-crown { display: block; }
+.page-hero--framed .page-title { font-size: 30pt; color: #17140f; }
+.page-hero--framed .page-number { color: #8e2f23; font-size: 10pt; }
+.page-hero--framed .page-subtitle { margin-top: 0.8em; font-size: 13pt; color: #3a342a; }
+
 /* ── Headings ─────────────────────────────────────────────────── */
 h2 {
   font-family: 'Playfair Display', serif;

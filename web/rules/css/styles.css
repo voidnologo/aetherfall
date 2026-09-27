@@ -458,6 +458,32 @@ body::before {
   background: linear-gradient(90deg, var(--theme-accent), transparent);
 }
 
+/* ── Framed chapter hero (approved Deco frames, Session 34) ── */
+.page-hero--framed { text-align: center; }
+.page-hero--framed::after { left: 50%; transform: translateX(-50%); background: linear-gradient(90deg, transparent, var(--theme-accent), transparent); }
+.hero-crown {
+  aspect-ratio: 832 / 423;
+  max-width: 560px;
+  margin: 0 auto 1rem;
+  padding: 0 21% 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background: var(--crown) center / 100% 100% no-repeat;
+}
+.hero-aether   { --crown: url(../../assets/art/frames/aether-crown.webp); }
+.hero-galvanic { --crown: url(../../assets/art/frames/galvanic-crown.webp); }
+.hero-split    { --crown: url(../../assets/art/frames/split-crown.webp); }
+.hero-neutral  { --crown: url(../../assets/art/frames/neutral-crown.webp); }
+.hero-crown .page-number { color: #8e2f23; margin-bottom: 0.35rem; }
+.hero-crown .page-title {
+  color: #17140f;
+  font-size: clamp(1.05rem, 3.6vw, 1.9rem);
+  margin-bottom: 0;
+  text-wrap: balance;
+}
+
 .page-number {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.72rem;

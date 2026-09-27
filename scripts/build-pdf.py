@@ -28,7 +28,7 @@ def extract_content(html_path):
     text = html_path.read_text()
 
     # Find the page-hero div (chapter header)
-    hero_match = re.search(r'<div class="page-hero">', text)
+    hero_match = re.search(r'<div class="page-hero', text)
     if not hero_match:
         print(f"  WARNING: No page-hero found in {html_path.name}", file=sys.stderr)
         return ""
