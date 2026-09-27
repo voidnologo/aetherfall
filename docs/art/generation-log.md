@@ -150,3 +150,7 @@ Direction D2 (Deco Lithograph, six-ink palette, cyan = Aether, amber = Engine). 
 **Mira reference (Session 35):** `mira_v02_seed-2096254533` is the reference image for Mira (web portrait, sheets, future conditioning). 4036712205 stays approved as an alternate.
 
 **Portraits wired in (Session 35):** web copies at `web/assets/art/portraits/{kael,sera,aldric,mira}.webp` (full 832×1216, WebP q86). Used on the quickstart pregen cards and in the Notes box on page 2 of each pregen sheet.
+
+**Crown alpha (Session 35):** the web chapter crowns had been trimmed with a rectangular crop inside the frames' faint bone margin, which cut the ivy, the aether apex, and the compass point flat. `tools/crown_alpha.py` now builds each `web/assets/art/frames/{theme}-crown.webp` from the top 430 rows of the approved frame, clearing the bone margin to alpha (edge flood, limited to a 48 px band), so anything drawn over the margin keeps its full shape. Galvanic's rays still meet the top edge (there's no margin there to clear).
+
+**Outpaint attempt, archived (Session 35):** `crown-outpaint_aether_v01_seed-3241878809` tried extending the canvas with Flux inpainting; the model painted new scenery around the bordered frame instead of finishing it. Archived; the approach was dropped along with its script. The other seven queued seeds were cancelled.
