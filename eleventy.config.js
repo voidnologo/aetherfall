@@ -52,6 +52,11 @@ module.exports = function (eleventyConfig) {
     });
   }
 
+  // ── Spot illustration (Deco suite cut-outs in assets/art/spots/) ──
+  eleventyConfig.addShortcode("spot", function (name, alt, side = "right") {
+    return `<figure class="spot spot-${side}"><img src="../assets/art/spots/${name}.webp" alt="${alt}" loading="lazy"></figure>`;
+  });
+
   // ── Flat URLs: output rules/economy.html, not rules/economy/index.html ──
   eleventyConfig.addGlobalData("permalink", function () {
     return (data) => `${data.page.filePathStem}.html`;

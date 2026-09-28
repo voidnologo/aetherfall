@@ -168,3 +168,10 @@ Direction D2 (Deco Lithograph, six-ink palette, cyan = Aether, amber = Engine). 
 - Everything else from v01 archived. divider-neutral web copy recoloured navy → bone (web only).
 - Web copies: `web/assets/art/ornaments/{divider,dropcap}-{aether,galvanic,neutral}.webp` and `tailpiece.webp` (tailpiece cut with `--main-only` to drop faint corner marks). Wired in via `[data-theme]` CSS: section dividers, the chapter-opening drop cap, and the end-of-chapter tailpiece. Split-theme chapters use the neutral set. PDF wiring waits for the print upscale.
 - Spot rerolls queued as v02 (4 seeds each) with revised prompts in `tools/deco_suite.py`.
+
+**Deco Wave 1 spots (Session 35, round 2):**
+- spot_tear: approved `deco-spot_tear_v02_seed-3148179434.png` (8a, in use) and `deco-spot_tear_v02_seed-4156132992.png` (8d, alternate). The user offered either; 8a was used for its bolder tear and near-pure Aether palette.
+- spot_misfire: approved `deco-spot_misfire_v02_seed-4031614979.png` (9c).
+- All other v01/v02 spot renders archived, including the v01 fallbacks.
+- Web copies `web/assets/art/spots/{tear,misfire}.webp`, cut with `--hull` (keeps the round vignette whole; 8a's pale crack reached the top edge and would otherwise have been keyed out) and, for the Tear, `--light-to-cyan` (Flux painted the crack bone-white; the palette says Aether light is cyan).
+- Placed with the new `{% spot %}` shortcode: the Tear beside "The Tear" (Ch 02), the misfire beside "The Malfunction System" (Ch 11). Floated right; centred and narrower on phones.

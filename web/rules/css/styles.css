@@ -614,6 +614,13 @@ body::before {
   background: var(--dropcap-art) center / 100% 100% no-repeat;
 }
 
+/* Spot illustrations (Deco suite): round cut-outs floated beside the text */
+.page-content .spot { width: min(15rem, 42%); margin: 0.3rem 0 1rem; }
+.page-content .spot-right { float: right; margin-left: 1.5rem; }
+.page-content .spot-left  { float: left;  margin-right: 1.5rem; }
+.page-content .spot img { display: block; width: 100%; height: auto; }
+.page-content h2, .page-content h3 { clear: both; }
+
 /* Tailpiece: the end-of-chapter mark */
 .page-content .tailpiece {
   height: 5.5rem;
@@ -1524,6 +1531,7 @@ dl.galvanic-weapons dd em {
 }
 
 @media (max-width: 500px) {
+  .page-content .spot { float: none; width: 70%; margin: 0.5rem auto 1rem; }
   .stat-block.has-portrait { grid-template-columns: 1fr; }
   .stat-block-portrait {
     grid-row: auto;

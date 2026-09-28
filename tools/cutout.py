@@ -52,7 +52,21 @@ def drop_strays(fg: np.ndarray, reach: float = 0.06, main_only: bool = False) ->
     return keep[labels]
 
 
-def cutout(img: Image.Image, tolerance: float = 48, main_only: bool = False) -> Image.Image:
+def hull_fill(fg: np.ndarray) -> np.ndarray:
+    """Everything inside the convex outline of the art counts as art. For round or oval
+    vignettes whose pale light (a crack, a beam) reaches the edge and would otherwise
+    be keyed out with the paper."""
+    from PIL import ImageDraw
+    from scipy.spatial import ConvexHull
+    ys, xs = np.nonzero(fg)
+    pts = np.column_stack([xs, ys])
+    hull = pts[ConvexHull(pts).vertices]
+    mask = Image.new("L", (fg.shape[1], fg.shape[0]), 0)
+    ImageDraw.Draw(mask).polygon([tuple(p) for p in hull], fill=255)
+    return np.asarray(mask) > 0
+
+
+def cutout(img: Image.Image, tolerance: float = 48, main_only: bool = False, hull: bool = False) -> Image.Image:
     rgb = np.asarray(img.convert("RGB"), dtype=float)
     paper = np.linalg.norm(rgb - bone_reference(rgb), axis=2) < tolerance
     labels, _ = ndimage.label(paper)
@@ -61,6 +75,8 @@ def cutout(img: Image.Image, tolerance: float = 48, main_only: bool = False) -> 
     bg = ndimage.binary_dilation(bg, iterations=2)                    # eat the anti-aliased fringe
     fg = ndimage.binary_opening(~bg, iterations=1)                    # drop lone specks of grain
     fg = drop_strays(fg, main_only=main_only)
+    if hull:
+        fg = hull_fill(fg)
     alpha = ndimage.gaussian_filter(fg.astype(float), 0.8)
     out = Image.fromarray(np.dstack([rgb, alpha * 255]).clip(0, 255).astype(np.uint8), "RGBA")
     box = out.getchannel("A").point(lambda a: 255 if a > 16 else 0).getbbox()
@@ -85,6 +101,25 @@ def navy_to_bone(img: Image.Image, reach: float = 70) -> Image.Image:
     return Image.fromarray(np.concatenate([rgb, alpha], axis=2).clip(0, 255).astype(np.uint8), "RGBA")
 
 
+CYAN = np.array([61, 200, 224])
+CYAN_CORE = np.array([200, 244, 250])
+
+
+def light_to_cyan(img: Image.Image) -> Image.Image:
+    """Recolour pale, low-saturation light (bone or white glow) to Aether cyan, keeping its
+    brightness: the core goes pale cyan, the edges full cyan. For Aether light that Flux
+    painted bone-white. Run after the cut-out so the paper itself is already gone."""
+    a = np.asarray(img, dtype=float)
+    rgb, alpha = a[..., :3], a[..., 3:]
+    hi, lo = rgb.max(axis=2, keepdims=True), rgb.min(axis=2, keepdims=True)
+    sat = (hi - lo) / np.maximum(hi, 1)
+    light = hi / 255
+    w = np.clip((light - 0.55) / 0.25, 0, 1) * np.clip((0.45 - sat) / 0.2, 0, 1)
+    target = CYAN + (CYAN_CORE - CYAN) * np.clip((light - 0.75) / 0.2, 0, 1)
+    rgb = rgb * (1 - w) + target * w
+    return Image.fromarray(np.concatenate([rgb, alpha], axis=2).clip(0, 255).astype(np.uint8), "RGBA")
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("src", type=Path, nargs="+")
@@ -92,14 +127,18 @@ def main():
     ap.add_argument("--name", help="output stem (single source only); default: the source stem")
     ap.add_argument("--width", type=int, help="resize the cut-out to this width")
     ap.add_argument("--tolerance", type=float, default=48)
+    ap.add_argument("--hull", action="store_true", help="keep everything inside the art's convex outline (round vignettes)")
     ap.add_argument("--main-only", action="store_true", help="keep only the substantial shapes (drops thin stray marks)")
+    ap.add_argument("--light-to-cyan", action="store_true", help="recolour pale bone/white light to Aether cyan")
     ap.add_argument("--navy-to-bone", action="store_true", help="web copy: recolour midnight-navy ink to bone")
     ap.add_argument("--preview-dir", type=Path, help="also write previews on the night and paper backgrounds")
     args = ap.parse_args()
 
     args.out_dir.mkdir(parents=True, exist_ok=True)
     for src in args.src:
-        img = cutout(Image.open(src), args.tolerance, args.main_only)
+        img = cutout(Image.open(src), args.tolerance, args.main_only, args.hull)
+        if args.light_to_cyan:
+            img = light_to_cyan(img)
         if args.navy_to_bone:
             img = navy_to_bone(img)
         if args.width and img.width > args.width:
