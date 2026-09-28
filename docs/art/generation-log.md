@@ -154,3 +154,17 @@ Direction D2 (Deco Lithograph, six-ink palette, cyan = Aether, amber = Engine). 
 **Crown alpha (Session 35):** the web chapter crowns had been trimmed with a rectangular crop inside the frames' faint bone margin, which cut the ivy, the aether apex, and the compass point flat. `tools/crown_alpha.py` now builds each `web/assets/art/frames/{theme}-crown.webp` from the top 430 rows of the approved frame, clearing the bone margin to alpha (edge flood, limited to a 48 px band), so anything drawn over the margin keeps its full shape. Galvanic's rays still meet the top edge (there's no margin there to clear).
 
 **Outpaint attempt, archived (Session 35):** `crown-outpaint_aether_v01_seed-3241878809` tried extending the canvas with Flux inpainting; the model painted new scenery around the bordered frame instead of finishing it. Archived; the approach was dropped along with its script. The other seven queued seeds were cancelled.
+
+**Deco Wave 1 picks (Session 35):**
+- divider_aether: approved `deco-divider_aether_v01_seed-3242900390.png`
+- divider_engine: approved `deco-divider_engine_v01_seed-1937266984.png`
+- divider_neutral: approved `deco-divider_neutral_v01_seed-1446613470.png`
+- dropcap_aether: approved `deco-dropcap_aether_v01_seed-410393452.png`
+- dropcap_engine: approved `deco-dropcap_engine_v01_seed-3802097061.png`
+- dropcap_neutral: approved `deco-dropcap_neutral_v01_seed-668249163.png`
+- tailpiece: approved `deco-tailpiece_v01_seed-4223877310.png`
+- spot_tear: `deco-spot_tear_v01_seed-393502412.png` kept in generated/ as the fallback while v02 rerolls
+- spot_misfire: `deco-spot_misfire_v01_seed-3558449554.png` kept in generated/ as the fallback while v02 rerolls
+- Everything else from v01 archived. divider-neutral web copy recoloured navy → bone (web only).
+- Web copies: `web/assets/art/ornaments/{divider,dropcap}-{aether,galvanic,neutral}.webp` and `tailpiece.webp` (tailpiece cut with `--main-only` to drop faint corner marks). Wired in via `[data-theme]` CSS: section dividers, the chapter-opening drop cap, and the end-of-chapter tailpiece. Split-theme chapters use the neutral set. PDF wiring waits for the print upscale.
+- Spot rerolls queued as v02 (4 seeds each) with revised prompts in `tools/deco_suite.py`.
