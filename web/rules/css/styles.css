@@ -577,11 +577,48 @@ body::before {
   margin: 2.5rem 0 0.4rem;
 }
 
+/* ── Deco ornaments (Wave 1, Session 35; cut-outs from tools/cutout.py) ── */
+[data-theme] {
+  --divider-art: url(../../assets/art/ornaments/divider-neutral.webp);
+  --dropcap-art: url(../../assets/art/ornaments/dropcap-neutral.webp);
+}
+[data-theme="aether"] {
+  --divider-art: url(../../assets/art/ornaments/divider-aether.webp);
+  --dropcap-art: url(../../assets/art/ornaments/dropcap-aether.webp);
+}
+[data-theme="galvanic"] {
+  --divider-art: url(../../assets/art/ornaments/divider-galvanic.webp);
+  --dropcap-art: url(../../assets/art/ornaments/dropcap-galvanic.webp);
+}
+
 .page-content .section-divider {
   border: none;
-  border-top: 2px solid var(--theme-accent);
-  margin: 3rem 0;
-  opacity: 0.4;
+  height: 2.6rem;
+  max-width: 30rem;
+  margin: 3rem auto;
+  background: var(--divider-art) center / contain no-repeat;
+}
+
+/* Drop cap: the chapter's opening paragraph, letter typeset over the theme's tile */
+.page-content .page-hero + p { border-left: 0; padding-left: 0; }
+.page-content .page-hero + p::first-letter {
+  float: left;
+  font-family: 'Playfair Display', serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 2.9em;
+  line-height: 1;
+  color: #17140f;
+  padding: 0.32em 0.36em 0.26em;
+  margin: 0.08em 0.5rem 0 0;
+  background: var(--dropcap-art) center / 100% 100% no-repeat;
+}
+
+/* Tailpiece: the end-of-chapter mark */
+.page-content .tailpiece {
+  height: 5.5rem;
+  margin: 3.5rem auto 1rem;
+  background: url(../../assets/art/ornaments/tailpiece.webp) center / contain no-repeat;
 }
 
 .page-content .spell-meta {
