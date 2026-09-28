@@ -175,3 +175,5 @@ Direction D2 (Deco Lithograph, six-ink palette, cyan = Aether, amber = Engine). 
 - All other v01/v02 spot renders archived, including the v01 fallbacks.
 - Web copies `web/assets/art/spots/{tear,misfire}.webp`, cut with `--hull` (keeps the round vignette whole; 8a's pale crack reached the top edge and would otherwise have been keyed out) and, for the Tear, `--light-to-cyan` (Flux painted the crack bone-white; the palette says Aether light is cyan).
 - Placed with the new `{% spot %}` shortcode: the Tear beside "The Tear" (Ch 02), the misfire beside "The Malfunction System" (Ch 11). Floated right; centred and narrower on phones.
+
+**Print upscale (Session 35):** `tools/upscale_print.py` ran every approved PNG (except the transparent wordmark) through ComfyUI's RealESRGAN_x4plus_anime_6B into `art/{type}/print/{stem}_x4.png` (gitignored). The model keeps the flat fields and edges crisp, but drops the faint paper grain and smooths skin slightly. Plates are now 3328×4864. `scripts/build-pdf.py` cuts the chapter-opener and front-matter frames from these at the web crop (recovered by matching: 782×1168 at x 24–26, y 24 on the master), about 370 DPI on letter.

@@ -13,6 +13,7 @@ art/*/approved/*.webp
 art/*/archived/*.png
 art/*/archived/*.jpg
 art/*/archived/*.webp
+art/*/print/
 
 # S3 sync config (machine-specific bucket name)
 .art-sync.conf
