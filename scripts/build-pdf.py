@@ -106,6 +106,41 @@ def render_mermaid(content):
     return content
 
 
+# Print-resolution frames: 4x upscales (tools/upscale_print.py) cut to the same box the web
+# copies use. (x, y, w, h) on the 832x1216 master, recovered by matching the web frames.
+PRINT_FRAMES = {
+    "aether": ("proto-D2-decolitho_frame_aether_v02_seed-131618214", (26, 24, 782, 1168)),
+    "galvanic": ("proto-D2-decolitho_frame_galvanic_v02_seed-1166265576", (26, 24, 782, 1168)),
+    "split": ("proto-D2-decolitho_frame_split_v02_seed-2427297017", (24, 24, 782, 1168)),
+    "neutral": ("proto-D2-decolitho_frame_neutral_v02_seed-1553240695", (26, 24, 782, 1168)),
+    "front": ("proto-B-twoinks_frame_v01_seed-3867070072", (24, 24, 782, 1168)),
+}
+
+
+def print_art_css():
+    """Cut print-resolution frames and return CSS that points the openers and front matter
+    at them. Frames without a 4x master keep the web copy from print.css."""
+    art_dir = OUTPUT_DIR / "art"
+    art_dir.mkdir(exist_ok=True)
+    rules = []
+    for name, (stem, (x, y, w, h)) in PRINT_FRAMES.items():
+        master = ROOT / "art" / "decorative" / "print" / f"{stem}_x4.png"
+        if not master.exists():
+            continue
+        out = art_dir / f"frame-{name}.jpg"
+        if not out.exists() or out.stat().st_mtime < master.stat().st_mtime:
+            subprocess.run(["magick", str(master), "-crop", f"{w * 4}x{h * 4}+{x * 4}+{y * 4}", "+repage",
+                            "-quality", "92", str(out)], check=True)
+        if name == "front":
+            for page in ("title-page", "toc-page"):
+                rules.append(f"@page {page} {{ background: #efe6d2 url({out.as_uri()}) center / 100% 100% no-repeat; }}")
+        else:
+            rules.append(f"@page opener-{name} {{ background: #0e1a2b url({out.as_uri()}) center / cover no-repeat; }}")
+    if rules:
+        print(f"  Print-resolution frames: {len(rules)} page rule(s)")
+    return "\n".join(rules)
+
+
 def build_toc(pages):
     """Build a table of contents with target-counter references."""
     entries = []
@@ -137,6 +172,7 @@ def build_combined_html(pages):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{css_path}">
+<style>{print_art_css()}</style>
 </head>
 <body>
 """)
@@ -179,6 +215,9 @@ def build_combined_html(pages):
 
         content = prefix_ids(content, page["id"])
         content = render_mermaid(content)
+        # Chapter pages link images relative to _site/rules/; the combined file lives in print/
+        assets = (ROOT / "_site" / "assets").as_uri()
+        content = content.replace('src="../assets/', f'src="{assets}/').replace('src="/assets/', f'src="{assets}/')
         parts.append(f'<section class="chapter" id="chapter-{page["id"]}">')
         parts.append(content)
         parts.append("</section>\n")
