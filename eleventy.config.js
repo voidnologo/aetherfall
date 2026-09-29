@@ -57,6 +57,21 @@ module.exports = function (eleventyConfig) {
     return `<figure class="spot spot-${side}"><img src="../assets/art/spots/${name}.webp" alt="${alt}" loading="lazy"></figure>`;
   });
 
+  // ── Section dividers (chapter art standard, docs/art/deco-suite-plan.md §5) ──
+  // Every rulebook chapter gets a divider between its top-level sections: the <h2 id> sections
+  // when there are two or more, otherwise the <h3 id> sections. Chapters whose text already
+  // groups sections with <hr class="section-divider"> keep their own grouping.
+  eleventyConfig.addTransform("section-dividers", function (content) {
+    const out = this.page.outputPath || "";
+    if (!out.includes("/rules/") || !out.endsWith(".html") || !content.includes('class="page-hero')) return content;
+    if (content.includes('class="section-divider"')) return content;
+    const h2 = (content.match(/<h2 id=/g) || []).length;
+    const tag = h2 >= 2 ? "h2" : "h3";
+    let seen = 0;
+    return content.replace(new RegExp(`<${tag} id=`, "g"), (m) =>
+      seen++ === 0 ? m : `<hr class="section-divider" aria-hidden="true">\n    ${m}`);
+  });
+
   // ── Flat URLs: output rules/economy.html, not rules/economy/index.html ──
   eleventyConfig.addGlobalData("permalink", function () {
     return (data) => `${data.page.filePathStem}.html`;
