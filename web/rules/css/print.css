@@ -917,4 +917,5 @@ h2, h3, h4, h5 {
 .spot { width: 2.2in; margin: 0 0 0.12in; }
 .spot-right { float: right; margin-left: 0.18in; }
 .spot-left  { float: left;  margin-right: 0.18in; }
+.spot-center { width: 1.8in; margin: 0.08in auto 0.14in; }
 .spot img { display: block; width: 100%; }

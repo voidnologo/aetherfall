@@ -177,3 +177,27 @@ Direction D2 (Deco Lithograph, six-ink palette, cyan = Aether, amber = Engine). 
 - Placed with the new `{% spot %}` shortcode: the Tear beside "The Tear" (Ch 02), the misfire beside "The Malfunction System" (Ch 11). Floated right; centred and narrower on phones.
 
 **Print upscale (Session 35):** `tools/upscale_print.py` ran every approved PNG (except the transparent wordmark) through ComfyUI's RealESRGAN_x4plus_anime_6B into `art/{type}/print/{stem}_x4.png` (gitignored). The model keeps the flat fields and edges crisp, but drops the faint paper grain and smooths skin slightly. Plates are now 3328×4864. `scripts/build-pdf.py` cuts the chapter-opener and front-matter frames from these at the web crop (recovered by matching: 782×1168 at x 24–26, y 24 on the master), about 370 DPI on letter.
+
+**Deco Wave 2 picks (Session 35):**
+- spot_table (b): approved `deco-spot_table_v01_seed-3721935359.png`
+- spot_tram (c): approved `deco-spot_tram_v01_seed-3737571921.png`
+- spot_charter (a): approved `deco-spot_charter_v01_seed-2242206275.png`
+- spot_kit (c): approved `deco-spot_kit_v01_seed-414637642.png`
+- spot_wounded (c): approved `deco-spot_wounded_v01_seed-720151363.png`
+- spot_lockpicks (b): approved `deco-spot_lockpicks_v01_seed-2658636431.png`
+- spot_magnifier (a): approved `deco-spot_magnifier_v01_seed-2366548109.png`
+- spot_handshake (b): approved `deco-spot_handshake_v01_seed-3384063528.png`
+- spot_scholarly (c): approved `deco-spot_scholarly_v01_seed-3503377162.png`
+- spot_wild (a): approved `deco-spot_wild_v01_seed-1932770582.png`
+- spot_wild (c): approved `deco-spot_wild_v01_seed-942427744.png`
+- spot_street (a): approved `deco-spot_street_v01_seed-2393896153.png`
+- spot_timing (a): approved `deco-spot_timing_v01_seed-2551328071.png`
+- sigil_aetheric (a): approved `deco-sigil_aetheric_v01_seed-1260207907.png`
+- sigil_vivimancy (c): approved `deco-sigil_vivimancy_v01_seed-303236413.png`
+- sigil_warding (c): approved `deco-sigil_warding_v01_seed-3120030221.png`
+- sigil_divination (c): approved `deco-sigil_divination_v01_seed-3921553124.png`
+- sigil_transmutation (b): approved `deco-sigil_transmutation_v01_seed-3327963557.png`
+- sigil_ley (a): approved `deco-sigil_ley_v01_seed-1587638764.png`
+- spot_wild: both a and c approved (a in use, c alternate). spot_street a approved as a fallback; reroll queued. spot_dice: none approved; reroll queued. Everything else archived.
+- Web copies: `web/assets/art/spots/{table,tram,charter,kit,wounded,lockpicks,magnifier,handshake,scholarly,wild,timing}.webp` (`--hull`) and `web/assets/art/sigils/*.webp` (`--main-only`). Spots are placed with `{% spot %}` beside their planned sections; the three Skills spots use the new `center` option, because a full-width table follows each heading. School emblems appear on the Grimoire school headings and the Ch 08 school list (CSS only).
+- **Lamps (user feedback):** nearly every Wave 2 spot has a lamp. Causes: lamp-heavy subject prompts, plus the D2 prefix's "light drawn as hard-edged rays and pools" and "arc lamps ... warm lamplight". `SPOT_STYLE` now has its own lamp-free prefix, asks for varied light (daylight, moonlight, window light, firelight), and says no lamps unless the scene names one.
