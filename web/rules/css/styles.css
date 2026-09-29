@@ -619,7 +619,26 @@ body::before {
 .page-content .spot-right { float: right; margin-left: 1.5rem; }
 .page-content .spot-left  { float: left;  margin-right: 1.5rem; }
 .page-content .spot img { display: block; width: 100%; height: auto; }
+.page-content .spot-center { width: min(12rem, 50%); margin: 0.5rem auto 1.2rem; }  /* where a table follows at once */
 .page-content h2, .page-content h3 { clear: both; }
+
+/* School emblems (Deco Wave 2): Grimoire school headings and the Ch 08 school list */
+.school-title::before,
+#schools + p + ul li::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  background: center / contain no-repeat;
+}
+.school-title::before { width: 2.4rem; height: 2.4rem; margin-right: 0.6rem; }
+#schools + p + ul > li { padding-left: 2.3rem; min-height: 1.7rem; }
+#schools + p + ul > li::before { width: 1.7rem; height: 1.7rem; top: -0.05rem; opacity: 1; transform: none; }
+#aetheric-manipulation::before, #schools + p + ul li:nth-child(1)::before { background-image: url(../../assets/art/sigils/aetheric.webp); }
+#vivimancy::before,             #schools + p + ul li:nth-child(2)::before { background-image: url(../../assets/art/sigils/vivimancy.webp); }
+#warding::before,               #schools + p + ul li:nth-child(3)::before { background-image: url(../../assets/art/sigils/warding.webp); }
+#divination::before,            #schools + p + ul li:nth-child(4)::before { background-image: url(../../assets/art/sigils/divination.webp); }
+#transmutation::before,         #schools + p + ul li:nth-child(5)::before { background-image: url(../../assets/art/sigils/transmutation.webp); }
+#ley-weaving::before,           #schools + p + ul li:nth-child(6)::before { background-image: url(../../assets/art/sigils/ley.webp); }
 
 /* Tailpiece: the end-of-chapter mark */
 .page-content .tailpiece {

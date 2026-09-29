@@ -48,14 +48,29 @@ ORNAMENT_STYLE = {
     ),
 }
 
+# Spot style (Session 35, after Wave 2): the D2 portrait prefix talks about light "drawn as
+# hard-edged rays and pools" and "arc lamps ... warm lamplight", and Flux answered with a lamp
+# in nearly every spot. This prefix keeps the palette rule without the lamp language, and asks
+# for varied light.
+SPOT_PREFIX = (
+    "A 1920s Art Deco travel poster lithograph in the style of Cassandre and WPA railway posters. "
+    "Flat printed color shapes, bold geometric simplification, strong diagonals, subtle "
+    "lithographic paper grain. Strict limited palette of six inks: deep midnight navy, warm bone "
+    "ivory, soot black, turquoise cyan, amber gold, and oxblood red. Turquoise cyan is used ONLY "
+    "for magical light, glowing crystals and supernatural energy. Amber gold is used ONLY for "
+    "galvanic machinery, electric sparks and fire. Everything ordinary is midnight navy, bone, "
+    "soot black and oxblood."
+)
 SPOT_STYLE = {
     "loras": [],
-    "prefix": DIRECTIONS["D2"]["prefix"],
+    "prefix": SPOT_PREFIX,
     "suffix": (
-        "Composed as a small self-contained vignette with an irregular organic outline, "
-        "floating on a plain, flat, empty bone ivory paper background with a generous empty "
-        "margin on every side; nothing touches the edges of the picture. No rectangular "
-        "border, no frame, no panel. " + DIRECTIONS["D2"]["suffix"]
+        "Lit by the scene's own light as described (daylight, moonlight, window light or firelight); "
+        "no lamps, lanterns or light fixtures unless the scene names one. "
+        "Composed as a single round vignette, a circle of picture floating on a plain, flat, "
+        "empty bone ivory paper background with a generous empty margin on every side; nothing "
+        "touches the edges of the picture. No rectangular border, no frame, no panel. "
+        + DIRECTIONS["D2"]["suffix"]
     ),
 }
 
@@ -148,6 +163,148 @@ PIECES = {
             "a curl of soot-black smoke spits sideways out of the revolver's cylinder, next to the "
             "hand. Nothing stands in front of the gun."
         ),
+    },
+
+    # ── Wave 2: spots for chapters 01–11 ──
+    "spot_table": {
+        "wave": 2, "art_type": "spots", "style": SPOT_STYLE, "width": 1024, "height": 1024,
+        "subject": (
+            "A round vignette seen from above at a slight angle: a worn wooden tavern table by "
+            "lamplight with two ten-sided dice, a holstered revolver, an open notebook of "
+            "geometric spell diagrams glowing faintly turquoise, a pencil, and a glass of beer. "
+            "Warm amber lamplight on one side, cold turquoise glow from the notebook on the other."
+        ),
+    },
+    "spot_tram": {
+        "wave": 2, "art_type": "spots", "style": SPOT_STYLE, "width": 1024, "height": 1024,
+        "subject": (
+            "A round vignette: an abandoned 1920s electric tram car standing on rusted rails in a "
+            "clearing, swallowed by giant Art Nouveau ivy, ferns and small glowing turquoise "
+            "crystals growing through its broken windows. Tall strange trees behind it. Quiet, "
+            "overgrown, wondrous."
+        ),
+    },
+    "spot_charter": {
+        "wave": 2, "art_type": "spots", "style": SPOT_STYLE, "width": 1024, "height": 1024,
+        "subject": (
+            "A round vignette still life on a patron's dark wooden desk: a folded parchment "
+            "charter with a large oxblood wax seal and ribbon, an iron key, a small stack of "
+            "coins and banknotes, and a brass desk lamp casting a warm pool of light. The "
+            "parchment is blank, with no writing."
+        ),
+    },
+    "spot_kit": {
+        "wave": 2, "art_type": "spots", "style": SPOT_STYLE, "width": 1024, "height": 1024,
+        "subject": (
+            "A round vignette seen from directly above: an adventurer's kit laid out neatly on a "
+            "narrow iron bed: a folded long coat, a leather holster, a notebook, a brass compass "
+            "on a cord, a small charm of turquoise crystal, heavy boots, a coil of rope."
+        ),
+    },
+    "spot_dice": {
+        # v02 (user, Session 35): v01 drew six-sided dice with pips under a lamp every time
+        "wave": 2, "version": 2, "art_type": "spots", "style": SPOT_STYLE, "width": 1024, "height": 1024,
+        "subject": (
+            "A round vignette: a gloved hand has just thrown two ten-sided gaming dice across a "
+            "green baize card table in afternoon daylight from a tall window. Each die is a "
+            "pentagonal trapezohedron, a long pointed shape made of ten kite-shaped faces, like "
+            "two five-sided pyramids joined point to point; one is bone white, one is oxblood red. "
+            "They tumble in mid-air with motion lines. Plain faces, no numbers, no pips."
+        ),
+    },
+    "spot_wounded": {
+        "wave": 2, "art_type": "spots", "style": SPOT_STYLE, "width": 1024, "height": 1024,
+        "subject": (
+            "A round vignette: a tired man in rolled shirtsleeves and braces sits on a wooden "
+            "crate in a dim back room, binding a wounded forearm with a strip of white bandage, "
+            "one end held in his teeth. A single hanging lamp throws a hard pool of warm light. "
+            "Oxblood stain on the cloth, nothing gory."
+        ),
+    },
+    "spot_lockpicks": {
+        "wave": 2, "art_type": "spots", "style": SPOT_STYLE, "width": 1024, "height": 1024,
+        "subject": (
+            "A round vignette close-up: two gloved hands working a pair of slender lockpicks into "
+            "the keyhole of an ornate Art Deco brass door lock, lit by a narrow beam of light."
+        ),
+    },
+    "spot_magnifier": {
+        "wave": 2, "art_type": "spots", "style": SPOT_STYLE, "width": 1024, "height": 1024,
+        "subject": (
+            "A round vignette close-up: a brass magnifying glass held over an old street map "
+            "marked with pins and string, the lens enlarging a small detail. Lamplight. The map "
+            "has streets and shapes only, no writing."
+        ),
+    },
+    "spot_handshake": {
+        "wave": 2, "art_type": "spots", "style": SPOT_STYLE, "width": 1024, "height": 1024,
+        "subject": (
+            "A round vignette: two hands shaking across a card table in a smoky club, one in a "
+            "fine suit cuff with a ring, one in a worn leather sleeve; playing cards and coins "
+            "scattered below. The cards are plain, with no symbols."
+        ),
+    },
+    "spot_scholarly": {
+        "wave": 2, "art_type": "spots", "style": SPOT_STYLE, "width": 1024, "height": 1024,
+        "subject": (
+            "A round vignette: a tall, gaunt man in round wire spectacles, waistcoat and long coat "
+            "kneels on a stone floor inside a precise chalk circle of geometric figures, one palm "
+            "raised; flat hard-edged turquoise light rises from the chalk lines in clean "
+            "geometric planes. Controlled and exact."
+        ),
+    },
+    "spot_wild": {
+        "wave": 2, "art_type": "spots", "style": SPOT_STYLE, "width": 1024, "height": 1024,
+        "subject": (
+            "A round vignette: a slight young woman with jagged jaw-length black hair and an "
+            "oversized canvas coat thrusts one open hand forward; turquoise light and whipping "
+            "Art Nouveau ivy tendrils erupt wildly from her palm. Her eyes glow faintly turquoise. "
+            "Raw, barely steered."
+        ),
+    },
+    "spot_street": {
+        # v02 (user, Session 35): v01 showed only the industrial half
+        "wave": 2, "version": 2, "art_type": "spots", "style": SPOT_STYLE, "width": 1024, "height": 1024,
+        "subject": (
+            "A round vignette, split sharply down the middle, at dusk: one cobbled street running "
+            "straight away from the viewer. The LEFT half of the picture is the Engine: soot-black "
+            "brick factories, smokestacks and a crackling electric pylon throwing amber sparks. The "
+            "RIGHT half is the Aether: a ruined old town swallowed by huge Art Nouveau ivy, with "
+            "tall glowing turquoise crystals growing out of the cobbles and turquoise light in the "
+            "sky above it. The two halves are equally weighted and meet along the street."
+        ),
+    },
+    "spot_timing": {
+        "wave": 2, "art_type": "spots", "style": SPOT_STYLE, "width": 1024, "height": 1024,
+        "subject": (
+            "A round vignette still life on a wooden crate: a hunting knife, three revolver "
+            "cartridges standing upright, and an open brass pocket watch, lit by a hard amber "
+            "work lamp. The watch face has no numerals, only tick marks."
+        ),
+    },
+    "sigil_aetheric": {
+        "wave": 2, "art_type": "decorative", "style": ORNAMENT_STYLE, "width": 1024, "height": 1024,
+        "subject": 'A circular Art Deco medallion emblem, like a stamped enamel badge: a thin double ring border in deep midnight navy around a flat bone disc, and in the centre a single bold symbol: a stylised open hand with hard-edged turquoise rays bending and radiating from the palm (raw force and energy). Simple, symmetrical, readable when printed small. One of a matching set of six.',
+    },
+    "sigil_vivimancy": {
+        "wave": 2, "art_type": "decorative", "style": ORNAMENT_STYLE, "width": 1024, "height": 1024,
+        "subject": 'A circular Art Deco medallion emblem, like a stamped enamel badge: a thin double ring border in deep midnight navy around a flat bone disc, and in the centre a single bold symbol: a single leaf whose veins form a tiny human heart, drawn in turquoise and oxblood (life and the body). Simple, symmetrical, readable when printed small. One of a matching set of six.',
+    },
+    "sigil_warding": {
+        "wave": 2, "art_type": "decorative", "style": ORNAMENT_STYLE, "width": 1024, "height": 1024,
+        "subject": 'A circular Art Deco medallion emblem, like a stamped enamel badge: a thin double ring border in deep midnight navy around a flat bone disc, and in the centre a single bold symbol: a tall pointed shield with a turquoise keyhole-shaped seal in its centre (protection and sealing). Simple, symmetrical, readable when printed small. One of a matching set of six.',
+    },
+    "sigil_divination": {
+        "wave": 2, "art_type": "decorative", "style": ORNAMENT_STYLE, "width": 1024, "height": 1024,
+        "subject": 'A circular Art Deco medallion emblem, like a stamped enamel badge: a thin double ring border in deep midnight navy around a flat bone disc, and in the centre a single bold symbol: a single stylised open eye with a turquoise star for its pupil and fine rays around it (perception and knowledge). Simple, symmetrical, readable when printed small. One of a matching set of six.',
+    },
+    "sigil_transmutation": {
+        "wave": 2, "art_type": "decorative", "style": ORNAMENT_STYLE, "width": 1024, "height": 1024,
+        "subject": 'A circular Art Deco medallion emblem, like a stamped enamel badge: a thin double ring border in deep midnight navy around a flat bone disc, and in the centre a single bold symbol: a cube turning into a crystal, half solid midnight block, half faceted turquoise crystal (altering matter). Simple, symmetrical, readable when printed small. One of a matching set of six.',
+    },
+    "sigil_ley": {
+        "wave": 2, "art_type": "decorative", "style": ORNAMENT_STYLE, "width": 1024, "height": 1024,
+        "subject": 'A circular Art Deco medallion emblem, like a stamped enamel badge: a thin double ring border in deep midnight navy around a flat bone disc, and in the centre a single bold symbol: three turquoise lines woven into a looping knot like threads on a loom (weaving magic itself). Simple, symmetrical, readable when printed small. One of a matching set of six.',
     },
 }
 
