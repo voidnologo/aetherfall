@@ -218,7 +218,7 @@ def build_combined_html(pages):
         # Chapter pages link images relative to _site/rules/; the combined file lives in print/
         assets = (ROOT / "_site" / "assets").as_uri()
         content = content.replace('src="../assets/', f'src="{assets}/').replace('src="/assets/', f'src="{assets}/')
-        parts.append(f'<section class="chapter" id="chapter-{page["id"]}">')
+        parts.append(f'<section class="chapter" id="chapter-{page["id"]}" data-theme="{page.get("theme", "neutral")}">')
         parts.append(content)
         parts.append("</section>\n")
 
