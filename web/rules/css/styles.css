@@ -647,6 +647,42 @@ body::before {
 .lead-portraits a:hover img, .lead-portraits a:focus-visible img { border-color: var(--theme-accent); }
 @media (max-width: 500px) { .lead-portraits { grid-template-columns: repeat(2, 1fr); } }
 
+/* Corner ornaments (Deco Wave 3): top-right and bottom-left of callouts and stat blocks.
+   ::before is the coloured edge bar, so both corners share ::after as two background layers. */
+[data-theme] {
+  --corner-tr: url(../../assets/art/ornaments/corner-deco-tr.webp);
+  --corner-bl: url(../../assets/art/ornaments/corner-deco-bl.webp);
+}
+[data-theme="aether"] {
+  --corner-tr: url(../../assets/art/ornaments/corner-nouveau-tr.webp);
+  --corner-bl: url(../../assets/art/ornaments/corner-nouveau-bl.webp);
+}
+.page-content .callout::after,
+.page-content .stat-block::after {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  pointer-events: none;
+  background: var(--corner-tr) top right / 2.4rem auto no-repeat, var(--corner-bl) bottom left / 2.4rem auto no-repeat;
+  opacity: 0.9;
+}
+
+.page-content .stat-block.has-portrait::after { background: var(--corner-tr) top right / 2.4rem auto no-repeat; }  /* keep the portrait clear */
+
+/* Zone badges on the quickstart's location labels */
+.location-block-badge::before {
+  content: "";
+  display: inline-block;
+  width: 1.35rem;
+  height: 1.35rem;
+  margin-right: 0.4rem;
+  vertical-align: -0.35rem;
+  background: center / contain no-repeat;
+}
+.location-block-badge.zone-galvanic::before { background-image: url(../../assets/art/badges/galvanic.webp); }
+.location-block-badge.zone-aetheric::before { background-image: url(../../assets/art/badges/aetheric.webp); }
+.location-block-badge.zone-neutral::before  { background-image: url(../../assets/art/badges/neutral.webp); }
+
 /* Tailpiece: the end-of-chapter mark */
 .page-content .tailpiece {
   height: 5.5rem;

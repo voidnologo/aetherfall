@@ -209,3 +209,31 @@ Direction D2 (Deco Lithograph, six-ink palette, cyan = Aether, amber = Engine). 
 **Deco Wave 2, round 3 (Session 35):**
 - spot_street v03 (Aether half with no buildings): approved `deco-spot_street_v03_seed-2577066863.png` (12b, in use) and `deco-spot_street_v03_seed-249387253.png` (12a, alternate; the user rated both "really good"). 12c/12d archived. The v01 stand-in stays approved but is replaced on the page.
 - spot_scales: approved `deco-spot_scales_v01_seed-3076497211.png` (13c); the other three archived. It is Ch 10's second spot, beside "What Moves the Balance".
+
+**Deco Wave 3 picks (Session 35):**
+- spot_operatives (c): approved `deco-spot_operatives_v01_seed-3769924337.png`
+- spot_silhouettes (c): approved `deco-spot_silhouettes_v01_seed-2686505075.png`
+- spot_backlash (b): approved `deco-spot_backlash_v01_seed-4208299250.png`
+- spot_knife (a): approved `deco-spot_knife_v01_seed-1120207886.png`
+- spot_market (a): approved `deco-spot_market_v01_seed-1318848101.png`
+- spot_collector (c): approved `deco-spot_collector_v01_seed-3318331926.png`
+- spot_airship (b): approved `deco-spot_airship_v01_seed-3090174293.png`
+- spot_watch (c): approved `deco-spot_watch_v01_seed-4148309664.png`
+- spot_ward (c): approved `deco-spot_ward_v01_seed-3435583711.png`
+- spot_vial (b): approved `deco-spot_vial_v01_seed-3978543307.png`
+- spot_rooftops (a): approved `deco-spot_rooftops_v01_seed-2140374313.png`
+- spot_informant (a): approved `deco-spot_informant_v01_seed-1099218142.png`
+- spot_notebook (c): approved `deco-spot_notebook_v01_seed-942639246.png`
+- spot_drawers (b): approved `deco-spot_drawers_v01_seed-2390427825.png`
+- spot_handler (b): approved `deco-spot_handler_v01_seed-4119848123.png`
+- spot_foundry (c): approved `deco-spot_foundry_v01_seed-785793098.png`
+- spot_tunnels (c): approved `deco-spot_tunnels_v01_seed-260121104.png`
+- corner_nouveau (a): approved `deco-corner_nouveau_v01_seed-2123906564.png`
+- corner_deco (a): approved `deco-corner_deco_v01_seed-2769526848.png`
+- badge_galvanic (b): approved `deco-badge_galvanic_v01_seed-1593863693.png`
+- badge_aetheric (b): approved `deco-badge_aetheric_v01_seed-3505952753.png`
+- badge_neutral (b): approved `deco-badge_neutral_v01_seed-2197070450.png`
+- spot_catalogue: none approved; v02 queued (galvanic pistol spelled out). spot_watch 9c trimmed to the circle on cut-out (fake text outside it). Everything else archived.
+- Web copies: 17 spots in `web/assets/art/spots/` (`--hull`; the watch also `--main-only` to drop fake text outside the circle); corners cropped to their top-left 60% before cut-out (Deco 20a had faint full-frame lines), with flipped `-tr`/`-bl` copies; badges in `web/assets/art/badges/`.
+- Corners: callouts and stat blocks get top-right and bottom-left corners via one `::after` with two background layers (`::before` is the edge bar). Aether chapters use Nouveau, all others Deco. Pregen cards keep only the top-right corner, so the portrait stays clear.
+- Zone badges: on the quickstart's location labels.
