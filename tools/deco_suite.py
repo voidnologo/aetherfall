@@ -344,8 +344,16 @@ PIECES = {
         "subject": 'A round vignette: a large man in a bowler hat and heavy overcoat stands at the door of a narrow terraced house on a grey rainy afternoon, holding a small ledger, while a worried face peers through the half-open door. Rain drawn as flat diagonal lines.',
     },
     "spot_catalogue": {
-        "wave": 3, "art_type": "spots", "style": SPOT_STYLE, "width": 1024, "height": 1024,
-        "subject": 'A flat catalogue plate of three weapons laid out side by side, seen from directly above, evenly spaced, like a 1920s mail-order catalogue illustration: a six-shot revolver, a hunting knife in its sheath, and a galvanic arc-pistol with a brass coil and amber glowing capacitor. No background scene, no table.',
+        # v02 (user, Session 35): v01's galvanic pistol didn't read as galvanic
+        "wave": 3, "version": 2, "art_type": "spots", "style": SPOT_STYLE, "width": 1024, "height": 1024,
+        "subject": (
+            "A flat catalogue plate on plain bone paper, seen from directly above, three objects laid "
+            "side by side and evenly spaced like a 1920s mail-order catalogue illustration, no table, "
+            "no scene: on the left a plain black six-shot revolver; in the middle a hunting knife in a "
+            "leather sheath; on the right a strange galvanic arc-pistol, clearly a machine, not a "
+            "revolver: a fat brass barrel wound with copper coils, a glass capacitor bulb glowing amber "
+            "on top, and bright amber electric sparks crackling at its muzzle."
+        ),
     },
     "spot_airship": {
         "wave": 3, "art_type": "spots", "style": SPOT_STYLE, "width": 1024, "height": 1024,
