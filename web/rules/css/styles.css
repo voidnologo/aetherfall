@@ -663,11 +663,11 @@ body::before {
   position: absolute;
   inset: 5px;
   pointer-events: none;
-  background: var(--corner-tr) top right / 2.4rem auto no-repeat, var(--corner-bl) bottom left / 2.4rem auto no-repeat;
+  background: var(--corner-tr) top right / 1.3rem auto no-repeat, var(--corner-bl) bottom left / 1.3rem auto no-repeat;  /* fits inside the padding */
   opacity: 0.9;
 }
 
-.page-content .stat-block.has-portrait::after { background: var(--corner-tr) top right / 2.4rem auto no-repeat; }  /* keep the portrait clear */
+.page-content .stat-block.has-portrait::after { background: var(--corner-tr) top right / 1.3rem auto no-repeat; }  /* keep the portrait clear */
 
 /* Zone badges on the quickstart's location labels */
 .location-block-badge::before {

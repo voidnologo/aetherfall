@@ -449,7 +449,7 @@ tr:last-child td {
 
 /* ── Callout Boxes ────────────────────────────────────────────── */
 .callout {
-  padding: 0.8em 1em;
+  padding: 0.95em 1.25em;
   margin: 1em 0;
   border-radius: 0;
   border: 0.5pt solid #ddd;
@@ -547,8 +547,11 @@ tr:last-child td {
 /* ── Section Divider ──────────────────────────────────────────── */
 .section-divider {
   border: none;
-  border-top: 1pt solid #ccc;
-  margin: 1.5em 0;
+  height: 0.3in;
+  width: 3.6in;
+  margin: 1.2em auto;
+  clear: both;
+  background: var(--divider-art) center / contain no-repeat;
 }
 
 /* ── Sheet Mock (character sheet examples) ────────────────────── */
@@ -924,3 +927,109 @@ h2, h3, h4, h5 {
 .lead-portraits { display: flex; gap: 0.12in; margin: 0.1in 0 0.2in; }
 .lead-portraits a { flex: 1; text-align: center; font-size: 8pt; color: #333; text-decoration: none; }
 .lead-portraits img { display: block; width: 100%; height: 1.9in; object-fit: cover; object-position: center 12%; margin-bottom: 0.04in; }
+
+/* ── Deco ornaments (print) ─────────────────────────────────────
+   Same set as the web, chosen by the chapter's theme (data-theme from build-pdf.py).
+   Print uses the neutral divider's original navy ink (the web copy is recoloured to bone). */
+.chapter {
+  --divider-art: url(../../assets/art/ornaments/divider-neutral-print.webp);
+  --dropcap-art: url(../../assets/art/ornaments/dropcap-neutral.webp);
+  --corner-tr: url(../../assets/art/ornaments/corner-deco-tr.webp);
+  --corner-bl: url(../../assets/art/ornaments/corner-deco-bl.webp);
+}
+.chapter[data-theme="aether"] {
+  --divider-art: url(../../assets/art/ornaments/divider-aether.webp);
+  --dropcap-art: url(../../assets/art/ornaments/dropcap-aether.webp);
+  --corner-tr: url(../../assets/art/ornaments/corner-nouveau-tr.webp);
+  --corner-bl: url(../../assets/art/ornaments/corner-nouveau-bl.webp);
+}
+.chapter[data-theme="galvanic"] {
+  --divider-art: url(../../assets/art/ornaments/divider-galvanic.webp);
+  --dropcap-art: url(../../assets/art/ornaments/dropcap-galvanic.webp);
+}
+
+/* Drop cap on the chapter's opening paragraph */
+.page-hero + p { border-left: 0; padding-left: 0; }
+.page-hero + p::first-letter {
+  /* Raised initial, not a float: WeasyPrint doesn't wrap the first line around a floated
+     ::first-letter, so the text ran over the tile. */
+  font-family: 'Playfair Display', serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 2.2em;
+  line-height: 1;
+  color: #17140f;
+  padding: 0.18em 0.26em 0.12em;
+  margin-right: 0.04in;
+  background: var(--dropcap-art) center / 100% 100% no-repeat;
+}
+
+/* Tailpiece */
+.tailpiece {
+  height: 0.75in;
+  margin: 0.3in auto 0;
+  clear: both;
+  break-inside: avoid;
+  background: url(../../assets/art/ornaments/tailpiece.webp) center / contain no-repeat;
+}
+
+/* Corners on callouts and stat blocks (pregen cards: top-right only, portrait stays clear) */
+.callout, .stat-block { position: relative; }
+.callout::after, .stat-block::after {
+  content: "";
+  position: absolute;
+  top: 2pt; right: 2pt; bottom: 2pt; left: 2pt;
+  background: var(--corner-tr) top right / 0.15in auto no-repeat, var(--corner-bl) bottom left / 0.15in auto no-repeat;
+}
+.stat-block.has-portrait::after { background: var(--corner-tr) top right / 0.15in auto no-repeat; }
+
+/* School emblems (ids are prefixed with the chapter id in the PDF) */
+h4.school-title::before {
+  content: "";
+  display: inline-block;
+  width: 0.3in;
+  height: 0.3in;
+  margin-right: 0.08in;
+  vertical-align: -0.08in;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+[id$="--aetheric-manipulation"]::before { background-image: url(../../assets/art/sigils/aetheric.webp); }
+[id$="--vivimancy"]::before { background-image: url(../../assets/art/sigils/vivimancy.webp); }
+[id$="--warding"]::before { background-image: url(../../assets/art/sigils/warding.webp); }
+[id$="--divination"]::before { background-image: url(../../assets/art/sigils/divination.webp); }
+[id$="--transmutation"]::before { background-image: url(../../assets/art/sigils/transmutation.webp); }
+[id$="--ley-weaving"]::before { background-image: url(../../assets/art/sigils/ley.webp); }
+
+/* Zone badges on location labels */
+.location-block-badge::before {
+  content: "";
+  display: inline-block;
+  width: 0.2in;
+  height: 0.2in;
+  margin-right: 0.05in;
+  vertical-align: -0.06in;
+  background: center / contain no-repeat;
+}
+.location-block-badge.zone-galvanic::before { background-image: url(../../assets/art/badges/galvanic.webp); }
+.location-block-badge.zone-aetheric::before { background-image: url(../../assets/art/badges/aetheric.webp); }
+.location-block-badge.zone-neutral::before  { background-image: url(../../assets/art/badges/neutral.webp); }
+
+/* School list in Ch 08 */
+[id$="--schools"] + p + ul { list-style: none; padding-left: 0; }
+[id$="--schools"] + p + ul li::before {
+  content: "";
+  display: inline-block;
+  width: 0.2in;
+  height: 0.2in;
+  margin-right: 0.07in;
+  vertical-align: -0.05in;
+  background: center / contain no-repeat;
+}
+[id$="--schools"] + p + ul li:nth-child(1)::before { background-image: url(../../assets/art/sigils/aetheric.webp); }
+[id$="--schools"] + p + ul li:nth-child(2)::before { background-image: url(../../assets/art/sigils/vivimancy.webp); }
+[id$="--schools"] + p + ul li:nth-child(3)::before { background-image: url(../../assets/art/sigils/warding.webp); }
+[id$="--schools"] + p + ul li:nth-child(4)::before { background-image: url(../../assets/art/sigils/divination.webp); }
+[id$="--schools"] + p + ul li:nth-child(5)::before { background-image: url(../../assets/art/sigils/transmutation.webp); }
+[id$="--schools"] + p + ul li:nth-child(6)::before { background-image: url(../../assets/art/sigils/ley.webp); }
