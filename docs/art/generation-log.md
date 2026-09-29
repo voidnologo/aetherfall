@@ -205,3 +205,7 @@ Direction D2 (Deco Lithograph, six-ink palette, cyan = Aether, amber = Engine). 
 **Deco Wave 2, round 2 (Session 35):**
 - spot_dice (5b): approved `deco-spot_dice_v02_seed-3379016794.png` (six-sided dice are fine, per the user). Other v02 dice archived.
 - spot_street: the user liked none of v02 (all four archived). The v01 fallback `deco-spot_street_v01_seed-2393896153.png` (12z) goes in as a stand-in, but both sides read industrial (power lines, lamps, stacks). v03 (Aether half with no buildings) and an alternative subject, `spot_scales` (a balance scale: cog vs crystal), are queued.
+
+**Deco Wave 2, round 3 (Session 35):**
+- spot_street v03 (Aether half with no buildings): approved `deco-spot_street_v03_seed-2577066863.png` (12b, in use) and `deco-spot_street_v03_seed-249387253.png` (12a, alternate; the user rated both "really good"). 12c/12d archived. The v01 stand-in stays approved but is replaced on the page.
+- spot_scales: approved `deco-spot_scales_v01_seed-3076497211.png` (13c); the other three archived. It is Ch 10's second spot, beside "What Moves the Balance".
