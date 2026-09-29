@@ -263,15 +263,26 @@ PIECES = {
         ),
     },
     "spot_street": {
-        # v02 (user, Session 35): v01 showed only the industrial half
-        "wave": 2, "version": 2, "art_type": "spots", "style": SPOT_STYLE, "width": 1024, "height": 1024,
+        # v03 (user, Session 35): v01/v02 read industrial on both sides (power lines, lamps,
+        # stacks). The Aether half now has no buildings at all.
+        "wave": 2, "version": 3, "art_type": "spots", "style": SPOT_STYLE, "width": 1024, "height": 1024,
         "subject": (
-            "A round vignette, split sharply down the middle, at dusk: one cobbled street running "
-            "straight away from the viewer. The LEFT half of the picture is the Engine: soot-black "
-            "brick factories, smokestacks and a crackling electric pylon throwing amber sparks. The "
-            "RIGHT half is the Aether: a ruined old town swallowed by huge Art Nouveau ivy, with "
-            "tall glowing turquoise crystals growing out of the cobbles and turquoise light in the "
-            "sky above it. The two halves are equally weighted and meet along the street."
+            "A round vignette split exactly down the middle by a single cobbled road running away "
+            "from the viewer. LEFT of the road: a soot-black brick factory wall, one smokestack and "
+            "amber electric sparks, the only man-made things in the picture. RIGHT of the road: no "
+            "buildings at all, only a deep wild forest of giant Art Nouveau ivy, ferns and tall "
+            "glowing turquoise crystals growing out of the ground, with turquoise light between "
+            "the trees. No power lines, no poles, no streetlights, no lamps on the right side."
+        ),
+    },
+    "spot_scales": {
+        # Alternative for the same slot (Ch 10): the balance as a still life, so the halves can't blur
+        "wave": 2, "art_type": "spots", "style": SPOT_STYLE, "width": 1024, "height": 1024,
+        "subject": (
+            "A round vignette still life against a plain deep midnight navy background: an old brass "
+            "balance scale, perfectly level. In the left pan sits a riveted iron cog throwing a few "
+            "amber electric sparks. In the right pan sits a single glowing turquoise crystal wrapped "
+            "in a curl of Art Nouveau ivy. Symmetrical, simple, bold. Moonlight, no lamps."
         ),
     },
     "spot_timing": {
