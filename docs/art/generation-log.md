@@ -237,3 +237,4 @@ Direction D2 (Deco Lithograph, six-ink palette, cyan = Aether, amber = Engine). 
 - Web copies: 17 spots in `web/assets/art/spots/` (`--hull`; the watch also `--main-only` to drop fake text outside the circle); corners cropped to their top-left 60% before cut-out (Deco 20a had faint full-frame lines), with flipped `-tr`/`-bl` copies; badges in `web/assets/art/badges/`.
 - Corners: callouts and stat blocks get top-right and bottom-left corners via one `::after` with two background layers (`::before` is the edge bar). Aether chapters use Nouveau, all others Deco. Pregen cards keep only the top-right corner, so the portrait stays clear.
 - Zone badges: on the quickstart's location labels.
+- spot_catalogue v02 (7c): approved `deco-spot_catalogue_v02_seed-3104587837.png`; the other three archived. Placed beside "Melee Weapons" (Ch 13).
