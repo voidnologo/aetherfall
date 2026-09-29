@@ -620,7 +620,7 @@ body::before {
 .page-content .spot-left  { float: left;  margin-right: 1.5rem; }
 .page-content .spot img { display: block; width: 100%; height: auto; }
 .page-content .spot-center { width: min(12rem, 50%); margin: 0.5rem auto 1.2rem; }  /* where a table follows at once */
-.page-content h2, .page-content h3 { clear: both; }
+.page-content h2, .page-content h3, .page-content .section-divider { clear: both; }
 
 /* School emblems (Deco Wave 2): Grimoire school headings and the Ch 08 school list */
 .school-title::before,
@@ -639,6 +639,13 @@ body::before {
 #divination::before,            #schools + p + ul li:nth-child(4)::before { background-image: url(../../assets/art/sigils/divination.webp); }
 #transmutation::before,         #schools + p + ul li:nth-child(5)::before { background-image: url(../../assets/art/sigils/transmutation.webp); }
 #ley-weaving::before,           #schools + p + ul li:nth-child(6)::before { background-image: url(../../assets/art/sigils/ley.webp); }
+
+/* Character Sheet page: the four leads, each linking to their pregen sheet */
+.lead-portraits { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.9rem; margin: 1.5rem 0 2rem; }
+.lead-portraits a { display: grid; gap: 0.45rem; text-align: center; text-decoration: none; color: var(--text-dim); font-family: 'Cormorant Garamond', serif; font-size: 0.95rem; letter-spacing: 0.04em; }
+.lead-portraits img { width: 100%; aspect-ratio: 2 / 3; object-fit: cover; object-position: center 12%; border: 1px solid var(--glass-border); border-radius: 4px; transition: border-color 0.2s; }
+.lead-portraits a:hover img, .lead-portraits a:focus-visible img { border-color: var(--theme-accent); }
+@media (max-width: 500px) { .lead-portraits { grid-template-columns: repeat(2, 1fr); } }
 
 /* Tailpiece: the end-of-chapter mark */
 .page-content .tailpiece {

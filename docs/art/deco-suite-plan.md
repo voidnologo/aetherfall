@@ -85,3 +85,42 @@ Full-page narrative scenes (832×1216 → 300 DPI upscale). Candidates: the four
 | **4: Big pieces** | Plates (vignettes if revived) | Most expensive, least modular |
 
 Each wave: generate 3 seeds per piece → comparison page → user approves → cut-out → wire in → PR.
+
+---
+
+## 5. Chapter art standard (user, Session 35)
+
+Every page in the rulebook gets the same treatment, applied by templates and the build, not by hand:
+
+| Element | Rule |
+|---|---|
+| Crown | Every chapter (theme frame, from `pages.json`) |
+| Drop cap | The chapter's opening paragraph |
+| Section dividers | Between every top-level section: the `<h2>` sections if the chapter has two or more, otherwise the `<h3>` sections. Chapters whose text already groups sections with `<hr class="section-divider">` keep that grouping. Inserted by a build transform. |
+| Spots | About one per four top-level sections: at least 1, at most 3. The Grimoire's six school emblems count as its art. The Character Sheet page shows the four lead portraits. |
+| Corner ornaments | Stat blocks and callouts (both, to compare; user may trim to one later) |
+| Tailpiece | End of every chapter |
+
+**Variety rule (user):** lamps and lamplight are never the focus; occasionally present is fine. Mix people, places, daylight and night; limit tabletop still lifes.
+
+### Wave 3 (reworked with the user, Session 35)
+
+Spots to reach the standard (existing spots in brackets):
+
+| Ch | New spots |
+|---|---|
+| 03 Societies [charter] | Operatives of a Society crossing a rail yard in daylight |
+| 04 Creating [kit] | Four very different adventurers seen in silhouette against a dawn sky |
+| 08 Magic [scholarly, wild] | Backlash: a caster thrown back as their own spell recoils |
+| 10 World Between [street stand-in] | The balance scale (queued as `spot_scales`) |
+| 11 Combat [misfire, timing] | A knife fighter closing on a gunman still drawing, in a sunlit courtyard |
+| 12 Coin & Commerce | A busy daytime market street: a pawnbroker's shopfront, banknotes changing hands · a debt collector at a door |
+| 13 Arms & Equipment | Catalogue plate: revolver, hunting knife, galvanic arc-pistol, flat on bone · a small airship over rooftops by day, a motorcar below |
+| 14 Artifacts | A pocket watch leaking cyan light, held in a gloved hand outdoors · a ward charm above a doorway seen from the street · a figure drinking from a vial, cyan glow at the throat |
+| 15 Running the Game | A rooftop chase by moonlight · an informant leaning from a doorway at noon |
+| 16 Quick Reference | An operative checking a pocket notebook while walking a busy street |
+| 17 Table Index | A clerk pulling a drawer from a wall of card-catalogue drawers, daylight from high windows |
+| 18 GM Tools | A handler seen from behind at a tall window over the city, maps pinned around |
+| QS The Ashwick Job | The decommissioned foundry · the smuggling tunnels, lit by crystals |
+
+Ornaments: corner pieces ×2 (Nouveau, Deco), zone badges ×3.

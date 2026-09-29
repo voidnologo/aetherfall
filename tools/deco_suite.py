@@ -317,6 +317,100 @@ PIECES = {
         "wave": 2, "art_type": "decorative", "style": ORNAMENT_STYLE, "width": 1024, "height": 1024,
         "subject": 'A circular Art Deco medallion emblem, like a stamped enamel badge: a thin double ring border in deep midnight navy around a flat bone disc, and in the centre a single bold symbol: three turquoise lines woven into a looping knot like threads on a loom (weaving magic itself). Simple, symmetrical, readable when printed small. One of a matching set of six.',
     },
+
+    # ── Wave 3 (Session 35): chapter art standard + variety rule; no lamp focus ──
+    "spot_operatives": {
+        "wave": 3, "art_type": "spots", "style": SPOT_STYLE, "width": 1024, "height": 1024,
+        "subject": 'A round vignette in bright morning daylight: four Society operatives in long coats and hats stride together across a busy rail yard between steaming locomotives, seen from a low angle, purposeful. Big sky.',
+    },
+    "spot_silhouettes": {
+        "wave": 3, "art_type": "spots", "style": SPOT_STYLE, "width": 1024, "height": 1024,
+        "subject": 'A round vignette: four very different adventurers standing on a hilltop in silhouette against a huge dawn sky: a broad man with a revolver on his hip, a slight young woman with wild hair and a faint turquoise glow at one hand, a tall thin man with a walking stick and satchel, and a composed woman in a long coat. Strong, simple shapes.',
+    },
+    "spot_backlash": {
+        "wave": 3, "art_type": "spots", "style": SPOT_STYLE, "width": 1024, "height": 1024,
+        "subject": 'A round vignette: a caster in a dark coat is thrown backwards off their feet in an empty stone courtyard at dusk as their own spell recoils on them: a jagged burst of turquoise light snaps back into their chest, cracks of turquoise light running up their arms. Dynamic diagonal composition.',
+    },
+    "spot_knife": {
+        "wave": 3, "art_type": "spots", "style": SPOT_STYLE, "width": 1024, "height": 1024,
+        "subject": 'A round vignette in a sunlit whitewashed courtyard at noon: a quick, lean knife fighter lunges low and close at a startled gunman who is still drawing his revolver from its holster. Hard black noon shadows on the ground. Frozen instant of motion, diagonal composition.',
+    },
+    "spot_market": {
+        "wave": 3, "art_type": "spots", "style": SPOT_STYLE, "width": 1024, "height": 1024,
+        "subject": "A round vignette of a busy 1920s market street in daylight: striped awnings, a pawnbroker's shopfront with three brass balls hanging over the door, crowds in hats and coats, and in the foreground two hands passing a folded banknote. No readable signs.",
+    },
+    "spot_collector": {
+        "wave": 3, "art_type": "spots", "style": SPOT_STYLE, "width": 1024, "height": 1024,
+        "subject": 'A round vignette: a large man in a bowler hat and heavy overcoat stands at the door of a narrow terraced house on a grey rainy afternoon, holding a small ledger, while a worried face peers through the half-open door. Rain drawn as flat diagonal lines.',
+    },
+    "spot_catalogue": {
+        "wave": 3, "art_type": "spots", "style": SPOT_STYLE, "width": 1024, "height": 1024,
+        "subject": 'A flat catalogue plate of three weapons laid out side by side, seen from directly above, evenly spaced, like a 1920s mail-order catalogue illustration: a six-shot revolver, a hunting knife in its sheath, and a galvanic arc-pistol with a brass coil and amber glowing capacitor. No background scene, no table.',
+    },
+    "spot_airship": {
+        "wave": 3, "art_type": "spots", "style": SPOT_STYLE, "width": 1024, "height": 1024,
+        "subject": 'A round vignette in clear afternoon daylight: a small sleek airship with a riveted gondola drifts low over the stepped rooftops of a 1920s city, and on the street below a black motorcar drives past. Big white clouds, bold shapes.',
+    },
+    "spot_watch": {
+        "wave": 3, "art_type": "spots", "style": SPOT_STYLE, "width": 1024, "height": 1024,
+        "subject": 'A round vignette outdoors on a windy hillside at dusk: a gloved hand holds up an open brass pocket watch that is leaking thin streams of glowing turquoise light, like smoke, from its seams. Tall grass bending in the wind behind.',
+    },
+    "spot_ward": {
+        "wave": 3, "art_type": "spots", "style": SPOT_STYLE, "width": 1024, "height": 1024,
+        "subject": 'A round vignette of a narrow stone doorway on a quiet cobbled street in morning light, seen from across the street: a small ward charm of twisted iron and a turquoise crystal is nailed above the door frame, glowing faintly, with a faint turquoise geometric seal shimmering across the doorway.',
+    },
+    "spot_vial": {
+        "wave": 3, "art_type": "spots", "style": SPOT_STYLE, "width": 1024, "height": 1024,
+        "subject": 'A round vignette: a young man in shirtsleeves on a rooftop at dusk tips back his head and drinks from a small glass vial; a turquoise glow shines through his throat and the vial. The city skyline behind him. Calm and uncanny.',
+    },
+    "spot_rooftops": {
+        "wave": 3, "art_type": "spots", "style": SPOT_STYLE, "width": 1024, "height": 1024,
+        "subject": 'A round vignette at night under a huge full moon: two figures leap between the slate rooftops of a 1920s city, coats flying, chimney pots and water tanks in silhouette, the moon lighting everything from behind.',
+    },
+    "spot_informant": {
+        "wave": 3, "art_type": "spots", "style": SPOT_STYLE, "width": 1024, "height": 1024,
+        "subject": 'A round vignette at noon on a sunlit back street: a thin informant in a flat cap leans out of a half-open doorway and speaks quietly to a figure in a long coat standing in the street. Hard noon shadows, washing lines overhead.',
+    },
+    "spot_notebook": {
+        "wave": 3, "art_type": "spots", "style": SPOT_STYLE, "width": 1024, "height": 1024,
+        "subject": 'A round vignette: an operative in a long coat and hat walks briskly along a busy city pavement in daylight, glancing down at a small open pocket notebook in one hand. Pedestrians, a tram and shopfronts blurred into flat shapes behind.',
+    },
+    "spot_drawers": {
+        "wave": 3, "art_type": "spots", "style": SPOT_STYLE, "width": 1024, "height": 1024,
+        "subject": 'A round vignette inside a tall record office: a clerk on a rolling ladder pulls one small drawer from a wall of hundreds of identical wooden card-catalogue drawers. Bright daylight falls in hard shafts from high arched windows. No readable labels.',
+    },
+    "spot_handler": {
+        "wave": 3, "art_type": "spots", "style": SPOT_STYLE, "width": 1024, "height": 1024,
+        "subject": 'A round vignette: a handler seen from behind stands at a tall arched window looking out over a 1920s city by day, hands clasped behind their back; maps and photographs are pinned to the wall beside the window, connected by string. No readable writing.',
+    },
+    "spot_foundry": {
+        "wave": 3, "art_type": "spots", "style": SPOT_STYLE, "width": 1024, "height": 1024,
+        "subject": 'A round vignette at night: a huge decommissioned brick resonance foundry with a cracked glass roof and cold chimneys stands on a riverbank; faint amber sparks still flicker inside the broken windows. Moon behind, reflections in the river.',
+    },
+    "spot_tunnels": {
+        "wave": 3, "art_type": "spots", "style": SPOT_STYLE, "width": 1024, "height": 1024,
+        "subject": 'A round vignette: an old brick smuggling tunnel running away underground, its walls cracked open by thick clusters of glowing turquoise crystals that light the whole tunnel; wooden crates stacked along one side, a figure small in the distance.',
+    },
+    "corner_nouveau": {
+        "wave": 3, "art_type": "decorative", "style": ORNAMENT_STYLE, "width": 1024, "height": 1024,
+        "subject": 'A single corner ornament for the top-left corner of a text box: two lines meeting at a right angle, with Art Nouveau whiplash ivy tendrils and a small turquoise crystal curling from the corner. Deep midnight navy and turquoise cyan only. The inside of the angle is empty.',
+    },
+    "corner_deco": {
+        "wave": 3, "art_type": "decorative", "style": ORNAMENT_STYLE, "width": 1024, "height": 1024,
+        "subject": 'A single corner ornament for the top-left corner of a text box: stepped Art Deco lines meeting at a right angle, with a small amber quarter-sunburst fanning from the corner and two rivets. Soot black and amber gold only. The inside of the angle is empty.',
+    },
+    "badge_galvanic": {
+        "wave": 3, "art_type": "decorative", "style": ORNAMENT_STYLE, "width": 1024, "height": 1024,
+        "subject": 'A small circular Art Deco badge for marking a Galvanic zone on a map: a riveted iron ring around a bold amber lightning bolt crossed with a cog. Soot black and amber gold only.',
+    },
+    "badge_aetheric": {
+        "wave": 3, "art_type": "decorative", "style": ORNAMENT_STYLE, "width": 1024, "height": 1024,
+        "subject": 'A small circular Art Deco badge for marking an Aetheric zone on a map: a ring of curling Art Nouveau ivy around a single glowing turquoise crystal. Deep midnight navy and turquoise cyan only.',
+    },
+    "badge_neutral": {
+        "wave": 3, "art_type": "decorative", "style": ORNAMENT_STYLE, "width": 1024, "height": 1024,
+        "subject": 'A small circular Art Deco badge for marking a neutral zone on a map: a plain double ring around a simple four-point compass star. Oxblood red and deep midnight navy only.',
+    },
 }
 
 

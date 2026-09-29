@@ -19,6 +19,12 @@ permalink: rules/character-sheet.html
 
     <!-- ── Character Builder ────────────────────────────── -->
 
+    <div class="lead-portraits">
+      {%- for lead in [["kael","Kael Dunn"],["sera","Sera Voss"],["aldric","Aldric Wynn"],["mira","Mira Cade"]] %}
+      <a href="tools/quickstart-{{ lead[0] }}.html"><img src="{{ ('/assets/art/portraits/' + lead[0] + '.webp') | url }}" alt="Portrait of {{ lead[1] }}" loading="lazy"><span>{{ lead[1] }}</span></a>
+      {%- endfor %}
+    </div>
+
     <h2 id="builder">Character Builder</h2>
 
     <p>
