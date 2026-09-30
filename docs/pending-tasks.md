@@ -1,6 +1,7 @@
 # Pending Tasks
 
 ## Next Up
+- [ ] **Deco Wave 4: large scene artwork** (plates / half-page scenes). Draft in `docs/art/deco-suite-plan.md` §6; settle formats, subjects, and placement with the user first
 - [ ] Decide on corner ornaments: keep on callouts and stat blocks, or trim to one
 - [ ] Name-collision renames: Aldric Voss, Elara Voss, "Thornfeld", two thin-cigar smokers
 - [ ] Quick Reload rounding decision (web: down; FIREARMS doc: up)
@@ -9,7 +10,6 @@
 
 ## Backlog
 - [ ] Re-render the galvanic chapter frame with a margin at the top (its crown's rays meet the edge)
-- [ ] Deco Tier 4: full-page plates (the four leads in the Wet Ember; the Tear; a Wild Zone swallowing a rail yard)
 - [ ] Deco Tier 3 (deferred): chapter vignettes inside the PDF openers or under the web crowns
 - [ ] Small school emblems beside `.spell-school` labels in the Grimoire spell list
 - [ ] Design-doc drift cleanup (review Tier 5: COMBAT_PROCEDURE, MAGIC_SYSTEM, FIREARMS)
