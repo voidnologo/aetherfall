@@ -722,6 +722,19 @@ body::before {
   color: var(--text);
 }
 
+/* Justified body text (user, Session 36): an even right edge reads easier. Hyphenation
+   keeps justified lines from opening wide gaps, especially beside floated spots. */
+.page-content p,
+.page-content li {
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphenate-limit-chars: 7 3 3;
+}
+.page-content .page-hero p,
+.page-content td p,
+.page-content th p { text-align: inherit; hyphens: manual; }
+
 .page-content em { color: var(--text-dim); }
 .page-content strong { color: var(--text-bright); font-weight: 600; }
 

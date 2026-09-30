@@ -374,6 +374,14 @@ p {
   margin: 0 0 0.7em;
 }
 
+/* Justified body text (user, Session 36) */
+.chapter p,
+.chapter li {
+  text-align: justify;
+  hyphens: auto;
+}
+.page-hero p, td p, th p { text-align: inherit; hyphens: manual; }
+
 strong {
   font-weight: 600;
   color: #111;
