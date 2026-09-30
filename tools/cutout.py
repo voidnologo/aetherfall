@@ -66,7 +66,23 @@ def hull_fill(fg: np.ndarray) -> np.ndarray:
     return np.asarray(mask) > 0
 
 
-def cutout(img: Image.Image, tolerance: float = 48, main_only: bool = False, hull: bool = False) -> Image.Image:
+def circle_fill(fg: np.ndarray) -> np.ndarray:
+    """Clip to the disc of the main shape: for round vignettes. Anything outside the circle
+    (Flux's stamps, signatures and fake text, even when they sit close to the edge) is dropped,
+    and pale light reaching the rim stays inside. Uses the largest shape's bounding box."""
+    labels, n = ndimage.label(fg)
+    if n == 0:
+        return fg
+    sizes = ndimage.sum(fg, labels, range(1, n + 1))
+    sl = ndimage.find_objects((labels == int(np.argmax(sizes)) + 1).astype(int))[0]
+    cy, cx = (sl[0].start + sl[0].stop - 1) / 2, (sl[1].start + sl[1].stop - 1) / 2
+    r = min(sl[0].stop - sl[0].start, sl[1].stop - sl[1].start) / 2 - 4  # shave the pale anti-aliased rim
+    yy, xx = np.ogrid[:fg.shape[0], :fg.shape[1]]
+    return (yy - cy) ** 2 + (xx - cx) ** 2 <= r ** 2
+
+
+def cutout(img: Image.Image, tolerance: float = 48, main_only: bool = False, hull: bool = False,
+           circle: bool = False) -> Image.Image:
     rgb = np.asarray(img.convert("RGB"), dtype=float)
     paper = np.linalg.norm(rgb - bone_reference(rgb), axis=2) < tolerance
     labels, _ = ndimage.label(paper)
@@ -75,7 +91,9 @@ def cutout(img: Image.Image, tolerance: float = 48, main_only: bool = False, hul
     bg = ndimage.binary_dilation(bg, iterations=2)                    # eat the anti-aliased fringe
     fg = ndimage.binary_opening(~bg, iterations=1)                    # drop lone specks of grain
     fg = drop_strays(fg, main_only=main_only)
-    if hull:
+    if circle:
+        fg = circle_fill(fg)
+    elif hull:
         fg = hull_fill(fg)
     alpha = ndimage.gaussian_filter(fg.astype(float), 0.8)
     out = Image.fromarray(np.dstack([rgb, alpha * 255]).clip(0, 255).astype(np.uint8), "RGBA")
@@ -127,6 +145,7 @@ def main():
     ap.add_argument("--name", help="output stem (single source only); default: the source stem")
     ap.add_argument("--width", type=int, help="resize the cut-out to this width")
     ap.add_argument("--tolerance", type=float, default=48)
+    ap.add_argument("--circle", action="store_true", help="clip to the main shape's circle (round vignettes; drops stamps and text outside it)")
     ap.add_argument("--hull", action="store_true", help="keep everything inside the art's convex outline (round vignettes)")
     ap.add_argument("--main-only", action="store_true", help="keep only the substantial shapes (drops thin stray marks)")
     ap.add_argument("--light-to-cyan", action="store_true", help="recolour pale bone/white light to Aether cyan")
@@ -136,7 +155,7 @@ def main():
 
     args.out_dir.mkdir(parents=True, exist_ok=True)
     for src in args.src:
-        img = cutout(Image.open(src), args.tolerance, args.main_only, args.hull)
+        img = cutout(Image.open(src), args.tolerance, args.main_only, args.hull, args.circle)
         if args.light_to_cyan:
             img = light_to_cyan(img)
         if args.navy_to_bone:

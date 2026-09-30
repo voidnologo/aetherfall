@@ -110,7 +110,7 @@ def render_mermaid(content):
 # copies use. (x, y, w, h) on the 832x1216 master, recovered by matching the web frames.
 PRINT_FRAMES = {
     "aether": ("proto-D2-decolitho_frame_aether_v02_seed-131618214", (26, 24, 782, 1168)),
-    "galvanic": ("proto-D2-decolitho_frame_galvanic_v02_seed-1166265576", (26, 24, 782, 1168)),
+    "galvanic": ("proto-D2-decolitho_frame_galvanic_v02_seed-1166265576", (26, 24, 782, 1150)),  # bottom trimmed: fake lettering
     "split": ("proto-D2-decolitho_frame_split_v02_seed-2427297017", (24, 24, 782, 1168)),
     "neutral": ("proto-D2-decolitho_frame_neutral_v02_seed-1553240695", (26, 24, 782, 1168)),
     "front": ("proto-B-twoinks_frame_v01_seed-3867070072", (24, 24, 782, 1168)),
