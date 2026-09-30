@@ -124,3 +124,34 @@ Spots to reach the standard (existing spots in brackets):
 | QS The Ashwick Job | The decommissioned foundry · the smuggling tunnels, lit by crystals |
 
 Ornaments: corner pieces ×2 (Nouveau, Deco), zone badges ×3.
+
+---
+
+## 6. Wave 4: large scenes (queued for Session 37, user request)
+
+The user wants larger scene artwork now that the suite "is starting to look very good". This is a draft to settle with the user before generating.
+
+**Formats**
+- **Full-page plates** (832×1216 → 4× print master). A plate faces a chapter opener in the PDF, or sits at a major part break. On the web it shows as a wide, near-full-width figure under the chapter crown or at a section break.
+- **Half-page scenes** (1216×832 landscape). The web shows them full column width; the PDF gives them half a page. They're good for establishing places.
+
+**Candidate subjects** (varied light and setting; no lamp focus):
+1. The Tear, 50 years ago: the sky over a city splitting open, crowds in the street (Ch 02 plate)
+2. The four leads together in the Wet Ember, planning, from a wide angle (quickstart or Ch 01 plate)
+3. A Wild Zone swallowing a rail yard: locomotives under giant ivy and crystals, in daylight (Ch 10)
+4. A galvanic factory floor at shift change: arc furnaces, workers, sparks (Ch 13)
+5. A Society meeting with its patron in a grand Deco office over the city (Ch 03)
+6. A fight on the timing track: several combatants frozen mid-action in a market square (Ch 11)
+7. A scholarly caster's study-workshop: chalk geometry, books, a floating cyan construct (Ch 08/09)
+8. The Ashworth foundry interior, the quickstart's climax location (quickstart)
+
+**Decisions for the user**
+- Plates, half-page scenes, or both? How many per chapter: one per chapter, or only the key chapters?
+- Web placement: under the crown, or at a mid-chapter break?
+- Should the leads appear in plates? Use the character locks and describe them; never name them.
+- Composition is framed, not cut out: plates keep their full rectangle. A thin Deco border or keyline (CSS) is an option.
+
+**Pipeline notes**
+- Add a `PLATE_STYLE` to `tools/deco_suite.py`: the lamp-free spot prefix with full-bleed composition (no vignette or margin clause).
+- Check for fake lettering and stamps near the edges (they're common). Crop them off; never cut the art out.
+- Run `tools/upscale_print.py` for 4× print masters, and add a PDF page type for full-bleed plates.
