@@ -1,10 +1,12 @@
 # Pending Tasks
 
 ## Next Up
-- [ ] **Review and merge the stories:** PR #26 (Story 01 "The Ashwick Job", 11.8k words) and PR #25 (Story 04 "No Kinder Country", 24.9k words; maybe trim). Whichever merges second needs a small conflict fix in `web/_data/fiction.js` (keep `[STORY_04, STORY_03, STORY_02, STORY_01]`) and the series bible. Then close draft PR #3 (superseded).
+- [ ] **Review and merge the rulebook prose pass (PR #34)**, skimming the Grimoire tables (159 bulk-converted cells). Then rebuild the PDF for the **draft print and playtest** (`POST /free` to ComfyUI first if it's running).
+- [ ] **Review and merge the new stories (line-edited this session):** PR #26 (Story 01, 10.9k words) and PR #25 (Story 04, 23.0k). Whichever merges second needs a small conflict fix in `web/_data/fiction.js` (keep `[STORY_04, STORY_03, STORY_02, STORY_01]`) and the series bible. Then close draft PR #3.
 - [ ] **Web hero and social previews:** use the spare approved covers ("four on the hill road", "the Tear over the skyline") for a Deco web hero redraw and og:image cards (site at voidnologo.github.io/aetherfall/)
 - [ ] Reroll Hesper Brack's portrait with one arm (canon); then restore "One arm, one rule" in `web/_data/cast.json`
-- [ ] Plan Story 05 (the Collective's retribution: agents in Ashwick, the flat compromised, the Veilwright Quarter as refuge; Sera's tunnel vision surfaces)
+- [ ] Plan Story 05 (the Collective's retribution: agents in Ashwick, the flat compromised, the Veilwright Quarter as refuge; Sera's tunnel vision surfaces). Write it with `prose-check` from the first draft.
+- [ ] Decide: spell names in Story 02 prose (Detect, Reveal, cantrip) vs the "no mechanics in fiction" rule
 
 ## Backlog
 - [ ] Re-render the galvanic chapter frame with a margin at the top (its crown's rays meet the edge)
