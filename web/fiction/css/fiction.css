@@ -90,18 +90,41 @@ a:hover { color: var(--text-bright); }
   color: var(--text-faint);
 }
 
-.divider {
-  display: flex; align-items: center; gap: 0.8rem;
-  max-width: 200px; margin: 1.2rem auto 0;
+/* ── Deco ornaments (match the rulebook, Session 37) ──────
+   Each story carries a rulebook theme (web/_data/fiction.js);
+   anything else, including "split", uses the neutral set. */
+[data-theme] {
+  --divider-art: url(../../assets/art/ornaments/divider-neutral.webp);
+  --dropcap-art: url(../../assets/art/ornaments/dropcap-neutral.webp);
+  --corner-tr: url(../../assets/art/ornaments/corner-deco-tr.webp);
+  --corner-bl: url(../../assets/art/ornaments/corner-deco-bl.webp);
 }
-.divider-line { flex: 1; height: 1px; }
-.divider-line-l { background: linear-gradient(to right, transparent, var(--text-faint)); }
-.divider-line-r { background: linear-gradient(to left, transparent, var(--text-faint)); }
-.divider-gem {
-  width: 6px; height: 6px;
-  background: var(--aether);
-  transform: rotate(45deg); flex-shrink: 0;
-  box-shadow: 0 0 8px var(--aether), 0 0 20px var(--aether-glow);
+[data-theme="aether"] {
+  --divider-art: url(../../assets/art/ornaments/divider-aether.webp);
+  --dropcap-art: url(../../assets/art/ornaments/dropcap-aether.webp);
+  --corner-tr: url(../../assets/art/ornaments/corner-nouveau-tr.webp);
+  --corner-bl: url(../../assets/art/ornaments/corner-nouveau-bl.webp);
+}
+[data-theme="galvanic"] {
+  --divider-art: url(../../assets/art/ornaments/divider-galvanic.webp);
+  --dropcap-art: url(../../assets/art/ornaments/dropcap-galvanic.webp);
+}
+[data-theme="aether"]   { --crown: url(../../assets/art/frames/aether-crown.webp);   --crown-ar: 804 / 430; }
+[data-theme="galvanic"] { --crown: url(../../assets/art/frames/galvanic-crown.webp); --crown-ar: 769 / 425; }
+[data-theme="split"]    { --crown: url(../../assets/art/frames/split-crown.webp);    --crown-ar: 818 / 430; }
+[data-theme="neutral"]  { --crown: url(../../assets/art/frames/neutral-crown.webp);  --crown-ar: 805 / 430; }
+
+.deco-divider {
+  height: 2.4rem;
+  max-width: 22rem;
+  margin: 1.6rem auto 0;
+  background: url(../../assets/art/ornaments/divider-neutral.webp) center / contain no-repeat;
+}
+
+.tailpiece {
+  height: 5.5rem;
+  margin: 0 auto 1.5rem;
+  background: url(../../assets/art/ornaments/tailpiece.webp) center / contain no-repeat;
 }
 
 .btn {
@@ -204,6 +227,21 @@ a:hover { color: var(--text-bright); }
   width: 3px; height: 100%;
   background: linear-gradient(to bottom, var(--aether-dim), var(--galvanic-dim));
 }
+.story-card::after {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  pointer-events: none;
+  background: var(--corner-tr) top right / 1.3rem auto no-repeat, var(--corner-bl) bottom left / 1.3rem auto no-repeat;
+  opacity: 0.9;
+}
+.story-card-spot {
+  float: right;
+  width: min(9.5rem, 34%);
+  height: auto;
+  margin: 0.4rem 0.6rem 0.8rem 1.2rem;
+  shape-outside: circle(50%);
+}
 .story-card:hover {
   background: rgba(255, 255, 255, 0.05);
   border-color: rgba(61, 200, 224, 0.3);
@@ -239,6 +277,9 @@ a:hover { color: var(--text-bright); }
 }
 
 .story-card .story-blurb {
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
   font-size: 0.98rem;
   color: var(--text);
   line-height: 1.7;
@@ -408,6 +449,26 @@ a:hover { color: var(--text-bright); }
   color: var(--text-faint);
   margin-bottom: 1.2rem;
 }
+.story-crown {
+  aspect-ratio: var(--crown-ar);
+  max-width: 560px;
+  margin: 0 auto 1.4rem;
+  padding: 0 21% 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background: var(--crown) center / contain no-repeat;
+}
+/* doubled class: outranks the plain title-block rules further down */
+.story-titleblock .story-crown .story-number { color: #8e2f23; margin-bottom: 0.4rem; letter-spacing: 0.3em; }
+.story-titleblock .story-crown h1 {
+  color: #17140f;
+  font-size: clamp(1rem, 4.2vw, 1.75rem);
+  line-height: 1.15;
+  margin-bottom: 0;
+  text-wrap: balance;
+}
 .story-titleblock h1 {
   font-family: 'Playfair Display', serif;
   font-weight: 900;
@@ -500,19 +561,23 @@ a:hover { color: var(--text-bright); }
   color: var(--text);
   font-size: 1.05rem;
   line-height: 1.8;
+  text-align: justify;
   hyphens: auto;
   -webkit-hyphens: auto;
+  hyphenate-limit-chars: 7 3 3;
 }
 
 .chapter-body p:first-of-type::first-letter {
   font-family: 'Playfair Display', serif;
+  font-style: normal;
   font-weight: 900;
   float: left;
-  font-size: 3.2em;
-  line-height: 0.88;
-  margin: 0.08em 0.08em 0 0;
-  color: var(--aether);
-  text-shadow: 0 0 20px rgba(61, 200, 224, 0.18);
+  font-size: 2.9em;
+  line-height: 1;
+  color: #17140f;
+  padding: 0.32em 0.36em 0.26em;
+  margin: 0.08em 0.5rem 0 0;
+  background: var(--dropcap-art) center / 100% 100% no-repeat;
 }
 
 .chapter-body em {
@@ -530,18 +595,10 @@ a:hover { color: var(--text-bright); }
 /* Scene-break ornament (replaces <hr>) */
 .chapter-body hr {
   border: 0;
-  height: 2rem;
-  margin: 2.2rem 0;
-  position: relative;
-}
-.chapter-body hr::before {
-  content: '• • •';
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  letter-spacing: 0.6em;
-  color: var(--text-faint);
-  font-size: 0.9rem;
+  height: 2.2rem;
+  max-width: 18rem;
+  margin: 2.4rem auto;
+  background: var(--divider-art) center / contain no-repeat;
 }
 
 /* ── TOC drawer (collapsible chapter list) ──────────────── */
@@ -696,14 +753,6 @@ body.no-scroll {
   color: var(--text-faint);
   margin-bottom: 2rem;
 }
-.story-end .end-gem {
-  width: 8px; height: 8px;
-  background: var(--aether);
-  transform: rotate(45deg);
-  display: inline-block;
-  margin: 0 auto 2rem;
-  box-shadow: 0 0 10px var(--aether), 0 0 24px var(--aether-glow);
-}
 .story-end p {
   color: var(--text-dim);
   font-style: italic;
@@ -746,8 +795,9 @@ footer.fiction-footer p {
 
   /* Slightly reduce drop cap on narrow screens so it doesn't overwhelm */
   .chapter-body p:first-of-type::first-letter {
-    font-size: 2.8em;
+    font-size: 2.5em;
   }
+  .story-card-spot { width: 38%; margin-right: 0; }
 
   .fiction-header { padding: 3rem 0 2rem; }
   .fiction-list { padding: 2rem 0 4rem; }

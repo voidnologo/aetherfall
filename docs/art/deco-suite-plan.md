@@ -98,7 +98,7 @@ Every page in the rulebook gets the same treatment, applied by templates and the
 | Drop cap | The chapter's opening paragraph |
 | Section dividers | Between every top-level section: the `<h2>` sections if the chapter has two or more, otherwise the `<h3>` sections. Chapters whose text already groups sections with `<hr class="section-divider">` keep that grouping. Inserted by a build transform. |
 | Spots | About one per four top-level sections: at least 1, at most 3. The Grimoire's six school emblems count as its art. The Character Sheet page shows the four lead portraits. |
-| Corner ornaments | Stat blocks and callouts (both, to compare; user may trim to one later) |
+| Corner ornaments | Stat blocks and callouts, both (user decision, Session 37). The fiction reader's story cards carry them too. |
 | Tailpiece | End of every chapter |
 
 **Variety rule (user):** lamps and lamplight are never the focus; occasionally present is fine. Mix people, places, daylight and night; limit tabletop still lifes.
@@ -155,3 +155,14 @@ The user wants larger scene artwork now that the suite "is starting to look very
 - Add a `PLATE_STYLE` to `tools/deco_suite.py`: the lamp-free spot prefix with full-bleed composition (no vignette or margin clause).
 - Check for fake lettering and stamps near the edges (they're common). Crop them off; never cut the art out.
 - Run `tools/upscale_print.py` for 4× print masters, and add a PDF page type for full-bleed plates.
+
+## 7. Fiction Reader (Session 37)
+
+The fiction reader follows the rulebook's art standard. Each story carries a rulebook theme in `web/_data/fiction.js` (Story 02 `aether`, Story 03 `split`). That theme sets:
+
+- the **crown** on the title page, with the number and title typeset in it
+- the **drop cap** tile for each chapter's opening letter
+- the **divider** at scene breaks (`---` in the chapter Markdown)
+- the **corners** on the story's card on the index
+
+The tailpiece closes every story. Each card on the index shows one round spot (Story 02 `wild`, Story 03 `tunnels`), and story prose is justified with hyphenation, as in the rulebook. A new story needs `theme` and `spot` in its config.

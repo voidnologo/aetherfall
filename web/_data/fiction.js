@@ -53,6 +53,8 @@ function buildStory(config) {
     tagline: config.tagline,
     location: config.location,
     tone: config.tone,
+    theme: config.theme,
+    spot: config.spot,
     totalWords,
     readMinutes,
     chapters,
@@ -69,6 +71,8 @@ const STORY_02 = {
   tagline: 'A short story of the Ash & Veil Society',
   location: 'Ashwick &mdash; and the Wilds beyond',
   tone: 'Propulsive, wonder-threaded, dark at the edges',
+  theme: 'aether',                 /* rulebook ornament theme: crown, drop cap, dividers, corners */
+  spot: { file: 'wild', alt: 'A wild caster lets the Aether spark from her open palm' },
   povOrder: ['Mira', 'Kael', 'Sera', 'Aldric', 'Mira', 'Sera', 'Kael', 'Aldric', 'Kael', 'Mira'],
 };
 
@@ -82,6 +86,8 @@ const STORY_03 = {
   tagline: 'A short story of the Ash & Veil Society',
   location: 'Ashwick &mdash; beneath the Factory Quarter',
   tone: 'Claustrophobic, noir-inflected, morally compromised',
+  theme: 'split',                  /* the Aether at work beneath a Galvanic foundry */
+  spot: { file: 'tunnels', alt: 'Stacked crates in a drainage tunnel whose stone has grown into luminous arches' },
   povOrder: ['Kael', 'Mira', 'Sera', 'Aldric', 'Kael', 'Sera', 'Kael', 'Aldric'],
 };
 
