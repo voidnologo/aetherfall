@@ -259,6 +259,17 @@ a:hover { color: var(--text-bright); }
   margin-bottom: 0.5rem;
 }
 
+.fiction-header .start-here {
+  max-width: 34rem;
+  margin: 1.4rem auto 0;
+  font-size: 0.98rem;
+  color: var(--text-dim);
+}
+.fiction-header .start-here a { color: var(--galvanic); border-bottom: 1px solid var(--galvanic-dim); }
+.fiction-header .start-here a:hover { color: var(--text-bright); }
+
+.story-card .story-start { color: var(--galvanic); }
+
 .story-card h2 {
   font-family: 'Playfair Display', serif;
   font-size: clamp(1.5rem, 4vw, 1.85rem);

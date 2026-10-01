@@ -104,6 +104,13 @@ storySlug: the-lamplighters-price
   <footer class="story-end" id="story-end">
     <div class="tailpiece" aria-hidden="true"></div>
     <p class="end-mark">The End</p>
+    {%- if story.play %}
+    <p>{{ story.play.text }}</p>
+    <div class="end-actions">
+      <a href="./" class="btn btn-ghost">More Fiction</a>
+      <a href="{{ story.play.href }}" class="btn btn-primary">Play This Story</a>
+    </div>
+    {%- else %}
     <p>
       More tales of the Ash &amp; Veil Society &mdash; and of others like them &mdash;
       will follow. If you'd like to know how this world runs at the table,
@@ -113,6 +120,7 @@ storySlug: the-lamplighters-price
       <a href="./" class="btn btn-ghost">More Fiction</a>
       <a href="../rules/" class="btn btn-primary">The Rules</a>
     </div>
+    {%- endif %}
   </footer>
 
 </article>
