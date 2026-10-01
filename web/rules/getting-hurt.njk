@@ -1,7 +1,7 @@
 ---
 layout: chapter.njk
 pageId: getting-hurt
-subtitle: "And getting better — if you're lucky"
+subtitle: "And getting better, if you're lucky"
 permalink: rules/getting-hurt.html
 ---
 
@@ -18,38 +18,38 @@ permalink: rules/getting-hurt.html
     <p>
       When you take damage, fill in boxes on your hit point track starting from the top
       tier (OK). Each tier holds <code class="formula">7 + BR</code> boxes. When a tier
-      is full, you move to the next one and immediately take its penalty &mdash; applied
+      is full, you move to the next one and immediately take its penalty, applied
       to <em>every roll you make</em>.
     </p>
 
     <table>
       <tr><th>Tier</th><th>Status</th><th>Penalty</th></tr>
-      <tr><td>1</td><td>OK</td><td>None &mdash; you're fine</td></tr>
+      <tr><td>1</td><td>OK</td><td>None. You're fine</td></tr>
       <tr><td>2</td><td>Harmed</td><td>&minus;10% to all rolls</td></tr>
       <tr><td>3</td><td>Maimed</td><td>&minus;25% to all rolls</td></tr>
-      <tr><td>4</td><td>Incapacitated</td><td>&minus;50% to all rolls &mdash; you're barely conscious</td></tr>
+      <tr><td>4</td><td>Incapacitated</td><td>&minus;50% to all rolls. You're barely conscious</td></tr>
     </table>
 
     {% handler %}
-      <p>First real wound you take, everything changes. Your hands shake. Your aim drifts. Take another and you can barely hold your weapon. I've seen people try to fight through it &mdash; push past the pain and keep swinging. Most of them are dead now. The ones who lived are the ones who knew when to run. That line between brave and stupid? Thinner than you think.</p>
+      <p>First real wound you take, everything changes. Your hands shake. Your aim drifts. Take another and you can barely hold your weapon. I've seen people try to fight through it, push past the pain and keep swinging. Most of them are dead now. The ones who lived are the ones who knew when to run. That line between brave and stupid? Thinner than you think.</p>
     {% endhandler %}
 
     {% example "What This Feels Like" %}
-      <p>Kael has 8 HP per tier (BR +1). A thug shoots him with a revolver &mdash; 2d6 = 7 damage.
+      <p>Kael has 8 HP per tier (BR +1). A thug shoots him with a revolver: 2d6 = 7 damage.
       That's a firearm, so Kael's leather jacket uses its Ballistic rating: <strong>0</strong>.
       No protection. All 7 damage lands in his OK tier. One box left. He's standing, but barely.</p>
-      <p>The second shot lands: 2d6 = 8. Still Ballistic &mdash; still no soak. One point fills OK and
+      <p>The second shot lands: 2d6 = 8. Still Ballistic, still no soak. One point fills OK and
       seven overflow into Harmed. Now Kael's Firearms target drops from 66 to <strong>56</strong>. His aim, his
-      footwork, everything &mdash; the pain is making him slower and sloppier.</p>
+      footwork, everything: the pain is making him slower and sloppier.</p>
       <p>If that thug had a knife instead? The leather jacket's Martial rating of 1 would absorb
       some of the damage. Different armor for different threats. This is why you think about
-      what you're wearing &mdash; and what you're facing.</p>
+      what you're wearing, and what you're facing.</p>
     {% endexample %}
 
     <h3 id="exhaustion">Exhaustion</h3>
 
     <p>
-      Everyone has an exhaustion track &mdash; it's not just for casters. It works
+      Everyone has an exhaustion track, casters or not. It works
       identically to wounds: four tiers, <code class="formula">7 + PW</code> boxes each,
       same escalating penalties. But instead of physical injury, it tracks everything that
       wears down your mind and spirit: magical drain, sleep deprivation, stun grenades,
@@ -69,11 +69,11 @@ permalink: rules/getting-hurt.html
       And here's the cruel part: <strong>wound and exhaustion penalties stack.</strong>
       A fighter who's Harmed (-10%) <em>and</em> Wearied from a flashbang (-10%) is
       rolling at -20% to everything. The death spiral doesn't just punish you for one
-      kind of damage &mdash; it punishes you for existing in a dangerous world.
+      kind of damage. It punishes you for existing in a dangerous world.
     </p>
 
     {% scene "At the Table" %}
-      <p>Kael takes a stun grenade to the face. No wound damage &mdash; but 8 points of
+      <p>Kael takes a stun grenade to the face. No wound damage, but 8 points of
       exhaustion flood his track. His 5 EP per tier (PW &minus;2) means that fills OK entirely
       and pushes 3 into Wearied. He's already Harmed from a gunshot. That's &minus;10% from
       wounds <em>and</em> &minus;10% from exhaustion. Every roll he makes is at &minus;20% now.
@@ -85,7 +85,7 @@ permalink: rules/getting-hurt.html
     <p>
       When you fill your Incapacitated tier on the <strong>hit point track</strong>, you
       collapse. Your weapon clatters to the ground. You can't act, can't speak above a
-      whisper. But you're not dead yet &mdash; you're bleeding out, and the clock is ticking.
+      whisper. But you're not dead yet. You're bleeding out, and the clock is ticking.
     </p>
 
     <p>
@@ -95,7 +95,7 @@ permalink: rules/getting-hurt.html
 
     <p>
       <strong>Exhaustion works differently.</strong> When your exhaustion track fills
-      completely, you don't make death saves &mdash; you're mentally shattered but still
+      completely, you don't make death saves. You're mentally shattered but still
       breathing. Any further exhaustion <strong>overflows into physical damage</strong>
       at half rate (rounded down), and <em>that</em> damage fills your hit point track.
       If it pushes you past Incapacitated on HP, <em>then</em> death saves begin. The
@@ -104,15 +104,15 @@ permalink: rules/getting-hurt.html
 
     <table>
       <tr><th>Roll</th><th>Result</th></tr>
-      <tr><td>01</td><td>Instant stabilization &mdash; you stop bleeding on your own. Unconscious but safe.</td></tr>
+      <tr><td>01</td><td>Instant stabilization: you stop bleeding on your own. Unconscious but safe.</td></tr>
       <tr><td>02&ndash;49</td><td>Holding on. You're still dying, but not worse. The clock keeps ticking.</td></tr>
       <tr><td>50&ndash;99</td><td>Failure. Mark it down. Three failures and you're gone.</td></tr>
       <tr><td>00</td><td>Dead. Immediately. No saving throw, no last words. Just gone.</td></tr>
     </table>
 
     <p>
-      Three failures kill you. The fastest possible death &mdash; three bad rolls in a
-      row &mdash; takes <strong>9 counts</strong>. But most of the time, you'll get a
+      Three failures kill you. The fastest possible death, three bad rolls in a
+      row, takes <strong>9 counts</strong>. But most of the time, you'll get a
       mix of holds and failures. A typical bleed-out lasts <strong>12 to 18 counts</strong>.
       That's your window. That's how long your friends have to save you.
     </p>
@@ -126,7 +126,7 @@ permalink: rules/getting-hurt.html
 
     <p>
       <strong>Medicine check</strong> (speed 5) stabilizes the patient. They stop making
-      death saves and fall unconscious. This is the reliable option &mdash; no magic
+      death saves and fall unconscious. This is the reliable option: no magic
       needed, just skill and a few seconds you might not have.
     </p>
 
@@ -144,16 +144,16 @@ permalink: rules/getting-hurt.html
 
     {% scene "At the Table" %}
       <p>Kael goes down at count 14. At count 17, he rolls his first death save: 63.
-      That's a failure. Sera abandons her spell and declares a Medicine check &mdash;
+      That's a failure. Sera abandons her spell and declares a Medicine check at
       speed 5, so it resolves at count 22. At count 20, Kael rolls again: 31. Holding
       on. One failure, one hold. At count 22, Sera's Medicine check lands. Kael is
-      stabilized with one failure on the sheet. He'll live &mdash; but he's not waking
+      stabilized with one failure on the sheet. He'll live, but he's not waking
       up anytime soon, and Sera just gave up the most important spell of the fight to
       save him.</p>
     {% endscene %}
 
     {% warning "Design Note" %}
-      <p>Death saves are deliberately simple &mdash; no stat bonuses, no modifiers. When
+      <p>Death saves are deliberately simple: no stat bonuses, no modifiers. When
       you're bleeding out on the floor, your combat prowess and willpower don't matter.
       What matters is whether your allies can reach you in time. The tension belongs to
       the people still standing, not the person on the ground.</p>
@@ -170,8 +170,8 @@ permalink: rules/getting-hurt.html
     {% spot "wounded", "A tired man in shirtsleeves sits on a crate binding his wounded forearm" %}
 
     <p>
-      Rest heals. Not quickly &mdash; this isn't a "long rest and you're fine" game &mdash;
-      but steadily:
+      Rest heals. This isn't a "long rest and you're fine" game, so it's slow,
+      but it's steady:
     </p>
 
     <table>
@@ -183,7 +183,8 @@ permalink: rules/getting-hurt.html
 
     <p>
       That means after a bad fight, the party might need to hole up for several hours before
-      they're fit to continue. Time pressure matters in this game &mdash; every hour spent
+      they're fit to continue. Time pressure matters in this game. Every hour spent
+
       resting is an hour the cult spends completing their ritual.
     </p>
 
