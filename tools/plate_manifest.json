@@ -1,0 +1,22 @@
+{
+  "_doc": "Web plate <- approved master + fixes. crop: [x, y, w, h]; fill: rectangles painted with a sampled colour [x, y, w, h, sample_x, sample_y]. Rebuild with tools/plate_web.py.",
+  "tear":         {"master": "plates/approved/deco-plate_tear_v01_seed-3958001831.png"},
+  "wet-ember":    {"master": "plates/approved/deco-plate_wet_ember_v01_seed-3389155459.png", "fill": [[42, 98, 150, 100, 140, 150]]},
+  "railyard":     {"master": "plates/approved/deco-plate_railyard_v01_seed-363729041.png"},
+  "factory":      {"master": "plates/approved/deco-plate_factory_v01_seed-367325800.png"},
+  "patron":       {"master": "plates/approved/deco-plate_patron_v01_seed-1093715517.png"},
+  "study":        {"master": "plates/approved/deco-plate_study_v01_seed-1828625721.png"},
+  "foundry":      {"master": "plates/approved/deco-plate_foundry_v01_seed-1496844549.png", "crop": [20, 0, 788, 1176]},
+  "mill":         {"master": "plates/approved/deco-plate_mill_v01_seed-3203094654.png"},
+  "deep-wild":    {"master": "plates/approved/deco-plate_deep_wild_v01_seed-913379143.png"},
+  "gradient":     {"master": "plates/approved/deco-plate_gradient_v01_seed-109074994.png"},
+  "ford":         {"master": "plates/approved/deco-plate_ford_v01_seed-3208688587.png"},
+  "ashwick":      {"master": "plates/approved/deco-scene_ashwick_v01_seed-1118464898.png"},
+  "quarter":      {"master": "plates/approved/deco-scene_quarter_v01_seed-2882637161.png"},
+  "sootborn":     {"master": "plates/approved/deco-scene_sootborn_v01_seed-3677748742.png"},
+  "village-cars": {"master": "plates/approved/deco-scene_village_cars_v01_seed-1213960255.png"},
+  "airship":      {"master": "plates/approved/deco-scene_airship_v01_seed-345847840.png"},
+  "checkpoint":   {"master": "plates/approved/deco-scene_checkpoint_v01_seed-1610557394.png"},
+  "convoy":       {"master": "plates/approved/deco-scene_convoy_v01_seed-1283282574.png"},
+  "rooftop":      {"master": "plates/approved/deco-scene_rooftop_v01_seed-930304954.png"}
+}

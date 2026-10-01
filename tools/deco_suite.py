@@ -458,9 +458,10 @@ PIECES = {
         "wave": 4, "art_type": "plates", "style": PLATE_STYLE, "width": 832, "height": 1216,
         "subject": 'A tall full-page illustration of a grand Art Deco office at the top of a tower at dusk: a wall of tall stepped windows looks out over a city of chimneys and ivy-covered roofs under an oxblood and navy sky. A composed woman in an elegant dark suit with silver rings stands behind a vast black desk, offering a sealed envelope. Across from her stand four adventurers in travel-worn coats, seen partly from behind. Polished marble floor, long shadows.',
     },
+    # v02 reroll (user, Session 37): v01 had no cyan shield; the shield is now the centre of the picture.
     "plate_market_fight": {
-        "wave": 4, "art_type": "plates", "style": PLATE_STYLE, "width": 832, "height": 1216,
-        "subject": 'A tall full-page action illustration of a street fight frozen at its peak in a sunlit market square: a weathered man in a leather jacket fires a revolver from behind an overturned fruit cart, a muzzle flash of amber; a young woman with jagged black hair throws out a hand and a curved shield of turquoise cyan light blooms in front of her, bullets sparking off it; thugs in flat caps charge with clubs; apples and oranges fly through the air; market awnings and pigeons scatter. Strong diagonals, dynamic.',
+        "wave": 4, "version": 2, "art_type": "plates", "style": PLATE_STYLE, "width": 832, "height": 1216,
+        "subject": 'A tall full-page action illustration of a street fight frozen at its peak in a sunlit market square. In the centre, a slight young woman with jagged black jaw-length hair and an oversized coat stands with one arm thrust out, and in front of her hand a large curved dome-shaped shield of glowing turquoise cyan light hangs in the air like a wall of glass; bullets strike it and burst into small amber sparks. Behind the cyan shield, a weathered man in a leather jacket crouches and fires a revolver past its edge. Thugs in flat caps charge from the right with clubs; an overturned fruit cart, apples and oranges flying through the air, market awnings, scattering pigeons. The turquoise shield is the brightest thing in the picture.',
     },
     "plate_study": {
         "wave": 4, "art_type": "plates", "style": PLATE_STYLE, "width": 832, "height": 1216,
