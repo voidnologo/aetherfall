@@ -91,8 +91,23 @@ const STORY_03 = {
   povOrder: ['Kael', 'Mira', 'Sera', 'Aldric', 'Kael', 'Sera', 'Kael', 'Aldric'],
 };
 
+const STORY_04 = {
+  dir: 'story-04',
+  slug: 'no-kinder-country',
+  number: 4,
+  title: 'No Kinder Country',
+  subtitle: 'A Tale of the Ash & Veil Society',
+  blurb: "The Ashworth Collective is sending an armed convoy into the Wilds to break open the mill, and the Covenant needs it stopped without its own name anywhere near the deed. Four people who are not soldiers, a ford in a quiet valley, and a plan that works — at a price none of them saw coming.",
+  tagline: 'A short story of the Ash & Veil Society',
+  location: 'The Wild edge &mdash; the ford on the Old Cart Road',
+  tone: 'Tense, muscular, then tender',
+  theme: 'galvanic',               /* the Collective's machines against four people on a ridge */
+  spot: { file: 'ford', alt: 'Armoured lorries burn in a river ford at dawn' },
+  povOrder: ['Mira', 'Aldric', 'Kael', 'Sera', 'Aldric', 'Kael', 'Sera', 'Mira'],
+};
+
 module.exports = function () {
-  const stories = [STORY_03, STORY_02].map(buildStory);
+  const stories = [STORY_04, STORY_03, STORY_02].map(buildStory);
   const storiesBySlug = Object.fromEntries(stories.map(s => [s.slug, s]));
   return { stories, storiesBySlug };
 };
