@@ -62,6 +62,27 @@ eleventyExcludeFromCollections: true
         <p class="fiction-empty">More stories coming soon.</p>
       {%- endif %}
     </div>
+
+    {%- if cast and cast.length %}
+    <section class="cast" aria-labelledby="cast-title">
+      <div class="deco-divider" aria-hidden="true"></div>
+      <h2 id="cast-title">Faces of Ashwick</h2>
+      <p class="cast-lede">The people the Society keeps running into. Some pay. Some collect. Some just pour the beer.</p>
+      <div class="cast-grid">
+        {%- for p in cast %}
+        <figure class="cast-card">
+          <img src="../assets/art/portraits/{{ p.img }}.webp" alt="Portrait of {{ p.name }}" loading="lazy" width="400" height="600">
+          <figcaption>
+            <span class="cast-name">{{ p.name }}</span>
+            <span class="cast-role">{{ p.role }}</span>
+            <span class="cast-line">{{ p.line }}</span>
+            <span class="cast-seen">{{ p.seen }}</span>
+          </figcaption>
+        </figure>
+        {%- endfor %}
+      </div>
+    </section>
+    {%- endif %}
   </div>
 </main>
 

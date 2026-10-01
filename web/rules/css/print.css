@@ -138,6 +138,31 @@ body {
 }
 
 /* ── Title Page ───────────────────────────────────────────────── */
+.cover-page {
+  page: cover;
+  break-after: page;
+  height: 11in;
+  padding: 0.9in 0.8in 0;
+  text-align: center;
+}
+.cover-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 64pt;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  color: #efe6d2;
+  margin: 0;
+  text-shadow: 0 2pt 8pt rgba(14, 26, 43, 0.85);
+}
+.cover-subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 18pt;
+  color: #efe6d2;
+  margin: 0.1in 0 0;
+  text-shadow: 0 1pt 6pt rgba(14, 26, 43, 0.9);
+}
+
 .title-page {
   page: title-page;
   break-after: recto;
