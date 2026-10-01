@@ -2,7 +2,7 @@
 
 ## Last Session (38): Natural Prose — AI-ism Guide, Prose Skills, Line Edits
 - Researched AI prose tells and wrote `docs/writing/natural-prose.md`, `tools/prose_lint.py` (per-1k rates plus antislop lists), the `prose-check` skill, and a portable user-level `natural-prose` skill (backup in `tools/skills/natural-prose/`). CLAUDE.md now requires a prose check.
-- Line-edited without changing content: Stories 01 (#26) and 04 (#25), still open; the published 02/03 (#33, merged); the whole rulebook (#34, open: em dashes 21.5 → 0.6 per 1k, wording only, numbers verified).
+- Line-edited without changing content: Stories 01 (#26) and 04 (#25), still open; the published 02/03 (#33, merged); the whole rulebook (#34, merged: em dashes 21.5 → 0.6 per 1k, wording only, numbers verified).
 
 ## Current State
 - **Game:** Aetherfall (voidnologo/aetherfall). Eleventy 3.x, `npm run build`; PDF via `python3 scripts/build-pdf.py` (235 pp, 44.7 MB; `POST /free` to ComfyUI first if it's running, because WeasyPrint needs RAM).
@@ -13,7 +13,7 @@
 - **Prose:** run `python3 tools/prose_lint.py --summary <files>` on any fiction or prose before committing (rulebook: `tools/rulebook_prose.py DIR` first). The user strongly dislikes AI tics: ", and" chains, "the way X does Y", "Not X. Y.", em-dash overuse.
 
 ## Immediate Next Task
-1. User reviews PR #34 (rulebook prose pass; skim the Grimoire tables). Merge, then rebuild the PDF for the **draft print and playtest**.
+1. Rebuild the PDF for the **draft print and playtest** (#34 merged; skim the Grimoire tables in the proof).
 2. User reviews #26 and #25 (new stories); merge (fix the `fiction.js`/bible conflict on the second), close draft #3.
 3. Web hero and og:image cards; Hesper reroll; plan Story 05 (written with `prose-check`).
 
