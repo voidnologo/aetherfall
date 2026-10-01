@@ -77,6 +77,14 @@ NOTES = {
     "scene_sootborn": "These came out as ordinary cottages, not scavenged carriages. Reroll candidate.",
     "scene_convoy": "One seed has a fake number plate on the lorry; crop or pick another.",
     "scene_quarter": "Lovely market, but no crystals. Fine for a street scene.",
+    "plate_market_fight": "Round 2 reroll: the cyan shield is now the centre of the picture.",
+    "scene_communion": "The crops came out normal-sized, not giant. Pleasant, but the strangeness is missing.",
+    "npc_barkeep": "All three have two arms; Hesper lost one. The empty sleeve would need painting in, or a reroll.",
+    "npc_scholar": "These read younger than Crane's fifties.",
+    "npc_inspector": "The police boxes carry fake lettering, and she reads younger than mid-forties. Crop or reroll.",
+    "npc_director": "Two seeds put him in a naval-style uniform rather than a suit.",
+    "npc_broker": "One seed has stray letters in the bottom-right corner; it would be cropped.",
+    "spot_barrier": "None of these show the cyan ward; he kneels with a raised hand. Reroll candidate.",
 }
 
 
@@ -231,7 +239,7 @@ def build(wave: int, title: str, round_label: str, lede: str) -> str:
 </div>
 <div class="bar"><span class="label">Your picks</span><output id="picks"></output>
 <button type="button" id="copy">Copy</button><button type="button" class="ghost" id="clear">Clear</button></div>
-<script>document.body.dataset.wave = "wave{wave}";{JS}</script>
+<script>document.body.dataset.wave = "wave{wave}-{re.sub(r"[^a-z0-9]+", "-", round_label.lower())}";{JS}</script>
 """
 
 
