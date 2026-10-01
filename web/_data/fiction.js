@@ -55,6 +55,7 @@ function buildStory(config) {
     tone: config.tone,
     theme: config.theme,
     spot: config.spot,
+    play: config.play,
     totalWords,
     readMinutes,
     chapters,
@@ -91,8 +92,24 @@ const STORY_03 = {
   povOrder: ['Kael', 'Mira', 'Sera', 'Aldric', 'Kael', 'Sera', 'Kael', 'Aldric'],
 };
 
+const STORY_01 = {
+  dir: 'story-01',
+  slug: 'the-ashwick-job',
+  number: 1,
+  title: 'The Ashwick Job',
+  subtitle: 'A Tale of the Ash & Veil Society',
+  blurb: "One week chartered, zero jobs, rent due at the end of the month. A Greycoat inspector needs a missing scholar found, and his last note says something under the old Ashworth foundry is pulling the boundary between the worlds. The Society's first case, and the place to start.",
+  tagline: 'A short story of the Ash & Veil Society',
+  location: 'Ashwick &mdash; the Wet Ember, the foundry, the drains beneath',
+  tone: 'Noir that opens into wonder',
+  theme: 'neutral',                /* neutral ground: the gradient, the Wet Ember */
+  spot: { file: 'foundry', alt: 'A decommissioned brick foundry by a moonlit river, sparks still in its broken windows' },
+  play: { href: '../rules/quickstart.html', text: 'This story is the Quickstart adventure. Take the four pregenerated characters to the table and play the same night yourself.' },
+  povOrder: ['Mira', 'Kael', 'Aldric', 'Sera', 'Kael', 'Mira'],
+};
+
 module.exports = function () {
-  const stories = [STORY_03, STORY_02].map(buildStory);
+  const stories = [STORY_03, STORY_02, STORY_01].map(buildStory);
   const storiesBySlug = Object.fromEntries(stories.map(s => [s.slug, s]));
   return { stories, storiesBySlug };
 };
