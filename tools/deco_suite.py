@@ -74,6 +74,23 @@ SPOT_STYLE = {
     ),
 }
 
+
+# Plate style (Wave 4, Session 37): the lamp-free spot prefix, full-bleed. Plates keep their whole
+# rectangle (never cut out), so the suffix asks for picture to the edges and no border or lettering
+# that would have to be cropped.
+FULL_BLEED = (
+    "Lit by the scene's own light as described (daylight, moonlight, window light, firelight or "
+    "magical glow); no lamps, lanterns or light fixtures unless the scene names one. "
+    "Full-bleed composition: the picture runs to every edge, with no border, no frame, no margin, "
+    "no panel, no title band, no plaque. " + DIRECTIONS["D2"]["suffix"]
+)
+PLATE_STYLE = {"loras": [], "prefix": SPOT_PREFIX, "suffix": FULL_BLEED}
+PORTRAIT_STYLE = {
+    "loras": [],
+    "prefix": SPOT_PREFIX,
+    "suffix": "A single person, painted as a character portrait for a book. " + FULL_BLEED,
+}
+
 PIECES = {
     # ── Wave 1: ornament kit ──
     "divider_aether": {
@@ -418,6 +435,152 @@ PIECES = {
     "badge_neutral": {
         "wave": 3, "art_type": "decorative", "style": ORNAMENT_STYLE, "width": 1024, "height": 1024,
         "subject": 'A small circular Art Deco badge for marking a neutral zone on a map: a plain double ring around a simple four-point compass star. Oxblood red and deep midnight navy only.',
+    },
+
+    # ── Wave 4 (Session 37): plates, half-page scenes, cover candidates, NPC portraits, Story 04 spots ──
+    "plate_tear": {
+        "wave": 4, "art_type": "plates", "style": PLATE_STYLE, "width": 832, "height": 1216,
+        "subject": 'A tall full-page illustration. A crowded 1920s city street at night seen from low down: hundreds of people in coats and hats have stopped dead on the pavement and in the road, a stalled tram among them, all looking up. Above the stepped Art Deco towers the sky is torn open by one enormous jagged vertical crack, like ripped paper, and cold turquoise cyan light pours down through it in hard-edged rays, catching faces and hat brims. Awe and terror. No fire.',
+    },
+    "plate_wet_ember": {
+        "wave": 4, "art_type": "plates", "style": PLATE_STYLE, "width": 832, "height": 1216,
+        "subject": 'A tall full-page illustration seen from a high corner of a crowded working-class tavern at night, lit by a big coal fire in an iron grate. At a round table in the foreground four adventurers lean over a map spread between beer glasses: a weathered broad-shouldered man in his forties in a patched leather jacket with a revolver on his hip; a slight young woman with jagged black jaw-length hair in an oversized layered coat, a brass compass on a cord; a tall gaunt man in round spectacles and a many-pocketed waistcoat, a walking stick against his chair; and an athletic woman in her late twenties with a thin scar on her cheekbone, pointing at the map. Behind them a one-armed barkeeper polishes a glass. Dockworkers and clerks fill the room.',
+    },
+    "plate_railyard": {
+        "wave": 4, "art_type": "plates", "style": PLATE_STYLE, "width": 832, "height": 1216,
+        "subject": 'A tall full-page illustration in bright midday sun: a vast abandoned railway yard being swallowed by a wild magical forest. Rows of rusting steam locomotives and goods wagons are wrapped in giant Art Nouveau ivy and enormous ferns; clusters of glowing turquoise crystals as tall as a man burst up between the rails. A signal gantry leans, overgrown. Two tiny figures with packs walk along a track into the green. Wonder and threat.',
+    },
+    "plate_factory": {
+        "wave": 4, "art_type": "plates", "style": PLATE_STYLE, "width": 832, "height": 1216,
+        "subject": 'A tall full-page illustration of a huge galvanic factory floor at shift change: towering riveted arc furnaces and resonance coils throw showers of amber sparks and hard amber light; lines of workers in caps and overalls stream in and out between the machines carrying lunch tins; a foreman on an iron gantry above. Steam, chains, girders and stark geometric shadows. Monumental, proud and dangerous.',
+    },
+    "plate_patron": {
+        "wave": 4, "art_type": "plates", "style": PLATE_STYLE, "width": 832, "height": 1216,
+        "subject": 'A tall full-page illustration of a grand Art Deco office at the top of a tower at dusk: a wall of tall stepped windows looks out over a city of chimneys and ivy-covered roofs under an oxblood and navy sky. A composed woman in an elegant dark suit with silver rings stands behind a vast black desk, offering a sealed envelope. Across from her stand four adventurers in travel-worn coats, seen partly from behind. Polished marble floor, long shadows.',
+    },
+    "plate_market_fight": {
+        "wave": 4, "art_type": "plates", "style": PLATE_STYLE, "width": 832, "height": 1216,
+        "subject": 'A tall full-page action illustration of a street fight frozen at its peak in a sunlit market square: a weathered man in a leather jacket fires a revolver from behind an overturned fruit cart, a muzzle flash of amber; a young woman with jagged black hair throws out a hand and a curved shield of turquoise cyan light blooms in front of her, bullets sparking off it; thugs in flat caps charge with clubs; apples and oranges fly through the air; market awnings and pigeons scatter. Strong diagonals, dynamic.',
+    },
+    "plate_study": {
+        "wave": 4, "art_type": "plates", "style": PLATE_STYLE, "width": 832, "height": 1216,
+        "subject": "A tall full-page illustration of a scholar-caster's cramped attic workshop by daylight from a big round window: walls and floor covered in chalk geometric diagrams, towers of books, brass instruments, pinned specimens. A tall gaunt man in round spectacles and shirtsleeves stands with one hand raised, holding steady a floating, rotating geometric construct of turquoise cyan light lines in the middle of the room. Dust in the sunbeams.",
+    },
+    "plate_foundry": {
+        "wave": 4, "art_type": "plates", "style": PLATE_STYLE, "width": 832, "height": 1216,
+        "subject": 'A tall full-page illustration inside a vast decommissioned brick foundry at night: the cold machine hall is split down the middle by a crack in the floor from which a forest of glowing turquoise crystals has erupted, pushing up iron plates and toppling a crane. On the left side old galvanic machinery still sparks amber. Four small adventurer silhouettes stand on a catwalk, looking down at it. Moonlight through a broken glass roof.',
+    },
+    "plate_mill": {
+        "wave": 4, "art_type": "plates", "style": PLATE_STYLE, "width": 832, "height": 1216,
+        "subject": 'A tall full-page illustration of the inside of an old stone grain mill that has been remade from within by magic: the walls, stairs and machinery have been replaced by pale, seamless, smoothly curving bone-white material, like the inside of a shell, threaded with glowing turquoise veins; impossible arches spiral upward. Four tiny adventurers with packs stand at the bottom, dwarfed and silent. Uncanny and beautiful.',
+    },
+    "plate_deep_wild": {
+        "wave": 4, "art_type": "plates", "style": PLATE_STYLE, "width": 832, "height": 1216,
+        "subject": 'A tall full-page illustration of an expedition entering the Deep Wild at dawn: colossal ancient trees rise like cathedral columns, stones and fallen logs float motionless in the air between them, and pale turquoise light breathes from fissures in the ground. A small line of explorers with packs, ropes and a mule picks its way up a mossy path into the forest. Vast, silent, alien.',
+    },
+    "plate_gradient": {
+        "wave": 4, "art_type": "plates", "style": PLATE_STYLE, "width": 832, "height": 1216,
+        "subject": 'A tall full-page illustration of a single long city street at sunset that is two worlds at once: on the left, soot-stained brick factories, riveted iron, chimneys and amber galvanic sparks; on the right, a crooked old town of leaning houses swallowed by ivy, with thin turquoise crystals growing from the stones. Where the two halves meet in the middle of the street, a lone figure in a long coat stands on the line, looking back at us.',
+    },
+    "plate_ford": {
+        "wave": 4, "art_type": "plates", "style": PLATE_STYLE, "width": 832, "height": 1216,
+        "subject": 'A tall full-page action illustration at dawn in a wooded river valley: a convoy of armoured 1920s lorries is crossing a shallow stone ford; the lead lorry has just been blown up in a huge amber explosion that throws water and stones high into the air. On the wooded ridge above, a young woman with jagged black hair raises a hand trailing turquoise cyan light, and a tall man in spectacles holds a shimmering cyan shield over a rocky hollow. Soldiers in grey scatter in the river.',
+    },
+    "scene_ashwick": {
+        "wave": 4, "art_type": "plates", "style": PLATE_STYLE, "width": 1216, "height": 832,
+        "subject": 'A wide panoramic landscape of a 1920s city seen from a hill at dawn: on the left a forest of factory chimneys, gasholders and steel bridges; on the right an old town of steep roofs and spires wrapped in ivy, a faint turquoise shimmer over it; a wide river curving between them under a pale navy and bone sky. A tram crosses a bridge.',
+    },
+    "scene_quarter": {
+        "wave": 4, "art_type": "plates", "style": PLATE_STYLE, "width": 1216, "height": 832,
+        "subject": 'A wide landscape of a crowded evening street market in an old magical quarter: crooked half-timbered houses wrapped in ivy, stalls selling herbs, crystals and charms, small turquoise crystals glowing between the cobbles, strings of bunting, people in hats and shawls haggling. Sunset light down the street.',
+    },
+    "scene_sootborn": {
+        "wave": 4, "art_type": "plates", "style": PLATE_STYLE, "width": 1216, "height": 832,
+        "subject": 'A wide landscape of a patched-together settlement at the edge of a wild magical forest under an overcast sky: houses built from scavenged railway carriages, car bodies and corrugated iron, vegetable plots, washing lines, a smoking cook fire, children and a dog. Beyond a fence the giant trees of the Wild rise, faintly glowing turquoise.',
+    },
+    "scene_village_cars": {
+        "wave": 4, "art_type": "plates", "style": PLATE_STYLE, "width": 1216, "height": 832,
+        "subject": 'A wide landscape in afternoon sun: the last village before a wild magical forest, a few stone cottages and a chapel, and beside them a field full of abandoned 1920s motor cars and lorries rusting in long grass, where travellers had to leave them because engines stop working past this point. A road runs on into a dark, glittering tree line.',
+    },
+    "scene_airship": {
+        "wave": 4, "art_type": "plates", "style": PLATE_STYLE, "width": 1216, "height": 832,
+        "subject": 'A wide landscape of a riveted airship mooring mast on top of a stepped Art Deco tower on a bright windy morning: a long silver-grey airship nosed in to the mast, passengers on a gangway, gulls, factory smoke drifting below over the roofs of the city.',
+    },
+    "scene_checkpoint": {
+        "wave": 4, "art_type": "plates", "style": PLATE_STYLE, "width": 1216, "height": 832,
+        "subject": 'A wide landscape at night in heavy rain: a police checkpoint on an iron bridge, constables in long grey greatcoats and caps under a striped barrier, one checking papers of a man in a hat, a motor car waiting with its headlights making hard beams through the rain. Reflections on the wet road.',
+    },
+    "scene_convoy": {
+        "wave": 4, "art_type": "plates", "style": PLATE_STYLE, "width": 1216, "height": 832,
+        "subject": 'A wide landscape of a military-style convoy of armoured 1920s lorries rolling along a dusty country road between hedges at dawn. Strapped onto the flatbeds are strange riveted machines with antenna coils and dish-shaped emitters glowing faint amber. Grey-uniformed guards ride on the running boards. A hawk circles above.',
+    },
+    "scene_rooftop": {
+        "wave": 4, "art_type": "plates", "style": PLATE_STYLE, "width": 1216, "height": 832,
+        "subject": 'A wide landscape at night under a full moon: two figures chase each other across steep slate rooftops and chimney stacks of a 1920s city, one leaping a gap between buildings, coat tails flying. Laundry lines, a church spire and factory chimneys silhouetted against the moon.',
+    },
+    "scene_communion": {
+        "wave": 4, "art_type": "plates", "style": PLATE_STYLE, "width": 1216, "height": 832,
+        "subject": 'A wide landscape of farm fields on a bright summer day where the crops have grown impossibly: wheat taller than a man, cabbages the size of carts, apple trees bowed with fruit as big as heads, all faintly shimmering turquoise. Farmers in smocks and straw hats work calmly with scythes and ladders. A white farmhouse and a chapel on the hill.',
+    },
+    "scene_vault": {
+        "wave": 4, "art_type": "plates", "style": PLATE_STYLE, "width": 1216, "height": 832,
+        "subject": 'A wide landscape deep underground: an old brick drainage tunnel opens into a vast cavern where the brickwork has been grown over and transformed into smooth pale arches and glowing turquoise crystal columns, like a cathedral nave. Three small explorers with a rope stand at the threshold, their shadows long on the floor.',
+    },
+    "cover_between": {
+        "wave": 4, "art_type": "hero", "style": PLATE_STYLE, "width": 832, "height": 1216,
+        "subject": 'A tall book-cover illustration: a lone adventurer in a long coat stands on a cobbled street at night, seen from behind, looking up. The city splits around the figure: on the left stepped Art Deco towers, chimneys and galvanic coils glowing amber; on the right a crooked ivy-covered old town with turquoise crystals. High above, the sky is torn by a single jagged crack pouring turquoise light. Leave plain open sky at the top third for a title.',
+    },
+    "cover_society": {
+        "wave": 4, "art_type": "hero", "style": PLATE_STYLE, "width": 832, "height": 1216,
+        "subject": 'A tall book-cover illustration: four adventurers stand together on a hilltop road at sunset, seen from below against the sky, looking toward a distant city half of chimneys and half of ivy and crystal: a broad-shouldered man in a leather jacket, a slight young woman with jagged black hair and a coat too big for her, a tall man with a walking stick and spectacles, and an athletic woman in a fitted coat. Long shadows. Leave plain open sky at the top third for a title.',
+    },
+    "cover_tear": {
+        "wave": 4, "art_type": "hero", "style": PLATE_STYLE, "width": 832, "height": 1216,
+        "subject": 'A tall book-cover illustration: a vast vertical tear in a midnight sky, pouring turquoise light, seen above the silhouette of a 1920s skyline of chimneys and spires; a long airship drifts across the light; tiny figures on a bridge in the foreground. Leave plain open sky at the top third for a title.',
+    },
+    "npc_fixer": {
+        "wave": 4, "art_type": "characters", "style": PORTRAIT_STYLE, "width": 832, "height": 1216,
+        "subject": 'Three-quarter-length portrait of a smooth, handsome man in his late forties, a smuggler-fixer: neat silver-shot hair, trimmed moustache, knowing half-smile, an expensive charcoal overcoat over a waistcoat and silk tie. He holds a slim clove cigarette between two fingers, a thin curl of smoke. Behind him a coffee house window and a rainy street.',
+    },
+    "npc_broker": {
+        "wave": 4, "art_type": "characters", "style": PORTRAIT_STYLE, "width": 832, "height": 1216,
+        "subject": 'Three-quarter-length portrait of a heavy-set, affable man in his early fifties, an information broker: jowly and amused, battered bowler hat, rumpled tweed coat with bulging pockets, a thin cigar in his fingers that he never finishes. He stands at a country crossroads at dusk beside a dark horse tethered to a fencepost.',
+    },
+    "npc_barkeep": {
+        "wave": 4, "art_type": "characters", "style": PORTRAIT_STYLE, "width": 832, "height": 1216,
+        "subject": 'Three-quarter-length portrait of a broad-shouldered woman in her fifties who runs a tough tavern: grey hair pinned up, a hard calm stare, sleeves rolled, one arm lost below the shoulder and the sleeve pinned up, her one hand resting on a bar towel on the counter. Behind her, shelves of bottles and a big coal fire.',
+    },
+    "npc_scholar": {
+        "wave": 4, "art_type": "characters", "style": PORTRAIT_STYLE, "width": 832, "height": 1216,
+        "subject": 'Three-quarter-length portrait of a sharp, impatient woman scientist in her fifties: lean, grey-streaked hair cut short, a worn field jacket over a high-necked blouse, brass field goggles pushed up on her forehead, holding a folded survey map. Behind her, a laboratory window open onto a vast wild forest with a turquoise glow.',
+    },
+    "npc_inspector": {
+        "wave": 4, "art_type": "characters", "style": PORTRAIT_STYLE, "width": 832, "height": 1216,
+        "subject": 'Three-quarter-length portrait of a police inspector, a woman in her mid-forties: sharp eyes, dark hair in a practical knot, ink-stained fingers, a long grey greatcoat with a brass badge, a notebook in hand. Behind her a rainy street and a police call box.',
+    },
+    "npc_director": {
+        "wave": 4, "art_type": "characters", "style": PORTRAIT_STYLE, "width": 832, "height": 1216,
+        "subject": 'Three-quarter-length portrait of a former army officer in his fifties, now an industrial director: upright military bearing, close-cropped grey hair, tired heavy-lidded eyes, an expensive dark suit with a regimental pin, a glass of whisky in hand. Behind him, through a tall office window, a galvanic factory with amber glowing chimneys at night.',
+    },
+    "npc_envoy": {
+        "wave": 4, "art_type": "characters", "style": PORTRAIT_STYLE, "width": 832, "height": 1216,
+        "subject": 'Three-quarter-length portrait of a composed, precise woman in her late thirties, envoy of a powerful magical patron: sleek dark hair, an elegant dark coat with a high collar, several silver sigil rings, one gloved hand holding a sealed letter with an oxblood wax seal. Behind her a tall stained-glass window with turquoise light.',
+    },
+    "spot_ford": {
+        "wave": 4, "art_type": "spots", "style": SPOT_STYLE, "width": 1024, "height": 1024,
+        "subject": 'A round vignette at dawn: armoured lorries crossing a shallow river ford through woods, the lead lorry erupting in a burst of amber fire and spray, stones flying.',
+    },
+    "spot_stretcher": {
+        "wave": 4, "art_type": "spots", "style": SPOT_STYLE, "width": 1024, "height": 1024,
+        "subject": 'A round vignette: two people carry a wounded man on a makeshift stretcher of poles and blankets along a narrow forest trail in grey morning light, a young woman with jagged black hair walking ahead, looking back.',
+    },
+    "spot_dampener": {
+        "wave": 4, "art_type": "spots", "style": SPOT_STYLE, "width": 1024, "height": 1024,
+        "subject": 'A round vignette: a strange riveted machine strapped to the bed of a lorry, with coiled antennae and a dish-shaped emitter crackling with amber sparks, a grey-uniformed guard beside it, a forest behind.',
+    },
+    "spot_barrier": {
+        "wave": 4, "art_type": "spots", "style": SPOT_STYLE, "width": 1024, "height": 1024,
+        "subject": 'A round vignette: a tall man in spectacles kneels in a rocky hollow holding up one hand, and a dome-shaped shield of turquoise cyan light covers him while bullets spark off it in amber flashes.',
     },
 }
 
