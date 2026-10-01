@@ -75,6 +75,32 @@ The Society takes the job because Fels has left them no real choice. What they f
 
 **Thematic focus delivered:** Magic as lived experience -- Sera's wild path (the river, variance, backlash, the riptide) contrasted with Aldric's scholarly path (the lattice, control, measured cost, the resource counted like ammunition). The reader feels the mechanics without seeing the numbers.
 
+### Story 4: "No Kinder Country — A Tale of the Ash & Veil Society"
+
+**Status:** Drafted (Session 37). In review on the fiction branch; once approved, published at `/fiction/no-kinder-country.html`.
+**Summary:** Thessaly Vane comes to the Wet Ember a second time: the Covenant needs the Collective's mill expedition delayed, deniably, with no Covenant seal anywhere near it. The Society takes Covenant materiel (cart, horses, Sootborn stump powder that traces to a field) and Pell's ground (maps, trails, refuge, no fighters). Mira's three-part plan at the ford on the Old Cart Road: strike, sabotage, withdrawal, with a red flare for abort. Kael stops the lead lorry in the ford with a 210-yard rifle shot; Aldric raises a wall across the far bank; Sera brings down the Sootborn timber stack behind the column. Kael sets charges down the line; his revolver misfires at ten feet; he is shot through the side, drops the Ironwork sergeant with an antique blackpowder pistol from his ankle, and is thrown against rock by his own charges. Sera's uncontrolled surge clears the men walking in to finish him. Aldric drops the wall and runs, refuses the flood the Aether offers, and casts only the mending he can afford twice, then a ward to hold Kael's ribs for the carry. Eight days of recovery at the Sootborn settlement. Home to a debrief, a private warning, and a flat that has been searched.
+
+**Key events:**
+- Thessaly comes to the Society (second time); the Covenant frames the job as deniable action; Pell's help is "convergence of interest, not alliance"
+- Kael takes the long rifle down from the wardrobe; buys an ugly blackpowder pistol for his ankle ("Nothing in it to go wrong"); Mira leaves her arc pistol at the flat (dead weight past the last village)
+- Aldric speaks his budget aloud at Pell's table: the wall will cost him most of what he has; after it, he holds back for one serious healing. "My job is keeping us alive"
+- The convoy: outrider, three lorries (one carrying the suppression engines), two Ironwork transports (one with a ring-mounted gun), two Collective research cars
+- When the suppression lorry explodes, its dead-zone engine fires once as it dies: a grey-violet flash that empties the valley of Aether for an instant. Aldric holds his wall up through it on frame and stubbornness alone
+- Sera's first log push sputters, the second (on a pulse) brings the whole slope down; her covering push slams an Ironwork man into a transport; her uncontrolled surge throws three men into the river and shoves a burning lorry; her eyes glow bright enough to light her face in daylight; a last scraped push scatters the researchers. "GO!"
+- Aldric's wall unthreads; the backflow leaves a ringing in his casting sense that lasts over a week
+- Kael's wounds: through-and-through low on the right side, broken left arm, shrapnel down the left forearm, broken ribs into the lung
+- Stretcher of rifle, timber pole and two coats; Sera insists on carrying. Cart at the clearing; eight miles by back trails at dusk
+- Second, deeper mending at the settlement. "Thank you." / "Anytime." / "Next time. Your turn to get shot. I'll fix you." / "Deal." Kael sleeps three days
+- Pell's Wild-edge children: Tobin (pale patches on his wrists that shine faintly in the dark) and Wenna (hair grows copper at the roots). "The Wild's slow. But it tells the truth"
+- Aldric to Sera: "It's dangerous. Whether it's bad depends on what you become." Sera decides she will tell the team about the tunnel vision, soon
+- Pell offers the cabins at the edge of the trees as a refuge: kinship, not membership. "Stay alive." / "You too."
+- Thessaly's third visit: five vehicles destroyed, all suppression equipment wrecked, six Ironwork dead, four wounded, no researchers killed; expedition postponed two months at least; premium payment. Privately: "They know it was you." Mira withholds the warning that night; Kael sees the gap
+- Harrier Street: fresh pick scratch on the lock; Mira's arc pistol turned in its drawer; the back-window catch turned the wrong way; Mrs. Brant's two "Greycoats" (good grey coats, one with a cog signet); a shape in the mouth of the bakery alley that does not move. Mira writes "Tell them tomorrow" and underlines it twice
+
+**Outcome:** Collective expedition delayed two months; suppression gear destroyed. Kael nearly died and carries it home; his revolver is lost on the valley floor. Sera's accumulation advanced after an uncontrolled surge. Aldric chose friendship over the plan, and kept a written record of what it cost. The Collective knows, without proof, and has already been inside the flat.
+
+**Thematic focus delivered:** Combat as lived experience: planning as power, weapon reliability by zone, sustained and dropped workings, the death timer and stabilisation, healing in two stages, injuries that take days. The reader feels the timing track without seeing it.
+
 ---
 
 ## NPCs
@@ -83,16 +109,19 @@ The Society takes the job because Fels has left them no real choice. What they f
 
 | Name | Affiliation | Role | First Appearance | Status |
 |---|---|---|---|---|
-| Thessaly Vane | Covenant of Embers | Patron handler | Story 02, Ch 1 | Active. Receiving reports from Mira. |
+| Thessaly Vane | Covenant of Embers | Patron handler | Story 02, Ch 1 | Active. Has come to the Wet Ember three times now; the Covenant calls the Society "a significant asset". Warned Mira privately that the Collective knows. "I'm sorry." |
 | Inspector Renna Laine | Greycoat Authority | Society contact | The Ashwick Job | Active. Reliable contact. Not briefed on tunnel/mill findings. |
-| Hesper Brack | The Wet Ember | Barkeep | The Ashwick Job | Active. One good arm, practiced indifference, reads people like broadsheets. |
+| Hesper Brack | The Wet Ember | Barkeep | The Ashwick Job | Active. One good arm, practiced indifference, reads people like broadsheets. Keeps the only chair with arms by the fire for Kael ("Don't bleed on it"). |
+| Mrs. Brant | Harrier Street | Widow across the landing | Story 04, Ch 8 | Seventy, lace collar, a cat called Admiral. Kind. Told two "Greycoats" the flat was empty; noticed a cog signet. |
 
 ### Sootborn Settlement (Wild Edge, Northeast)
 
 | Name | Role | First Appearance | Notes |
 |---|---|---|---|
-| Pell | Settlement leader | Story 02, Ch 10 | Her grandfather built the mill. Family ties to the site. Flat look -- predicted trouble, wished she'd been wrong. Hostile to city factions bringing wars to the Wild edge. |
+| Pell | Settlement leader | Story 02, Ch 10 | Her grandfather built the mill. Family ties to the site. Flat look -- predicted trouble, wished she'd been wrong. Hostile to city factions bringing wars to the Wild edge. Story 04: gave the Society maps, trails, scouts and refuge, never fighters. Offered the edge cabins as a bolt-hole. "Stay alive." |
 | Thom | Elder | Story 02, Ch 4 | Old man by the well. Father was a boy when the Tear happened. Told Aldric about "Old Pell's grandfather's mill" -- grain elevator, roller mill, ~30 hands, shift bell audible from the settlement. |
+| Tobin | Child, 11 | Story 04, Ch 7 | Born at the settlement. Pale patches on the insides of his wrists that shine faintly in the dark. |
+| Wenna | Child, 14 | Story 04, Ch 7 | Hair grows copper at the roots. |
 | Adi | Child | Story 02, Ch 4 | Drew two-layer charcoal picture on a plank wall: mill silhouette below, alien geometric interior above. (Name from plan; verify if named in prose.) |
 
 ### Rivals & Antagonists
@@ -101,7 +130,7 @@ The Society takes the job because Fels has left them no real choice. What they f
 |---|---|---|---|---|
 | Corrigan Fels | Lamplighter Syndicate | Smuggler, blackmailer | The Ashwick Job | Grudge satisfied after Story 03. Relationship shifts to transactional. Clove cigarettes from a silver case, professional charm, code about violence. |
 | Dace Rennick | The Margin | Information broker, wild card | Story 02, Ch 10 | Active. Knows the mill site is real. Waiting at a crossroads with a tethered horse and a thin cigar. Gave Mira the story without the meaning. |
-| Ironwork Solutions | Ashworth Collective contractor | Rival Society | Story 02, Ch 9 | Hostile. Attempted lethal force in the Wilds. Collective planning a second, larger expedition to the mill. |
+| Ironwork Solutions | Ashworth Collective contractor | Rival Society | Story 02, Ch 9 | Hostile, wounded, personal. Six dead and four wounded at the ford (Story 04). Their grey-moustached sergeant will walk with a stick, and he has been talking. |
 
 ---
 
@@ -151,7 +180,7 @@ These are seeds, not outlines. Each should be developed into a full premise when
 
 **"Lean Season"** -- The Covenant's funding is delayed. The Ledger drifts toward lean. The Society takes a Greycoat Authority job that nobody else wants -- not because it's dangerous, but because the pay is bad and the work is unglamorous. A routine zone survey in a residential neighborhood reveals that the Ashworth Collective's expansion is further along than anyone realized, and the people living in the affected blocks are running out of time.
 
-**Combat-focused story (TBD)** -- Earmarked as the combat showcase: Kael-heavy, damage, timing track, armor, Galvanic devices, weapon reliability. The Collective's armed expedition to the mill could be the trigger -- the Society racing to intercept or counter a militarized retrieval with industrial-grade Galvanic suppression equipment.
+**Story 05 (TBD)** -- The shadow hardens into fact. Collective agents in Ashwick, the flat compromised, Mira's "tell them tomorrow". The one ground Galvanic-equipped operatives can't follow easily is deep Aetheric territory: the Veilwright Quarter (pairs with "Down the Gradient"). Sera's tunnel vision ready to surface. (The combat showcase became Story 04.)
 
 **"The Deep Wild"** -- Dr. Crane hires the Society for the job she's been building toward: an expedition into the Deep Wild to find the missing research team. The Society leaves Ashwick entirely, entering territory where the rules of reality are suggestions. Sera's connection to the Aether deepens. Kael's distrust of magic is tested by an environment where his gun is useless and the only thing standing between him and the Wild is the casters he doesn't fully trust.
 
@@ -161,7 +190,7 @@ These are seeds, not outlines. Each should be developed into a full premise when
 
 ## Character Status Tracker
 
-*Updated after Story 03.*
+*Updated after Story 03. Story 04 changes are listed in the "After Story 04" section below.*
 
 | Character | Physical Status | Magical Status | Personal Arc | Notable Changes |
 |---|---|---|---|---|
@@ -172,7 +201,7 @@ These are seeds, not outlines. Each should be developed into a full premise when
 
 ## Society Status
 
-*Updated after Story 03.*
+*Updated after Story 03. Story 04 changes are listed in the "After Story 04" section below.*
 
 | Element | Status | Notes |
 |---|---|---|
@@ -185,7 +214,7 @@ These are seeds, not outlines. Each should be developed into a full premise when
 
 ## World State
 
-*Updated after Story 03.*
+*Updated after Story 03. Story 04 changes are listed in the "After Story 04" section below.*
 
 | Element | Status | Notes |
 |---|---|---|
@@ -202,7 +231,7 @@ These are seeds, not outlines. Each should be developed into a full premise when
 
 ## Seeds Planted
 
-*Updated after Story 03.*
+*Updated after Story 03. Story 04 changes are listed in the "After Story 04" section below.*
 
 | Seed | Planted In | Status |
 |---|---|---|
@@ -228,6 +257,29 @@ These are seeds, not outlines. Each should be developed into a full premise when
 | Something beneath both forces | Story 03 | Active, unvoiced -- Aldric holding the theory back; the polarity framework questioned |
 | Kael's weapon reliability in zones | Story 03 | Active -- revolver sluggish in Aetheric territory, crisp in Galvanic. Seeds the combat-focused story. |
 | Fels's genuine warning about the tunnels | Story 03 | Active -- "the people already curious don't share well." Whoever those people are has not yet appeared on the board. |
+
+
+## After Story 04
+
+| Element | Change |
+|---|---|
+| Kael | Through-and-through wound, broken arm and ribs, mended in two stages; walking slowly by day 8, one hand to his side. Revolver lost at the ford; carries the blackpowder pistol now. First brush with his own death; bonded with Aldric. Watching Mira's edits. |
+| Sera | Uncontrolled surge: no shape, "opened a door and stood in it". Ring now a wide band, visible in ordinary light; something in her "stretched and hasn't gone all the way back". Decided to tell the team about the tunnel vision, soon. |
+| Aldric | Dropped a sustained working mid-cast; the backflow left a ringing in his casting sense, fading over eight days. Keeps a written cautionary record of the cost. Borrowed gold-rimmed spectacles (own pair cracked). |
+| Mira | Withheld Thessaly's warning on the first night home; has the evidence of the search written down: "Tell them tomorrow". |
+| Ledger | Good: Covenant premium plus the cart. |
+| Covenant | Strong; treats the Society as a key asset but will not stand between it and the Collective. |
+| Ashworth Collective | Openly hostile; expedition delayed two months at least; agents have searched the flat posing as Greycoats. |
+| Sootborn settlement | Kinship; the edge cabins are a refuge. Horses still to be returned. |
+| Harrier Street | Compromised: lock picked, drawer and window searched, a watcher in the bakery alley. |
+
+| New seed | Status |
+|---|---|
+| Collective retribution | Active; drives Story 05 |
+| The cog signet | The talker at Mrs. Brant's door wore a signet with a cog |
+| Dead-zone engines can "fire" as they die | A destroyed suppression engine empties the Aether around it for an instant |
+| Sera's surge | A capacity she didn't know she had; Aldric can't name what it was |
+| The Wild past the fence is still, not pulsing | Sera hears the deep Wild differently since the surge |
 
 ---
 
