@@ -19,7 +19,7 @@ storySlug: the-lamplighters-price
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/fiction.css">
 </head>
-<body>
+<body data-theme="{{ story.theme }}">
 
 <div class="atmo"></div>
 
@@ -79,8 +79,10 @@ storySlug: the-lamplighters-price
 <article class="story-article">
 
   <header class="story-titleblock" id="top">
-    <p class="story-number">Story No. {{ story.numberDisplay }}</p>
-    <h1>{{ story.title }}</h1>
+    <div class="story-crown">
+      <p class="story-number">Story No. {{ story.numberDisplay }}</p>
+      <h1>{{ story.title }}</h1>
+    </div>
     <p class="story-subtitle">{{ story.subtitle }}</p>
   </header>
 
@@ -100,8 +102,8 @@ storySlug: the-lamplighters-price
   {%- endfor %}
 
   <footer class="story-end" id="story-end">
+    <div class="tailpiece" aria-hidden="true"></div>
     <p class="end-mark">The End</p>
-    <span class="end-gem" aria-hidden="true"></span>
     <p>
       More tales of the Ash &amp; Veil Society &mdash; and of others like them &mdash;
       will follow. If you'd like to know how this world runs at the table,

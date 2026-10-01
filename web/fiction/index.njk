@@ -38,11 +38,7 @@ eleventyExcludeFromCollections: true
       Short stories from the world between the Veil and the Engine &mdash;
       glimpses of what the rules only hint at.
     </p>
-    <div class="divider">
-      <span class="divider-line divider-line-l"></span>
-      <span class="divider-gem"></span>
-      <span class="divider-line divider-line-r"></span>
-    </div>
+    <div class="deco-divider" aria-hidden="true"></div>
   </div>
 </header>
 
@@ -51,7 +47,10 @@ eleventyExcludeFromCollections: true
     <div class="fiction-list">
       {%- if fiction.stories and fiction.stories.length %}
         {%- for story in fiction.stories %}
-        <a href="{{ story.slug }}.html" class="story-card">
+        <a href="{{ story.slug }}.html" class="story-card" data-theme="{{ story.theme }}">
+          {%- if story.spot %}
+          <img src="../assets/art/spots/{{ story.spot.file }}.webp" alt="{{ story.spot.alt }}" class="story-card-spot" width="800" height="800" loading="lazy">
+          {%- endif %}
           <p class="story-number">Story No. {{ story.numberDisplay }}</p>
           <h2>{{ story.title }}</h2>
           <p class="story-subtitle">{{ story.subtitle }}</p>
