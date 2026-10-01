@@ -57,6 +57,13 @@ module.exports = function (eleventyConfig) {
     return `<figure class="spot spot-${side}"><img src="../assets/art/spots/${name}.webp" alt="${alt}" loading="lazy"></figure>`;
   });
 
+  // ── Plates (Deco Wave 4): full-bleed scenes in assets/art/plates/, never cut out.
+  // "full" is a tall full-page plate (its own page in the PDF); "half" a landscape scene.
+  eleventyConfig.addShortcode("plate", function (name, alt, caption = "", size = "half") {
+    const cap = caption ? `<figcaption>${caption}</figcaption>` : "";
+    return `<figure class="plate plate-${size}"><img src="../assets/art/plates/${name}.webp" alt="${alt}" loading="lazy">${cap}</figure>`;
+  });
+
   // ── Section dividers (chapter art standard, docs/art/deco-suite-plan.md §5) ──
   // Every rulebook chapter gets a divider between its top-level sections: the <h2 id> sections
   // when there are two or more, otherwise the <h3 id> sections. Chapters whose text already

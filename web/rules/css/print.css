@@ -972,6 +972,16 @@ h2, h3, h4, h5 {
   background: var(--dropcap-art) center / 100% 100% no-repeat;
 }
 
+/* Plates (Deco Wave 4). A full plate takes its own midnight page, no running heads;
+   a half plate sits in the column at full width. */
+@page plate { margin: 0.55in; background: #0e1a2b; @top-left { content: none; } @top-right { content: none; } @bottom-center { content: none; } @bottom-right { content: none; } @bottom-left { content: none; } }
+.plate { margin: 0.2in 0; break-inside: avoid; text-align: center; }
+.plate img { display: block; width: 100%; height: auto; }
+.plate figcaption { margin-top: 0.08in; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 9pt; color: #555; }
+.plate-full { page: plate; break-before: page; break-after: page; margin: 0; height: 9.9in; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.plate-full img { width: auto; max-width: 100%; max-height: 9.2in; border: 1pt solid #efe6d2; }
+.plate-full figcaption { color: #efe6d2; font-size: 10pt; }
+
 /* Tailpiece */
 .tailpiece {
   height: 0.75in;
