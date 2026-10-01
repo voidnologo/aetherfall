@@ -31,6 +31,8 @@ So the fix is rarely a ban. It's a budget.
 
 Stories 02 and 03 are the reference for rhythm: their sentences rarely chain. They have their own tics, though (dashes, "Not X. Y."), so don't copy them blindly.
 
+The Story 02 and 03 columns are from the versions first published. Session 38 line-edited both (em dashes down to 0.5 per 1k, "Not X. Y." to 0.5); Story 04 got the same pass as Story 01.
+
 ## The tics
 
 Grouped roughly by how much damage they do in fiction.
