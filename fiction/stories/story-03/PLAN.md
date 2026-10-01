@@ -46,7 +46,7 @@ Corrigan Fels arrives. Not dramatically — he simply walks in, orders a drink, 
 
 Fels is pleasant, professional, and furious underneath both. The Ashwick Job cost him — product, money, a smuggling route he'd spent years building. The Society doesn't think they owe him anything. In any traditional sense, they don't. Fels doesn't see it that way. He sees people who crossed him, and he's here to make sure it costs them.
 
-The blackmail: Fels knows details about the Society's operations — the Ironwork encounter in the Wilds, the Covenant's commission, specifics about what they found and who they told. Details that could be repackaged, reframed, and sold to people who would use them badly. The Ashworth Collective. Ironwork Solutions. Anyone who'd pay for leverage against a Society that's suddenly more visible than it can afford to be. Fels lays this out with a smile and a thin cigar and the calm of a man who knows he's holding the cards. He's not asking for a favor. He's not calling in a debt. He's telling them what happens if they say no.
+The blackmail: Fels knows details about the Society's operations — the Ironwork encounter in the Wilds, the Covenant's commission, specifics about what they found and who they told. Details that could be repackaged, reframed, and sold to people who would use them badly. The Ashworth Collective. Ironwork Solutions. Anyone who'd pay for leverage against a Society that's suddenly more visible than it can afford to be. Fels lays this out with a smile and a clove cigarette and the calm of a man who knows he's holding the cards. He's not asking for a favor. He's not calling in a debt. He's telling them what happens if they say no.
 
 The job: retrieve a sealed transport case from the deep tunnels beneath the Ashworth Foundry. The Syndicate's smuggling route through the old drainage system has been compromised — not by the Greycoats, not by the Collective, but by the tunnels themselves. The Aetheric activity down there has intensified past anything the Syndicate's runners can handle. Passages have closed. The environment has become hostile. A shipment was lost when the route collapsed three weeks ago, and nobody the Syndicate has sent has come back with more than a headache and a bad story.
 
@@ -64,7 +64,7 @@ Kael's reaction: every instinct says no. Working for the Syndicate is exactly th
 - The carrot: Collective intelligence the Society desperately needs, but only after delivery
 - Kael's moral discomfort — the Greycoat resignation echoing
 - Hesper Brack behind the bar, the Wet Ember as neutral ground
-- Fels's thin cigar, his code about violence, the professionalism that makes him more dangerous than a thug
+- Fels's clove cigarettes, his code about violence, the professionalism that makes him more dangerous than a thug
 
 ### Chapter 2 — Mira POV
 
@@ -306,7 +306,7 @@ The escort out. The upper tunnels, the drainage system, the storm drain, the nig
 
 Fels is there when they arrive. Just Mira and Kael — Aldric and Sera stayed at the flat, Aldric writing and Sera sleeping. The detail about Sera sleeping matters: she slept fourteen hours after they got back. The deepest exhaustion takes time to lift. Aldric checked on her twice — pulse, pupils, the signs he knows to look for when a caster has spent too much. She's not in danger. She's just empty in a way that sleep slowly refills.
 
-The coffee house is bright and ordinary — tile floor, zinc counter, the smell of roasted beans and tobacco. The kind of place where normal people have normal conversations. Fels sits at a corner table with his thin cigar and a cup of black coffee, and he looks like any prosperous tradesman meeting associates for a morning appointment.
+The coffee house is bright and ordinary — tile floor, zinc counter, the smell of roasted beans and tobacco. The kind of place where normal people have normal conversations. Fels sits at a corner table with a clove cigarette and a cup of black coffee, and he looks like any prosperous tradesman meeting associates for a morning appointment.
 
 Kael's revolver works properly again. The realization hits him at the coffee house door — the mechanism snapping with its usual precision as he checks it out of habit, the Galvanic air of Central feeding the engineering the way the tunnel's Aether had starved it. It confirms something he'd been wondering: the magic down there wasn't just making his skin crawl. It was pressing against the physical laws his weapon depends on. He files this with the other things he can't explain and keeps his hand near the grip anyway.
 
@@ -318,7 +318,7 @@ The Collective is assembling a second expedition to the mill site. Not Ironwork 
 
 Mira absorbs this. Kael watches Fels. He pushes: "The artifact in the case. The one you were moving through the tunnels. What is it?"
 
-Fels's smile doesn't change. "You completed the job. I've paid the agreed price. Everything else is above your commission." He taps ash from the cigar. "I'll tell you this for free, because I like you: stop asking about the tunnels. What's down there isn't something you want to be curious about. Not because it's dangerous — because the people who are already curious about it don't share well."
+Fels's smile doesn't change. "You completed the job. I've paid the agreed price. Everything else is above your commission." He taps ash from the cigarette. "I'll tell you this for free, because I like you: stop asking about the tunnels. What's down there isn't something you want to be curious about. Not because it's dangerous — because the people who are already curious about it don't share well."
 
 The warning is genuine. Kael recognizes genuine warnings the way he recognizes genuine threats — by the way the charm drops for half a second and the real person shows through. Fels is not protecting the Syndicate's interests. He's protecting the Society from the Syndicate's interests. The distinction matters.
 
