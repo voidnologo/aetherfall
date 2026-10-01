@@ -63,7 +63,19 @@ The game has no rounds. Legacy "round" durations convert at **1 round = 3 counts
 
 ---
 
+## 8. Name collisions (Session 37)
+
+- **Gideon Marlow** is the Ashworth Collective's Chief Operations Director (was Aldric Voss, which clashed with Aldric Wynn and Sera Voss).
+- **Elara Pryce** is the sample character sheet (was Elara Voss).
+- **Hollowmere** is the ruin's location in the Skills chapter's Scholar callout (was "Thornfeld", too close to the Thornfield Communion).
+- **Corrigan Fels smokes clove cigarettes** from a slim silver case. The thin cigar belongs to Dace Rennick alone.
+
+## 9. Quick Reload rounds up (Session 37)
+
+Quick Reload halves reload time, **rounding up** (Reload 5 → 3, Reload 3 → 2), as in `FIREARMS_EQUIPMENT.md`.
+
+---
+
 ## Pending (user decision needed)
 
-- Renames for name collisions (Aldric Voss, Elara Voss, "Thornfeld", two thin-cigar smokers).
-- Quick Reload rounding (web: round down; FIREARMS doc: round up).
+- None.

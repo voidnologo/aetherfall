@@ -75,7 +75,7 @@ The stories showcase different facets of the Aetherfall world: urban investigati
 
 | Name | Affiliation | Role | First Appearance | Status |
 |---|---|---|---|---|
-| Corrigan Fels | Lamplighter Syndicate | Smuggler, blackmailer | The Ashwick Job | Grudge satisfied after Story 03. Relationship shifts to transactional. Thin cigar, professional charm, code about violence. |
+| Corrigan Fels | Lamplighter Syndicate | Smuggler, blackmailer | The Ashwick Job | Grudge satisfied after Story 03. Relationship shifts to transactional. Clove cigarettes from a silver case, professional charm, code about violence. |
 | Dace Rennick | The Margin | Information broker, wild card | Story 02, Ch 10 | Active. Knows the mill site is real. Waiting at a crossroads with a tethered horse and a thin cigar. Gave Mira the story without the meaning. |
 | Ironwork Solutions | Ashworth Collective contractor | Rival Society | Story 02, Ch 9 | Hostile. Attempted lethal force in the Wilds. Collective planning a second, larger expedition to the mill. |
 

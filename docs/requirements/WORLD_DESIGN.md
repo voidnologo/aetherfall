@@ -303,7 +303,7 @@ Each faction is sketched at local/regional scale: a district, a territory, a com
 - A shipment of rare stabilizer components has been hijacked en route to the Foundry. The Collective suspects an Awakening cell. The truth is more complicated.
 - An engineer inside the Collective wants to defect — she's seen the zone intensification plans and knows the health effects are deliberate. She needs extraction.
 
-**Sample NPC:** **Aldric Voss** — Chief operations director. Former military logistics officer. Believes genuinely in the Restoration cause but is beginning to suspect the board is more interested in monopoly than ideology. Drinks too much. Asks too many questions at meetings.
+**Sample NPC:** **Gideon Marlow** — Chief operations director. Former military logistics officer. Believes genuinely in the Restoration cause but is beginning to suspect the board is more interested in monopoly than ideology. Drinks too much. Asks too many questions at meetings.
 
 ### 5.2 The Veilwright Quarter
 
