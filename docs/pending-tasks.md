@@ -1,7 +1,7 @@
 # Pending Tasks
 
 ## Next Up
-- [ ] **Rebuild the PDF for the draft print and playtest** (rulebook prose pass #34 merged; skim the Grimoire tables, 159 bulk-converted cells, in the proof) (`POST /free` to ComfyUI first if it's running).
+- [ ] **Proof the draft-print PDF** (built 2026-10-01, `print/aetherfall-rulebook.pdf`, 235 pp, local only; the user doesn't want it on the site yet). Skim the Grimoire tables (159 bulk-converted cells). (`POST /free` to ComfyUI first if it's running).
 - [ ] **Review and merge the new stories (line-edited this session):** PR #26 (Story 01, 10.9k words) and PR #25 (Story 04, 23.0k). Whichever merges second needs a small conflict fix in `web/_data/fiction.js` (keep `[STORY_04, STORY_03, STORY_02, STORY_01]`) and the series bible. Then close draft PR #3.
 - [ ] **Web hero and social previews:** use the spare approved covers ("four on the hill road", "the Tear over the skyline") for a Deco web hero redraw and og:image cards (site at voidnologo.github.io/aetherfall/)
 - [ ] Reroll Hesper Brack's portrait with one arm (canon); then restore "One arm, one rule" in `web/_data/cast.json`

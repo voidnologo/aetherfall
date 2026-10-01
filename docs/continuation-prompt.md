@@ -13,7 +13,7 @@
 - **Prose:** run `python3 tools/prose_lint.py --summary <files>` on any fiction or prose before committing (rulebook: `tools/rulebook_prose.py DIR` first). The user strongly dislikes AI tics: ", and" chains, "the way X does Y", "Not X. Y.", em-dash overuse.
 
 ## Immediate Next Task
-1. Rebuild the PDF for the **draft print and playtest** (#34 merged; skim the Grimoire tables in the proof).
+1. Proof the draft-print PDF (built, local only by choice; skim the Grimoire tables).
 2. User reviews #26 and #25 (new stories); merge (fix the `fiction.js`/bible conflict on the second), close draft #3.
 3. Web hero and og:image cards; Hesper reroll; plan Story 05 (written with `prose-check`).
 

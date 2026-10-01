@@ -76,6 +76,8 @@ The user found Story 01 (PR #26) full of AI tics: ", and" chains, ", and X had d
 - In Story 02 the spell names (Detect, Reveal, cantrip) may break the "no mechanics in fiction" rule. User to decide.
 - Antislop data lists Kael and Elara among the most over-used names in model fiction. Canon unchanged; user informed.
 
+- After the wrap: #33 and #34 merged; site deploy verified (voidnologo.com/aetherfall); PDF rebuilt (235 pp, 44.7 MB). The user chose to keep the PDF local rather than offer it on the site.
+
 ## Next Session
 
 - Review/merge #26, #25, #34; close draft #3. Rebuild the PDF (`python3 scripts/build-pdf.py`) for the draft print after #34 merges.
