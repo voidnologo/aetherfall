@@ -33,5 +33,9 @@
   "ward": {"master": "deco-spot_ward_v01_seed-3435583711.png"},
   "watch": {"master": "deco-spot_watch_v01_seed-4148309664.png"},
   "wild": {"master": "deco-spot_wild_v01_seed-1932770582.png"},
-  "wounded": {"master": "deco-spot_wounded_v01_seed-720151363.png"}
+  "wounded": {"master": "deco-spot_wounded_v01_seed-720151363.png"},
+  "ford": {"master": "deco-spot_ford_v01_seed-2396957497.png"},
+  "stretcher": {"master": "deco-spot_stretcher_v01_seed-2900464817.png"},
+  "dampener": {"master": "deco-spot_dampener_v01_seed-2485812046.png"},
+  "barrier": {"master": "deco-spot_barrier_v01_seed-1194251571.png"}
 }

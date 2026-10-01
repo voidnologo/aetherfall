@@ -141,6 +141,59 @@ def print_art_css():
     return "\n".join(rules)
 
 
+def print_plates():
+    """Cut print-resolution copies of the full-bleed art (plates, scenes, covers, NPC portraits)
+    from the 4x masters in art/*/print/, applying tools/plate_manifest.json's fills and crops
+    scaled up. Returns {web path under assets/art: print file URI}. Art without a 4x master
+    keeps its web copy."""
+    sys.path.insert(0, str(ROOT / "tools"))
+    from plate_web import bone_border
+
+    manifest = json.loads((ROOT / "tools" / "plate_manifest.json").read_text())
+    art_dir = OUTPUT_DIR / "art"
+    art_dir.mkdir(exist_ok=True)
+    swaps = {}
+    for name, spec in manifest.items():
+        if name.startswith("_"):
+            continue
+        master = ROOT / "art" / spec["master"]
+        x4 = master.parent.parent / "print" / f"{master.stem}_x4.png"
+        if not x4.exists():
+            continue
+        folder = spec.get("out", "plates")
+        out = art_dir / f"{folder}-{name}.jpg"
+        if not out.exists() or out.stat().st_mtime < max(x4.stat().st_mtime, (ROOT / "tools" / "plate_manifest.json").stat().st_mtime):
+            cmd = ["magick", str(x4)]
+            for x, y, w, h, sx, sy in spec.get("fill", []):
+                colour = subprocess.run(["magick", str(master), "-format", f"%[pixel:p{{{sx},{sy}}}]", "info:"],
+                                        capture_output=True, text=True, check=True).stdout.strip()
+                cmd += ["-fill", colour, "-draw", f"rectangle {x * 4},{y * 4} {(x + w) * 4},{(y + h) * 4}"]
+            if "crop" in spec:
+                x, y, w, h = spec["crop"]
+                cmd += ["-crop", f"{w * 4}x{h * 4}+{x * 4}+{y * 4}", "+repage"]
+            elif spec.get("trim"):
+                w, h, l, t, r, b = bone_border(master)
+                if l or t or r or b:
+                    l, t, r, b = ((v + 4) * 4 if v else 0 for v in (l, t, r, b))
+                    cmd += ["-crop", f"{w * 4 - l - r}x{h * 4 - t - b}+{l}+{t}", "+repage"]
+            # ~300 DPI at printed size: full plate 9.2in tall, half plate 7.25in wide, cover 11in,
+            # stat-block portrait about 3in
+            if folder == "covers":
+                cmd += ["-resize", "x3300>"]
+            elif folder == "portraits":
+                cmd += ["-resize", "x900>"]
+            else:
+                w, h = (int(v) for v in subprocess.run(["magick", "identify", "-format", "%w %h", str(master)],
+                                                        capture_output=True, text=True, check=True).stdout.split())
+                cmd += ["-resize", "2200x>" if w > h else "x2800>"]
+            cmd += ["-quality", "86", str(out)]
+            subprocess.run(cmd, check=True)
+        swaps[f"art/{folder}/{name}.webp"] = out.as_uri()
+    if swaps:
+        print(f"  Print-resolution plates: {len(swaps)}")
+    return swaps
+
+
 def build_toc(pages):
     """Build a table of contents with target-counter references."""
     entries = []
@@ -162,6 +215,7 @@ def build_combined_html(pages):
     """Assemble all chapters into a single print-ready HTML document."""
     css_path = CSS_DIR / "print.css"
 
+    plates = print_plates()
     parts = []
     parts.append(f"""<!DOCTYPE html>
 <html lang="en">
@@ -175,6 +229,17 @@ def build_combined_html(pages):
 <style>{print_art_css()}</style>
 </head>
 <body>
+""")
+
+    # Cover: full-bleed Wave 4 cover art, title in the open sky
+    cover = plates.get("art/covers/cover-between.webp")
+    if cover:
+        parts.append(f"""
+<style>@page cover {{ margin: 0; background: #0e1a2b url({cover}) center / cover no-repeat; }}</style>
+<section class="cover-page">
+  <h1 class="cover-title">Aetherfall</h1>
+  <p class="cover-subtitle">Magic &amp; Machines in the 1920s</p>
+</section>
 """)
 
     # Title page
@@ -218,6 +283,8 @@ def build_combined_html(pages):
         # Chapter pages link images relative to _site/rules/; the combined file lives in print/
         assets = (ROOT / "_site" / "assets").as_uri()
         content = content.replace('src="../assets/', f'src="{assets}/').replace('src="/assets/', f'src="{assets}/')
+        for web, printed in plates.items():
+            content = content.replace(f'src="{assets}/{web}"', f'src="{printed}"')
         parts.append(f'<section class="chapter" id="chapter-{page["id"]}" data-theme="{page.get("theme", "neutral")}">')
         parts.append(content)
         parts.append("</section>\n")

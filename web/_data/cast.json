@@ -1,0 +1,51 @@
+[
+  {
+    "img": "npc-vane",
+    "name": "Thessaly Vane",
+    "role": "Covenant of Embers",
+    "line": "The Society's patron handler. Composed, precise, and never early — except when it matters.",
+    "seen": "Stories 02–04"
+  },
+  {
+    "img": "npc-brack",
+    "name": "Hesper Brack",
+    "role": "The Wet Ember",
+    "line": "One rule, enforced. Whatever you are outside, in her tavern you're a customer.",
+    "seen": "Every story"
+  },
+  {
+    "img": "npc-laine",
+    "name": "Inspector Renna Laine",
+    "role": "Greycoat Authority",
+    "line": "Overworked, ink-stained, and short of constables. She hired the Society first, and trusts them exactly as far as their record goes.",
+    "seen": "Story 01"
+  },
+  {
+    "img": "npc-fels",
+    "name": "Corrigan Fels",
+    "role": "Lamplighter Syndicate",
+    "line": "The man you talk to when something needs moving. He doesn't hold grudges. He keeps accounts.",
+    "seen": "Stories 01, 03"
+  },
+  {
+    "img": "npc-rennick",
+    "name": "Dace Rennick",
+    "role": "The Margin",
+    "line": "Knows everyone, owes everyone, is owed by everyone. His cigar is never finished.",
+    "seen": "Story 02"
+  },
+  {
+    "img": "npc-crane",
+    "name": "Dr. Isavel Crane",
+    "role": "Gradient Scholars",
+    "line": "Her research team went into the Deep Wild six months ago and stopped answering. She hasn't slept well since.",
+    "seen": "Coming soon"
+  },
+  {
+    "img": "npc-marlow",
+    "name": "Gideon Marlow",
+    "role": "Ashworth Foundry Collective",
+    "line": "Operations director, old soldier, true believer in the Engine — and lately, a man asking his board uncomfortable questions.",
+    "seen": "Coming soon"
+  }
+]
