@@ -102,7 +102,7 @@ const STORY_04 = {
   location: 'The Wild edge &mdash; the ford on the Old Cart Road',
   tone: 'Tense, muscular, then tender',
   theme: 'galvanic',               /* the Collective's machines against four people on a ridge */
-  spot: { file: 'misfire', alt: 'A revolver misfires in an alley, sparks spitting from its cylinder' },
+  spot: { file: 'ford', alt: 'Armoured lorries burn in a river ford at dawn' },
   povOrder: ['Mira', 'Aldric', 'Kael', 'Sera', 'Aldric', 'Kael', 'Sera', 'Mira'],
 };
 
