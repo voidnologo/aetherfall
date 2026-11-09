@@ -33,7 +33,7 @@ aetherfall/
         zone-tracker.html         # Aetheric/Galvanic balance tracker
   _site/                          # Built output (generated, not committed)
   docs/
-    requirements/                 # Authoritative design specifications (16 docs)
+    requirements/                 # Authoritative design specifications (17 docs)
     sessions/                     # Chronological development log (27+ sessions)
     art/                          # Art direction, style guide, prompt engineering
     pending-tasks.md              # Active task queue
@@ -72,7 +72,7 @@ Start here to understand the game's design landscape:
 
 **1. [PROJECT_SPEC.md](docs/requirements/PROJECT_SPEC.md)** — What the game is
 
-The top-level vision document. Establishes the design pillars (theater of mind, mechanical consistency, OSR lethality, rulings over rules), the setting premise (a world 40 years past the Tear), and the scope of play (Adventuring Societies chartered by patrons).
+The top-level vision document. Establishes the design pillars (theater of mind, mechanical consistency, OSR lethality, rulings over rules), the setting premise (a world 50 years past the Tear), and the scope of play (Adventuring Societies chartered by patrons).
 
 **2. [DESIGN_PHILOSOPHY.md](docs/requirements/DESIGN_PHILOSOPHY.md)** — Why the world works this way
 
@@ -90,7 +90,7 @@ The timing track system: declare actions, place tokens on a count track, resolve
 
 Two casting paths: Scholarly (controlled, all schools, learned spells) and Wild (unpredictable, limited schools, all spells in those schools). Tier system based on roll margin (Weak through Spectacular). Exhaustion costs, backlash mechanics, the Push system for overreaching.
 
-**6. [SPELL_COMPENDIUM.md](docs/requirements/SPELL_COMPENDIUM.md)** — All 37 spells
+**6. [SPELL_COMPENDIUM.md](docs/requirements/SPELL_COMPENDIUM.md)** — All 38 spells
 
 Complete spell reference across six schools (Aetheric Manipulation, Vivimancy, Warding, Divination, Transmutation, Ley Weaving). Each spell has a fixed casting time and per-tier exhaustion costs and effects.
 
@@ -104,7 +104,7 @@ Every weapon has Speed, Damage, Capacity, Reload, and Reliability. Firearms chec
 
 **9. [WORLD_DESIGN.md](docs/requirements/WORLD_DESIGN.md)** — The setting
 
-"Fog of Scale" principle: global events are rumors, regional politics are faction-driven, local detail is NPC-level. The world is 40-60 years past the Tear that brought magic back. Factions include Industrialists, Traditionalists, Academics, the Church, and criminal networks.
+"Fog of Scale" principle: global events are rumors, regional politics are faction-driven, local detail is NPC-level. The world is 50 years past the Tear that brought magic back. Factions include Industrialists, Traditionalists, Academics, the Church, and criminal networks.
 
 **10. [ECONOMY.md](docs/requirements/ECONOMY.md)** — Wealth and commerce
 
@@ -153,7 +153,7 @@ Art style, mood, and production guidelines. Covers the pen-and-ink aesthetic, co
 All tools are standalone HTML files with no server required. Open in a browser, use offline.
 
 - **Character Builder** — Form wizard with clickable attributes, skill/spell dropdowns, auto-calculated targets, pool budget tracking. Prints a formatted 2-page character sheet.
-- **Combat Tracker** — 10-column calendar grid timing track with drag-and-drop tokens, infinite timeline, footprint history for past actions.
+- **Combat Tracker** — Scrolling 30-count timing track with drag-and-drop tokens, infinite timeline, footprint history for past actions.
 - **Zone Tracker** — Live Aetheric/Galvanic balance tracker with spell/weapon shift buttons, decay controls, and real-time Reliability and Casting modifier display.
 
 ---

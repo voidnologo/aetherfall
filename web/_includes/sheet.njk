@@ -899,7 +899,9 @@
                             {%- if char.path == 'scholarly' or char.path == 'wild' -%}
                                 {%- if char.skills -%}
                                     {%- for skill in char.skills -%}
-                                        {%- if skill.name == 'Casting' or skill.name == 'Spellcasting' %}{{ skill.target }}{% endif -%}
+                                        {%- if skill.name == 'Scholarly Casting' or skill.name == 'Wild Casting' or skill.name == 'Casting' or skill.name == 'Spellcasting' -%}
+                                            {%- if char.path == 'wild' %}{{ skill.target + 10 }}{% else %}{{ skill.target }}{% endif -%}
+                                        {%- endif -%}
                                     {%- endfor -%}
                                 {%- endif -%}
                             {%- endif -%}
@@ -922,8 +924,8 @@
                     </div>
                     <div class="casting-field">
                         <span class="casting-label">Spells Known:</span>
-                        <div class="casting-value">{% if pwVal != null and (char.path == 'scholarly' or char.path == 'wild') %}{{ 7 + pwVal }}{% endif %}</div>
-                        <span style="font-size:6pt;color:#888;">(7+PW)</span>
+                        <div class="casting-value">{% if char.path == 'scholarly' and pwVal != null %}{{ 7 + pwVal }}{% elif char.path == 'wild' %}All in schools{% endif %}</div>
+                        <span style="font-size:6pt;color:#888;">Scholarly: 7+PW</span>
                     </div>
                 </div>
                 <div style="font-size:6pt;color:#888;margin-top:2pt;">
@@ -1110,11 +1112,12 @@
         <strong>Quick Reference</strong> &mdash;
         <code>Skill Target = ((10 + Stat) &times; Level) + 30</code> &middot;
         <code>Unskilled = (5 + Stat) &times; 5</code> &middot;
+        <code>Stat check = (5 + Stat) &times; 10</code> &middot;
         <code>Concentration = (PW + 4) &times; 10</code> &middot;
         <code>Eff. Reliability = Base &minus; (Balance &times; 2)</code> &middot;
         <code>Eff. Casting = Base + (Balance &times; 2)</code> &middot;
         Wound &amp; Exhaustion penalties stack &middot;
-        Hinder: &minus;5% to PC-skills, +1 cast speed/pt
+        Hinder: &minus;5% to PC-skills and Athletics, +1 cast speed/pt
     </div>
 
 </div>
@@ -1285,7 +1288,7 @@
     // Find casting target from skills
     var castSkillName = c.path === 'scholarly' ? 'Scholarly Casting' : 'Wild Casting';
     var castSkill = (c.skills || []).find(function(s) { return s.name === castSkillName; });
-    if (castingValues[0] && castSkill) castingValues[0].textContent = castSkill.target;
+    if (castingValues[0] && castSkill) castingValues[0].textContent = c.path === 'wild' ? castSkill.target + 10 : castSkill.target;
     if (castingValues[1]) castingValues[1].textContent = (pwVal + 4) * 10;
     if (castingValues[2]) castingValues[2].textContent = c.path === 'scholarly' ? 'All' : (c.wildSchools || []).join(', ');
     if (castingValues[3]) castingValues[3].textContent = c.path === 'scholarly' ? (7 + pwVal) : 'All in selected schools';

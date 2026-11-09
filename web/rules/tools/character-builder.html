@@ -495,6 +495,7 @@ const SPELLS = [
     {name:"Detect",school:"Divination",cast:"2ct",w:2,s:4,st:6,sp:10},
     {name:"Disruption",school:"Aetheric Manipulation",cast:"4ct",w:3,s:6,st:9,sp:14},
     {name:"Elemental Manip.",school:"Aetheric Manipulation",cast:"4ct",w:3,s:6,st:9,sp:14},
+    {name:"Enchant",school:"Ley Weaving",cast:"Ritual (2h+)",w:6,s:10,st:16,sp:24},
     {name:"Enlarge/Reduce",school:"Transmutation",cast:"6ct",w:4,s:8,st:12,sp:18},
     {name:"Force",school:"Aetheric Manipulation",cast:"2ct",w:2,s:4,st:6,sp:10},
     {name:"Foresight",school:"Divination",cast:"6ct",w:4,s:8,st:12,sp:18},
@@ -736,12 +737,15 @@ function updateMagicDerived() {
         ? skillRows.find(r => r.skill === 'Scholarly Casting')
         : skillRows.find(r => r.skill === 'Wild Casting');
     const lvl = castSkill ? castSkill.level : 0;
-    const target = lvl > 0 ? ((10 + pw) * lvl) + 30 : 0;
+    const base = lvl > 0 ? ((10 + pw) * lvl) + 30 : 0;
+    // Wild casters get a flat +10 for natural attunement.
+    const target = base > 0 && state.path === 'wild' ? base + 10 : base;
+    const wildSchools = Math.max(1, pw);
 
     document.getElementById('casting-target').textContent = target || '\u2014';
     document.getElementById('casting-conc').textContent = (pw + 4) * 10;
     document.getElementById('casting-schools').textContent =
-        state.path === 'scholarly' ? 'All 6' : `2 (select below)`;
+        state.path === 'scholarly' ? 'All 6' : `${wildSchools} (select below)`;
     document.getElementById('spells-known').textContent =
         state.path === 'scholarly' ? (7 + pw) : 'All in selected schools';
 }
@@ -764,7 +768,7 @@ function toggleWildSchool(school) {
     const idx = state.wildSchools.indexOf(school);
     if (idx >= 0) {
         state.wildSchools.splice(idx, 1);
-    } else if (state.wildSchools.length < 2) {
+    } else if (state.wildSchools.length < Math.max(1, getAttr('PW'))) {
         state.wildSchools.push(school);
     }
     renderSchoolPicker();
@@ -773,7 +777,8 @@ function toggleWildSchool(school) {
 function renderWildSpellPreview() {
     const preview = document.getElementById('wild-spell-preview');
     if (state.wildSchools.length === 0) {
-        preview.innerHTML = '<div style="color:#565e72;font-size:12px;">Select 2 schools above to see your spell list.</div>';
+        const allowed = Math.max(1, getAttr('PW'));
+        preview.innerHTML = '<div style="color:#565e72;font-size:12px;">Select ' + allowed + ' school' + (allowed === 1 ? '' : 's') + ' above to see your spell list.</div>';
         return;
     }
     const spells = SPELLS.filter(s => state.wildSchools.includes(s.school));

@@ -1,7 +1,11 @@
 """
 Melee Weapon Balance Analysis
 
-Analyzes the current melee weapon table for balance issues.
+HISTORICAL. The tables below are the ones this analysis was run against, before
+Session 8. They are kept as the record of that run and are deliberately not
+updated. For current stats see `web/rules/equipment.njk`.
+
+Analyzes the melee weapon table for balance issues.
 Key metric: damage-per-timing-count (DPS equivalent on the timing track).
 Also checks for strictly dominated weapons (same speed, less damage).
 """

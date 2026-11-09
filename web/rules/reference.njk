@@ -182,6 +182,7 @@ extraFoot: |
         </p>
         <p style="margin-bottom:0.4rem;">
           <span class="ref-formula">Unskilled = (5 + stat) &times; 5</span>
+          <span class="ref-formula">Stat check = (5 + stat) &times; 10</span>
         </p>
         <table>
           <tr><th>Stat</th><th>Full Name</th><th>Range</th></tr>
@@ -232,7 +233,7 @@ extraFoot: |
         <ul>
           <li>Triggered when reduced below 0 HP in Incapacitated tier</li>
           <li>Every 3 counts, roll <span class="ref-formula">d100</span></li>
-          <li>Under 50 = hold &nbsp;|&nbsp; Over 50 = fail &nbsp;|&nbsp; 3 fails = dead</li>
+          <li>02&ndash;49 = hold &nbsp;|&nbsp; 50&ndash;99 = fail &nbsp;|&nbsp; 3 fails = dead</li>
           <li><strong>01</strong> = stabilize &nbsp;|&nbsp; <strong>00</strong> = instant death</li>
           <li>Medicine (speed 5) stabilizes &nbsp;|&nbsp; Mend spell heals</li>
         </ul>
@@ -291,7 +292,7 @@ extraFoot: |
           <li>+10 bonus to casting target</li>
           <li>Access to selected schools only</li>
           <li>Know all spells in accessible schools</li>
-          <li>Limited tier suppression based on skill level</li>
+          <li>Limited tier suppression, set by the casting target bracket</li>
         </ul>
       </div>
 
@@ -439,7 +440,7 @@ flowchart TD
           <tr><td>6&ndash;7</td><td>Jam</td><td>Weapon jammed, must clear (weapon's reload time)</td></tr>
           <tr><td>8</td><td>Misfire</td><td>Round fires wildly, random direction</td></tr>
           <tr><td>9</td><td>Mechanical Failure</td><td>Weapon needs repair, unusable</td></tr>
-          <tr><td>10</td><td>Catastrophic</td><td>Weapon destroyed, 1d6 damage to wielder</td></tr>
+          <tr><td>10+</td><td>Catastrophic</td><td>Weapon destroyed, 1d6 damage to wielder</td></tr>
         </table>
         <p class="ref-note">Galvanic weapons: +1 to severity roll.</p>
       </div>
