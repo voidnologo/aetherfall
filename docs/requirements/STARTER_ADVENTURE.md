@@ -75,57 +75,85 @@ Four characters designed to cover the mechanical spread. Each has a distinct rol
 | Attribute | Value | | Derived | Value |
 |-----------|-------|-|---------|-------|
 | BR | +1 | | HP/Tier | 8 |
-| PC | +2 | | Exhaustion/Tier | 7 |
+| PC | +2 | | Exhaustion/Tier | 5 |
 | IN | 0 | | |
 | SP | 0 | | |
 | AW | +1 | | |
 | PW | -2 | | |
 
-**Key Skills:** Firearms 58%, Melee 54%, Athletics 54%, Stealth 50%, Observation 52%, Streetwise 50%
+| Key Skill | Stat | Lvl | Target |
+|-----------|------|-----|--------|
+| Firearms | PC +2 | 3 | 66% |
+| Observation | AW +1 | 3 | 63% |
+| Streetwise | SP 0 | 3 | 60% |
+| Stealth | PC +2 | 2 | 54% |
+| Melee | BR +1 | 2 | 52% |
+| Athletics | BR +1 | 2 | 52% |
+| Intimidation | BR +1 | 2 | 52% |
+
 **Casting:** None (PW -2 — cannot cast, wouldn't want to)
-**Equipment:** Revolver (Medium speed 4, 2d6), hunting knife (Light speed 2, 1d6+1), leather jacket (Soak 2), ammunition, binoculars, hip flask
+**Equipment:** Revolver (speed 3, 2d6, capacity 6, reload 3, Reliability 95, *Reliable*), hunting knife (Small, speed 2, 1d4, *Concealable*), leather jacket (Ballistic 0 / Martial 1), ammunition, binoculars, hip flask
 **Personality hook:** Former Greycoat constable. Left because the job stopped being about protecting people. Joined the Society because at least you get to pick which problems you solve.
 
 **What this character showcases:** Firearms, melee, the timing track, skill checks, what a non-caster contributes to a party.
 
 ### Sera Voss — "The Spark"
 
-**Role:** Wild caster (Force, Kinesis). Raw power, unpredictable results. The party's heavy hitter when magic works — and a liability when it doesn't.
+**Role:** Wild caster. Raw power, unpredictable results. The party's heavy hitter when magic works — and a liability when it doesn't.
 
 | Attribute | Value | | Derived | Value |
 |-----------|-------|-|---------|-------|
 | BR | -1 | | HP/Tier | 6 |
 | PC | 0 | | Exhaustion/Tier | 9 |
-| IN | +1 | | Casting Target | 56 |
+| IN | +1 | | Casting Target | 64 |
 | SP | 0 | | |
 | AW | 0 | | |
 | PW | +2 | | |
 
-**Key Skills:** Scholarly Casting 56% (wild path), Occult Lore 56%, Observation 50%, Athletics 48%, Stealth 48%, Persuasion 50%
-**Casting:** Wild caster — Force, Kinesis. 2d100-take-farther. Can suppress up to 1 tier (target 56, bracket 51-75).
-**Spells Known:** All Force spells, all Kinesis spells (wild casters know every spell in their schools)
-**Equipment:** Reinforced coat (Soak 1), belt knife (Light speed 2, 1d4+1), journal, chalk, a brass compass that spins in Aetheric zones (she keeps it as a talisman)
+| Key Skill | Stat | Lvl | Target |
+|-----------|------|-----|--------|
+| Occult Lore | IN +1 | 3 | 63% |
+| Stealth | PC 0 | 3 | 60% |
+| Persuasion | SP 0 | 3 | 60% |
+| Wild Casting | PW +2 | 2 | 54% |
+| Resolve | PW +2 | 2 | 54% |
+| Observation | AW 0 | 2 | 50% |
+| Athletics | BR -1 | 2 | 48% |
+
+**Casting:** Wild caster. Casting target 64 — her Wild Casting target of 54 plus the flat +10 every wild caster gets. Rolls 2d100 and takes the result farther from target. Her target sits in the 51-75 bracket, so she can suppress up to 2 tiers.
+**Schools:** Aetheric Manipulation and Transmutation (PW +2 = 2 schools). A wild caster knows every spell in the schools she can reach — for her that's Force, Amplify, Barrier and Kinesis from Aetheric Manipulation, Reshape and Alter Property from Transmutation.
+**Equipment:** Belt knife (Small, speed 2, 1d4, *Concealable*), reinforced coat (Ballistic 1 / Martial 1), journal, chalk, a brass compass that spins in Aetheric zones (she keeps it as a talisman)
 **Personality hook:** Felt the Aether her whole life. Never had formal training. Joined the Society because they don't care where the power comes from, only that you can use it.
 
 **What this character showcases:** Wild casting, 2d100-take-farther, tier suppression, zone effects on casting, what happens when a caster enters a Galvanic zone.
 
 ### Aldric Wynn — "The Surgeon"
 
-**Role:** Scholarly caster (Mend, Reveal). Precise, controlled, support-focused. The one who patches you up and finds the thing you missed.
+**Role:** Scholarly caster. Precise, controlled, support-focused. The one who patches you up and finds the thing you missed.
 
 | Attribute | Value | | Derived | Value |
 |-----------|-------|-|---------|-------|
 | BR | -1 | | HP/Tier | 6 |
-| PC | 0 | | Exhaustion/Tier | 9 |
-| IN | +2 | | Casting Target | 50 |
+| PC | 0 | | Exhaustion/Tier | 8 |
+| IN | +2 | | Casting Target | 63 |
 | SP | -1 | | |
 | AW | +1 | | |
 | PW | +1 | | |
 
-**Key Skills:** Scholarly Casting 50% (scholarly path), Occult Lore 58%, Medicine 58%, Investigation 54%, Observation 52%, Persuasion 46%
-**Casting:** Scholarly caster — Mend, Reveal. Can restrict tiers down. Base backlash rates.
-**Spells Known:** Mend, Reveal (3 spells per school, chosen at creation — all spells in those schools)
-**Equipment:** Reinforced coat (Soak 1), walking stick (Light speed 2, 1d4), medical kit, magnifying lens, spellbook (leather-bound, well-thumbed), lantern
+| Key Skill | Stat | Lvl | Target |
+|-----------|------|-----|--------|
+| Occult Lore | IN +2 | 3 | 66% |
+| Medicine | IN +2 | 3 | 66% |
+| Scholarly Casting | PW +1 | 3 | 63% |
+| Persuasion | SP -1 | 3 | 57% |
+| Investigation | AW +1 | 2 | 52% |
+| Observation | AW +1 | 2 | 52% |
+| Firearms | PC 0 | 2 | 50% |
+
+**Casting:** Scholarly caster, casting target 63. Rolls 1d100 and may restrict down to any lower tier. Base backlash rates.
+**Schools:** All six — scholarly casters study whatever they can get a text for. What limits him is his spellbook, not his schools.
+**Spells Known:** 8 (7 + PW) — Mend 5ct, Reveal 4ct, Detect 2ct, Shield 3ct, Anchor 3ct, Force 2ct, Kinesis 4ct, Reshape 5ct
+**Equipment:** Revolver (speed 3, 2d6, capacity 6, reload 3, Reliability 95, *Reliable*), walking stick (Small, speed 2, 1d4, *Reach*), reinforced coat (Ballistic 1 / Martial 1), medical kit, magnifying lens, spellbook (leather-bound, well-thumbed), lantern
 **Personality hook:** Trained at the Gradient Scholars before funding cuts eliminated his research post. Knows the academic world, knows Fen Harker by reputation. This job is personal — scholars look after their own.
 
 **What this character showcases:** Scholarly casting, tier restriction, non-combat magic (Reveal for investigation, Mend for healing), the value of support casters.
@@ -137,15 +165,25 @@ Four characters designed to cover the mechanical spread. Each has a distinct rol
 | Attribute | Value | | Derived | Value |
 |-----------|-------|-|---------|-------|
 | BR | 0 | | HP/Tier | 7 |
-| PC | +1 | | Exhaustion/Tier | 6 |
+| PC | +1 | | Exhaustion/Tier | 5 |
 | IN | +1 | | |
 | SP | +2 | | |
-| AW | +1 | | |
+| AW | 0 | | |
 | PW | -2 | | |
 
-**Key Skills:** Persuasion 58%, Deception 58%, Streetwise 56%, Observation 52%, Investigation 52%, Firearms 52%, Stealth 52%, Sleight of Hand 52%
+| Key Skill | Stat | Lvl | Target |
+|-----------|------|-----|--------|
+| Persuasion | SP +2 | 3 | 66% |
+| Deception | SP +2 | 3 | 66% |
+| Streetwise | SP +2 | 3 | 66% |
+| Firearms | PC +1 | 3 | 63% |
+| Stealth | PC +1 | 3 | 63% |
+| Sleight of Hand | PC +1 | 3 | 63% |
+| Investigation | AW 0 | 3 | 60% |
+| Intimidation | SP +2 | 2 | 54% |
+
 **Casting:** None (PW -2)
-**Equipment:** Arc pistol (Galvanic, Medium speed 4, 2d6+2, Rating 2 — shifts zone Galvanic by 2 per shot; unreliable in Aetheric zones), holdout derringer (Light speed 2, 1d6, hidden), fine clothes, lockpicks, forged Greycoat credentials, cigarette case
+**Equipment:** Arc pistol (Galvanic Sidearm — speed 4, 2d8, capacity 6, reload 3, Reliability 65, *Galvanic 2*, *Shocking*; shifts the zone 2 toward Galvanic per shot and is unreliable in Aetheric zones), holdout derringer (speed 2, 1d6, capacity 2, reload 2, Reliability 95, *Concealable*), concealed vest (Ballistic 1 / Martial 0), fine clothes, lockpicks, forged Greycoat credentials, cigarette case
 **Personality hook:** Grew up on Harrier Street, right on the gradient border. She's been talking her way in and out of trouble in every zone since she was twelve. Joined the Society because it's a better class of trouble.
 
 **What this character showcases:** Social skills, Galvanic weapon mechanics, zone effects on tech, non-combat utility, what a skilled mundane character brings to a mixed party.
@@ -193,7 +231,7 @@ The party's handler for this job. Pragmatic, overworked, mildly skeptical of a b
 | AW | +2 |
 | PW | -1 |
 
-**Key Skills:** Investigation 58%, Observation 58%, Persuasion 54%, Streetwise 54%, Firearms 50%
+**Key Skills:** Investigation 66% (AW +2, lvl 3), Observation 54% (AW +2, lvl 2), Persuasion 52% (SP +1, lvl 2), Streetwise 52% (SP +1, lvl 2), Firearms 50% (PC 0, lvl 2)
 **Equipment:** Service revolver, badge, notebook, cynicism
 
 **What Laine Knows:**
@@ -292,10 +330,10 @@ By this point the party should have 2-3 leads pointing to the foundry:
 
 **Mood:** Industrial ruin. The foundry is a hulking brick-and-iron structure on the edge of the Galvanic quarter. Smokestacks cold, windows dark, loading bay doors chained shut — but the chains are new. The Galvanic hum is stronger here. Sera (the wild caster) can feel it pressing against her — like trying to breathe through wet cloth. Aldric notices his spellbook pages feel heavier, sluggish.
 
-**Zone Level: Galvanic +3 (moderate)**
-- Firearms: Reliability normal (no penalty)
-- Galvanic weapons: +6% to effective operation (+2 per net Galvanic level)
-- Casting: -6% to casting target (-2 per net Galvanic level). Sera's target drops from 56 to 50. Aldric's from 50 to 44. Casting is harder here — not impossible, but the Aether feels distant.
+**Zone Level: −3 Galvanic (Light Galvanic Zone)**
+- Firearms: +6 Reliability (2 per net point). A revolver sits at effective 101 — it cannot malfunction here.
+- Galvanic weapons: same +6. Mira's arc pistol goes from Reliability 65 to 71.
+- Casting: −6 to casting target (2 per net point). Sera drops from 64 to 58, Aldric from 63 to 57. Casting is harder here — not impossible, but the Aether feels distant.
 
 #### Tell It To Them Straight
 
@@ -312,14 +350,14 @@ Low-level Syndicate muscle. Their job is to keep people away from the foundry an
 | Attribute | Value | | Derived | Value |
 |-----------|-------|-|---------|-------|
 | BR | +1 | | HP/Tier | 8 |
-| PC | 0 | | |
+| PC | 0 | | Exhaustion/Tier | 5 |
 | IN | -1 | | |
 | SP | 0 | | |
 | AW | 0 | | |
 | PW | -2 | | |
 
 **Key Skills:** Firearms 50%, Melee 52%, Intimidation 50%, Observation 46%
-**Equipment:** Revolver (Medium speed 4, 2d6), work knife (Light speed 2, 1d4+1), leather vest (Soak 1)
+**Equipment:** Revolver (speed 3, 2d6, Reliability 95), work knife (Small, speed 2, 1d4), leather vest (Ballistic 0 / Martial 1)
 
 ### Approaching the Foundry
 
@@ -346,27 +384,28 @@ This is probably the table's first Aetherfall combat. Walk them through it step 
 **1. Declaration order:** Lowest PC declares first (tells the table what they're doing before faster characters commit). Kael (PC +2) and Mira (PC +1) declare last — they see what others do.
 
 **2. Timing track:** Set up a simple count track (1-10). Everyone places tokens at count 0. Each action has a speed:
-- Light weapons (knife): speed 2
-- Medium weapons (revolver): speed 4
-- Casting a spell: varies by spell (Force is speed 3)
+- Small weapons (knife): speed 2
+- Revolver: speed 3
+- Arc pistol (Galvanic Sidearm): speed 4
+- Casting a spell: varies by spell (Force is 2 counts)
 
 **3. Walk through one full exchange:**
-- Sera declares Force at Guard A. Speed 3 — token at count 3.
-- Guard A fires revolver at closest target. Speed 4 — token at count 4.
+- Sera declares Force at Guard A. Casting time 2 — token at count 2.
+- Guard A fires revolver at closest target. Speed 3 — token at count 3.
 - Guard B draws knife and charges Kael. Speed 2 — token at count 2.
-- Aldric holds back (no offensive spells — can prepare to Mend if someone gets hurt).
+- Aldric holds back (he has Mend ready if someone gets hurt).
 - Mira fires arc pistol at Guard B. Speed 4 — token at count 4.
-- Kael fires revolver at Guard A. Speed 4 — token at count 4.
+- Kael fires revolver at Guard A. Speed 3 — token at count 3.
 
-**Count 2:** Guard B reaches Kael with the knife. Roll attack. If hit, apply damage and Soak. If the damage pushes Kael into a wound tier, describe the penalty kicking in — he's Harmed now, -10% to everything. (This probably won't happen at 8 HP/tier with a 1d4+1 knife, but demonstrate the concept.)
+**Count 2:** Two tokens. Guard B reaches Kael with the knife — roll the attack, and if it hits, subtract Kael's Martial 1 before applying damage. If it pushes him into a wound tier, describe the penalty kicking in: he's Harmed, -10% to everything. (At 8 HP per tier against a 1d4 knife this probably won't happen, but demonstrate the concept.) Sera's Force also resolves: she rolls 2d100-take-farther against her casting target, which is 58 in this Galvanic zone, down from 64. Walk the table through margin → tier. Remind them she can suppress up to 2 tiers. Apply damage, then describe the Aetheric accumulation pushing the zone back toward neutral.
 
-**Count 3:** Sera's Force resolves. She rolls 2d100-take-farther against her casting target (50 in this Galvanic zone, down from 56). Walk the table through the margin → tier result. Remind them she can suppress 1 tier if she wants. Apply damage. Describe the Aetheric accumulation shifting the zone slightly.
+**Count 3:** Kael and Guard A both fire. Reliability first for each — in this zone a revolver is at effective 101 and cannot fail, which is worth saying out loud, because it will not be true in Act 3. Then the Firearms roll.
 
-**Count 4:** Three tokens resolve simultaneously. Kael fires, Mira fires, Guard A fires. Resolve each. The arc pistol shifts zone balance Galvanic by 2. Revolvers don't shift anything.
+**Count 4:** Mira fires the arc pistol. Reliability 65, plus 6 for the zone, so 71 — she rolls under that or it fails. Each shot shifts the balance 2 further toward Galvanic. Revolvers don't shift anything.
 
 **Key teaching moments during combat:**
 - **Declaration order matters:** Kael and Mira (high PC) see what everyone else does before committing
-- **Speed matters:** The knife is fast (speed 2) but weak. The revolver is slower (speed 4) but hits harder. Casting has its own timing.
+- **Speed matters:** The knife is fast (speed 2) but weak. The revolver is slower (speed 3) but hits harder, and the arc pistol slower still (speed 4). Casting has its own timing.
 - **Zone effects are tangible:** Sera *feels* the Galvanic pressure on her casting. Call it out.
 - **Wound penalties cascade:** When a guard takes a solid hit, describe them flinching, slowing — the -10% penalty isn't abstract, it's the death spiral in action.
 
@@ -405,16 +444,17 @@ The guards go down or surrender. They're not loyal enough to die for the Syndica
 
 **Mood:** Strange and wondrous. These aren't just tunnels — the Aether has been leaking through here for months, warping the environment. The walls shimmer faintly. Crystalline growths cluster in corners, glowing pale blue. The air tastes metallic and sweet. It's beautiful and deeply unsettling.
 
-**Zone Level: Aetheric +4 (strong)**
-- Casting: +8% to casting target (+2 per net Aetheric level). Sera's target jumps to 64. Aldric's to 58. Magic comes easy here — almost too easy.
-- Firearms: Reliability drops. Revolvers still function (mechanical, simple) but jam on a roll of 85+ instead of the usual 96+. Mira's arc pistol is worse — Galvanic devices are actively suppressed. Reliability drops to 75+.
+**Zone Level: +4 Aetheric (Light Aetheric Zone)**
+- Casting: +8 to casting target (2 per net point). Sera's target jumps to 72, Aldric's to 71. Magic comes easy here — almost too easy.
+- Firearms: −8 Reliability. A revolver drops from 95 to 87, so it fails on 88 or over instead of the usual 96 or over. Kael's has the *Reliable* tag, worth +5 in magic-touched air, so his fails only on 93 or over.
+- Mira's arc pistol starts at 65 and drops to 57 — it fails on 58 or over, better than two shots in five.
 - Galvanic equipment: Flickering, unreliable. The arc pistol's charge indicator is erratic. Resonance devices buzz with static.
 
 #### Tell It To Them Straight
 
 > The tunnels open up. What was once a brick-lined maintenance corridor is now something else entirely. The walls are slick with condensation that glows faintly blue in the dark. Crystalline formations — thin as fingers, sharp as glass — grow from the ceiling in clusters. They pulse with a soft light, like a heartbeat.
 >
-> The air is alive. Sera can feel it on her skin — the Aether, thick and close, practically begging to be shaped. This is a Wild Zone, or close to one. The kind of place where magic doesn't just work — it sings.
+> The air is alive. Sera can feel it on her skin — the Aether, thick and close, practically begging to be shaped. The gradient here runs Aetheric and the Aether is close to the surface. The kind of place where magic doesn't just work — it sings.
 >
 > Ahead, the tunnel branches. Left curves downward. Right opens into something wider — you can hear voices, and the scrape of heavy objects on stone.
 
@@ -446,18 +486,18 @@ Smart, calm, professional. She runs smuggling operations, not a gang. She doesn'
 | Attribute | Value | | Derived | Value |
 |-----------|-------|-|---------|-------|
 | BR | 0 | | HP/Tier | 7 |
-| PC | +1 | | Exhaustion/Tier | 7 |
+| PC | +1 | | Exhaustion/Tier | 6 |
 | IN | +2 | | |
 | SP | +2 | | |
 | AW | +1 | | |
 | PW | -1 | | |
 
 **Key Skills:** Persuasion 58%, Deception 60%, Intimidation 54%, Firearms 52%, Streetwise 58%, Observation 54%
-**Equipment:** Revolver (Medium speed 4, 2d6), boot knife (Light speed 2, 1d4+1), fine coat, ledger, keys to Harker's restraints
+**Equipment:** Revolver (speed 3, 2d6, Reliability 95), boot knife (Small, speed 2, 1d4), fine coat, ledger, keys to Harker's restraints
 
 **Syndicate Workers (2)**
 
-Same statline as the guards above. One has a revolver, one has a shotgun (Medium speed 5, 3d4, devastating at close range but slow).
+Same statline as the guards above. One has a revolver, one has a shotgun (speed 4, 3d6, *Scatter* — +1d6 at Close range, −1d6 at Far).
 
 #### Tell It To Them Straight
 
@@ -481,8 +521,8 @@ Same statline as the guards above. One has a revolver, one has a shotgun (Medium
 
 **Zone effects in action:**
 - Sera's casting target is 64 in this zone. She's rolling with confidence. Walk the table through how much the zone matters — compare to the foundry above where she was struggling at 50.
-- Mira's arc pistol reliability is degraded. If she fires and rolls 75+, the shot fizzles — the Galvanic charge can't stabilize in the Aetheric field. She still has her derringer (mechanical, no zone penalty) as backup.
-- Standard revolvers work but jam on 85+. Not likely, but the threat is there.
+- Mira's arc pistol is at effective Reliability 57 here (65 − 8). If she rolls 58 or over, the shot fizzles — the Galvanic charge can't stabilize in the Aetheric field. Her derringer is at 87, which is far better.
+- Revolvers are at 87 and fail on 88 or over. Kael's *Reliable* tag puts his at 92, so he fails only on 93 or over.
 - If Sera casts Force, the Aetheric accumulation pushes the zone even further — making subsequent gun rolls even riskier. The tug of war is visible and consequential.
 
 **Mend showcase:**
@@ -539,14 +579,14 @@ Roll d100. Equal to or under target = success. Lower is better. Margin under tar
 Target = skill percentage on character sheet. GM sets difficulty by applying modifiers (-10% hard, -20% very hard, +10% easy).
 
 ### Non-Skill Ability Checks
-When no skill applies, roll d100 under (Attribute + 4) x 10. A BR +1 character rolls under 50%. A SP +2 character rolls under 60%.
+When no skill applies, roll d100 under (5 + Attribute) x 10. A BR +1 character rolls under 60%. A SP +2 character rolls under 70%. (An untrained attempt at a skill someone else has trained is harsher: (5 + Attribute) x 5.)
 
 ### Combat Sequence
 1. Lowest PC declares first (tells table what they're doing)
 2. Place token on timing track at action's speed
 3. Resolve tokens in count order
 4. Roll d100 under relevant skill (Firearms, Melee)
-5. On hit: roll damage, subtract Soak from armor, apply remainder to HP
+5. On hit: roll damage, subtract the matching armor soak (Ballistic for guns, Martial for blades), apply the remainder to HP
 6. Check wound tier — penalties apply immediately
 
 ### Wound Tiers
@@ -554,24 +594,26 @@ When no skill applies, roll d100 under (Attribute + 4) x 10. A BR +1 character r
 |------|--------|---------|
 | 1 | OK | None |
 | 2 | Harmed | -10% to all rolls |
-| 3 | Wounded | -25% to all rolls |
-| 4 | Critical | -50% to all rolls, death saves |
+| 3 | Maimed | -25% to all rolls |
+| 4 | Incapacitated | -50% to all rolls, death saves |
 
 ### Casting (Simplified for This Session)
 1. Declare spell and target
 2. Place token at spell's casting time
 3. When token resolves, roll d100 under casting target
 4. Margin determines tier: 1-10 = Weak, 11-30 = Standard, 31-50 = Strong, 51+ = Spectacular
-5. Wild casters: roll 2d100, take the result farther from target (can suppress 0-2 tiers based on skill)
+5. Wild casters: roll 2d100, take the result farther from target (can suppress 0-2 tiers, set by the casting target's 25-point bracket)
 6. Scholarly casters: roll 1d100, can restrict down to any lower tier
 7. Pay exhaustion for the tier used
 
 ### Zone Effects (for this adventure)
-| Zone | Casting | Firearms | Galvanic Devices |
-|------|---------|----------|-----------------|
-| Neutral (Wet Ember) | Normal | Normal | Normal |
-| Galvanic +3 (Foundry) | -6% to target | Normal | +6% reliability |
-| Aetheric +4 (Tunnels) | +8% to target | Jam on 85+ | Jam on 75+ |
+| Zone | Casting | Revolver (Rel 95) | Arc pistol (Rel 65) |
+|------|---------|-------------------|---------------------|
+| Neutral (Wet Ember) | Normal | 95 — fails on 96+ | 65 — fails on 66+ |
+| −3 Galvanic (Foundry) | −6 to target | 101 — cannot fail | 71 — fails on 72+ |
+| +4 Aetheric (Tunnels) | +8 to target | 87 — fails on 88+ | 57 — fails on 58+ |
+
+The balance moves both ratings by 2 per net point, in opposite directions for magic and tech. Kael's revolver carries the *Reliable* tag, worth +5 in magic-touched air, so read his column 5 higher.
 
 ---
 

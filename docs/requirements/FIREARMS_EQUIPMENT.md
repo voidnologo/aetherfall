@@ -25,10 +25,10 @@ Every firearm has five stats (exotic weapons add a sixth — **Galvanic**):
 | **Damage** | Dice rolled on a hit |
 | **Capacity** | Shots before reload is required |
 | **Reload** | Timing track counts to fully reload |
-| **Reliability** | Resistance to malfunction. Malfunction chance = 100 − Reliability, checked BEFORE the Ranged roll. Higher = more resistant. Reduced by 2 per net Aetheric point. No check needed for conventional firearms in clean environments. See §4. |
+| **Reliability** | Resistance to malfunction. Roll d100 under effective Reliability BEFORE the Firearms roll — over and the weapon fails, so malfunction chance = 100 − Reliability. Higher = more resistant. Reduced by 2 per net Aetheric point. Checked on every shot, in every environment. See §4. |
 | **Galvanic** | *(Exotic weapons only)* How much the weapon shifts the Aetheric balance toward tech per shot. See §5. |
 
-**Skill:** Firearms use the **Ranged** combat skill (same as bows/crossbows). The weapon's accuracy is baked into the damage code and speed — a tommy gun's terrible accuracy is reflected in its lower per-round damage relative to its fire rate, not a separate accuracy modifier.
+**Skill:** Guns use the **Firearms** skill (PC). Ranged covers bows, crossbows and thrown weapons; the two are separate because guns live and die by the Aetheric balance. The weapon's accuracy is baked into the damage code and speed — a tommy gun's terrible accuracy is reflected in its lower per-round damage relative to its fire rate, not a separate accuracy modifier.
 
 ---
 
@@ -120,15 +120,15 @@ A revolver is **2x more efficient** than a medium melee weapon. A rifle does dou
 
 When a character fires a weapon, the sequence is:
 
-1. **Reliability check (does it fire?)** — Roll d100 as a consequence check. Malfunction chance = **100 − Reliability**, modified by the Aetheric balance (+2% per net point). If the roll falls within the malfunction percentage, the weapon fails. The shot does not fire. Your action is spent.
-2. **If it fires → Ranged skill check (does it hit?)** — Roll d100 under your Ranged skill target as normal. Hit, miss, or critical.
+1. **Reliability check (does it fire?)** — Roll d100 under the weapon's **effective Reliability**. Over and the weapon fails: the shot does not fire and your action is spent. Malfunction chance is therefore **100 − Reliability**, worsened by 2 per net Aetheric point.
+2. **If it fires → Firearms skill check (does it hit?)** — Roll d100 under your Firearms skill target as normal. Hit, miss, or critical.
 3. **If it malfunctions → Severity roll** — Roll d10 to determine how bad the malfunction is.
 
 This mirrors spellcasting in reverse: magic commits the action first, then checks for consequences (backlash). Firearms check for failure first, then resolve the action. Both create tension at different moments.
 
 ### 4.2 When to Roll Reliability
 
-**Every shot. Every time.** Reliability is always checked before the Ranged roll, regardless of environment. A tommy gun has a 30% malfunction chance in your living room. A revolver has 5%. That's the baseline — the inherent reliability of the mechanism.
+**Every shot. Every time.** Reliability is always checked before the Firearms roll, regardless of environment. A tommy gun has a 30% malfunction chance in your living room. A revolver has 5%. That's the baseline — the inherent reliability of the mechanism.
 
 The Aetheric balance modifies this: net Aetheric accumulation makes guns worse, net Galvanic accumulation makes them better. At effective Reliability 100+ (malfunction chance 0% or below), the weapon cannot malfunction — the Galvanic force is actively stabilizing it.
 
@@ -164,7 +164,7 @@ When a weapon malfunctions, the shot doesn't fire and your action is wasted. Rol
 | 1–5 | **Click** | Nothing additional. Weapon is fine, just didn't fire this time. Try again next action. |
 | 6–7 | **Jam** | Weapon is jammed. Clearing costs the weapon's Reload time in counts before it can fire again. |
 | 8 | **Misfire** | Round discharges unpredictably. GM determines where it goes — stray shot hits something or someone nearby. |
-| 9 | **Mechanical Failure** | Something breaks internally. Weapon is non-functional until repaired (out of combat, tools required, Repair skill check). |
+| 9 | **Mechanical Failure** | Something breaks internally. Weapon is non-functional until repaired (out of combat, tools required, Craft or Engineering check). |
 | 10 | **Catastrophic** | Weapon is destroyed. Wielder takes 1d6 damage from the failure (shrapnel, electrical discharge, burst barrel, etc.). |
 
 > **Exotic Escalation:** Exotic (Galvanic) weapons add +1 to the d10 severity roll (a 5 becomes a 6, etc., max 10). Their experimental nature means when things go wrong, they go *more* wrong.
@@ -176,7 +176,7 @@ The firearm sequence mirrors spellcasting in reverse:
 | Step | Magic | Firearms |
 |------|-------|----------|
 | 1 | Cast: roll skill, spell fires | Check Reliability: does the weapon fire? |
-| 2 | Check backlash: did the magic bite you? | Roll Ranged: did you hit? |
+| 2 | Check backlash: did the magic bite you? | Roll Firearms: did you hit? |
 | Consequence | Backlash hurts the caster | Malfunction hurts the weapon |
 | Tension point | After the action (will I get burned?) | Before the action (will it even work?) |
 
@@ -194,7 +194,7 @@ Magic and technology pull the environment in opposite directions. The area's **A
 - **Net negative (tech-heavy):** Magic suffers. Casting targets drop.
 - **At zero:** Neither side is penalized.
 
-Conventional firearms and martial weapons don't move the needle in either direction. They're bystanders — affected by the balance, but not affecting it.
+Conventional firearms and plain martial weapons don't move the needle in either direction. They're bystanders — affected by the balance, but not affecting it. An *enchanted* martial weapon does move it, by +1 each time its mystical tag fires.
 
 ### 5.2 What Moves the Balance
 
@@ -217,6 +217,7 @@ Each exotic item has an **Galvanic rating** — how much it shifts the balance p
 | Exotic weapon shot | −(weapon's Galvanic rating) per shot |
 | Suppressing tag | Adds +1 to weapon's Galvanic rating |
 | Non-weapon exotic device | −(device's Galvanic rating) per activation or per minute sustained |
+| Enchanted item (mystical tag) | +1 Aetheric per trigger (see MAGICAL_ARTIFACTS.md §2.1) |
 
 | Exotic Category | Galvanic Rating |
 |-----------------|----------------|
@@ -265,7 +266,54 @@ Accumulation decays toward the area's **baseline** at **1 point per minute**.
 - In a normal area, baseline is 0. An accumulation of +8 takes 8 minutes to fully clear.
 - In an environmental zone, baseline is the zone's permanent value (see §5.5). Added accumulation decays, but the base never changes.
 
-> **Slow Decay Is A Feature:** The lingering residue is narratively significant. Magical forensics experts can track casters by their residue trails. A neighborhood where a Spectacular spell was cast an hour ago still reads as magically active.
+#### Residue — the trace that outlasts the balance
+
+Two things fade here, at two very different rates.
+
+The **balance** is mechanical. It decays 1 point per minute, and once it reaches baseline no gun and no caster is affected by it any more.
+
+The **residue** is what the working leaves behind in the place itself. It never touches Reliability or casting targets — it cannot be fought with or cast through. It can only be read.
+
+**Residue lifetime = (points of accumulation generated)² hours.**
+
+One point decays in one minute and reads for one hour. Because the residue squares while the balance stays linear, a small spell is gone by morning, a serious working keeps for weeks, and something at the scale of a catastrophe stays legible for a lifetime.
+
+| Accumulation generated | Balance clears in | Residue readable for |
+|---|---|---|
+| 1 — a Weak spell | 1 minute | 1 hour |
+| 2 — Standard | 2 minutes | 4 hours |
+| 3 — Strong | 3 minutes | 9 hours |
+| 4 — Spectacular | 4 minutes | about 16 hours |
+| 12 — a hard fight with a caster in it | 12 minutes | 6 days |
+| 30 — a night of ritual work | half an hour | 5 weeks |
+| 60 — a circle working through the small hours | 1 hour | 5 months |
+| 200 — a mass working | over 3 hours | 4 to 5 years |
+| 500 — a catastrophe | over 8 hours | decades |
+
+Totals add across a scene. The residue of a firefight is read off everything the casters spent in it, not spell by spell. The Tear sits off the bottom of this table, which is why it still reads fifty years on.
+
+Zone baselines are not residue. A Wild Zone reads as a Wild Zone permanently, and a spell cast inside one leaves a trace that drowns in that background — which is exactly why casters who want to stay unread go there to work.
+
+**Reading it.** Tech measures the field; magic reads the memory. An Aetheric Compass (§6.3) finds nothing once the balance has decayed, because the balance is all it can see.
+
+| Method | What it gives |
+|--------|---------------|
+| Detect — Divination, 2ct | Something was worked here, and roughly how much of it |
+| Reveal — Divination, 4ct | Which school, and how long ago |
+| Read — Divination, 5ct | The order of the castings, and a signature that can be matched against another sample |
+| Occult Lore — IN | Interpretation without casting: scorching, wilted growth, crystalline bloom, the physical marks a working leaves on a room |
+
+Apply a modifier for how much of the residue's life has already run:
+
+| Elapsed | Modifier |
+|---------|----------|
+| First quarter | +10% |
+| Up to half | — |
+| Up to three quarters | −10% |
+| Final quarter | −20% |
+| Past its lifetime | Nothing left to find |
+
+Wild casting leaves a broader, rougher trace than scholarly work: easier to find, harder to pin on one person.
 
 ### 5.5 Environmental Zones
 
@@ -434,7 +482,7 @@ When a vehicle enters an Aetheric zone or magic is cast nearby, the GM checks Re
 | d6 | Result | Effect |
 |----|--------|--------|
 | 1-3 | **Sputter** | Engine coughs. -1 speed category until conditions improve. |
-| 4-5 | **Stall** | Engine dies. Piloting check to restart (takes a full round / ~10 counts). |
+| 4-5 | **Stall** | Engine dies. Piloting check to restart (takes 10 counts). |
 | 6 | **Breakdown** | Something broke. Vehicle needs repair before it runs again. On an airship, this is an emergency. |
 
 ### 7.4 Handling Chases and Travel
@@ -462,7 +510,7 @@ This is why beast-mounted expeditions into Wild Zones are rare and legendary. Th
 > **NOTE:** Prices and a full equipment list are deferred to the currency/economy design session. Below are categories of common adventuring equipment for reference.
 
 **Field Gear:**
-- Aether lanterns (magical light sources, no fuel needed, useless in Dead Zones)
+- Aether lanterns (magical light sources, no fuel needed, useless in deep Galvanic zones)
 - Compressed air grapples
 - Rope, climbing pitons, camping supplies
 - Portable generators (for powering Galvanic devices in the field)
@@ -496,12 +544,12 @@ The existing armor table covers medieval-style armor. Modern additions are docum
 
 ---
 
-## 7. Open Questions
+## 9. Open Questions
 
-1. **Crossbow Reliability:** Current table has heavy crossbow at 3d6. Should crossbows have Reliability scores? They're mechanical but much simpler than firearms. Proposed: no — they're simple enough to be treated as martial weapons.
+1. **Crossbow Reliability:** Should crossbows have Reliability scores? They're mechanical but much simpler than firearms. Proposed: no — they're simple enough to be treated as martial weapons, and the tables treat them that way today.
 2. **Ammunition Types:** Special ammo (incendiary, armor-piercing, silver bullets for magical creatures)? Or is that overcomplicating it?
 3. **Dual Wielding:** Pistol in each hand? Flavor is great for the setting. Mechanically — second pistol at +2 speed and a penalty to hit?
 4. **Weapon Modifications:** Scopes, extended magazines, silencers? Or keep it simple with the base weapon tables?
 5. **Melee Weapon Rebalancing:** Current melee table may need adjustment now that firearms set the damage ceiling. Does a dagger at 1d4 still feel right when a derringer does 1d6?
-6. **Aetheric accumulation Exact Decay:** 1 per minute is the baseline. Should this vary by environment? (Faster in Dead Zones, slower in Wild Zones?)
-7. **Malfunction Check Frequency:** Every shot? Every burst? Once per engagement at current accumulation? Every shot is grittier but more rolls.
+6. **Aetheric accumulation Exact Decay:** 1 per minute is the baseline for the balance. Should it vary by environment — faster in Galvanic zones, slower in Wild Zones? Residue lifetime is settled at §5.4.
+7. **Malfunction Check Frequency:** Settled as every shot (§4.2). Revisit only if the extra roll drags at the table — the alternatives were every burst, or once per engagement at the current accumulation.

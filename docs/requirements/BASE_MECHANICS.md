@@ -34,7 +34,7 @@ When two characters act in direct opposition, both roll d100 against their relev
 - **One succeeds, one fails:** The success wins.
 - **Both fail:** Stalemate — situation doesn't change. GM adjudicates.
 
-*Examples: arm wrestling (BR vs BR), chase (Running vs Running), stealth vs observation, resisting a spell (caster's roll vs target's PW).*
+*Examples: arm wrestling (BR vs BR), foot chase (Athletics vs Athletics), stealth vs observation, resisting a spell (caster's roll vs target's PW).*
 
 ---
 
@@ -65,7 +65,7 @@ Six stats, rated **-3 to +3.**
 ((10 + associated stat) × skill level) + 30
 ```
 
-*Example: Melee at skill level 3, PC +2 → ((10 + 2) × 3) + 30 = 66.*
+*Example: Melee at skill level 3, BR +2 → ((10 + 2) × 3) + 30 = 66.*
 
 ### 4.2 Unskilled Attempt
 
@@ -171,7 +171,7 @@ Full rules in MAGIC_SYSTEM.md. Spell details in SPELL_COMPENDIUM.md.
 
 ### 6.3 Exhaustion Overflow
 
-When a spell's exhaustion exceeds remaining EP, the spell still fires. Remaining EP drops to zero (Incapacitated). Overflow converts to **physical HP damage at half rate** (rounded down).
+When a spell's exhaustion exceeds remaining EP, the spell still fires. Remaining EP drops to zero (Overwhelmed). Overflow converts to **physical HP damage at half rate** (rounded down).
 
 ### 6.4 Ritual Spells
 
@@ -206,8 +206,9 @@ Net Aetheric hurts firearms AND helps magic. Net Galvanic hurts magic AND helps 
 | Spell (by tier) | +1/+2/+3/+4 Aetheric |
 | Galvanic weapon (by Galvanic rating) | −1/−2/−3 Galvanic (Pistol 1, Sidearm 2, Heavy 3) |
 | Suppressing tag | +1 to weapon's Galvanic rating |
+| Enchanted item (mystical tag) | +1 Aetheric per trigger |
 
-**Decay:** 1 point per minute toward zone baseline (normal areas = 0).
+**Decay:** 1 point per minute toward zone baseline (normal areas = 0). The balance is what weapons and casting feel; the residue a working leaves behind lasts far longer and is only ever read — see FIREARMS_EQUIPMENT.md §5.4.
 
 ### 7.3 Examples
 
@@ -241,7 +242,7 @@ Net Aetheric hurts firearms AND helps magic. Net Galvanic hurts magic AND helps 
 |------|------|-------|
 | Physical damage | 1d4 HP per hour of full rest | +1d4 with medical care |
 | Exhaustion (mental) | 1d8 EP per hour of full rest | — |
-| Armor repair | Metalworking/Repair check | Downtime, tools required |
+| Armor repair | Craft check (Engineering for ballistic weave) | Downtime, tools required |
 
 ---
 
@@ -249,7 +250,7 @@ Net Aetheric hurts firearms AND helps magic. Net Galvanic hurts magic AND helps 
 
 1. **Stats:** Distribute across 6 stats (-3 to +3). Net bonus set by GM (default +1). Justify each value.
 2. **Skills:** Up to 15. Points per group = 10 + stat group net.
-3. **Spells (if caster):** Magic is a skill choice (Scholarly or Wild). 7 + PW base spells (min 1). Schools = PW modifier (min 1). Scholarly casters need a spellbook. Extra spells cost 3 skill points each.
+3. **Spells (if caster):** Magic is a skill choice (Scholarly or Wild). Scholarly: 7 + PW learned spells (min 1) across all six schools, spellbook required, extra spells at 3 skill points each. Wild: every spell in your accessible schools, and schools = PW modifier (min 1).
 4. **Archetype label:** Name your character concept. Flavor, not restriction.
 5. **Derived values:** HP per tier (7+BR), EP per tier (7+PW), skill targets, concentration check target.
 6. **Equip:** Weapons (category + 1-2 tags), armor, gear.

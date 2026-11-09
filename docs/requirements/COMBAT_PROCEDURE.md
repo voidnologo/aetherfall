@@ -29,7 +29,7 @@ When multiple characters need to declare new actions on the same count (after th
 
 This means faster, more perceptive characters **declare last** — they see what slower opponents are committing to before choosing their own action. This is a significant tactical advantage and a reason to invest in PC and AW.
 
-*Example: Kael (PC +2, AW +1) and a thug (PC +0, AW -1) both resolve at count 5. The thug declares first (PC +0). He's pulling a knife. Kael sees this and declares his response — maybe he draws his sword, maybe he takes a step back and draws his revolver. The thug is committed; Kael gets to react.*
+*Example: Kael (PC +2, AW +1) and a thug (PC +0, AW -1) both resolve at count 5. The thug declares first (PC +0). He's pulling a knife. Kael sees this and declares his response — maybe he goes for the hunting knife, maybe he takes a step back and draws his revolver. The thug is committed; Kael gets to react.*
 
 ### Cancelling an Action
 
@@ -43,7 +43,7 @@ A character can abandon their current action at any time before it resolves. The
 
 ### 2.1 Attack (Melee)
 
-**Skill:** Melee (PC-based) for weapons, Brawl (PC-based) for unarmed.
+**Skill:** Melee (BR-based) for weapons, Brawl (BR-based) for unarmed.
 
 **Speed:** Per weapon category (see weapon tables below).
 
@@ -58,7 +58,7 @@ A character can abandon their current action at any time before it resolves. The
 
 ### 2.2 Attack (Ranged — Martial)
 
-**Skill:** Ranged (BR-based).
+**Skill:** Ranged (PC-based) — bows, crossbows, thrown weapons.
 
 **Speed:** Per weapon category. Bows can fire again immediately; crossbows require reload time.
 
@@ -69,14 +69,14 @@ A character can abandon their current action at any time before it resolves. The
 
 ### 2.3 Attack (Firearms)
 
-**Skill:** Ranged (BR-based).
+**Skill:** Firearms (PC-based) — every gun, conventional and Galvanic.
 
 **Speed:** Per firearm category.
 
 **Procedure (two-step: Reliability, then skill):**
 
-1. **Reliability check — does it fire?** Roll d100 as a consequence check. **Every shot, every time.** Malfunction chance = 100 − effective Reliability. If the roll falls within the malfunction %, the weapon fails — shot doesn't fire, action spent. Roll d10 on the Malfunction Severity table (§6).
-2. **If it fires — roll Ranged to hit.** Same as any ranged attack: d100 under skill target.
+1. **Reliability check — does it fire?** Roll d100 under the weapon's effective Reliability. **Every shot, every time.** Roll over and the weapon fails — shot doesn't fire, action spent. Roll d10 on the Malfunction Severity table (§6). (Malfunction chance is therefore 100 − effective Reliability.)
+2. **If it fires — roll Firearms to hit.** Same as any ranged attack: d100 under skill target.
 
 **Effective Reliability** = Base Reliability − (net balance × 2)
 
@@ -129,7 +129,7 @@ A character who is **not currently mid-action** (no token on the track, or their
 - You can only actively defend **once per count.** Multiple attackers on the same count means you pick one to defend against.
 - You cannot actively defend while mid-action (token on the track, not yet resolved). You committed — you're swinging, reloading, casting. You can't also dodge. Cancel your action first (with the +1 penalty), then defend.
 - The **Parrying** weapon tag gives +10% to your defense roll when using Melee to defend.
-- Shields add their Soak to passive damage reduction (§4) — they don't require an active defense roll. But a character *can* actively defend with a shield using Athletics, representing a deliberate block.
+- Shields add their matching rating to passive damage reduction (§4) — they don't require an active defense roll. But a character *can* actively defend with a shield using Athletics, representing a deliberate block.
 
 > **Design Note:** Active defense is a tradeoff. It can save you from a big hit, but it costs you tempo on the timing track. Defender-heavy play slows you down; aggressor-heavy play means eating hits. This mirrors real combat and the OSR ethos — don't get hit in the first place by controlling the fight.
 
@@ -183,7 +183,7 @@ All attacks use the same resolution: **d100 roll-under** against the relevant co
 | Exhaustion penalty | Stacks with wound penalty |
 | Hinder (armor) | -per-point to physical skill rolls (see §5) |
 
-**Critical hits:** Double all damage dice before adding flat modifiers. Crit range = 1 point per 25% of skill rating, counted down from skill value.
+**Critical hits:** Double all damage dice before adding flat modifiers. Crit range = your target, plus one more number per 25-point bracket above the first, counted down from the target (1-25: target only; 26-50: 2 numbers; 51-75: 3; 76-99: 4).
 
 **Critical miss (00):** Always misses. GM describes a fumble — dropped weapon, stumble, friendly fire, broken string, jammed mechanism.
 
@@ -197,27 +197,27 @@ When an attack hits:
 Roll the weapon's damage dice. On a critical hit, double the dice (not flat modifiers).
 
 ### Step 2 — Apply Armor Soak
-Subtract the target's armor Soak value from the damage. Shields are added to armor Soak (worn armor + held shield = total Soak).
+Armor has two soak ratings. **Ballistic** absorbs firearms and other high-velocity projectiles; **Martial** absorbs blades, clubs, claws and the rest of melee. Use whichever matches the attack and subtract it from the damage. Shields add their rating of the same kind (worn armor + held shield = total soak).
 
-**Minimum damage:** If Soak reduces damage to 0 or below, the attack is absorbed. No damage dealt.
+**Minimum damage:** If soak reduces damage to 0 or below, the attack is absorbed. No damage dealt.
 
 ### Step 3 — Apply Remaining Damage to HP
 Subtract remaining damage from the target's current HP. Track which wound tier they've entered (see §5).
 
 ### Step 4 — Check Armor Degradation
-If the raw damage (before soak) **exceeded** the armor's Soak value, the armor takes a hit. Roll d100:
-- **25 or under:** Armor's Soak is **permanently reduced by 1.**
+If the raw damage (before soak) **exceeded** the rating that applied, the armor takes a hit. Roll d100:
+- **25 or under:** That rating is **permanently reduced by 1.**
 - **Over 25:** Armor holds. No degradation.
 
-One check per hit that exceeds Soak. Simple, no math — did the blow punch through? 25% chance something cracked.
+One check per hit that exceeds the relevant soak. Simple, no math — did the blow punch through? 25% chance something cracked.
 
-*Example: Chainmail (Soak 5) takes 8 raw damage. Damage exceeded Soak, so roll degradation. Rolls 14 — degradation. Chainmail drops from Soak 5 to Soak 4. Still functional, but wearing down.*
+*Example: Chainmail (Martial 5) takes 8 raw damage from a mace. Damage exceeded its Martial rating, so roll degradation. Rolls 14 — degradation. Chainmail drops to Martial 4. Still functional, but wearing down.*
 
-> **Crushing tag:** Degradation chance is **50%** instead of 25%. Maces, warhammers, and morning stars wreck armor. Roll 50 or under = lose 1 Soak.
+> **Crushing tag:** Degradation chance is **50%** instead of 25%. Maces, warhammers, and morning stars wreck armor. Roll 50 or under = lose 1 point of Martial soak.
 
-> **Piercing tag:** Ignores 2 points of armor Soak. Effective Soak is reduced by 2 for damage calculation (not for degradation — the armor is bypassed, not damaged).
+> **Piercing tag:** Ignores 2 points of **Martial** soak. The rating is reduced by 2 for damage calculation only, not for degradation — the armor is bypassed, not damaged.
 
-> **Design Note:** Simulation tested over 10 hits: chainmail vs. a medium melee weapon averages Soak 3.6/5 (degrades but survives the fight). Vs. a revolver, averages 3.0/5 (firearms noticeably wear it down). Half plate vs. a rifle averages 6.1/8 (heavy armor holds up but takes chips). Light armor against weapons that outclass it still crumbles fast — leather vs. a short sword is 58% destroyed after 10 hits. The right armor for the right threat matters.
+> **Design Note (pre-split figures):** These simulations predate the Ballistic/Martial split and treated armor as one rating. Tested over 10 hits: chainmail vs. a medium melee weapon averages Soak 3.6/5 (degrades but survives the fight). Vs. a revolver, averages 3.0/5 (firearms noticeably wear it down). Half plate vs. a rifle averages 6.1/8 (heavy armor holds up but takes chips). Light armor against weapons that outclass it still crumbles fast — leather vs. a short sword is 58% destroyed after 10 hits. The right armor for the right threat matters.
 
 ---
 
@@ -274,9 +274,9 @@ The fastest possible death is **9 counts** (three checks, three failures). That'
 
 Armor with a **Hinder** value imposes penalties to physical actions:
 
-- **-5% per Hinder point** to rolls using PC (Coordination), Athletics, Stealth, and Swimming.
+- **-5% per Hinder point** to rolls using PC (Coordination) and to Athletics, which covers swimming and climbing.
 - **+1 speed per Hinder point** to all spellcasting (the encumbrance disrupts somatic components and concentration).
-- Hinder does **not** affect Melee, Brawl, Ranged, BR-based rolls, or mental/social skills.
+- Hinder does **not** affect Melee, Brawl, BR-based rolls, or mental/social skills. Ranged is exempt despite being PC-based — a bow is drawn with the shoulders, not the wrists. Firearms, also PC-based, is not exempt.
 
 | Armor | Hinder | Effect |
 |-------|--------|--------|
@@ -293,11 +293,11 @@ Hinder from armor and shield **stacks.** Full Plate + Knight Shield = Hinder 4 (
 
 ### 6.1 When to Check
 
-The Reliability check happens **before** the Ranged skill roll. The weapon has to work before your aim matters. **Every shot, every time.**
+The Reliability check happens **before** the Firearms skill roll. The weapon has to work before your aim matters. **Every shot, every time.**
 
 ### 6.2 The Check
 
-**Malfunction chance** = 100 − effective Reliability. Roll d100 as a consequence check — if within the malfunction percentage, the weapon fails.
+Roll d100 under the weapon's **effective Reliability**. Under, it fires; over, it fails. Malfunction chance is therefore 100 − effective Reliability.
 
 **Effective Reliability** = Base Reliability − (net balance × 2)
 
@@ -314,7 +314,7 @@ On malfunction, the shot does not fire (action wasted). Then roll d10:
 | 1-5 | **Click** | Nothing additional. Weapon is fine, just didn't fire |
 | 6-7 | **Jam** | Clearing takes the weapon's full Reload time in counts |
 | 8 | **Misfire** | Round goes somewhere unintended. GM determines where |
-| 9 | **Mechanical Failure** | Weapon non-functional until repaired (out of combat, Repair check) |
+| 9 | **Mechanical Failure** | Weapon non-functional until repaired (out of combat, Craft or Engineering check) |
 | 10 | **Catastrophic** | Weapon destroyed. Wielder takes 1d6 damage |
 
 **Exotic escalation:** Exotic weapons add +1 to the d10 severity roll (max 10).
@@ -345,7 +345,7 @@ The caster can **voluntarily abort** instead of rolling concentration, taking th
 ### 7.2 Tactical Implications
 
 - Fast weapons (Small melee: speed 2, Holdout pistol: speed 2) can interrupt casters before big spells resolve.
-- Slow spells (Sever: 8 counts) create wide interruption windows. Fast spells (Force: 3 counts) are harder to disrupt.
+- Slow spells (Sever: 8 counts) create wide interruption windows. Fast spells (Force: 2 counts) are harder to disrupt.
 - Protecting your caster while they cast is a real tactical role.
 - (PW + 4) × 10 means a PW +3 caster holds concentration 70% of the time — dependable but never safe. A PW +1 caster at 50% is a coin flip. Casting in the open during a fight is always risky.
 
@@ -358,7 +358,7 @@ No grid, no measurements. Distances are described in **narrative range bands:**
 | Band | Description | Means |
 |------|-------------|-------|
 | **Close** | Within arm's reach | Melee range. Can touch, grapple, stab |
-| **Near** | A few steps away, same room | Can close to melee in 1 count (free move). Ranged attacks at no penalty |
+| **Near** | A few steps away, same room | Can close to melee as a free move, folded into the attack. Ranged attacks at no penalty |
 | **Far** | Across a large room, down a street | Ranged attacks at -10% (unless Accurate). Closing takes a Sprint (speed 3) to reach Near |
 | **Distant** | Across a field, rooftop to street | Only Accurate ranged weapons and rifles. -20%. Multiple sprints to close |
 
@@ -391,57 +391,58 @@ No grid, no measurements. Distances are described in **narrative range bands:**
 
 ### 9.3 Armor Repair
 
-Degraded armor can be repaired with a **Metalworking check** (or Repair for modern/exotic armor) and appropriate tools/materials. This is a downtime activity, not a combat action. GM sets difficulty based on the extent of damage.
+Degraded armor can be repaired with a **Craft check** (Engineering for ballistic weave and exotic plate) and appropriate tools/materials. This is a downtime activity, not a combat action. GM sets difficulty based on the extent of damage.
 
 ---
 
 ## 10. Combat Round Example
 
-> **Setup:** Two PCs (Kael, a swordsman with PC +2, and Sera, a wild caster with PC +0) face two thugs with revolvers (PC +0, AW -1) in an alley. No prior Aetheric accumulation.
+> **Setup:** Kael (gunfighter, BR +1, PC +2, Firearms 66, revolver with the Reliable tag, leather jacket Ballistic 0 / Martial 1, 8 HP per tier) and Sera (wild caster, PC +0, AW +0, casting target 64, 6 HP per tier) are caught in an alley by two thugs with revolvers (Firearms 50, Reliability 95, 7 HP per tier, no armor). Range: Near. No prior Aetheric accumulation.
 
-**Count 0 — Declarations (first round, all simultaneous):**
-- Kael: draws his Medium sword (speed 2, token at 2)
-- Sera: begins casting Force (fixed casting time 3, token at 3)
+**Count 0 — Declarations (first exchange, all simultaneous):**
+- Kael: draws his revolver (speed 2, token at 2)
+- Sera: begins casting Force (casting time 2, token at 2)
 - Thug A: fires revolver at Kael (speed 3, token at 3)
 - Thug B: fires revolver at Sera (speed 3, token at 3)
 
-**Count 2 — Kael's draw resolves.** Sword is ready. He declares a melee attack on Thug A (Medium speed 5, token at 7). He needs to close from Near — the final step is part of his attack (he's Near, closing to Close is free).
+**Count 2 — Kael and Sera resolve simultaneously.** Both started at count 0, so neither reacts to the other.
+- **Kael's draw:** the revolver clears his jacket. Nothing else happens this count.
+- **Sera's Force:** she rolls 2d100 — a 46 and an 82, against her target of 64. The 46 is 18 under, the 82 is 18 over; equal distance, so she takes the 46. Margin 18 → Standard tier. Her target of 64 sits in the 51-75 bracket, so she could suppress two tiers, but Standard Force does 2d6 and she wants it. Targets Thug B: 2d6 = 8 damage. She pays 4 exhaustion. Backlash check: 15% at Standard for a wild caster (base 10% + 5%) — rolls 67, no backlash. The area gains +2 Aetheric accumulation.
 
-**Count 3 — Three tokens resolve.** All three started at count 0, so they resolve simultaneously.
-- **Sera's Force spell:** Rolls d100 against casting target 55. Rolls 38 — success, margin 17 → Standard tier. She's a wild caster — she rides the surge, no choice. Targets Thug B. Deals 2d6 = 8 damage. Sera pays 4 exhaustion from her EP track. Backlash check: 10% chance, rolls 67 — no backlash. Aetheric accumulation in the area: +2.
-- **Thug A fires at Kael:** Rolls 44 against skill 50. Hit. Damage: 2d6 = 9. Kael is wearing leather (Soak 2). 9 − 2 = 7 damage. Armor degradation check: 9 exceeds Soak 2, so roll — 63, no degradation. Kael has 9 HP per tier (BR +2). He takes 7 into his OK tier, leaving 2 HP before Harmed. Close call.
-- **Thug B fires at Sera:** Rolls 71 against skill 50. Miss. No malfunction check needed — there was 0 accumulation when the shot was declared (accumulation from Sera's spell and the shot resolve simultaneously on this count).
+**Count 2 — New declarations.** Sera (PC +0) declares before Kael (PC +2), so Kael sees her commit first.
+- Sera: another Force, this time at Thug A (casting time 2, token at 4).
+- Kael: a shot at Thug A as well (speed 3, token at 5). Better to finish one man than wing two.
 
-**Post-count 3:** Area now has 2 Aetheric accumulation. Both revolvers (Reliability 95) drop to effective 89 — barely noticeable, but the clock is ticking.
+**Count 3 — Both thugs fire.** Both started at count 0, so they resolve simultaneously. The area is at +2 Aetheric, so a plain revolver is at effective Reliability 95 − 4 = 91.
+- **Thug A at Kael:** Reliability check — rolls 44 under 91, the revolver fires. Firearms roll: 44 against skill 50. Hit. Damage 2d6 = 7. That's a firearm, and Kael's leather jacket is Ballistic 0 — no protection at all against a bullet. Kael has 8 HP in his OK tier; 7 in leaves 1 before Harmed. He badly wants a ballistic vest.
+- **Thug B at Sera:** Reliability check — 38 under 91, fires. Firearms roll: 71 against skill 50. Miss. The bullet sparks off the alley wall.
 
-**Count 3 — New declarations (declaration order matters now):**
-Three characters need to declare: Sera (PC +0), Thug A (PC +0, AW -1), Thug B (PC +0, AW -1). Thugs declare first (tied PC, lower AW). Then Sera. Sera gets to see what both thugs are committing to before she decides.
-- Thug A: fires again at Kael (speed 3, token at 6). Malfunction check required — accumulation is now 2.
-- Thug B: took 8 damage. HP per tier is 7 (BR +0). 7 fills OK, 1 overflows to Harmed. He's at -10%. Fires at Sera (speed 3, token at 6, skill now 40 after penalty).
-- Sera: sees both thugs shooting again. Casts Force again (casting time 3, token at 6).
+**Count 3 — New declarations.** Only the thugs need to choose; Kael and Sera are already committed. They are tied on PC +0 and AW −1, so they declare simultaneously.
+- Thug A: fires again at Kael (speed 3, token at 6).
+- Thug B: took 8 damage — 7 filled his OK tier and 1 overflowed into Harmed, so he's at −10%. Fires at Sera anyway (skill now 40, token at 6).
 
-*Note: Kael doesn't declare here — his sword attack is already on the track at count 7.*
+**Count 4 — Sera's second Force.** She rolls a 49 and a 93. The 93 is farther from 64 (29 away against 15), and a wild caster takes the farther die. That's over her target: misfire. The Force rebounds — she pays 2 exhaustion and takes 1d6 = 3 damage as the blast throws her back into the wall. Half her OK tier, gone. A failed cast generates no accumulation, so the area stays at +2.
 
-**Count 6 — Three tokens resolve.**
-- **Sera's Force:** Rolls 29 against 55. Hit, margin 26 → Standard again. Wild caster — takes it. Targets Thug A. Deals 2d6 = 7. Backlash check: rolls 03 — backlash! 1d4 = 2 physical damage to Sera. Then 25% Wild Effect check: rolls 41 — no wild effect. Accumulation climbs to +4 total.
-- **Thug A at Kael:** Rolls 61 against skill 50. Miss. Also over effective Reliability 89? 61 is under 89, so no malfunction. Clean miss.
-- **Thug B at Sera:** Rolls 55 against skill 40 (after -10% wound penalty). Miss. Over effective Reliability 89? 55 is under 89. Clean miss.
+*This is the wild caster's bargain: every spell in your schools, and dice that can turn on you.*
 
-**Count 6 — New declarations (declaration order):**
-Thugs (PC +0, AW -1) declare first. Then Sera (PC +0, AW +1). Kael (PC +2) isn't declaring — his attack resolves next count.
-- Thug A: took 7 damage. HP per tier 7 — exactly fills OK. He's at the edge of Harmed. Fires at Kael (speed 3, token at 9).
-- Thug B: fires at Sera (speed 3, token at 9, skill still 40).
-- Sera: sees both thugs targeting the same people. Decides to cast Force a third time (token at 9). Accumulation will be climbing...
+**Count 4 — Sera declares.** She scrambles for the coal bin behind her (Take Cover, speed 2, token at 6).
 
-**Count 7 — Kael's sword resolves.** Rolls 22 against Melee target 65. Hit, margin 43 — check crit range. Skill 65, crit range = 2 (65 is in the 51-75 bracket). Crits on 63-65. Rolled 22, not a crit. Damage: 1d8+1 = 7. Thug A has no armor. 7 fills OK tier exactly — he's now at the boundary of Harmed.
+**Count 5 — Kael fires.** Reliability first. The balance is +2, so a plain revolver sits at 91 — but Kael's has the Reliable tag, worth +5 in magic-touched air, for an effective 96. He rolls 93. A thug's revolver would have clicked on that roll; Kael's fires. Firearms roll: 22 against 66. Hit, margin 44. Crit range check: a target of 66 is in the 51-75 bracket, so he crits on 64, 65 or 66 — a 22 is not one of them. Damage 2d6 = 7. Thug A has no armor, and 7 fills his OK tier exactly. One more hit and he's hurting.
 
-**Count 7 — Kael declares.** He's the last to declare (highest PC). Thug A is right in front of him, reeling. Sera and both thugs have tokens at count 9. Kael swings again — Medium speed 5, token at count 12. He'll hit after the next exchange resolves.
+**Count 5 — Kael declares.** Another shot at Thug A (speed 3, token at 8).
 
-**Post-count 7:** Kael is in melee with Thug A. Sera has taken 2 backlash damage. Thugs are both wounded. Accumulation at 4 (effective Reliability 83). The revolvers still work, but Sera's third Force spell will push it to 6-8 depending on tier — things are getting dicey for the firearms.
+**Count 6 — Three tokens resolve.** The thugs started their shots at count 3; Sera started her dive at count 4. Whoever started first goes first, so the shots land before she reaches cover.
+- **Thug A at Kael:** Reliability 61 under 91, fires. Firearms roll 61 against 50. Miss.
+- **Thug B at Sera:** Reliability 55 under 91, fires. Firearms roll 55 against 40 (wound penalty). Miss.
+- **Sera reaches the coal bin.** Partial cover: −10% for anyone shooting at her from here.
+
+**Post-count 6:** Accumulation is still +2 and decaying. Kael is one point from Harmed, Sera is three points from Harmed and down 6 exhaustion, Thug A is at the edge of his OK tier and Thug B is already in Harmed. Nobody has reloaded yet — Kael has five rounds left in six, and a revolver takes 3 counts to fill.
 
 ---
 
 ## 11. Quick Reference — Weapon Tables
+
+> These tables are a copy for play. Melee and martial ranged come from PROJECT_SPEC.md §4.2; firearms and exotics from FIREARMS_EQUIPMENT.md §3. Those files are the source — if a number here disagrees with them, they win.
 
 ### Melee Weapons
 
@@ -460,45 +461,58 @@ Thugs (PC +0, AW -1) declare first. Then Sera (PC +0, AW +1). Kael (PC +2) isn't
 |----------|-------|--------|--------|----------|
 | Light Ranged | 5 | 1d6 | — | Short bow, sling |
 | Medium Ranged | 7 | 1d8+1 | — | Composite bow, longbow |
-| Light Crossbow | 7 | 2d6 | 6 | Hand crossbow |
-| Heavy Crossbow | 10 | 3d6 | 10 | Heavy crossbow, arbalest |
+| Light Crossbow | 7 | 2d6 | 3 | Hand crossbow |
+| Heavy Crossbow | 10 | 3d6 | 5 | Heavy crossbow, arbalest |
 
 ### Firearms (Modern)
 
 | Category | Spd | Damage | Cap | Reload | Rel | Examples |
 |----------|-----|--------|-----|--------|-----|----------|
-| Holdout Pistol | 2 | 1d6 | 2 | 4 | 95 | Derringer, pocket pistol |
-| Revolver | 3 | 2d6 | 6 | 6 | 95 | Colt, Webley |
-| Semi-Auto Pistol | 3 | 2d6 | 8 | 3 | 85 | Browning, Luger |
-| Heavy Pistol | 4 | 2d8 | 6 | 6 | 90 | Magnum, hand cannon |
-| Rifle | 6 | 2d10 | 5 | 8 | 95 | Bolt-action, Mauser |
-| Carbine | 5 | 2d8 | 8 | 10 | 90 | Lever-action |
-| Shotgun | 4 | 3d6 | 2 | 4 | 95 | Break-action, coach gun |
-| Combat Shotgun | 5 | 3d6 | 5 | 8 | 85 | Pump-action, trench gun |
-| SMG | 5 | 3d6 | 50 | 5 | 70 | Tommy gun, MP18 |
+| Holdout Pistol | 2 | 1d6 | 2 | 2 | 95 | Derringer, pocket pistol |
+| Revolver | 3 | 2d6 | 6 | 3 | 95 | Colt, Webley |
+| Semi-Auto Pistol | 3 | 2d6 | 8 | 2 | 85 | Browning, Luger |
+| Heavy Pistol | 4 | 2d8 | 6 | 3 | 90 | Magnum, hand cannon |
+| Rifle | 6 | 2d10 | 5 | 4 | 95 | Bolt-action, Mauser |
+| Carbine | 5 | 2d8 | 8 | 5 | 90 | Lever-action |
+| Shotgun | 4 | 3d6 | 2 | 2 | 95 | Break-action, coach gun |
+| Combat Shotgun | 5 | 3d6 | 5 | 4 | 85 | Pump-action, trench gun |
+| Submachine Gun | 5 | 3d6 | 50 | 3 | 70 | Tommy gun, MP18 |
 
 ### Firearms (Exotic)
 
-| Category | Spd | Damage | Cap | Reload | Rel | Examples |
-|----------|-----|--------|-----|--------|-----|----------|
-| Exotic Pistol | 3 | 1d10 | 12 | 4 | 70 | Flechette gun, needle gun |
-| Exotic Sidearm | 4 | 2d8 | 6 | 6 | 65 | Arc gun, voltaic pistol |
-| Exotic Heavy | 7 | 3d8 | 3 | 8 | 55 | Aether lance, lightning cannon |
-| Exotic Melee | 2 | 1d8+BR | 10 | — | 60 | Shock gauntlet, voltaic blade |
+| Category | Spd | Damage | Cap | Reload | Rel | Galv | Examples |
+|----------|-----|--------|-----|--------|-----|------|----------|
+| Exotic Pistol | 3 | 1d10 | 12 | 2 | 70 | 1 | Flechette gun, needle gun |
+| Exotic Sidearm | 4 | 2d8 | 6 | 3 | 65 | 2 | Arc gun, voltaic pistol |
+| Exotic Heavy | 7 | 3d8 | 3 | 5 | 55 | 3 | Aether lance, lightning cannon |
+| Exotic Melee | 2 | 1d8+BR | 10 | — | 60 | 1/charge | Shock gauntlet, voltaic blade |
 
 ### Armor
 
-| Type | Soak | Hinder |
-|------|------|--------|
-| Heavy Cloth | 1 | — |
-| Leather | 2 | — |
-| Trench Coat (lined) | 2 | — |
-| Scale | 3 | — |
-| Chainmail | 5 | — |
-| Ballistic Vest | 5 | — (Rel 80) |
-| Steel Breastplate | 6 | 1 |
-| Half Plate | 8 | 1 |
-| Full Plate | 12 | 2 |
+| Type | Ballistic | Martial | Hinder |
+|------|-----------|---------|--------|
+| Cloth | 0 | 0 | — |
+| Heavy Cloth | 0 | 1 | — |
+| Leather Jacket | 0 | 1 | — |
+| Leather | 0 | 2 | — |
+| Trench Coat (lined) | 1 | 2 | — |
+| Scale | 1 | 3 | — |
+| Chainmail | 2 | 5 | — |
+| Steel Breastplate | 5 | 6 | 1 |
+| Ballistic Vest | 8 | 2 | — |
+| Half Plate | 3 | 8 | 1 |
+| Full Plate | 4 | 12 | 2 |
+
+### Shields
+
+| Shield | Ballistic | Martial | Hinder |
+|--------|-----------|---------|--------|
+| Wood Buckler | 0 | 2 | — |
+| Steel Buckler | 1 | 3 | — |
+| Wood Shield | 0 | 5 | — |
+| Infantry Shield | 2 | 7 | — |
+| Kite Shield | 3 | 9 | 1 |
+| Knight Shield | 4 | 10 | 2 |
 
 ---
 
@@ -514,14 +528,14 @@ COMBAT FLOW
 5. Repeat from step 2 after resolution
 
 ATTACK: d100 ≤ skill target = hit
-  Crit range: 1pt per 25% of skill, counted down from skill value
+  Crit range: 1/2/3/4 numbers by 25-pt bracket, counted down from target
   00 = always fumble │ 01 = always crit │ Crit = double damage dice
 
 ACTIVE DEFENSE: opposed check vs attacker's margin
   Cost: +2 speed on next action │ 1 per count │ Can't defend mid-action
 
-DAMAGE: roll dice → subtract armor Soak → apply to HP
-  Degradation: damage > Soak? Flat 25% chance, lose 1 Soak (Crushing: 50%)
+DAMAGE: roll dice → subtract Ballistic (guns) or Martial (melee) soak → HP
+  Degradation: damage > that rating? Flat 25% chance, lose 1 (Crushing: 50%)
 
 MALFUNCTION: d100 > effective Reliability = malfunction
   Eff. Reliability = Base − (net balance × 2)
@@ -546,7 +560,7 @@ DECLARATION ORDER (same-count): lowest PC declares first, ties by AW
   Better stats = declare last = see what opponents commit to
 
 ACCUMULATION: each spell adds tier value (W1/S2/St3/Sp4)
-  Decays 1/minute │ Firearms degrade 3% per point
+  Decays 1/minute │ Firearms degrade 2% per point
 
 HINDER: -5% per point to PC/Athletics/Stealth/Swim
   +1 casting speed per point
@@ -565,4 +579,4 @@ HINDER: -5% per point to PC/Athletics/Stealth/Swim
 7. **Hinder affecting casting speed** — Does +1-2 speed per Hinder point feel right, or should plate armor casters just not exist?
 8. **Sprint speed (3)** — Does closing from Far to Near feel right at 3 counts? That's same speed as a revolver shot — you eat a bullet on the way in. Intentional?
 9. **Accumulation tracking granularity** — Is per-spell tracking manageable at the table, or should it be simplified to "light/moderate/heavy casting" thresholds?
-10. **Fixed casting times per spell** — Need to assign casting times to all 37 spells. Current examples: Force 3, Mend 5, Sever 8. What's the right range? 2-10 counts?
+10. **Fixed casting times per spell** — Casting times are assigned for every spell in SPELL_COMPENDIUM.md (appendix). Current spread: Force 2, Mend 5, Sever 8, rituals off the track. Does the 2-8 count range hold up at the table?

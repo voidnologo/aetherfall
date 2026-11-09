@@ -3,7 +3,7 @@
 ## Document Status: FIRST DRAFT
 **Last Updated:** 2026-03-31
 
-All 37 spells with tier tables. Template spells (Force, Mend, Shield, Reveal, Reshape, Sever) were designed in detail in MAGIC_SYSTEM.md §9. This document contains the complete set including those six plus the remaining 31.
+All 38 spells with tier tables. Template spells (Force, Mend, Shield, Reveal, Reshape, Sever) were designed in detail in MAGIC_SYSTEM.md §9. This document contains the complete set including those six plus the remaining 32.
 
 **Exhaustion cost formula reference:**
 
@@ -26,6 +26,7 @@ All 37 spells with tier tables. Template spells (Force, Mend, Shield, Reveal, Re
 | 5ct | Mend, Wither, Seal, Read, Reshape, Alter Property, Refine, Fuse, Attune |
 | 6ct | Purge, Banish, Foresight, Commune, Enlarge/Reduce, Dampen, Channel, Surge |
 | 8ct | Sever |
+| Ritual (2 hours+) | Enchant |
 | Ritual (10 min) | Scry |
 | Ritual (30 min) | Shape Flesh, Circle |
 | Ritual (1 hour) | Transmute |
@@ -60,7 +61,7 @@ Shape, summon, or direct fire, ice, wind, lightning, water, earth. The broadest 
 | **Standard** | 6 | 2d8 damage or significant utility. Hurl a bolt of fire or lightning, freeze a puddle solid, create a strong sustained wind, heat metal uncomfortably. Room scale, several minutes. |
 | **Strong** | 9 | 3d10 damage or major utility. Call down lightning, create a wall of fire or ice, generate gale-force winds, freeze a pond solid, cause localized tremors. Area scale, sustained. Can affect multiple targets. |
 | **Spectacular** | 14 | 4d12 damage or dramatic utility. Call a lightning storm, create a blizzard in a building, raise a wall of earth, generate a firestorm across a street. Devastating, indiscriminate, hard to aim precisely. The element rages. |
-| *Misfire* | 3 | The element turns on the caster. Fire burns them (1d6), ice freezes their hands (-10% to PC for 10 min), lightning shocks them (1d6 + stunned 1 round), wind hurls them. GM picks element most dramatically appropriate. |
+| *Misfire* | 3 | The element turns on the caster. Fire burns them (1d6), ice freezes their hands (-10% to PC for 10 min), lightning shocks them (1d6 + stunned 3 counts), wind hurls them. GM picks element most dramatically appropriate. |
 
 ### 1.3 Barrier
 *Complexity: 2 — Casting Time: 4ct*
@@ -73,7 +74,7 @@ Create walls, shields, or domes of magical energy. Can block physical and magica
 | **Standard** | 6 | A solid wall of force up to 10 feet wide. Stops all physical passage. Takes 20 points of damage to break. Lasts 10 minutes. Faintly visible, hums when struck. |
 | **Strong** | 9 | A dome or large wall — can enclose a small room or block a corridor. Takes 40 points to break. Lasts up to 1 hour. Can selectively permit passage (caster chooses who passes). |
 | **Spectacular** | 14 | A massive barrier — enclose a building, wall off a street, create a dome over a camp. Takes 80+ points to break. Lasts several hours. Visible as a translucent wall of rippling energy. Impressive and unmistakable. |
-| *Misfire* | 3 | The barrier forms around the caster instead — a tight cage of force that traps them for 1d4 rounds. They can't move or act but are protected from outside harm. Embarrassing. |
+| *Misfire* | 3 | The barrier forms around the caster instead — a tight cage of force that traps them for 1d4 x 3 counts. They can't move or act but are protected from outside harm. Embarrassing. |
 
 ### 1.4 Kinesis
 *Complexity: 2 — Casting Time: 4ct*
@@ -109,7 +110,7 @@ Enhance physical forces already in motion. Make an explosion bigger, a fall hard
 | Tier | Exhaust | Effect |
 |------|---------|--------|
 | **Weak** | 2 | Amplify a single force slightly. Add +1d4 damage to an ally's next attack, make a shout loud enough to be heard across a building, make a small fire flare brightly. Must be cast on something already happening. |
-| **Standard** | 4 | Significant amplification. Add +2d6 damage to an attack, make a gunshot deafeningly loud (stun nearby for 1 round), double the force of an impact, make a fire roar up dangerously. |
+| **Standard** | 4 | Significant amplification. Add +2d6 damage to an attack, make a gunshot deafeningly loud (stun nearby for 3 counts), double the force of an impact, make a fire roar up dangerously. |
 | **Strong** | 6 | Major amplification. Add +3d6 damage to an attack, amplify an explosion to double its radius, make a sound carry across a district, turn a campfire into a bonfire. Can amplify multiple instances of the same force. |
 | **Spectacular** | 10 | Extreme amplification. Add +4d8 damage to an attack, turn a grenade into a demolition charge, make a whisper audible across a city block, amplify a vehicle's engine to dangerous overspeed. Reality-bending scale of amplification. |
 | *Misfire* | 2 | The amplification targets the wrong force — the next physical impact the caster experiences (a step, a bump, a handshake) is amplified. They take 1d6 damage from an everyday action as it hits with wildly disproportionate force. |
@@ -151,11 +152,11 @@ Bolster stamina, resist pain, harden flesh, enhance physical resilience. Tempora
 
 | Tier | Exhaust | Effect |
 |------|---------|--------|
-| **Weak** | 3 | Dull pain and sharpen focus. Negate wound penalties for 1d4 rounds. Target is still injured but can fight through it. |
+| **Weak** | 3 | Dull pain and sharpen focus. Negate wound penalties for 1d4 x 3 counts. Target is still injured but can fight through it. |
 | **Standard** | 6 | Toughen flesh and bolster endurance. Target gains +2 natural soak (stacks with armor) and wound penalties are reduced by one tier for 10 minutes. |
 | **Strong** | 9 | Significant physical enhancement. Target gains +4 natural soak, wound penalties reduced by two tiers, and +10% to BR-based checks for up to 1 hour. Skin visibly toughens — takes on a faintly unnatural sheen. |
 | **Spectacular** | 14 | Extraordinary fortification. Target gains +6 natural soak, all wound penalties negated, +20% to BR-based checks for several hours. The target feels nearly invulnerable. Visible transformation — skin becomes almost stone-like in resilience. Deeply unnerving to witness. |
-| *Misfire* | 3 | The target's body seizes — muscles lock rigid for 1d4 rounds. They can't move or act. The body "fortified" the wrong systems — skeletal muscles locked instead of toughened. |
+| *Misfire* | 3 | The target's body seizes — muscles lock rigid for 1d4 x 3 counts. They can't move or act. The body "fortified" the wrong systems — skeletal muscles locked instead of toughened. |
 
 ### 2.3 Wither
 *Complexity: 3 — Casting Time: 5ct*
@@ -164,7 +165,7 @@ Drain vitality, accelerate decay, weaken biological systems. Offensive Vivimancy
 
 | Tier | Exhaust | Effect |
 |------|---------|--------|
-| **Weak** | 4 | 1d4 damage, target feels fatigue and weakness. -10% to BR-based rolls for 1d4 rounds. Living plants in contact with target wilt. |
+| **Weak** | 4 | 1d4 damage, target feels fatigue and weakness. -10% to BR-based rolls for 1d4 x 3 counts. Living plants in contact with target wilt. |
 | **Standard** | 8 | 2d6 damage, target suffers muscle weakness and nausea. -10% to all physical rolls for 10 minutes. Organic material near target ages visibly. |
 | **Strong** | 12 | 3d8 damage, target's body begins to fail — joints ache, vision blurs, stamina drains. -25% to all physical rolls for 1 hour. Food and drink near target spoils. |
 | **Spectacular** | 18 | 4d10 damage, catastrophic biological degradation. Target can barely stand — all physical rolls at -50% for several hours. Hair grays, skin sags, body ages years in moments. Terrifying to witness. Effect fades but the psychological trauma doesn't. |
@@ -289,7 +290,7 @@ Stabilize, fix in place, resist forced movement or transformation. Can stabilize
 | **Standard** | 6 | Strong anchoring — target cannot be moved by Standard-tier or lower magical effects. Physical force required to move them must exceed extraordinary strength. Can stabilize a flickering magical effect, preventing it from fading. Lasts 10 minutes. |
 | **Strong** | 9 | Powerful anchoring — fix a person, object, or small area in its current state. Resist transformation, transmutation, and forced change. Can stabilize a small unstable magic zone, calming its fluctuations for up to 1 hour. |
 | **Spectacular** | 14 | Absolute anchoring — the target becomes an immovable, unchangeable point. Nothing short of Spectacular-tier magic can displace or transform them. Can stabilize a large magic zone for days. The anchored point feels like a still point in a storm — everything else moves around it. |
-| *Misfire* | 3 | The caster anchors themselves accidentally — they cannot move from their position for 1d4 rounds. They can still act, attack, and cast, but their feet are rooted to the spot. |
+| *Misfire* | 3 | The caster anchors themselves accidentally — they cannot move from their position for 1d4 x 3 counts. They can still act, attack, and cast, but their feet are rooted to the spot. |
 
 ### 3.6 Unbind
 *Complexity: 2 — Casting Time: 3ct*
@@ -531,7 +532,7 @@ Cut a caster's connection to mana flows. Temporarily strip magical ability. Oppo
 
 | Tier | Exhaust | Effect |
 |------|---------|--------|
-| **Weak** | 6 | Brief disruption — interrupts current casting (forces concentration check at -20%), -10% to casting for 1d4 rounds. Target feels a sudden headache. |
+| **Weak** | 6 | Brief disruption — interrupts current casting (forces concentration check at -20%), -10% to casting for 1d4 x 3 counts. Target feels a sudden headache. |
 | **Standard** | 10 | Connection frays — target cannot cast for 1d4 minutes. Sustained effects fade. Target feels hollow and dizzy — a sense cut off. |
 | **Strong** | 16 | Connection severed — target cannot cast for 1d4 hours. All sustained effects collapse. Target feels deaf and blind to magic. Many panic. |
 | **Spectacular** | 24 | Complete severance — target cannot cast for 1d4 days. Mana connection utterly silenced. Magical items on target's person lose attunement for the same duration. Described as the worst experience of a caster's life. Other casters nearby feel the severance as a shockwave of absence. |

@@ -56,7 +56,7 @@ The wild caster has a raw, untrained connection to the mana flows. They are natu
 - **Flexibility** — You're never stuck without the right spell if it's in your domain.
 
 **Mechanical Limitations:**
-- **Limited tier control** — Wild casters cannot freely choose their tier. They can suppress their result by a number of tiers based on their skill level (see §2.5 Wild Caster Tier Suppression). Novices are at the mercy of the magic; masters learn to rein it in.
+- **Limited tier control** — Wild casters cannot freely choose their tier. They can suppress their result by a number of tiers set by their casting target's 25-point bracket (see §2.5 Wild Caster Tier Suppression). Novices are at the mercy of the magic; masters learn to rein it in.
 - **Higher backlash chance** — Raw, uninsulated contact with magical forces burns more often.
 - **Fewer schools** — Wild casters access a number of schools equal to their PW modifier (minimum 1). Their instinctive connection is deep but narrow.
 
@@ -67,7 +67,7 @@ The wild caster has a raw, untrained connection to the mana flows. They are natu
 | Casting roll | 1d100 (straight) | 2d100, take roll farther from target |
 | Casting target bonus | None | +10 (natural attunement) |
 | Spells available | Learned spells only (spellbook) | Any spell in your schools |
-| Tier selection | Choose freely (at or below qualified tier) | Can suppress by 0-2 tiers based on skill (see §2.5) |
+| Tier selection | Choose freely (at or below qualified tier) | Can suppress by 0-2 tiers, set by the casting target bracket (see §2.5) |
 | Backlash risk | Base rates (5%/10%/15%/25%) | Higher (working value: +5% flat per tier) |
 | Spells known | 7 + PW learned spells (can buy more at 3 pts each) | All spells in your schools |
 | School access | All six schools | PW modifier schools (min 1) |
@@ -104,7 +104,7 @@ Wild casters are not purely at the mercy of their roll. As they grow in power, t
 | 76+ | 2 (capped — even masters can't fully tame wild magic) |
 
 **Examples:**
-- Wild caster, target 40: Rolls Spectacular → can step down to Strong (1 tier). Can't go lower.
+- Wild caster, target 40: capped at Strong by §3.2. Rolls Strong → can step down to Standard (1 tier). Can't go lower.
 - Wild caster, target 65: Rolls Spectacular → can step down to Standard (2 tiers). Can't reach Weak.
 - Wild caster, target 85: Rolls Spectacular → can step down to Standard (2 tiers). Significant control — but the magic still pushes.
 
@@ -154,10 +154,11 @@ Wild casters are not purely at the mercy of their roll. As they grow in power, t
 | 31-50 under | Strong |
 | 51+ under | Spectacular |
 
-**Hard caps based on casting target number:**
-- Target 30 or below: Maximum tier = **Standard** (you can never roll 31+ under)
-- Target 31-50: Maximum tier = **Strong** (you can never roll 51+ under)
-- Target 51+: Maximum tier = **Spectacular** (theoretically possible)
+**Hard caps based on casting target number.** The best margin you can roll is your target minus 1, since 01 is the lowest roll:
+- Target 11 or below: Maximum tier = **Weak** (you can never reach a margin of 11)
+- Target 12-31: Maximum tier = **Standard** (you can never reach a margin of 31)
+- Target 32-51: Maximum tier = **Strong** (you can never reach a margin of 51)
+- Target 52+: Maximum tier = **Spectacular** (reachable on a good enough roll)
 
 > **EXAMPLE — Novice caster, target 30:**
 > Rolls a 5 = 25 under → qualifies for Standard (their ceiling).
@@ -232,12 +233,12 @@ The residue model dramatically extends the escalation window compared to "while 
 | 1 | **Caster's Mark** | Eyes glow faintly for 1d4 hours | Eyes glow brightly for 1d4 days, visible in darkness | Eyes permanently luminous — always visibly marked as a caster |
 | 2 | **Thermal Flux** | Temperature shifts sharply around you for several minutes | Extreme shift for 1d4 hours — frost forms or things smolder near you | Permanently radiate unnatural cold or heat — affects those nearby, can't be hidden |
 | 3 | **Aetheric Ring** | Sharp ringing sound emanates from you, everyone nearby notices | Ringing persists for 1d4 hours, -10% to Stealth | Faint persistent hum permanently — Stealth always at -10%, animals react to you |
-| 4 | **Poltergeist** | Nearby small loose objects levitate briefly then drop | Objects within arm's reach rattle and shift for 1d4 hours, -10% to Conceal and delicate work | Small objects always drift and shift around you — -10% to Conceal permanently |
+| 4 | **Poltergeist** | Nearby small loose objects levitate briefly then drop | Objects within arm's reach rattle and shift for 1d4 hours, -10% to Sleight of Hand and delicate work | Small objects always drift and shift around you — -10% to Sleight of Hand permanently |
 | 5 | **Sense Burn** | Lose sense of taste and smell for 1d4 hours | Lose taste, smell, and touch sensitivity for 1d4 days, -10% to Awareness checks | One sense permanently dulled — AW reduced by 1 |
 | 6 | **Tremors** | Hands tremble for 10 minutes, -10% to fine motor tasks | Hands tremble for 1d4 hours, -10% to all PC-based rolls | Permanent slight tremor — PC reduced by 1 |
 | 7 | **Veil Slip** | Brief vivid hallucination — you see something that isn't there (GM describes) | Hallucinations recur for 1d4 hours, -10% to AW checks | Permanently see things at the edge of vision — AW reduced by 1, but GM may occasionally feed genuine supernatural glimpses |
 | 8 | **Static Discharge** | You shock the next person or metal object you touch — startling but harmless | Crackle with static for 1d4 hours — metal sparks, -10% to Social interactions, nearby tech glitches | Permanent low-level static field — tech in your hands always slightly unreliable, -10% to tech-related skill checks |
-| 9 | **Voice Shift** | Voice changes pitch or timbre for 1d4 hours — unsettling to others | Voice deeply unnatural for 1d4 days — -10% to Persuasion and Social rolls | Voice permanently altered, recognizably inhuman — SP reduced by 1, but +10% to Interrogation |
+| 9 | **Voice Shift** | Voice changes pitch or timbre for 1d4 hours — unsettling to others | Voice deeply unnatural for 1d4 days — -10% to Persuasion and Social rolls | Voice permanently altered, recognizably inhuman — SP reduced by 1, but +10% to Intimidation |
 | 10 | **Bleed** | Nosebleed — dramatic-looking, socially alarming | Bleeding from nose and ears for 1d4 hours, -10% to SP-based checks | Bleed unpredictably from small capillaries when stressed — BR reduced by 1 |
 
 **Design intent:** The escalation mechanic acts as a natural limiter on magic use. After one or two backlash effects, casters become hesitant to keep casting for fear of escalation — especially when a permanent stat reduction is on the line. This reinforces the design goal that not every character should be a caster and that a mixed party of casters and non-casters is the smart approach. The residue model means that even a harmless nosebleed lingers as a threat until you rest — and in a dungeon, on a mission, or in a multi-day pursuit, rest may not come easily.
@@ -245,7 +246,7 @@ The residue model dramatically extends the escalation window compared to "while 
 ### 3.5 Spell Cancellation
 
 Cancelling a spell mid-cast:
-- Costs exhaustion equal to **half** the normal cost for the tier you were attempting
+- Costs exhaustion equal to **half the Weak tier's cost** for that spell, rounded up — fixed, regardless of what tier you were reaching for
 - Additionally: **10% chance of backlash**, dealing 1d4 physical damage if triggered
 - Cancellation backlash is **burn only** — no wild effect check. You cut the flow before it fully formed; the energy hurts but doesn't warp you.
 
@@ -270,7 +271,7 @@ Note: Exhaustion penalties stack with wound penalties. A Harmed (-10%) and Weari
 
 When a spell's exhaustion cost exceeds your remaining EP, the spell still fires. You spend all remaining EP (dropping to zero, Overwhelmed on the exhaustion track). The overflow — the exhaustion you couldn't pay — converts to physical HP damage at a rate of **half the overflow, rounded down**.
 
-**Example:** You have 7 EP remaining. You cast (or are forced to cast, as a wild caster) a Spectacular Mend costing 18 exhaustion. You spend all 7 EP → Incapacitated on the exhaustion track. The remaining 11 overflows → you take 5 physical HP damage (11 ÷ 2 = 5.5, rounded down). The spell works. You're on the floor.
+**Example:** You have 7 EP remaining. You cast (or are forced to cast, as a wild caster) a Spectacular Mend costing 18 exhaustion. You spend all 7 EP → Overwhelmed on the exhaustion track. The remaining 11 overflows → you take 5 physical HP damage (11 ÷ 2 = 5.5, rounded down). The spell works. You're on the floor.
 
 This creates genuine heroic sacrifice moments — a caster *can* push past their limits to save a friend, but the magic burns their body to do it. It also serves as a natural consequence for wild casters who can't fully suppress a high-tier result and don't have enough EP to cover it.
 
@@ -385,9 +386,9 @@ The engineer's school. Transmuters change what things *are* — their form, thei
 ### 4.6 Ley Weaving
 *Manipulating magic itself*
 
-The rarest and most feared school. Ley Weavers don't cast spells so much as reshape the magical landscape itself. They amplify, dampen, redirect, and sever the mana flows that all other casters depend on. Other casters are deeply uncomfortable around Ley Weavers — because a skilled Weaver can shut your magic down. Deliberately kept as the smallest school (5 spells) because of its meta-magical nature.
+The rarest and most feared school. Ley Weavers don't cast spells so much as reshape the magical landscape itself. They amplify, dampen, redirect, and sever the mana flows that all other casters depend on. Other casters are deeply uncomfortable around Ley Weavers — because a skilled Weaver can shut your magic down. Deliberately kept small because of its meta-magical nature.
 
-**Spells (5):**
+**Spells (6):**
 
 | # | Spell | Concept |
 |---|-------|---------|
@@ -395,7 +396,8 @@ The rarest and most feared school. Ley Weavers don't cast spells so much as resh
 | 2 | **Channel** | Redirect mana flows, create temporary conduits, draw power from ley lines or magical zones. Can be used to "borrow" ambient magical energy to reduce personal exhaustion costs. |
 | 3 | **Attune** | Harmonize with a magical source, artifact, or zone. Understand its nature, tap its power safely, communicate with magical phenomena. The research/investigation spell of the school. |
 | 4 | **Surge** | Flood an area with raw mana. Amplifies all magic in the area — friend and foe alike. Destabilizes technology. Extremely dangerous and indiscriminate. |
-| 5 | **Sever** | Cut a caster's connection to mana flows. Temporarily strip magical ability. The most feared spell in the game — and the one that makes other casters avoid Ley Weavers. |
+| 5 | **Sever** | Cut a caster's connection to mana flows. Temporarily strip magical ability. The most feared spell in the game — and the reason other casters avoid Ley Weavers. |
+| 6 | **Enchant** | Bind Aether into an object as a lasting property. A ritual of two hours or more, never cast on the timing track. See MAGICAL_ARTIFACTS.md. |
 
 ---
 
@@ -516,8 +518,8 @@ Each spell needs a unique misfire description that:
 | Warding | Shield, Seal, Banish, Circle, Anchor, Unbind | 6 |
 | Divination | Reveal, Scry, Read, Foresight, Detect, Commune | 6 |
 | Transmutation | Reshape, Alter Property, Refine, Enlarge/Reduce, Fuse, Transmute | 6 |
-| Ley Weaving | Dampen, Channel, Attune, Surge, Sever | 5 |
-| **Total** | | **37** |
+| Ley Weaving | Dampen, Channel, Attune, Surge, Sever, Enchant | 6 |
+| **Total** | | **38** |
 
 ---
 
@@ -526,12 +528,12 @@ Each spell needs a unique misfire description that:
 1. ~~**Wild caster variance mechanic**~~ **RESOLVED** — 2d100 take roll farther from target, +10 casting target bonus
 2. ~~**Scholarly bonus to schools**~~ **RESOLVED** — Scholarly casters have access to all six schools. Wild casters access PW modifier schools (min 1). Scholarly = breadth, Wild = depth. (Session 8)
 3. ~~**Backlash severity**~~ **RESOLVED** — 1d4 flat physical damage + 25% chance of Wild Effect (d10 table with 3-tier escalation, permanent on 3rd)
-4. **Wild vs Scholarly backlash rates** — Exact multiplier/modifier for wild casters' higher backlash chance
+4. ~~**Wild vs Scholarly backlash rates**~~ **RESOLVED** — Wild casters add a flat +5% per tier: 10%/15%/20%/30% against the scholarly 5%/10%/15%/25%. Revisit only if playtest says the gap is too small.
 5. ~~**Push It mechanic details**~~ **RESOLVED** — Push one tier up. Cost: half qualified tier's EP + full pushed tier's EP. Backlash: doubled at pushed tier's rate. Hard cap applies. One push per cast. (Session 8)
 6. ~~**Mid-campaign spell learning**~~ **RESOLVED** — Scholarly: narrative source + downtime + 2-3 XP + casting check (fail costs 1 XP). Wild: 7 XP + narrative quest for new schools, no PW cap. No path switching. See §5.4. (Session 19)
 7. **Spell interaction with magic/tech zones** — How do zone levels modify casting? Penalty to target number? Forced tier reduction? Automatic backlash increase?
-8. ~~**Individual spell tier tables**~~ **RESOLVED** — All 37 spells designed with full tier tables, costs, casting times, and misfire effects. See SPELL_COMPENDIUM.md (Session 2).
-9. ~~**Wild caster tier suppression**~~ **RESOLVED** — Can step down tiers based on 25% skill brackets (0/1/2/2 tiers at 1-25/26-50/51-75/76+). Capped at 2 — even masters can't fully tame wild magic. Mirrors crit range mechanic.
+8. ~~**Individual spell tier tables**~~ **RESOLVED** — All 38 spells designed with full tier tables, costs, casting times, and misfire effects. See SPELL_COMPENDIUM.md (Session 2).
+9. ~~**Wild caster tier suppression**~~ **RESOLVED** — Can step down tiers based on the casting target's 25-point brackets (0/1/2/2 tiers at 1-25/26-50/51-75/76+). Capped at 2 — even masters can't fully tame wild magic. Mirrors crit range mechanic.
 10. ~~**Exhaustion overflow**~~ **RESOLVED** — Spell fires, remaining EP spent to zero, overflow converts to physical HP damage at half rate (rounded down).
 11. ~~**Casting interruption**~~ **RESOLVED** — Concentration check: (PW + 4) × 10, roll d100 under. Any damage = one check. Failure = fizzle (treated as cancellation). See §3.7 and COMBAT_PROCEDURE.md. (Session 5)
 
@@ -539,7 +541,7 @@ Each spell needs a unique misfire description that:
 
 ## 9. Spell Tier Tables — Templates
 
-These two spells serve as the design templates for all 37 spells. Force (Complexity 1) establishes the baseline for simple, direct magic. Mend (Complexity 3) establishes the baseline for complex, intricate magic. All other spells should be designed using the same hidden formula framework, with individual adjustments where the fiction demands.
+These two spells serve as the design templates for the whole compendium. Force (Complexity 1) establishes the baseline for simple, direct magic. Mend (Complexity 3) establishes the baseline for complex, intricate magic. All other spells should be designed using the same hidden formula framework, with individual adjustments where the fiction demands.
 
 ### 9.1 Force (Aetheric Manipulation)
 *Complexity: 1 (simple, raw force) — Casting Time: 2ct*
@@ -575,7 +577,7 @@ Heal wounds, knit bone, cure disease, purge poison. The most valued spell in the
 **Design notes:**
 - Mend costs roughly 2× Force at every tier — Complexity 3 vs Complexity 1. This makes healing precious and limited; a dedicated healer can't just spam it.
 - Casting time (5ct) is longer than Force (2ct). Healing takes time; you're knitting biological systems back together.
-- A caster with 28 EP can cast Mend at Standard (8 exhaustion) 3 times before hitting Wearied. Healing is a limited resource — use it wisely.
+- A caster with 28 EP across four 7-point tiers crosses into Wearied on their first Standard Mend (8 exhaustion) and into Drained on the second. Healing is a limited resource — use it wisely.
 - Spectacular Mend at 18 exhaustion is deliberately punishing. Miraculous healing should cost you almost everything. This is the kind of cast where exhaustion overflow (§3.6.1) is a real possibility.
 - The misfire is intentionally horrifying — inverting a healing spell into a drain creates high drama and reinforces that magic is dangerous.
 
@@ -655,7 +657,7 @@ Cut a caster's connection to mana flows. Temporarily strip magical ability. The 
 
 | Tier | Exhaustion | Effect |
 |------|-----------|--------|
-| **Weak** | 6 | A brief, jarring disruption. Target caster's connection flickers — their current casting is interrupted (forces concentration check at -20%), and they suffer -10% to casting for 1d4 rounds. They feel it like a sudden headache. |
+| **Weak** | 6 | A brief, jarring disruption. Target caster's connection flickers — their current casting is interrupted (forces concentration check at -20%), and they suffer -10% to casting for 1d4 x 3 counts. They feel it like a sudden headache. |
 | **Standard** | 10 | The connection frays. Target cannot cast for 1d4 minutes. Active magical effects they're sustaining (shields, wards) begin to fade. They feel hollow, dizzy, like a sense has been cut off. Deeply unpleasant. |
 | **Strong** | 16 | The connection is severed. Target cannot cast for 1d4 hours. All active magical effects they're sustaining collapse immediately. They feel deaf and blind to the magical world. Psychologically distressing — many targets panic. |
 | **Spectacular** | 24 | Complete severance. Target cannot cast for 1d4 days. Their connection to mana is utterly silenced. Magical items on their person may temporarily lose attunement. The target often describes it as the worst experience of their life — a profound, existential emptiness. Other casters nearby can feel the severance happen, like a shockwave of absence. |
@@ -665,7 +667,7 @@ Cut a caster's connection to mana flows. Temporarily strip magical ability. The 
 - Sever is the most expensive spell designed so far — Complexity 4. Spectacular Sever at 24 exhaustion will overflow for almost any caster. Shutting down another caster's magic for days should cost you nearly everything.
 - **Opposed check required.** A powerful caster is naturally harder to Sever because their PW-based casting target is higher, giving them a larger resistance margin. A weak Ley Weaver cannot just spam Sever against a master and expect results. This is the template for how all targeted magical effects against casters should work.
 - No physical damage at any tier — purely about stripping magical ability. But the psychological and narrative weight is enormous.
-- Casting times are long (5-14 counts), making Sever very vulnerable to interruption on the timing track. You don't casually Sever someone — you commit, and your target has time to react (or their allies do).
+- Its casting time is long (8 counts), making Sever very vulnerable to interruption on the timing track. You don't casually Sever someone — you commit, and your target has time to react (or their allies do).
 - The misfire is poetic — you sever yourself. A Ley Weaver who misfires Sever is out of the fight for hours.
 
 ### 9.8 Cost Comparison — All Six Templates
@@ -674,9 +676,9 @@ Cut a caster's connection to mana flows. Temporarily strip magical ability. The 
 |-------|--------|-----------|-------------|------|----------|--------|-------------|
 | Force | Aetheric | 1 | 2ct | 2 EP | 4 EP | 6 EP | 10 EP |
 | Shield | Warding | 2 | 3ct | 3 EP | 6 EP | 9 EP | 14 EP |
-| Reveal | Divination | 2 | 3ct | 3 EP | 6 EP | 9 EP | 14 EP |
-| Reshape | Transmutation | 2 | 3ct | 3 EP | 6 EP | 9 EP | 14 EP |
-| Mend | Vivimancy | 3 | 4ct | 4 EP | 8 EP | 12 EP | 18 EP |
+| Reveal | Divination | 2 | 4ct | 3 EP | 6 EP | 9 EP | 14 EP |
+| Reshape | Transmutation | 2 | 5ct | 3 EP | 6 EP | 9 EP | 14 EP |
+| Mend | Vivimancy | 3 | 5ct | 4 EP | 8 EP | 12 EP | 18 EP |
 | Sever | Ley Weaving | 4 | 8ct | 6 EP | 10 EP | 16 EP | 24 EP |
 
-Casting time is fixed per spell — tier only scales exhaustion cost. The complexity-to-cost pattern is consistent and predictable. All remaining spells should be designable by assigning a complexity rating and applying this framework.
+Casting times here are the ones in SPELL_COMPENDIUM.md's appendix, which is the source for them. Casting time is fixed per spell — tier only scales exhaustion cost. The complexity-to-cost pattern is consistent and predictable. All remaining spells should be designable by assigning a complexity rating and applying this framework.

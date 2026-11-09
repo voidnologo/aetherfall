@@ -106,7 +106,7 @@ See [WORLD_DESIGN.md §4-5](WORLD_DESIGN.md) for full design.
 
 - **00 (double zeros):** Always a critical miss.
 - **01:** Always a critical hit.
-- **Critical range:** For every 25% of your skill rating, you gain 1 point of crit range at the top end. (0-25: target only; 26-50: 2 numbers; 51-75: 3; 76-99: 4 — locked Session 34). Crits are counted down from your skill value. *Example: Skill 59 = crit range 3, so rolls of 57-59 are critical successes.*
+- **Critical range:** Your target is always a critical, and every 25-point bracket above the first adds one more number, counted down from the target. (1-25: target only; 26-50: 2 numbers; 51-75: 3; 76-99: 4 — locked Session 34.) *Example: target 59 is in the 51-75 bracket, so 57, 58 and 59 are critical successes.*
 - **Critical hits:** Double damage on attacks. Spectacular success on skill checks with a narrative bonus.
 
 ### 3.1b Opposed Checks
@@ -121,7 +121,7 @@ When two characters act in direct opposition — resisting a spell, arm wrestlin
 **Examples:**
 - **Sever vs caster:** Ley Weaver rolls casting target, defending caster rolls PW to resist. Larger margin wins.
 - **Arm wrestling:** Both roll BR. Larger margin wins.
-- **Chase:** Both roll Running. Larger margin gains or closes distance.
+- **Chase:** Both roll Athletics. Larger margin gains or closes distance.
 - **Stealth vs Observation:** Sneaker rolls Stealth, watcher rolls Observation. Larger margin determines if they're spotted.
 - **Resisting Persuasion:** Speaker rolls Persuasion, target rolls an appropriate resistance (AW, SP, or relevant skill — GM decides based on how they're resisting).
 
@@ -233,7 +233,7 @@ Combat uses a **timing track** instead of traditional initiative. This is a core
 | 9 | Retrieve item from a backpack |
 | 10 | Drink a flask; climb a 10' rope |
 
-> **NOTE:** This table needs expansion for steampunk/magic actions: reloading firearms, activating gadgets, starting vehicles, etc.
+> **Superseded.** COMBAT_PROCEDURE.md §2.6 carries the full action-speed table, including reloads, gadgets and vehicles. Throwing a weapon is weapon speed +2 there, not the flat 2 listed above for tossing an item.
 
 ### 4.2 Weapons — Category System
 
@@ -289,30 +289,36 @@ Tags differentiate weapons within the same category. A longsword and a mace are 
 
 Armor absorbs (soaks) damage but can be **degraded** when hit hard.
 
-**Degradation rule:** If damage exceeds armor's soak value, there is a **flat 25% chance** of losing **1 soak point**. One check per hit that exceeds Soak. Crushing weapons increase this chance to 50%.
+Armor carries two ratings. **Ballistic** soaks firearms and other high-velocity projectiles; **Martial** soaks blades, clubs and claws. Use whichever matches the attack.
 
-*Example: Chainmail (soak 5) takes 8 damage. Damage exceeds soak → 25% chance of degradation. On failure, chainmail drops to soak 4.*
+**Degradation rule:** If damage exceeds the rating that applied, there is a **flat 25% chance** of losing **1 point from that rating**. One check per hit that exceeds it. Crushing weapons increase this chance to 50%.
 
-| Armor Type | Soak | Hinder |
-|------------|------|--------|
-| Cloth | 0 | — |
-| Heavy Cloth | 1 | — |
-| Leather | 2 | — |
-| Scale | 3 | — |
-| Chainmail | 5 | — |
-| Half Plate | 8 | 1 |
-| Full Plate | 12 | 2 |
+*Example: Chainmail (Martial 5) takes 8 damage from a mace. Damage exceeds the rating → 25% chance of degradation. On failure, chainmail drops to Martial 4.*
 
-| Shield Type | Soak | Hinder |
-|-------------|------|--------|
-| Wood Buckler | 2 | — |
-| Steel Buckler | 3 | — |
-| Wood | 5 | — |
-| Infantry | 7 | — |
-| Kite | 9 | 1 |
-| Knight | 10 | 2 |
+| Armor Type | Ballistic | Martial | Hinder |
+|------------|-----------|---------|--------|
+| Cloth | 0 | 0 | — |
+| Heavy Cloth | 0 | 1 | — |
+| Leather Jacket | 0 | 1 | — |
+| Leather | 0 | 2 | — |
+| Trench Coat (lined) | 1 | 2 | — |
+| Scale | 1 | 3 | — |
+| Chainmail | 2 | 5 | — |
+| Steel Breastplate | 5 | 6 | 1 |
+| Ballistic Vest | 8 | 2 | — |
+| Half Plate | 3 | 8 | 1 |
+| Full Plate | 4 | 12 | 2 |
 
-> **Hinder** applies -5% per point to PC, Athletics, Stealth, and Swimming rolls, and +1 casting speed per point. See COMBAT_PROCEDURE.md §5.4 for full definition. Open question remains: how does armor interact with magic zones? Can armor be enchanted?
+| Shield Type | Ballistic | Martial | Hinder |
+|-------------|-----------|---------|--------|
+| Wood Buckler | 0 | 2 | — |
+| Steel Buckler | 1 | 3 | — |
+| Wood | 0 | 5 | — |
+| Infantry | 2 | 7 | — |
+| Kite | 3 | 9 | 1 |
+| Knight | 4 | 10 | 2 |
+
+> **Hinder** applies -5% per point to PC-based rolls and Athletics (which covers swimming and climbing), and +1 casting speed per point. See COMBAT_PROCEDURE.md §5.4 for full definition. Open question remains: how does armor interact with magic zones? Can armor be enchanted?
 
 ---
 
@@ -331,7 +337,7 @@ Four wound tiers with escalating penalties (death spiral):
 | 3 | Maimed | -25% to all rolls |
 | 4 | Incapacitated | -50% to all rolls |
 
-**Typical HP range:** 20-32 total (5-8 per level). A single heavy hit (e.g., shotgun blast, heavy crossbow) can push a character into Harmed or Maimed territory immediately.
+**Typical HP range:** 16-40 total (4-10 per tier), mirroring the EP range in §5.2 — both are 7 + a stat that runs -3 to +3. A single heavy hit (e.g., shotgun blast, heavy crossbow) can push a character into Harmed or Maimed territory immediately.
 
 ### 5.2 Exhaustion Points
 
@@ -373,13 +379,13 @@ Magic is new, wild, dangerous, wondrous, and feared. Casting uses a **tiered res
 
 **Two Paths:** Scholarly casters have spellbooks, can choose their tier, and have lower backlash. Wild casters can cast any spell in their schools but are locked to whatever tier the magic gives them, with higher backlash risk. Spells are concept-based — broad tools that players and GMs interpret within structured scope/scale guidelines.
 
-**Six Schools, 37 Spells:**
+**Six Schools, 38 Spells:**
 - Aetheric Manipulation (7) — raw force, energy, elemental power
 - Vivimancy (7) — life, body, biology
 - Warding (6) — protection, sealing, banishment
 - Divination (6) — perception, knowledge, detection
 - Transmutation (6) — altering matter and properties
-- Ley Weaving (5) — manipulating magic itself
+- Ley Weaving (6) — manipulating magic itself
 
 **Dark Magic** is NOT player-accessible. It is a setting-level evil.
 
@@ -396,10 +402,7 @@ Magic is new, wild, dangerous, wondrous, and feared. Casting uses a **tiered res
 
 ### 6.3 Magic & Technology Interference
 
-> **NOTE:** Mechanical rules for magic/tech interference zones are not yet designed. Need to define:
-> - How zones are classified (levels of magic/tech intensity?)
-> - Mechanical penalties for using tech in magic zones and vice versa
-> - Can items be shielded or hardened against interference?
+> **Designed.** The Aetheric balance, zone classifications and the ×2 penalty to Reliability and casting targets are in FIREARMS_EQUIPMENT.md §5, BASE_MECHANICS.md §7 and GM_CHAPTER.md §4. Still open: whether items can be shielded or hardened against interference.
 > - Do magitech hybrids exist, and if so, are they inherently unstable/corrupting?
 
 ---
@@ -443,9 +446,8 @@ Expensive (5–10 sessions of saving everything) but the payoff cascades: every 
 
 1. **Set stats:** Distribute points across 6 stats (-3 to +3), net bonus set by GM (default +1). Write a description justifying each value.
 2. **Choose skills:** Up to 15 skills. Skill points per group = 10 + stat group net modifiers.
-3. **Choose spells (if caster):** Magic is a skill choice — invest in Scholarly or Wild casting. Base spells = 7 + PW (min 1). Can buy more at 3 skill points each. Schools = PW modifier (min 1).
+3. **Choose spells (if caster):** Magic is a skill choice — invest in Scholarly or Wild casting. Scholarly: 7 + PW learned spells (min 1), all six schools, more spells at 3 skill points each. Wild: every spell in your accessible schools, and schools = PW modifier (min 1).
 4. **Label your archetype:** Write a class name that describes your concept. This is flavor, not restriction.
-5. **Select race:** (TBD)
 6. **Calculate derived values:**
    - HP per level: 7 + BR
    - EP per tier: 7 + PW

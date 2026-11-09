@@ -187,22 +187,22 @@ The GM has final authority, but every mechanic provides concrete anchor points �
 The magic/tech tension creates **visual storytelling** that players and GMs can use:
 
 - A party carrying swords and polearms alongside firearms? They have a caster. They're prepared for the magic to flow.
-- A party with only firearms? Either overconfident, operating in a Dead Zone, or about to have a very bad day near magic.
+- A party with only firearms? Either overconfident, operating deep in a Galvanic zone, or about to have a very bad day near magic.
 - A party with exotic weapons? Well-connected, probably faction-backed, and their enemies' spellcasting will suffer for it.
 - A person carrying only a sword in a factory district? Either old-fashioned, poor, or knows something you don't.
 
 ### 4.2 Magical Forensics
 
-Slow accumulation decay means magic leaves traces. This gives rise to:
-- **Residue readers** — specialists who can detect and interpret magical accumulation. How old is it? How powerful was the casting? What school?
-- **Crime scene investigation** — a Spectacular spell cast in a warehouse leaves traces for 20+ minutes. Trained investigators can track casters by their residue trail.
+Magic leaves two kinds of trace, and the slow one is the interesting one. The balance a spell pushes clears in minutes; the residue it leaves is readable for hours, weeks or years depending on how much was spent (FIREARMS_EQUIPMENT.md §5.4). This gives rise to:
+- **Residue readers** — specialists who detect and interpret what a place remembers. How old is it? How much power went into it? What school?
+- **Crime scene investigation** — a Spectacular spell is off the balance in four minutes and readable for most of a day. A ritual is readable for weeks. Trained investigators work the second clock, not the first.
 - **Zone monitoring** — cities need people who track where magic is bubbling up, both for public safety and to warn firearm-dependent security forces.
 - **Counter-forensics** — casters who want to hide learn to cast in Wild Zones (where their residue is lost in the background noise) or use lower-tier spells to minimize traces.
 
 ### 4.3 The Arms Economy
 
 - Martial weapons never lost their market. Every adventurer carries a blade regardless of what else they have.
-- Firearms are the dominant combat technology in Dead Zones and normal areas. Massive market.
+- Firearms are the dominant combat technology in Galvanic and normal areas. Massive market.
 - Exotic weapons are expensive, rare, and politically sensitive. The factions that control exotic tech production have enormous leverage.
 - **Whoever figures out how to make exotic tech reliable** changes the balance of power. This is a setting-level plot hook — industrial espionage, faction wars over prototypes, government regulation of exotic research.
 
