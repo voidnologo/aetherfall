@@ -321,15 +321,15 @@ Some areas have a permanent **baseline accumulation** that the balance decays to
 
 | Zone Type | Baseline | Effect |
 |-----------|----------|--------|
-| Deep Galvanic Zone | −25 or more | Magic non-functional. The Engine roars. |
-| Galvanic Zone | −15 to −20 | Most spells fail. Galvanic devices thrive. |
-| Moderate Galvanic Zone | −8 to −12 | Only powerful casters can push through. |
+| Deep Galvanic Zone | −21 or beyond | Magic non-functional. The Engine roars. |
+| Galvanic Zone | −13 to −20 | Most spells fail. Galvanic devices thrive. |
+| Moderate Galvanic Zone | −6 to −12 | Only powerful casters can push through. |
 | Light Galvanic Zone | −3 to −5 | Casting noticeably harder. Tech runs clean. |
-| Normal / In-Between | 0 | Everything works until someone tips the balance. |
-| Light Aetheric Zone | +3 to +5 | Firearms slightly less reliable. Sensitive equipment twitchy. |
-| Moderate Aetheric Zone | +8 to +12 | Only reliable firearms work. |
-| Wild Zone | +15 to +20 | Most firearms non-functional. Strange creatures. Reality gets soft. |
-| Deep Wild Zone | +25 or more | Swords and sorcery only. |
+| Normal / In-Between | −2 to +2 | Everything works until someone tips the balance. |
+| Light Aetheric Zone | +3 to +7 | Firearms slightly less reliable. Sensitive equipment twitchy. |
+| Moderate Aetheric Zone | +8 to +14 | Only reliable firearms work. |
+| Wild Zone | +15 to +24 | Most firearms non-functional. Strange creatures. Reality gets soft. |
+| Deep Wild Zone | +25 or beyond | Swords and sorcery only. |
 
 Spellcasting and exotic tech use **shifts the balance from the baseline**. A party firing exotic weapons in a Wild Zone (+15 baseline) can temporarily push the balance down — from +15 to +10, say — making firearms briefly usable. But once they stop, the balance drifts back to +15.
 

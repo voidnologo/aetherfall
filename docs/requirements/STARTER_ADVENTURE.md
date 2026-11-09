@@ -356,7 +356,7 @@ Low-level Syndicate muscle. Their job is to keep people away from the foundry an
 | AW | 0 | | |
 | PW | -2 | | |
 
-**Key Skills:** Firearms 50%, Melee 52%, Intimidation 50%, Observation 46%
+**Key Skills:** Firearms 50% (PC 0, lvl 2), Melee 52% (BR +1, lvl 2), Intimidation 50% (SP 0, lvl 2), Observation 50% (AW 0, lvl 2)
 **Equipment:** Revolver (speed 3, 2d6, Reliability 95), work knife (Small, speed 2, 1d4), leather vest (Ballistic 0 / Martial 1)
 
 ### Approaching the Foundry
@@ -492,7 +492,7 @@ Smart, calm, professional. She runs smuggling operations, not a gang. She doesn'
 | AW | +1 | | |
 | PW | -1 | | |
 
-**Key Skills:** Persuasion 58%, Deception 60%, Intimidation 54%, Firearms 52%, Streetwise 58%, Observation 54%
+**Key Skills:** Persuasion 66% (SP +2, lvl 3), Deception 66% (SP +2, lvl 3), Streetwise 54% (SP +2, lvl 2), Intimidation 54% (SP +2, lvl 2), Firearms 52% (PC +1, lvl 2), Observation 52% (AW +1, lvl 2)
 **Equipment:** Revolver (speed 3, 2d6, Reliability 95), boot knife (Small, speed 2, 1d4), fine coat, ledger, keys to Harker's restraints
 
 **Syndicate Workers (2)**

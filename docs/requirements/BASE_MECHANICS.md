@@ -222,15 +222,15 @@ Net Aetheric hurts firearms AND helps magic. Net Galvanic hurts magic AND helps 
 
 | Zone | Baseline | Effect |
 |------|----------|--------|
-| Deep Galvanic Zone | −25 or more | Magic non-functional. The Engine roars. |
-| Galvanic Zone | −15 to −20 | Most spells fail. Galvanic devices thrive. |
-| Moderate Galvanic Zone | −8 to −12 | Only powerful casters can push through. |
+| Deep Galvanic Zone | −21 or beyond | Magic non-functional. The Engine roars. |
+| Galvanic Zone | −13 to −20 | Most spells fail. Galvanic devices thrive. |
+| Moderate Galvanic Zone | −6 to −12 | Only powerful casters can push through. |
 | Light Galvanic Zone | −3 to −5 | Casting noticeably harder. Tech runs clean. |
-| Normal | 0 | Both work until someone tips the balance. |
-| Light Aetheric Zone | +3 to +5 | Firearms slightly less reliable. |
-| Moderate Aetheric Zone | +8 to +12 | Only reliable firearms work. |
-| Wild Zone | +15 to +20 | Most firearms non-functional. |
-| Deep Wild Zone | +25 or more | Swords and sorcery only. |
+| Normal | −2 to +2 | Both work until someone tips the balance. |
+| Light Aetheric Zone | +3 to +7 | Firearms slightly less reliable. |
+| Moderate Aetheric Zone | +8 to +14 | Only reliable firearms work. |
+| Wild Zone | +15 to +24 | Most firearms non-functional. |
+| Deep Wild Zone | +25 or beyond | Swords and sorcery only. |
 
 > Full zone mechanics pending dedicated design session.
 

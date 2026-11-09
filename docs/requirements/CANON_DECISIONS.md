@@ -90,6 +90,8 @@ The published web rulebook and `web/_data/characters/*.json` are the source of t
 - **The compendium holds 38 spells**, and Ley Weaving holds 6 — Enchant is a Ley Weaving ritual.
 - **Pregens:** `web/_data/characters/*.json` is canon for the four leads. `STARTER_ADVENTURE.md` restates them and every target derives from `((10 + stat) × level) + 30`.
 - **Skill names:** armor and weapon repair is **Craft** (Engineering for ballistic weave and exotic plate). Metalworking, Repair, Running, Swimming, Security, Conceal and Interrogation are not skills.
+- **Zone bands are contiguous.** The old table left +6, +13, +21 and their Galvanic mirrors belonging to no zone. Normal is −2 to +2, Light Aetheric +3 to +7, Moderate +8 to +14, Wild +15 to +24, Deep Wild +25 or beyond, and the Galvanic side mirrors it. This is what the zone tracker already computed.
+- **NPC stat blocks derive like PC ones.** Every printed target follows `((10 + stat) × level) + 30`, and blocks carry EP/Tier as well as HP/Tier.
 
 ## 11. Residue outlasts the balance (Session 39)
 
