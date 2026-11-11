@@ -238,7 +238,7 @@ def build_combined_html(pages):
 <style>@page cover {{ margin: 0; background: #0e1a2b url({cover}) center / cover no-repeat; }}</style>
 <section class="cover-page">
   <h1 class="cover-title">Aetherfall</h1>
-  <p class="cover-subtitle">Magic &amp; Machines in the 1920s</p>
+  <p class="cover-subtitle">Magic &amp; Machines in an Age of Invention and Upheaval</p>
 </section>
 """)
 
@@ -247,7 +247,7 @@ def build_combined_html(pages):
 <section class="title-page">
   <div class="title-page-content">
     <h1 class="book-title">Aetherfall</h1>
-    <p class="book-subtitle">Magic &amp; Machines in the 1920s</p>
+    <p class="book-subtitle">Magic &amp; Machines in an Age of Invention and Upheaval</p>
     <p class="book-type">Tabletop Roleplaying Game</p>
     <p class="book-edition">Playtest Draft</p>
   </div>
