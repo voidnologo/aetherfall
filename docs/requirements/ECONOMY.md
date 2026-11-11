@@ -256,7 +256,7 @@ Players may **trade Station for skill levels** during character creation:
 - **Station 3 is the maximum at character creation.** Nobody starts as a wealthy industrialist. Station 4–5 is earned through play.
 - **Station 0 (Destitute) is available** but flags a character hook — if the patron provides a floor and you're below it, something is eating your resources (debts, a vice, a dependent, an obligation). The GM should ask: "Why are you Destitute despite your patron's support?"
 
-**Design rationale:** 3 skill levels is approximately 15% of a typical character's starting investment (~20 total levels). It's the equivalent of one level-3 primary skill, or one level-2 plus one level-1 — meaningful enough to create a real choice, not so much that it cripples a build. Players will naturally pick the pool that hurts least (trading up) or helps most (trading down), which creates organic diversity without punishing any particular build.
+**Design rationale:** 3 skill levels is roughly a tenth of a typical character's starting investment — the three group pools total 30 + net stat bonus, so 31 levels at the default +1. It's the equivalent of one level-3 primary skill, or one level-2 plus one level-1 — meaningful enough to create a real choice, not so much that it cripples a build. Players will naturally pick the pool that hurts least (trading up) or helps most (trading down), which creates organic diversity without punishing any particular build.
 
 **Starting equipment:** Pick gear that fits within your Station. Items at or below your Cost Tier are yours — no formal starting kit list needed.
 
@@ -401,7 +401,7 @@ Every purchasable thing in the world has an implied **Cost Tier** from 0 to 5 th
 | 1 | **Common** | Basic tools, simple meals, shared lodging, ammunition, a tram ticket, a drink at a tavern, basic medical supplies, a used knife |
 | 2 | **Standard** | A conventional firearm (revolver, shotgun), working clothes, a week's rent in a modest district, passage on a cargo vessel, a doctor's visit, basic alchemical components, standard adventuring gear |
 | 3 | **Quality** | A fine meal, custom-tailored clothes, a reliable vehicle, a warded charm, a specialist's time (engineer, caster, lawyer), passenger airship passage, a good hotel room |
-| 4 | **Premium** | A Galvanic device (Exotic weapon or oddity), enchanted equipment, membership at a private club, the best hotel in the district, a surgeon with a reputation, a favor from a faction official |
+| 4 | **Premium** | A Galvanic sidearm (lesser Galvanic gear is Tier 3, a Galvanic heavy weapon is Tier 5 — see §11.1), enchanted equipment, membership at a private club, the best hotel in the district, a surgeon with a reputation, a favor from a faction official |
 | 5 | **Exclusive** | An enchanted artifact, a personal airship, a seat at a faction council table, an estate, information that could start a war, Pre-Tear technology |
 
 ### 7.2 The Access Rule
@@ -563,11 +563,12 @@ The following Cost Tier assignments integrate with the existing equipment tables
 
 | Category | Speed | Damage | Cost Tier |
 |----------|-------|--------|-----------|
-| Small (knife, dagger) | 1 | 1d4+BR | 1 (Common) |
-| Light (short sword, hatchet) | 2 | 1d6+BR | 1 (Common) |
-| Medium (longsword, mace) | 3 | 1d8+BR | 2 (Standard) |
-| Heavy (battleaxe, warhammer) | 4 | 1d10+BR | 2 (Standard) |
-| Great (greatsword, polearm) | 5 | 1d12+BR | 3 (Quality) |
+| Unarmed | 2 | 1d3+BR | — |
+| Small (knife, dagger) | 2 | 1d4 | 1 (Common) |
+| Light (short sword, hatchet) | 3 | 1d6 | 1 (Common) |
+| Medium (longsword, mace) | 5 | 1d8+1 | 2 (Standard) |
+| Heavy (bastard sword, morning star) | 7 | 1d10+1 | 2 (Standard) |
+| Great (greatsword, halberd) | 9 | 2d6 | 3 (Quality) |
 
 **Modern Firearms:**
 
@@ -596,13 +597,17 @@ The following Cost Tier assignments integrate with the existing equipment tables
 
 | Category | Ballistic Soak | Martial Soak | Cost Tier |
 |----------|---------------|-------------|-----------|
-| Heavy Cloth | 1 | 0 | 1 (Common) |
-| Leather | 1 | 1 | 1 (Common) |
-| Scale | 2 | 2 | 2 (Standard) |
-| Chainmail | 2 | 3 | 2 (Standard) |
-| Half Plate | 3 | 4 | 3 (Quality) |
-| Full Plate | 4 | 5 | 4 (Premium) |
-| Ballistic Vest | 3 | 1 | 3 (Quality) |
+| Cloth | 0 | 0 | 1 (Common) |
+| Heavy Cloth | 0 | 1 | 1 (Common) |
+| Leather Jacket | 0 | 1 | 1 (Common) |
+| Leather | 0 | 2 | 1 (Common) |
+| Trench Coat (lined) | 1 | 2 | 1 (Common) |
+| Scale | 1 | 3 | 2 (Standard) |
+| Chainmail | 2 | 5 | 2 (Standard) |
+| Steel Breastplate | 5 | 6 | 3 (Quality) |
+| Half Plate | 3 | 8 | 3 (Quality) |
+| Full Plate | 4 | 12 | 4 (Premium) |
+| Ballistic Vest | 8 | 2 | 3 (Quality) |
 
 **General Equipment (Representative, Not Exhaustive):**
 

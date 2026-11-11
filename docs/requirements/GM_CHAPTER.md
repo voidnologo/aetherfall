@@ -23,7 +23,7 @@ If any condition is missing, don't roll. Narrate the outcome that makes sense. T
 
 ### 1.2 Setting Difficulty
 
-The skill formula gives you the baseline. A character with Melee 3 and PC +2 has a 66% chance of hitting. That's the default — no modifiers, normal conditions.
+The skill formula gives you the baseline. A character with Melee 3 and BR +2 has a 66% chance of hitting. That's the default — no modifiers, normal conditions.
 
 When conditions deviate from normal, apply modifiers:
 
@@ -169,7 +169,7 @@ The social skills and their applications:
 
 **Opposed social checks** use the standard opposed check rules: both sides roll, the larger margin wins. If one succeeds and the other fails, the success wins automatically. If both fail, the social moment stalls — neither side gains ground.
 
-*Example: Sera (Deception target 66) lies to a guard. The guard has Empathy target 45. Sera rolls 41 (success, margin 25). Guard rolls 32 (success, margin 13). Both succeed, but Sera's margin is larger — the lie holds. If the guard had rolled 51 (fail), Sera would have won automatically.*
+*Example: Mira (Deception target 66) lies to a guard. The guard has Empathy target 45. Mira rolls 41 (success, margin 25). Guard rolls 32 (success, margin 13). Both succeed, but Mira's margin is larger — the lie holds. If the guard had rolled 51 (fail), Mira would have won automatically.*
 
 ### 2.4 Intimidation as Flex-Stat
 
@@ -306,7 +306,7 @@ Zones shift during play. This is what makes the Aetheric balance dramatic rather
 
 **Exotic tech pushing back:** A force generator pulsing −2 per minute pushes the balance toward Galvanic. Run it for five minutes and you've moved the needle by −10. Pair that with two exotic weapon shots (−2 each) and you're looking at −14 — enough to meaningfully suppress casting.
 
-**Decay as timer:** Accumulation decays at 1 per minute. A +6 Aetheric spike from combat fades to nothing in six minutes. If the party rests, the zone resets. If they push forward immediately, they're carrying the imbalance into the next encounter. This creates pacing tension: rest to reset the zone, or press on while the balance favors (or hinders) you?
+**Decay as timer:** Accumulation decays at 1 per minute. A +6 Aetheric spike from combat fades to nothing in six minutes — though it stays readable as an imprint for a day and a half afterward (FIREARMS_EQUIPMENT.md §5.4), which is a plot hook, not a penalty. If the party rests, the zone resets. If they push forward immediately, they're carrying the imbalance into the next encounter. This creates pacing tension: rest to reset the zone, or press on while the balance favors (or hinders) you?
 
 **Zone recovery after major events:** A Spectacular spell (+4) in a Light Aetheric Zone (+3 baseline) pushes to +7 temporarily, decaying back to +3 over four minutes. The baseline doesn't change — it's a semi-permanent feature of the location. Only sustained, intensive activity over weeks or months shifts baselines. In-session, baselines are fixed.
 
@@ -322,7 +322,7 @@ Use this table as a starting point. Specific locations may vary — a factory bu
 | Power plant / foundry | −15 to −25 | Heavy Engine concentration. Magic barely functions. |
 | University / library | 0 to +2 | Faint traces of scholarly magical study. |
 | Old cathedral / temple | +3 to +5 | Centuries of ritual and belief soaked in. |
-| Haunted manor | +5 to +8 | Aetheric residue from traumatic events. |
+| Haunted manor | +5 to +8 | Aetheric imprint from traumatic events. |
 | Cemetery / barrow | +3 to +8 | Proximity to the Veil. Varies by age and history. |
 | Wild Zone edge | +8 to +12 | The Veil is thin. Technology falters. |
 | Wild Zone heart | +15 to +25+ | The Veil barely holds. Swords and sorcery only. |
@@ -354,7 +354,7 @@ Use this as a guideline for how to narrate spell effects:
 | Tier | Scale | Sensory | Aftermath |
 |------|-------|---------|-----------|
 | Weak | Personal. Affects one target or a small area. | Subtle — a flicker, a whisper, a faint shimmer. Blink and you miss it. | Barely noticeable. A chill in the air, a faint smell of ozone. |
-| Standard | Room-scale. Clearly affects the environment. | Obvious — a flash, a crack, an unmistakable display of power. | Noticeable residue. Scorch marks, frost, displaced objects. |
+| Standard | Room-scale. Clearly affects the environment. | Obvious — a flash, a crack, an unmistakable display of power. | Noticeable imprint. Scorch marks, frost, displaced objects. |
 | Strong | Area-scale. Changes the scene. | Dramatic — a roar, a wave of force, light that hurts to look at. | Lasting marks. Structural damage, altered terrain, lingering effects. |
 | Spectacular | Building-scale. Awe-inspiring. | Overwhelming — everyone stops. The air itself changes. Hair stands on end. | Permanent marks. Craters, fused stone, warped metal, changed landscape. |
 
@@ -456,35 +456,35 @@ Not every device is available at shops. The rarity system from FIREARMS_EQUIPMEN
 
 **Situation:** The party needs passage on a cargo ship leaving port tonight. The dockmaster, Greaves, controls berth assignments. He's heard rumors about the party causing trouble at a warehouse (he's Unfriendly, −15%).
 
-**Characters:** Sera (SP +2, Persuasion 3, Etiquette 2, Deception 3) and Kael (BR +2, Intimidation 2 under BR).
+**Characters:** Mira (SP +2, Persuasion 3, Deception 3, Etiquette 1) and Kael (BR +1, Intimidation 2 under BR).
 
 **Step 1 — Read the room.**
 
-Sera's player says: "Before I approach him, I want to read the situation. What's his mood? Is he busy?"
+Mira's player says: "Before I approach him, I want to read the situation. What's his mood? Is he busy?"
 
 The GM describes: Greaves is at his desk, shuffling manifests. He's got a half-eaten sandwich and a cold cup of tea. He looks up when you enter and his expression goes flat — he recognizes you, or at least knows what you are.
 
-No roll needed. This is the GM describing the world honestly. The flat expression tells Sera he's not happy to see them.
+No roll needed. This is the GM describing the world honestly. The flat expression tells Mira he's not happy to see them.
 
 **Step 2 — Etiquette to soften the ground.**
 
-Sera's player: "I don't jump straight to the ask. I compliment the efficiency of his operation — the dock is well-run and I say so. I'm polite, formal, using his title."
+Mira's player: "I don't jump straight to the ask. I compliment the efficiency of his operation — the dock is well-run and I say so. I'm polite, formal, using his title."
 
-GM calls for Etiquette. Target: ((10 + 2) × 2) + 30 = 54. No modifier for the Etiquette attempt itself — she's just being polite, not asking for anything yet.
+GM calls for Etiquette. Target: ((10 + 2) × 1) + 30 = 42. No modifier for the Etiquette attempt itself — she's just being polite, not asking for anything yet.
 
-Sera rolls 41. Success, margin 13.
+Mira rolls 33. Success, margin 9.
 
 GM: Greaves softens slightly. He's not warm, but the hostility drops. He grunts an acknowledgment. "What do you need?" Disposition shifts from Unfriendly (−15%) to Neutral (+0%).
 
 **Step 3 — Persuasion for the passage.**
 
-Sera's player: "I explain that we need berths on the Calloway's Fortune, leaving tonight. I mention that our patron, Lord Ashton, would consider it a personal favor — and Ashton remembers his friends at bonus time."
+Mira's player: "I explain that we need berths on the Calloway's Fortune, leaving tonight. I mention that our patron, Lord Ashton, would consider it a personal favor — and Ashton remembers his friends at bonus time."
 
 This is a good argument that addresses Greaves' self-interest. GM applies +10% for the roleplay.
 
 Persuasion target: ((10 + 2) × 3) + 30 = 66. With +10% roleplay modifier: 76. Disposition is now Neutral, so no further modifier.
 
-Sera rolls 52. Success, margin 24. Solid Standard-equivalent result.
+Mira rolls 52. Success, margin 24. Solid Standard-equivalent result.
 
 GM: Greaves looks at you for a long moment, then pulls out a manifest. "Two berths. Cargo hold, not cabins. You're listed as surplus crew — means you work if the bosun says work." He's not doing this out of kindness, but Ashton's name carries weight.
 
@@ -492,23 +492,23 @@ GM: Greaves looks at you for a long moment, then pulls out a manifest. "Two bert
 
 At the gangplank, a dock inspector asks what's in the party's sealed crate (it contains weapons they'd rather not declare).
 
-Sera's player: "I tell him it's survey equipment for an archaeological expedition. Our patron is funding a dig in the northern territories."
+Mira's player: "I tell him it's survey equipment for an archaeological expedition. Our patron is funding a dig in the northern territories."
 
 GM calls for Deception vs. Empathy. The inspector is a professional — Empathy target 40.
 
-Sera's Deception target: ((10 + 2) × 3) + 30 = 66.
+Mira's Deception target: ((10 + 2) × 3) + 30 = 66.
 
-Sera rolls 38 (success, margin 28). Inspector rolls 52 (fail).
+Mira rolls 38 (success, margin 28). Inspector rolls 52 (fail).
 
 One success beats one failure. The lie holds completely. GM: The inspector notes "survey equipment" on his clipboard and waves you through. He doesn't look twice.
 
 **What if Kael had tried Intimidation instead?**
 
-Kael's BR Intimidation target: ((10 + 2) × 2) + 30 = 54. He'd loom over Greaves and growl about consequences. Against Greaves' Resolve — say target 50 — it's an opposed check. But even if Kael wins, Intimidation creates compliance, not goodwill. Greaves would give them the berths, then report them to the harbor watch. Persuasion was the right tool here.
+Kael's BR Intimidation target: ((10 + 1) × 2) + 30 = 52. He'd loom over Greaves and growl about consequences. Against Greaves' Resolve — say target 50 — it's an opposed check. But even if Kael wins, Intimidation creates compliance, not goodwill. Greaves would give them the berths, then report them to the harbor watch. Persuasion was the right tool here.
 
 ### 7.2 Foot Chase: "Through the Market District"
 
-**Situation:** The party's contact, Finch, grabs a stolen document from the evidence table during an auction and bolts. Kael (PC +2, Athletics 3) gives chase. The market is crowded, and the old quarter beyond it has a Light Aetheric baseline (+3).
+**Situation:** The party's contact, Finch, grabs a stolen document from the evidence table during an auction and bolts. Kael (BR +1, Athletics 2) gives chase. The market is crowded, and the old quarter beyond it has a Light Aetheric baseline (+3).
 
 **Setup:** Finch starts at Near range. Both are on foot.
 
@@ -525,12 +525,12 @@ Both started at count 0, so simultaneous. Range doesn't change — both moved th
 
 **Count 3 — Both declare again.**
 
-Finch (PC +0, Athletics 2): "I try to jump the cart."
-Kael (PC +2, Athletics 3): "Same — I'm right behind him."
+Finch (BR +0, Athletics 2): "I try to jump the cart."
+Kael (BR +1, Athletics 2): "Same — I'm right behind him."
 
 Athletics check, speed 2 (rolled into the Sprint — total action is Sprint 3 + obstacle embedded in it; GM rules the obstacle check happens at the end of the Sprint, not as a separate action).
 
-Kael's Athletics target: ((10 + 2) × 3) + 30 = 66. Rolls 28. Success.
+Kael's Athletics target: ((10 + 1) × 2) + 30 = 52. Rolls 28. Success.
 Finch's Athletics target: ((10 + 0) × 2) + 30 = 50. Rolls 63. Failure. +2 count penalty on his next action.
 
 Kael clears the cart smoothly. Finch clips the corner, staggers, scatters oranges. He's lost time.
@@ -554,9 +554,9 @@ Finch: Sprint (speed 3 + 2 penalty = speed 5, token at 8).
 
 **Count 11 — Finch resolves.** Finch is now at Far range. He's in the old quarter. **The zone shifts.** Baseline here is +3 Aetheric. If Kael draws a firearm, its Reliability drops by 6.
 
-**GM forces resolution (approaching 12 counts).** One final opposed Athletics check.
+**GM forces resolution (approaching the 15-count soft cap).** One final opposed Athletics check.
 
-Kael: Athletics 66. Rolls 44 (success, margin 22).
+Kael: Athletics 52. Rolls 44 (success, margin 8).
 Finch: Athletics 50. Rolls 61 (fail).
 
 Kael wins. He dives, catches Finch's coat, and they both tumble into a stack of crates in the old quarter. Chase over — now it's a Close-range confrontation. The +3 Aetheric baseline means if either of them draws a gun, it's already less reliable.
@@ -565,47 +565,47 @@ Kael wins. He dives, catches Finch's coat, and they both tumble into a stack of 
 
 **Situation:** The party investigates a haunted manor on the city's edge. Baseline: +5 Aetheric throughout the main floors. The cellar is worse (+8). The overgrown garden is milder (+2).
 
-**Party:** Sera (wild caster, casting target 55), Kael (swordsman, revolver Rel 95), and Marsh (investigator, semi-auto pistol Rel 85, Aetheric Compass).
+**Party:** Aldric (scholarly caster, casting target 63), Kael (gunfighter, revolver Rel 95 with the *Reliable* tag), and Marsh (investigator, semi-auto pistol Rel 85, Aetheric Compass).
 
 **Arrival — the garden.**
 
 Baseline +2. Marsh activates the Aetheric Compass (Galvanic Rating 0 — passive reader, no balance shift). The needle confirms a faint Aetheric presence, stronger toward the house.
 
-Kael checks his revolver. Effective Reliability: 95 − (2 × 2) = 91. Malfunction chance 9%. Barely noticeable.
+Kael checks his revolver. Effective Reliability: 95 − (2 × 2) = 91, and the *Reliable* tag adds 5 in magic-touched air, so 96. Malfunction chance 4%. Barely noticeable.
 
 **Entering the main floor — baseline shifts to +5.**
 
-Kael's revolver: 95 − (5 × 2) = 85. Malfunction chance 15%. One in seven. He's aware of it. Marsh's semi-auto: 85 − 10 = 75. Malfunction chance 25%. One in four. Marsh holsters the pistol and draws a knife.
+Kael's revolver: 95 − (5 × 2) = 85, plus 5 for *Reliable*, so 90. Malfunction chance 10%. He's aware of it. Marsh's semi-auto: 85 − 10 = 75. Malfunction chance 25%. One in four. Marsh holsters the pistol and draws a knife.
 
-Sera's casting target shifts too: 55 + (5 × 2) = 65. She's more effective here. Her normal Standard threshold (margin 11-30, meaning she needs to roll 44 or below) widens because her target is now 65 — she needs to roll 54 or below for Standard. The Aether is feeding her.
+Aldric's casting target shifts too: 63 + (5 × 2) = 73. He's more effective here. Standard needs a margin of 11-30, so at his base 63 he'd need to roll 52 or below; at 73 he needs 62 or below. The Aether is feeding him.
 
-**Sera casts Detect to search for magical traps.**
+**Aldric casts Detect to search for magical traps.**
 
-Rolls d100 against casting target 65 (with the +5 zone bonus already applied). Rolls 42 — success, margin 23. Standard tier.
+Rolls d100 against casting target 73 (with the +5 zone bonus already applied). Rolls 50 — success, margin 23. Standard tier.
 
 Standard Detect: She senses magical presences and their approximate strength within the room. The GM describes: "You feel three sources. Two are faint — old wards on the windows, probably defensive. One is stronger, beneath the floor. It pulses."
 
-Sera pays 4 EP (Standard Mend cost — check the spell's tier table). Backlash check: 10% (Standard). Rolls 73. No backlash.
+Aldric pays 4 EP (Standard Detect cost — check the spell's tier table). Backlash check: 10% (Standard). Rolls 73. No backlash.
 
 **Aetheric accumulation:** The area gains +2 (Standard tier). New net balance: +5 (baseline) + 2 (from Detect) = +7.
 
-Kael's revolver: 95 − (7 × 2) = 81. Malfunction chance 19%. Getting worse.
+Kael's revolver: 95 − (7 × 2) = 81, plus 5, so 86. Malfunction chance 14%. Getting worse.
 Marsh's semi-auto: 85 − 14 = 71. Malfunction chance 29%. Nearly one in three.
 
 **Time passes — searching the main floor.**
 
 The party searches for 10 minutes. Accumulation from Detect decays: 10 minutes × 1 per minute = 10 decay. The +2 accumulation is gone after 2 minutes. They're back to baseline +5.
 
-Kael's revolver is back to effective 85. Still not great, but manageable.
+Kael's revolver is back to effective 90. Still not perfect, but manageable.
 
 **Descending to the cellar — baseline shifts to +8.**
 
 The Compass needle swings hard. Marsh announces: "Strong. This is a moderate Aetheric zone."
 
-Kael's revolver: 95 − (8 × 2) = 79. Malfunction chance 21%. He's seriously considering leaving the gun holstered.
+Kael's revolver: 95 − (8 × 2) = 79, plus 5, so 84. Malfunction chance 16%. He's seriously considering leaving the gun holstered.
 Marsh's semi-auto: 85 − 16 = 69. Malfunction chance 31%. He left it holstered two rooms ago.
 
-Sera's casting target: 55 + (8 × 2) = 71. She's formidable down here. Her Standard range extends dramatically — she needs to roll 60 or under. Even Strong tier (margin 31-50) is achievable on a roll of 40 or under. The cellar is her territory.
+Aldric's casting target: 63 + (8 × 2) = 79. He's formidable down here. His Standard range extends — he needs to roll 68 or under. Even Strong tier (margin 31-50) is achievable on a roll of 48 or under. The cellar is his territory.
 
 **The encounter below.**
 
@@ -615,7 +615,7 @@ This is the zone doing the GM's work. The players know the math. They know their
 
 ### 7.4 Improvised Device: "The Resonance Cage"
 
-**Situation:** The party needs to capture, not kill, a magical creature that's been raiding a neighborhood. It's some kind of Aetheric predator — manifests from the Veil, feeds on residue, and vanishes when threatened. Physical weapons pass through it. Magic can hurt it but also feeds it.
+**Situation:** The party needs to capture, not kill, a magical creature that's been raiding a neighborhood. It's some kind of Aetheric predator — manifests from the Veil, feeds on the imprint, and vanishes when threatened. Physical weapons pass through it. Magic can hurt it but also feeds it.
 
 A player asks: "Could we build some kind of Galvanic trap? Something that generates a field it can't pass through?"
 
