@@ -1,72 +1,76 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 388 617" class="flowplate flowplate--veil" role="img" aria-label="Spellcasting flowchart, Backlash">
-<rect class="fc-field" x="0" y="0" width="388.4" height="616.8"/>
-<rect class="fc-rule" x="14.0" y="14.0" width="360.4" height="588.8"/>
-<rect class="fc-rule-inner" x="18.0" y="18.0" width="352.4" height="580.8"/>
-<path class="fc-corner" d="M17.0 33.0 Q17.0 17.0 33.0 17.0"/>
-<path class="fc-corner" d="M371.4 33.0 Q371.4 17.0 355.4 17.0"/>
-<path class="fc-corner" d="M17.0 583.8 Q17.0 599.8 33.0 599.8"/>
-<path class="fc-corner" d="M371.4 583.8 Q371.4 599.8 355.4 599.8"/>
-<line class="fc-hairline" x1="28.0" y1="574.8" x2="360.4" y2="574.8"/>
-<text class="fc-plate" x="30.0" y="589.8">SPELLCASTING &#183; PLATE III</text>
-<text class="fc-stage" x="358.4" y="589.8" text-anchor="end">BACKLASH</text>
-<g transform="translate(34.0 34.0)">
-<path class="fc-edge" d="M73.5 56.2 C69.0 70.8 63.8 89.3 60.3 106.0 C42.8 190.1 36.6 213.4 46.3 298.8 C52.8 355.6 69.3 419.7 80.7 459.4 L83.9 470.5"/>
-<path class="fc-point" d="M83.9 470.5 L76.9 463.3 Q82.9 467.1 86.0 460.7 Z"/>
-<rect class="fc-chip" x="19.4" y="205.4" width="34.3" height="16" rx="1"/>
-<text class="fc-edge-text" x="36.6" y="216.9">PASS</text>
-<path class="fc-edge" d="M103.6 56.3 C113.3 68.7 124.8 83.6 135.2 96.9 L142.2 105.9"/>
-<path class="fc-point" d="M142.2 105.9 L133.1 101.8 Q140.0 103.1 140.5 96.0 Z"/>
-<rect class="fc-chip" x="107.7" y="75.6" width="34.3" height="16" rx="1"/>
-<text class="fc-edge-text" x="124.8" y="87.1">FAIL</text>
-<path class="fc-edge" d="M166.5 162.4 C167.9 173.7 169.4 187.2 171.0 200.3 L172.3 211.7"/>
-<path class="fc-point" d="M172.3 211.7 L166.6 203.5 Q171.9 208.2 175.9 202.4 Z"/>
-<path class="fc-edge" d="M157.6 299.2 C150.8 314.7 143.3 332.4 137.3 348.8 C123.8 385.8 111.0 429.0 102.6 459.4 L99.6 470.3"/>
-<path class="fc-point" d="M99.6 470.3 L97.4 460.5 Q100.5 466.9 106.5 463.0 Z"/>
-<rect class="fc-chip" x="112.2" y="377.8" width="23.2" height="16" rx="1"/>
-<text class="fc-edge-text" x="123.8" y="389.3">NO</text>
-<path class="fc-edge" d="M198.5 299.2 C204.7 311.8 211.6 325.7 217.9 338.6 L222.9 348.6"/>
-<path class="fc-point" d="M222.9 348.6 L214.8 342.7 Q221.3 345.4 223.2 338.6 Z"/>
-<rect class="fc-chip" x="197.2" y="317.7" width="28.7" height="16" rx="1"/>
-<text class="fc-edge-text" x="211.6" y="329.2">YES</text>
-<path class="fc-edge" d="M193.5 421.2 C175.6 434.8 155.3 450.2 137.5 463.6 L128.5 470.4"/>
-<path class="fc-point" d="M128.5 470.4 L132.7 461.3 Q131.3 468.3 138.4 468.8 Z"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 332 433" width="4.53in" height="5.90in" class="flowplate flowplate--veil" role="img" aria-label="Spellcasting flowchart, Backlash">
+<rect class="fc-field" x="0" y="0" width="332.4" height="433.0"/>
+<rect class="fc-rule" x="14.0" y="14.0" width="304.4" height="405.0"/>
+<rect class="fc-rule-inner" x="18.0" y="18.0" width="296.4" height="397.0"/>
+<path class="fc-corner" d="M17.0 31.0 V23.0 H23.0 V17.0 H31.0"/>
+<path class="fc-corner" d="M315.4 31.0 V23.0 H309.4 V17.0 H301.4"/>
+<path class="fc-corner" d="M17.0 402.0 V410.0 H23.0 V416.0 H31.0"/>
+<path class="fc-corner" d="M315.4 402.0 V410.0 H309.4 V416.0 H301.4"/>
+<text class="fc-stage-head" x="30.0" y="41.0">III &#183; BACKLASH</text>
+<line class="fc-hairline" x1="28.0" y1="51.0" x2="304.4" y2="51.0"/>
+<line class="fc-hairline" x1="28.0" y1="391.0" x2="304.4" y2="391.0"/>
+<text class="fc-plate" x="30.0" y="406.0">SPELLCASTING &#183; PLATE III</text>
+<text class="fc-stage" x="302.4" y="406.0" text-anchor="end">BACKLASH</text>
+<g transform="translate(26.0 54.0)">
+<path class="fc-edge" d="M35.2 37.1 L35.2 37.1 L35.2 286.4 L35.2 286.4 L35.2 297.9"/>
+<line class="fc-head" x1="35.2" y1="297.9" x2="30.5" y2="290.2"/>
+<line class="fc-head" x1="35.2" y1="297.9" x2="40.0" y2="290.2"/>
+<rect class="fc-chip" x="18.1" y="278.4" width="34.3" height="16" rx="1"/>
+<text class="fc-edge-text" x="35.2" y="289.9">PASS</text>
+<path class="fc-edge" d="M118.4 37.2 L118.4 37.2 L118.4 54.4 L118.4 54.4 L118.4 65.9"/>
+<line class="fc-head" x1="118.4" y1="65.9" x2="113.7" y2="58.3"/>
+<line class="fc-head" x1="118.4" y1="65.9" x2="123.2" y2="58.3"/>
+<rect class="fc-chip" x="101.3" y="46.4" width="34.3" height="16" rx="1"/>
+<text class="fc-edge-text" x="118.4" y="57.9">FAIL</text>
+<path class="fc-edge" d="M152.3 103.2 L152.3 103.2 L152.3 120.0 L152.3 120.0 L152.3 131.6"/>
+<line class="fc-head" x1="152.3" y1="131.6" x2="147.6" y2="123.9"/>
+<line class="fc-head" x1="152.3" y1="131.6" x2="157.1" y2="123.9"/>
+<path class="fc-edge" d="M89.2 188.3 L89.2 188.3 L89.2 286.2 L89.2 286.2 L89.2 297.7"/>
+<line class="fc-head" x1="89.2" y1="297.7" x2="84.5" y2="290.1"/>
+<line class="fc-head" x1="89.2" y1="297.7" x2="94.0" y2="290.1"/>
+<rect class="fc-chip" x="77.6" y="278.2" width="23.2" height="16" rx="1"/>
+<text class="fc-edge-text" x="89.2" y="289.7">NO</text>
+<path class="fc-edge" d="M197.3 188.1 L197.3 188.1 L197.3 205.1 L197.3 205.1 L197.3 216.6"/>
+<line class="fc-head" x1="197.3" y1="216.6" x2="192.6" y2="209.0"/>
+<line class="fc-head" x1="197.3" y1="216.6" x2="202.1" y2="209.0"/>
+<rect class="fc-chip" x="183.0" y="197.1" width="28.7" height="16" rx="1"/>
+<text class="fc-edge-text" x="197.3" y="208.6">YES</text>
+<path class="fc-edge" d="M128.3 269.1 L128.3 269.1 L128.3 286.1 L128.3 286.1 L128.3 297.6"/>
+<line class="fc-head" x1="128.3" y1="297.6" x2="123.5" y2="290.0"/>
+<line class="fc-head" x1="128.3" y1="297.6" x2="133.1" y2="290.0"/>
 <g class="fc-node fc-terminal fc-aether">
-<rect class="fc-shape" x="0.0" y="-0.0" width="164.6" height="56.0" rx="28.0"/>
-<rect class="fc-inner" x="4.0" y="4.0" width="156.6" height="48.0" rx="24.0"/>
-<text class="fc-text" x="82.3" y="32.5">Backlash check</text>
+<path class="fc-shape" d="M14.2 0.0 H150.4 L164.6 14.2 V22.8 L150.4 37.0 H14.2 L0.0 22.8 V14.2 Z"/>
+<path class="fc-inner" d="M15.2 4.0 H149.4 L160.6 15.2 V21.8 L149.4 33.0 H15.2 L4.0 21.8 V15.2 Z"/>
+<text class="fc-text" x="82.3" y="23.1">Backlash check</text>
 </g>
 <g class="fc-node fc-terminal fc-good">
-<rect class="fc-shape" x="30.3" y="470.8" width="124.1" height="56.0" rx="28.0"/>
-<rect class="fc-inner" x="34.3" y="474.8" width="116.1" height="48.0" rx="24.0"/>
-<text class="fc-text" x="92.3" y="503.4">Resolved</text>
+<path class="fc-shape" d="M26.5 298.0 H122.1 L136.4 312.2 V320.8 L122.1 335.0 H26.5 L12.3 320.8 V312.2 Z"/>
+<path class="fc-inner" d="M27.5 302.0 H121.1 L132.4 313.2 V319.8 L121.1 331.0 H27.5 L16.3 319.8 V313.2 Z"/>
+<text class="fc-text" x="74.3" y="321.1">Resolved</text>
 </g>
 <g class="fc-node fc-process fc-warn">
-<path class="fc-shape" d="M94.2 106.0 H232.4 Q240.1 109.3 243.4 117.0 V151.0 Q240.1 158.7 232.4 162.0 H94.2 Q86.5 158.7 83.2 151.0 V117.0 Q86.5 109.3 94.2 106.0 Z"/>
-<path class="fc-inner" d="M95.2 110.0 H231.4 Q237.0 112.4 239.4 118.0 V150.0 Q237.0 155.6 231.4 158.0 H95.2 Q89.6 155.6 87.2 150.0 V118.0 Q89.6 112.4 95.2 110.0 Z"/>
-<text class="fc-text" x="163.3" y="138.5">Backlash: 1d4 HP</text>
+<path class="fc-shape" d="M79.2 66.0 H225.4 L232.4 73.0 V96.0 L225.4 103.0 H79.2 L72.2 96.0 V73.0 Z"/>
+<path class="fc-inner" d="M81.2 70.0 H223.4 L228.4 75.0 V94.0 L223.4 99.0 H81.2 L76.2 94.0 V75.0 Z"/>
+<circle class="fc-rivet" cx="81.7" cy="71.5" r="1.7"/>
+<circle class="fc-rivet" cx="222.9" cy="71.5" r="1.7"/>
+<circle class="fc-rivet" cx="81.7" cy="97.5" r="1.7"/>
+<circle class="fc-rivet" cx="222.9" cy="97.5" r="1.7"/>
+<text class="fc-text" x="152.3" y="89.0">Backlash: 1d4 HP</text>
 </g>
 <g class="fc-node fc-decision">
-<circle class="fc-shape" cx="177.3" cy="255.4" r="43.4"/>
-<circle class="fc-inner" cx="177.3" cy="255.4" r="38.9"/>
-<line class="fc-ray" x1="223.2" y1="255.4" x2="228.2" y2="255.4"/>
-<line class="fc-ray" x1="217.1" y1="278.4" x2="221.4" y2="280.9"/>
-<line class="fc-ray" x1="200.3" y1="295.2" x2="202.8" y2="299.5"/>
-<line class="fc-ray" x1="177.3" y1="301.3" x2="177.3" y2="306.3"/>
-<line class="fc-ray" x1="154.4" y1="295.2" x2="151.9" y2="299.5"/>
-<line class="fc-ray" x1="137.6" y1="278.4" x2="133.2" y2="280.9"/>
-<line class="fc-ray" x1="131.4" y1="255.4" x2="126.4" y2="255.4"/>
-<line class="fc-ray" x1="137.6" y1="232.5" x2="133.2" y2="230.0"/>
-<line class="fc-ray" x1="154.4" y1="215.7" x2="151.9" y2="211.3"/>
-<line class="fc-ray" x1="177.3" y1="209.5" x2="177.3" y2="204.5"/>
-<line class="fc-ray" x1="200.3" y1="215.7" x2="202.8" y2="211.3"/>
-<line class="fc-ray" x1="217.1" y1="232.5" x2="221.4" y2="230.0"/>
-<text class="fc-text" x="177.3" y="260.0">Wild effect? 25%</text>
+<path class="fc-shape" d="M58.2 160.0 L90.6 132.0 H242.0 L274.4 160.0 L242.0 188.0 H90.6 Z"/>
+<path class="fc-inner" d="M62.7 160.0 L93.8 136.5 H238.8 L269.9 160.0 L238.8 183.5 H93.8 Z"/>
+<text class="fc-text" x="166.3" y="164.6">Wild effect? 25%</text>
 </g>
 <g class="fc-node fc-process fc-warn">
-<path class="fc-shape" d="M171.2 348.8 H309.4 Q317.1 352.1 320.4 359.8 V409.8 Q317.1 417.5 309.4 420.8 H171.2 Q163.5 417.5 160.2 409.8 V359.8 Q163.5 352.1 171.2 348.8 Z"/>
-<path class="fc-inner" d="M172.2 352.8 H308.4 Q314.0 355.2 316.4 360.8 V408.8 Q314.0 414.4 308.4 416.8 H172.2 Q166.6 414.4 164.2 408.8 V360.8 Q166.6 355.2 172.2 352.8 Z"/>
-<text class="fc-text" x="240.3" y="381.4">Roll on the wild</text>
-<text class="fc-text" x="240.3" y="397.4">effect table</text>
+<path class="fc-shape" d="M127.2 217.0 H273.4 L280.4 224.0 V262.0 L273.4 269.0 H127.2 L120.2 262.0 V224.0 Z"/>
+<path class="fc-inner" d="M129.2 221.0 H271.4 L276.4 226.0 V260.0 L271.4 265.0 H129.2 L124.2 260.0 V226.0 Z"/>
+<circle class="fc-rivet" cx="129.7" cy="222.5" r="1.7"/>
+<circle class="fc-rivet" cx="270.9" cy="222.5" r="1.7"/>
+<circle class="fc-rivet" cx="129.7" cy="263.5" r="1.7"/>
+<circle class="fc-rivet" cx="270.9" cy="263.5" r="1.7"/>
+<text class="fc-text" x="200.3" y="240.1">Roll on the wild</text>
+<text class="fc-text" x="200.3" y="255.1">effect table</text>
 </g>
 </g>
 </svg>

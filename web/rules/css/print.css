@@ -946,12 +946,10 @@ dl.galvanic-weapons dd em {
   max-height: 7in;
 }
 
-/* A stage label and its diagram are one unit: the label is useless on the page before.
-   Each staged diagram fits the 6.0x7.0in printable box, the widest at 0.69 scale. */
-.flowchart-stage {
-  break-after: avoid;
-  break-inside: avoid;
-}
+/* The plate draws its own stage header, so the page-level label is redundant here
+   and is the one thing that can strand at a page foot. Hidden rather than kept with
+   break-after: avoid, which a tall figure defeats (CSS Fragmentation §4.4). */
+.flowchart-stage { display: none; }
 
 .flowchart-section {
   break-before: auto;
@@ -1120,9 +1118,11 @@ h4.school-title::before {
    the accents at full strength because they are inks here, not glow. */
 .flowplate {
   display: block;
-  width: 100%;
-  max-width: 5.6in;
+  /* The generator sizes each plate in inches to fit the printable box, so the
+     intrinsic width and height apply here rather than a fluid 100%. */
+  width: auto;
   height: auto;
+  max-width: 100%;
   margin: 0.6em auto 1em;
   break-inside: avoid;
 }
@@ -1137,6 +1137,8 @@ h4.school-title::before {
 
 .flowplate .fc-plate { font-family: 'Cormorant Garamond', serif; font-size: 7.5pt; font-weight: 700; letter-spacing: 0.22em; fill: #17140f; fill-opacity: 0.6; }
 .flowplate .fc-stage { font-family: 'Cormorant Garamond', serif; font-size: 7.5pt; font-weight: 700; letter-spacing: 0.22em; fill: #8e2f23; fill-opacity: 0.9; }
+
+.flowplate .fc-stage-head { font-family: 'Cormorant Garamond', serif; font-size: 10pt; font-weight: 700; letter-spacing: 0.24em; fill: #8e2f23; }
 
 .flowplate .fc-shape { fill: #ffffff; fill-opacity: 0.45; stroke: #17140f; stroke-opacity: 0.85; stroke-width: 1.2; }
 .flowplate .fc-inner { fill: none; stroke: #17140f; stroke-opacity: 0.3; stroke-width: 0.5; }

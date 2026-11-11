@@ -1726,6 +1726,14 @@ dl.galvanic-weapons dd em {
 
 .flowplate .fc-stage { fill: var(--fc-accent); fill-opacity: 0.9; }
 
+.flowplate .fc-stage-head {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.26em;
+  fill: var(--fc-accent);
+}
+
 /* Nodes: a drawn silhouette, a hairline inside it, and the label. */
 .flowplate .fc-shape {
   fill: rgba(239, 230, 210, 0.035);

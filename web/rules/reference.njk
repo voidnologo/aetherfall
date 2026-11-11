@@ -73,6 +73,12 @@ extraHead: |
       white-space: nowrap;
     }
 
+    /* At phone width a formula cannot stay on one line without dragging the page
+       sideways with it, so it wraps at its spaces instead. */
+    @media (max-width: 560px) {
+      .ref-formula { white-space: normal; }
+    }
+
     .ref-card table {
       width: 100%;
       border-collapse: collapse;

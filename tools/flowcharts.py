@@ -17,14 +17,17 @@ The split of labour:
   stylesheets paint it, which is what lets one asset serve the midnight web page
   and the bone-paper print edition without a second render.
 
-Two registers, chosen by subject, matching the ornament split in
-``docs/art/style-guide.md`` §3:
+One drawing system, two inks. The first pass gave each chart its own shape
+language — Deco geometry for Combat, Nouveau curve for Spellcasting — and the
+Deco read better, so both are drawn the same way now: chamfered plates with
+rivets, stepped hexagons at the decisions, square runs and open chevron heads,
+like a machine schedule.
 
-* ``engine``  — Deco geometry for the Combat sequence. Chamfered plates, rivets,
-  chevron heads, orthogonal runs. It should look like a machine schedule.
-* ``veil``    — Nouveau curve for the Spellcasting procedure. Cartouches with
-  drawn-in corners, a rayed circle at each decision, flowing connectors. It
-  should look like a page out of a working grimoire.
+Colour is what separates them, which is how the rest of the book separates
+them. ``engine`` plates run amber, ``veil`` plates cyan, and the style guide's
+rule holds: cyan is only ever the Aether, amber only ever the Engine. A reader
+tells the two procedures apart at a glance without learning a second
+vocabulary of shapes.
 
 Usage: ``python3 tools/flowcharts.py`` writes web/assets/diagrams/*.svg.
 """
@@ -48,9 +51,15 @@ BODY_SIZE = 13.0          # node label, px/pt
 EDGE_SIZE = 9.0           # edge label
 CHAR_W = 0.52             # mean advance width of Source Serif 4, in ems
 NODE_PAD_X = 26.0
-NODE_PAD_Y = 20.0
-LINE_H = 16.0
+NODE_PAD_Y = 11.0
+LINE_H = 15.0
 MAX_LABEL_CH = 22         # wrap wider labels; a long box starves the layout
+
+# The printable box a plate is fitted into, in inches. Narrower and shorter than the
+# full text column: a plate that fills the column pushes the chapter's tailpiece onto
+# a page of its own, because the avoid-chain around it has nowhere legal to break.
+PRINT_BOX_W = 5.9
+PRINT_BOX_H = 5.9
 
 
 # ── Diagram definitions ──────────────────────────────────────────────────────
@@ -82,6 +91,12 @@ class Chart:
     edges: list[Edge]
     rankdir: str = "TB"
     notes: list[str] = field(default_factory=list)
+    # Nodes forced onto the same row. Four siblings left to dot spread across one
+    # rank, which made the attack plate 10in wide and scaled its labels to 5pt.
+    same_rank: list[list[str]] = field(default_factory=list)
+    # Invisible edges that push a node down a row. rank=same only levels a group;
+    # it cannot move one below another when both hang off the same parent.
+    push_below: list[tuple[str, str]] = field(default_factory=list)
 
 
 CHARTS: list[Chart] = [
@@ -163,6 +178,8 @@ CHARTS: list[Chart] = [
         key="combat-2-attack", title="Combat", stage="The Attack",
         plate="II", register="engine", rankdir="TB",
         notes=["Reliability is rolled before the attack, every shot."],
+        same_rank=[["MROLL", "RROLL"], ["REL", "SPELL"], ["FROLL", "MAL"]],
+        push_below=[("MROLL", "REL")],
         nodes=[
             Node("TYPE", "Attack type?", "terminal", "galvanic"),
             Node("MROLL", "Roll vs Melee/Brawl"),
@@ -232,7 +249,7 @@ def node_size(node: Node) -> tuple[float, float, list[str]]:
     if node.shape == "decision":
         # A rayed circle or a stepped hexagon carries its label inside the form.
         width = max(width * 1.35, height * 2.1)
-        height = max(height * 1.55, 74.0)
+        height = max(height * 1.5, 56.0)
     elif node.shape == "terminal":
         width += 18.0
     return width, height, lines
@@ -242,14 +259,11 @@ def node_size(node: Node) -> tuple[float, float, list[str]]:
 
 def layout(chart: Chart) -> dict:
     sizes = {n.id: node_size(n) for n in chart.nodes}
-    # The Engine register is a machine plate, so its runs are square; the Veil
-    # register flows, so its connectors stay splines.
-    routing = "ortho" if chart.register == "engine" else "spline"
     lines = [
         "digraph {",
         f"  rankdir={chart.rankdir};",
-        f"  splines={routing}; overlap=false;",
-        "  nodesep=0.62; ranksep=0.70;",
+        "  splines=ortho; overlap=false;",   # every plate is a machine plate
+        "  nodesep=0.42; ranksep=0.40;",
         "  node [shape=box fixedsize=true];",
     ]
     for node in chart.nodes:
@@ -257,6 +271,10 @@ def layout(chart: Chart) -> dict:
         lines.append(f'  {node.id} [width={w / 72:.4f} height={h / 72:.4f}];')
     for edge in chart.edges:
         lines.append(f"  {edge.src} -> {edge.dst};")
+    for src, dst in chart.push_below:
+        lines.append(f"  {src} -> {dst} [style=invis];")
+    for group in chart.same_rank:
+        lines.append("  { rank=same; " + " ".join(f"{n};" for n in group) + " }")
     lines.append("}")
     source = "\n".join(lines)
 
@@ -271,6 +289,9 @@ def layout(chart: Chart) -> dict:
     height = bb[3]
     positions = {}
     for obj in data.get("objects", []):
+        # A rank=same group is an object too, and carries no position.
+        if "pos" not in obj:
+            continue
         x, y = (float(v) for v in obj["pos"].split(","))
         positions[obj["name"]] = (x, height - y)      # SVG y grows downward
     splines = {}
@@ -306,15 +327,6 @@ def chamfered(x: float, y: float, w: float, h: float, cut: float) -> str:
             f"L{x:.1f} {y + h - cut:.1f} V{y + cut:.1f} Z")
 
 
-def cartouche(x: float, y: float, w: float, h: float, r: float) -> str:
-    """Nouveau frame: corners drawn inward, the way a ruled grimoire panel is."""
-    return (f"M{x + r:.1f} {y:.1f} H{x + w - r:.1f} Q{x + w - r * 0.3:.1f} {y + r * 0.3:.1f} "
-            f"{x + w:.1f} {y + r:.1f} V{y + h - r:.1f} Q{x + w - r * 0.3:.1f} {y + h - r * 0.3:.1f} "
-            f"{x + w - r:.1f} {y + h:.1f} H{x + r:.1f} Q{x + r * 0.3:.1f} {y + h - r * 0.3:.1f} "
-            f"{x:.1f} {y + h - r:.1f} V{y + r:.1f} Q{x + r * 0.3:.1f} {y + r * 0.3:.1f} "
-            f"{x + r:.1f} {y:.1f} Z")
-
-
 def stepped_hex(cx: float, cy: float, w: float, h: float) -> str:
     """Decision, Deco register: a hexagon with stepped shoulders."""
     hw, hh = w / 2, h / 2
@@ -333,41 +345,19 @@ def draw_node(node: Node, pos: tuple[float, float], size: tuple[float, float, li
     out = [f'<g class="{cls}">']
 
     if node.shape == "decision":
-        if register == "veil":
-            # A rayed circle: the decision as an alchemical figure.
-            r = min(w, h) / 2
-            out.append(f'<circle class="fc-shape" cx="{cx:.1f}" cy="{cy:.1f}" r="{r:.1f}"/>')
-            out.append(f'<circle class="fc-inner" cx="{cx:.1f}" cy="{cy:.1f}" r="{r - 4.5:.1f}"/>')
-            for i in range(12):
-                a = math.radians(i * 30)
-                x1, y1 = cx + math.cos(a) * (r + 2.5), cy + math.sin(a) * (r + 2.5)
-                x2, y2 = cx + math.cos(a) * (r + 7.5), cy + math.sin(a) * (r + 7.5)
-                out.append(f'<line class="fc-ray" x1="{x1:.1f}" y1="{y1:.1f}" x2="{x2:.1f}" y2="{y2:.1f}"/>')
-        else:
-            out.append(f'<path class="fc-shape" d="{stepped_hex(cx, cy, w, h)}"/>')
-            out.append(f'<path class="fc-inner" d="{stepped_hex(cx, cy, w - 9, h - 9)}"/>')
+        out.append(f'<path class="fc-shape" d="{stepped_hex(cx, cy, w, h)}"/>')
+        out.append(f'<path class="fc-inner" d="{stepped_hex(cx, cy, w - 9, h - 9)}"/>')
     elif node.shape == "terminal":
-        if register == "veil":
-            r = h / 2
-            out.append(f'<rect class="fc-shape" x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" '
-                       f'height="{h:.1f}" rx="{r:.1f}"/>')
-            out.append(f'<rect class="fc-inner" x="{x + 4:.1f}" y="{y + 4:.1f}" '
-                       f'width="{w - 8:.1f}" height="{h - 8:.1f}" rx="{r - 4:.1f}"/>')
-        else:
-            # Stadium with chevron ends: a terminal block on a machine plate.
-            out.append(f'<path class="fc-shape" d="{chamfered(x, y, w, h, h / 2.6)}"/>')
-            out.append(f'<path class="fc-inner" d="{chamfered(x + 4, y + 4, w - 8, h - 8, h / 2.6 - 3)}"/>')
+        # Stadium with chamfered ends: a terminal block on a machine plate.
+        out.append(f'<path class="fc-shape" d="{chamfered(x, y, w, h, h / 2.6)}"/>')
+        out.append(f'<path class="fc-inner" d="{chamfered(x + 4, y + 4, w - 8, h - 8, h / 2.6 - 3)}"/>')
     else:
-        if register == "veil":
-            out.append(f'<path class="fc-shape" d="{cartouche(x, y, w, h, 11)}"/>')
-            out.append(f'<path class="fc-inner" d="{cartouche(x + 4, y + 4, w - 8, h - 8, 8)}"/>')
-        else:
-            cut = 7.0
-            out.append(f'<path class="fc-shape" d="{chamfered(x, y, w, h, cut)}"/>')
-            out.append(f'<path class="fc-inner" d="{chamfered(x + 4, y + 4, w - 8, h - 8, cut - 2)}"/>')
-            for rx, ry in ((x + cut + 2.5, y + cut - 1.5), (x + w - cut - 2.5, y + cut - 1.5),
-                           (x + cut + 2.5, y + h - cut + 1.5), (x + w - cut - 2.5, y + h - cut + 1.5)):
-                out.append(f'<circle class="fc-rivet" cx="{rx:.1f}" cy="{ry:.1f}" r="1.7"/>')
+        cut = 7.0
+        out.append(f'<path class="fc-shape" d="{chamfered(x, y, w, h, cut)}"/>')
+        out.append(f'<path class="fc-inner" d="{chamfered(x + 4, y + 4, w - 8, h - 8, cut - 2)}"/>')
+        for rx, ry in ((x + cut + 2.5, y + cut - 1.5), (x + w - cut - 2.5, y + cut - 1.5),
+                       (x + cut + 2.5, y + h - cut + 1.5), (x + w - cut - 2.5, y + h - cut + 1.5)):
+            out.append(f'<circle class="fc-rivet" cx="{rx:.1f}" cy="{ry:.1f}" r="1.7"/>')
 
     first = cy - (len(lines) - 1) * LINE_H / 2 + BODY_SIZE * 0.35
     for i, line in enumerate(lines):
@@ -380,34 +370,18 @@ def draw_edge(points: list[tuple[float, float]], label: str, register: str, idx:
     if len(points) < 2:
         return ""
     out = []
-    if register == "engine":
-        # Machine plates run square: straight segments, no easing.
-        d = f"M{points[0][0]:.1f} {points[0][1]:.1f}" + "".join(
-            f" L{px:.1f} {py:.1f}" for px, py in points[1:])
-    else:
-        d = f"M{points[0][0]:.1f} {points[0][1]:.1f}"
-        for i in range(1, len(points) - 2, 3):
-            p1, p2, p3 = points[i], points[i + 1], points[i + 2]
-            d += (f" C{p1[0]:.1f} {p1[1]:.1f} {p2[0]:.1f} {p2[1]:.1f} "
-                  f"{p3[0]:.1f} {p3[1]:.1f}")
-        if (len(points) - 1) % 3:
-            d += "".join(f" L{px:.1f} {py:.1f}" for px, py in points[-((len(points) - 1) % 3):])
+    # Machine plates run square: straight segments, no easing.
+    d = f"M{points[0][0]:.1f} {points[0][1]:.1f}" + "".join(
+        f" L{px:.1f} {py:.1f}" for px, py in points[1:])
     out.append(f'<path class="fc-edge" d="{d}"/>')
 
-    # Arrowhead, drawn to match the register: open chevron, or a drawn point.
+    # Arrowhead: an open chevron, drawn as two strokes rather than filled.
     (x2, y2), (x1, y1) = points[-1], points[-2]
     angle = math.atan2(y2 - y1, x2 - x1)
-    if register == "engine":
-        for sign in (1, -1):
-            a = angle + sign * math.radians(148)
-            out.append(f'<line class="fc-head" x1="{x2:.1f}" y1="{y2:.1f}" '
-                       f'x2="{x2 + math.cos(a) * 9:.1f}" y2="{y2 + math.sin(a) * 9:.1f}"/>')
-    else:
-        a1, a2 = angle + math.radians(152), angle - math.radians(152)
-        out.append(f'<path class="fc-point" d="M{x2:.1f} {y2:.1f} '
-                   f'L{x2 + math.cos(a1) * 10:.1f} {y2 + math.sin(a1) * 10:.1f} '
-                   f'Q{x2 - math.cos(angle) * 3.5:.1f} {y2 - math.sin(angle) * 3.5:.1f} '
-                   f'{x2 + math.cos(a2) * 10:.1f} {y2 + math.sin(a2) * 10:.1f} Z"/>')
+    for sign in (1, -1):
+        a = angle + sign * math.radians(148)
+        out.append(f'<line class="fc-head" x1="{x2:.1f}" y1="{y2:.1f}" '
+                   f'x2="{x2 + math.cos(a) * 9:.1f}" y2="{y2 + math.sin(a) * 9:.1f}"/>')
 
     if label:
         mid = points[len(points) // 2]
@@ -427,15 +401,21 @@ def draw_frame(chart: Chart, w: float, h: float) -> str:
            f'height="{h - m * 2:.1f}"/>',
            f'<rect class="fc-rule-inner" x="{m + 4:.1f}" y="{m + 4:.1f}" '
            f'width="{w - (m + 4) * 2:.1f}" height="{h - (m + 4) * 2:.1f}"/>']
-    # Corner marks: stepped for the Engine, a drawn curl for the Veil.
     for sx, sy, cx0, cy0 in ((1, 1, m, m), (-1, 1, w - m, m), (1, -1, m, h - m), (-1, -1, w - m, h - m)):
-        if chart.register == "engine":
-            out.append(f'<path class="fc-corner" d="M{cx0 + sx * 3:.1f} {cy0 + sy * 17:.1f} '
-                       f'V{cy0 + sy * 9:.1f} H{cx0 + sx * 9:.1f} V{cy0 + sy * 3:.1f} '
-                       f'H{cx0 + sx * 17:.1f}"/>')
-        else:
-            out.append(f'<path class="fc-corner" d="M{cx0 + sx * 3:.1f} {cy0 + sy * 19:.1f} '
-                       f'Q{cx0 + sx * 3:.1f} {cy0 + sy * 3:.1f} {cx0 + sx * 19:.1f} {cy0 + sy * 3:.1f}"/>')
+        out.append(f'<path class="fc-corner" d="M{cx0 + sx * 3:.1f} {cy0 + sy * 17:.1f} '
+                   f'V{cy0 + sy * 9:.1f} H{cx0 + sx * 9:.1f} V{cy0 + sy * 3:.1f} '
+                   f'H{cx0 + sx * 17:.1f}"/>')
+
+    # Header, top rule: the stage names itself inside the plate. A heading set
+    # above the diagram in the page strands at a page foot, because a tall figure
+    # with break-inside: avoid leaves the span no legal break point and the whole
+    # avoid-chain is dropped (CSS Fragmentation §4.4). Carried here, it cannot.
+    head_y = m + 27
+    out.append(f'<text class="fc-stage-head" x="{m + 16:.1f}" y="{head_y:.1f}">'
+               f'{esc(chart.plate)} &#183; {esc(chart.stage.upper())}</text>')
+    out.append(f'<line class="fc-hairline" x1="{m + 14:.1f}" y1="{head_y + 10:.1f}" '
+               f'x2="{w - m - 14:.1f}" y2="{head_y + 10:.1f}"/>')
+
     # Title block, bottom rule: plate numeral, subject, stage.
     base = h - m - 13
     out.append(f'<line class="fc-hairline" x1="{m + 14:.1f}" y1="{base - 15:.1f}" '
@@ -449,7 +429,7 @@ def draw_frame(chart: Chart, w: float, h: float) -> str:
 
 def render(chart: Chart) -> str:
     geo = layout(chart)
-    pad_x, pad_top, pad_bottom = 34.0, 34.0, 56.0   # room for the title block
+    pad_x, pad_top, pad_bottom = 26.0, 54.0, 44.0   # room for the header and title block
     w = geo["w"] + pad_x * 2
     h = geo["h"] + pad_top + pad_bottom
     shift_x, shift_y = pad_x, pad_top
@@ -462,7 +442,13 @@ def render(chart: Chart) -> str:
         body.append(draw_node(node, geo["pos"][node.id], geo["sizes"][node.id], chart.register))
     body.append("</g>")
 
+    # Intrinsic size in inches, fitted to the printable box with room left under it.
+    # A plate that fills the column leaves the chapter's tailpiece no legal break
+    # point, and WeasyPrint then drops the whole avoid-chain and gives the ornament
+    # a page of its own. The web stylesheet overrides these with width:100%.
+    scale = min(PRINT_BOX_W / (w / 72), PRINT_BOX_H / (h / 72), 1.0)
     return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w:.0f} {h:.0f}" '
+            f'width="{w / 72 * scale:.2f}in" height="{h / 72 * scale:.2f}in" '
             f'class="flowplate flowplate--{chart.register}" role="img" '
             f'aria-label="{esc(chart.title)} flowchart, {esc(chart.stage)}">\n'
             + "\n".join(body) + "\n</svg>\n")

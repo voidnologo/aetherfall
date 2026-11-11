@@ -1,78 +1,82 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 477 633" class="flowplate flowplate--veil" role="img" aria-label="Spellcasting flowchart, Casting">
-<rect class="fc-field" x="0" y="0" width="476.5" height="632.8"/>
-<rect class="fc-rule" x="14.0" y="14.0" width="448.5" height="604.8"/>
-<rect class="fc-rule-inner" x="18.0" y="18.0" width="440.5" height="596.8"/>
-<path class="fc-corner" d="M17.0 33.0 Q17.0 17.0 33.0 17.0"/>
-<path class="fc-corner" d="M459.5 33.0 Q459.5 17.0 443.5 17.0"/>
-<path class="fc-corner" d="M17.0 599.8 Q17.0 615.8 33.0 615.8"/>
-<path class="fc-corner" d="M459.5 599.8 Q459.5 615.8 443.5 615.8"/>
-<line class="fc-hairline" x1="28.0" y1="590.8" x2="448.5" y2="590.8"/>
-<text class="fc-plate" x="30.0" y="605.8">SPELLCASTING &#183; PLATE I</text>
-<text class="fc-stage" x="446.5" y="605.8" text-anchor="end">CASTING</text>
-<g transform="translate(34.0 34.0)">
-<path class="fc-edge" d="M226.9 72.4 C226.9 84.5 226.9 98.0 226.9 110.3 L226.9 121.6"/>
-<path class="fc-point" d="M226.9 121.6 L222.2 112.8 Q226.9 118.1 231.6 112.8 Z"/>
-<path class="fc-edge" d="M226.9 178.4 C226.9 189.7 226.9 203.2 226.9 216.3 L226.9 227.7"/>
-<path class="fc-point" d="M226.9 227.7 L222.2 218.9 Q226.9 224.2 231.6 218.9 Z"/>
-<path class="fc-edge" d="M198.6 315.2 C190.0 328.3 180.5 342.6 172.1 355.3 L166.0 364.6"/>
-<path class="fc-point" d="M166.0 364.6 L166.9 354.6 Q167.9 361.7 174.7 359.8 Z"/>
-<rect class="fc-chip" x="166.1" y="334.6" width="28.7" height="16" rx="1"/>
-<text class="fc-edge-text" x="180.5" y="346.1">YES</text>
-<path class="fc-edge" d="M243.1 315.0 C248.9 330.6 255.3 348.5 260.9 364.8 C271.7 396.2 283.1 431.8 291.7 459.4 L295.1 470.3"/>
-<path class="fc-point" d="M295.1 470.3 L288.0 463.3 Q294.0 467.0 296.9 460.5 Z"/>
-<rect class="fc-chip" x="260.1" y="388.2" width="23.2" height="16" rx="1"/>
-<text class="fc-edge-text" x="271.7" y="399.7">NO</text>
-<path class="fc-edge" d="M131.1 421.2 C122.1 435.7 111.1 453.7 101.4 469.3 L95.6 478.7"/>
-<path class="fc-point" d="M95.6 478.7 L96.3 468.7 Q97.5 475.7 104.3 473.6 Z"/>
-<rect class="fc-chip" x="93.9" y="445.7" width="34.3" height="16" rx="1"/>
-<text class="fc-edge-text" x="111.1" y="457.2">FAIL</text>
-<path class="fc-edge" d="M186.6 421.2 C204.7 434.0 226.6 449.5 246.7 463.8 L256.0 470.4"/>
-<path class="fc-point" d="M256.0 470.4 L246.1 469.2 Q253.2 468.4 251.5 461.5 Z"/>
-<rect class="fc-chip" x="209.4" y="441.5" width="34.3" height="16" rx="1"/>
-<text class="fc-edge-text" x="226.6" y="453.0">PASS</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 446 448" width="5.87in" height="5.90in" class="flowplate flowplate--veil" role="img" aria-label="Spellcasting flowchart, Casting">
+<rect class="fc-field" x="0" y="0" width="445.5" height="448.0"/>
+<rect class="fc-rule" x="14.0" y="14.0" width="417.5" height="420.0"/>
+<rect class="fc-rule-inner" x="18.0" y="18.0" width="409.5" height="412.0"/>
+<path class="fc-corner" d="M17.0 31.0 V23.0 H23.0 V17.0 H31.0"/>
+<path class="fc-corner" d="M428.5 31.0 V23.0 H422.5 V17.0 H414.5"/>
+<path class="fc-corner" d="M17.0 417.0 V425.0 H23.0 V431.0 H31.0"/>
+<path class="fc-corner" d="M428.5 417.0 V425.0 H422.5 V431.0 H414.5"/>
+<text class="fc-stage-head" x="30.0" y="41.0">I &#183; CASTING</text>
+<line class="fc-hairline" x1="28.0" y1="51.0" x2="417.5" y2="51.0"/>
+<line class="fc-hairline" x1="28.0" y1="406.0" x2="417.5" y2="406.0"/>
+<text class="fc-plate" x="30.0" y="421.0">SPELLCASTING &#183; PLATE I</text>
+<text class="fc-stage" x="415.5" y="421.0" text-anchor="end">CASTING</text>
+<g transform="translate(26.0 54.0)">
+<path class="fc-edge" d="M222.9 52.1 L222.9 52.1 L222.9 69.1 L222.9 69.1 L222.9 80.6"/>
+<line class="fc-head" x1="222.9" y1="80.6" x2="218.2" y2="73.0"/>
+<line class="fc-head" x1="222.9" y1="80.6" x2="227.7" y2="73.0"/>
+<path class="fc-edge" d="M222.9 118.2 L222.9 118.2 L222.9 135.0 L222.9 135.0 L222.9 146.6"/>
+<line class="fc-head" x1="222.9" y1="146.6" x2="218.2" y2="138.9"/>
+<line class="fc-head" x1="222.9" y1="146.6" x2="227.7" y2="138.9"/>
+<path class="fc-edge" d="M189.1 203.1 L189.1 203.1 L189.1 220.2 L189.1 220.2 L189.1 231.8"/>
+<line class="fc-head" x1="189.1" y1="231.8" x2="184.4" y2="224.1"/>
+<line class="fc-head" x1="189.1" y1="231.8" x2="193.9" y2="224.1"/>
+<rect class="fc-chip" x="174.8" y="212.2" width="28.7" height="16" rx="1"/>
+<text class="fc-edge-text" x="189.1" y="223.8">YES</text>
+<path class="fc-edge" d="M279.0 203.4 L279.0 203.4 L279.0 286.2 L279.0 286.2 L279.0 297.7"/>
+<line class="fc-head" x1="279.0" y1="297.7" x2="274.2" y2="290.1"/>
+<line class="fc-head" x1="279.0" y1="297.7" x2="283.7" y2="290.1"/>
+<rect class="fc-chip" x="267.4" y="278.2" width="23.2" height="16" rx="1"/>
+<text class="fc-edge-text" x="279.0" y="289.7">NO</text>
+<path class="fc-edge" d="M111.3 269.4 L111.3 269.4 L111.3 293.6 L111.3 293.6 L111.3 305.1"/>
+<line class="fc-head" x1="111.3" y1="305.1" x2="106.5" y2="297.5"/>
+<line class="fc-head" x1="111.3" y1="305.1" x2="116.1" y2="297.5"/>
+<rect class="fc-chip" x="94.1" y="285.6" width="34.3" height="16" rx="1"/>
+<text class="fc-edge-text" x="111.3" y="297.1">FAIL</text>
+<path class="fc-edge" d="M216.8 269.4 L216.8 269.4 L216.8 286.1 L216.8 286.1 L216.8 297.7"/>
+<line class="fc-head" x1="216.8" y1="297.7" x2="212.0" y2="290.0"/>
+<line class="fc-head" x1="216.8" y1="297.7" x2="221.5" y2="290.0"/>
+<rect class="fc-chip" x="199.6" y="278.1" width="34.3" height="16" rx="1"/>
+<text class="fc-edge-text" x="216.8" y="289.6">PASS</text>
 <g class="fc-node fc-terminal fc-aether">
-<rect class="fc-shape" x="124.3" y="-0.0" width="205.2" height="72.0" rx="36.0"/>
-<rect class="fc-inner" x="128.3" y="4.0" width="197.2" height="64.0" rx="32.0"/>
-<text class="fc-text" x="226.9" y="32.5">Declare spell, begin</text>
-<text class="fc-text" x="226.9" y="48.5">casting</text>
+<path class="fc-shape" d="M140.3 0.0 H305.5 L325.5 20.0 V32.0 L305.5 52.0 H140.3 L120.3 32.0 V20.0 Z"/>
+<path class="fc-inner" d="M141.3 4.0 H304.5 L321.5 21.0 V31.0 L304.5 48.0 H141.3 L124.3 31.0 V21.0 Z"/>
+<text class="fc-text" x="222.9" y="23.1">Declare spell, begin</text>
+<text class="fc-text" x="222.9" y="38.0">casting</text>
 </g>
 <g class="fc-node fc-process">
-<path class="fc-shape" d="M141.0 122.0 H312.9 Q320.6 125.3 323.9 133.0 V167.0 Q320.6 174.7 312.9 178.0 H141.0 Q133.3 174.7 130.0 167.0 V133.0 Q133.3 125.3 141.0 122.0 Z"/>
-<path class="fc-inner" d="M142.0 126.0 H311.9 Q317.5 128.4 319.9 134.0 V166.0 Q317.5 171.6 311.9 174.0 H142.0 Q136.4 171.6 134.0 166.0 V134.0 Q136.4 128.4 142.0 126.0 Z"/>
-<text class="fc-text" x="226.9" y="154.5">Wait the casting time</text>
+<path class="fc-shape" d="M133.0 81.0 H312.9 L319.9 88.0 V111.0 L312.9 118.0 H133.0 L126.0 111.0 V88.0 Z"/>
+<path class="fc-inner" d="M135.0 85.0 H310.9 L315.9 90.0 V109.0 L310.9 114.0 H135.0 L130.0 109.0 V90.0 Z"/>
+<circle class="fc-rivet" cx="135.5" cy="86.5" r="1.7"/>
+<circle class="fc-rivet" cx="310.4" cy="86.5" r="1.7"/>
+<circle class="fc-rivet" cx="135.5" cy="112.5" r="1.7"/>
+<circle class="fc-rivet" cx="310.4" cy="112.5" r="1.7"/>
+<text class="fc-text" x="222.9" y="104.0">Wait the casting time</text>
 </g>
 <g class="fc-node fc-decision">
-<circle class="fc-shape" cx="226.9" cy="271.4" r="43.4"/>
-<circle class="fc-inner" cx="226.9" cy="271.4" r="38.9"/>
-<line class="fc-ray" x1="272.8" y1="271.4" x2="277.8" y2="271.4"/>
-<line class="fc-ray" x1="266.7" y1="294.4" x2="271.0" y2="296.9"/>
-<line class="fc-ray" x1="249.9" y1="311.2" x2="252.4" y2="315.5"/>
-<line class="fc-ray" x1="226.9" y1="317.3" x2="226.9" y2="322.3"/>
-<line class="fc-ray" x1="204.0" y1="311.2" x2="201.5" y2="315.5"/>
-<line class="fc-ray" x1="187.2" y1="294.4" x2="182.9" y2="296.9"/>
-<line class="fc-ray" x1="181.0" y1="271.4" x2="176.0" y2="271.4"/>
-<line class="fc-ray" x1="187.2" y1="248.5" x2="182.9" y2="246.0"/>
-<line class="fc-ray" x1="204.0" y1="231.7" x2="201.5" y2="227.3"/>
-<line class="fc-ray" x1="226.9" y1="225.5" x2="226.9" y2="220.5"/>
-<line class="fc-ray" x1="249.9" y1="231.7" x2="252.4" y2="227.3"/>
-<line class="fc-ray" x1="266.7" y1="248.5" x2="271.0" y2="246.0"/>
-<text class="fc-text" x="226.9" y="276.0">Interrupted?</text>
+<path class="fc-shape" d="M133.1 175.0 L160.0 147.0 H285.8 L312.8 175.0 L285.8 203.0 H160.0 Z"/>
+<path class="fc-inner" d="M137.6 175.0 L163.2 151.5 H282.7 L308.3 175.0 L282.7 198.5 H163.2 Z"/>
+<text class="fc-text" x="222.9" y="179.6">Interrupted?</text>
 </g>
 <g class="fc-node fc-process">
-<path class="fc-shape" d="M68.7 364.8 H227.2 Q234.9 368.1 238.2 375.8 V409.8 Q234.9 417.5 227.2 420.8 H68.7 Q61.0 417.5 57.7 409.8 V375.8 Q61.0 368.1 68.7 364.8 Z"/>
-<path class="fc-inner" d="M69.7 368.8 H226.2 Q231.8 371.2 234.2 376.8 V408.8 Q231.8 414.4 226.2 416.8 H69.7 Q64.1 414.4 61.7 408.8 V376.8 Q64.1 371.2 69.7 368.8 Z"/>
-<text class="fc-text" x="147.9" y="397.4">Concentration check</text>
+<path class="fc-shape" d="M71.7 232.0 H238.2 L245.2 239.0 V262.0 L238.2 269.0 H71.7 L64.7 262.0 V239.0 Z"/>
+<path class="fc-inner" d="M73.7 236.0 H236.2 L241.2 241.0 V260.0 L236.2 265.0 H73.7 L68.7 260.0 V241.0 Z"/>
+<circle class="fc-rivet" cx="74.2" cy="237.5" r="1.7"/>
+<circle class="fc-rivet" cx="235.7" cy="237.5" r="1.7"/>
+<circle class="fc-rivet" cx="74.2" cy="263.5" r="1.7"/>
+<circle class="fc-rivet" cx="235.7" cy="263.5" r="1.7"/>
+<text class="fc-text" x="154.9" y="255.1">Concentration check</text>
 </g>
 <g class="fc-node fc-terminal fc-warn">
-<rect class="fc-shape" x="0.0" y="478.8" width="157.9" height="56.0" rx="28.0"/>
-<rect class="fc-inner" x="4.0" y="482.8" width="149.9" height="48.0" rx="24.0"/>
-<text class="fc-text" x="78.9" y="511.4">Spell fizzles</text>
+<path class="fc-shape" d="M14.2 305.5 H143.7 L157.9 319.7 V328.3 L143.7 342.5 H14.2 L0.0 328.3 V319.7 Z"/>
+<path class="fc-inner" d="M15.2 309.5 H142.7 L153.9 320.7 V327.3 L142.7 338.5 H15.2 L4.0 327.3 V320.7 Z"/>
+<text class="fc-text" x="78.9" y="328.6">Spell fizzles</text>
 </g>
 <g class="fc-node fc-terminal fc-aether">
-<rect class="fc-shape" x="203.3" y="470.8" width="205.2" height="72.0" rx="36.0"/>
-<rect class="fc-inner" x="207.3" y="474.8" width="197.2" height="64.0" rx="32.0"/>
-<text class="fc-text" x="305.9" y="503.4">Roll d100 vs casting</text>
-<text class="fc-text" x="305.9" y="519.4">target</text>
+<path class="fc-shape" d="M208.3 298.0 H373.5 L393.5 318.0 V330.0 L373.5 350.0 H208.3 L188.3 330.0 V318.0 Z"/>
+<path class="fc-inner" d="M209.3 302.0 H372.5 L389.5 319.0 V329.0 L372.5 346.0 H209.3 L192.3 329.0 V319.0 Z"/>
+<text class="fc-text" x="290.9" y="321.1">Roll d100 vs casting</text>
+<text class="fc-text" x="290.9" y="336.1">target</text>
 </g>
 </g>
 </svg>
