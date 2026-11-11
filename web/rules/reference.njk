@@ -17,6 +17,10 @@ extraHead: |
     }
 
     .ref-card {
+      /* A grid item's automatic minimum is its min-content width, so a long list line
+         pushed the card past its track and widened the page at 390px. */
+      min-width: 0;
+      overflow-wrap: break-word;
       background: var(--bg-surface);
       border: 1px solid var(--glass-border);
       border-radius: 6px;
@@ -67,6 +71,12 @@ extraHead: |
       border-radius: 3px;
       padding: 0.15rem 0.4rem;
       white-space: nowrap;
+    }
+
+    /* At phone width a formula cannot stay on one line without dragging the page
+       sideways with it, so it wraps at its spaces instead. */
+    @media (max-width: 560px) {
+      .ref-formula { white-space: normal; }
     }
 
     .ref-card table {
@@ -123,53 +133,18 @@ extraHead: |
       margin: 1rem 0;
       overflow-x: auto;
     }
-    .mermaid {
-      display: flex;
-      justify-content: center;
+    /* Stage labels. Each flowchart is three diagrams: whole, neither chart fitted a
+       portrait page at any orientation (3:1 and 5:1 top-down, 1:7 and 1:12 across). */
+    .flowchart-stage {
+      margin: 1.6rem 0 0;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--theme-accent);
     }
   </style>
-extraFoot: |
-  <script type="module">
-    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: 'base',
-      themeVariables: {
-        fontFamily: 'Source Serif 4, Georgia, serif',
-        fontSize: '15px',
-        background: '#0b0e17',
-        primaryColor: '#141828',
-        primaryTextColor: '#d4dae3',
-        primaryBorderColor: '#3dc8e0',
-        secondaryColor: '#0f1220',
-        secondaryTextColor: '#d4dae3',
-        secondaryBorderColor: '#8a92a4',
-        tertiaryColor: '#0f1220',
-        tertiaryTextColor: '#d4dae3',
-        tertiaryBorderColor: '#8a92a4',
-        lineColor: '#8a92a4',
-        textColor: '#d4dae3',
-        mainBkg: '#141828',
-        nodeBorder: '#3dc8e0',
-        edgeLabelBackground: '#0b0e17',
-        titleColor: '#eef0f5'
-      },
-      themeCSS: [
-        '.node rect, .node polygon, .node circle, .node path { rx: 0 !important; ry: 0 !important; stroke-width: 1.4px !important; }',
-        '.edgePath .path { stroke-width: 1.2px !important; }',
-        ".edgeLabel { font-family: 'JetBrains Mono', ui-monospace, monospace !important; font-size: 10px !important; letter-spacing: 0.08em !important; text-transform: uppercase !important; }",
-        ".node .label { font-family: 'Source Serif 4', Georgia, serif !important; }",
-        "g.node.start rect, g.node.start polygon, g.node.start path { fill: #12303a !important; stroke: #3dc8e0 !important; } g.node.good rect, g.node.good polygon, g.node.good path { fill: #15301c !important; stroke: #4a9b55 !important; } g.node.bad rect, g.node.bad polygon, g.node.bad path { fill: #3a1b18 !important; stroke: #c45c3e !important; } g.node.warn rect, g.node.warn polygon, g.node.warn path { fill: #332813 !important; stroke: #e8a825 !important; } g.node.spell rect, g.node.spell polygon, g.node.spell path { fill: #16303a !important; stroke: #3dc8e0 !important; }"
-      ].join(' '),
-      flowchart: {
-        curve: 'linear',
-        padding: 14,
-        nodeSpacing: 34,
-        rankSpacing: 40,
-        useMaxWidth: true
-      }
-    });
-  </script>
 ---
 
     <!-- ══════════════ CORE MECHANICS ══════════════ -->
@@ -350,32 +325,20 @@ extraFoot: |
 
     <div class="flowchart-section">
       <h3 id="spell-flow" data-toc="Spellcasting Flowchart">Spellcasting Flowchart</h3>
-      <div class="flowchart-container">
-        <pre class="mermaid">
-flowchart TD
-    A(["Declare spell, begin casting"]):::start --> B["Wait the casting time"]
-    B --> C{Interrupted?}
-    C -- No --> E["Roll d100 vs casting target"]
-    C -- Yes --> D["Concentration check"]
-    D -- Pass --> E
-    D -- Fail --> CANCEL(["Spell fizzles"]):::warn
-    E --> F{Under target?}
-    F -- No --> MISFIRE["Misfire"]:::bad
-    F -- Yes --> G["Margin sets the tier"]
-    G --> H{Push one tier?}
-    H -- Yes --> PUSH["Pay the extra EP"]
-    PUSH --> I
-    H -- No --> I["Pay EP, apply the effect"]
-    I --> J{Backlash check}
-    MISFIRE --> J
-    J -- Pass --> K(["Resolved"]):::good
-    J -- Fail --> L["Backlash: 1d4 HP"]:::warn
-    L --> M{Wild effect? 25%}
-    M -- No --> K
-    M -- Yes --> N["Roll on the wild effect table"]:::warn
-    N --> K
 
-        </pre>
+      <h4 class="flowchart-stage">1 &middot; Casting</h4>
+      <div class="flowchart-container">
+        {% flowplate "spell-1-casting" %}
+      </div>
+
+      <h4 class="flowchart-stage">2 &middot; The Roll</h4>
+      <div class="flowchart-container">
+        {% flowplate "spell-2-roll" %}
+      </div>
+
+      <h4 class="flowchart-stage">3 &middot; Backlash</h4>
+      <div class="flowchart-container">
+        {% flowplate "spell-3-backlash" %}
       </div>
     </div>
 
@@ -457,39 +420,19 @@ flowchart TD
 
     <div class="flowchart-section">
       <h3 id="combat-flow" data-toc="Combat Flowchart">Combat Flowchart</h3>
+
+      <h4 class="flowchart-stage">1 &middot; The Count</h4>
       <div class="flowchart-container">
-        <pre class="mermaid">
-flowchart TD
-    START(["New count"]):::start --> CHECK{Tokens here?}
-    CHECK -- No --> ADV["Advance count"]
-    ADV --> START
-    CHECK -- Yes --> RESOLVE["Resolve actions"]
+        {% flowplate "combat-1-count" %}
+      </div>
 
-    RESOLVE --> TYPE{Attack type?}
-    TYPE -- Melee --> MROLL["Roll vs Melee/Brawl"]
-    TYPE -- Ranged --> RROLL["Roll vs Ranged"]
-    TYPE -- Firearm --> REL["Roll Reliability"]
-    TYPE -- Spell --> SPELL["See Spell Flowchart"]:::spell
+      <h4 class="flowchart-stage">2 &middot; The Attack</h4>
+      <div class="flowchart-container">
+        {% flowplate "combat-2-attack" %}
+      </div>
 
-    REL --> RELCHECK{Pass?}
-    RELCHECK -- Fail --> MAL["MALFUNCTION"]:::bad
-    RELCHECK -- Pass --> FROLL["Roll vs Firearms"]
-
-    MROLL --> HIT{Hit?}
-    RROLL --> HIT
-    FROLL --> HIT
-    HIT -- Miss --> DECLARE
-    HIT -- Hit --> DMG["Roll damage"]
-    DMG --> SOAK["Subtract armor soak"]
-    SOAK --> APPLY["Apply to wound track"]
-    APPLY --> DEGRADE{Damage > soak?}
-    DEGRADE -- No --> DECLARE
-    DEGRADE -- Yes --> DEG["Armor may degrade"]
-    DEG --> DECLARE
-
-    MAL --> DECLARE(["Declare next action"]):::start
-    DECLARE --> START
-
-        </pre>
+      <h4 class="flowchart-stage">3 &middot; Damage</h4>
+      <div class="flowchart-container">
+        {% flowplate "combat-3-damage" %}
       </div>
     </div>

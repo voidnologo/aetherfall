@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 376 352" width="5.22in" height="4.89in" class="flowplate flowplate--engine" role="img" aria-label="Combat flowchart, The Count">
+<rect class="fc-field" x="0" y="0" width="375.6" height="352.0"/>
+<rect class="fc-rule" x="14.0" y="14.0" width="347.6" height="324.0"/>
+<rect class="fc-rule-inner" x="18.0" y="18.0" width="339.6" height="316.0"/>
+<path class="fc-corner" d="M17.0 31.0 V23.0 H23.0 V17.0 H31.0"/>
+<path class="fc-corner" d="M358.6 31.0 V23.0 H352.6 V17.0 H344.6"/>
+<path class="fc-corner" d="M17.0 321.0 V329.0 H23.0 V335.0 H31.0"/>
+<path class="fc-corner" d="M358.6 321.0 V329.0 H352.6 V335.0 H344.6"/>
+<text class="fc-stage-head" x="30.0" y="41.0">I &#183; THE COUNT</text>
+<line class="fc-hairline" x1="28.0" y1="51.0" x2="347.6" y2="51.0"/>
+<line class="fc-hairline" x1="28.0" y1="310.0" x2="347.6" y2="310.0"/>
+<text class="fc-plate" x="30.0" y="325.0">COMBAT &#183; PLATE I</text>
+<text class="fc-stage" x="345.6" y="325.0" text-anchor="end">THE COUNT</text>
+<g transform="translate(26.0 54.0)">
+<path class="fc-edge" d="M159.7 37.2 L159.7 37.2 L159.7 54.0 L159.7 54.0 L159.7 65.6"/>
+<line class="fc-head" x1="159.7" y1="65.6" x2="155.0" y2="57.9"/>
+<line class="fc-head" x1="159.7" y1="65.6" x2="164.5" y2="57.9"/>
+<path class="fc-edge" d="M128.0 122.1 L128.0 122.1 L128.0 139.2 L128.0 139.2 L128.0 150.8"/>
+<line class="fc-head" x1="128.0" y1="150.8" x2="123.2" y2="143.1"/>
+<line class="fc-head" x1="128.0" y1="150.8" x2="132.7" y2="143.1"/>
+<rect class="fc-chip" x="116.4" y="131.2" width="23.2" height="16" rx="1"/>
+<text class="fc-edge-text" x="128.0" y="142.7">NO</text>
+<path class="fc-edge" d="M94.3 150.7 L94.3 150.7 L94.3 48.6 L94.3 48.6 L94.3 37.1"/>
+<line class="fc-head" x1="94.3" y1="37.1" x2="99.1" y2="44.7"/>
+<line class="fc-head" x1="94.3" y1="37.1" x2="89.5" y2="44.7"/>
+<path class="fc-edge" d="M233.0 122.1 L233.0 122.1 L233.0 139.2 L233.0 139.2 L233.0 150.8"/>
+<line class="fc-head" x1="233.0" y1="150.8" x2="228.3" y2="143.1"/>
+<line class="fc-head" x1="233.0" y1="150.8" x2="237.8" y2="143.1"/>
+<rect class="fc-chip" x="218.7" y="131.2" width="28.7" height="16" rx="1"/>
+<text class="fc-edge-text" x="233.0" y="142.7">YES</text>
+<path class="fc-edge" d="M246.9 188.2 L246.9 188.2 L246.9 205.4 L246.9 205.4 L246.9 216.9"/>
+<line class="fc-head" x1="246.9" y1="216.9" x2="242.2" y2="209.3"/>
+<line class="fc-head" x1="246.9" y1="216.9" x2="251.7" y2="209.3"/>
+<g class="fc-node fc-terminal fc-galvanic">
+<path class="fc-shape" d="M86.8 0.0 H189.1 L203.4 14.2 V22.8 L189.1 37.0 H86.8 L72.5 22.8 V14.2 Z"/>
+<path class="fc-inner" d="M87.8 4.0 H188.1 L199.4 15.2 V21.8 L188.1 33.0 H87.8 L76.5 21.8 V15.2 Z"/>
+<text class="fc-text" x="137.9" y="23.1">New count</text>
+</g>
+<g class="fc-node fc-decision">
+<path class="fc-shape" d="M116.1 94.0 L143.0 66.0 H268.8 L295.8 94.0 L268.8 122.0 H143.0 Z"/>
+<path class="fc-inner" d="M120.6 94.0 L146.2 70.5 H265.7 L291.3 94.0 L265.7 117.5 H146.2 Z"/>
+<text class="fc-text" x="205.9" y="98.5">Tokens here?</text>
+</g>
+<g class="fc-node fc-process">
+<path class="fc-shape" d="M7.0 151.0 H132.9 L139.9 158.0 V181.0 L132.9 188.0 H7.0 L0.0 181.0 V158.0 Z"/>
+<path class="fc-inner" d="M9.0 155.0 H130.9 L135.9 160.0 V179.0 L130.9 184.0 H9.0 L4.0 179.0 V160.0 Z"/>
+<circle class="fc-rivet" cx="9.5" cy="156.5" r="1.7"/>
+<circle class="fc-rivet" cx="130.4" cy="156.5" r="1.7"/>
+<circle class="fc-rivet" cx="9.5" cy="182.5" r="1.7"/>
+<circle class="fc-rivet" cx="130.4" cy="182.5" r="1.7"/>
+<text class="fc-text" x="69.9" y="174.0">Advance count</text>
+</g>
+<g class="fc-node fc-process">
+<path class="fc-shape" d="M177.2 151.0 H316.6 L323.6 158.0 V181.0 L316.6 188.0 H177.2 L170.2 181.0 V158.0 Z"/>
+<path class="fc-inner" d="M179.2 155.0 H314.6 L319.6 160.0 V179.0 L314.6 184.0 H179.2 L174.2 179.0 V160.0 Z"/>
+<circle class="fc-rivet" cx="179.7" cy="156.5" r="1.7"/>
+<circle class="fc-rivet" cx="314.1" cy="156.5" r="1.7"/>
+<circle class="fc-rivet" cx="179.7" cy="182.5" r="1.7"/>
+<circle class="fc-rivet" cx="314.1" cy="182.5" r="1.7"/>
+<text class="fc-text" x="246.9" y="174.0">Resolve actions</text>
+</g>
+<g class="fc-node fc-terminal fc-galvanic">
+<path class="fc-shape" d="M185.6 217.0 H308.3 L322.5 231.2 V239.8 L308.3 254.0 H185.6 L171.4 239.8 V231.2 Z"/>
+<path class="fc-inner" d="M186.6 221.0 H307.3 L318.5 232.2 V238.8 L307.3 250.0 H186.6 L175.4 238.8 V232.2 Z"/>
+<text class="fc-text" x="246.9" y="240.1">Attack type?</text>
+</g>
+</g>
+</svg>

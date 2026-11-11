@@ -41,6 +41,8 @@ class Placement:
         self.heading_below = None
         self.paragraphs_above = 0
         self.paragraphs_below = 0
+        self.first_below = []
+        self.follows_colon = False
         self.inside_block = False
         self.blocks_below = 0
         self.blocks_above = 0
@@ -121,6 +123,7 @@ def parse_chapter(path):
             qualifier_for(art_match.group(1), art_match.group(3)),
         )
         placement.heading_above = heading_above
+        placement.follows_colon = ends_with_colon(lines, index)
         placement.paragraphs_above = paragraphs_since_marker
         placement.blocks_above = blocks_since_marker
         placement.inside_block = block_depth > 0 or in_table
@@ -148,14 +151,64 @@ def attach_following_context(lines, placements):
                 )
                 placement.paragraphs_below = count_paragraphs(lines, start, index)
                 placement.blocks_below = count_blocks(lines, start, index)
+                placement.first_below = blocks_below_kinds(lines, start, index)
                 break
         else:
             placement.paragraphs_below = count_paragraphs(lines, start, len(lines))
             placement.blocks_below = count_blocks(lines, start, len(lines))
+            placement.first_below = blocks_below_kinds(lines, start, len(lines))
 
 
 def count_paragraphs(lines, start, end):
-    return sum(1 for line in lines[start:end] if PARAGRAPH.match(line))
+    """Body paragraphs only. A <p> inside a callout or a table is not text that flows
+    beside a float: the panel is its own box and the float runs past it."""
+    count = 0
+    block_depth = 0
+    in_table = False
+    for line in lines[start:end]:
+        if TABLE_OPEN.search(line):
+            in_table = True
+        if TABLE_CLOSE.search(line):
+            in_table = False
+            continue
+        if BLOCK_OPEN.search(line):
+            block_depth += 1
+        if BLOCK_CLOSE.search(line):
+            block_depth = max(0, block_depth - 1)
+            continue
+        if PARAGRAPH.match(line) and block_depth == 0 and not in_table:
+            count += 1
+    return count
+
+
+def ends_with_colon(lines, index):
+    """True when the text just above a placement ends in a colon, which means the block
+    below it is what that sentence introduces."""
+    for i in range(index - 1, max(-1, index - 12), -1):
+        line = lines[i].strip()
+        if not line or line == "</p>":
+            continue
+        return line.endswith(":") or line.endswith(":</p>")
+    return False
+
+
+def blocks_below_kinds(lines, start, end, limit=2):
+    """The kinds of the first content blocks after a placement, in order. A float stands
+    about 2.2in tall and one paragraph does not cover that, so a table in either of the
+    first two slots ends up beside the float."""
+    kinds = []
+    for line in lines[start:end]:
+        if TABLE_OPEN.search(line):
+            kinds.append("table")
+        elif BLOCK_OPEN.search(line):
+            kinds.append("callout")
+        elif PARAGRAPH.match(line):
+            kinds.append("paragraph")
+        else:
+            continue
+        if len(kinds) == limit:
+            break
+    return kinds
 
 
 def count_blocks(lines, start, end):
@@ -230,6 +283,20 @@ def check(placement):
         problems.append(
             ("R4", f"only {placement.paragraphs_below} paragraph(s) beside a float before the next heading")
         )
+
+    # R2b: a sentence ending in a colon points at the block under it. Art placed in
+    # between separates the two and reads as though the colon introduced the picture.
+    if placement.follows_colon:
+        problems.append(("R2b", "sits between a colon lead-in and the block it introduces"))
+
+    # R4b: a table does not wrap a float, it sits beside it and loses the width. The
+    # standard's centered spot exists for exactly this position.
+    # Only the block directly below counts. Widening this to two blocks flagged three
+    # placements that measure clean in a browser (gm-tools/handler, magic/backlash,
+    # running-the-game/informant): whether a table further down collides depends on how
+    # tall the intervening paragraph renders, which the markup does not say.
+    if placement.floats and placement.first_below[:1] == ["table"]:
+        problems.append(("R4b", "a table follows the float at once; use a centered spot"))
 
     crowded = (
         placement.gap_to_previous_art is not None

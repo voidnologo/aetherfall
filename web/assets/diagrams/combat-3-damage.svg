@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 364 550" width="3.90in" height="5.90in" class="flowplate flowplate--engine" role="img" aria-label="Combat flowchart, Damage">
+<rect class="fc-field" x="0" y="0" width="363.7" height="550.0"/>
+<rect class="fc-rule" x="14.0" y="14.0" width="335.7" height="522.0"/>
+<rect class="fc-rule-inner" x="18.0" y="18.0" width="327.7" height="514.0"/>
+<path class="fc-corner" d="M17.0 31.0 V23.0 H23.0 V17.0 H31.0"/>
+<path class="fc-corner" d="M346.7 31.0 V23.0 H340.7 V17.0 H332.7"/>
+<path class="fc-corner" d="M17.0 519.0 V527.0 H23.0 V533.0 H31.0"/>
+<path class="fc-corner" d="M346.7 519.0 V527.0 H340.7 V533.0 H332.7"/>
+<text class="fc-stage-head" x="30.0" y="41.0">III &#183; DAMAGE</text>
+<line class="fc-hairline" x1="28.0" y1="51.0" x2="335.7" y2="51.0"/>
+<line class="fc-hairline" x1="28.0" y1="508.0" x2="335.7" y2="508.0"/>
+<text class="fc-plate" x="30.0" y="523.0">COMBAT &#183; PLATE III</text>
+<text class="fc-stage" x="333.7" y="523.0" text-anchor="end">DAMAGE</text>
+<g transform="translate(26.0 54.0)">
+<path class="fc-edge" d="M186.8 37.2 L186.8 37.2 L186.8 54.4 L186.8 54.4 L186.8 65.9"/>
+<line class="fc-head" x1="186.8" y1="65.9" x2="182.0" y2="58.3"/>
+<line class="fc-head" x1="186.8" y1="65.9" x2="191.6" y2="58.3"/>
+<rect class="fc-chip" x="172.4" y="46.4" width="28.7" height="16" rx="1"/>
+<text class="fc-edge-text" x="186.8" y="57.9">HIT</text>
+<path class="fc-edge" d="M241.7 37.4 L241.7 37.4 L241.7 403.4 L241.7 403.4 L241.7 415.0"/>
+<line class="fc-head" x1="241.7" y1="415.0" x2="236.9" y2="407.3"/>
+<line class="fc-head" x1="241.7" y1="415.0" x2="246.5" y2="407.3"/>
+<rect class="fc-chip" x="224.6" y="395.4" width="34.3" height="16" rx="1"/>
+<text class="fc-edge-text" x="241.7" y="406.9">MISS</text>
+<path class="fc-edge" d="M152.5 103.2 L152.5 103.2 L152.5 120.4 L152.5 120.4 L152.5 131.9"/>
+<line class="fc-head" x1="152.5" y1="131.9" x2="147.7" y2="124.3"/>
+<line class="fc-head" x1="152.5" y1="131.9" x2="157.2" y2="124.3"/>
+<path class="fc-edge" d="M136.2 169.2 L136.2 169.2 L136.2 186.4 L136.2 186.4 L136.2 197.9"/>
+<line class="fc-head" x1="136.2" y1="197.9" x2="131.4" y2="190.3"/>
+<line class="fc-head" x1="136.2" y1="197.9" x2="140.9" y2="190.3"/>
+<path class="fc-edge" d="M132.5 235.2 L132.5 235.2 L132.5 252.0 L132.5 252.0 L132.5 263.6"/>
+<line class="fc-head" x1="132.5" y1="263.6" x2="127.7" y2="255.9"/>
+<line class="fc-head" x1="132.5" y1="263.6" x2="137.2" y2="255.9"/>
+<path class="fc-edge" d="M98.7 320.1 L98.7 320.1 L98.7 337.2 L98.7 337.2 L98.7 348.8"/>
+<line class="fc-head" x1="98.7" y1="348.8" x2="93.9" y2="341.1"/>
+<line class="fc-head" x1="98.7" y1="348.8" x2="103.5" y2="341.1"/>
+<rect class="fc-chip" x="84.3" y="329.2" width="28.7" height="16" rx="1"/>
+<text class="fc-edge-text" x="98.7" y="340.8">YES</text>
+<path class="fc-edge" d="M197.7 320.3 L197.7 320.3 L197.7 403.2 L197.7 403.2 L197.7 414.7"/>
+<line class="fc-head" x1="197.7" y1="414.7" x2="192.9" y2="407.1"/>
+<line class="fc-head" x1="197.7" y1="414.7" x2="202.4" y2="407.1"/>
+<rect class="fc-chip" x="186.1" y="395.2" width="23.2" height="16" rx="1"/>
+<text class="fc-edge-text" x="197.7" y="406.7">NO</text>
+<path class="fc-edge" d="M140.1 386.2 L140.1 386.2 L140.1 403.4 L140.1 403.4 L140.1 415.0"/>
+<line class="fc-head" x1="140.1" y1="415.0" x2="135.3" y2="407.3"/>
+<line class="fc-head" x1="140.1" y1="415.0" x2="144.8" y2="407.3"/>
+<g class="fc-node fc-terminal fc-galvanic">
+<path class="fc-shape" d="M172.2 0.0 H240.7 L255.0 14.2 V22.8 L240.7 37.0 H172.2 L157.9 22.8 V14.2 Z"/>
+<path class="fc-inner" d="M173.2 4.0 H239.7 L251.0 15.2 V21.8 L239.7 33.0 H173.2 L161.9 21.8 V15.2 Z"/>
+<text class="fc-text" x="206.5" y="23.1">Hit?</text>
+</g>
+<g class="fc-node fc-process">
+<path class="fc-shape" d="M96.3 66.0 H208.6 L215.6 73.0 V96.0 L208.6 103.0 H96.3 L89.3 96.0 V73.0 Z"/>
+<path class="fc-inner" d="M98.3 70.0 H206.6 L211.6 75.0 V94.0 L206.6 99.0 H98.3 L93.3 94.0 V75.0 Z"/>
+<circle class="fc-rivet" cx="98.8" cy="71.5" r="1.7"/>
+<circle class="fc-rivet" cx="206.1" cy="71.5" r="1.7"/>
+<circle class="fc-rivet" cx="98.8" cy="97.5" r="1.7"/>
+<circle class="fc-rivet" cx="206.1" cy="97.5" r="1.7"/>
+<text class="fc-text" x="152.5" y="89.0">Roll damage</text>
+</g>
+<g class="fc-node fc-process">
+<path class="fc-shape" d="M53.2 132.0 H219.7 L226.7 139.0 V162.0 L219.7 169.0 H53.2 L46.2 162.0 V139.0 Z"/>
+<path class="fc-inner" d="M55.2 136.0 H217.7 L222.7 141.0 V160.0 L217.7 165.0 H55.2 L50.2 160.0 V141.0 Z"/>
+<circle class="fc-rivet" cx="55.7" cy="137.5" r="1.7"/>
+<circle class="fc-rivet" cx="217.2" cy="137.5" r="1.7"/>
+<circle class="fc-rivet" cx="55.7" cy="163.5" r="1.7"/>
+<circle class="fc-rivet" cx="217.2" cy="163.5" r="1.7"/>
+<text class="fc-text" x="136.5" y="155.1">Subtract armor soak</text>
+</g>
+<g class="fc-node fc-process">
+<path class="fc-shape" d="M45.9 198.0 H219.1 L226.1 205.0 V228.0 L219.1 235.0 H45.9 L38.9 228.0 V205.0 Z"/>
+<path class="fc-inner" d="M47.9 202.0 H217.1 L222.1 207.0 V226.0 L217.1 231.0 H47.9 L42.9 226.0 V207.0 Z"/>
+<circle class="fc-rivet" cx="48.4" cy="203.5" r="1.7"/>
+<circle class="fc-rivet" cx="216.6" cy="203.5" r="1.7"/>
+<circle class="fc-rivet" cx="48.4" cy="229.5" r="1.7"/>
+<circle class="fc-rivet" cx="216.6" cy="229.5" r="1.7"/>
+<text class="fc-text" x="132.5" y="221.1">Apply to wound track</text>
+</g>
+<g class="fc-node fc-decision">
+<path class="fc-shape" d="M30.5 292.0 L60.2 264.0 H198.7 L228.4 292.0 L198.7 320.0 H60.2 Z"/>
+<path class="fc-inner" d="M35.0 292.0 L63.3 268.5 H195.6 L223.9 292.0 L195.6 315.5 H63.3 Z"/>
+<text class="fc-text" x="129.5" y="296.6">Damage &gt; soak?</text>
+</g>
+<g class="fc-node fc-process">
+<path class="fc-shape" d="M7.0 349.0 H159.9 L166.9 356.0 V379.0 L159.9 386.0 H7.0 L-0.0 379.0 V356.0 Z"/>
+<path class="fc-inner" d="M9.0 353.0 H157.9 L162.9 358.0 V377.0 L157.9 382.0 H9.0 L4.0 377.0 V358.0 Z"/>
+<circle class="fc-rivet" cx="9.5" cy="354.5" r="1.7"/>
+<circle class="fc-rivet" cx="157.4" cy="354.5" r="1.7"/>
+<circle class="fc-rivet" cx="9.5" cy="380.5" r="1.7"/>
+<circle class="fc-rivet" cx="157.4" cy="380.5" r="1.7"/>
+<text class="fc-text" x="83.5" y="372.1">Armor may degrade</text>
+</g>
+<g class="fc-node fc-terminal fc-galvanic">
+<path class="fc-shape" d="M127.5 415.0 H297.4 L311.7 429.2 V437.8 L297.4 452.0 H127.5 L113.2 437.8 V429.2 Z"/>
+<path class="fc-inner" d="M128.5 419.0 H296.4 L307.7 430.2 V436.8 L296.4 448.0 H128.5 L117.2 436.8 V430.2 Z"/>
+<text class="fc-text" x="212.5" y="438.1">Declare next action</text>
+</g>
+</g>
+</svg>

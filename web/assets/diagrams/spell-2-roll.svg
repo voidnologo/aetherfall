@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 599" width="3.74in" height="5.90in" class="flowplate flowplate--veil" role="img" aria-label="Spellcasting flowchart, The Roll">
+<rect class="fc-field" x="0" y="0" width="379.6" height="599.0"/>
+<rect class="fc-rule" x="14.0" y="14.0" width="351.6" height="571.0"/>
+<rect class="fc-rule-inner" x="18.0" y="18.0" width="343.6" height="563.0"/>
+<path class="fc-corner" d="M17.0 31.0 V23.0 H23.0 V17.0 H31.0"/>
+<path class="fc-corner" d="M362.6 31.0 V23.0 H356.6 V17.0 H348.6"/>
+<path class="fc-corner" d="M17.0 568.0 V576.0 H23.0 V582.0 H31.0"/>
+<path class="fc-corner" d="M362.6 568.0 V576.0 H356.6 V582.0 H348.6"/>
+<text class="fc-stage-head" x="30.0" y="41.0">II &#183; THE ROLL</text>
+<line class="fc-hairline" x1="28.0" y1="51.0" x2="351.6" y2="51.0"/>
+<line class="fc-hairline" x1="28.0" y1="557.0" x2="351.6" y2="557.0"/>
+<text class="fc-plate" x="30.0" y="572.0">SPELLCASTING &#183; PLATE II</text>
+<text class="fc-stage" x="349.6" y="572.0" text-anchor="end">THE ROLL</text>
+<g transform="translate(26.0 54.0)">
+<path class="fc-edge" d="M138.7 52.3 L138.7 52.3 L138.7 69.1 L138.7 69.1 L138.7 80.6"/>
+<line class="fc-head" x1="138.7" y1="80.6" x2="133.9" y2="73.0"/>
+<line class="fc-head" x1="138.7" y1="80.6" x2="143.4" y2="73.0"/>
+<path class="fc-edge" d="M71.8 137.4 L71.8 137.4 L71.8 229.8 L71.8 229.8 L71.8 241.3"/>
+<line class="fc-head" x1="71.8" y1="241.3" x2="67.0" y2="233.6"/>
+<line class="fc-head" x1="71.8" y1="241.3" x2="76.5" y2="233.6"/>
+<rect class="fc-chip" x="60.2" y="221.8" width="23.2" height="16" rx="1"/>
+<text class="fc-edge-text" x="71.8" y="233.2">NO</text>
+<path class="fc-edge" d="M179.1 137.1 L179.1 137.1 L179.1 154.2 L179.1 154.2 L179.1 165.8"/>
+<line class="fc-head" x1="179.1" y1="165.8" x2="174.3" y2="158.1"/>
+<line class="fc-head" x1="179.1" y1="165.8" x2="183.8" y2="158.1"/>
+<rect class="fc-chip" x="164.7" y="146.2" width="28.7" height="16" rx="1"/>
+<text class="fc-edge-text" x="179.1" y="157.7">YES</text>
+<path class="fc-edge" d="M221.0 203.2 L221.0 203.2 L221.0 220.0 L221.0 220.0 L221.0 231.6"/>
+<line class="fc-head" x1="221.0" y1="231.6" x2="216.2" y2="223.9"/>
+<line class="fc-head" x1="221.0" y1="231.6" x2="225.7" y2="223.9"/>
+<path class="fc-edge" d="M193.2 288.1 L193.2 288.1 L193.2 305.2 L193.2 305.2 L193.2 316.8"/>
+<line class="fc-head" x1="193.2" y1="316.8" x2="188.4" y2="309.1"/>
+<line class="fc-head" x1="193.2" y1="316.8" x2="198.0" y2="309.1"/>
+<rect class="fc-chip" x="178.8" y="297.2" width="28.7" height="16" rx="1"/>
+<text class="fc-edge-text" x="193.2" y="308.7">YES</text>
+<path class="fc-edge" d="M294.9 288.4 L294.9 331.6 L294.9 409.0 L294.9 409.0 L294.9 409.0 L274.0 409.0 L274.0 409.0 L262.5 409.0"/>
+<line class="fc-head" x1="262.5" y1="409.0" x2="270.1" y2="404.2"/>
+<line class="fc-head" x1="262.5" y1="409.0" x2="270.1" y2="413.8"/>
+<rect class="fc-chip" x="283.3" y="401.0" width="23.2" height="16" rx="1"/>
+<text class="fc-edge-text" x="294.9" y="412.5">NO</text>
+<path class="fc-edge" d="M176.7 354.4 L176.7 354.4 L176.7 371.1 L176.7 371.1 L176.7 382.7"/>
+<line class="fc-head" x1="176.7" y1="382.7" x2="171.9" y2="375.0"/>
+<line class="fc-head" x1="176.7" y1="382.7" x2="181.4" y2="375.0"/>
+<path class="fc-edge" d="M145.6 435.1 L145.6 435.1 L145.6 452.1 L145.6 452.1 L145.6 463.6"/>
+<line class="fc-head" x1="145.6" y1="463.6" x2="140.8" y2="456.0"/>
+<line class="fc-head" x1="145.6" y1="463.6" x2="150.4" y2="456.0"/>
+<path class="fc-edge" d="M63.3 279.0 L63.3 279.0 L63.3 452.1 L63.3 452.1 L63.3 463.6"/>
+<line class="fc-head" x1="63.3" y1="463.6" x2="58.5" y2="455.9"/>
+<line class="fc-head" x1="63.3" y1="463.6" x2="68.0" y2="455.9"/>
+<g class="fc-node fc-terminal fc-aether">
+<path class="fc-shape" d="M56.1 0.0 H221.3 L241.3 20.0 V32.0 L221.3 52.0 H56.1 L36.1 32.0 V20.0 Z"/>
+<path class="fc-inner" d="M57.1 4.0 H220.3 L237.3 21.0 V31.0 L220.3 48.0 H57.1 L40.1 31.0 V21.0 Z"/>
+<text class="fc-text" x="138.7" y="23.1">Roll d100 vs casting</text>
+<text class="fc-text" x="138.7" y="38.0">target</text>
+</g>
+<g class="fc-node fc-decision">
+<path class="fc-shape" d="M44.2 109.0 L72.6 81.0 H204.8 L233.1 109.0 L204.8 137.0 H72.6 Z"/>
+<path class="fc-inner" d="M48.7 109.0 L75.7 85.5 H201.6 L228.6 109.0 L201.6 132.5 H75.7 Z"/>
+<text class="fc-text" x="138.7" y="113.5">Under target?</text>
+</g>
+<g class="fc-node fc-process fc-bad">
+<path class="fc-shape" d="M7.0 241.5 H92.3 L99.3 248.5 V271.5 L92.3 278.5 H7.0 L-0.0 271.5 V248.5 Z"/>
+<path class="fc-inner" d="M9.0 245.5 H90.3 L95.3 250.5 V269.5 L90.3 274.5 H9.0 L4.0 269.5 V250.5 Z"/>
+<circle class="fc-rivet" cx="9.5" cy="247.0" r="1.7"/>
+<circle class="fc-rivet" cx="89.8" cy="247.0" r="1.7"/>
+<circle class="fc-rivet" cx="9.5" cy="273.0" r="1.7"/>
+<circle class="fc-rivet" cx="89.8" cy="273.0" r="1.7"/>
+<text class="fc-text" x="49.7" y="264.6">Misfire</text>
+</g>
+<g class="fc-node fc-process">
+<path class="fc-shape" d="M132.1 166.0 H305.3 L312.3 173.0 V196.0 L305.3 203.0 H132.1 L125.1 196.0 V173.0 Z"/>
+<path class="fc-inner" d="M134.1 170.0 H303.3 L308.3 175.0 V194.0 L303.3 199.0 H134.1 L129.1 194.0 V175.0 Z"/>
+<circle class="fc-rivet" cx="134.6" cy="171.5" r="1.7"/>
+<circle class="fc-rivet" cx="302.8" cy="171.5" r="1.7"/>
+<circle class="fc-rivet" cx="134.6" cy="197.5" r="1.7"/>
+<circle class="fc-rivet" cx="302.8" cy="197.5" r="1.7"/>
+<text class="fc-text" x="218.7" y="189.1">Margin sets the tier</text>
+</g>
+<g class="fc-node fc-decision">
+<path class="fc-shape" d="M129.7 260.0 L159.4 232.0 H297.9 L327.6 260.0 L297.9 288.0 H159.4 Z"/>
+<path class="fc-inner" d="M134.2 260.0 L162.5 236.5 H294.8 L323.1 260.0 L294.8 283.5 H162.5 Z"/>
+<text class="fc-text" x="228.7" y="264.6">Push one tier?</text>
+</g>
+<g class="fc-node fc-process">
+<path class="fc-shape" d="M103.6 317.0 H249.7 L256.7 324.0 V347.0 L249.7 354.0 H103.6 L96.6 347.0 V324.0 Z"/>
+<path class="fc-inner" d="M105.6 321.0 H247.7 L252.7 326.0 V345.0 L247.7 350.0 H105.6 L100.6 345.0 V326.0 Z"/>
+<circle class="fc-rivet" cx="106.1" cy="322.5" r="1.7"/>
+<circle class="fc-rivet" cx="247.2" cy="322.5" r="1.7"/>
+<circle class="fc-rivet" cx="106.1" cy="348.5" r="1.7"/>
+<circle class="fc-rivet" cx="247.2" cy="348.5" r="1.7"/>
+<text class="fc-text" x="176.7" y="340.1">Pay the extra EP</text>
+</g>
+<g class="fc-node fc-process">
+<path class="fc-shape" d="M102.2 383.0 H255.1 L262.1 390.0 V428.0 L255.1 435.0 H102.2 L95.2 428.0 V390.0 Z"/>
+<path class="fc-inner" d="M104.2 387.0 H253.1 L258.1 392.0 V426.0 L253.1 431.0 H104.2 L99.2 426.0 V392.0 Z"/>
+<circle class="fc-rivet" cx="104.7" cy="388.5" r="1.7"/>
+<circle class="fc-rivet" cx="252.6" cy="388.5" r="1.7"/>
+<circle class="fc-rivet" cx="104.7" cy="429.5" r="1.7"/>
+<circle class="fc-rivet" cx="252.6" cy="429.5" r="1.7"/>
+<text class="fc-text" x="178.7" y="406.1">Pay EP, apply the</text>
+<text class="fc-text" x="178.7" y="421.1">effect</text>
+</g>
+<g class="fc-node fc-terminal fc-aether">
+<path class="fc-shape" d="M45.6 464.0 H181.7 L196.0 478.2 V486.8 L181.7 501.0 H45.6 L31.3 486.8 V478.2 Z"/>
+<path class="fc-inner" d="M46.6 468.0 H180.7 L192.0 479.2 V485.8 L180.7 497.0 H46.6 L35.3 485.8 V479.2 Z"/>
+<text class="fc-text" x="113.7" y="487.1">Backlash check</text>
+</g>
+</g>
+</svg>

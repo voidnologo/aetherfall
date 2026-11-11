@@ -1,3 +1,6 @@
+const fs = require("fs");
+const path = require("path");
+
 module.exports = function (eleventyConfig) {
 
   // ── Passthrough: static assets that should not be processed ──
@@ -77,6 +80,29 @@ module.exports = function (eleventyConfig) {
     let seen = 0;
     return content.replace(new RegExp(`<${tag} id=`, "g"), (m) =>
       seen++ === 0 ? m : `<hr class="section-divider" aria-hidden="true">\n    ${m}`);
+  });
+
+  // ── Flowchart plates (tools/flowcharts.py) ──
+  // Inlined rather than <img>: the SVG ships without colour, so it has to inherit
+  // the page's fonts and be repainted by print.css for the bone-paper edition.
+  eleventyConfig.addShortcode("flowplate", function (key) {
+    const file = path.join(__dirname, "web", "assets", "diagrams", `${key}.svg`);
+    return fs.readFileSync(file, "utf8");
+  });
+
+  // ── Table scroll wrappers ──
+  // A wide rules table cannot shrink below its own min-content width, so on a phone it
+  // pushed the whole document sideways: at 390px seven chapters scrolled horizontally,
+  // up to 192px. Wrapping each table in a scroll container keeps the overflow inside the
+  // table instead of the page. The character sheet's own tables are laid out for print
+  // and are left alone.
+  eleventyConfig.addTransform("table-scroll", function (content) {
+    const out = this.page.outputPath || "";
+    if (!out.includes("/rules/") || !out.endsWith(".html")) return content;
+    return content.replace(/<table\b[^>]*>[\s\S]*?<\/table>/g, (table) => {
+      if (table.startsWith("<table") && /class="[^"]*sheet-table/.test(table.slice(0, 120))) return table;
+      return `<div class="table-scroll">${table}</div>`;
+    });
   });
 
   // ── Flat URLs: output rules/economy.html, not rules/economy/index.html ──

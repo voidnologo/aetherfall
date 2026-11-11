@@ -809,6 +809,17 @@ body::before {
 }
 
 /* ── Tables ───────────────────────────────────────────────── */
+/* A table that cannot fit the column scrolls inside this wrapper rather than widening
+   the page. Without it a 560px table in a 350px phone column dragged the whole document
+   sideways. Wrapping is done at build time (eleventy.config.js, "table-scroll"). */
+.table-scroll {
+  overflow-x: auto;
+  scrollbar-width: thin;
+  margin: 1rem 0 1.5rem;
+}
+
+.table-scroll > table { margin: 0; }
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -1652,4 +1663,140 @@ dl.galvanic-weapons dd em {
   .callout {
     padding: 1rem 1.2rem;
   }
+}
+
+/* ── Flowchart plates (tools/flowcharts.py) ───────────────────────────────────
+   The SVG is drawn without colour: every element carries a class and is painted
+   here for the web and again in print.css for the bone-paper edition, so one
+   asset serves both. Two registers, by subject: the Engine's Deco geometry for
+   the combat sequence, the Veil's Nouveau curve for spellcasting. */
+.flowplate {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  --fc-ink: #efe6d2;
+  --fc-field: #0b1220;
+  --fc-accent: var(--theme-accent, #3dc8e0);
+}
+
+.flowplate--engine { --fc-accent: #e8a825; }
+.flowplate--veil   { --fc-accent: #3dc8e0; }
+
+.flowplate .fc-field { fill: var(--fc-field); }
+
+/* The plate's rule: a heavy outer line with a hairline inside it, the way a
+   lithograph plate is bordered. */
+.flowplate .fc-rule {
+  fill: none;
+  stroke: var(--fc-ink);
+  stroke-opacity: 0.30;
+  stroke-width: 1.2;
+}
+
+.flowplate .fc-rule-inner {
+  fill: none;
+  stroke: var(--fc-ink);
+  stroke-opacity: 0.12;
+  stroke-width: 0.6;
+}
+
+.flowplate .fc-corner {
+  fill: none;
+  stroke: var(--fc-accent);
+  stroke-opacity: 0.75;
+  stroke-width: 1.3;
+}
+
+.flowplate .fc-hairline {
+  stroke: var(--fc-ink);
+  stroke-opacity: 0.16;
+  stroke-width: 0.6;
+}
+
+.flowplate .fc-plate,
+.flowplate .fc-stage {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  fill: var(--fc-ink);
+  fill-opacity: 0.55;
+}
+
+.flowplate .fc-stage { fill: var(--fc-accent); fill-opacity: 0.9; }
+
+.flowplate .fc-stage-head {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.26em;
+  fill: var(--fc-accent);
+}
+
+/* Nodes: a drawn silhouette, a hairline inside it, and the label. */
+.flowplate .fc-shape {
+  fill: rgba(239, 230, 210, 0.035);
+  stroke: var(--fc-ink);
+  stroke-opacity: 0.55;
+  stroke-width: 1.4;
+}
+
+.flowplate .fc-inner {
+  fill: none;
+  stroke: var(--fc-ink);
+  stroke-opacity: 0.18;
+  stroke-width: 0.6;
+}
+
+.flowplate .fc-rivet { fill: var(--fc-ink); fill-opacity: 0.4; }
+.flowplate .fc-ray   { stroke: var(--fc-accent); stroke-opacity: 0.5; stroke-width: 1; }
+
+.flowplate .fc-text {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 13px;
+  fill: var(--fc-ink);
+  text-anchor: middle;
+}
+
+/* Accents carry meaning, as everywhere else in the book: cyan is the Aether,
+   amber the Engine, oxblood a failure state. */
+.flowplate .fc-aether   .fc-shape { stroke: #3dc8e0; stroke-opacity: 0.95; fill: rgba(61, 200, 224, 0.07); }
+.flowplate .fc-galvanic .fc-shape { stroke: #e8a825; stroke-opacity: 0.95; fill: rgba(232, 168, 37, 0.07); }
+.flowplate .fc-warn     .fc-shape { stroke: #e8a825; stroke-opacity: 0.8; }
+.flowplate .fc-bad      .fc-shape { stroke: #8e2f23; stroke-opacity: 1; fill: rgba(142, 47, 35, 0.16); }
+.flowplate .fc-good     .fc-shape { stroke: #4a9b55; stroke-opacity: 0.95; fill: rgba(74, 155, 85, 0.10); }
+.flowplate .fc-aether   .fc-rivet,
+.flowplate .fc-galvanic .fc-rivet { fill: var(--fc-accent); fill-opacity: 0.8; }
+
+.flowplate .fc-decision .fc-shape { fill: rgba(239, 230, 210, 0.05); }
+
+/* Connectors. The Engine runs square with an open chevron; the Veil flows and
+   comes to a drawn point. */
+.flowplate .fc-edge {
+  fill: none;
+  stroke: var(--fc-ink);
+  stroke-opacity: 0.45;
+  stroke-width: 1.1;
+}
+
+.flowplate .fc-head {
+  stroke: var(--fc-ink);
+  stroke-opacity: 0.7;
+  stroke-width: 1.4;
+  stroke-linecap: round;
+}
+
+.flowplate .fc-point { fill: var(--fc-ink); fill-opacity: 0.7; }
+
+/* The chip knocks the connector out from under its label. */
+.flowplate .fc-chip { fill: var(--fc-field); }
+
+.flowplate .fc-edge-text {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 8.5px;
+  letter-spacing: 0.14em;
+  fill: var(--fc-ink);
+  fill-opacity: 0.6;
+  text-anchor: middle;
 }
