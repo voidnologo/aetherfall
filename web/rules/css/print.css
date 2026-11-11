@@ -37,6 +37,18 @@
   }
 }
 
+/* Pages that a forced recto break skips are empty by definition. A running
+   head and folio on an otherwise blank page reads as a printing error, so
+   strip them. Per css-page-3 §4.4 :blank outranks :left and :right, so this
+   wins regardless of source order. */
+@page :blank {
+  @top-left { content: none; }
+  @top-right { content: none; }
+  @bottom-center { content: none; }
+  @bottom-left { content: none; }
+  @bottom-right { content: none; }
+}
+
 @page :left {
   margin-left: 0.5in;
   margin-right: 0.75in;
@@ -916,11 +928,15 @@ dl.galvanic-weapons dd em {
   margin: 1em auto;
   text-align: center;
   break-inside: avoid;
+  /* The heading above says break-after: avoid; saying it from this side too,
+     because renderers honour one or the other. Without it the flowchart
+     headings strand at the foot of a page with the diagram overleaf. */
+  break-before: avoid;
 }
 
 .print-diagram img {
   max-width: 100%;
-  max-height: 7.5in;
+  max-height: 7in;
 }
 
 /* ── Prevent Page Breaks Inside Key Elements ──────────────────── */
@@ -1014,6 +1030,9 @@ h2, h3, h4, h5 {
   margin: 0.3in auto 0;
   clear: both;
   break-inside: avoid;
+  /* Keep the chapter's closing ornament with the chapter. Left to itself it
+     spills onto a page of its own, which reads as a stray mark. */
+  break-before: avoid;
   background: url(../../assets/art/ornaments/tailpiece.webp) center / contain no-repeat;
 }
 
