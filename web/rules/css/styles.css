@@ -694,6 +694,9 @@ body::before {
   outline-offset: 5px;
 }
 .page-content .plate-full { max-width: min(30rem, 100%); }
+/* A half plate is landscape and takes the column; the portrait "full" plate is
+   capped above so it doesn't tower over the text it sits in. */
+.page-content .plate-half { max-width: 100%; }
 .page-content .plate figcaption {
   margin-top: 0.9rem;
   font-family: 'Cormorant Garamond', serif;
