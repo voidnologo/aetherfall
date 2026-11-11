@@ -64,59 +64,6 @@ def prefix_ids(content, page_id):
     return content
 
 
-def render_mermaid(content):
-    """Replace <pre class="mermaid"> blocks with pre-rendered PNGs.
-
-    WeasyPrint doesn't run JavaScript, so without this the PDF prints the raw
-    flowchart source. The web's dark classDef styling is stripped in favour of
-    mermaid's neutral theme, which reads better on paper.
-    """
-    blocks = list(re.finditer(r'<pre class="mermaid">(.*?)</pre>', content, flags=re.DOTALL))
-    if not blocks:
-        return content
-
-    diagram_dir = OUTPUT_DIR / "diagrams"
-    diagram_dir.mkdir(exist_ok=True)
-    browser = shutil.which("chromium") or shutil.which("google-chrome")
-    puppeteer_cfg = diagram_dir / "puppeteer.json"
-    puppeteer_cfg.write_text(json.dumps(
-        {"executablePath": browser, "args": ["--no-sandbox"]} if browser else {"args": ["--no-sandbox"]}
-    ))
-
-    for m in reversed(blocks):
-        source = html.unescape(re.sub(r"<[^>]+>", "", m.group(1)))
-        # The :::class markers carry the chart's semantics (start, bad, warn,
-        # good, spell) and are styled by the shared config below, so they stay.
-        digest = hashlib.sha1(source.encode()).hexdigest()[:12]
-        src_path = diagram_dir / f"{digest}.mmd"
-        png_path = diagram_dir / f"{digest}.png"
-        if not png_path.exists():
-            src_path.write_text(source)
-            result = subprocess.run(
-                ["npx", "-y", "-p", "@mermaid-js/mermaid-cli", "mmdc", "-p", str(puppeteer_cfg),
-                 "-c", str(ROOT / "web" / "rules" / "mermaid-deco.json"),
-                 "-b", "#efe6d2", "-s", "3", "-i", str(src_path), "-o", str(png_path)],
-                capture_output=True, text=True,
-            )
-            if result.returncode != 0:
-                print(f"  WARNING: mermaid render failed ({digest}); dropping diagram", file=sys.stderr)
-                content = content[:m.start()] + content[m.end():]
-                continue
-        img = f'<figure class="print-diagram"><img src="{png_path}" alt="Flowchart"></figure>'
-        content = content[:m.start()] + img + content[m.end():]
-    return content
-
-
-# Print-resolution frames: 4x upscales (tools/upscale_print.py) cut to the same box the web
-# copies use. (x, y, w, h) on the 832x1216 master, recovered by matching the web frames.
-PRINT_FRAMES = {
-    "aether": ("proto-D2-decolitho_frame_aether_v02_seed-131618214", (26, 24, 782, 1168)),
-    "galvanic": ("proto-D2-decolitho_frame_galvanic_v02_seed-1166265576", (26, 24, 782, 1150)),  # bottom trimmed: fake lettering
-    "split": ("proto-D2-decolitho_frame_split_v02_seed-2427297017", (24, 24, 782, 1168)),
-    "neutral": ("proto-D2-decolitho_frame_neutral_v02_seed-1553240695", (26, 24, 782, 1168)),
-    "front": ("proto-B-twoinks_frame_v01_seed-3867070072", (24, 24, 782, 1168)),
-}
-
 
 def print_art_css():
     """Cut print-resolution frames and return CSS that points the openers and front matter
@@ -280,7 +227,6 @@ def build_combined_html(pages):
             continue
 
         content = prefix_ids(content, page["id"])
-        content = render_mermaid(content)
         # Chapter pages link images relative to _site/rules/; the combined file lives in print/
         assets = (ROOT / "_site" / "assets").as_uri()
         content = content.replace('src="../assets/', f'src="{assets}/').replace('src="/assets/', f'src="{assets}/')
