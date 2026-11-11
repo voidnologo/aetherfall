@@ -106,13 +106,16 @@ permalink: rules/quickstart.html
 
     {% handler "Printable Character Sheets" %}
       <p>Each character has a complete, printable two-page character sheet. Print or
-      save as PDF and hand one to each player.</p>
+      save as PDF and hand one to each player. The blocks below give the skills this
+      adventure calls for; the sheets carry the full build.</p>
       <ul>
         <li><a href="tools/quickstart-kael.html">Kael Dunn, The Steady Hand</a> (Gunfighter)</li>
         <li><a href="tools/quickstart-sera.html">Sera Voss, The Spark</a> (Wild Caster)</li>
         <li><a href="tools/quickstart-aldric.html">Aldric Wynn, The Surgeon</a> (Scholarly Caster)</li>
         <li><a href="tools/quickstart-mira.html">Mira Cade, The Fixer</a> (Social Operator)</li>
       </ul>
+      <p>All four are built at a net attribute bonus of +2, a little above the default +1,
+      because a one-shot wants characters who are already good at something.</p>
     {% endhandler %}
 
     <!-- ── Kael ────────────────────────────────────────── -->
@@ -185,9 +188,9 @@ permalink: rules/quickstart.html
           <dt>Casting</dt>
           <dd>Wild caster: Aetheric Manipulation, Transmutation. Rolls 2d100, takes the result farther from target. Can suppress up to 2 tiers (target 64, bracket 51&ndash;75)</dd>
           <dt>Spells</dt>
-          <dd>Force, Amplify, Barrier, Kinesis, Reshape, Enchant</dd>
+          <dd>All 13 spells in her two schools. The ones she reaches for: Force, Amplify, Barrier, Kinesis, Reshape, Alter Property</dd>
           <dt>Equipment</dt>
-          <dd>Reinforced coat (Soak 1), belt knife (speed 2, 1d4), journal, chalk, brass compass that spins in Aetheric zones</dd>
+          <dd>Reinforced coat (Ballistic 1 / Martial 1), belt knife (speed 2, 1d4), journal, chalk, brass compass that spins in Aetheric zones</dd>
         </dl>
       </div>
     </div>
@@ -232,7 +235,7 @@ permalink: rules/quickstart.html
           <dt>Spells</dt>
           <dd>Mend, Reveal, Detect, Shield, Force, Anchor, Kinesis, Reshape</dd>
           <dt>Equipment</dt>
-          <dd>Reinforced coat (Soak 1), walking stick (speed 2, 1d4), revolver (speed 3, 2d6), medical kit, magnifying lens, spellbook, lantern</dd>
+          <dd>Reinforced coat (Ballistic 1 / Martial 1), walking stick (speed 2, 1d4), revolver (speed 3, 2d6), medical kit, magnifying lens, spellbook, lantern</dd>
         </dl>
       </div>
     </div>
@@ -243,7 +246,7 @@ permalink: rules/quickstart.html
     {% endscholar %}
 
     <p>
-      <em>Best for players who like solving problems. Aldric&rsquo;s spells don&rsquo;t deal damage. They heal allies and reveal hidden things. He controls the investigation
+      <em>Best for players who like solving problems. Aldric leads with healing and perception &mdash; Mend, Reveal, Detect &mdash; and keeps Force in reserve for when talking is over. He controls the investigation
       scenes and keeps the party standing in combat.</em>
     </p>
 
@@ -382,10 +385,11 @@ permalink: rules/quickstart.html
         </div>
         <div class="stat-block-derived">
           <span><strong>HP/Tier:</strong> 7</span>
+          <span><strong>EP/Tier:</strong> 6</span>
         </div>
         <dl class="stat-block-rows">
           <dt>Skills</dt>
-          <dd>Investigation 58%, Observation 58%, Persuasion 54%, Streetwise 54%, Firearms 50%</dd>
+          <dd>Investigation 66%, Observation 54%, Persuasion 52%, Streetwise 52%, Firearms 50%</dd>
           <dt>Equipment</dt>
           <dd>Service revolver, badge, notebook, cynicism</dd>
         </dl>
@@ -430,7 +434,7 @@ permalink: rules/quickstart.html
     {% gmnote "Mechanics Spotlight: Skill Checks" %}
       <p>This is a good first moment for a <strong>Persuasion</strong> roll. Mira has Persuasion 66%: she rolls d100, and anything equal to or under 66 succeeds.
       Walk the table through it: roll, compare to target, announce result. If the roll is
-      well under (say, 30 against 58), describe Laine warming up: &ldquo;she pauses, looks at you differently, and leans in.&rdquo; Margin matters narratively
+      well under (say, 30 against 66), describe Laine warming up: &ldquo;she pauses, looks at you differently, and leans in.&rdquo; Margin matters narratively
       even when the rules just say pass/fail.</p>
     {% endgmnote %}
 
@@ -518,8 +522,8 @@ permalink: rules/quickstart.html
 
     {% gmnote "Mechanics Spotlight: Ability Checks" %}
       <p>If a player wants to force Harker&rsquo;s locked desk drawer, call for a
-      <strong>raw BR check</strong>: an unskilled roll, d100 under (5 + BR) &times; 5. Kael (BR +1)
-      rolls under 30%. This demonstrates that you don&rsquo;t need a specific skill for everything. Sometimes you just need to be strong enough.</p>
+      <strong>raw BR check</strong>: a stat check, d100 under (5 + BR) &times; 10. Kael (BR +1)
+      rolls under 60%. This demonstrates that you don&rsquo;t need a specific skill for everything. Sometimes you just need to be strong enough.</p>
       <p>Alternatively, Mira can pick the lock with <strong>Sleight of Hand</strong> (63%).
       Let the table see that different characters solve the same problem differently.</p>
     {% endgmnote %}
@@ -629,10 +633,11 @@ permalink: rules/quickstart.html
         </div>
         <div class="stat-block-derived">
           <span><strong>HP/Tier:</strong> 8</span>
+          <span><strong>EP/Tier:</strong> 5</span>
         </div>
         <dl class="stat-block-rows">
           <dt>Skills</dt>
-          <dd>Firearms 50%, Melee 52%, Intimidation 50%, Observation 46%</dd>
+          <dd>Firearms 50%, Melee 52%, Intimidation 50% (under SP), Observation 50%</dd>
           <dt>Equipment</dt>
           <dd>Revolver (speed 3, 2d6), work knife (Small, speed 2, 1d4), leather vest (Ballistic 0, Martial 1)</dd>
         </dl>
@@ -701,7 +706,7 @@ permalink: rules/quickstart.html
         <li>Guard A fires his revolver. Speed 3, resolves at count 3.</li>
         <li>Kael fires back at Guard A. Speed 3, also count 3.</li>
         <li>Mira fires her arc pistol at Guard B. Speed 4, resolves at count 4.</li>
-        <li>Aldric holds: no offensive spells, but ready to Mend if someone gets hit.</li>
+        <li>Aldric holds: he has Force if he needs it, but he'd rather have Mend ready for whoever gets hit.</li>
       </ul>
       <p><strong>4. Resolving:</strong> Count 2 first (the knife and Force, simultaneously),
       then the two revolvers at count 3, then Mira&rsquo;s arc pistol at count 4. Roll d100 under the relevant skill for
@@ -899,10 +904,11 @@ permalink: rules/quickstart.html
         </div>
         <div class="stat-block-derived">
           <span><strong>HP/Tier:</strong> 7</span>
+          <span><strong>EP/Tier:</strong> 6</span>
         </div>
         <dl class="stat-block-rows">
           <dt>Skills</dt>
-          <dd>Persuasion 58%, Deception 60%, Intimidation 54%, Firearms 52%, Streetwise 58%, Observation 54%</dd>
+          <dd>Persuasion 66%, Deception 66%, Intimidation 54%, Firearms 52%, Streetwise 54%, Observation 52%</dd>
           <dt>Equipment</dt>
           <dd>Revolver (speed 3, 2d6), boot knife (Small, speed 2, 1d4), ledger, keys to Harker&rsquo;s restraints</dd>
         </dl>
@@ -1085,8 +1091,14 @@ permalink: rules/quickstart.html
 
     <p>
       When no specific skill applies, roll d100 under
-      <code class="formula">(5 + Attribute) &times; 5</code>. A BR +1 character rolls
-      under 30%. A SP +2 character rolls under 35%.
+      <code class="formula">(5 + Attribute) &times; 10</code>. A BR +1 character rolls
+      under 60%. A SP +2 character rolls under 70%.
+    </p>
+
+    <p>
+      That is different from attempting a <em>skilled</em> task with no training, which is
+      harsher: <code class="formula">(5 + Attribute) &times; 5</code>. Forcing a drawer is raw
+      strength. Performing surgery without Medicine is an untrained attempt.
     </p>
 
     <h3 id="ref-combat">Combat Sequence</h3>

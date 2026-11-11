@@ -14,7 +14,10 @@ permalink: rules/equipment.html
     {% endhandler %}
 
     <p>
-      Every item in this chapter has a <strong>Tier</strong> column. That&rsquo;s
+      Every table in this chapter has a <strong>Tier</strong> column. The Galvanic weapons
+      and oddities are listed as entries rather than rows; their tiers are in the
+      <a href="economy.html#cost-tiers">economy chapter</a> &mdash; Tier 3 for the lighter
+      Galvanic gear, 4 for a sidearm, 5 for a heavy. That&rsquo;s
       the <a href="economy.html#cost-tiers">Cost Tier</a> from the economy system. If the
       tier is at or below your Station, you can own it. If it&rsquo;s above your Station,
       you&rsquo;ll need to reach for it with a patron request, a favour, or a Station
@@ -116,11 +119,12 @@ permalink: rules/equipment.html
       <dd>
         <em>Speed 3 &middot; 1d10 &middot; Cap 12 &middot; Reload 2 &middot; Rel 70 &middot; Galvanic 1</em><br>
         Compressed-air needle gun. Fires a burst of razor-thin darts that shred soft tissue.
-        <strong>Silent:</strong> no audible report. <strong>Piercing:</strong> ignores 2
-        points of Ballistic soak. Useless against plate, devastating against flesh.
+        <strong>Silent:</strong> no audible report. <strong>Piercing (ballistic):</strong>
+        ignores 2 points of Ballistic soak &mdash; darts slip through weave and plate alike.
+        The melee Piercing tag takes Martial soak instead; a weapon's type tells you which.
       </dd>
 
-      <dt>Arc Gun</dt>
+      <dt>Arc Gun <span class="weapon-alias">(also called an arc pistol)</span></dt>
       <dd>
         <em>Speed 4 &middot; 2d8 &middot; Cap 6 &middot; Reload 3 &middot; Rel 65 &middot; Galvanic 2</em><br>
         Voltaic sidearm that hurls a crackling bolt of electricity between two prongs.
@@ -196,7 +200,7 @@ permalink: rules/equipment.html
       <tr><td>Concealable</td><td>Can be hidden on your person without detection.</td></tr>
       <tr><td>Throwable</td><td>Can be thrown at Near range using Ranged skill. +2 speed, one die step lower damage.</td></tr>
       <tr><td>Reach</td><td>Can strike targets one step farther than normal melee. Useful for holding doorways.</td></tr>
-      <tr><td>Piercing</td><td>Ignores 2 points of Martial soak.</td></tr>
+      <tr><td>Piercing</td><td>Ignores 2 points of Martial soak. On a firearm, it takes Ballistic soak instead.</td></tr>
       <tr><td>Crushing</td><td>Armor degradation chance is 50% instead of 25%. Armor hates this.</td></tr>
       <tr><td>Parrying</td><td>+10% to active defense when using Melee to defend.</td></tr>
       <tr><td>Entangling</td><td>On hit, the target's next action costs +2 speed. Whips, chains, nets.</td></tr>
@@ -227,6 +231,7 @@ permalink: rules/equipment.html
     <table>
       <tr><th>Keyword</th><th>Effect</th></tr>
       <tr><td>Arcing</td><td>On critical hit, discharge jumps to one adjacent target for half damage.</td></tr>
+      <tr><td>Piercing</td><td>On a firearm, ignores 2 points of Ballistic soak.</td></tr>
       <tr><td>Armor Breaker</td><td>Reduce target's Martial soak by 3 for this attack.</td></tr>
       <tr><td>Lancing</td><td>Beam passes through primary target to one target directly behind for half damage.</td></tr>
       <tr><td>Shocking</td><td>Ignores 2 points of Ballistic soak from metal armor. Lightning finds the gaps.</td></tr>
@@ -281,6 +286,8 @@ permalink: rules/equipment.html
       <tr><th>Armor</th><th>Ballistic</th><th>Martial</th><th>Hinder</th><th>Tier</th><th>Notes</th></tr>
       <tr><td>Leather Jacket</td><td>0</td><td>1</td><td>&mdash;</td><td>1</td><td>Fashionable. Marginally protective.</td></tr>
       <tr><td>Trench Coat</td><td>1</td><td>2</td><td>&mdash;</td><td>1</td><td>The adventurer's uniform</td></tr>
+      <tr><td>Reinforced Coat</td><td>1</td><td>1</td><td>&mdash;</td><td>1</td><td>Heavy canvas over steel stays</td></tr>
+      <tr><td>Concealed Vest</td><td>1</td><td>0</td><td>&mdash;</td><td>2</td><td>Hidden under clothes. Nobody knows you're wearing it</td></tr>
       <tr><td>Ballistic Vest</td><td>8</td><td>2</td><td>&mdash;</td><td>3</td><td>Stops bullets, not blades</td></tr>
       <tr><td>Steel Breastplate</td><td>5</td><td>6</td><td>1</td><td>3</td><td>Old meets new</td></tr>
     </table>
@@ -311,8 +318,10 @@ permalink: rules/equipment.html
     </p>
 
     <p>
-      Hinder does <strong>not</strong> affect: Melee, Brawl, Ranged, BR-based rolls, or any
-      mental/social checks. You can still swing a sword in plate. You just can't dodge in it.
+      Hinder does <strong>not</strong> affect: Melee, Brawl, BR-based rolls, or any
+      mental/social checks. Ranged is exempt too, even though it is PC-based &mdash; a bow is
+      drawn with the shoulders, not the wrists. Firearms, also PC-based, is not exempt.
+      You can still swing a sword in plate. You just can't dodge in it.
     </p>
 
     <p>
@@ -350,7 +359,7 @@ permalink: rules/equipment.html
     </p>
 
     {% gmnote %}
-      <p>Galvanic oddities are investigation and exploration tools, not combat equipment. They expand what players can sense and do outside of fights. A Voltaic Lantern that reveals Aetheric residue or a Resonance Compass that tracks zone gradients: these are the tools that drive mystery and discovery.</p>
+      <p>Galvanic oddities are investigation and exploration tools, not combat equipment. They expand what players can sense and do outside of fights. A Voltaic Lantern that reveals an Aetheric imprint or a Resonance Compass that tracks zone gradients: these are the tools that drive mystery and discovery.</p>
     {% endgmnote %}
 
     <dl class="galvanic-weapons">
@@ -382,9 +391,9 @@ permalink: rules/equipment.html
       <dt>Voltaic Lantern</dt>
       <dd>
         <em>Galvanic 1 per use &middot; Rel 70 &middot; 10 charges</em><br>
-        Projects a beam of tuned Galvanic light that causes magical residue to fluoresce.
+        Projects a beam of tuned Galvanic light that makes a magical imprint fluoresce.
         Hidden wards glow blue. Enchanted objects shimmer. Magical traps become visible as
-        faint outlines. Unlike the spell Reveal, this only shows magical residue,
+        faint outlines. Unlike the spell Reveal, this only shows the magical imprint,
         not hidden mundane objects or disguised people.
       </dd>
 
