@@ -133,24 +133,40 @@ extraFoot: |
     import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
     mermaid.initialize({
       startOnLoad: true,
-      theme: 'dark',
+      theme: 'base',
       themeVariables: {
-        primaryColor: '#1a1f32',
+        fontFamily: 'Source Serif 4, Georgia, serif',
+        fontSize: '15px',
+        background: '#0b0e17',
+        primaryColor: '#141828',
         primaryTextColor: '#d4dae3',
         primaryBorderColor: '#3dc8e0',
-        lineColor: '#8a92a4',
-        secondaryColor: '#141828',
+        secondaryColor: '#0f1220',
+        secondaryTextColor: '#d4dae3',
+        secondaryBorderColor: '#8a92a4',
         tertiaryColor: '#0f1220',
-        fontFamily: 'Segoe UI, Helvetica Neue, Arial, sans-serif',
-        fontSize: '15px'
+        tertiaryTextColor: '#d4dae3',
+        tertiaryBorderColor: '#8a92a4',
+        lineColor: '#8a92a4',
+        textColor: '#d4dae3',
+        mainBkg: '#141828',
+        nodeBorder: '#3dc8e0',
+        edgeLabelBackground: '#0b0e17',
+        titleColor: '#eef0f5'
       },
+      themeCSS: [
+        '.node rect, .node polygon, .node circle, .node path { rx: 0 !important; ry: 0 !important; stroke-width: 1.4px !important; }',
+        '.edgePath .path { stroke-width: 1.2px !important; }',
+        ".edgeLabel { font-family: 'JetBrains Mono', ui-monospace, monospace !important; font-size: 10px !important; letter-spacing: 0.08em !important; text-transform: uppercase !important; }",
+        ".node .label { font-family: 'Source Serif 4', Georgia, serif !important; }",
+        "g.node.start rect, g.node.start polygon, g.node.start path { fill: #12303a !important; stroke: #3dc8e0 !important; } g.node.good rect, g.node.good polygon, g.node.good path { fill: #15301c !important; stroke: #4a9b55 !important; } g.node.bad rect, g.node.bad polygon, g.node.bad path { fill: #3a1b18 !important; stroke: #c45c3e !important; } g.node.warn rect, g.node.warn polygon, g.node.warn path { fill: #332813 !important; stroke: #e8a825 !important; } g.node.spell rect, g.node.spell polygon, g.node.spell path { fill: #16303a !important; stroke: #3dc8e0 !important; }"
+      ].join(' '),
       flowchart: {
-        curve: 'basis',
-        padding: 20,
-        nodeSpacing: 30,
+        curve: 'linear',
+        padding: 14,
+        nodeSpacing: 34,
         rankSpacing: 40,
-        htmlLabels: true,
-        wrappingWidth: 200
+        useMaxWidth: true
       }
     });
   </script>
@@ -337,38 +353,28 @@ extraFoot: |
       <div class="flowchart-container">
         <pre class="mermaid">
 flowchart TD
-    A(["Declare spell, begin casting"]):::start --> B["Wait casting time"]
+    A(["Declare spell, begin casting"]):::start --> B["Wait the casting time"]
     B --> C{Interrupted?}
-    C -- Yes --> D["Roll concentration check"]
+    C -- No --> E["Roll d100 vs casting target"]
+    C -- Yes --> D["Concentration check"]
     D -- Pass --> E
-    D -- Fail --> CANCEL["Spell fizzles"]:::warn
-    C -- No --> E["Roll d100 vs target"]
-    E --> F{Success?}
-    F -- Yes --> G["Check margin for tier"]
-    F -- No --> MISFIRE["MISFIRE"]:::bad
-    G --> H{Push +1 tier?}
-    H -- No --> I["Pay EP, apply effect"]
-    H -- Yes --> PUSH["Pay extra EP"]
+    D -- Fail --> CANCEL(["Spell fizzles"]):::warn
+    E --> F{Under target?}
+    F -- No --> MISFIRE["Misfire"]:::bad
+    F -- Yes --> G["Margin sets the tier"]
+    G --> H{Push one tier?}
+    H -- Yes --> PUSH["Pay the extra EP"]
     PUSH --> I
+    H -- No --> I["Pay EP, apply the effect"]
     I --> J{Backlash check}
-    J -- Pass --> K(["Spell complete"]):::good
-    J -- Fail --> L["Backlash! 1d4 HP"]:::warn
-    L --> M{25% wild effect?}
+    MISFIRE --> J
+    J -- Pass --> K(["Resolved"]):::good
+    J -- Fail --> L["Backlash: 1d4 HP"]:::warn
+    L --> M{Wild effect? 25%}
     M -- No --> K
-    M -- Yes --> N["Roll wild effect"]:::warn
+    M -- Yes --> N["Roll on the wild effect table"]:::warn
     N --> K
-    MISFIRE --> MJ{Backlash check}
-    MJ -- Pass --> MK(["Misfire resolved"]):::bad
-    MJ -- Fail --> ML["Backlash! 1d4 HP"]:::warn
-    ML --> MM{25% wild effect?}
-    MM -- No --> MK
-    MM -- Yes --> MN["Roll wild effect"]:::warn
-    MN --> MK
 
-    classDef start fill:#1a8fa8,color:#fff,stroke:#3dc8e0
-    classDef good fill:#1a6b30,color:#fff,stroke:#2a9b40
-    classDef bad fill:#8b3a3a,color:#fff,stroke:#c45c3e
-    classDef warn fill:#6b5a2a,color:#fff,stroke:#b07d18
         </pre>
       </div>
     </div>
@@ -484,9 +490,6 @@ flowchart TD
     MAL --> DECLARE(["Declare next action"]):::start
     DECLARE --> START
 
-    classDef start fill:#1a8fa8,color:#fff,stroke:#3dc8e0
-    classDef bad fill:#8b3a3a,color:#fff,stroke:#c45c3e
-    classDef spell fill:#2a5a6b,color:#fff,stroke:#3dc8e0
         </pre>
       </div>
     </div>

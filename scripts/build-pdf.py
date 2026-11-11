@@ -85,8 +85,8 @@ def render_mermaid(content):
 
     for m in reversed(blocks):
         source = html.unescape(re.sub(r"<[^>]+>", "", m.group(1)))
-        source = "\n".join(l for l in source.splitlines() if not l.strip().startswith("classDef"))
-        source = re.sub(r":::\w+", "", source)
+        # The :::class markers carry the chart's semantics (start, bad, warn,
+        # good, spell) and are styled by the shared config below, so they stay.
         digest = hashlib.sha1(source.encode()).hexdigest()[:12]
         src_path = diagram_dir / f"{digest}.mmd"
         png_path = diagram_dir / f"{digest}.png"
@@ -94,7 +94,8 @@ def render_mermaid(content):
             src_path.write_text(source)
             result = subprocess.run(
                 ["npx", "-y", "-p", "@mermaid-js/mermaid-cli", "mmdc", "-p", str(puppeteer_cfg),
-                 "-t", "neutral", "-b", "white", "-s", "3", "-i", str(src_path), "-o", str(png_path)],
+                 "-c", str(ROOT / "web" / "rules" / "mermaid-deco.json"),
+                 "-b", "#efe6d2", "-s", "3", "-i", str(src_path), "-o", str(png_path)],
                 capture_output=True, text=True,
             )
             if result.returncode != 0:
