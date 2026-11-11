@@ -266,19 +266,19 @@ Accumulation decays toward the area's **baseline** at **1 point per minute**.
 - In a normal area, baseline is 0. An accumulation of +8 takes 8 minutes to fully clear.
 - In an environmental zone, baseline is the zone's permanent value (see §5.5). Added accumulation decays, but the base never changes.
 
-#### Residue — the trace that outlasts the balance
+#### The imprint — what outlasts the balance
 
 Two things fade here, at two very different rates.
 
 The **balance** is mechanical. It decays 1 point per minute, and once it reaches baseline no gun and no caster is affected by it any more.
 
-The **residue** is what the working leaves behind in the place itself. It never touches Reliability or casting targets — it cannot be fought with or cast through. It can only be read.
+The **imprint** is what the working leaves behind in the place itself. It never touches Reliability or casting targets — it cannot be fought with or cast through. It can only be read.
 
-**Residue lifetime = (points of accumulation generated)² hours.**
+**Imprint lifetime = (points of accumulation generated)² hours.**
 
-One point decays in one minute and reads for one hour. Because the residue squares while the balance stays linear, a small spell is gone by morning, a serious working keeps for weeks, and something at the scale of a catastrophe stays legible for a lifetime.
+One point decays in one minute and reads for one hour. Because the imprint squares while the balance stays linear, a small spell is gone by morning, a serious working keeps for weeks, and something at the scale of a catastrophe stays legible for a lifetime.
 
-| Accumulation generated | Balance clears in | Residue readable for |
+| Accumulation generated | Balance clears in | Imprint readable for |
 |---|---|---|
 | 1 — a Weak spell | 1 minute | 1 hour |
 | 2 — Standard | 2 minutes | 4 hours |
@@ -290,9 +290,9 @@ One point decays in one minute and reads for one hour. Because the residue squar
 | 200 — a mass working | over 3 hours | 4 to 5 years |
 | 500 — a catastrophe | over 8 hours | decades |
 
-Totals add across a scene. The residue of a firefight is read off everything the casters spent in it, not spell by spell. The Tear sits off the bottom of this table, which is why it still reads fifty years on.
+Totals add across a scene. The imprint of a firefight is read off everything the casters spent in it, not spell by spell. The Tear sits off the bottom of this table, which is why it still reads fifty years on.
 
-Zone baselines are not residue. A Wild Zone reads as a Wild Zone permanently, and a spell cast inside one leaves a trace that drowns in that background — which is exactly why casters who want to stay unread go there to work.
+Zone baselines are not imprints. A Wild Zone reads as a Wild Zone permanently, and a spell cast inside one leaves a trace that drowns in that background — which is exactly why casters who want to stay unread go there to work.
 
 **Reading it.** Tech measures the field; magic reads the memory. An Aetheric Compass (§6.3) finds nothing once the balance has decayed, because the balance is all it can see.
 
@@ -300,10 +300,10 @@ Zone baselines are not residue. A Wild Zone reads as a Wild Zone permanently, an
 |--------|---------------|
 | Detect — Divination, 2ct | Something was worked here, and roughly how much of it |
 | Reveal — Divination, 4ct | Which school, and how long ago |
-| Read — Divination, 5ct | The order of the castings, and a signature that can be matched against another sample |
+| Read — Divination, 5ct | The order of the castings, and the school behind each one |
 | Occult Lore — IN | Interpretation without casting: scorching, wilted growth, crystalline bloom, the physical marks a working leaves on a room |
 
-Apply a modifier for how much of the residue's life has already run:
+Apply a modifier for how much of the imprint's life has already run:
 
 | Elapsed | Modifier |
 |---------|----------|
@@ -313,7 +313,9 @@ Apply a modifier for how much of the residue's life has already run:
 | Final quarter | −20% |
 | Past its lifetime | Nothing left to find |
 
-Wild casting leaves a broader, rougher trace than scholarly work: easier to find, harder to pin on one person.
+Wild casting leaves a broader, rougher trace than scholarly work: easier to find, and vaguer about what was actually done.
+
+What no reading gives you is **who**. The imprint carries the school, the scale and the hour, never the hand. Putting a name to it is conventional detective work — see WORLD_DESIGN.md §7.3.
 
 ### 5.5 Environmental Zones
 
@@ -399,12 +401,12 @@ These are templates. The specific names and flavors are examples — GMs should 
 - *Design note:* This is magical armor — but tech-based. The -15% is a rough guideline, not a precise mechanic. A Weak Force that would deal 1d4 might deal 1d4-1 instead. A Standard Wither's -10% penalty might be reduced to -8%. The GM interprets. It doesn't block magic entirely — it dampens it, like wearing earplugs in a thunderstorm.
 
 **Voltaic Lantern** — *Investigation*
-- Projects a beam of tuned Galvanic light that causes magical residue to fluoresce. Hidden wards glow blue. Enchanted objects shimmer. Magical traps become visible as faint outlines. The tech equivalent of Reveal, but slower and more limited.
+- Projects a beam of tuned Galvanic light that causes a magical imprint to fluoresce. Hidden wards glow blue. Enchanted objects shimmer. Magical traps become visible as faint outlines. The tech equivalent of Reveal, but slower and more limited.
 - Galvanic Rating: 1 per use (each sweep of a room counts as one use)
 - Reliability: 70
 - Power: 10 charges
 - Rarity: Uncommon
-- *Design note:* Unlike the spell Reveal, this only shows magical residue — not hidden mundane objects, secret doors, or disguised people. It's a forensics tool, not a perception enhancer. An investigator with both this AND the Reveal spell covers different ground with each.
+- *Design note:* Unlike the spell Reveal, this only shows the magical imprint — not hidden mundane objects, secret doors, or disguised people. It's a forensics tool, not a perception enhancer. An investigator with both this AND the Reveal spell covers different ground with each.
 
 **Galvanic Brace** — *Physical Augmentation*
 - An exoskeletal frame of brass rods and voltaic muscle-wire worn over one arm or across the back. While active, provides the equivalent of +1 BR for lifting, carrying, and feats of brute strength (not combat damage). Hums loudly — no stealth while wearing one.
@@ -551,5 +553,5 @@ The existing armor table covers medieval-style armor. Modern additions are docum
 3. **Dual Wielding:** Pistol in each hand? Flavor is great for the setting. Mechanically — second pistol at +2 speed and a penalty to hit?
 4. **Weapon Modifications:** Scopes, extended magazines, silencers? Or keep it simple with the base weapon tables?
 5. **Melee Weapon Rebalancing:** Current melee table may need adjustment now that firearms set the damage ceiling. Does a dagger at 1d4 still feel right when a derringer does 1d6?
-6. **Aetheric accumulation Exact Decay:** 1 per minute is the baseline for the balance. Should it vary by environment — faster in Galvanic zones, slower in Wild Zones? Residue lifetime is settled at §5.4.
+6. **Aetheric accumulation Exact Decay:** 1 per minute is the baseline for the balance. Should it vary by environment — faster in Galvanic zones, slower in Wild Zones? Imprint lifetime is settled at §5.4.
 7. **Malfunction Check Frequency:** Settled as every shot (§4.2). Revisit only if the extra roll drags at the table — the alternatives were every burst, or once per engagement at the current accumulation.

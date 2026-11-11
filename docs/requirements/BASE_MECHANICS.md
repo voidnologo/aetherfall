@@ -208,7 +208,7 @@ Net Aetheric hurts firearms AND helps magic. Net Galvanic hurts magic AND helps 
 | Suppressing tag | +1 to weapon's Galvanic rating |
 | Enchanted item (mystical tag) | +1 Aetheric per trigger |
 
-**Decay:** 1 point per minute toward zone baseline (normal areas = 0). The balance is what weapons and casting feel; the residue a working leaves behind lasts far longer and is only ever read — see FIREARMS_EQUIPMENT.md §5.4.
+**Decay:** 1 point per minute toward zone baseline (normal areas = 0). The balance is what weapons and casting feel; the imprint a working leaves behind lasts far longer and is only ever read — see FIREARMS_EQUIPMENT.md §5.4.
 
 ### 7.3 Examples
 

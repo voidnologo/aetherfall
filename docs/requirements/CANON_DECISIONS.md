@@ -93,11 +93,11 @@ The published web rulebook and `web/_data/characters/*.json` are the source of t
 - **Zone bands are contiguous.** The old table left +6, +13, +21 and their Galvanic mirrors belonging to no zone. Normal is −2 to +2, Light Aetheric +3 to +7, Moderate +8 to +14, Wild +15 to +24, Deep Wild +25 or beyond, and the Galvanic side mirrors it. This is what the zone tracker already computed.
 - **NPC stat blocks derive like PC ones.** Every printed target follows `((10 + stat) × level) + 30`, and blocks carry EP/Tier as well as HP/Tier.
 
-## 11. Residue outlasts the balance (Session 39)
+## 11. The imprint outlasts the balance (Session 39)
 
-Magic leaves two traces. The **balance** is mechanical, decays at 1 point per minute, and is the only one that touches Reliability or casting targets. The **residue** is metaphysical — the place's memory of the working — and is only ever read.
+Magic leaves two traces. The **balance** is mechanical, decays at 1 point per minute, and is the only one that touches Reliability or casting targets. The **imprint** is metaphysical — the place's memory of the working — and is only ever read. ("Residue" is reserved for the wild-effect trace a caster carries until a long rest; the two were the same word and are not the same thing.)
 
-**Residue lifetime = (points of accumulation generated)² hours.** One point decays in a minute and reads for an hour. Squaring the trace while the balance stays linear is what makes a Weak spell fade by morning, a night's ritual keep for five weeks, and a catastrophe stay legible for decades. The Tear sits off the end of the scale. Full table, readers and modifiers: `FIREARMS_EQUIPMENT.md` §5.4.
+**Imprint lifetime = (points of accumulation generated)² hours.** One point decays in a minute and reads for an hour. Squaring the imprint while the balance stays linear is what makes a Weak spell fade by morning, a night's ritual keep for five weeks, and a catastrophe stay legible for decades. The Tear sits off the end of the scale. An imprint never carries *who* — only the school, the scale and the hour. Full table, readers and modifiers: `FIREARMS_EQUIPMENT.md` §5.4; forensics in play: `WORLD_DESIGN.md` §7.3.
 
 ### Still open
 

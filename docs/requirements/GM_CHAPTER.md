@@ -306,7 +306,7 @@ Zones shift during play. This is what makes the Aetheric balance dramatic rather
 
 **Exotic tech pushing back:** A force generator pulsing −2 per minute pushes the balance toward Galvanic. Run it for five minutes and you've moved the needle by −10. Pair that with two exotic weapon shots (−2 each) and you're looking at −14 — enough to meaningfully suppress casting.
 
-**Decay as timer:** Accumulation decays at 1 per minute. A +6 Aetheric spike from combat fades to nothing in six minutes — though it stays readable as residue for a day and a half afterward (FIREARMS_EQUIPMENT.md §5.4), which is a plot hook, not a penalty. If the party rests, the zone resets. If they push forward immediately, they're carrying the imbalance into the next encounter. This creates pacing tension: rest to reset the zone, or press on while the balance favors (or hinders) you?
+**Decay as timer:** Accumulation decays at 1 per minute. A +6 Aetheric spike from combat fades to nothing in six minutes — though it stays readable as an imprint for a day and a half afterward (FIREARMS_EQUIPMENT.md §5.4), which is a plot hook, not a penalty. If the party rests, the zone resets. If they push forward immediately, they're carrying the imbalance into the next encounter. This creates pacing tension: rest to reset the zone, or press on while the balance favors (or hinders) you?
 
 **Zone recovery after major events:** A Spectacular spell (+4) in a Light Aetheric Zone (+3 baseline) pushes to +7 temporarily, decaying back to +3 over four minutes. The baseline doesn't change — it's a semi-permanent feature of the location. Only sustained, intensive activity over weeks or months shifts baselines. In-session, baselines are fixed.
 
@@ -322,7 +322,7 @@ Use this table as a starting point. Specific locations may vary — a factory bu
 | Power plant / foundry | −15 to −25 | Heavy Engine concentration. Magic barely functions. |
 | University / library | 0 to +2 | Faint traces of scholarly magical study. |
 | Old cathedral / temple | +3 to +5 | Centuries of ritual and belief soaked in. |
-| Haunted manor | +5 to +8 | Aetheric residue from traumatic events. |
+| Haunted manor | +5 to +8 | Aetheric imprint from traumatic events. |
 | Cemetery / barrow | +3 to +8 | Proximity to the Veil. Varies by age and history. |
 | Wild Zone edge | +8 to +12 | The Veil is thin. Technology falters. |
 | Wild Zone heart | +15 to +25+ | The Veil barely holds. Swords and sorcery only. |
@@ -354,7 +354,7 @@ Use this as a guideline for how to narrate spell effects:
 | Tier | Scale | Sensory | Aftermath |
 |------|-------|---------|-----------|
 | Weak | Personal. Affects one target or a small area. | Subtle — a flicker, a whisper, a faint shimmer. Blink and you miss it. | Barely noticeable. A chill in the air, a faint smell of ozone. |
-| Standard | Room-scale. Clearly affects the environment. | Obvious — a flash, a crack, an unmistakable display of power. | Noticeable residue. Scorch marks, frost, displaced objects. |
+| Standard | Room-scale. Clearly affects the environment. | Obvious — a flash, a crack, an unmistakable display of power. | Noticeable imprint. Scorch marks, frost, displaced objects. |
 | Strong | Area-scale. Changes the scene. | Dramatic — a roar, a wave of force, light that hurts to look at. | Lasting marks. Structural damage, altered terrain, lingering effects. |
 | Spectacular | Building-scale. Awe-inspiring. | Overwhelming — everyone stops. The air itself changes. Hair stands on end. | Permanent marks. Craters, fused stone, warped metal, changed landscape. |
 
@@ -615,7 +615,7 @@ This is the zone doing the GM's work. The players know the math. They know their
 
 ### 7.4 Improvised Device: "The Resonance Cage"
 
-**Situation:** The party needs to capture, not kill, a magical creature that's been raiding a neighborhood. It's some kind of Aetheric predator — manifests from the Veil, feeds on residue, and vanishes when threatened. Physical weapons pass through it. Magic can hurt it but also feeds it.
+**Situation:** The party needs to capture, not kill, a magical creature that's been raiding a neighborhood. It's some kind of Aetheric predator — manifests from the Veil, feeds on the imprint, and vanishes when threatened. Physical weapons pass through it. Magic can hurt it but also feeds it.
 
 A player asks: "Could we build some kind of Galvanic trap? Something that generates a field it can't pass through?"
 

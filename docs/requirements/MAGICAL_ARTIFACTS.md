@@ -272,7 +272,7 @@ This creates tactical options: drag Galvanic equipment to a warded location, shi
 
 Wards that fail due to Galvanic drowning stop functioning. When the Galvanic shift subsides, the ward resumes if it still has decay time remaining.
 
-**Detection:** Detect spell (Divination) reveals the presence and general nature of a ward. Reveal shows exact boundaries and trigger conditions. Voltaic Lantern (Galvanic oddity) shows magical residue — wards glow faintly under its beam.
+**Detection:** Detect spell (Divination) reveals the presence and general nature of a ward. Reveal shows exact boundaries and trigger conditions. Voltaic Lantern (Galvanic oddity) shows the magical imprint — wards glow faintly under its beam.
 
 **Wards cannot be physically destroyed.** The magic reinforces the object it's placed on — a warded door doesn't break when you hit it with an axe. You need magical means to get past it.
 

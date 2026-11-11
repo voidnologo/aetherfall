@@ -25,7 +25,8 @@ The world has two competing metaphysical forces. Neither is fully understood by 
 |------|---------------|
 | **The Veil** | The cosmological source of magic. The boundary between the mundane world and something beyond. Thinned within living memory, allowing magic to flood in. |
 | **The Engine** | The cosmological source of galvanic force. Human industry and will given metaphysical weight. The counter-response to the Veil's thinning. |
-| **Aetheric** | Adjective for magical force and its effects. Aetheric accumulation, Aetheric residue, Aetheric zones. Drawn from the Veil. |
+| **Aetheric** | Adjective for magical force and its effects. Aetheric accumulation, Aetheric imprint, Aetheric zones. Drawn from the Veil. |
+| **Imprint** | What a working leaves in a place. Read by investigators, never felt by weapons or casters. Distinct from **residue**, which is the wild-effect trace a caster carries until a long rest. |
 | **Galvanic** | Adjective for exotic tech force and its effects. Galvanic accumulation, Galvanic resonance, Galvanic technology. Drawn from the Engine. |
 | **The Balance** | The sliding scale between Aetheric and Galvanic saturation in an area. Neutral in most places. Tipped by casting or exotic tech use. |
 | **Conventional** | Ordinary technology — firearms, engines, radios. Affected by the Aether but does not generate Galvanic force. Victims, not combatants. |
@@ -42,7 +43,7 @@ The interference is deliberately asymmetric:
 | Aetheric force (spellcasting) | No | **Yes** |
 | Galvanic force (exotic tech) | **Yes** | No |
 
-**The Aether always erodes technology.** Every spell cast leaves Aetheric residue that makes machines less reliable. This is one-directional — a revolver doesn't make spellcasting harder.
+**The Aether always erodes technology.** Every spell cast pushes the Aetheric balance, and that makes machines less reliable. This is one-directional — a revolver doesn't make spellcasting harder.
 
 **Galvanic force erodes magic.** The Engine's answer to the Veil's thinning. Firing an arc gun generates Galvanic resonance that makes spellcasting harder in the area. This mirrors the Aether's effect on technology — same mechanic, opposite direction.
 
@@ -193,11 +194,11 @@ The magic/tech tension creates **visual storytelling** that players and GMs can 
 
 ### 4.2 Magical Forensics
 
-Magic leaves two kinds of trace, and the slow one is the interesting one. The balance a spell pushes clears in minutes; the residue it leaves is readable for hours, weeks or years depending on how much was spent (FIREARMS_EQUIPMENT.md §5.4). This gives rise to:
-- **Residue readers** — specialists who detect and interpret what a place remembers. How old is it? How much power went into it? What school?
+Magic leaves two kinds of trace, and the slow one is the interesting one. The balance a spell pushes clears in minutes; the imprint it leaves is readable for hours, weeks or years depending on how much was spent (FIREARMS_EQUIPMENT.md §5.4). This gives rise to:
+- **Imprint readers** — specialists who detect and interpret what a place remembers. How old is it? How much power went into it? What school?
 - **Crime scene investigation** — a Spectacular spell is off the balance in four minutes and readable for most of a day. A ritual is readable for weeks. Trained investigators work the second clock, not the first.
 - **Zone monitoring** — cities need people who track where magic is bubbling up, both for public safety and to warn firearm-dependent security forces.
-- **Counter-forensics** — casters who want to hide learn to cast in Wild Zones (where their residue is lost in the background noise) or use lower-tier spells to minimize traces.
+- **Counter-forensics** — casters who want to hide learn to cast in Wild Zones (where their imprint is lost in the background) or use lower-tier spells, which the squared lifetime punishes far less.
 
 ### 4.3 The Arms Economy
 

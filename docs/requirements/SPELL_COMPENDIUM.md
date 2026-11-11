@@ -204,7 +204,7 @@ Cleanse corruption, magical contamination, parasites, and foreign influences fro
 
 | Tier | Exhaust | Effect |
 |------|---------|--------|
-| **Weak** | 4 | Cleanse minor contamination — remove magical residue, flush a mild toxin faster, neutralize a weak curse's symptoms temporarily. Target feels a brief burning sensation. |
+| **Weak** | 4 | Cleanse minor contamination — clear wild-effect residue, flush a mild toxin faster, neutralize a weak curse's symptoms temporarily. Target feels a brief burning sensation. |
 | **Standard** | 8 | Drive out moderate corruption — break a standard curse, cleanse magical disease, purge parasitic magic, remove foreign magical influence. Target convulses briefly. The corruption exits visibly — dark wisps, foul-smelling vapor. |
 | **Strong** | 12 | Purge deep corruption — break powerful curses, cleanse long-term magical contamination, drive out an entity's influence, reverse early-stage dark magic mutation. Violent process — target screams, bleeds from the nose, may lose consciousness. What comes out is disturbing. |
 | **Spectacular** | 18 | Total purification — purge even deeply-rooted corruption, reverse advanced mutations, break bindings placed by powerful entities, cleanse an area of dark magic contamination. Traumatic for the target — they relive the moment of corruption. The expelled corruption manifests physically and must be contained or it will re-infect. |
