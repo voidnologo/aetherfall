@@ -156,6 +156,20 @@ The user wants larger scene artwork now that the suite "is starting to look very
 - Check for fake lettering and stamps near the edges (they're common). Crop them off; never cut the art out.
 - Run `tools/upscale_print.py` for 4× print masters, and add a PDF page type for full-bleed plates.
 
+### Wave 4 as generated (Session 37, overnight, unattended)
+
+The user asked for a large selection overnight, so the open decisions above were taken provisionally (both formats; the leads appear, described by the character locks and never named). Everything waits on the user's picks before placement.
+
+| Group | Pieces | Proposed placement |
+|---|---|---|
+| Full-page plates (832×1216) | Tear, Wet Ember, swallowed rail yard, shift change, patron's office, market fight, scholar's workshop, foundry crack, inside the mill, into the Deep Wild, gradient street, ford ambush | One per key chapter, facing the opener in the PDF (`{% plate … "full" %}`), under the crown on the web |
+| Half-page scenes (1216×832) | Ashwick at dawn, Quarter market, Sootborn settlement, where engines stop, airship mast, checkpoint in the rain, suppression convoy, rooftop chase, Communion's fields, tunnel nave | At a mid-chapter break, column width (`"half"`) |
+| Cover candidates (832×1216) | Between two cities, four on the hill road, the Tear over the skyline | PDF cover; redrawn web hero; og:image crops |
+| NPC portraits | Fels, Dace, Hesper, Crane, Laine, Marlow, Thessaly | GM Tools / State of the World NPC entries; fiction |
+| Story 04 spots | Ford, stretcher, dampener, ward under fire | Story 04 card; Getting Hurt, Equipment, Magic |
+
+Selector page: https://claude.ai/artifact/E47GCrji4ykVKy3TyJWm4z. Regenerate it after more renders land: `python tools/wave_page.py --wave 4 --out <file>`, then republish to the same URL.
+
 ## 7. Fiction Reader (Session 37)
 
 The fiction reader follows the rulebook's art standard. Each story carries a rulebook theme in `web/_data/fiction.js` (Story 02 `aether`, Story 03 `split`). That theme sets:

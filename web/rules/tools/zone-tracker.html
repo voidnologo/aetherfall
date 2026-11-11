@@ -491,8 +491,8 @@
         <div class="effect-detail" id="revolver-detail">Effective Reliability</div>
       </div>
       <div class="effect-card">
-        <h3>Example: Caster (Target 55)</h3>
-        <div class="effect-value" id="caster-eff">55</div>
+        <h3>Example: Caster (Target 63)</h3>
+        <div class="effect-value" id="caster-eff">63</div>
         <div class="effect-detail" id="caster-detail">Effective Casting Target</div>
       </div>
     </div>
@@ -601,11 +601,11 @@
     revEl.className = 'effect-value' + (reliabilityMod < 0 ? ' penalty' : reliabilityMod > 0 ? ' bonus' : ' neutral');
     document.getElementById('revolver-detail').textContent = '95 base ' + (reliabilityMod !== 0 ? (reliabilityMod > 0 ? '+' : '') + reliabilityMod : '± 0');
 
-    const castEff = Math.max(0, 55 + castingMod);
+    const castEff = Math.max(0, 63 + castingMod);
     const castEffEl = document.getElementById('caster-eff');
     castEffEl.textContent = castEff;
     castEffEl.className = 'effect-value' + (castingMod > 0 ? ' bonus' : castingMod < 0 ? ' penalty' : ' neutral');
-    document.getElementById('caster-detail').textContent = '55 base ' + (castingMod !== 0 ? (castingMod > 0 ? '+' : '') + castingMod : '± 0');
+    document.getElementById('caster-detail').textContent = '63 base ' + (castingMod !== 0 ? (castingMod > 0 ? '+' : '') + castingMod : '± 0');
   }
 
   function addLog(msg, type) {

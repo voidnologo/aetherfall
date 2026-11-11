@@ -72,6 +72,7 @@ In practice, this means:
 - Exposition dumps. If you need to explain something about the world, find a character who would naturally say it, think it, or react to it. If no character would, the reader doesn't need it yet.
 - Modern slang or anachronism. The world is 1920s-analog. The language should feel slightly formal by modern standards without being stiff. "Damn" and "hell" are fine. Internet-era phrasing is not.
 - Adverb-heavy action prose. "She quickly drew her sword" is weaker than "She drew." Speed lives in sentence length and verb choice, not adverbs.
+- AI-isms: ", and" chains, ", and X had done Y" codas, ", the way X does Y" similes, "Not X. Y." contrasts, lists of three, summary sentences. See `docs/writing/natural-prose.md` and run `tools/prose_lint.py` on every chapter.
 
 ---
 

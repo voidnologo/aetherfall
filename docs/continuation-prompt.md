@@ -1,28 +1,32 @@
 # Continuation Prompt
 
-## Last Sessions (35–36): The Deco Art Suite, then Cleanup
-- **35:** lead portraits, alpha crowns, and Deco Waves 1–3 (dividers, drop caps, tailpiece, corners, emblems, badges, 34 spots). Every chapter meets the **chapter art standard** (plan §5), and the PDF carries the same art, with ~370 DPI frames.
-- **36:** every spot re-cut clipped to its circle (stray stamps and signatures had stretched the outlines), portrait and frame edge artifacts cropped, and body text justified with hyphenation on web and print.
-- All work lands as self-merged PRs (#4–#20); no direct pushes to `main`.
+## Last Session (39): Rules Consistency, the Art Placement Standard, Deco Flowcharts
+- Closed issue #38 and the "design-doc drift" backlog item: `docs/requirements/` now agrees with the published rulebook (#39). The rulebook then got its own pass (#40), which fixed two real defects — the printable sheet never rendered Casting Target on any sheet, and the character builder was missing Enchant so no buildable caster could make an artifact.
+- PDF rebuilt at 239 pp and audited page by page (#41, #43): 16 pages were blank but for a running head; three of those were a tailpiece spilling onto its own page.
+- Art: `docs/art/art-placement.md` + `tools/art_lint.py` (60/60 clean) and a reflow of every piece (#42). Before it, 22 of 22 plates sat immediately before a heading and 34 of 37 spots immediately after one.
+- New rule, user's design: the **imprint** — what a place remembers of a working, lifetime = (accumulation)² hours, read-only, never carries *who*. Distinct from wild-effect **residue**.
 
 ## Current State
-- **Game:** Aetherfall (voidnologo/aetherfall). Eleventy 3.x, `npm run build`; PDF via `python3 scripts/build-pdf.py` (about 31 MB, ~200 pages).
-- **Git:** one branch plus PR per discrete chunk, then `gh pr merge --squash --delete-branch` (`main` allows squash only). The shell has zsh noclobber on (use `>|`).
-- **Art pipeline:** `tools/deco_suite.py` (`--queue-only`, then `--collect`) → pick on a comparison page → `tools/cutout.py` (round spots: `--circle`; record them in `tools/spot_manifest.json`, re-cut with `tools/recut_spots.py`) → web copies in `web/assets/art/` → place with `{% spot "name", "alt", "right|center" %}`. Print masters: `tools/upscale_print.py`. ComfyUI holds ~19 GB of RAM; `POST /free` before heavy work. Renders take ~1 min each in *performance* power mode (2–4 min in quiet).
-- **Art rules:** never delete art (generated → approved or archived); no names in prompts; no lamp focus; cyan = Aether, amber = Engine.
-- **CRITICAL:** Rulebook text changes need explicit approval. Art placements and templates are OK when asked.
+- **Game:** Aetherfall (voidnologo/aetherfall). Eleventy 3.x, `npm run build`; PDF via `python3 scripts/build-pdf.py` (239 pp, 49.3 MB; rebuild `_site` first — the PDF reads `_site/rules/*.html`, not the `.njk` sources). `POST /free` to ComfyUI first if it is running.
+- **Open PRs:** #44 (flowchart Deco styling, ready), #26 and #25 (stories, awaiting user), #3 (draft, close).
+- **Git:** one branch + PR per chunk, `gh pr merge --squash`. zsh noclobber (use `>|`). Pages deploys on push to main touching `web/**`.
+- **Art pipeline:** prompts in `tools/deco_suite.py`; batches via `tools/render_blocks.py`; picks via `tools/wave_page.py`; approved → `art/*/approved`, rest → `archived` (never delete). Web copies: `plate_manifest.json`/`plate_web.py`, `spot_manifest.json`/`recut_spots.py`.
+- **Art rules:** no names in prompts, no lamp focus, cyan = Aether, amber = Engine, no real-world lettering. **Placement is now a standard with a linter — run `python3 tools/art_lint.py` before committing art moves.**
+- **CRITICAL:** rulebook text changes need explicit approval; art placements OK when asked.
+- **Prose:** run `python3 tools/prose_lint.py --summary <files>` before committing prose (rulebook: `tools/rulebook_prose.py DIR` first). No ", and" chains, no "the way X does Y", no "Not X. Y.", no em-dash overuse.
 
-## Immediate Next Task: Wave 4, Large Scene Artwork
-1. Walk the user through the draft in `docs/art/deco-suite-plan.md` §6: plates vs half-page scenes, which chapters, web and PDF placement, and whether the leads appear. Candidates include the Tear 50 years ago, the leads in the Wet Ember, and a Wild Zone swallowing a rail yard.
-2. Add a `PLATE_STYLE` (full-bleed, lamp-free) to `tools/deco_suite.py`, generate 3 seeds each, and publish a comparison page. Crop off edge lettering and stamps; plates stay rectangular.
-3. Place them on the web and in the PDF (a full-page plate page type), then run the print upscale.
-4. Later: corner ornament decision; content backlog (name-collision renames, Quick Reload rounding, series bible, combat story).
+## Immediate Next Task
+1. **Web rulebook styling and layout pass** — the PDF has had three passes, the web none. Check the reflowed art at desktop and phone width, float/clear behaviour, the 500px breakpoint, and how chapters read with art in its new positions.
+2. **Flowchart proportions** — neither orientation fits a page (3:1 and 5:1 tall, or 1:7 and 1:12 wide). Split into stages or re-author with subgraphs. Merge #44 first.
+3. Proof the PDF; review #26/#25 and close #3.
 
 ## Key References
-- Art: `docs/art/deco-suite-plan.md` (standard in §5), `docs/art/style-guide.md`, `docs/art/generation-log.md`
-- Comparison pages: Wave 1 https://claude.ai/artifact/DzMSi3MowVHYAvorNbuzTG · Wave 2 https://claude.ai/artifact/LMoRK39oGSYeVmuR2jLXEa · Wave 3 https://claude.ai/artifact/8HXMstEWtT1sacm9vWwmst
-- Canon: `docs/requirements/CANON_DECISIONS.md`; review: `docs/reviews/2026-09-26-consistency-review.md`
-- Session records: `docs/sessions/session-35-notes.md`, `session-36-notes.md`; pending: `docs/pending-tasks.md`
+- Art: `docs/art/art-placement.md` (**placement standard, house vs convention labelled**), `docs/art/deco-suite-plan.md` (§5 density, §6 Wave 4), `docs/art/style-guide.md`
+- Canon: `docs/requirements/CANON_DECISIONS.md` (§10 drift-cleanup calls, §11 the imprint)
+- Consistency precedent: `docs/reviews/2026-09-26-consistency-review.md` — **the web is the source of truth, design docs follow**
+- Fiction: `fiction/world/05-style-guide.md`, `06-series-bible.md`; reader data `web/_data/fiction.js`, cast `web/_data/cast.json`
+- Prose: `docs/writing/natural-prose.md`, `.claude/skills/prose-check/`
+- Session records: `docs/sessions/session-39-notes.md`; pending: `docs/pending-tasks.md`
 
 ## Palette (Deco Lithograph)
 Midnight `#0e1a2b` · Bone `#efe6d2` · Soot `#17140f` · Aether cyan `#3dc8e0` · Galvanic amber `#e8a825` · Oxblood `#8e2f23`

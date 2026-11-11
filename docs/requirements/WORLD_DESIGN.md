@@ -197,7 +197,7 @@ At the extremes of the spectrum — the places where accumulation has been build
 
 **Deep Galvanic Zones** are places where the Engine roars so loudly that the Aether can't be heard at all. Massive foundries, research complexes, and military installations operate at the bleeding edge of what Galvanic technology can achieve. Magic is not just suppressed — it's *absent*. Casters who enter Deep Galvanic Zones report a sensation like going deaf, or like a limb going numb. The technology produced in these zones is the most advanced in the world, and the factions that control them guard their secrets with lethal seriousness.
 
-Between the Deep Zones and the rest of the world, the gradients are steep and unstable. These border regions are where the most dramatic shifts happen — where a morning fog can carry enough Aetheric residue to shut down a factory, or where a Galvanic generator cycling up can snuff out a ward that's been holding for years.
+Between the Deep Zones and the rest of the world, the gradients are steep and unstable. These border regions are where the most dramatic shifts happen — where a morning fog can carry enough Aetheric charge to shut down a factory, or where a Galvanic generator cycling up can snuff out a ward that's been holding for years.
 
 > **GM Note:** Deep Zones are the game's extreme environments — high risk, high reward. They test party composition to its limits (an all-caster party in a Deep Galvanic Zone is helpless; an all-gunner party in a Deep Wild Zone is the same). The border regions around Deep Zones are some of the best adventure territory in the setting — unstable, contested, and full of opportunities.
 
@@ -502,7 +502,7 @@ The equipment a Society carries tells a story about its patron. This is not just
 
 **Restoration-backed Societies** receive the best Galvanic technology their patron can supply. Prototype arc weapons. Stabilized resonance coils. Zone-dampening field equipment. The gear is cutting-edge, impressive, and reflects the patron's philosophy: the Engine is the answer. The catch: Galvanic gear shifts the balance (see [DESIGN_PHILOSOPHY.md §1.2](DESIGN_PHILOSOPHY.md)). A Society loaded with Galvanic equipment cannot operate subtly in Aetheric territory — their gear announces their presence through the zone gradient.
 
-**Awakening-backed Societies** receive enchanted equipment and magical support. Warded blades. Pre-charged spell foci. Amulets of protection. Healing draughts from Aetheric-enhanced herbalism. The gear is often handmade, idiosyncratic, and reflects the patron's philosophy: the Aether is a gift to be used wisely. The catch: magical gear radiates Aetheric residue. A Society carrying enchanted equipment is visible to anyone with a Detect spell or an aetheric measurement device — which includes most law enforcement in Galvanic zones.
+**Awakening-backed Societies** receive enchanted equipment and magical support. Warded blades. Pre-charged spell foci. Amulets of protection. Healing draughts from Aetheric-enhanced herbalism. The gear is often handmade, idiosyncratic, and reflects the patron's philosophy: the Aether is a gift to be used wisely. The catch: magical gear leaves an Aetheric imprint every time a tag fires. A Society carrying enchanted equipment is visible to anyone with a Detect spell or an aetheric measurement device — which includes most law enforcement in Galvanic zones.
 
 **Arrangement-backed Societies** receive a pragmatic mix — whatever works. Conventional firearms for reliability. A martial weapon for every member. Maybe one or two Galvanic pieces for emergencies. Maybe a ward or a healing charm acquired through channels that aren't worth asking about. The gear is mismatched and utilitarian, reflecting the patron's philosophy: ideology doesn't stop a monster. The catch: a mixed loadout means the Society is never optimized for any single environment. They're versatile but never dominant.
 
@@ -569,21 +569,25 @@ In a fractured city, zone control is the most contested political issue — even
 
 ### 7.3 Zone Forensics
 
-The zone gradient system creates a built-in investigation mechanic. Aetheric and Galvanic residue decay slowly (see [DESIGN_PHILOSOPHY.md §4.2](DESIGN_PHILOSOPHY.md)), leaving traces that trained investigators can read.
+The zone gradient system creates a built-in investigation mechanic, and it runs on two clocks.
+
+The **balance** is the live reading — what a compass or a caster feels in the room. It decays at 1 point per minute, so it is only useful to an investigator who arrives inside the hour, and then only for the big workings.
+
+The **imprint** is what the place remembers, and it is the one forensics is built on. It touches nothing mechanically and lasts far longer: squared hours against the accumulation that made it, so a single spell is gone by morning while a night of ritual work keeps for five weeks (see [FIREARMS_EQUIPMENT.md §5.4](FIREARMS_EQUIPMENT.md)).
 
 **What forensics can determine:**
-- **The type of activity.** Spellcasting leaves Aetheric residue. Galvanic devices leave Galvanic residue. The two are distinct and identifiable.
-- **The scale of activity.** A single spell leaves a faint trace. A sustained ritual leaves a deep one. A Galvanic factory running resonance engines leaves a gradient that extends for blocks. The intensity of the residue tells you how much activity occurred.
-- **The recency.** Residue decays at roughly 1 point per minute. Fresh residue is strong. Old residue is faint. An investigator who finds Aetheric residue at +15 knows something powerful happened here recently. Residue at +2 means it happened a while ago, or it was minor.
-- **The direction.** Gradients point toward their source. An investigator can follow a residue trail inward, like tracking smoke to a fire, to find where the activity was concentrated.
+- **The type of activity.** Spellcasting leaves an Aetheric imprint. Galvanic devices leave a Galvanic one. The two are distinct and identifiable, and so are the six schools.
+- **The scale of activity.** A single spell leaves a faint mark. A sustained ritual leaves a deep one. A Galvanic factory running resonance engines leaves a gradient that extends for blocks.
+- **The recency.** An imprint fades over its lifetime, and how faint it has gone against how strong it must have been tells you roughly when. A reading that is strong and nearly spent means something large and recent; a faint one that has barely begun to fade means something small and recent.
+- **The direction.** Gradients point toward their source. An investigator can follow an imprint inward, tracking smoke to a fire, to find where the activity was concentrated.
 
 **What forensics cannot determine:**
-- **The specific caster or device.** Residue is generic. You can tell that someone cast a Vivimancy spell, but not *who*. You can tell that a Galvanic weapon was fired, but not which one. Identifying specific sources requires other investigative methods.
-- **The intent.** A healing spell and a combat spell leave different school signatures, but the residue doesn't tell you *why* it was cast. Context and conventional detective work fill this gap.
+- **The specific caster or device.** The imprint is generic. You can tell that someone cast a Vivimancy spell, but not *who*. You can tell that a Galvanic weapon was fired, but not which one. Identifying specific sources requires other investigative methods.
+- **The intent.** A healing spell and a combat spell leave different school signatures, but the imprint doesn't tell you *why* it was cast. Context and conventional detective work fill this gap.
 
-**Counter-forensics.** Factions that want to avoid detection have options — all imperfect. Casting in existing Wild Zones buries your residue in the background noise. Using lower-tier spells minimizes the trace. Operating in short bursts and dispersing prevents accumulation from building. But sustained, large-scale activity cannot be hidden this way. The zone gradient system is, ultimately, a world where *the environment is a witness*.
+**Counter-forensics.** Factions that want to avoid detection have options, all imperfect. Casting in an existing Wild Zone buries your imprint in the background. Lower-tier spells leave less, and because the lifetime squares, dropping from Spectacular to Weak is the difference between most of a day and an hour. Short bursts with dispersal keep any single scene's total low. But sustained, large-scale activity cannot be hidden this way. The zone gradient system is, ultimately, a world where *the environment is a witness*.
 
-> **GM Note:** Zone forensics gives investigation-focused Societies a unique toolkit. A crime scene isn't just blood and footprints — it's a residue map. An investigator with Detect can reconstruct the magical activity in a room, estimate when it happened, and follow the gradient to its source. This is noir detective work with an Aetheric twist, and it's one of the setting's most distinctive play experiences.
+> **GM Note:** Zone forensics gives investigation-focused Societies a unique toolkit. A crime scene isn't just blood and footprints — it's an imprint map. An investigator with Detect can reconstruct the magical activity in a room, estimate when it happened, and follow the gradient to its source. This is noir detective work with an Aetheric twist, and it's one of the setting's most distinctive play experiences.
 
 ### 7.4 The Front Lines
 

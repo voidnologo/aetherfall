@@ -32,8 +32,8 @@
     { "name": "Melee", "stat": "BR", "level": 1, "target": 40 }
   ],
   "weapons": [
-    { "name": "Arc Pistol", "skill": "Firearms", "spd": "4", "dmg": "2d8", "cap": "6", "rld": "3", "rel": "65", "tags": "Galvanic 2, Shocking" },
-    { "name": "Holdout Derringer", "skill": "Firearms", "spd": "2", "dmg": "1d6", "cap": "2", "rld": "3", "rel": "95", "tags": "Concealable" }
+    { "name": "Arc Pistol", "skill": "Firearms", "spd": "4", "dmg": "2d8", "cap": "6", "rld": "3", "rel": "65", "tags": "Galvanic 2, Arcing, Shocking" },
+    { "name": "Holdout Derringer", "skill": "Firearms", "spd": "2", "dmg": "1d6", "cap": "2", "rld": "2", "rel": "95", "tags": "Concealable" }
   ],
   "armor": [
     { "name": "Concealed Vest", "ballistic": 1, "martial": 0, "hinder": 0, "notes": "Hidden under clothes" }

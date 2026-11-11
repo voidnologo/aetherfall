@@ -37,6 +37,18 @@
   }
 }
 
+/* Pages that a forced recto break skips are empty by definition. A running
+   head and folio on an otherwise blank page reads as a printing error, so
+   strip them. Per css-page-3 §4.4 :blank outranks :left and :right, so this
+   wins regardless of source order. */
+@page :blank {
+  @top-left { content: none; }
+  @top-right { content: none; }
+  @bottom-center { content: none; }
+  @bottom-left { content: none; }
+  @bottom-right { content: none; }
+}
+
 @page :left {
   margin-left: 0.5in;
   margin-right: 0.75in;
@@ -138,6 +150,31 @@ body {
 }
 
 /* ── Title Page ───────────────────────────────────────────────── */
+.cover-page {
+  page: cover;
+  break-after: page;
+  height: 11in;
+  padding: 0.9in 0.8in 0;
+  text-align: center;
+}
+.cover-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 64pt;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  color: #efe6d2;
+  margin: 0;
+  text-shadow: 0 2pt 8pt rgba(14, 26, 43, 0.85);
+}
+.cover-subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 18pt;
+  color: #efe6d2;
+  margin: 0.1in 0 0;
+  text-shadow: 0 1pt 6pt rgba(14, 26, 43, 0.9);
+}
+
 .title-page {
   page: title-page;
   break-after: recto;
@@ -891,11 +928,15 @@ dl.galvanic-weapons dd em {
   margin: 1em auto;
   text-align: center;
   break-inside: avoid;
+  /* The heading above says break-after: avoid; saying it from this side too,
+     because renderers honour one or the other. Without it the flowchart
+     headings strand at the foot of a page with the diagram overleaf. */
+  break-before: avoid;
 }
 
 .print-diagram img {
   max-width: 100%;
-  max-height: 7.5in;
+  max-height: 7in;
 }
 
 /* ── Prevent Page Breaks Inside Key Elements ──────────────────── */
@@ -972,12 +1013,26 @@ h2, h3, h4, h5 {
   background: var(--dropcap-art) center / 100% 100% no-repeat;
 }
 
+/* Plates (Deco Wave 4). A full plate takes its own midnight page, no running heads;
+   a half plate sits in the column at full width. */
+@page plate { margin: 0.55in; background: #0e1a2b; @top-left { content: none; } @top-right { content: none; } @bottom-center { content: none; } @bottom-right { content: none; } @bottom-left { content: none; } }
+.plate { margin: 0.2in 0; break-inside: avoid; text-align: center; }
+.plate img { display: block; width: 100%; height: auto; }
+.plate figcaption { margin-top: 0.08in; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 9pt; color: #555; }
+.plate-half { break-inside: avoid; }
+.plate-full { page: plate; break-before: page; break-after: page; margin: 0; height: 9.9in; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.plate-full img { width: auto; max-width: 100%; max-height: 9.2in; border: 1pt solid #efe6d2; }
+.plate-full figcaption { color: #efe6d2; font-size: 10pt; }
+
 /* Tailpiece */
 .tailpiece {
   height: 0.75in;
   margin: 0.3in auto 0;
   clear: both;
   break-inside: avoid;
+  /* Keep the chapter's closing ornament with the chapter. Left to itself it
+     spills onto a page of its own, which reads as a stray mark. */
+  break-before: avoid;
   background: url(../../assets/art/ornaments/tailpiece.webp) center / contain no-repeat;
 }
 

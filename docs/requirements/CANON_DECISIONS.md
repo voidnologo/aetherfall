@@ -1,7 +1,7 @@
 # Canon Decisions
 
 ## Document Status: ACTIVE — Locked decisions
-**Last Updated:** 2026-09-26 (Session 34)
+**Last Updated:** 2026-11-09 (Session 39)
 
 Decisions that resolve contradictions found in the Session 34 consistency review
 (`docs/reviews/2026-09-26-consistency-review.md`). When sources disagree, this file wins.
@@ -73,6 +73,37 @@ The game has no rounds. Legacy "round" durations convert at **1 round = 3 counts
 ## 9. Quick Reload rounds up (Session 37)
 
 Quick Reload halves reload time, **rounding up** (Reload 5 → 3, Reload 3 → 2), as in `FIREARMS_EQUIPMENT.md`.
+
+---
+
+## 10. Design-doc drift cleanup (Session 39, issue #38)
+
+The published web rulebook and `web/_data/characters/*.json` are the source of truth for rules numbers. `docs/requirements/` is the design record and follows them. Where issue #38 found two values, the one already in the rulebook wins. The calls that settled contested numbers:
+
+- **Combat skills:** Melee, Brawl, Athletics and BR-Intimidation are **BR**. Firearms, Ranged, Piloting, Sleight of Hand and Stealth are **PC**. Guns use **Firearms**; Ranged is bows, crossbows and thrown (restates §4).
+- **Reload times:** the shorter values in `FIREARMS_EQUIPMENT.md` §3 and the web equipment table are canon. `COMBAT_PROCEDURE.md` §11 is a copy and was corrected to match. Crossbows reload **Light 3 / Heavy 5**.
+- **Reliability:** checked on **every shot, in every environment**. Roll d100 **under** effective Reliability; over is a malfunction. The balance moves it by **2 per net point**, never 3.
+- **Casting times** come from `SPELL_COMPENDIUM.md`'s appendix. Force **2ct**, Reveal **4ct**, Reshape **5ct**, Mend **5ct**, Shield **3ct**, Sever **8ct**.
+- **Armor** has two ratings everywhere: **Ballistic** for firearms, **Martial** for melee. The single-Soak tables in COMBAT_PROCEDURE, PROJECT_SPEC and ECONOMY were replaced with the rulebook's.
+- **Tier suppression** keys off the **casting target's** 25-point bracket, not skill level. A wild caster's **+10** is part of the casting target, so it counts before the bracket lookup.
+- **Spell cancellation** costs **half the Weak tier**, rounded up, whatever tier was being attempted.
+- **The compendium holds 38 spells**, and Ley Weaving holds 6 — Enchant is a Ley Weaving ritual.
+- **Pregens:** `web/_data/characters/*.json` is canon for the four leads. `STARTER_ADVENTURE.md` restates them and every target derives from `((10 + stat) × level) + 30`.
+- **Skill names:** armor and weapon repair is **Craft** (Engineering for ballistic weave and exotic plate). Metalworking, Repair, Running, Swimming, Security, Conceal and Interrogation are not skills.
+- **Zone bands are contiguous.** The old table left +6, +13, +21 and their Galvanic mirrors belonging to no zone. Normal is −2 to +2, Light Aetheric +3 to +7, Moderate +8 to +14, Wild +15 to +24, Deep Wild +25 or beyond, and the Galvanic side mirrors it. This is what the zone tracker already computed.
+- **NPC stat blocks derive like PC ones.** Every printed target follows `((10 + stat) × level) + 30`, and blocks carry EP/Tier as well as HP/Tier.
+
+## 11. The imprint outlasts the balance (Session 39)
+
+Magic leaves two traces. The **balance** is mechanical, decays at 1 point per minute, and is the only one that touches Reliability or casting targets. The **imprint** is metaphysical — the place's memory of the working — and is only ever read. ("Residue" is reserved for the wild-effect trace a caster carries until a long rest; the two were the same word and are not the same thing.)
+
+**Imprint lifetime = (points of accumulation generated)² hours.** One point decays in a minute and reads for an hour. Squaring the imprint while the balance stays linear is what makes a Weak spell fade by morning, a night's ritual keep for five weeks, and a catastrophe stay legible for decades. The Tear sits off the end of the scale. An imprint never carries *who* — only the school, the scale and the hour. Full table, readers and modifiers: `FIREARMS_EQUIPMENT.md` §5.4; forensics in play: `WORLD_DESIGN.md` §7.3.
+
+### Still open
+
+- **Vehicle speeds:** `GM_CHAPTER.md` §chase rates Automobile and Motorcycle both 2 and all airships 3; `FIREARMS_EQUIPMENT.md` §7.2 rates Motorcycle above Automobile and splits the airships three ways.
+- **Enchant's ritual time** scales by tier (2 hours to 3 days), which is the only spell whose casting time varies with tier.
+- **Resisting Persuasion and Intimidation:** `GM_CHAPTER.md` fixes it at Resolve; `PROJECT_SPEC.md` leaves it to the GM.
 
 ---
 

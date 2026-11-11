@@ -15,3 +15,8 @@
 
 - Voice callouts are in-world people sharing experiences. Never rules commentary.
 - Spell Complexity is never exposed in the web rulebook.
+
+## Natural Prose
+
+- All prose (fiction, voice callouts, rulebook text, PR descriptions) follows `docs/writing/natural-prose.md`.
+- After writing or revising fiction, run the `prose-check` skill (`python3 tools/prose_lint.py --summary <files>`) and bring every rate under its limit before committing. Above all: no ", and" chains, no ", and X had done Y" codas, no ", the way X does Y" similes, no "Not X. Y." contrasts.

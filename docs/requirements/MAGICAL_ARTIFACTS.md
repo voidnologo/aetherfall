@@ -142,11 +142,11 @@ Mystical tags are defined in the weapon tag section alongside Melee, Firearm, an
 |-----|-------------|------|----------|--------|-------------|
 | **Thundering** | Force (Aetheric) | +1d4 dmg, push back 1 step | +1d6 dmg, push back 1 step | +1d8 dmg, push back 2 steps | +1d10 dmg, push back 2 steps, target stunned (+2 speed next action) |
 | **Elemental [type]** | Elemental Manipulation (Aetheric) | +1d4 [type] damage | +1d6 [type] damage | +1d8 [type] damage | +1d10 [type] damage |
-| **Keen** | Alter Property (Transmutation) | +1 armor piercing | +2 armor piercing | +3 armor piercing | +3 armor piercing, crit range +5% |
+| **Keen** | Alter Property (Transmutation) | +1 armor piercing | +2 armor piercing | +3 armor piercing | +3 armor piercing, +1 number of crit range |
 | **Homing** | Foresight (Divination) | +5% to hit | +10% to hit | +10% to hit, ignore cover penalty | +15% to hit, ignore cover penalty |
-| **Venomous** | Wither (Vivimancy) | 1d4 damage next round | 1d6 damage next round | 1d6 damage for 2 rounds | 1d8 damage for 2 rounds |
+| **Venomous** | Wither (Vivimancy) | 1d4 damage next 3 counts | 1d6 damage next 3 counts | 1d6 damage for 6 counts | 1d8 damage for 6 counts |
 | **Shielding** | Shield (Warding) | +5% to parry | +10% to parry | +10% to parry, +1 Martial soak | +15% to parry, +2 Martial soak |
-| **Silent** | Dampen (Ley Weaving) | Strikes make no sound | Strikes make no sound | No sound, no visible magical glow | No sound, no glow, target doesn't feel pain for 1 round |
+| **Silent** | Dampen (Ley Weaving) | Strikes make no sound | Strikes make no sound | No sound, no visible magical glow | No sound, no glow, target doesn't feel pain for 3 counts |
 
 GMs and players can propose additional mystical tags based on known spells. If a spell concept can plausibly be channeled through an object, it's a candidate — but the Enchant spell description (§3.1) defines which tags are available at each tier.
 
@@ -226,7 +226,7 @@ Wards include both stationary protections (alarm wards, barrier wards) and **wea
 **Alarm** — Warding (Circle, Seal) + Occult Lore
 Alerts the caster when a threshold is crossed or a condition is met. Alert form: mental ping (silent, range depends on potency), audible sound (local), or visible flash (obvious).
 
-**Barrier** — Warding (Seal, Barrier) + Occult Lore
+**Barrier** — Warding (Seal) + Aetheric Manipulation (Barrier) + Occult Lore
 Blocks physical or magical passage through a threshold. Can be keyed to specific people. Strength ranges from "slows passage" to "physically impassable wall of force."
 
 **Concealment** — Divination (Detect) + Warding (Circle) + Occult Lore
@@ -243,7 +243,7 @@ A portable ward worn on the body. Provides a passive magical effect while worn. 
 
 ### 4.2 Ward Duration (Decay)
 
-Ward duration follows the decay rule (§1.1), with the creation tier determined by casting result:
+Ward duration follows the decay rule (§1.1), with the creation tier set by the effort level invested:
 
 | Effort Level | Creation Tier | Creation Time | Duration (1d6 ×) | Typical Use |
 |-------------|--------------|--------------|-------------------|-------------|
@@ -272,7 +272,7 @@ This creates tactical options: drag Galvanic equipment to a warded location, shi
 
 Wards that fail due to Galvanic drowning stop functioning. When the Galvanic shift subsides, the ward resumes if it still has decay time remaining.
 
-**Detection:** Detect spell (Divination) reveals the presence and general nature of a ward. Reveal shows exact boundaries and trigger conditions. Voltaic Lantern (Galvanic oddity) shows magical residue — wards glow faintly under its beam.
+**Detection:** Detect spell (Divination) reveals the presence and general nature of a ward. Reveal shows exact boundaries and trigger conditions. Voltaic Lantern (Galvanic oddity) shows the magical imprint — wards glow faintly under its beam.
 
 **Wards cannot be physically destroyed.** The magic reinforces the object it's placed on — a warded door doesn't break when you hit it with an axe. You need magical means to get past it.
 
@@ -290,10 +290,10 @@ A potion is a single-use consumable that delivers a magical effect when drunk, a
 
 | Potency | Creation Tier | Effect | Creation Time |
 |---------|--------------|--------|---------------|
-| Minor | Weak | Heal 1d6 HP, stop bleeding | 2 hours |
-| Moderate | Standard | Heal 2d8 HP, knit minor fractures | 4 hours |
-| Major | Strong | Heal 3d10 HP, mend broken bones | 8 hours |
-| Critical | Spectacular | Heal 4d12 HP, purge disease, stabilize dying | 1 day |
+| Minor | Weak | Heal 1d4 HP, stop bleeding | 2 hours |
+| Moderate | Standard | Heal 2d6 HP, knit minor fractures | 4 hours |
+| Major | Strong | Heal 3d8 HP, mend broken bones | 8 hours |
+| Critical | Spectacular | Heal 4d10 HP, purge disease, stabilize dying | 1 day |
 
 **Fortifying Potions** — Vivimancy (Fortify) or Transmutation (Alter Property)
 
@@ -350,7 +350,7 @@ Potions aren't mass-produced, but they are traded. A healer in a magical neighbo
 
 ## 6. Open Questions
 
-1. **Enchanted firearms** — Can firearms be enchanted? The current rule says no (non-modern weapons only). This creates a clean magic/tech divide but closes off an interesting design space. If revisited: an enchanted firearm would be fighting itself — pushing the Aetheric balance against its own Reliability. Needs specific rules if ever allowed.
+1. **Enchanted firearms** — Can firearms be enchanted? The current rule says no: §2 allows handcrafted objects only, and a manufactured weapon does not take the bond. This creates a clean magic/tech divide but closes off an interesting design space. If revisited: an enchanted firearm would be fighting itself — pushing the Aetheric balance against its own Reliability. Needs specific rules if ever allowed.
 2. **Artifact pricing** — What does an enchanted weapon cost in currency? Depends on currency system design (see pending-tasks.md). For now, treat as "extremely valuable, GM determines."
 3. **Potion ingredients** — Should there be a codified ingredient system, or leave it to GM narrative? Leaning toward narrative (avoids herbalism minigame that doesn't fit the system's philosophy).
 4. **Pre-Tear artifact mechanics** — Should Pre-Tear artifacts follow different rules? They might have effects that don't map to known spells, or multiple enchantments on a single object. Left intentionally vague for GMs.

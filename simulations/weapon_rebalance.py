@@ -1,6 +1,12 @@
 """
 Weapon Rebalance Analysis
 
+HISTORICAL. This script holds the weapon tables as they stood before Session 8
+and is kept as the record of the comparison that produced the current ones. Its
+numbers are deliberately not updated -- crossbow reloads, firearm categories and
+single-value armor soak have all changed since. For current stats see
+`web/rules/equipment.njk` and `docs/requirements/FIREARMS_EQUIPMENT.md` section 3.
+
 Compares old individual-weapon table to proposed category-based system.
 Tests damage vs armor soak to validate that heavier weapons have a real niche.
 """
