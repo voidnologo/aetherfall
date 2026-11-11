@@ -39,6 +39,9 @@ eleventyExcludeFromCollections: true
       glimpses of what the rules only hint at.
     </p>
     <div class="deco-divider" aria-hidden="true"></div>
+    {%- if fiction.storiesBySlug['the-ashwick-job'] %}
+    <p class="start-here">New to Ashwick? Start with <a href="the-ashwick-job.html">Story No. 01, The Ashwick Job</a>, the Society's first case and the game's Quickstart adventure.</p>
+    {%- endif %}
   </div>
 </header>
 
@@ -51,7 +54,7 @@ eleventyExcludeFromCollections: true
           {%- if story.spot %}
           <img src="../assets/art/spots/{{ story.spot.file }}.webp" alt="{{ story.spot.alt }}" class="story-card-spot" width="800" height="800" loading="lazy">
           {%- endif %}
-          <p class="story-number">Story No. {{ story.numberDisplay }}</p>
+          <p class="story-number">Story No. {{ story.numberDisplay }}{% if story.number == 1 %} <span class="story-start">&middot; Start here</span>{% endif %}</p>
           <h2>{{ story.title }}</h2>
           <p class="story-subtitle">{{ story.subtitle }}</p>
           <p class="story-blurb">{{ story.blurb }}</p>

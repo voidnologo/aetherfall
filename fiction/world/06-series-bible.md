@@ -18,9 +18,10 @@ The stories showcase different facets of the Aetherfall world: urban investigati
 
 ### Story 1: "The Ashwick Job" (Prequel / Backstory)
 
-**Status:** Exists as game module. Not written as fiction.
+**Status:** Exists as game module (the Quickstart). Written as fiction in Session 37 ("The Ashwick Job — A Tale of the Ash & Veil Society", 6 chapters); in review, then published at `/fiction/the-ashwick-job.html` with a "Play This Story" link to the Quickstart.
 **Summary:** Ash & Veil's first job. Inspector Laine hires the newly chartered Society to find Fen Harker, a missing Gradient Scholar researcher. The trail leads through Ashwick's three zones -- a neutral-ground tavern, a Galvanic foundry, and Aetheric tunnels beneath it -- revealing a Lamplighter Syndicate smuggling operation moving charged Aetheric artifacts.
 **Outcome:** Harker rescued. Syndicate operation disrupted. Society's charter validated.
+**Fiction details (Story 01):** Mrs. Olt's boarding house on Tallow Row; the lamppost watcher; the two yard guards (the big one won six marks off Harker at cards); Corva Sable escapes west down the crate tunnel to the storm drain; Benn fires the shotgun into the crystal ceiling; Kael's cheek is cut by crystal and mended by Aldric (his first field mending of a teammate), leaving a thin line; Kael's revolver goes "slow" for half a heartbeat in the vault (first sign, unremarked); Aldric's seeing gives him a nosebleed ("the air here GIVES"); the third passage at the last fork, descending, cold, on no plan; the marching order (Kael, Mira, Sera, Aldric); Mira leaves the crystals and the third passage out of her account to Laine; Laine stamps the charter "CONTRACT DISCHARGED — SATISFACTORY"; Sera's compass spins once at the Wet Ember; Corrigan Fels introduces himself ("You cost me a route tonight. No hard feelings."), pays for the round with a five-mark piece; the first line of the Ledger, and "C. Fels — ?" under Owed.
 **Seeds planted:** The anomalous Aetheric readings beneath the foundry. The tunnels go deeper than anyone has mapped. The Syndicate knows the Society's faces.
 
 ### Story 2: "What the Mill Remembered — A Tale of the Ash & Veil Society"
