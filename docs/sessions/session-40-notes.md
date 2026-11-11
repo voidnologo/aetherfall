@@ -56,7 +56,7 @@ Neither chart fitted a portrait page at any orientation — measured 3.58:1 and 
 | `web/assets/diagrams/*.svg` | **New.** Six plates |
 | `tools/art_lint.py` | R2b, R4b; body-paragraph counting |
 | `docs/art/art-placement.md` | R2b and R4b documented; checklist says plainly that subject match needs a reader |
-| `web/rules/*.njk` (7 files) | the art moves above |
+| `combat.njk`, `economy.njk`, `equipment.njk`, `getting-hurt.njk`, `quickstart.njk`, `rolling.njk`, `running-the-game.njk`, `societies.njk`, `state-of-the-world.njk`, `world-between.njk` | the art moves above |
 | `scripts/build-pdf.py` | Mermaid pre-render removed |
 | `web/rules/mermaid-deco.json` | **Deleted.** Superseded |
 
